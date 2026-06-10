@@ -1,6 +1,7 @@
-const data = window.DEBATE_PUBLIC_SEED || { records: [], honors: [] };
-const records = data.records || [];
-const honors = data.honors || [];
+const data = window.DEBATE_PUBLIC_DATA || { records: [], honors: [] };
+let records = data.records || [];
+let honors = data.honors || [];
+let events = [];
 
 const els = {
   navButtons: document.querySelectorAll("[data-view]"),
@@ -49,7 +50,7 @@ function eventSummaries() {
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
-const events = eventSummaries();
+
 
 function showView(name) {
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== name));
@@ -87,7 +88,7 @@ function honorSubject(honor) {
 function renderLatestHonors() {
   els.latestHonors.innerHTML = [...honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "")).slice(0, 6).map((honor) => `
     <div class="honor-feed-item">
-      <span class="honor-icon" aria-hidden="true">${/冠軍/.test(honor.honorName) ? "🥇" : /亞軍/.test(honor.honorName) ? "🥈" : /季軍/.test(honor.honorName) ? "🥉" : "🎙️"}</span>
+      <span class="honor-icon" aria-hidden="true">${/冠軍/.test(honor.honorName) ? "🥇" : /亞軍/.test(honor.honorName) ? "🥈" : /季軍/.test(honor.honorName) ? "🥉" : "🎤"}</span>
       <div><strong>${escapeHtml(honor.honorName)}｜${escapeHtml(honorSubject(honor))}</strong><span>${escapeHtml(honor.team || honor.competitionName)} · ${escapeHtml(formatDate(honor.matchDate))}</span></div>
     </div>`).join("");
 }
@@ -178,7 +179,7 @@ function renderSearch(query) {
     }).join("")}
     ${matchedPlayers.map((name) => {
       const personHonors = honors.filter((item) => item.recipient === name);
-      return `<article class="entity-card player"><h3>🎙️ ${escapeHtml(name)}</h3><p>${escapeHtml(unique(personHonors.map((item) => item.team)).join("、") || "所屬學校未載明")} · ${personHonors.length} 筆榮譽</p></article>`;
+      return `<article class="entity-card player"><h3><span class="player-icon" aria-hidden="true">🎤</span>${escapeHtml(name)}</h3><p>${escapeHtml(unique(personHonors.map((item) => item.team)).join("、") || "所屬學校未載明")} · ${personHonors.length} 筆榮譽</p></article>`;
     }).join("")}
   </div></section>` : "";
 
@@ -204,12 +205,18 @@ els.eventSelect.addEventListener("change", () => renderEvent(els.eventSelect.val
 els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
 els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
 
-renderStats();
-renderRecentEvents();
-renderLatestHonors();
-renderLeaderboards();
-renderEventOptions();
-const initialQuery = new URLSearchParams(location.search).get("q") || "";
-els.globalSearch.value = initialQuery;
-renderSearch(initialQuery);
-showView(initialQuery ? "search" : (["events", "search"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "home"));
+
+function renderAll() {
+  renderStats();
+  renderRecentEvents();
+  renderLatestHonors();
+  renderLeaderboards();
+  renderEventOptions();
+  const initialQuery = new URLSearchParams(location.search).get("q") || "";
+  els.globalSearch.value = initialQuery;
+  renderSearch(initialQuery);
+  showView(initialQuery ? "search" : (["events", "search"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "home"));
+}
+
+events = eventSummaries();
+renderAll();

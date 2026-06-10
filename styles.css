@@ -58,8 +58,11 @@ button { color: inherit; }
 .event-card h3 { margin: 12px 0; font-size: 18px; line-height: 1.45; }
 .event-card-meta { display: flex; gap: 12px; color: var(--muted); font-size: 12px; font-weight: 750; }
 .honor-feed { border-top: 3px solid var(--coral); }
-.honor-feed-item { display: grid; grid-template-columns: 42px 1fr; gap: 12px; padding: 15px 0; border-bottom: 1px solid var(--line); }
-.honor-icon { display: grid; width: 40px; height: 40px; place-items: center; background: var(--soft); font-size: 19px; }
+.honor-feed-item { display: grid; grid-template-columns: 64px 1fr; gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.honor-icon { display: grid; width: 56px; height: 56px; place-items: center; border: 2px solid var(--ink); background: var(--yellow); font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif; font-size: 30px; line-height: 1; box-shadow: 3px 3px 0 var(--coral); }
+.player-icon, .leaderboard-mic { display: inline-grid; width: 30px; height: 30px; place-items: center; margin-right: 7px; border-radius: 50%; background: var(--yellow); font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif; font-size: 19px; line-height: 1; vertical-align: middle; }
+.honor-feed-item .honor-icon { margin-top: 0; font-size: 30px; line-height: 1; }
+.entity-card h3 .player-icon { display: inline-grid; font-size: 19px; }
 .honor-feed-item strong, .honor-feed-item span { display: block; }
 .honor-feed-item span { margin-top: 3px; color: var(--muted); font-size: 12px; line-height: 1.45; }
 
