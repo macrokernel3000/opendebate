@@ -88,13 +88,25 @@ def build():
     JS_PATH.write_text(output, encoding="utf-8")
     index_html = INDEX_PATH.read_text(encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
-    index_html, replacements = re.subn(
+    index_html, data_replacements = re.subn(
         r'(src="data/public-data\.js)(?:\?v=[^"]*)?(" data-public-data-script)',
         rf'\1?v={version}\2',
         index_html,
         count=1,
     )
-    if replacements != 1:
+    index_html, style_replacements = re.subn(
+        r'(href="styles\.css)(?:\?v=[^"]*)?(" data-versioned-asset)',
+        rf'\1?v={version}\2',
+        index_html,
+        count=1,
+    )
+    index_html, app_replacements = re.subn(
+        r'(src="app\.js)(?:\?v=[^"]*)?(" data-versioned-asset)',
+        rf'\1?v={version}\2',
+        index_html,
+        count=1,
+    )
+    if (data_replacements, style_replacements, app_replacements) != (1, 1, 1):
         raise SystemExit("找不到 index.html 的公開資料版本標記，網站資料未更新。")
     INDEX_PATH.write_text(index_html, encoding="utf-8")
     print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽")

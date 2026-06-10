@@ -11,7 +11,7 @@
 
 更新程式會先檢查 CSV 欄位，再產生 `data/public-data.js`。看到「更新完成」後，按 Return 即會開啟網站。
 
-更新時也會自動改變 `index.html` 裡的資料版本，避免 GitHub Pages 或瀏覽器繼續使用舊快取。上傳時請至少一併提交：
+更新時也會自動改變 `index.html` 裡的資料、程式與樣式版本，避免 GitHub Pages 或瀏覽器繼續使用舊快取。上傳時請至少一併提交：
 
 - `data/public-data.csv`
 - `data/public-data.js`

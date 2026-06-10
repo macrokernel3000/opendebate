@@ -54,11 +54,16 @@ function eventSummaries() {
 
 
 function showView(name) {
-  els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== name));
-  els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === name));
-  history.replaceState(null, "", `#${name}`);
+  const target = ["home", "events", "search"].includes(name) ? name : "home";
+  els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
+  els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
+  if (location.hash !== `#${target}`) history.replaceState(null, "", `#${target}`);
   window.scrollTo({ top: 0, behavior: "smooth" });
-  if (name === "search") requestAnimationFrame(() => els.globalSearch.focus());
+  if (target === "search") requestAnimationFrame(() => els.globalSearch.focus());
+}
+
+function showViewFromHash() {
+  showView(location.hash.slice(1) || "home");
 }
 
 function renderStats() {
@@ -198,6 +203,7 @@ els.homeBrand.addEventListener("click", (event) => {
   event.preventDefault();
   showView("home");
 });
+window.addEventListener("hashchange", showViewFromHash);
 document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => showView("search")));
 document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => showView("events")));
 els.recentEvents.addEventListener("click", (event) => {
