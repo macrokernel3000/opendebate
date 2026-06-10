@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="查詢台灣高中辯論賽事、比賽結果、學校戰績與公開榮譽。" />
+  <title>公開辯論資訊網</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="公開辯論資訊網首頁">
+      <span class="brand-mark" aria-hidden="true">💬</span>
+      <span>公開辯論資訊網</span>
+    </a>
+    <nav class="main-nav" aria-label="主要選單">
+      <button class="nav-button is-active" type="button" data-view="home">首頁</button>
+      <button class="nav-button" type="button" data-view="events">賽事</button>
+      <button class="nav-button" type="button" data-view="search">搜尋</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="homeView" class="view" data-view-panel="home">
+      <div class="hero">
+        <img src="assets/debate-banner.png" alt="學生在辯論賽場上進行公開辯論" />
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow">TAIWAN DEBATE ARCHIVE</p>
+          <h1>公開辯論資訊網</h1>
+          <p>從一場比賽，看見每一所學校與每一位辯士走過的路。</p>
+          <button class="hero-search" type="button" data-go-search><span aria-hidden="true">⌕</span> 搜尋學校或選手</button>
+        </div>
+      </div>
+
+      <section class="stats-band" id="statsBand" aria-label="資料統計"></section>
+
+      <div class="page-shell home-grid">
+        <section class="section-block recent-events">
+          <div class="section-heading">
+            <div><p class="kicker">最近更新</p><h2>近期賽事</h2></div>
+            <button class="text-link" type="button" data-go-events>查看全部 →</button>
+          </div>
+          <div id="recentEvents" class="event-grid"></div>
+        </section>
+
+        <aside class="section-block latest-honors">
+          <div class="section-heading">
+            <div><p class="kicker">榮譽快報</p><h2>最近得獎者</h2></div>
+            <span aria-hidden="true" class="heading-emoji">🏆</span>
+          </div>
+          <div id="latestHonors" class="honor-feed"></div>
+        </aside>
+      </div>
+
+      <section class="leaderboard-band">
+        <div class="page-shell">
+          <div class="section-heading">
+            <div><p class="kicker">資料榜</p><h2>累積榮譽排行</h2></div>
+            <p class="section-note">依目前已收錄的公開資料統計</p>
+          </div>
+          <div class="leaderboard-grid">
+            <div class="leaderboard-panel">
+              <h3><span aria-hidden="true">🏫</span> 學校獎項</h3>
+              <ol id="schoolLeaderboard" class="ranking-list"></ol>
+            </div>
+            <div class="leaderboard-panel coral">
+              <h3><span aria-hidden="true">🎙️</span> 選手獎項</h3>
+              <ol id="playerLeaderboard" class="ranking-list"></ol>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="eventsView" class="view is-hidden" data-view-panel="events">
+      <div class="page-intro page-shell">
+        <p class="kicker">TOURNAMENTS</p>
+        <h1>賽事資料庫 <span aria-hidden="true">📣</span></h1>
+        <p>選擇賽事，查看每場比賽結果與公開榮譽。</p>
+      </div>
+      <div class="page-shell event-browser">
+        <label class="event-picker">選擇賽事
+          <select id="eventSelect"></select>
+        </label>
+        <div id="eventDetail"></div>
+      </div>
+    </section>
+
+    <section id="searchView" class="view is-hidden" data-view-panel="search">
+      <div class="search-stage">
+        <div class="page-shell">
+          <p class="kicker">FIND A STORY</p>
+          <h1>搜尋學校或選手 <span aria-hidden="true">🔎</span></h1>
+          <div class="search-box">
+            <span aria-hidden="true">⌕</span>
+            <input id="globalSearch" type="search" autocomplete="off" placeholder="輸入一個字也可以，例如：板、南山、李欣芸" aria-label="搜尋學校或選手" />
+            <button id="clearSearch" type="button" aria-label="清除搜尋">×</button>
+          </div>
+          <p id="searchMeta" class="search-meta">輸入名稱後，即時顯示最近參賽與獲獎紀錄。</p>
+        </div>
+      </div>
+      <div id="searchResults" class="page-shell search-results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
+  </footer>
+
+  <script src="data/seed-public-data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
