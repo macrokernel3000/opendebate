@@ -4,6 +4,7 @@ let honors = data.honors || [];
 let events = [];
 
 const els = {
+  homeBrand: document.querySelector("#homeBrand"),
   navButtons: document.querySelectorAll("[data-view]"),
   views: document.querySelectorAll("[data-view-panel]"),
   statsBand: document.querySelector("#statsBand"),
@@ -193,6 +194,10 @@ function renderSearch(query) {
 }
 
 els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
+els.homeBrand.addEventListener("click", (event) => {
+  event.preventDefault();
+  showView("home");
+});
 document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => showView("search")));
 document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => showView("events")));
 els.recentEvents.addEventListener("click", (event) => {
@@ -207,6 +212,15 @@ els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; r
 
 
 function renderAll() {
+  if (!records.length && !honors.length) {
+    document.querySelector("main").innerHTML = `
+      <section class="data-error page-shell">
+        <span aria-hidden="true">📂</span>
+        <h1>公開資料尚未載入</h1>
+        <p>請確認 <code>data/public-data.js</code> 已上傳，並重新整理頁面。若剛更新 GitHub Pages，請稍候一分鐘後再試。</p>
+      </section>`;
+    return;
+  }
   renderStats();
   renderRecentEvents();
   renderLatestHonors();

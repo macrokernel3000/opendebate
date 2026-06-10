@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 import csv
 import json
+import re
 import sys
+from datetime import datetime
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT / "data" / "public-data.csv"
 JS_PATH = ROOT / "data" / "public-data.js"
+INDEX_PATH = ROOT / "index.html"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -83,8 +86,20 @@ def build():
     payload = {"records": records, "honors": honors}
     output = "window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n"
     JS_PATH.write_text(output, encoding="utf-8")
+    index_html = INDEX_PATH.read_text(encoding="utf-8")
+    version = datetime.now().strftime("%Y%m%d%H%M%S")
+    index_html, replacements = re.subn(
+        r'(src="data/public-data\.js)(?:\?v=[^"]*)?(" data-public-data-script)',
+        rf'\1?v={version}\2',
+        index_html,
+        count=1,
+    )
+    if replacements != 1:
+        raise SystemExit("找不到 index.html 的公開資料版本標記，網站資料未更新。")
+    INDEX_PATH.write_text(index_html, encoding="utf-8")
     print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽")
     print(f"網站資料：{JS_PATH}")
+    print(f"快取版本：{version}")
 
 
 if __name__ == "__main__":

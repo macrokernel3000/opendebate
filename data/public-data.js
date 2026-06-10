@@ -7,8 +7,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 1,
       "teams": {
-        "affirmative": "高雄中學 正",
-        "negative": "北一女中 反"
+        "affirmative": "高雄中學",
+        "negative": "北一女中"
       },
       "scores": {
         "affirmative": 1,
@@ -24,8 +24,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 2,
       "teams": {
-        "affirmative": "薇閣中學 正",
-        "negative": "高雄女中 反"
+        "affirmative": "薇閣中學",
+        "negative": "高雄女中"
       },
       "scores": {
         "affirmative": 2,
@@ -41,8 +41,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 1,
       "teams": {
-        "affirmative": "高雄中學 正",
-        "negative": "中崙高中2 反"
+        "affirmative": "高雄中學",
+        "negative": "中崙高中2"
       },
       "scores": {
         "affirmative": 3,
@@ -58,8 +58,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 2,
       "teams": {
-        "affirmative": "台南一中 正",
-        "negative": "北一女中 反"
+        "affirmative": "台南一中",
+        "negative": "北一女中"
       },
       "scores": {
         "affirmative": 1,
@@ -75,8 +75,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 3,
       "teams": {
-        "affirmative": "薇閣中學 正",
-        "negative": "溪湖高中 反"
+        "affirmative": "薇閣中學",
+        "negative": "溪湖高中"
       },
       "scores": {
         "affirmative": 3,
@@ -92,8 +92,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 1,
       "teams": {
-        "affirmative": "高雄中學 正",
-        "negative": "嘉義女中2 反"
+        "affirmative": "高雄中學",
+        "negative": "嘉義女中2"
       },
       "scores": {
         "affirmative": 0,
@@ -109,8 +109,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 2,
       "teams": {
-        "affirmative": "中崙高中2 正",
-        "negative": "嘉義高中 反"
+        "affirmative": "中崙高中2",
+        "negative": "嘉義高中"
       },
       "scores": {
         "affirmative": 1,
@@ -126,8 +126,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 3,
       "teams": {
-        "affirmative": "嘉科實中 正",
-        "negative": "台南一中 反"
+        "affirmative": "嘉科實中",
+        "negative": "台南一中"
       },
       "scores": {
         "affirmative": 0,
@@ -143,8 +143,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 4,
       "teams": {
-        "affirmative": "北一女中 正",
-        "negative": "三民高中 反"
+        "affirmative": "北一女中",
+        "negative": "三民高中"
       },
       "scores": {
         "affirmative": 3,
@@ -160,8 +160,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 5,
       "teams": {
-        "affirmative": "薇閣中學 正",
-        "negative": "嘉義女中 反"
+        "affirmative": "薇閣中學",
+        "negative": "嘉義女中"
       },
       "scores": {
         "affirmative": 3,
@@ -177,8 +177,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 6,
       "teams": {
-        "affirmative": "永仁高中 正",
-        "negative": "溪湖高中 反"
+        "affirmative": "永仁高中",
+        "negative": "溪湖高中"
       },
       "scores": {
         "affirmative": 1,
@@ -194,8 +194,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 7,
       "teams": {
-        "affirmative": "高雄女中 正",
-        "negative": "台南二中 反"
+        "affirmative": "高雄女中",
+        "negative": "台南二中"
       },
       "scores": {
         "affirmative": 2,
@@ -211,8 +211,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 1,
       "teams": {
-        "affirmative": "嘉義高中 正",
-        "negative": "德光中學 反"
+        "affirmative": "嘉義高中",
+        "negative": "德光中學"
       },
       "scores": {
         "affirmative": 1,
@@ -228,8 +228,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 2,
       "teams": {
-        "affirmative": "台南一中 正",
-        "negative": "大灣高中 反"
+        "affirmative": "台南一中",
+        "negative": "大灣高中"
       },
       "scores": {
         "affirmative": 3,
@@ -245,8 +245,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 3,
       "teams": {
-        "affirmative": "三民高中 正",
-        "negative": "聖功女中 反"
+        "affirmative": "三民高中",
+        "negative": "聖功女中"
       },
       "scores": {
         "affirmative": 2,
@@ -262,8 +262,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 4,
       "teams": {
-        "affirmative": "嘉義女中 正",
-        "negative": "中崙高中 反"
+        "affirmative": "嘉義女中",
+        "negative": "中崙高中"
       },
       "scores": {
         "affirmative": 0,
@@ -279,8 +279,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 5,
       "teams": {
-        "affirmative": "台南二中 正",
-        "negative": "美和高中 反"
+        "affirmative": "台南二中",
+        "negative": "美和高中"
       },
       "scores": {
         "affirmative": 3,
@@ -296,8 +296,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 1,
       "teams": {
-        "affirmative": "嘉義女中2 正",
-        "negative": "高雄中學 反"
+        "affirmative": "嘉義女中2",
+        "negative": "高雄中學"
       },
       "scores": {
         "affirmative": 0,
@@ -313,8 +313,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 2,
       "teams": {
-        "affirmative": "德光中學 正",
-        "negative": "中崙高中2 反"
+        "affirmative": "德光中學",
+        "negative": "中崙高中2"
       },
       "scores": {
         "affirmative": 1,
@@ -330,8 +330,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 3,
       "teams": {
-        "affirmative": "大灣高中 正",
-        "negative": "嘉科實中 反"
+        "affirmative": "大灣高中",
+        "negative": "嘉科實中"
       },
       "scores": {
         "affirmative": 2,
@@ -347,8 +347,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 4,
       "teams": {
-        "affirmative": "聖功女中 正",
-        "negative": "北一女中 反"
+        "affirmative": "聖功女中",
+        "negative": "北一女中"
       },
       "scores": {
         "affirmative": 0,
@@ -364,8 +364,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 5,
       "teams": {
-        "affirmative": "中崙高中 正",
-        "negative": "薇閣中學 反"
+        "affirmative": "中崙高中",
+        "negative": "薇閣中學"
       },
       "scores": {
         "affirmative": 1,
@@ -381,8 +381,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 6,
       "teams": {
-        "affirmative": "溪湖高中 正",
-        "negative": "永仁高中 反"
+        "affirmative": "溪湖高中",
+        "negative": "永仁高中"
       },
       "scores": {
         "affirmative": 2,
@@ -398,8 +398,8 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 7,
       "teams": {
-        "affirmative": "美和高中 正",
-        "negative": "高雄女中 反"
+        "affirmative": "美和高中",
+        "negative": "高雄女中"
       },
       "scores": {
         "affirmative": 0,
@@ -2207,46 +2207,6 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-05-31",
       "honorName": "冠軍",
       "recipient": "鐘米糕小蛋糕我吃吃吃吃吃吃",
-      "team": "",
-      "honorType": "school",
-      "note": "最終"
-    },
-    {
-      "id": "csv-honor-39",
-      "competitionName": "風雩盃中學辯論錦標賽",
-      "matchDate": "2026-05-24",
-      "honorName": "冠軍",
-      "recipient": "高雄中學",
-      "team": "",
-      "honorType": "school",
-      "note": "最終"
-    },
-    {
-      "id": "csv-honor-40",
-      "competitionName": "風雩盃中學辯論錦標賽",
-      "matchDate": "2026-05-24",
-      "honorName": "亞軍",
-      "recipient": "中山女高",
-      "team": "",
-      "honorType": "school",
-      "note": "最終"
-    },
-    {
-      "id": "csv-honor-41",
-      "competitionName": "風雩盃中學辯論錦標賽",
-      "matchDate": "2026-05-24",
-      "honorName": "季軍",
-      "recipient": "明道中學",
-      "team": "",
-      "honorType": "school",
-      "note": "最終"
-    },
-    {
-      "id": "csv-honor-42",
-      "competitionName": "風雩盃中學辯論錦標賽",
-      "matchDate": "2026-05-24",
-      "honorName": "殿軍",
-      "recipient": "成功高中",
       "team": "",
       "honorType": "school",
       "note": "最終"
