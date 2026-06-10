@@ -2,6 +2,448 @@ window.DEBATE_PUBLIC_DATA = {
   "records": [
     {
       "id": "csv-match-0",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "霍金活祭皇家火雞",
+        "negative": "謝謝辯論讓我+365"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "反方勝",
+      "note": "八進四第一時段"
+    },
+    {
+      "id": "csv-match-1",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "不知道",
+        "negative": "小丑們要特選和分科"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "反方勝",
+      "note": "八進四第一時段"
+    },
+    {
+      "id": "csv-match-2",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "小籠包",
+        "negative": "燒焦了"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "八進四第一時段"
+    },
+    {
+      "id": "csv-match-3",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "我們都喜歡女生",
+        "negative": "南北中正一起串連"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "正方勝",
+      "note": "八進四第一時段"
+    },
+    {
+      "id": "csv-match-4",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "謝謝辯論讓我+365",
+        "negative": "小丑們要特選和分科"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "四強分流第四時段"
+    },
+    {
+      "id": "csv-match-5",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 4,
+      "venue": 2,
+      "teams": {
+        "affirmative": "燒焦了",
+        "negative": "我們都喜歡女生"
+      },
+      "scores": {
+        "affirmative": 4,
+        "negative": 1
+      },
+      "winner": "正方勝",
+      "note": "四強分流第四時段"
+    },
+    {
+      "id": "csv-match-6",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "謝謝辯論讓我+365",
+        "negative": "燒焦了"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 5
+      },
+      "winner": "反方勝",
+      "note": "冠亞賽"
+    },
+    {
+      "id": "csv-match-7",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "危雞百科",
+        "negative": "霍金活祭皇家火雞"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第一時段"
+    },
+    {
+      "id": "csv-match-8",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "世界第一大美女何亮諼",
+        "negative": "哲何新臺幣鱷十億沅"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第一時段"
+    },
+    {
+      "id": "csv-match-9",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "不知道",
+        "negative": "雞逼雞逼甲巴甲巴"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "正方勝",
+      "note": "初賽第一時段"
+    },
+    {
+      "id": "csv-match-10",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "我們有笨蛋小狗",
+        "negative": "人右吉吉愛烤雞"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "正方勝",
+      "note": "初賽第一時段"
+    },
+    {
+      "id": "csv-match-11",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "我們都喜歡女生",
+        "negative": "莉莉說的都對"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第一時段"
+    },
+    {
+      "id": "csv-match-12",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "吳律寬",
+        "negative": "危雞百科"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "正方勝",
+      "note": "初賽第二時段"
+    },
+    {
+      "id": "csv-match-13",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "上峰小汽車誰撞誰休克",
+        "negative": "小籠包"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第二時段"
+    },
+    {
+      "id": "csv-match-14",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "雞逼雞逼甲巴甲巴",
+        "negative": "別被三清"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第二時段"
+    },
+    {
+      "id": "csv-match-15",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "小丑們要特選跟分科",
+        "negative": "我們有笨蛋小狗"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第二時段"
+    },
+    {
+      "id": "csv-match-16",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "燒焦了"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "反方勝",
+      "note": "初賽第二時段"
+    },
+    {
+      "id": "csv-match-17",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "小籠包",
+        "negative": "上峰小汽車誰撞誰休克"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第三時段"
+    },
+    {
+      "id": "csv-match-18",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "謝謝辯論讓我+365",
+        "negative": "世界第一大美女何亮諼"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第三時段"
+    },
+    {
+      "id": "csv-match-19",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "別被三清",
+        "negative": "不知道"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "反方勝",
+      "note": "初賽第三時段"
+    },
+    {
+      "id": "csv-match-20",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "燒焦了",
+        "negative": "曉明女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第三時段"
+    },
+    {
+      "id": "csv-match-21",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "我要吃火雞",
+        "negative": "我們都喜歡女生"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第三時段"
+    },
+    {
+      "id": "csv-match-22",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "霍金活祭皇家火雞",
+        "negative": "吳律寬"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "正方勝",
+      "note": "初賽第四時段"
+    },
+    {
+      "id": "csv-match-23",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 4,
+      "venue": 2,
+      "teams": {
+        "affirmative": "哲何新臺幣鱷十億元",
+        "negative": "謝謝辯論讓我+365"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第四時段"
+    },
+    {
+      "id": "csv-match-24",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 4,
+      "venue": 4,
+      "teams": {
+        "affirmative": "人右吉吉愛烤雞",
+        "negative": "小丑們要特選和分科"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "反方勝",
+      "note": "初賽第四時段"
+    },
+    {
+      "id": "csv-match-25",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "period": 4,
+      "venue": 5,
+      "teams": {
+        "affirmative": "莉莉說的都對",
+        "negative": "我要吃火雞"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "反方勝",
+      "note": "初賽第四時段"
+    },
+    {
+      "id": "csv-match-26",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 2,
@@ -18,7 +460,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二日第二時段"
     },
     {
-      "id": "csv-match-1",
+      "id": "csv-match-27",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 2,
@@ -35,7 +477,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二日第二時段"
     },
     {
-      "id": "csv-match-2",
+      "id": "csv-match-28",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 1,
@@ -52,7 +494,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二日第一時段"
     },
     {
-      "id": "csv-match-3",
+      "id": "csv-match-29",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 1,
@@ -69,7 +511,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二日第一時段"
     },
     {
-      "id": "csv-match-4",
+      "id": "csv-match-30",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 1,
@@ -86,7 +528,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二日第一時段"
     },
     {
-      "id": "csv-match-5",
+      "id": "csv-match-31",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -103,7 +545,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-6",
+      "id": "csv-match-32",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -120,7 +562,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-7",
+      "id": "csv-match-33",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -137,7 +579,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-8",
+      "id": "csv-match-34",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -154,7 +596,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-9",
+      "id": "csv-match-35",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -171,7 +613,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-10",
+      "id": "csv-match-36",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -188,7 +630,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-11",
+      "id": "csv-match-37",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -205,7 +647,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第三時段"
     },
     {
-      "id": "csv-match-12",
+      "id": "csv-match-38",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -222,7 +664,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二時段"
     },
     {
-      "id": "csv-match-13",
+      "id": "csv-match-39",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -239,7 +681,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二時段"
     },
     {
-      "id": "csv-match-14",
+      "id": "csv-match-40",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -256,7 +698,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二時段"
     },
     {
-      "id": "csv-match-15",
+      "id": "csv-match-41",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -273,7 +715,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二時段"
     },
     {
-      "id": "csv-match-16",
+      "id": "csv-match-42",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -290,7 +732,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第二時段"
     },
     {
-      "id": "csv-match-17",
+      "id": "csv-match-43",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -307,7 +749,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-18",
+      "id": "csv-match-44",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -324,7 +766,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-19",
+      "id": "csv-match-45",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -341,7 +783,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-20",
+      "id": "csv-match-46",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -358,7 +800,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-21",
+      "id": "csv-match-47",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -375,7 +817,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-22",
+      "id": "csv-match-48",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -392,7 +834,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-23",
+      "id": "csv-match-49",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -409,7 +851,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "蒙泉盃第一時段"
     },
     {
-      "id": "csv-match-24",
+      "id": "csv-match-50",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -426,7 +868,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-25",
+      "id": "csv-match-51",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -443,7 +885,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-26",
+      "id": "csv-match-52",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -460,7 +902,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-27",
+      "id": "csv-match-53",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -477,7 +919,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-28",
+      "id": "csv-match-54",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -494,7 +936,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-29",
+      "id": "csv-match-55",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -511,7 +953,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段一"
     },
     {
-      "id": "csv-match-30",
+      "id": "csv-match-56",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -528,7 +970,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段二"
     },
     {
-      "id": "csv-match-31",
+      "id": "csv-match-57",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -545,7 +987,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段二"
     },
     {
-      "id": "csv-match-32",
+      "id": "csv-match-58",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -562,7 +1004,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段二"
     },
     {
-      "id": "csv-match-33",
+      "id": "csv-match-59",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -579,7 +1021,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段三"
     },
     {
-      "id": "csv-match-34",
+      "id": "csv-match-60",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -596,7 +1038,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段三"
     },
     {
-      "id": "csv-match-35",
+      "id": "csv-match-61",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -613,7 +1055,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段三"
     },
     {
-      "id": "csv-match-36",
+      "id": "csv-match-62",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -630,7 +1072,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段三"
     },
     {
-      "id": "csv-match-37",
+      "id": "csv-match-63",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -647,7 +1089,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/23 時段三"
     },
     {
-      "id": "csv-match-38",
+      "id": "csv-match-64",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -664,7 +1106,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/24 時段一"
     },
     {
-      "id": "csv-match-39",
+      "id": "csv-match-65",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -681,7 +1123,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/24 時段一"
     },
     {
-      "id": "csv-match-40",
+      "id": "csv-match-66",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -698,7 +1140,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/24 時段一"
     },
     {
-      "id": "csv-match-41",
+      "id": "csv-match-67",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -715,7 +1157,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "🦃 5/24 時段一"
     },
     {
-      "id": "csv-match-42",
+      "id": "csv-match-68",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -732,7 +1174,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "5/24 時段二"
     },
     {
-      "id": "csv-match-43",
+      "id": "csv-match-69",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -749,7 +1191,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "5/24 時段二"
     },
     {
-      "id": "csv-match-44",
+      "id": "csv-match-70",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "period": 3,
@@ -766,7 +1208,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "5/24 時段三"
     },
     {
-      "id": "csv-match-45",
+      "id": "csv-match-71",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 3,
@@ -783,7 +1225,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "決賽"
     },
     {
-      "id": "csv-match-46",
+      "id": "csv-match-72",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 2,
@@ -800,7 +1242,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "四強"
     },
     {
-      "id": "csv-match-47",
+      "id": "csv-match-73",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 2,
@@ -817,7 +1259,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "四強"
     },
     {
-      "id": "csv-match-48",
+      "id": "csv-match-74",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 1,
@@ -834,7 +1276,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽第一時段"
     },
     {
-      "id": "csv-match-49",
+      "id": "csv-match-75",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 1,
@@ -851,7 +1293,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽第一時段"
     },
     {
-      "id": "csv-match-50",
+      "id": "csv-match-76",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 1,
@@ -868,7 +1310,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽第一時段"
     },
     {
-      "id": "csv-match-51",
+      "id": "csv-match-77",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-17",
       "period": 1,
@@ -885,7 +1327,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽第一時段"
     },
     {
-      "id": "csv-match-52",
+      "id": "csv-match-78",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 3,
@@ -902,7 +1344,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-53",
+      "id": "csv-match-79",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 3,
@@ -919,7 +1361,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-54",
+      "id": "csv-match-80",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 3,
@@ -936,7 +1378,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-55",
+      "id": "csv-match-81",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 3,
@@ -953,7 +1395,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-56",
+      "id": "csv-match-82",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 2,
@@ -970,7 +1412,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-57",
+      "id": "csv-match-83",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 2,
@@ -987,7 +1429,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-58",
+      "id": "csv-match-84",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 2,
@@ -1004,7 +1446,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-59",
+      "id": "csv-match-85",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 2,
@@ -1021,7 +1463,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-60",
+      "id": "csv-match-86",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 2,
@@ -1038,7 +1480,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-61",
+      "id": "csv-match-87",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 1,
@@ -1055,7 +1497,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-62",
+      "id": "csv-match-88",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 1,
@@ -1072,7 +1514,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-63",
+      "id": "csv-match-89",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "period": 1,
@@ -1089,7 +1531,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-64",
+      "id": "csv-match-90",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -1106,7 +1548,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "四強分流"
     },
     {
-      "id": "csv-match-65",
+      "id": "csv-match-91",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -1123,7 +1565,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "四強分流"
     },
     {
-      "id": "csv-match-66",
+      "id": "csv-match-92",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -1140,7 +1582,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽"
     },
     {
-      "id": "csv-match-67",
+      "id": "csv-match-93",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -1157,7 +1599,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽"
     },
     {
-      "id": "csv-match-68",
+      "id": "csv-match-94",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -1174,7 +1616,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽"
     },
     {
-      "id": "csv-match-69",
+      "id": "csv-match-95",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 1,
@@ -1191,7 +1633,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "複賽"
     },
     {
-      "id": "csv-match-70",
+      "id": "csv-match-96",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 4,
@@ -1208,7 +1650,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第四時段"
     },
     {
-      "id": "csv-match-71",
+      "id": "csv-match-97",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 4,
@@ -1225,7 +1667,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第四時段"
     },
     {
-      "id": "csv-match-72",
+      "id": "csv-match-98",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 4,
@@ -1242,7 +1684,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第四時段"
     },
     {
-      "id": "csv-match-73",
+      "id": "csv-match-99",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 4,
@@ -1259,7 +1701,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第四時段"
     },
     {
-      "id": "csv-match-74",
+      "id": "csv-match-100",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 4,
@@ -1276,7 +1718,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第四時段"
     },
     {
-      "id": "csv-match-75",
+      "id": "csv-match-101",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -1293,7 +1735,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-76",
+      "id": "csv-match-102",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -1310,7 +1752,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-77",
+      "id": "csv-match-103",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -1327,7 +1769,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-78",
+      "id": "csv-match-104",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -1344,7 +1786,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-79",
+      "id": "csv-match-105",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 3,
@@ -1361,7 +1803,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第三時段"
     },
     {
-      "id": "csv-match-80",
+      "id": "csv-match-106",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -1378,7 +1820,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-81",
+      "id": "csv-match-107",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -1395,7 +1837,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-82",
+      "id": "csv-match-108",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -1412,7 +1854,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-83",
+      "id": "csv-match-109",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -1429,7 +1871,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-84",
+      "id": "csv-match-110",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 2,
@@ -1446,7 +1888,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第二時段"
     },
     {
-      "id": "csv-match-85",
+      "id": "csv-match-111",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -1463,7 +1905,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-86",
+      "id": "csv-match-112",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -1480,7 +1922,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-87",
+      "id": "csv-match-113",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -1497,7 +1939,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-88",
+      "id": "csv-match-114",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -1514,7 +1956,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-89",
+      "id": "csv-match-115",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-23",
       "period": 1,
@@ -1531,7 +1973,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "初賽第一時段"
     },
     {
-      "id": "csv-match-90",
+      "id": "csv-match-116",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "period": 1,
@@ -1548,7 +1990,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-match-91",
+      "id": "csv-match-117",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1565,7 +2007,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-92",
+      "id": "csv-match-118",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1582,7 +2024,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-93",
+      "id": "csv-match-119",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1599,7 +2041,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-94",
+      "id": "csv-match-120",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1616,7 +2058,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-95",
+      "id": "csv-match-121",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1633,7 +2075,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-96",
+      "id": "csv-match-122",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 1,
@@ -1650,7 +2092,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第一時段比賽公告"
     },
     {
-      "id": "csv-match-97",
+      "id": "csv-match-123",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1667,7 +2109,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-match-98",
+      "id": "csv-match-124",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1684,7 +2126,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第二時段比賽公告"
     },
     {
-      "id": "csv-match-99",
+      "id": "csv-match-125",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1701,7 +2143,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第二時段比賽公告"
     },
     {
-      "id": "csv-match-100",
+      "id": "csv-match-126",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1718,7 +2160,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第二時段比賽公告"
     },
     {
-      "id": "csv-match-101",
+      "id": "csv-match-127",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1735,7 +2177,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第二時段比賽公告"
     },
     {
-      "id": "csv-match-102",
+      "id": "csv-match-128",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 2,
@@ -1752,7 +2194,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第二時段比賽公告"
     },
     {
-      "id": "csv-match-103",
+      "id": "csv-match-129",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -1769,7 +2211,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第三時段比賽公告"
     },
     {
-      "id": "csv-match-104",
+      "id": "csv-match-130",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -1786,7 +2228,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第三時段比賽公告"
     },
     {
-      "id": "csv-match-105",
+      "id": "csv-match-131",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 4,
@@ -1803,7 +2245,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "大會公告｜5/30第四時段比賽公告"
     },
     {
-      "id": "csv-match-106",
+      "id": "csv-match-132",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-30",
       "period": 4,
@@ -1823,6 +2265,76 @@ window.DEBATE_PUBLIC_DATA = {
   "honors": [
     {
       "id": "csv-honor-0",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "honorName": "冠軍",
+      "recipient": "燒焦了",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-1",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "honorName": "亞軍",
+      "recipient": "謝謝辯論讓我+365",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-2",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "honorName": "季軍",
+      "recipient": "小丑們要特選和分科、我們都喜歡女生",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-3",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-26",
+      "honorName": "最佳辯士",
+      "recipient": "高偉承",
+      "team": "謝謝辯論讓我+365",
+      "honorType": "player",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-4",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "honorName": "冠軍",
+      "recipient": "燒焦了",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-5",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "honorName": "亞軍",
+      "recipient": "謝謝辯論讓我+365",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-6",
+      "competitionName": "火雞盃全國高中職辯論比賽",
+      "matchDate": "2026-04-25",
+      "honorName": "季軍",
+      "recipient": "小丑們要特選和分科、我們都喜歡女生",
+      "team": "",
+      "honorType": "school",
+      "note": ""
+    },
+    {
+      "id": "csv-honor-7",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "冠軍",
@@ -1832,7 +2344,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-1",
+      "id": "csv-honor-8",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "亞軍",
@@ -1842,7 +2354,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-2",
+      "id": "csv-honor-9",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "季軍",
@@ -1852,7 +2364,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-3",
+      "id": "csv-honor-10",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "殿軍",
@@ -1862,7 +2374,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-4",
+      "id": "csv-honor-11",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -1872,7 +2384,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-5",
+      "id": "csv-honor-12",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -1882,7 +2394,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-6",
+      "id": "csv-honor-13",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -1892,7 +2404,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-7",
+      "id": "csv-honor-14",
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -1902,7 +2414,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-8",
+      "id": "csv-honor-15",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -1912,7 +2424,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-9",
+      "id": "csv-honor-16",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -1922,7 +2434,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-10",
+      "id": "csv-honor-17",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -1932,7 +2444,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-11",
+      "id": "csv-honor-18",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -1942,7 +2454,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-12",
+      "id": "csv-honor-19",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "冠軍",
@@ -1952,7 +2464,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-13",
+      "id": "csv-honor-20",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "亞軍",
@@ -1962,7 +2474,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-14",
+      "id": "csv-honor-21",
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "matchDate": "2026-05-24",
       "honorName": "季軍",
@@ -1972,7 +2484,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-15",
+      "id": "csv-honor-22",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "冠軍",
@@ -1982,7 +2494,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-16",
+      "id": "csv-honor-23",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "亞軍",
@@ -1992,7 +2504,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-17",
+      "id": "csv-honor-24",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "季軍",
@@ -2002,7 +2514,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-18",
+      "id": "csv-honor-25",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "季軍",
@@ -2012,7 +2524,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-19",
+      "id": "csv-honor-26",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "最佳辯士",
@@ -2022,7 +2534,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-20",
+      "id": "csv-honor-27",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "最佳辯士",
@@ -2032,7 +2544,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-21",
+      "id": "csv-honor-28",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "最佳辯士",
@@ -2042,7 +2554,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-22",
+      "id": "csv-honor-29",
       "competitionName": "輔仁盃全國高中職辯論比賽",
       "matchDate": "2026-05-16",
       "honorName": "最佳辯士",
@@ -2052,7 +2564,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-23",
+      "id": "csv-honor-30",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "冠軍",
@@ -2062,7 +2574,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-24",
+      "id": "csv-honor-31",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "亞軍",
@@ -2072,7 +2584,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-25",
+      "id": "csv-honor-32",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "季軍",
@@ -2082,7 +2594,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-26",
+      "id": "csv-honor-33",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "殿軍",
@@ -2092,7 +2604,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-27",
+      "id": "csv-honor-34",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -2102,7 +2614,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-28",
+      "id": "csv-honor-35",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -2112,7 +2624,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-29",
+      "id": "csv-honor-36",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -2122,7 +2634,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-30",
+      "id": "csv-honor-37",
       "competitionName": "風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "最佳辯士",
@@ -2132,7 +2644,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": ""
     },
     {
-      "id": "csv-honor-31",
+      "id": "csv-honor-38",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -2142,7 +2654,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-32",
+      "id": "csv-honor-39",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -2152,7 +2664,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-33",
+      "id": "csv-honor-40",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -2162,7 +2674,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-34",
+      "id": "csv-honor-41",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "最佳辯士",
@@ -2172,7 +2684,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-35",
+      "id": "csv-honor-42",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "季軍",
@@ -2182,7 +2694,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-36",
+      "id": "csv-honor-43",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "季軍",
@@ -2192,7 +2704,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-37",
+      "id": "csv-honor-44",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "亞軍",
@@ -2202,7 +2714,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終"
     },
     {
-      "id": "csv-honor-38",
+      "id": "csv-honor-45",
       "competitionName": "青雲盃全國高中職辯論錦標賽",
       "matchDate": "2026-05-31",
       "honorName": "冠軍",
