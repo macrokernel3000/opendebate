@@ -4,8 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="查詢台灣高中辯論賽事、比賽結果、學校戰績與公開榮譽。" />
+  <link rel="icon" href="data:," />
   <title>公開辯論資訊網</title>
-  <link rel="stylesheet" href="styles.css?v=20260611112714" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260611114337" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -35,39 +36,33 @@
 
       <section class="stats-band" id="statsBand" aria-label="資料統計"></section>
 
-      <div class="page-shell home-grid">
-        <section class="section-block recent-events">
-          <div class="section-heading">
-            <div><p class="kicker">最近更新</p><h2>近期賽事</h2></div>
-            <button class="text-link" type="button" data-go-events>查看全部 →</button>
-          </div>
-          <div id="recentEvents" class="event-grid"></div>
-        </section>
-
-        <aside class="section-block latest-honors">
-          <div class="section-heading">
-            <div><p class="kicker">榮譽快報</p><h2>最近得獎者</h2></div>
-            <span aria-hidden="true" class="heading-emoji">🏆</span>
-          </div>
-          <div id="latestHonors" class="honor-feed"></div>
-        </aside>
-      </div>
-
-      <section class="leaderboard-band">
+      <section class="timeline-band" aria-labelledby="timelineTitle">
         <div class="page-shell">
           <div class="section-heading">
-            <div><p class="kicker">資料榜</p><h2>累積榮譽排行</h2></div>
+            <div><p class="kicker">賽事軌跡</p><h2 id="timelineTitle">近期盃賽時間軸</h2></div>
+            <p class="section-note">停留或點選節點查看冠軍</p>
+          </div>
+          <div id="eventTimeline" class="event-timeline" aria-label="盃賽時間軸"></div>
+        </div>
+      </section>
+
+      <section class="page-shell collected-events" aria-labelledby="collectedEventsTitle">
+        <div class="section-heading">
+          <div><p class="kicker">資料庫</p><h2 id="collectedEventsTitle">已收錄賽事</h2></div>
+          <button class="text-link" type="button" data-go-events>進入賽事資料庫 →</button>
+        </div>
+        <div id="recentEvents" class="event-grid"></div>
+      </section>
+
+      <section class="leaderboard-band">
+        <div class="page-shell school-ranking-layout">
+          <div class="section-heading">
+            <div><p class="kicker">資料榜</p><h2>學校累積榮譽</h2></div>
             <p class="section-note">依目前已收錄的公開資料統計</p>
           </div>
-          <div class="leaderboard-grid">
-            <div class="leaderboard-panel">
-              <h3><span aria-hidden="true">🏫</span> 學校獎項</h3>
-              <ol id="schoolLeaderboard" class="ranking-list"></ol>
-            </div>
-            <div class="leaderboard-panel coral">
-              <h3><span class="leaderboard-mic" aria-hidden="true">🎤</span> 選手獎項</h3>
-              <ol id="playerLeaderboard" class="ranking-list"></ol>
-            </div>
+          <div class="leaderboard-panel">
+            <h3><span aria-hidden="true">🏫</span> 學校獎項</h3>
+            <ol id="schoolLeaderboard" class="ranking-list"></ol>
           </div>
         </div>
       </section>
@@ -94,10 +89,10 @@
           <h1>搜尋學校或選手 <span aria-hidden="true">🔎</span></h1>
           <div class="search-box">
             <span aria-hidden="true">⌕</span>
-            <input id="globalSearch" type="search" autocomplete="off" placeholder="輸入一個字也可以，例如：板、南山、李欣芸" aria-label="搜尋學校或選手" />
+            <input id="globalSearch" type="search" autocomplete="off" placeholder="搜尋學校或選手" aria-label="搜尋學校或選手" />
             <button id="clearSearch" type="button" aria-label="清除搜尋">×</button>
           </div>
-          <p id="searchMeta" class="search-meta">輸入名稱後，即時顯示最近參賽與獲獎紀錄。</p>
+          <p id="searchMeta" class="search-meta" aria-live="polite"></p>
         </div>
       </div>
       <div id="searchResults" class="page-shell search-results"></div>
@@ -108,7 +103,7 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260611112714" data-public-data-script></script>
-  <script src="app.js?v=20260611112714" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260611114337" data-public-data-script></script>
+  <script src="app.js?v=20260611114337" data-versioned-asset></script>
 </body>
 </html>

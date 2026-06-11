@@ -8,10 +8,9 @@ const els = {
   navButtons: document.querySelectorAll("[data-view]"),
   views: document.querySelectorAll("[data-view-panel]"),
   statsBand: document.querySelector("#statsBand"),
+  eventTimeline: document.querySelector("#eventTimeline"),
   recentEvents: document.querySelector("#recentEvents"),
-  latestHonors: document.querySelector("#latestHonors"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
-  playerLeaderboard: document.querySelector("#playerLeaderboard"),
   eventSelect: document.querySelector("#eventSelect"),
   eventDetail: document.querySelector("#eventDetail"),
   globalSearch: document.querySelector("#globalSearch"),
@@ -79,7 +78,7 @@ function renderStats() {
 }
 
 function renderRecentEvents() {
-  els.recentEvents.innerHTML = events.slice(0, 4).map((event) => `
+  els.recentEvents.innerHTML = events.map((event) => `
     <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
       <span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>
       <h3>${escapeHtml(event.name)}</h3>
@@ -91,20 +90,26 @@ function honorSubject(honor) {
   return honor.honorType === "player" ? honor.recipient : honor.recipient || honor.team;
 }
 
-function renderLatestHonors() {
-  els.latestHonors.innerHTML = [...honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "")).slice(0, 6).map((honor) => `
-    <div class="honor-feed-item">
-      <span class="honor-icon" aria-hidden="true">${/冠軍/.test(honor.honorName) ? "🥇" : /亞軍/.test(honor.honorName) ? "🥈" : /季軍/.test(honor.honorName) ? "🥉" : "🎤"}</span>
-      <div><strong>${escapeHtml(honor.honorName)}｜${escapeHtml(honorSubject(honor))}</strong><span>${escapeHtml(honor.team || honor.competitionName)} · ${escapeHtml(formatDate(honor.matchDate))}</span></div>
-    </div>`).join("");
+function eventChampion(event) {
+  const champion = event.honors.find((honor) => honor.honorName?.trim() === "冠軍");
+  return champion ? honorSubject(champion) : "尚未收錄冠軍";
+}
+
+function renderTimeline() {
+  const timelineEvents = [...events].sort((a, b) => (a.latestDate || "9999").localeCompare(b.latestDate || "9999"));
+  els.eventTimeline.innerHTML = timelineEvents.map((event, index) => `
+    <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
+      <span class="timeline-date">${escapeHtml(formatDate(event.latestDate))}</span>
+      <span class="timeline-dot" aria-hidden="true">${index === timelineEvents.length - 1 ? "★" : ""}</span>
+      <span class="timeline-name">${escapeHtml(event.name)}</span>
+      <span class="timeline-tooltip" role="tooltip"><small>冠軍</small><strong>${escapeHtml(eventChampion(event))}</strong><em>點擊查看完整賽果</em></span>
+    </button>`).join("");
 }
 
 function renderLeaderboards() {
   const schoolAwards = countBy(honors, (honor) => honor.honorType === "player" ? honor.team : honor.recipient || honor.team).slice(0, 7);
-  const playerAwards = countBy(honors.filter((honor) => honor.honorType === "player"), (honor) => honor.recipient).slice(0, 7);
   const rows = (items, type) => items.map(([name, count]) => `<li><div><strong>${escapeHtml(name)}</strong><span>${type}</span></div><span class="rank-count">${count} 項</span></li>`).join("");
   els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽");
-  els.playerLeaderboard.innerHTML = rows(playerAwards, "個人辯士榮譽");
 }
 
 function renderEventOptions() {
@@ -157,7 +162,7 @@ function normalize(value) { return String(value || "").toLocaleLowerCase("zh-Han
 function renderSearch(query) {
   const needle = normalize(query);
   if (!needle) {
-    els.searchMeta.textContent = "輸入名稱後，即時顯示最近參賽與獲獎紀錄。";
+    els.searchMeta.textContent = "";
     els.searchResults.innerHTML = '<div class="search-empty"><div><span aria-hidden="true">🗂️</span><strong>從一個名字開始</strong><p>學校、隊伍或選手姓名都可以搜尋。</p></div></div>';
     return;
   }
@@ -212,6 +217,18 @@ els.recentEvents.addEventListener("click", (event) => {
   renderEvent(card.dataset.eventName);
   showView("events");
 });
+els.eventTimeline.addEventListener("click", (event) => {
+  const node = event.target.closest("[data-event-name]");
+  if (!node) return;
+  if (window.matchMedia("(hover: none)").matches && !node.classList.contains("is-revealed")) {
+    els.eventTimeline.querySelectorAll(".is-revealed").forEach((item) => item.classList.remove("is-revealed"));
+    node.classList.add("is-revealed");
+    node.focus();
+    return;
+  }
+  renderEvent(node.dataset.eventName);
+  showView("events");
+});
 els.eventSelect.addEventListener("change", () => renderEvent(els.eventSelect.value));
 els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
 els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
@@ -228,8 +245,8 @@ function renderAll() {
     return;
   }
   renderStats();
+  renderTimeline();
   renderRecentEvents();
-  renderLatestHonors();
   renderLeaderboards();
   renderEventOptions();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";

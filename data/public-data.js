@@ -5466,12 +5466,42 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第二屆夢箋盃",
       "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "永豐高中",
+      "team": "",
+      "honorType": "school",
+      "note": "",
+      "id": "sheet-honor-14"
+    },
+    {
+      "competitionName": "第二屆夢箋盃",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "明倫高中",
+      "team": "",
+      "honorType": "school",
+      "note": "",
+      "id": "sheet-honor-15"
+    },
+    {
+      "competitionName": "第二屆夢箋盃",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "麗山高中",
+      "team": "",
+      "honorType": "school",
+      "note": "",
+      "id": "sheet-honor-16"
+    },
+    {
+      "competitionName": "第二屆夢箋盃",
+      "matchDate": "",
       "honorName": "最佳辯士",
       "recipient": "楊婷萓",
       "team": "麗山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-14"
+      "id": "sheet-honor-17"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5481,7 +5511,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "麗山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-15"
+      "id": "sheet-honor-18"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5491,7 +5521,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "永豐高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-16"
+      "id": "sheet-honor-19"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5501,7 +5531,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明倫高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-17"
+      "id": "sheet-honor-20"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5511,7 +5541,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-18"
+      "id": "sheet-honor-21"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5521,7 +5551,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-19"
+      "id": "sheet-honor-22"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5531,7 +5561,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-20"
+      "id": "sheet-honor-23"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5541,7 +5571,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-21"
+      "id": "sheet-honor-24"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5551,7 +5581,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-22"
+      "id": "sheet-honor-25"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5561,7 +5591,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-23"
+      "id": "sheet-honor-26"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5571,7 +5601,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-24"
+      "id": "sheet-honor-27"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5581,7 +5611,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建國中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-25"
+      "id": "sheet-honor-28"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5591,7 +5621,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "竹科實中(二)",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-26"
+      "id": "sheet-honor-29"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5601,7 +5631,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "北一女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-27"
+      "id": "sheet-honor-30"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5611,7 +5641,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "板橋高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-28"
+      "id": "sheet-honor-31"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5621,7 +5651,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "鳳新高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-29"
+      "id": "sheet-honor-32"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5631,7 +5661,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-30"
+      "id": "sheet-honor-33"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5641,7 +5671,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-31"
+      "id": "sheet-honor-34"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5651,7 +5681,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-32"
+      "id": "sheet-honor-35"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5661,7 +5691,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-33"
+      "id": "sheet-honor-36"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5671,7 +5701,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-34"
+      "id": "sheet-honor-37"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5681,7 +5711,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-35"
+      "id": "sheet-honor-38"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5691,7 +5721,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "謝謝辯論讓我+365",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-36"
+      "id": "sheet-honor-39"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5701,7 +5731,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-37"
+      "id": "sheet-honor-40"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5711,7 +5741,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-38"
+      "id": "sheet-honor-41"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5721,7 +5751,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-39"
+      "id": "sheet-honor-42"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5731,7 +5761,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-40"
+      "id": "sheet-honor-43"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5741,7 +5771,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "永平高中",
       "honorType": "Player",
       "note": "",
-      "id": "sheet-honor-41"
+      "id": "sheet-honor-44"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5751,7 +5781,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-42"
+      "id": "sheet-honor-45"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5761,7 +5791,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-43"
+      "id": "sheet-honor-46"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5771,7 +5801,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-44"
+      "id": "sheet-honor-47"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5781,7 +5811,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-45"
+      "id": "sheet-honor-48"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5791,7 +5821,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-46"
+      "id": "sheet-honor-49"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5801,7 +5831,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-47"
+      "id": "sheet-honor-50"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5811,7 +5841,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-48"
+      "id": "sheet-honor-51"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5821,7 +5851,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "瑞祥高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-49"
+      "id": "sheet-honor-52"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5831,7 +5861,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建國中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-50"
+      "id": "sheet-honor-53"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5841,7 +5871,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄中學",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-51"
+      "id": "sheet-honor-54"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5851,7 +5881,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "中山女高",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-52"
+      "id": "sheet-honor-55"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5861,7 +5891,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明道中學",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-53"
+      "id": "sheet-honor-56"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5871,7 +5901,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-54"
+      "id": "sheet-honor-57"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5881,7 +5911,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄中學",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-55"
+      "id": "sheet-honor-58"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5891,7 +5921,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "中山女高",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-56"
+      "id": "sheet-honor-59"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5901,7 +5931,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明道中學",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-57"
+      "id": "sheet-honor-60"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5911,7 +5941,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-58"
+      "id": "sheet-honor-61"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5921,7 +5951,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-59"
+      "id": "sheet-honor-62"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5931,7 +5961,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-60"
+      "id": "sheet-honor-63"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5941,7 +5971,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-61"
+      "id": "sheet-honor-64"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5951,7 +5981,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-62"
+      "id": "sheet-honor-65"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5961,7 +5991,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-63"
+      "id": "sheet-honor-66"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5971,7 +6001,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "學抒情文的拉完了",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-64"
+      "id": "sheet-honor-67"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5981,7 +6011,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "學測再加365",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-65"
+      "id": "sheet-honor-68"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5991,7 +6021,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "鐘米糕小蛋糕我吃吃吃吃吃吃",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-66"
+      "id": "sheet-honor-69"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6001,7 +6031,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-67"
+      "id": "sheet-honor-70"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6011,7 +6041,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-68"
+      "id": "sheet-honor-71"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6021,7 +6051,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-69"
+      "id": "sheet-honor-72"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6031,7 +6061,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-70"
+      "id": "sheet-honor-73"
     }
   ]
 };
