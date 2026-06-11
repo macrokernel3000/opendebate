@@ -477,6 +477,788 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "sheet-match-27"
     },
     {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "劍潭一中",
+        "negative": "從缺"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "從缺",
+      "note": "",
+      "id": "sheet-match-28"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建美鱷魚",
+        "negative": "正道中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "建美鱷魚",
+      "note": "正道中學棄賽，建美鱷魚以3:0獲勝",
+      "id": "sheet-match-29"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "海岸哲學家",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "海岸哲學家",
+      "note": "",
+      "id": "sheet-match-30"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "心碎小丑之海底撈銀海快金海的會員"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "松山高中",
+      "note": "",
+      "id": "sheet-match-31"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "不怕魔法",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "麗山高中",
+      "note": "",
+      "id": "sheet-match-32"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "慈濟附中",
+        "negative": "這樣也能贏，隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "這樣也能贏，隊",
+      "note": "",
+      "id": "sheet-match-33"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "我家的貓會後空翻",
+        "negative": "我說的都對"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "我家的貓會後空翻",
+      "note": "",
+      "id": "sheet-match-34"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "來裁",
+        "negative": "咖波和他的子民們"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "咖波和他的子民們",
+      "note": "",
+      "id": "sheet-match-35"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "海岸哲學家"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "松山高中",
+      "note": "",
+      "id": "sheet-match-36"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "從缺",
+        "negative": "建美鱷魚"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "建美鱷魚",
+      "note": "",
+      "id": "sheet-match-37"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "心碎小丑之海底撈銀海快金海的會員",
+        "negative": "劍潭一中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "心碎小丑之海底撈銀海快金海的會員",
+      "note": "",
+      "id": "sheet-match-38"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "正道中學",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "建竹實聯隊",
+      "note": "正道中學棄賽，建竹實聯隊以0:3獲勝",
+      "id": "sheet-match-39"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "這樣也能贏，隊",
+        "negative": "咖波和他的子民們"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "這樣也能贏，隊",
+      "note": "",
+      "id": "sheet-match-40"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "我家的貓會後空翻",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "我家的貓會後空翻",
+      "note": "",
+      "id": "sheet-match-41"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "慈濟附中",
+        "negative": "來裁"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "慈濟附中",
+      "note": "",
+      "id": "sheet-match-42"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "我說的都對",
+        "negative": "不怕魔法"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "不怕魔法",
+      "note": "",
+      "id": "sheet-match-43"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "心碎小丑之海底撈銀海快金海的會員",
+        "negative": "從缺"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "心碎小丑之海底撈銀海快金海的會員",
+      "note": "",
+      "id": "sheet-match-44"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "海岸哲學家"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "海岸哲學家",
+      "note": "",
+      "id": "sheet-match-45"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "慈濟附中",
+        "negative": "不怕魔法"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "不怕魔法",
+      "note": "",
+      "id": "sheet-match-46"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-26",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "咖波和他的子民們",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "咖波和他的子民們",
+      "note": "",
+      "id": "sheet-match-47"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "不怕魔法",
+        "negative": "建美鱷魚"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "建美鱷魚",
+      "note": "",
+      "id": "sheet-match-48"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "我家的貓會後空翻",
+        "negative": "海岸哲學家"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "我家的貓會後空翻",
+      "note": "",
+      "id": "sheet-match-49"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "這樣也能贏，隊",
+        "negative": "心碎小丑之海底撈銀海快金海的會員"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "心碎小丑之海底撈銀海快金海的會員",
+      "note": "",
+      "id": "sheet-match-50"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "咖波和他的子民們",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "松山高中",
+      "note": "",
+      "id": "sheet-match-51"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "建美鱷魚",
+        "negative": "我家的貓會後空翻"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "我家的貓會後空翻",
+      "note": "",
+      "id": "sheet-match-52"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "心碎小丑之海底撈銀海快金海的會員",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "松山高中",
+      "note": "",
+      "id": "sheet-match-53"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2025-04-27",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "我家的貓會後空翻",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 0
+      },
+      "winner": "我家的貓會後空翻",
+      "note": "",
+      "id": "sheet-match-54"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "慈大附中",
+        "negative": "道明中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "道明中學",
+      "note": "",
+      "id": "sheet-match-55"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "新店高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "建竹實聯隊",
+      "note": "",
+      "id": "sheet-match-56"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "失手的辯士",
+        "negative": "還是邢可柔你要收買我"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "失手的辯士",
+      "note": "",
+      "id": "sheet-match-57"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "宏道辯蓮",
+        "negative": "萬芳華江家齊聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "萬芳華江家齊聯隊",
+      "note": "",
+      "id": "sheet-match-58"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "慧燈高級監獄"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "南山高中",
+      "note": "",
+      "id": "sheet-match-59"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "道明中學",
+        "negative": "慈大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "道明中學",
+      "note": "",
+      "id": "sheet-match-60"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "拿盃幫社長在大安區租房子",
+        "negative": "百齡高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "拿盃幫社長在大安區租房子",
+      "note": "",
+      "id": "sheet-match-61"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "萬芳華江家齊聯隊",
+        "negative": "宏道辯蓮"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "萬芳華江家齊聯隊",
+      "note": "",
+      "id": "sheet-match-62"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "還是邢可柔你要收買我",
+        "negative": "失手的辯士"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "失手的辯士",
+      "note": "",
+      "id": "sheet-match-63"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "新店高中",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "建竹實聯隊",
+      "note": "",
+      "id": "sheet-match-64"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "慧燈高級監獄",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "",
+      "id": "sheet-match-65"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-19",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "百齡高中",
+        "negative": "拿盃幫社長在大安區租房子"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "拿盃幫社長在大安區租房子",
+      "note": "",
+      "id": "sheet-match-66"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "道明中學",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "建竹實聯隊",
+      "note": "",
+      "id": "sheet-match-67"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "失手的辯士",
+        "negative": "萬芳華江家齊聯隊"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "萬芳華江家齊聯隊",
+      "note": "",
+      "id": "sheet-match-68"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "政大附中",
+      "note": "",
+      "id": "sheet-match-69"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "汪汪隊立大功",
+        "negative": "拿盃幫社長在大安區租房子"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "汪汪隊立大功",
+      "note": "",
+      "id": "sheet-match-70"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "萬芳華江家齊聯隊"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "建竹實聯隊",
+      "note": "",
+      "id": "sheet-match-71"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "汪汪隊立大功"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "政大附中",
+      "note": "",
+      "id": "sheet-match-72"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "2024-05-20",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 2
+      },
+      "winner": "建竹實聯隊",
+      "note": "",
+      "id": "sheet-match-73"
+    },
+    {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "period": 2,
@@ -491,7 +1273,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第二日第二時段",
-      "id": "sheet-match-28"
+      "id": "sheet-match-74"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -508,7 +1290,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二日第二時段",
-      "id": "sheet-match-29"
+      "id": "sheet-match-75"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -525,7 +1307,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二日第一時段",
-      "id": "sheet-match-30"
+      "id": "sheet-match-76"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -542,7 +1324,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第二日第一時段",
-      "id": "sheet-match-31"
+      "id": "sheet-match-77"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -559,7 +1341,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二日第一時段",
-      "id": "sheet-match-32"
+      "id": "sheet-match-78"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -576,7 +1358,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-33"
+      "id": "sheet-match-79"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -593,7 +1375,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-34"
+      "id": "sheet-match-80"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -610,7 +1392,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-35"
+      "id": "sheet-match-81"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -627,7 +1409,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-36"
+      "id": "sheet-match-82"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -644,7 +1426,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-37"
+      "id": "sheet-match-83"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -661,7 +1443,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-38"
+      "id": "sheet-match-84"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -678,7 +1460,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第三時段",
-      "id": "sheet-match-39"
+      "id": "sheet-match-85"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -695,7 +1477,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第二時段",
-      "id": "sheet-match-40"
+      "id": "sheet-match-86"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -712,7 +1494,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二時段",
-      "id": "sheet-match-41"
+      "id": "sheet-match-87"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -729,7 +1511,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二時段",
-      "id": "sheet-match-42"
+      "id": "sheet-match-88"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -746,7 +1528,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第二時段",
-      "id": "sheet-match-43"
+      "id": "sheet-match-89"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -763,7 +1545,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第二時段",
-      "id": "sheet-match-44"
+      "id": "sheet-match-90"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -780,7 +1562,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-45"
+      "id": "sheet-match-91"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -797,7 +1579,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-46"
+      "id": "sheet-match-92"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -814,7 +1596,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-47"
+      "id": "sheet-match-93"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -831,7 +1613,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-48"
+      "id": "sheet-match-94"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -848,7 +1630,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-49"
+      "id": "sheet-match-95"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -865,7 +1647,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-50"
+      "id": "sheet-match-96"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -882,7 +1664,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "蒙泉盃第一時段",
-      "id": "sheet-match-51"
+      "id": "sheet-match-97"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -899,7 +1681,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永豐高中",
       "note": "",
-      "id": "sheet-match-52"
+      "id": "sheet-match-98"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -916,7 +1698,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "中大壢中",
       "note": "",
-      "id": "sheet-match-53"
+      "id": "sheet-match-99"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -933,7 +1715,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "中山女高",
       "note": "",
-      "id": "sheet-match-54"
+      "id": "sheet-match-100"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -950,7 +1732,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永豐高中",
       "note": "",
-      "id": "sheet-match-55"
+      "id": "sheet-match-101"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -967,7 +1749,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "麗山高中",
       "note": "",
-      "id": "sheet-match-56"
+      "id": "sheet-match-102"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -984,7 +1766,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "中山女高",
       "note": "",
-      "id": "sheet-match-57"
+      "id": "sheet-match-103"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1001,7 +1783,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "明倫高中",
       "note": "",
-      "id": "sheet-match-58"
+      "id": "sheet-match-104"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1018,7 +1800,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "平鎮高中",
       "note": "",
-      "id": "sheet-match-59"
+      "id": "sheet-match-105"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1035,7 +1817,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "麗山高中",
       "note": "",
-      "id": "sheet-match-60"
+      "id": "sheet-match-106"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1052,7 +1834,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "成淵高中",
       "note": "",
-      "id": "sheet-match-61"
+      "id": "sheet-match-107"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1069,7 +1851,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "明倫高中",
       "note": "",
-      "id": "sheet-match-62"
+      "id": "sheet-match-108"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1086,7 +1868,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永豐高中",
       "note": "裁單總分同分，依秩序冊由永豐高中獲論點分勝出",
-      "id": "sheet-match-63"
+      "id": "sheet-match-109"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1103,7 +1885,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "明倫高中",
       "note": "",
-      "id": "sheet-match-64"
+      "id": "sheet-match-110"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -1120,7 +1902,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永豐高中",
       "note": "決賽，冠軍由永豐高中獲得",
-      "id": "sheet-match-65"
+      "id": "sheet-match-111"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1137,7 +1919,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-66"
+      "id": "sheet-match-112"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1154,7 +1936,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-67"
+      "id": "sheet-match-113"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1171,7 +1953,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-68"
+      "id": "sheet-match-114"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1188,7 +1970,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-69"
+      "id": "sheet-match-115"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1205,7 +1987,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-70"
+      "id": "sheet-match-116"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1222,7 +2004,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-71"
+      "id": "sheet-match-117"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1239,7 +2021,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-72"
+      "id": "sheet-match-118"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1256,7 +2038,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-73"
+      "id": "sheet-match-119"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1273,7 +2055,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-74"
+      "id": "sheet-match-120"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1290,7 +2072,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-75"
+      "id": "sheet-match-121"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1307,7 +2089,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-76"
+      "id": "sheet-match-122"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1324,7 +2106,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-77"
+      "id": "sheet-match-123"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1341,7 +2123,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-78"
+      "id": "sheet-match-124"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1358,7 +2140,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-79"
+      "id": "sheet-match-125"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1375,7 +2157,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-80"
+      "id": "sheet-match-126"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1392,7 +2174,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-81"
+      "id": "sheet-match-127"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1409,7 +2191,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-82"
+      "id": "sheet-match-128"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1426,7 +2208,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-83"
+      "id": "sheet-match-129"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1443,7 +2225,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-84"
+      "id": "sheet-match-130"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1460,7 +2242,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-85"
+      "id": "sheet-match-131"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1477,7 +2259,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-86"
+      "id": "sheet-match-132"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1494,7 +2276,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-87"
+      "id": "sheet-match-133"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1511,7 +2293,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-88"
+      "id": "sheet-match-134"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1528,7 +2310,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-89"
+      "id": "sheet-match-135"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1545,7 +2327,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-90"
+      "id": "sheet-match-136"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1562,7 +2344,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-91"
+      "id": "sheet-match-137"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1579,7 +2361,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-92"
+      "id": "sheet-match-138"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1596,7 +2378,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-93"
+      "id": "sheet-match-139"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1613,7 +2395,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-94"
+      "id": "sheet-match-140"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1630,7 +2412,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-95"
+      "id": "sheet-match-141"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1647,7 +2429,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-96"
+      "id": "sheet-match-142"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1664,7 +2446,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-97"
+      "id": "sheet-match-143"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1681,7 +2463,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-98"
+      "id": "sheet-match-144"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1698,7 +2480,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-99"
+      "id": "sheet-match-145"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1715,7 +2497,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-100"
+      "id": "sheet-match-146"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1732,7 +2514,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-101"
+      "id": "sheet-match-147"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1749,7 +2531,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-102"
+      "id": "sheet-match-148"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1766,7 +2548,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-103"
+      "id": "sheet-match-149"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1783,7 +2565,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-104"
+      "id": "sheet-match-150"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1800,7 +2582,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-105"
+      "id": "sheet-match-151"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1817,7 +2599,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-106"
+      "id": "sheet-match-152"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1834,7 +2616,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-107"
+      "id": "sheet-match-153"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1851,7 +2633,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-108"
+      "id": "sheet-match-154"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1868,7 +2650,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-109"
+      "id": "sheet-match-155"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1885,7 +2667,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-110"
+      "id": "sheet-match-156"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1902,7 +2684,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-111"
+      "id": "sheet-match-157"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1919,7 +2701,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-112"
+      "id": "sheet-match-158"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1936,7 +2718,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-113"
+      "id": "sheet-match-159"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1953,7 +2735,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-114"
+      "id": "sheet-match-160"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1970,7 +2752,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-115"
+      "id": "sheet-match-161"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -1987,7 +2769,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-116"
+      "id": "sheet-match-162"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2004,7 +2786,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-117"
+      "id": "sheet-match-163"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2021,7 +2803,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-118"
+      "id": "sheet-match-164"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2038,7 +2820,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-119"
+      "id": "sheet-match-165"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2055,7 +2837,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-120"
+      "id": "sheet-match-166"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2072,7 +2854,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-121"
+      "id": "sheet-match-167"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2089,7 +2871,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-122"
+      "id": "sheet-match-168"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2106,7 +2888,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-123"
+      "id": "sheet-match-169"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2123,7 +2905,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-124"
+      "id": "sheet-match-170"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2140,7 +2922,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-125"
+      "id": "sheet-match-171"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2157,7 +2939,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-126"
+      "id": "sheet-match-172"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2174,7 +2956,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-127"
+      "id": "sheet-match-173"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2191,7 +2973,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-128"
+      "id": "sheet-match-174"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2208,7 +2990,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-129"
+      "id": "sheet-match-175"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2225,7 +3007,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-130"
+      "id": "sheet-match-176"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2242,7 +3024,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-131"
+      "id": "sheet-match-177"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2259,7 +3041,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-132"
+      "id": "sheet-match-178"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2276,7 +3058,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-133"
+      "id": "sheet-match-179"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2293,7 +3075,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-134"
+      "id": "sheet-match-180"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2310,7 +3092,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-135"
+      "id": "sheet-match-181"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2327,7 +3109,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-136"
+      "id": "sheet-match-182"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2344,7 +3126,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-137"
+      "id": "sheet-match-183"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2361,7 +3143,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-138"
+      "id": "sheet-match-184"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2378,7 +3160,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-139"
+      "id": "sheet-match-185"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2395,7 +3177,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-140"
+      "id": "sheet-match-186"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2412,7 +3194,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-141"
+      "id": "sheet-match-187"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2429,7 +3211,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-142"
+      "id": "sheet-match-188"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2446,7 +3228,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-143"
+      "id": "sheet-match-189"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2463,7 +3245,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-144"
+      "id": "sheet-match-190"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2480,7 +3262,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-145"
+      "id": "sheet-match-191"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2497,7 +3279,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-146"
+      "id": "sheet-match-192"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2514,7 +3296,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-147"
+      "id": "sheet-match-193"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2531,7 +3313,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-148"
+      "id": "sheet-match-194"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2548,7 +3330,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-149"
+      "id": "sheet-match-195"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2565,7 +3347,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-150"
+      "id": "sheet-match-196"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2582,7 +3364,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-151"
+      "id": "sheet-match-197"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2599,7 +3381,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-152"
+      "id": "sheet-match-198"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2616,7 +3398,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-153"
+      "id": "sheet-match-199"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2633,7 +3415,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-154"
+      "id": "sheet-match-200"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2650,7 +3432,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-155"
+      "id": "sheet-match-201"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2667,7 +3449,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-156"
+      "id": "sheet-match-202"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2684,7 +3466,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-157"
+      "id": "sheet-match-203"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2701,7 +3483,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-158"
+      "id": "sheet-match-204"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2718,7 +3500,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-159"
+      "id": "sheet-match-205"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2735,7 +3517,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-160"
+      "id": "sheet-match-206"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2752,7 +3534,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-161"
+      "id": "sheet-match-207"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2769,7 +3551,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-162"
+      "id": "sheet-match-208"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2786,7 +3568,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-163"
+      "id": "sheet-match-209"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2803,7 +3585,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-164"
+      "id": "sheet-match-210"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2820,7 +3602,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-165"
+      "id": "sheet-match-211"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2837,7 +3619,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-166"
+      "id": "sheet-match-212"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2854,7 +3636,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-167"
+      "id": "sheet-match-213"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2871,7 +3653,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-168"
+      "id": "sheet-match-214"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2888,7 +3670,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-169"
+      "id": "sheet-match-215"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2905,7 +3687,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-170"
+      "id": "sheet-match-216"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2922,7 +3704,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-171"
+      "id": "sheet-match-217"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2939,7 +3721,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-172"
+      "id": "sheet-match-218"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2956,7 +3738,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-173"
+      "id": "sheet-match-219"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2973,7 +3755,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-174"
+      "id": "sheet-match-220"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -2990,7 +3772,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-175"
+      "id": "sheet-match-221"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3007,7 +3789,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-176"
+      "id": "sheet-match-222"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3024,7 +3806,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-177"
+      "id": "sheet-match-223"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3041,7 +3823,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-178"
+      "id": "sheet-match-224"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3058,7 +3840,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-179"
+      "id": "sheet-match-225"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3075,7 +3857,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-180"
+      "id": "sheet-match-226"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3092,7 +3874,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-181"
+      "id": "sheet-match-227"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3109,7 +3891,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-182"
+      "id": "sheet-match-228"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3126,7 +3908,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-183"
+      "id": "sheet-match-229"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3143,7 +3925,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-184"
+      "id": "sheet-match-230"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3160,7 +3942,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-185"
+      "id": "sheet-match-231"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3177,7 +3959,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-186"
+      "id": "sheet-match-232"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3194,7 +3976,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-187"
+      "id": "sheet-match-233"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3211,7 +3993,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "",
-      "id": "sheet-match-188"
+      "id": "sheet-match-234"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3228,7 +4010,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-189"
+      "id": "sheet-match-235"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -3245,7 +4027,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-190"
+      "id": "sheet-match-236"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3262,7 +4044,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-191"
+      "id": "sheet-match-237"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3279,7 +4061,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-192"
+      "id": "sheet-match-238"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3296,7 +4078,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-193"
+      "id": "sheet-match-239"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3313,7 +4095,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-194"
+      "id": "sheet-match-240"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3330,7 +4112,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-195"
+      "id": "sheet-match-241"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3347,7 +4129,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段一",
-      "id": "sheet-match-196"
+      "id": "sheet-match-242"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3364,7 +4146,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/23 時段二",
-      "id": "sheet-match-197"
+      "id": "sheet-match-243"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3381,7 +4163,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段二",
-      "id": "sheet-match-198"
+      "id": "sheet-match-244"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3398,7 +4180,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段二",
-      "id": "sheet-match-199"
+      "id": "sheet-match-245"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3415,7 +4197,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段三",
-      "id": "sheet-match-200"
+      "id": "sheet-match-246"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3432,7 +4214,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段三",
-      "id": "sheet-match-201"
+      "id": "sheet-match-247"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3449,7 +4231,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/23 時段三",
-      "id": "sheet-match-202"
+      "id": "sheet-match-248"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3466,7 +4248,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段三",
-      "id": "sheet-match-203"
+      "id": "sheet-match-249"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3483,7 +4265,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/23 時段三",
-      "id": "sheet-match-204"
+      "id": "sheet-match-250"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3500,7 +4282,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "🦃 5/24 時段一",
-      "id": "sheet-match-205"
+      "id": "sheet-match-251"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3517,7 +4299,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/24 時段一",
-      "id": "sheet-match-206"
+      "id": "sheet-match-252"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3534,7 +4316,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/24 時段一",
-      "id": "sheet-match-207"
+      "id": "sheet-match-253"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3551,7 +4333,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "🦃 5/24 時段一",
-      "id": "sheet-match-208"
+      "id": "sheet-match-254"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3568,7 +4350,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "5/24 時段二",
-      "id": "sheet-match-209"
+      "id": "sheet-match-255"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3585,7 +4367,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "5/24 時段二",
-      "id": "sheet-match-210"
+      "id": "sheet-match-256"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -3602,7 +4384,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "5/24 時段三",
-      "id": "sheet-match-211"
+      "id": "sheet-match-257"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3619,7 +4401,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "八進四第一時段",
-      "id": "sheet-match-212"
+      "id": "sheet-match-258"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3636,7 +4418,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "八進四第一時段",
-      "id": "sheet-match-213"
+      "id": "sheet-match-259"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3653,7 +4435,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "八進四第一時段",
-      "id": "sheet-match-214"
+      "id": "sheet-match-260"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3670,7 +4452,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "八進四第一時段",
-      "id": "sheet-match-215"
+      "id": "sheet-match-261"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3687,7 +4469,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "四強分流第四時段",
-      "id": "sheet-match-216"
+      "id": "sheet-match-262"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3704,7 +4486,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "四強分流第四時段",
-      "id": "sheet-match-217"
+      "id": "sheet-match-263"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3721,7 +4503,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "冠亞賽",
-      "id": "sheet-match-218"
+      "id": "sheet-match-264"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3738,7 +4520,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-219"
+      "id": "sheet-match-265"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3755,7 +4537,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-220"
+      "id": "sheet-match-266"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3772,7 +4554,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-221"
+      "id": "sheet-match-267"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3789,7 +4571,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-222"
+      "id": "sheet-match-268"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3806,7 +4588,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-223"
+      "id": "sheet-match-269"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3823,7 +4605,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-224"
+      "id": "sheet-match-270"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3840,7 +4622,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-225"
+      "id": "sheet-match-271"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3857,7 +4639,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-226"
+      "id": "sheet-match-272"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3874,7 +4656,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-227"
+      "id": "sheet-match-273"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3891,7 +4673,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-228"
+      "id": "sheet-match-274"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3908,7 +4690,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-229"
+      "id": "sheet-match-275"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3925,7 +4707,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-230"
+      "id": "sheet-match-276"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3942,7 +4724,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-231"
+      "id": "sheet-match-277"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3959,7 +4741,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-232"
+      "id": "sheet-match-278"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3976,7 +4758,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-233"
+      "id": "sheet-match-279"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -3993,7 +4775,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-234"
+      "id": "sheet-match-280"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -4010,7 +4792,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-235"
+      "id": "sheet-match-281"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -4027,7 +4809,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-236"
+      "id": "sheet-match-282"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -4044,7 +4826,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-237"
+      "id": "sheet-match-283"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4061,7 +4843,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "中和高中",
       "note": "",
-      "id": "sheet-match-238"
+      "id": "sheet-match-284"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4078,7 +4860,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永平高中",
       "note": "",
-      "id": "sheet-match-239"
+      "id": "sheet-match-285"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4095,7 +4877,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "了不起的公關們",
       "note": "",
-      "id": "sheet-match-240"
+      "id": "sheet-match-286"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4112,7 +4894,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "我這個最可愛的小寶貝",
       "note": "",
-      "id": "sheet-match-241"
+      "id": "sheet-match-287"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4129,7 +4911,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "不知道要取什麼",
       "note": "",
-      "id": "sheet-match-242"
+      "id": "sheet-match-288"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4146,7 +4928,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "南湖高中",
       "note": "循環賽比序後由打比賽嗎各位晉級四強",
-      "id": "sheet-match-243"
+      "id": "sheet-match-289"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4163,7 +4945,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "了不起的公關們",
       "note": "",
-      "id": "sheet-match-244"
+      "id": "sheet-match-290"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4180,7 +4962,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永平高中",
       "note": "",
-      "id": "sheet-match-245"
+      "id": "sheet-match-291"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4197,7 +4979,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "不知道要取什麼",
       "note": "",
-      "id": "sheet-match-246"
+      "id": "sheet-match-292"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4214,7 +4996,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "打比賽嗎各位",
       "note": "循環賽比序：勝場1:1、評分單3:3、論點分3:3，個人名次加總52:56",
-      "id": "sheet-match-247"
+      "id": "sheet-match-293"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4231,7 +5013,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永平高中",
       "note": "",
-      "id": "sheet-match-248"
+      "id": "sheet-match-294"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4248,7 +5030,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "不知道要取什麼",
       "note": "",
-      "id": "sheet-match-249"
+      "id": "sheet-match-295"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -4265,7 +5047,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "永平高中",
       "note": "決賽",
-      "id": "sheet-match-250"
+      "id": "sheet-match-296"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4282,7 +5064,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "決賽",
-      "id": "sheet-match-251"
+      "id": "sheet-match-297"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4299,7 +5081,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "四強",
-      "id": "sheet-match-252"
+      "id": "sheet-match-298"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4316,7 +5098,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "四強",
-      "id": "sheet-match-253"
+      "id": "sheet-match-299"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4333,7 +5115,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "複賽第一時段",
-      "id": "sheet-match-254"
+      "id": "sheet-match-300"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4350,7 +5132,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "複賽第一時段",
-      "id": "sheet-match-255"
+      "id": "sheet-match-301"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4367,7 +5149,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "複賽第一時段",
-      "id": "sheet-match-256"
+      "id": "sheet-match-302"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4384,7 +5166,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "複賽第一時段",
-      "id": "sheet-match-257"
+      "id": "sheet-match-303"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4401,7 +5183,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-258"
+      "id": "sheet-match-304"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4418,7 +5200,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-259"
+      "id": "sheet-match-305"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4435,7 +5217,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-260"
+      "id": "sheet-match-306"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4452,7 +5234,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-261"
+      "id": "sheet-match-307"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4469,7 +5251,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-262"
+      "id": "sheet-match-308"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4486,7 +5268,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-263"
+      "id": "sheet-match-309"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4503,7 +5285,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-264"
+      "id": "sheet-match-310"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4520,7 +5302,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-265"
+      "id": "sheet-match-311"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4537,7 +5319,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-266"
+      "id": "sheet-match-312"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4554,7 +5336,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-267"
+      "id": "sheet-match-313"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4571,7 +5353,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-268"
+      "id": "sheet-match-314"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -4588,7 +5370,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-269"
+      "id": "sheet-match-315"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4605,7 +5387,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "四強分流",
-      "id": "sheet-match-270"
+      "id": "sheet-match-316"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4622,7 +5404,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "四強分流",
-      "id": "sheet-match-271"
+      "id": "sheet-match-317"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4639,7 +5421,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "複賽",
-      "id": "sheet-match-272"
+      "id": "sheet-match-318"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4656,7 +5438,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "複賽",
-      "id": "sheet-match-273"
+      "id": "sheet-match-319"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4673,7 +5455,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "複賽",
-      "id": "sheet-match-274"
+      "id": "sheet-match-320"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4690,7 +5472,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "複賽",
-      "id": "sheet-match-275"
+      "id": "sheet-match-321"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4707,7 +5489,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-276"
+      "id": "sheet-match-322"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4724,7 +5506,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-277"
+      "id": "sheet-match-323"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4741,7 +5523,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-278"
+      "id": "sheet-match-324"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4758,7 +5540,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-279"
+      "id": "sheet-match-325"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4775,7 +5557,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第四時段",
-      "id": "sheet-match-280"
+      "id": "sheet-match-326"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4792,7 +5574,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-281"
+      "id": "sheet-match-327"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4809,7 +5591,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-282"
+      "id": "sheet-match-328"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4826,7 +5608,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-283"
+      "id": "sheet-match-329"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4843,7 +5625,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-284"
+      "id": "sheet-match-330"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4860,7 +5642,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第三時段",
-      "id": "sheet-match-285"
+      "id": "sheet-match-331"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4877,7 +5659,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-286"
+      "id": "sheet-match-332"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4894,7 +5676,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-287"
+      "id": "sheet-match-333"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4911,7 +5693,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-288"
+      "id": "sheet-match-334"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4928,7 +5710,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-289"
+      "id": "sheet-match-335"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4945,7 +5727,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第二時段",
-      "id": "sheet-match-290"
+      "id": "sheet-match-336"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4962,7 +5744,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-291"
+      "id": "sheet-match-337"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4979,7 +5761,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-292"
+      "id": "sheet-match-338"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -4996,7 +5778,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-293"
+      "id": "sheet-match-339"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5013,7 +5795,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-294"
+      "id": "sheet-match-340"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5030,7 +5812,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "初賽第一時段",
-      "id": "sheet-match-295"
+      "id": "sheet-match-341"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5047,7 +5829,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-296"
+      "id": "sheet-match-342"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5064,7 +5846,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-297"
+      "id": "sheet-match-343"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5081,7 +5863,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-298"
+      "id": "sheet-match-344"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5098,7 +5880,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-299"
+      "id": "sheet-match-345"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5115,7 +5897,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-300"
+      "id": "sheet-match-346"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5132,7 +5914,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-301"
+      "id": "sheet-match-347"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5149,7 +5931,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第一時段比賽公告",
-      "id": "sheet-match-302"
+      "id": "sheet-match-348"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5166,7 +5948,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "",
-      "id": "sheet-match-303"
+      "id": "sheet-match-349"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5183,7 +5965,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第二時段比賽公告",
-      "id": "sheet-match-304"
+      "id": "sheet-match-350"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5200,7 +5982,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第二時段比賽公告",
-      "id": "sheet-match-305"
+      "id": "sheet-match-351"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5217,7 +5999,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第二時段比賽公告",
-      "id": "sheet-match-306"
+      "id": "sheet-match-352"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5234,7 +6016,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第二時段比賽公告",
-      "id": "sheet-match-307"
+      "id": "sheet-match-353"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5251,7 +6033,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第二時段比賽公告",
-      "id": "sheet-match-308"
+      "id": "sheet-match-354"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5268,7 +6050,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第三時段比賽公告",
-      "id": "sheet-match-309"
+      "id": "sheet-match-355"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5285,7 +6067,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第三時段比賽公告",
-      "id": "sheet-match-310"
+      "id": "sheet-match-356"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5302,7 +6084,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "正方勝",
       "note": "大會公告｜5/30第四時段比賽公告",
-      "id": "sheet-match-311"
+      "id": "sheet-match-357"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5319,7 +6101,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "winner": "反方勝",
       "note": "大會公告｜5/30第四時段比賽公告",
-      "id": "sheet-match-312"
+      "id": "sheet-match-358"
     }
   ],
   "honors": [
@@ -5384,6 +6166,166 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "sheet-honor-5"
     },
     {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "我家的貓會後空翻",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-6"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "松山高中",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-7"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "建美鱷魚",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-8"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "心碎小丑之海底撈銀海快金海的會員",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-9"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "縱谷之星",
+      "recipient": "蔡定瑾",
+      "team": "慈濟附中",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-10"
+    },
+    {
+      "competitionName": "第二屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "李祐慈",
+      "team": "我家的貓會後空翻",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-11"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "建竹實聯隊",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-12"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "政大附中",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-13"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "萬芳華江家齊聯隊",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-14"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "汪汪隊立大功",
+      "team": "",
+      "honorType": "隊伍榮譽",
+      "note": "",
+      "id": "sheet-honor-15"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "金哲安",
+      "team": "失手的辯士",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-16"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "縱谷之星",
+      "recipient": "周澤恩",
+      "team": "慈大附中",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-17"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "馬郁晴",
+      "team": "南山高中",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-18"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "洪可芸",
+      "team": "汪汪隊立大功",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-19"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "林奕鋐",
+      "team": "建竹實聯隊",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-20"
+    },
+    {
+      "competitionName": "第一屆東岸盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "蔡智鈞",
+      "team": "建竹實聯隊",
+      "honorType": "個人榮譽",
+      "note": "",
+      "id": "sheet-honor-21"
+    },
+    {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "冠軍",
@@ -5391,7 +6333,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-6"
+      "id": "sheet-honor-22"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5401,7 +6343,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-7"
+      "id": "sheet-honor-23"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5411,7 +6353,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-8"
+      "id": "sheet-honor-24"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5421,7 +6363,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-9"
+      "id": "sheet-honor-25"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5431,7 +6373,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "薇閣中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-10"
+      "id": "sheet-honor-26"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5441,7 +6383,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "北一女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-11"
+      "id": "sheet-honor-27"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5451,7 +6393,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-12"
+      "id": "sheet-honor-28"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -5461,7 +6403,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-13"
+      "id": "sheet-honor-29"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5471,7 +6413,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-14"
+      "id": "sheet-honor-30"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5481,7 +6423,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-15"
+      "id": "sheet-honor-31"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5491,7 +6433,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-16"
+      "id": "sheet-honor-32"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5501,7 +6443,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "麗山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-17"
+      "id": "sheet-honor-33"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5511,7 +6453,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "麗山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-18"
+      "id": "sheet-honor-34"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5521,7 +6463,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "永豐高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-19"
+      "id": "sheet-honor-35"
     },
     {
       "competitionName": "第二屆夢箋盃",
@@ -5531,7 +6473,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明倫高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-20"
+      "id": "sheet-honor-36"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5541,7 +6483,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-21"
+      "id": "sheet-honor-37"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5551,7 +6493,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-22"
+      "id": "sheet-honor-38"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5561,7 +6503,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-23"
+      "id": "sheet-honor-39"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5571,7 +6513,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-24"
+      "id": "sheet-honor-40"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5581,7 +6523,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-25"
+      "id": "sheet-honor-41"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5591,7 +6533,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-26"
+      "id": "sheet-honor-42"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5601,7 +6543,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-27"
+      "id": "sheet-honor-43"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -5611,7 +6553,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建國中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-28"
+      "id": "sheet-honor-44"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5621,7 +6563,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "竹科實中(二)",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-29"
+      "id": "sheet-honor-45"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5631,7 +6573,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "北一女中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-30"
+      "id": "sheet-honor-46"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5641,7 +6583,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "板橋高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-31"
+      "id": "sheet-honor-47"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5651,7 +6593,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "鳳新高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-32"
+      "id": "sheet-honor-48"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5661,7 +6603,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-33"
+      "id": "sheet-honor-49"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5671,7 +6613,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-34"
+      "id": "sheet-honor-50"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -5681,7 +6623,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-35"
+      "id": "sheet-honor-51"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5691,7 +6633,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-36"
+      "id": "sheet-honor-52"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5701,7 +6643,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-37"
+      "id": "sheet-honor-53"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5711,7 +6653,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-38"
+      "id": "sheet-honor-54"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -5721,7 +6663,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "謝謝辯論讓我+365",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-39"
+      "id": "sheet-honor-55"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5731,7 +6673,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-40"
+      "id": "sheet-honor-56"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5741,7 +6683,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-41"
+      "id": "sheet-honor-57"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5751,7 +6693,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-42"
+      "id": "sheet-honor-58"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5761,7 +6703,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-43"
+      "id": "sheet-honor-59"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5771,7 +6713,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "永平高中",
       "honorType": "Player",
       "note": "",
-      "id": "sheet-honor-44"
+      "id": "sheet-honor-60"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -5781,7 +6723,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-45"
+      "id": "sheet-honor-61"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5791,7 +6733,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-46"
+      "id": "sheet-honor-62"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5801,7 +6743,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-47"
+      "id": "sheet-honor-63"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5811,7 +6753,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-48"
+      "id": "sheet-honor-64"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5821,7 +6763,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "",
-      "id": "sheet-honor-49"
+      "id": "sheet-honor-65"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5831,7 +6773,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-50"
+      "id": "sheet-honor-66"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5841,7 +6783,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南山高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-51"
+      "id": "sheet-honor-67"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5851,7 +6793,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "瑞祥高中",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-52"
+      "id": "sheet-honor-68"
     },
     {
       "competitionName": "輔仁盃全國高中職辯論比賽",
@@ -5861,7 +6803,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建國中學",
       "honorType": "player",
       "note": "",
-      "id": "sheet-honor-53"
+      "id": "sheet-honor-69"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5871,7 +6813,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄中學",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-54"
+      "id": "sheet-honor-70"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5881,7 +6823,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "中山女高",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-55"
+      "id": "sheet-honor-71"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5891,7 +6833,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明道中學",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-56"
+      "id": "sheet-honor-72"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5901,7 +6843,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "團體獎",
       "note": "",
-      "id": "sheet-honor-57"
+      "id": "sheet-honor-73"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5911,7 +6853,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "高雄中學",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-58"
+      "id": "sheet-honor-74"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5921,7 +6863,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "中山女高",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-59"
+      "id": "sheet-honor-75"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5931,7 +6873,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "明道中學",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-60"
+      "id": "sheet-honor-76"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5941,7 +6883,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "個人獎",
       "note": "",
-      "id": "sheet-honor-61"
+      "id": "sheet-honor-77"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5951,7 +6893,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-62"
+      "id": "sheet-honor-78"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5961,7 +6903,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-63"
+      "id": "sheet-honor-79"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5971,7 +6913,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-64"
+      "id": "sheet-honor-80"
     },
     {
       "competitionName": "風雩盃中學辯論錦標賽",
@@ -5981,7 +6923,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-65"
+      "id": "sheet-honor-81"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -5991,7 +6933,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功高中",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-66"
+      "id": "sheet-honor-82"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6001,7 +6943,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "學抒情文的拉完了",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-67"
+      "id": "sheet-honor-83"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6011,7 +6953,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "學測再加365",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-68"
+      "id": "sheet-honor-84"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6021,7 +6963,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "鐘米糕小蛋糕我吃吃吃吃吃吃",
       "honorType": "player",
       "note": "最終",
-      "id": "sheet-honor-69"
+      "id": "sheet-honor-85"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6031,7 +6973,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-70"
+      "id": "sheet-honor-86"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6041,7 +6983,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-71"
+      "id": "sheet-honor-87"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6051,7 +6993,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-72"
+      "id": "sheet-honor-88"
     },
     {
       "competitionName": "青雲盃全國高中職辯論錦標賽",
@@ -6061,7 +7003,7 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "school",
       "note": "最終",
-      "id": "sheet-honor-73"
+      "id": "sheet-honor-89"
     }
   ]
 };

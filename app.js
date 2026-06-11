@@ -96,11 +96,11 @@ function eventChampion(event) {
 }
 
 function renderTimeline() {
-  const timelineEvents = [...events].sort((a, b) => (a.latestDate || "9999").localeCompare(b.latestDate || "9999"));
+  const timelineEvents = [...events].sort((a, b) => (b.latestDate || "").localeCompare(a.latestDate || ""));
   els.eventTimeline.innerHTML = timelineEvents.map((event, index) => `
     <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
       <span class="timeline-date">${escapeHtml(formatDate(event.latestDate))}</span>
-      <span class="timeline-dot" aria-hidden="true">${index === timelineEvents.length - 1 ? "★" : ""}</span>
+      <span class="timeline-dot" aria-hidden="true">${index === 0 ? "★" : ""}</span>
       <span class="timeline-name">${escapeHtml(event.name)}</span>
       <span class="timeline-tooltip" role="tooltip"><small>冠軍</small><strong>${escapeHtml(eventChampion(event))}</strong><em>點擊查看完整賽果</em></span>
     </button>`).join("");
@@ -217,7 +217,47 @@ els.recentEvents.addEventListener("click", (event) => {
   renderEvent(card.dataset.eventName);
   showView("events");
 });
+
+let suppressTimelineClick = false;
+let timelineDrag = null;
+
+els.eventTimeline.addEventListener("pointerdown", (event) => {
+  if (event.pointerType !== "mouse" || event.button !== 0) return;
+  timelineDrag = { pointerId: event.pointerId, startX: event.clientX, scrollLeft: els.eventTimeline.scrollLeft, moved: false };
+  els.eventTimeline.setPointerCapture(event.pointerId);
+  els.eventTimeline.classList.add("is-dragging");
+});
+
+els.eventTimeline.addEventListener("pointermove", (event) => {
+  if (!timelineDrag || timelineDrag.pointerId !== event.pointerId) return;
+  const distance = event.clientX - timelineDrag.startX;
+  if (Math.abs(distance) > 5) timelineDrag.moved = true;
+  els.eventTimeline.scrollLeft = timelineDrag.scrollLeft - distance;
+});
+
+function finishTimelineDrag(event) {
+  if (!timelineDrag || timelineDrag.pointerId !== event.pointerId) return;
+  suppressTimelineClick = timelineDrag.moved;
+  timelineDrag = null;
+  els.eventTimeline.classList.remove("is-dragging");
+  window.setTimeout(() => { suppressTimelineClick = false; }, 300);
+}
+
+els.eventTimeline.addEventListener("pointerup", finishTimelineDrag);
+els.eventTimeline.addEventListener("pointercancel", finishTimelineDrag);
+els.eventTimeline.addEventListener("wheel", (event) => {
+  if (window.matchMedia("(max-width: 640px)").matches || els.eventTimeline.scrollWidth <= els.eventTimeline.clientWidth) return;
+  if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
+  els.eventTimeline.scrollLeft += event.deltaY;
+  event.preventDefault();
+}, { passive: false });
+
 els.eventTimeline.addEventListener("click", (event) => {
+  if (suppressTimelineClick) {
+    event.preventDefault();
+    suppressTimelineClick = false;
+    return;
+  }
   const node = event.target.closest("[data-event-name]");
   if (!node) return;
   if (window.matchMedia("(hover: none)").matches && !node.classList.contains("is-revealed")) {
