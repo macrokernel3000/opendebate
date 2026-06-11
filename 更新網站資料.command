@@ -4,12 +4,23 @@ DIR="${0:A:h}"
 cd "$DIR"
 
 if [[ -n "$1" ]]; then
-  if ! cp "$1" "$DIR/data/public-data.csv"; then
-    echo "無法複製 CSV。按 Return 關閉。"
+  EXT="${1:e:l}"
+  if [[ "$EXT" == "xlsx" ]]; then
+    TARGET="$DIR/data/public-data.xlsx"
+  elif [[ "$EXT" == "csv" ]]; then
+    TARGET="$DIR/data/public-data.csv"
+    rm -f "$DIR/data/public-data.xlsx"
+  else
+    echo "只支援 .xlsx 或 .csv。按 Return 關閉。"
     read
     exit 1
   fi
-  echo "已將拖入的 CSV 設為網站資料。"
+  if ! cp "$1" "$TARGET"; then
+    echo "無法複製資料檔。按 Return 關閉。"
+    read
+    exit 1
+  fi
+  echo "已將拖入的資料檔設為網站資料。"
 fi
 
 echo "正在檢查並更新公開網站資料..."
