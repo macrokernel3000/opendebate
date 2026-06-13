@@ -1,7 +1,7 @@
-公開辯論資訊網：多分頁更新資料
+公開辯論資訊網：可累加資料更新
 
 建議方法
-1. 開啟 data/public-data.xlsx
+1. 開啟既有 data/public-data.xlsx，或另存 public-data2.xlsx
 2. 每一個賽事使用一個工作分頁
 3. 每頁第二列只填一次完整賽事名稱
 4. 編輯完成後保持為 Excel .xlsx 格式
@@ -9,10 +9,28 @@
 6. 看到「更新完成」後按 Return
 
 新增賽事
-複製一個既有工作分頁，修改分頁名稱與第二列的賽事名稱，再清除舊資料。
+可在原活頁簿複製分頁，也可以新增 public-data2.xlsx。所有 public-data 開頭的 Excel/CSV 都會合併，完全相同的資料會去重。
+
+單位編號
+1. 請編輯 data/entity-registry.xlsx（也可用根目錄的 entity-registry.numbers 編輯後輸出）。
+2. Numbers 編輯完成後，選「檔案 → 輸出至 → Excel」。
+3. 檔名必須是 entity-registry.xlsx，放進 data 資料夾。
+4. 雙擊「更新網站資料.command」，程式會優先讀取 Excel，自動同步產生 entity-registry.csv 與 public-data.js。
+5. 也可以把 entity-registry.xlsx 直接拖到「更新網站資料.command」上；舊名冊會備份到 data/backups。
+
+名冊欄位
+- code：固定代碼，s（學校）、p（特殊隊伍）、u（大學），例如 s001。
+- type：會依 code 第一碼自動同步。
+- name：網站顯示的正式名稱，可以是 0。
+- aliases：同一積分歸戶的其他寫法，以 | 分隔。例如正式名稱「臺南一中」，aliases 填「台南一中|台南一中 正|台南一中 反」。
+
+同一名稱若同時是正式隊名和其他隊伍的別名，正式名稱優先。Excel 中保留的空白列會自動忽略，不必刪除。
+
+登場選手（選填）
+資料表可新增「正方登場選手」「反方登場選手」兩欄，多人用頓號分隔。網站目前不顯示，但會存入資料供未來統計。
 
 拖放方法
-也可以直接把新的 .xlsx 或 .csv 拖到「更新網站資料.command」上。
+也可以直接把新的賽事 .xlsx/.csv 或 entity-registry.xlsx 拖到「更新網站資料.command」上。舊檔不會直接刪除。
 
 請勿手動修改 data/public-data.js；它會由更新程式自動產生。
 

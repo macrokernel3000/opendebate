@@ -10,43 +10,60 @@
 - 「已收錄賽事」會列出資料檔內的全部賽事，每張卡片都可直接開啟完整賽果與榮譽。
 - 「學校累積榮譽」只統計學校獎項，不顯示選手排行榜。
 
+## 資料架構（第二版）
+
+網站畫面仍讀取單一 `data/public-data.js`，但這個檔案由更新程式自動合併產生。資料現在分成：
+
+- `records`：每場勝負與比分。
+- `honors`：團體或個人榮譽。
+- `entities`：固定編號的學校、特殊隊伍與大學。
+- `attendance`：登場選手紀錄，目前不顯示在網頁，保留給未來的登場次數統計。
+
+單位代碼採三種前綴：`s001` 起為中學端學校、`p001` 起為特殊或跨校隊伍、`u001` 起為大學。請編輯 `data/entity-registry.xlsx`；更新程式會自動同步產生 `entity-registry.csv`。同校不同名稱可用 `|` 放在 `aliases` 欄，搜尋、戰績與積分都會依同一代碼歸戶。名稱 `0` 是有效隊名，空白列則會忽略。
+
 ## 建議的資料整理方式：一個賽事一個工作分頁
 
-主要資料檔是：
+既有主要資料檔是：
 
 - `data/public-data.xlsx`
 
-這份 Excel 活頁簿已經依賽事拆成多個工作分頁。每個分頁的使用方式：
+之後不必覆蓋它。任何檔名以 `public-data` 開頭的 `.xlsx` 或 `.csv` 都會一起讀取，例如 `public-data2.xlsx`、`public-data-2027.xlsx`。完全相同的資料會自動去重。
+
+每個 Excel 分頁的使用方式：
 
 1. 第一列是醒目的賽事標題。
 2. 第二列的「賽事名稱」填完整名稱，只需填一次。
 3. 第三列以下是資料表；「盃賽」欄可以留白。
 4. 新增賽事時，複製一個既有分頁，修改分頁名稱與第二列的賽事名稱，再清除舊資料。
+5. 未來要記錄登場選手時，可在標題列增加選填欄位「正方登場選手」與「反方登場選手」，多人用頓號 `、` 分隔。
 
 Numbers 可以直接開啟這份 `.xlsx`。編輯完畢後，請使用「檔案 → 輸出至 → Excel」保留為 `.xlsx`，不要只存成 `.numbers`。
 
 ## 更新網站
 
-編輯完 `data/public-data.xlsx` 後，雙擊根目錄的 `更新網站資料.command`。
+新增或編輯任一 `public-data*.xlsx/csv` 後，雙擊根目錄的 `更新網站資料.command`。
 
 更新程式會逐一讀取所有工作分頁、檢查欄位，再合併產生 `data/public-data.js`。看到「更新完成」後，按 Return 即會開啟網站。
 
+名冊更新方式：用 Numbers 或 Excel 編輯 `entity-registry.xlsx`，放在 `data` 資料夾後執行同一個更新工具即可。也可直接把該 Excel 拖到更新工具；舊版本會先備份至 `data/backups`。
+
 更新時也會自動改變 `index.html` 裡的資料、程式與樣式版本，避免 GitHub Pages 或瀏覽器繼續使用舊快取。上傳時請至少一併提交：
 
-- `data/public-data.csv`
+- `data/public-data*.xlsx/csv`
+- `data/entity-registry.xlsx`
+- `data/entity-registry.csv`
 - `data/public-data.js`
 - `index.html`
 
-也可以直接把新的 `.xlsx` 拖到 `更新網站資料.command` 上；它會複製、檢查並更新資料。
-
-舊的單一 CSV 方式仍然可以使用：把 `.csv` 拖到更新工具上即可。此時工具會改用 CSV，並移除活頁簿資料檔，避免來源混淆。
+也可以直接把新的 `.xlsx` 或 `.csv` 拖到 `更新網站資料.command` 上；工具會保留舊檔，以原檔名新增來源。若檔名重複，會自動加上時間，不會刪除既有資料。
 
 若 macOS 第一次阻擋執行，請對 `更新網站資料.command` 按右鍵，選擇「打開」並確認一次；之後即可正常雙擊。
 
 ## 哪些檔案要管理
 
-- `data/public-data.xlsx`：建議使用的主要來源，一個賽事一個工作分頁。
-- `data/public-data.csv`：舊版相容來源；只有沒有 XLSX 時才會讀取。
+- `data/public-data*.xlsx/csv`：所有歷史與新增來源，都會合併讀取。
+- `data/entity-registry.xlsx`：固定單位代碼、正式名稱與別名的主要編輯來源。
+- `data/entity-registry.csv`：由更新程式同步產生，建議與網站一起上傳。
 - `data/public-data.js`：由更新程式自動產生，不需編輯。
 - `tools/build_data.py`：資料轉換程式，不需編輯。
 - `data/seed-public-data.js`：舊版備份，網站不會讀取。

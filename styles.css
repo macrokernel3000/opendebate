@@ -73,7 +73,7 @@ button { color: inherit; }
 .event-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .event-card { position: relative; min-height: 185px; display: flex; flex-direction: column; justify-content: space-between; border: 1px solid var(--line); padding: 20px; background: white; cursor: pointer; text-align: left; overflow: hidden; }
 .event-card::after { content: ""; position: absolute; width: 56px; height: 56px; right: -16px; bottom: -16px; border-radius: 50%; background: var(--yellow); opacity: .75; }
-.event-card:nth-child(2)::after { background: var(--coral); }
+.event-card:nth-child(3n)::after { background: var(--coral); }
 .event-card:hover { border-color: var(--green); transform: translateY(-2px); box-shadow: var(--shadow); }
 .event-date { color: var(--coral); font-size: 12px; font-weight: 900; }
 .event-card h3 { margin: 12px 0; font-size: 18px; line-height: 1.45; }
@@ -140,10 +140,27 @@ button { color: inherit; }
 .result-section { margin-bottom: 40px; }
 .result-section h2 { margin-bottom: 15px; font-size: 22px; }
 .entity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.entity-card { border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 16px; background: white; }
+.entity-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 16px; background: white; color: var(--ink); cursor: pointer; font: inherit; text-align: left; }
+.entity-card:hover, .entity-card.is-selected { border-color: var(--green); background: var(--soft); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--yellow); }
 .entity-card.player { border-left-color: var(--coral); }
 .entity-card h3 { margin: 0; font-size: 17px; }
 .entity-card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.entity-card small { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.entity-detail { scroll-margin-top: 88px; border-top: 7px solid var(--green); padding: 24px; background: white; box-shadow: var(--shadow); }
+.entity-detail-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 28px; }
+.entity-detail-heading h2 { margin: 0; }
+.entity-detail-heading > div:last-child { color: var(--muted); font-size: 13px; }
+.entity-detail h3 { margin: 28px 0 12px; }
+.entity-match { display: grid; grid-template-columns: 105px 1fr auto; gap: 14px; align-items: center; border: 1px solid var(--line); padding: 13px 15px; }
+.entity-match strong { font-size: 14px; }
+.entity-match p, .entity-honor-row p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
+.result-badge { min-width: 32px; padding: 6px 8px; text-align: center; font-size: 12px; font-weight: 900; }
+.result-win { background: var(--yellow); }
+.result-loss { background: var(--soft); color: var(--muted); }
+.result-draw { background: #e8e8e8; }
+.entity-honor-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.entity-honor-row { display: grid; grid-template-columns: 90px 1fr; gap: 12px; border: 1px solid var(--line); padding: 13px 15px; }
+.entity-honor-row > span { color: var(--muted); font-size: 12px; }
 .history-list { display: grid; gap: 9px; }
 .history-item { display: grid; grid-template-columns: 105px 1fr auto; gap: 14px; align-items: center; border: 1px solid var(--line); padding: 13px 15px; background: white; }
 .history-date { color: var(--muted); font-size: 12px; }
@@ -164,6 +181,7 @@ footer span { color: #b8c1bc; font-size: 12px; }
   .event-content-grid, .school-ranking-layout { grid-template-columns: 1fr; }
   .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .entity-honor-list { grid-template-columns: 1fr; }
   .match-row { grid-template-columns: 58px minmax(0, 1fr) 62px minmax(0, 1fr); }
   .match-note { grid-column: 2 / -1; }
 }
@@ -207,6 +225,9 @@ footer span { color: #b8c1bc; font-size: 12px; }
   .team-name { font-size: 12px; overflow-wrap: anywhere; }
   .match-score { gap: 4px; font-size: 16px; }
   .history-item { grid-template-columns: 1fr auto; }
+  .entity-detail-heading { display: grid; align-items: start; }
+  .entity-match { grid-template-columns: 1fr auto; }
+  .entity-match .history-date { grid-column: 1 / -1; }
   .history-date { grid-column: 1 / -1; }
   footer .page-shell { display: grid; }
 }
