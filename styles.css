@@ -82,11 +82,10 @@ button { color: inherit; }
 .entity-card h3 .player-icon { display: inline-grid; font-size: 19px; }
 
 .leaderboard-band { padding: 68px 0 82px; background: #e9f2ed; border-top: 1px solid #c7d8cf; }
-.school-ranking-layout { display: grid; grid-template-columns: minmax(240px, .65fr) minmax(0, 1.35fr); gap: 48px; align-items: start; }
-.school-ranking-layout > .section-heading { display: block; margin: 0; }
-.school-ranking-layout .section-note { margin-top: 14px; text-align: left; }
 .section-note { margin: 0; color: var(--muted); font-size: 13px; }
+.leaderboard-scroll { display: grid; grid-template-columns: repeat(3, minmax(300px, 1fr)); gap: 18px; align-items: start; }
 .leaderboard-panel { border-top: 7px solid var(--green); padding: 22px; background: white; box-shadow: var(--shadow); }
+.leaderboard-panel.teal { border-top-color: var(--teal); }
 .leaderboard-panel.coral { border-top-color: var(--coral); }
 .leaderboard-panel h3 { margin: 0 0 12px; font-size: 20px; }
 .ranking-list { margin: 0; padding: 0; list-style: none; counter-reset: ranking; }
@@ -178,7 +177,7 @@ footer span { color: #b8c1bc; font-size: 12px; }
 .data-error code { padding: 2px 5px; background: var(--soft); }
 
 @media (max-width: 900px) {
-  .event-content-grid, .school-ranking-layout { grid-template-columns: 1fr; }
+  .event-content-grid { grid-template-columns: 1fr; }
   .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-honor-list { grid-template-columns: 1fr; }
@@ -214,6 +213,9 @@ footer span { color: #b8c1bc; font-size: 12px; }
   .timeline-tooltip { position: static; grid-column: 2; width: min(100%, 270px); margin-top: 8px; transform: none; opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; }
   .timeline-node:hover .timeline-tooltip, .timeline-node:focus .timeline-tooltip, .timeline-node:focus-visible .timeline-tooltip, .timeline-node.is-revealed .timeline-tooltip { max-height: 120px; transform: none; padding-top: 12px; padding-bottom: 12px; opacity: 1; }
   .collected-events { padding-top: 60px; padding-bottom: 66px; }
+  .leaderboard-band { padding-block: 54px; overflow: hidden; }
+  .leaderboard-scroll { width: calc(100vw - 12px); margin-right: calc((100vw - min(100% - 24px, 1180px)) / -2); grid-template-columns: repeat(3, minmax(82vw, 82vw)); gap: 12px; padding: 4px 18vw 24px 0; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; scrollbar-color: var(--coral) transparent; }
+  .leaderboard-panel { scroll-snap-align: start; }
   .event-grid, .entity-grid { grid-template-columns: 1fr; }
   .section-heading { align-items: flex-start; }
   .section-note { max-width: 150px; text-align: right; }

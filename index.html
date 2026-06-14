@@ -6,7 +6,7 @@
   <meta name="description" content="查詢台灣高中辯論賽事、比賽結果、學校戰績與公開榮譽。" />
   <link rel="icon" href="data:," />
   <title>公開辯論資訊網</title>
-  <link rel="stylesheet" href="styles.css?v=20260613230028" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260614152821" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -55,14 +55,24 @@
       </section>
 
       <section class="leaderboard-band">
-        <div class="page-shell school-ranking-layout">
+        <div class="page-shell">
           <div class="section-heading">
-            <div><p class="kicker">資料榜</p><h2>學校累積榮譽</h2></div>
-            <p class="section-note">依目前已收錄的公開資料統計</p>
+            <div><p class="kicker">資料榜</p><h2>學校排行榜</h2></div>
+            <p class="section-note">依目前已收錄資料與積分歸戶統計</p>
           </div>
-          <div class="leaderboard-panel">
-            <h3><span aria-hidden="true">🏫</span> 學校獎項</h3>
-            <ol id="schoolLeaderboard" class="ranking-list"></ol>
+          <div class="leaderboard-scroll" aria-label="學校排行榜，可左右滑動">
+            <article class="leaderboard-panel">
+              <h3><span aria-hidden="true">🏆</span> 累積榮譽</h3>
+              <ol id="schoolLeaderboard" class="ranking-list"></ol>
+            </article>
+            <article class="leaderboard-panel teal">
+              <h3><span aria-hidden="true">📋</span> 參賽場次</h3>
+              <ol id="gamesLeaderboard" class="ranking-list"></ol>
+            </article>
+            <article class="leaderboard-panel coral">
+              <h3><span aria-hidden="true">⚔️</span> 總勝場</h3>
+              <ol id="winsLeaderboard" class="ranking-list"></ol>
+            </article>
           </div>
         </div>
       </section>
@@ -103,9 +113,9 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260613230028" data-public-data-script></script>
-  <script src="js/core.js?v=20260613230028" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260613230028" data-versioned-asset></script>
-  <script src="app.js?v=20260613230028" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260614152821" data-public-data-script></script>
+  <script src="js/core.js?v=20260614152821" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260614152821" data-versioned-asset></script>
+  <script src="app.js?v=20260614152821" data-versioned-asset></script>
 </body>
 </html>

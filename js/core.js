@@ -44,6 +44,7 @@
       records: data.records || [],
       honors: data.honors || [],
       attendance: data.attendance || [],
+      topics: data.topics || [],
       entities,
       entityById,
       entityByName,

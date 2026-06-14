@@ -56,16 +56,23 @@ def split_players(value):
     return [name.strip() for name in re.split(r"[、,，;；|/\n]+", clean(value)) if name.strip()]
 
 
+def split_topics(value):
+    return [topic.strip() for topic in re.split(r"[|\n]+", clean(value)) if topic.strip()]
+
+
 def stable_id(prefix, value):
     digest = hashlib.sha1(json.dumps(value, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest()[:12]
     return f"{prefix}-{digest}"
 
 
 def parse_rows(rows, source_name, default_competition=""):
-    records, honors = [], []
+    records, honors, topics = [], [], []
     for line_number, row in enumerate(rows, start=2):
         data_type = clean(row.get("資料類型"))
         competition = clean(row.get("盃賽")) or default_competition
+        for topic in split_topics(row.get("辯題")):
+            if competition:
+                topics.append({"competitionName": competition, "topic": topic})
         if not data_type and not competition:
             continue
         if "戰績" in data_type:
@@ -104,7 +111,7 @@ def parse_rows(rows, source_name, default_competition=""):
                 "honorType": normalize_honor_type(row.get("榮譽類型"), team),
                 "note": clean(row.get("備註")),
             })
-    return records, honors
+    return records, honors, topics
 
 
 def validate_headers(headers, label):
@@ -129,7 +136,7 @@ def cell_column(reference):
 
 
 def load_xlsx(path):
-    records, honors = [], []
+    records, honors, topics = [], [], []
     with zipfile.ZipFile(path) as book:
         shared_strings = []
         if "xl/sharedStrings.xml" in book.namelist():
@@ -169,11 +176,13 @@ def load_xlsx(path):
                     values[column] = value
                 if values:
                     matrix.append([values.get(index, "") for index in range(max(values) + 1)])
-            competition, header_index, headers = "", None, []
+            competition, header_index, headers, sheet_topics = "", None, [], []
             for index, row in enumerate(matrix):
                 trimmed = [clean(value) for value in row]
                 if trimmed and trimmed[0] == "賽事名稱":
                     competition = trimmed[1] if len(trimmed) > 1 else ""
+                if trimmed and re.fullmatch(r"辯題\d*", trimmed[0]) and len(trimmed) > 1:
+                    sheet_topics.extend(split_topics(trimmed[1]))
                 if "資料類型" in trimmed:
                     header_index, headers = index, trimmed
                     break
@@ -186,11 +195,13 @@ def load_xlsx(path):
             for row in matrix[header_index + 1:]:
                 if any(clean(value) for value in row):
                     sheet_rows.append({header: clean(row[index]) if index < len(row) else "" for index, header in enumerate(headers)})
-            sheet_records, sheet_honors = parse_rows(sheet_rows, f"工作分頁「{label}」", competition)
+            sheet_records, sheet_honors, row_topics = parse_rows(sheet_rows, f"工作分頁「{label}」", competition)
             records.extend(sheet_records)
             honors.extend(sheet_honors)
-            print(f"讀取工作分頁「{label}」：{len(sheet_records)} 場、{len(sheet_honors)} 筆榮譽")
-    return records, honors, path.name
+            topics.extend({"competitionName": competition, "topic": topic} for topic in sheet_topics if competition)
+            topics.extend(row_topics)
+            print(f"讀取工作分頁「{label}」：{len(sheet_records)} 場、{len(sheet_honors)} 筆榮譽、{len(sheet_topics) + len(row_topics)} 筆辯題")
+    return records, honors, topics, path.name
 
 
 def source_files():
@@ -398,32 +409,34 @@ def build():
     paths = source_files()
     if not paths:
         raise SystemExit("找不到資料檔：請在 data 資料夾放入 public-data 開頭的 .xlsx 或 .csv")
-    records, honors, sources = [], [], []
+    records, honors, topics, sources = [], [], [], []
     for path in paths:
         loader = load_xlsx if path.suffix.lower() == ".xlsx" else load_csv
-        source_records, source_honors, source_name = loader(path)
+        source_records, source_honors, source_topics, source_name = loader(path)
         records.extend(source_records)
         honors.extend(source_honors)
+        topics.extend(source_topics)
         sources.append(source_name)
-    records, honors = deduplicate(records), deduplicate(honors)
+    records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
     entities, lookup = build_entities(records, honors)
     attendance = attach_entities(records, honors, lookup)
     payload = {
-        "schemaVersion": 2,
+        "schemaVersion": 3,
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
         "sources": sources,
         "entities": entities,
         "records": records,
         "honors": honors,
         "attendance": attendance,
+        "topics": topics,
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
     print("資料來源：" + "、".join(sources))
-    print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄")
+    print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題")
     registry_source = REGISTRY_XLSX_PATH.name if REGISTRY_XLSX_PATH.exists() else REGISTRY_PATH.name
     print(f"單位名冊：{len(entities)} 筆（來源 {registry_source}，已同步 {REGISTRY_PATH.name}）")
     print(f"快取版本：{version}")

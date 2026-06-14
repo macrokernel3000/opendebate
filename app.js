@@ -2,6 +2,7 @@ const { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, createS
 const store = createStore(window.DEBATE_PUBLIC_DATA);
 let records = store.records;
 let honors = store.honors;
+let topics = store.topics;
 let events = [];
 let selectedEntityId = "";
 
@@ -13,6 +14,8 @@ const els = {
   eventTimeline: document.querySelector("#eventTimeline"),
   recentEvents: document.querySelector("#recentEvents"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
+  gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
+  winsLeaderboard: document.querySelector("#winsLeaderboard"),
   eventSelect: document.querySelector("#eventSelect"),
   eventDetail: document.querySelector("#eventDetail"),
   globalSearch: document.querySelector("#globalSearch"),
@@ -27,7 +30,8 @@ function eventSummaries() {
     const eventRecords = records.filter((item) => item.competitionName === name);
     const eventHonors = honors.filter((item) => item.competitionName === name);
     const dates = unique([...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
-    return { name, records: eventRecords, honors: eventHonors, dates, latestDate: dates.at(-1) || "" };
+    const eventTopics = topics.filter((item) => item.competitionName === name).map((item) => item.topic);
+    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "" };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
@@ -84,9 +88,24 @@ function renderTimeline() {
 }
 
 function renderLeaderboards() {
-  const schoolAwards = countBy(honors, (honor) => honor.teamId || (honor.honorType === "player" ? honor.team : honor.recipient || honor.team)).slice(0, 7);
-  const rows = (items, type) => items.map(([id, count]) => `<li><div><strong>${escapeHtml(store.entityName(id, id))}</strong><span>${type}</span></div><span class="rank-count">${count} 項</span></li>`).join("");
-  els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽");
+  const schoolIds = new Set(store.entities.filter((entity) => entity.type === "s").map((entity) => entity.code));
+  const schoolAwards = countBy(honors, (honor) => schoolIds.has(honor.teamId) ? honor.teamId : "").slice(0, 10);
+  const schoolGames = countBy(records.flatMap((record) => Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))), (id) => id).slice(0, 10);
+  const winIds = records.map((record) => {
+    const winnerId = store.entityForName(record.winner)?.code;
+    if (schoolIds.has(winnerId)) return winnerId;
+    if (record.winner) return "";
+    const affirmative = Number(record.scores?.affirmative) || 0;
+    const negative = Number(record.scores?.negative) || 0;
+    if (affirmative === negative) return "";
+    const scoreWinner = affirmative > negative ? record.teamIds?.affirmative : record.teamIds?.negative;
+    return schoolIds.has(scoreWinner) ? scoreWinner : "";
+  });
+  const schoolWins = countBy(winIds, (id) => id).slice(0, 10);
+  const rows = (items, label, unit) => items.map(([id, count]) => `<li><div><strong>${escapeHtml(store.entityName(id, id))}</strong><span>${label}</span></div><span class="rank-count">${count} ${unit}</span></li>`).join("");
+  els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽", "項");
+  els.gamesLeaderboard.innerHTML = rows(schoolGames, "已收錄公開賽果", "場");
+  els.winsLeaderboard.innerHTML = rows(schoolWins, "已收錄勝場", "勝");
 }
 
 function renderEventOptions() {
