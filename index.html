@@ -6,7 +6,7 @@
   <meta name="description" content="查詢台灣高中辯論賽事、比賽結果、學校戰績與公開榮譽。" />
   <link rel="icon" href="data:," />
   <title>公開辯論資訊網</title>
-  <link rel="stylesheet" href="styles.css?v=20260614152821" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260614232638" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -18,6 +18,7 @@
       <button class="nav-button is-active" type="button" data-view="home">首頁</button>
       <button class="nav-button" type="button" data-view="events">賽事</button>
       <button class="nav-button" type="button" data-view="search">搜尋</button>
+      <button class="nav-button" type="button" data-view="reports">資料回報</button>
     </nav>
   </header>
 
@@ -82,12 +83,17 @@
       <div class="page-intro page-shell">
         <p class="kicker">TOURNAMENTS</p>
         <h1>賽事資料庫 <span aria-hidden="true">📣</span></h1>
-        <p>選擇賽事，查看每場比賽結果與公開榮譽。</p>
+        <p>依年份、賽事名稱或辯題搜尋，查看完整比賽結果與公開榮譽。</p>
       </div>
       <div class="page-shell event-browser">
-        <label class="event-picker">選擇賽事
-          <select id="eventSelect"></select>
-        </label>
+        <section class="event-finder" aria-labelledby="eventFinderTitle">
+          <div class="event-finder-heading"><h2 id="eventFinderTitle">查找賽事</h2><span id="eventFinderMeta" aria-live="polite"></span></div>
+          <div class="event-filter-controls">
+            <label class="event-search-field"><span>名稱或辯題</span><input id="eventSearch" type="search" autocomplete="off" placeholder="例如：青雲盃、死刑、社群媒體" /></label>
+            <label class="event-year-field"><span>年份</span><select id="eventYear"><option value="">全部年份</option></select></label>
+          </div>
+          <div id="eventFinderResults" class="event-finder-results"></div>
+        </section>
         <div id="eventDetail"></div>
       </div>
     </section>
@@ -107,15 +113,35 @@
       </div>
       <div id="searchResults" class="page-shell search-results"></div>
     </section>
+
+    <section id="reportsView" class="view is-hidden" data-view-panel="reports">
+      <div class="page-intro page-shell report-intro">
+        <p class="kicker">COMMUNITY REPORTS</p>
+        <h1>資料回報 <span aria-hidden="true">📝</span></h1>
+        <p>協助補齊公開賽果與選手登場紀錄。送出後會由管理者校對，再納入網站資料。</p>
+      </div>
+      <div class="page-shell report-page">
+        <article class="report-card report-card-single">
+          <div class="report-icons" aria-hidden="true"><span class="report-icon">⚔️</span><span class="report-icon">🎤</span><span class="report-icon">💬</span></div>
+          <p class="kicker">COMMUNITY REPORT</p>
+          <h2>公開資料回報</h2>
+          <p>同一份表單可回報缺漏或需要修正的賽事資料，送出時再選擇回報項目。</p>
+          <ul><li>賽事戰績與積分</li><li>選手上場紀錄</li><li>盃賽辯題與相關說明</li></ul>
+          <a id="reportFormLink" class="report-link" href="#" target="_blank" rel="noopener">開啟資料回報表單</a>
+        </article>
+        <aside class="report-note"><strong>為什麼使用 Google 表單？</strong><p>本站是靜態網站，Google 表單能處理手機填寫、附件上傳與回覆彙整，也不會把管理權限或個人資料放進網站程式。表單連結可隨時替換。</p></aside>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260614152821" data-public-data-script></script>
-  <script src="js/core.js?v=20260614152821" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260614152821" data-versioned-asset></script>
-  <script src="app.js?v=20260614152821" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260614232638" data-public-data-script></script>
+  <script src="js/site-config.js?v=20260614232638" data-versioned-asset></script>
+  <script src="js/core.js?v=20260614232638" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260614232638" data-versioned-asset></script>
+  <script src="app.js?v=20260614232638" data-versioned-asset></script>
 </body>
 </html>

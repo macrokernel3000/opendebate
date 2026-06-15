@@ -1,5 +1,5 @@
 (function () {
-  function setupInteractions({ els, showView, renderEvent, renderSearch, selectEntity }) {
+  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity }) {
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
     window.addEventListener("hashchange", () => showView(location.hash.slice(1) || "home"));
@@ -54,7 +54,14 @@
       renderEvent(node.dataset.eventName);
       showView("events");
     });
-    els.eventSelect.addEventListener("change", () => renderEvent(els.eventSelect.value));
+    els.eventSearch.addEventListener("input", renderEventFinder);
+    els.eventYear.addEventListener("change", renderEventFinder);
+    els.eventFinderResults.addEventListener("click", (event) => {
+      const card = event.target.closest("[data-event-name]");
+      if (!card) return;
+      renderEvent(card.dataset.eventName);
+      requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
     els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
     els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
     els.searchResults.addEventListener("click", (event) => {

@@ -16,21 +16,25 @@ const els = {
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
   gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
-  eventSelect: document.querySelector("#eventSelect"),
+  eventSearch: document.querySelector("#eventSearch"),
+  eventYear: document.querySelector("#eventYear"),
+  eventFinderMeta: document.querySelector("#eventFinderMeta"),
+  eventFinderResults: document.querySelector("#eventFinderResults"),
   eventDetail: document.querySelector("#eventDetail"),
   globalSearch: document.querySelector("#globalSearch"),
   clearSearch: document.querySelector("#clearSearch"),
   searchMeta: document.querySelector("#searchMeta"),
   searchResults: document.querySelector("#searchResults"),
+  reportFormLink: document.querySelector("#reportFormLink"),
 };
 
 function eventSummaries() {
-  const names = unique([...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName)]);
+  const names = unique([...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName), ...topics.map((item) => item.competitionName)]);
   return names.map((name) => {
     const eventRecords = records.filter((item) => item.competitionName === name);
     const eventHonors = honors.filter((item) => item.competitionName === name);
     const dates = unique([...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
-    const eventTopics = topics.filter((item) => item.competitionName === name).map((item) => item.topic);
+    const eventTopics = topics.filter((item) => item.competitionName === name);
     return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "" };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
@@ -38,7 +42,7 @@ function eventSummaries() {
 
 
 function showView(name) {
-  const target = ["home", "events", "search"].includes(name) ? name : "home";
+  const target = ["home", "events", "search", "reports"].includes(name) ? name : "home";
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
   if (location.hash !== `#${target}`) history.replaceState(null, "", `#${target}`);
@@ -59,12 +63,18 @@ function renderStats() {
 }
 
 function renderRecentEvents() {
-  els.recentEvents.innerHTML = events.map((event) => `
-    <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
-      <span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>
-      <h3>${escapeHtml(event.name)}</h3>
-      <span class="event-card-meta"><span>${event.records.length} 場戰果</span><span>${event.honors.length} 筆榮譽</span></span>
-    </button>`).join("");
+  els.recentEvents.innerHTML = events.map((event) => {
+    const topicPreview = event.topics.slice(0, 2).map((item) => `<p class="event-card-topic"><span>辯題：</span>${escapeHtml(item.topic)}</p>`).join("");
+    return `
+      <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
+        <span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>
+        <div class="event-card-body">
+          <h3>${escapeHtml(event.name)}</h3>
+          ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
+        </div>
+        <span class="event-card-meta"><span>${event.records.length} 場戰果</span><span>${event.honors.length} 筆榮譽</span></span>
+      </button>`;
+  }).join("");
 }
 
 function honorSubject(honor) {
@@ -109,14 +119,31 @@ function renderLeaderboards() {
 }
 
 function renderEventOptions() {
-  els.eventSelect.innerHTML = events.map((event) => `<option value="${escapeHtml(event.name)}">${escapeHtml(event.name)}</option>`).join("");
-  if (events[0]) renderEvent(events[0].name);
+  const years = unique(events.map((event) => event.latestDate.slice(0, 4))).sort((a, b) => b.localeCompare(a));
+  els.eventYear.innerHTML = '<option value="">全部年份</option>' + years.map((year) => `<option value="${year}">${year} 年</option>`).join("");
+  renderEventFinder();
+}
+
+function renderEventFinder() {
+  const needle = normalize(els.eventSearch.value);
+  const year = els.eventYear.value;
+  const filtered = events.filter((event) => {
+    const matchesYear = !year || event.latestDate.startsWith(year);
+    const topicText = event.topics.flatMap((item) => [item.topic, item.explanation]).join(" ");
+    return matchesYear && (!needle || normalize(`${event.name} ${topicText}`).includes(needle));
+  });
+  els.eventFinderMeta.textContent = `找到 ${filtered.length} 個賽事`;
+  els.eventFinderResults.innerHTML = filtered.length ? filtered.map((event) => `
+    <button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}">
+      <span class="event-result-year">${escapeHtml(event.latestDate.slice(0, 4) || "年份未載明")}</span>
+      <strong>${escapeHtml(event.name)}</strong>
+      <small>${event.records.length} 場 · ${event.honors.length} 項榮譽${event.topics.length ? ` · ${event.topics.length} 筆辯題` : ""}</small>
+    </button>`).join("") : '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
 }
 
 function renderEvent(name) {
   const event = events.find((item) => item.name === name);
   if (!event) return;
-  els.eventSelect.value = name;
   const grouped = groupByDate([...event.records].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(a.period) - Number(b.period) || Number(a.venue) - Number(b.venue)));
   const matchDays = Object.entries(grouped).map(([date, matches]) => `
     <section class="match-day">
@@ -134,15 +161,30 @@ function renderEvent(name) {
       }).join("")}</div>
     </section>`).join("");
   const eventHonors = [...event.honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
+  const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
   els.eventDetail.innerHTML = `
     <div class="event-summary">
       <div><h2>${escapeHtml(event.name)}</h2><p>${event.dates.map(formatDate).join("、")}</p></div>
       <div class="event-summary-count"><span class="count-chip">${event.records.length} 場比賽</span><span class="count-chip">${event.honors.length} 筆榮譽</span></div>
     </div>
+    ${topicSection}
     <div class="event-content-grid">
       <div><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
       <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? eventHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("") : "<p>尚無公開榮譽。</p>"}</aside>
     </div>`;
+}
+
+function setupReportLinks() {
+  const config = window.DEBATE_SITE_CONFIG?.reports || {};
+  if (config.formUrl) {
+    els.reportFormLink.href = config.formUrl;
+    return;
+  }
+  els.reportFormLink.removeAttribute("target");
+  els.reportFormLink.removeAttribute("href");
+  els.reportFormLink.classList.add("is-disabled");
+  els.reportFormLink.textContent = "表單準備中";
+  els.reportFormLink.setAttribute("aria-disabled", "true");
 }
 
 function renderSearch(query) {
@@ -217,7 +259,7 @@ function selectEntity(entityId) {
   requestAnimationFrame(() => document.querySelector("#entityDetail")?.scrollIntoView({ behavior: "smooth", block: "start" }));
 }
 
-window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, selectEntity });
+window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity });
 
 
 function renderAll() {
@@ -235,10 +277,11 @@ function renderAll() {
   renderRecentEvents();
   renderLeaderboards();
   renderEventOptions();
+  setupReportLinks();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
-  showView(initialQuery ? "search" : (["events", "search"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "home"));
+  showView(initialQuery ? "search" : (["events", "search", "reports"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "home"));
 }
 
 events = eventSummaries();

@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
-  "schemaVersion": 3,
-  "generatedAt": "2026-06-14T15:28:21",
+  "schemaVersion": 4,
+  "generatedAt": "2026-06-14T23:26:38",
   "sources": [
     "public-data.xlsx",
     "public-data2.xlsx"
@@ -24507,19 +24507,23 @@ window.DEBATE_PUBLIC_DATA = {
   "topics": [
     {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
-      "topic": "當代耽美文化有利於／不利於消除男性中心主義"
+      "topic": "當代耽美文化有利於／不利於消除男性中心主義",
+      "explanation": ""
     },
     {
       "competitionName": "第二屆青雲盃全國高中職辯論錦標賽",
-      "topic": "富有/貧窮更容易暴露人性之惡"
+      "topic": "富有/貧窮更容易暴露人性之惡",
+      "explanation": ""
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "topic": "我國普通刑法應廢除死刑"
+      "topic": "我國普通刑法應廢除死刑",
+      "explanation": ""
     },
     {
       "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "topic": "幸福更歸屬於理性／感性"
+      "topic": "幸福更歸屬於理性／感性",
+      "explanation": ""
     }
   ]
 };
