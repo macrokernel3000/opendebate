@@ -251,11 +251,14 @@ footer span { color: #b8c1bc; font-size: 12px; }
   .timeline-name { grid-column: 2; max-width: none; margin-top: 4px; padding-right: 8px; font-size: 13px; }
   .timeline-tooltip { position: static; grid-column: 2; width: min(100%, 270px); margin-top: 8px; transform: none; opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; overflow: hidden; }
   .timeline-node:hover .timeline-tooltip, .timeline-node:focus .timeline-tooltip, .timeline-node:focus-visible .timeline-tooltip, .timeline-node.is-revealed .timeline-tooltip { max-height: 120px; transform: none; padding-top: 12px; padding-bottom: 12px; opacity: 1; }
-  .collected-events { padding-top: 60px; padding-bottom: 66px; }
+  .collected-events { padding-top: 60px; padding-bottom: 44px; overflow: hidden; }
+  .collected-events .section-heading { margin-bottom: 18px; }
+  .event-grid { width: calc(100vw - 12px); margin-right: calc((100vw - min(100% - 24px, 1180px)) / -2); grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(82vw, 82vw); gap: 12px; padding: 4px 18vw 24px 0; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; scrollbar-color: var(--coral) transparent; }
+  .event-card { scroll-snap-align: start; }
   .leaderboard-band { padding-block: 54px; overflow: hidden; }
   .leaderboard-scroll { width: calc(100vw - 12px); margin-right: calc((100vw - min(100% - 24px, 1180px)) / -2); grid-template-columns: repeat(3, minmax(82vw, 82vw)); gap: 12px; padding: 4px 18vw 24px 0; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; scrollbar-color: var(--coral) transparent; }
   .leaderboard-panel { scroll-snap-align: start; }
-  .event-grid, .entity-grid { grid-template-columns: 1fr; }
+  .entity-grid { grid-template-columns: 1fr; }
   .section-heading { align-items: flex-start; }
   .section-note { max-width: 150px; text-align: right; }
   .page-intro, .search-stage { padding-top: 42px; }

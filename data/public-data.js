@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-16T20:39:35",
+  "generatedAt": "2026-06-16T20:43:22",
   "sources": [
     "public-data.xlsx",
     "public-data2.xlsx"
