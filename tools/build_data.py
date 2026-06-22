@@ -14,6 +14,7 @@ JS_PATH = DATA_DIR / "public-data.js"
 REGISTRY_PATH = DATA_DIR / "entity-registry.csv"
 REGISTRY_XLSX_PATH = DATA_DIR / "entity-registry.xlsx"
 INDEX_PATH = ROOT / "index.html"
+REPORT_PATH = DATA_DIR / "update-report.txt"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -22,6 +23,12 @@ REQUIRED_COLUMNS = {
 OPTIONAL_COLUMNS = {"正方登場選手", "反方登場選手"}
 SCHOOL_ENDINGS = ("高中", "高工", "高商", "高職", "中學", "國中", "國小", "女中", "女高", "一中", "二中", "壢中", "附中", "實中", "護專", "五專", "國中部")
 KNOWN_SCHOOL_SHORT_NAMES = {"市立大同", "市立復興", "市立東山", "新北三民", "桃園陽明", "私立東山", "高市三民", "高市中正"}
+WARNINGS = []
+
+
+def warn(message):
+    WARNINGS.append(message)
+    print(message)
 
 
 def clean(value):
@@ -87,7 +94,7 @@ def parse_rows(rows, source_name, default_competition=""):
             affirmative = clean(row.get("正方學校"))
             negative = clean(row.get("反方學校"))
             if not competition or not affirmative or not negative:
-                print(f"略過 {source_name} 第 {line_number} 列：戰績缺少盃賽或隊伍名稱")
+                warn(f"略過 {source_name} 第 {line_number} 列：戰績缺少盃賽或隊伍名稱")
                 continue
             records.append({
                 "competitionName": competition,
@@ -107,7 +114,7 @@ def parse_rows(rows, source_name, default_competition=""):
             honor_name = clean(row.get("榮譽名稱"))
             recipient = clean(row.get("獲獎者"))
             if not competition or not honor_name or not recipient:
-                print(f"略過 {source_name} 第 {line_number} 列：榮譽缺少盃賽、名稱或獲獎者")
+                warn(f"略過 {source_name} 第 {line_number} 列：榮譽缺少盃賽、名稱或獲獎者")
                 continue
             team = clean(row.get("所屬學校"))
             honors.append({
@@ -204,7 +211,7 @@ def load_xlsx(path):
                     break
             label = f"{path.name}／{sheet_name}"
             if header_index is None:
-                print(f"略過工作分頁「{label}」：找不到資料表標題")
+                warn(f"略過工作分頁「{label}」：找不到資料表標題")
                 continue
             validate_headers(headers, f"工作分頁「{label}」")
             sheet_rows = []
@@ -328,7 +335,7 @@ def read_registry():
                 continue
             normalized = re.sub(r"\s+", "", name).lower()
             if normalized in seen_names and seen_names[normalized] != entry["code"]:
-                print(f"提醒：{source_name} 的名稱或別名重複：{name}；正式名稱會優先，別名衝突時保留先出現的歸戶")
+                warn(f"提醒：{source_name} 的名稱或別名重複：{name}；正式名稱會優先，別名衝突時保留先出現的歸戶")
             else:
                 seen_names[normalized] = entry["code"]
     return entries
@@ -424,6 +431,36 @@ def update_asset_versions(version):
     INDEX_PATH.write_text(index_html, encoding="utf-8")
 
 
+def event_names(records, honors, topics):
+    return sorted({
+        clean(item.get("competitionName"))
+        for item in [*records, *honors, *topics]
+        if clean(item.get("competitionName"))
+    }, key=lambda name: name.lower())
+
+
+def write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source):
+    lines = [
+        f"更新時間：{datetime.now().isoformat(timespec='seconds')}",
+        f"快取版本：{version}",
+        "",
+        "資料來源：" + "、".join(sources),
+        f"目前收錄盃賽：{len(events)} 個",
+        f"資料筆數：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題",
+        f"單位名冊：{len(entities)} 筆（來源 {registry_source}，已同步 {REGISTRY_PATH.name}）",
+        "",
+        "盃賽清單：",
+        *[f"- {name}" for name in events],
+        "",
+        "資料檢查回報：",
+    ]
+    if WARNINGS:
+        lines.extend(f"- {message}" for message in WARNINGS)
+    else:
+        lines.append("- 本次沒有略過資料或提醒項目。")
+    REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
+
+
 def build():
     paths = source_files()
     if not paths:
@@ -454,10 +491,17 @@ def build():
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
-    print("資料來源：" + "、".join(sources))
-    print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題")
+    events = event_names(records, honors, topics)
     registry_source = REGISTRY_XLSX_PATH.name if REGISTRY_XLSX_PATH.exists() else REGISTRY_PATH.name
+    write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source)
+    print("資料來源：" + "、".join(sources))
+    print(f"目前收錄盃賽：{len(events)} 個")
+    print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題")
     print(f"單位名冊：{len(entities)} 筆（來源 {registry_source}，已同步 {REGISTRY_PATH.name}）")
+    if WARNINGS:
+        print(f"資料檢查回報：{len(WARNINGS)} 則，已寫入 {REPORT_PATH.relative_to(ROOT)}")
+    else:
+        print(f"資料檢查回報：沒有略過資料或提醒項目，摘要已寫入 {REPORT_PATH.relative_to(ROOT)}")
     print(f"快取版本：{version}")
 
 

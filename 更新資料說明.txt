@@ -6,7 +6,8 @@
 3. 每頁第二列只填一次完整賽事名稱
 4. 編輯完成後保持為 Excel .xlsx 格式
 5. 雙擊「更新網站資料.command」
-6. 看到「更新完成」後按 Return
+6. 看到「目前收錄盃賽」與「更新完成」後按 Return
+7. 若要查看盃賽清單或資料檢查回報，打開 data/update-report.txt
 
 新增賽事
 可在原活頁簿複製分頁，也可以新增 public-data2.xlsx。所有 public-data 開頭的 Excel/CSV 都會合併，完全相同的資料會去重。
@@ -46,6 +47,9 @@
 
 拖放方法
 也可以直接把新的賽事 .xlsx/.csv 或 entity-registry.xlsx 拖到「更新網站資料.command」上。舊檔不會直接刪除。
+
+更新摘要
+每次更新後會產生 data/update-report.txt，內容包含資料來源、目前收錄盃賽數、盃賽清單，以及略過資料或提醒項目。若看到某個賽事好像沒有出現，請先搜尋這個檔案中的盃賽清單。
 
 請勿手動修改 data/public-data.js；它會由更新程式自動產生。
 

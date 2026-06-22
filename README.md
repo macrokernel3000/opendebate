@@ -51,7 +51,9 @@ Numbers 可以直接開啟這份 `.xlsx`。編輯完畢後，請使用「檔案 
 
 新增或編輯任一 `public-data*.xlsx/csv` 後，雙擊根目錄的 `更新網站資料.command`。
 
-更新程式會逐一讀取所有工作分頁、檢查欄位，再合併產生 `data/public-data.js`。看到「更新完成」後，按 Return 即會開啟網站。
+更新程式會逐一讀取所有工作分頁、檢查欄位，再合併產生 `data/public-data.js`。看到「目前收錄盃賽」與「更新完成」後，按 Return 即會開啟網站。
+
+每次更新也會產生 `data/update-report.txt`，裡面會列出本次讀取的資料來源、目前收錄幾個盃賽、盃賽清單，以及略過資料或提醒項目。若命令視窗顯示「資料檢查回報」，可先打開這個檔案確認是哪一列或哪個分頁需要修正。
 
 名冊更新方式：用 Numbers 或 Excel 編輯 `entity-registry.xlsx`，放在 `data` 資料夾後執行同一個更新工具即可。也可直接把該 Excel 拖到更新工具；舊版本會先備份至 `data/backups`。
 
