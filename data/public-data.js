@@ -1,9 +1,8 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-23T04:01:43",
+  "generatedAt": "2026-06-22T20:19:37",
   "sources": [
-    "public-data.xlsx",
-    "public-data2.xlsx"
+    "google-sheet-export.xlsx"
   ],
   "entities": [
     {
@@ -1538,6 +1537,3706 @@ window.DEBATE_PUBLIC_DATA = {
     }
   ],
   "records": [
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "楊子甯說你很難改變一個人所以只能改辯稿",
+        "negative": "永遠懷念梁世宣"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p060",
+        "negative": "p062"
+      },
+      "id": "match-71b43f578b4b"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "吟遊辯士皮陀故事集",
+        "negative": "學分辯不見"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "吟遊辯士皮陀故事集",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p022",
+        "negative": "p028"
+      },
+      "id": "match-356aacb38de1"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "學測倒數259天",
+        "negative": "虎尾國小"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "學測倒數259天",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p030",
+        "negative": "s137"
+      },
+      "id": "match-7a959b98342d"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "尚未決定",
+        "negative": "南北菜蟲一起串聯"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南北菜蟲一起串聯",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p038",
+        "negative": "p020"
+      },
+      "id": "match-1e9431239093"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "你說的都隊",
+        "negative": "長億高中A"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "長億高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p013",
+        "negative": "s144"
+      },
+      "id": "match-6fa9d2e3a9a0"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "學分辯不見",
+        "negative": "吟遊辯士皮陀故事集"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "吟遊辯士皮陀故事集",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p028",
+        "negative": "p022"
+      },
+      "id": "match-7ad3f0e948d3"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "虎尾國小",
+        "negative": "學測倒數259天"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "學測倒數259天",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s137",
+        "negative": "p030"
+      },
+      "id": "match-9daa6568009d"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "長億高中B",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s144",
+        "negative": "s041"
+      },
+      "id": "match-2de38cd416c7"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "你說的都隊",
+        "negative": "長億高中A"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "長億高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p013",
+        "negative": "s144"
+      },
+      "id": "match-48c866d46405"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "長億高中B",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s144",
+        "negative": "s041"
+      },
+      "id": "match-58111239c4c4"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "南北菜蟲一起串聯",
+        "negative": "尚未決定"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南北菜蟲一起串聯",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p020",
+        "negative": "p038"
+      },
+      "id": "match-ac4576384f10"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-02",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "永遠懷念梁世宣",
+        "negative": "楊子甯說你很難改變一個人所以只能改辯稿"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p062",
+        "negative": "p060"
+      },
+      "id": "match-392da91d4419"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "了不起的公關們",
+        "negative": "心悸大戰"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "心悸大戰",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p010",
+        "negative": "p042"
+      },
+      "id": "match-5be437c4e824"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "吟遊辯士皮陀故事集"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "p022"
+      },
+      "id": "match-47f4e8263612"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "學測倒數259天",
+        "negative": "南北菜蟲一起串聯"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "學測倒數259天",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p030",
+        "negative": "p020"
+      },
+      "id": "match-d1addda0c152"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "楊子甯說你很難改變一個人所以只能改辯稿",
+        "negative": "長億高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p060",
+        "negative": "s144"
+      },
+      "id": "match-cac719541fe4"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "心悸大戰",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "心悸大戰",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p042",
+        "negative": "s041"
+      },
+      "id": "match-43e0040b4e57"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "學測倒數259天",
+        "negative": "楊子甯說你很難改變一個人所以只能改辯稿"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "學測倒數259天",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p030",
+        "negative": "p060"
+      },
+      "id": "match-c45ba5099dd9"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "心悸大戰",
+        "negative": "學測倒數259天"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "心悸大戰",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p042",
+        "negative": "p030"
+      },
+      "id": "match-4d00d70ed634"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s080"
+      },
+      "id": "match-1c6dac2688c9"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "平鎮高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s048"
+      },
+      "id": "match-7675dc5fcb59"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s003"
+      },
+      "id": "match-936a18e183d8"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "中壢高商",
+        "negative": "立人高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "立人高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s004",
+        "negative": "s108"
+      },
+      "id": "match-acfc8613e495"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "衛道中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s139"
+      },
+      "id": "match-0146c853433a"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "立人高中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "永豐高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s108",
+        "negative": "s100"
+      },
+      "id": "match-fc27709b1783"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明倫高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s068"
+      },
+      "id": "match-a4b7b71aa43f"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "平鎮高中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "平鎮高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s048",
+        "negative": "s005"
+      },
+      "id": "match-e3d6b1abaf03"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s113"
+      },
+      "id": "match-58594a5dbda0"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "s125"
+      },
+      "id": "match-189ca05339ac"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "中壢高商"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永豐高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s004"
+      },
+      "id": "match-dd14ca509cbd"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-12",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "衛道中學",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內壢高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s139",
+        "negative": "s013"
+      },
+      "id": "match-72fcdd5cd18e"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s005"
+      },
+      "id": "match-a76043dd72e6"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s100"
+      },
+      "id": "match-21fef02fd0f8"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "永豐高中",
+      "note": "未公告比分，依最終名次判定勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s100"
+      },
+      "id": "match-7faa2ec8adf3"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "未公告比分，依最終名次判定勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s003"
+      },
+      "id": "match-43c33db0e529"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "海山高中",
+        "negative": "明倫高中B"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明倫高中B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s101",
+        "negative": "s080"
+      },
+      "id": "match-20a38ce72009"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "麗山高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s158"
+      },
+      "id": "match-c03a9fa8b3d8"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "市立復興",
+        "negative": "明倫高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明倫高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s045",
+        "negative": "s080"
+      },
+      "id": "match-4c8690c3611e"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s005"
+      },
+      "id": "match-4aa03d375d06"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中崙高中",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "板橋高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s008",
+        "negative": "s091"
+      },
+      "id": "match-8759e49f4b2e"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "西松高中",
+        "negative": "東山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "西松高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s140",
+        "negative": "s088"
+      },
+      "id": "match-317b09bb2bf4"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "大理高中",
+        "negative": "羅東高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "羅東高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s037",
+        "negative": "s116"
+      },
+      "id": "match-eeae395d9a5c"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "明倫高中B",
+        "negative": "海山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "明倫高中B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s101"
+      },
+      "id": "match-f393c4e35075"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "麗山高中A",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s158",
+        "negative": "s070"
+      },
+      "id": "match-03d8b5f858b1"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "麗山高中B",
+        "negative": "新竹高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "新竹高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s158",
+        "negative": "s078"
+      },
+      "id": "match-851ca920351a"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s057"
+      },
+      "id": "match-d8de9f668130"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "板橋高中",
+        "negative": "中崙高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中崙高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s091",
+        "negative": "s008"
+      },
+      "id": "match-2eba6603090a"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "桃園高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s093"
+      },
+      "id": "match-215322396880"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s003"
+      },
+      "id": "match-dc821ddce1c9"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "薇閣中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s135"
+      },
+      "id": "match-5be24e4fc315"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "桃園高中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s093",
+        "negative": "s067"
+      },
+      "id": "match-d1f017425477"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "明倫高中A",
+        "negative": "市立復興"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明倫高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s045"
+      },
+      "id": "match-2c304ff28a2c"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "華僑高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "華僑高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s132"
+      },
+      "id": "match-7475e3c27e1e"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "新竹高中",
+        "negative": "麗山高中B"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "麗山高中B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s078",
+        "negative": "s158"
+      },
+      "id": "match-6b7f8d86c9e3"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "東山高中",
+        "negative": "西松高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "西松高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s088",
+        "negative": "s140"
+      },
+      "id": "match-9c62537f3483"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-08",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "羅東高中",
+        "negative": "大理高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大理高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s116",
+        "negative": "s037"
+      },
+      "id": "match-c23bb2f91cfd"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "百齡高中",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "百齡高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s105",
+        "negative": "s028"
+      },
+      "id": "match-62ac1982caaa"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s013"
+      },
+      "id": "match-cf40455d880c"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "陽交附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "延平中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s146"
+      },
+      "id": "match-8ad318c9374f"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大直高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s038"
+      },
+      "id": "match-7e9ba144b574"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成淵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "s098"
+      },
+      "id": "match-b47eb097489b"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "華僑高中",
+        "negative": "景美女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "景美女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s132",
+        "negative": "s083"
+      },
+      "id": "match-351191e5186c"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "成淵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s068"
+      },
+      "id": "match-40ae52226bf9"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "陽交附中",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "延平中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s146",
+        "negative": "s050"
+      },
+      "id": "match-a01d035be993"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "和平高中",
+        "negative": "百齡高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s028",
+        "negative": "s105"
+      },
+      "id": "match-21bccb3a6ef8"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s096"
+      },
+      "id": "match-651ebfaaaa71"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中崙高中",
+        "negative": "西松高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中崙高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s008",
+        "negative": "s140"
+      },
+      "id": "match-a1623894ff8d"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "明倫高中A",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "明倫高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s005"
+      },
+      "id": "match-b9e245a4b037"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "大直高中",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "大直高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s038",
+        "negative": "s024"
+      },
+      "id": "match-f6936511124c"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "百齡高中",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s105",
+        "negative": "s070"
+      },
+      "id": "match-d1e5cd8a9b42"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "羅東高中",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大直高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s116",
+        "negative": "s038"
+      },
+      "id": "match-06c3d7c0a975"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s068"
+      },
+      "id": "match-1ea4c9cd3ce2"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "麗山高中B"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "麗山高中B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s158"
+      },
+      "id": "match-5808eaa69a7f"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s050"
+      },
+      "id": "match-3b060470491d"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-09",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "明倫高中B",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s096"
+      },
+      "id": "match-178cfa36a641"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "明倫高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明倫高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s080"
+      },
+      "id": "match-b729e623db15"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "中崙高中",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大直高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s008",
+        "negative": "s038"
+      },
+      "id": "match-377a4ef67b86"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "麗山高中B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s158"
+      },
+      "id": "match-8b59c7b91d51"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s096"
+      },
+      "id": "match-b3a56f98c263"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "明倫高中A",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大直高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s038"
+      },
+      "id": "match-037e97a37110"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s096"
+      },
+      "id": "match-ceaa73df2caf"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "未公告比分，依最終名次判定勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s038"
+      },
+      "id": "match-cd1a58e238b3"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "師大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s047"
+      },
+      "id": "match-78adde5b3ee7"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "小港高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "內壢高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s040"
+      },
+      "id": "match-b66f36c18d13"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "西松高中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s140",
+        "negative": "s067"
+      },
+      "id": "match-aa6fc9498e57"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺中一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s125"
+      },
+      "id": "match-b5886475ece6"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中山高中",
+        "negative": "臺南二中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南二中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s007",
+        "negative": "s126"
+      },
+      "id": "match-9ca15ff5c4e5"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "東港高中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "建國中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s089",
+        "negative": "s054"
+      },
+      "id": "match-05dbd3b268e2"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "明道中學",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明道中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s081",
+        "negative": "s131"
+      },
+      "id": "match-e89b43e8219b"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s006"
+      },
+      "id": "match-ff4823259b0e"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "平鎮高中",
+        "negative": "北一女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "北一女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s048",
+        "negative": "s017"
+      },
+      "id": "match-2863aaeaa27c"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s013"
+      },
+      "id": "match-0616a5a519af"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "新竹高商",
+        "negative": "西松高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "西松高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s079",
+        "negative": "s140"
+      },
+      "id": "match-8079afcbb92c"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "家齊高中",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "家齊高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s039",
+        "negative": "s120"
+      },
+      "id": "match-7a2fd34d6026"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "s007"
+      },
+      "id": "match-c8693cf1466f"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "東港高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s089"
+      },
+      "id": "match-5dcda84823b6"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "中信國際",
+        "negative": "明道中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明道中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p009",
+        "negative": "s081"
+      },
+      "id": "match-36c39f7baf6a"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s024"
+      },
+      "id": "match-95f3c08d57a1"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "平鎮高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "師大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s048"
+      },
+      "id": "match-0ec97afa384f"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "小港高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s096"
+      },
+      "id": "match-f57c45ac4485"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "新竹高商"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s079"
+      },
+      "id": "match-273e1e1d0548"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "家齊高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s039"
+      },
+      "id": "match-6fc9450f5ccd"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "臺南二中",
+        "negative": "市立東山"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s126",
+        "negative": "s046"
+      },
+      "id": "match-534faed3725f"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "建國中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s113"
+      },
+      "id": "match-c8b4618999f2"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "中信國際"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中信國際",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "p009"
+      },
+      "id": "match-540160cf1084"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-14",
+      "period": 3,
+      "venue": 8,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "曉明女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s085"
+      },
+      "id": "match-76ef81f5ed87"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s096"
+      },
+      "id": "match-f14d0efa4f73"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s125"
+      },
+      "id": "match-fbeb883ecb15"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "s054"
+      },
+      "id": "match-c8a6e61f9f78"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "明道中學",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明道中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s081",
+        "negative": "s006"
+      },
+      "id": "match-4c5045d6b026"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s125"
+      },
+      "id": "match-ca356caaa969"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "明道中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "s081"
+      },
+      "id": "match-dc1322ed85b8"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "市立東山"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 2
+      },
+      "winner": "臺南一中",
+      "note": "冠亞賽；原公告註記：因有一張評分單平分，故以論點分判定",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s046"
+      },
+      "id": "match-dfa4f19c94c5"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "斗六高中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s072",
+        "negative": "s125"
+      },
+      "id": "match-377db23e75f0"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "西松高中",
+        "negative": "虎尾高中（二）"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "虎尾高中（二）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s140",
+        "negative": "s138"
+      },
+      "id": "match-2f65824374cd"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "馬公高中（一）",
+        "negative": "虎尾高中（一）"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "馬公高中（一）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p094",
+        "negative": "p078"
+      },
+      "id": "match-89ffdee18b9d"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "新竹高中（一）",
+        "negative": "馬公高中（二）"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "馬公高中（二）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p057",
+        "negative": "s148"
+      },
+      "id": "match-e0bc32724b1d"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "員林高中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s029",
+        "negative": "s006"
+      },
+      "id": "match-984f978db4ac"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "斗六高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s072"
+      },
+      "id": "match-695be56ee4ab"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "聖功女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s118"
+      },
+      "id": "match-762e1bf6af37"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "虎尾高中（二）",
+        "negative": "西松高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "西松高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s140"
+      },
+      "id": "match-e93b1280485a"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "虎尾高中（三）",
+        "negative": "新竹高中（二）"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "新竹高中（二）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p079",
+        "negative": "s078"
+      },
+      "id": "match-36167d5ba71c"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "員林高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s029"
+      },
+      "id": "match-1387474286c0"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "虎尾高中（一）",
+        "negative": "馬公高中（一）"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "馬公高中（一）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p078",
+        "negative": "p094"
+      },
+      "id": "match-e9e434c6670c"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "聖功女中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s118",
+        "negative": "s096"
+      },
+      "id": "match-5ca4432395b5"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "新竹高中（二）",
+        "negative": "虎尾高中（三）"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "虎尾高中（三）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s078",
+        "negative": "p079"
+      },
+      "id": "match-ef246b724161"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-13",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "馬公高中（二）",
+        "negative": "新竹高中（一）"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "馬公高中（二）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s148",
+        "negative": "p057"
+      },
+      "id": "match-1f1bd7496268"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "新竹高中（二）",
+        "negative": "馬公高中（一）"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "馬公高中（一）",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s078",
+        "negative": "p094"
+      },
+      "id": "match-584f9d0eac6c"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "虎尾高中（二）",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s125"
+      },
+      "id": "match-cfb99875bad7"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "馬公高中（二）",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s148",
+        "negative": "s006"
+      },
+      "id": "match-ba2572ee8831"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "馬公高中（一）",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p094",
+        "negative": "s125"
+      },
+      "id": "match-a7b44786b5c8"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s006"
+      },
+      "id": "match-0bb2573395cd"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "2025-12-14",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s125"
+      },
+      "id": "match-edcd551d2222"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "高市中正"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s150"
+      },
+      "id": "match-d77028e19cf5"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "前鎮高中",
+        "negative": "興國高中B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "前鎮高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s130"
+      },
+      "id": "match-53eb2df30a73"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "嘉義高中",
+        "negative": "南科實中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "南科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s033",
+        "negative": "s025"
+      },
+      "id": "match-980c4706dd60"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "小港高中B",
+        "negative": "興國高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "興國高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s130"
+      },
+      "id": "match-c652b7b31bd9"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "興國高中B",
+        "negative": "高市中正B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "興國高中B",
+      "note": "；高市中正B因選手未到，故以棄賽論",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s130",
+        "negative": "p096"
+      },
+      "id": "match-0292b31f233c"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "興國高中A",
+        "negative": "小港高中B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "興國高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s130",
+        "negative": "s040"
+      },
+      "id": "match-a823c2acf500"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "中山高中",
+        "negative": "小港高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山高中",
+      "note": "；小港高中A未填寫選手表單，故以棄賽論",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s007",
+        "negative": "s040"
+      },
+      "id": "match-7d9983a820a8"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南科實中",
+        "negative": "嘉義高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "嘉義高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s025",
+        "negative": "s033"
+      },
+      "id": "match-2af7635e7d37"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高市中正B",
+        "negative": "前鎮高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "前鎮高中",
+      "note": "；因前鎮高中、高市中正B棄賽，循環由興國高中B晉級",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p096",
+        "negative": "s015"
+      },
+      "id": "match-c132d71808b4"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "小港高中A",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山高中",
+      "note": "；小港高中A未填寫選手名單，故以棄賽論",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s007"
+      },
+      "id": "match-ee59766c97dc"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-25",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "高市中正A",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p095",
+        "negative": "s006"
+      },
+      "id": "match-89048abfc91e"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "嘉義高中",
+        "negative": "興國高中A"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "興國高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s033",
+        "negative": "s130"
+      },
+      "id": "match-6ea9296d9655"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "興國高中A",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s130",
+        "negative": "s007"
+      },
+      "id": "match-0d7d75be0a81"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "興國高中B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s130"
+      },
+      "id": "match-ad2e3ff59872"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "中山高中",
+      "note": "；未公告比分，依最終名次判定勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s007"
+      },
+      "id": "match-265d12f8acfc"
+    },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
       "matchDate": "2025-05-24",
@@ -11595,7 +15294,7 @@ window.DEBATE_PUBLIC_DATA = {
       "venue": 4,
       "teams": {
         "affirmative": "長春小熊幫",
-        "negative": "0"
+        "negative": "0.0"
       },
       "scores": {
         "affirmative": 3,
@@ -11609,9 +15308,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p091",
-        "negative": "p001"
+        "negative": "p097"
       },
-      "id": "match-69775dd0f435"
+      "id": "match-edb25f494ec6"
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
@@ -11769,7 +15468,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 4,
       "teams": {
-        "affirmative": "0",
+        "affirmative": "0.0",
         "negative": "一百齡五度的你"
       },
       "scores": {
@@ -11783,10 +15482,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p001",
+        "affirmative": "p097",
         "negative": "p002"
       },
-      "id": "match-5b52a46738e6"
+      "id": "match-0fcbe7ffe477"
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
@@ -20587,3709 +24286,559 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "p029"
       },
       "id": "match-2549db3512b0"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "楊子甯說你很難改變一個人所以只能改辯稿",
-        "negative": "永遠懷念梁世宣"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p060",
-        "negative": "p062"
-      },
-      "id": "match-71b43f578b4b"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "吟遊辯士皮陀故事集",
-        "negative": "學分辯不見"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "吟遊辯士皮陀故事集",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p022",
-        "negative": "p028"
-      },
-      "id": "match-356aacb38de1"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "學測倒數259天",
-        "negative": "虎尾國小"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "學測倒數259天",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p030",
-        "negative": "s137"
-      },
-      "id": "match-7a959b98342d"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "尚未決定",
-        "negative": "南北菜蟲一起串聯"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "南北菜蟲一起串聯",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p038",
-        "negative": "p020"
-      },
-      "id": "match-1e9431239093"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "你說的都隊",
-        "negative": "長億高中A"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "長億高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p013",
-        "negative": "s144"
-      },
-      "id": "match-6fa9d2e3a9a0"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "學分辯不見",
-        "negative": "吟遊辯士皮陀故事集"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "吟遊辯士皮陀故事集",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p028",
-        "negative": "p022"
-      },
-      "id": "match-7ad3f0e948d3"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "虎尾國小",
-        "negative": "學測倒數259天"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "學測倒數259天",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s137",
-        "negative": "p030"
-      },
-      "id": "match-9daa6568009d"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "長億高中B",
-        "negative": "屏東女中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "屏東女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s144",
-        "negative": "s041"
-      },
-      "id": "match-2de38cd416c7"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "你說的都隊",
-        "negative": "長億高中A"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "長億高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p013",
-        "negative": "s144"
-      },
-      "id": "match-48c866d46405"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "長億高中B",
-        "negative": "屏東女中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "屏東女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s144",
-        "negative": "s041"
-      },
-      "id": "match-58111239c4c4"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "南北菜蟲一起串聯",
-        "negative": "尚未決定"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "南北菜蟲一起串聯",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p020",
-        "negative": "p038"
-      },
-      "id": "match-ac4576384f10"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-02",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "永遠懷念梁世宣",
-        "negative": "楊子甯說你很難改變一個人所以只能改辯稿"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p062",
-        "negative": "p060"
-      },
-      "id": "match-392da91d4419"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "了不起的公關們",
-        "negative": "心悸大戰"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "心悸大戰",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p010",
-        "negative": "p042"
-      },
-      "id": "match-5be437c4e824"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "屏東女中",
-        "negative": "吟遊辯士皮陀故事集"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "屏東女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s041",
-        "negative": "p022"
-      },
-      "id": "match-47f4e8263612"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "學測倒數259天",
-        "negative": "南北菜蟲一起串聯"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "學測倒數259天",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p030",
-        "negative": "p020"
-      },
-      "id": "match-d1addda0c152"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "楊子甯說你很難改變一個人所以只能改辯稿",
-        "negative": "長億高中A"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p060",
-        "negative": "s144"
-      },
-      "id": "match-cac719541fe4"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "心悸大戰",
-        "negative": "屏東女中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "心悸大戰",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p042",
-        "negative": "s041"
-      },
-      "id": "match-43e0040b4e57"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "學測倒數259天",
-        "negative": "楊子甯說你很難改變一個人所以只能改辯稿"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "學測倒數259天",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p030",
-        "negative": "p060"
-      },
-      "id": "match-c45ba5099dd9"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "心悸大戰",
-        "negative": "學測倒數259天"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "心悸大戰",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p042",
-        "negative": "p030"
-      },
-      "id": "match-4d00d70ed634"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "明倫高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s080"
-      },
-      "id": "match-1c6dac2688c9"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "竹科實中",
-        "negative": "平鎮高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "竹科實中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s113",
-        "negative": "s048"
-      },
-      "id": "match-7675dc5fcb59"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "內壢高中",
-        "negative": "中和高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中和高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s013",
-        "negative": "s003"
-      },
-      "id": "match-936a18e183d8"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "中壢高商",
-        "negative": "立人高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "立人高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s004",
-        "negative": "s108"
-      },
-      "id": "match-acfc8613e495"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中和高中",
-        "negative": "衛道中學"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "中和高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s003",
-        "negative": "s139"
-      },
-      "id": "match-0146c853433a"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "立人高中",
-        "negative": "永豐高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "永豐高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s108",
-        "negative": "s100"
-      },
-      "id": "match-fc27709b1783"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "明倫高中",
-        "negative": "成淵高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "明倫高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s068"
-      },
-      "id": "match-a4b7b71aa43f"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "平鎮高中",
-        "negative": "中大壢中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "平鎮高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s048",
-        "negative": "s005"
-      },
-      "id": "match-e3d6b1abaf03"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中大壢中",
-        "negative": "竹科實中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "中大壢中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s005",
-        "negative": "s113"
-      },
-      "id": "match-58594a5dbda0"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "成淵高中",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s068",
-        "negative": "s125"
-      },
-      "id": "match-189ca05339ac"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "永豐高中",
-        "negative": "中壢高商"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "永豐高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s100",
-        "negative": "s004"
-      },
-      "id": "match-dd14ca509cbd"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-12",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "衛道中學",
-        "negative": "內壢高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "內壢高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s139",
-        "negative": "s013"
-      },
-      "id": "match-72fcdd5cd18e"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "中大壢中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s005"
-      },
-      "id": "match-a76043dd72e6"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "中和高中",
-        "negative": "永豐高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "中和高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s003",
-        "negative": "s100"
-      },
-      "id": "match-21fef02fd0f8"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中大壢中",
-        "negative": "永豐高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "永豐高中",
-      "note": "未公告比分，依最終名次判定勝方",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s005",
-        "negative": "s100"
-      },
-      "id": "match-7faa2ec8adf3"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "中和高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "臺南一中",
-      "note": "未公告比分，依最終名次判定勝方",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s003"
-      },
-      "id": "match-43c33db0e529"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "海山高中",
-        "negative": "明倫高中B"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "明倫高中B",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s101",
-        "negative": "s080"
-      },
-      "id": "match-20a38ce72009"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "政大附中",
-        "negative": "麗山高中A"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "政大附中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s070",
-        "negative": "s158"
-      },
-      "id": "match-c03a9fa8b3d8"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "市立復興",
-        "negative": "明倫高中A"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "明倫高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s045",
-        "negative": "s080"
-      },
-      "id": "match-4c8690c3611e"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "復旦高中",
-        "negative": "中大壢中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "中大壢中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s057",
-        "negative": "s005"
-      },
-      "id": "match-4aa03d375d06"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 5,
-      "teams": {
-        "affirmative": "中崙高中",
-        "negative": "板橋高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "板橋高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s008",
-        "negative": "s091"
-      },
-      "id": "match-8759e49f4b2e"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 6,
-      "teams": {
-        "affirmative": "西松高中",
-        "negative": "東山高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "西松高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s140",
-        "negative": "s088"
-      },
-      "id": "match-317b09bb2bf4"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 1,
-      "venue": 7,
-      "teams": {
-        "affirmative": "大理高中",
-        "negative": "羅東高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "羅東高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s037",
-        "negative": "s116"
-      },
-      "id": "match-eeae395d9a5c"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "明倫高中B",
-        "negative": "海山高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "明倫高中B",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s101"
-      },
-      "id": "match-f393c4e35075"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "麗山高中A",
-        "negative": "政大附中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "政大附中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s158",
-        "negative": "s070"
-      },
-      "id": "match-03d8b5f858b1"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "麗山高中B",
-        "negative": "新竹高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "新竹高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s158",
-        "negative": "s078"
-      },
-      "id": "match-851ca920351a"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "中大壢中",
-        "negative": "復旦高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "中大壢中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s005",
-        "negative": "s057"
-      },
-      "id": "match-d8de9f668130"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 5,
-      "teams": {
-        "affirmative": "板橋高中",
-        "negative": "中崙高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中崙高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s091",
-        "negative": "s008"
-      },
-      "id": "match-2eba6603090a"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 6,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "桃園高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s093"
-      },
-      "id": "match-215322396880"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 2,
-      "venue": 7,
-      "teams": {
-        "affirmative": "薇閣中學",
-        "negative": "中和高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "薇閣中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s135",
-        "negative": "s003"
-      },
-      "id": "match-dc821ddce1c9"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中和高中",
-        "negative": "薇閣中學"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "薇閣中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s003",
-        "negative": "s135"
-      },
-      "id": "match-5be24e4fc315"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "桃園高中",
-        "negative": "成功高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s093",
-        "negative": "s067"
-      },
-      "id": "match-d1f017425477"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "明倫高中A",
-        "negative": "市立復興"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "明倫高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s045"
-      },
-      "id": "match-2c304ff28a2c"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "景美女中",
-        "negative": "華僑高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "華僑高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s083",
-        "negative": "s132"
-      },
-      "id": "match-7475e3c27e1e"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 5,
-      "teams": {
-        "affirmative": "新竹高中",
-        "negative": "麗山高中B"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "麗山高中B",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s078",
-        "negative": "s158"
-      },
-      "id": "match-6b7f8d86c9e3"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 6,
-      "teams": {
-        "affirmative": "東山高中",
-        "negative": "西松高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "西松高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s088",
-        "negative": "s140"
-      },
-      "id": "match-9c62537f3483"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-08",
-      "period": 3,
-      "venue": 7,
-      "teams": {
-        "affirmative": "羅東高中",
-        "negative": "大理高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "大理高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s116",
-        "negative": "s037"
-      },
-      "id": "match-c23bb2f91cfd"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "百齡高中",
-        "negative": "和平高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "百齡高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s105",
-        "negative": "s028"
-      },
-      "id": "match-62ac1982caaa"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "武陵高中",
-        "negative": "內壢高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s096",
-        "negative": "s013"
-      },
-      "id": "match-cf40455d880c"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "延平中學",
-        "negative": "陽交附中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "延平中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s050",
-        "negative": "s146"
-      },
-      "id": "match-8ad318c9374f"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "南湖高中",
-        "negative": "大直高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "大直高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s024",
-        "negative": "s038"
-      },
-      "id": "match-7e9ba144b574"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 5,
-      "teams": {
-        "affirmative": "成淵高中",
-        "negative": "永平高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "成淵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s068",
-        "negative": "s098"
-      },
-      "id": "match-b47eb097489b"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 1,
-      "venue": 6,
-      "teams": {
-        "affirmative": "華僑高中",
-        "negative": "景美女中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "景美女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s132",
-        "negative": "s083"
-      },
-      "id": "match-351191e5186c"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "永平高中",
-        "negative": "成淵高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "成淵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s098",
-        "negative": "s068"
-      },
-      "id": "match-40ae52226bf9"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "陽交附中",
-        "negative": "延平中學"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "延平中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s146",
-        "negative": "s050"
-      },
-      "id": "match-a01d035be993"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "和平高中",
-        "negative": "百齡高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "和平高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s028",
-        "negative": "s105"
-      },
-      "id": "match-21bccb3a6ef8"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "內壢高中",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s013",
-        "negative": "s096"
-      },
-      "id": "match-651ebfaaaa71"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 5,
-      "teams": {
-        "affirmative": "中崙高中",
-        "negative": "西松高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "中崙高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s008",
-        "negative": "s140"
-      },
-      "id": "match-a1623894ff8d"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 6,
-      "teams": {
-        "affirmative": "明倫高中A",
-        "negative": "中大壢中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "明倫高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s005"
-      },
-      "id": "match-b9e245a4b037"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 2,
-      "venue": 7,
-      "teams": {
-        "affirmative": "大直高中",
-        "negative": "南湖高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "大直高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s038",
-        "negative": "s024"
-      },
-      "id": "match-f6936511124c"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "百齡高中",
-        "negative": "政大附中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "政大附中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s105",
-        "negative": "s070"
-      },
-      "id": "match-d1e5cd8a9b42"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "羅東高中",
-        "negative": "大直高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "大直高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s116",
-        "negative": "s038"
-      },
-      "id": "match-06c3d7c0a975"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "成淵高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s068"
-      },
-      "id": "match-1ea4c9cd3ce2"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "景美女中",
-        "negative": "麗山高中B"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "麗山高中B",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s083",
-        "negative": "s158"
-      },
-      "id": "match-5808eaa69a7f"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 5,
-      "teams": {
-        "affirmative": "薇閣中學",
-        "negative": "延平中學"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "薇閣中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s135",
-        "negative": "s050"
-      },
-      "id": "match-3b060470491d"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-09",
-      "period": 3,
-      "venue": 6,
-      "teams": {
-        "affirmative": "明倫高中B",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s096"
-      },
-      "id": "match-178cfa36a641"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "政大附中",
-        "negative": "明倫高中A"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "明倫高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s070",
-        "negative": "s080"
-      },
-      "id": "match-b729e623db15"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "中崙高中",
-        "negative": "大直高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "大直高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s008",
-        "negative": "s038"
-      },
-      "id": "match-377a4ef67b86"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "麗山高中B"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s158"
-      },
-      "id": "match-8b59c7b91d51"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "薇閣中學",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s135",
-        "negative": "s096"
-      },
-      "id": "match-b3a56f98c263"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "明倫高中A",
-        "negative": "大直高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "大直高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s080",
-        "negative": "s038"
-      },
-      "id": "match-037e97a37110"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s096"
-      },
-      "id": "match-ceaa73df2caf"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "大直高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "成功高中",
-      "note": "未公告比分，依最終名次判定勝方",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s038"
-      },
-      "id": "match-cd1a58e238b3"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "北一女中",
-        "negative": "師大附中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "師大附中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s017",
-        "negative": "s047"
-      },
-      "id": "match-78adde5b3ee7"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "內壢高中",
-        "negative": "小港高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "內壢高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s013",
-        "negative": "s040"
-      },
-      "id": "match-b66f36c18d13"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "西松高中",
-        "negative": "成功高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s140",
-        "negative": "s067"
-      },
-      "id": "match-aa6fc9498e57"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "臺中一中",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "臺中一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s120",
-        "negative": "s125"
-      },
-      "id": "match-b5886475ece6"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 5,
-      "teams": {
-        "affirmative": "中山高中",
-        "negative": "臺南二中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南二中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s007",
-        "negative": "s126"
-      },
-      "id": "match-9ca15ff5c4e5"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 6,
-      "teams": {
-        "affirmative": "東港高中",
-        "negative": "建國中學"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "建國中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s089",
-        "negative": "s054"
-      },
-      "id": "match-05dbd3b268e2"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 7,
-      "teams": {
-        "affirmative": "明道中學",
-        "negative": "興大附中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "明道中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s081",
-        "negative": "s131"
-      },
-      "id": "match-e89b43e8219b"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 1,
-      "venue": 8,
-      "teams": {
-        "affirmative": "南湖高中",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s024",
-        "negative": "s006"
-      },
-      "id": "match-ff4823259b0e"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "平鎮高中",
-        "negative": "北一女中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "北一女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s048",
-        "negative": "s017"
-      },
-      "id": "match-2863aaeaa27c"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "武陵高中",
-        "negative": "內壢高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s096",
-        "negative": "s013"
-      },
-      "id": "match-0616a5a519af"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "新竹高商",
-        "negative": "西松高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "西松高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s079",
-        "negative": "s140"
-      },
-      "id": "match-8079afcbb92c"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "家齊高中",
-        "negative": "臺中一中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "家齊高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s039",
-        "negative": "s120"
-      },
-      "id": "match-7a2fd34d6026"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 5,
-      "teams": {
-        "affirmative": "市立東山",
-        "negative": "中山高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "市立東山",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s046",
-        "negative": "s007"
-      },
-      "id": "match-c8693cf1466f"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 6,
-      "teams": {
-        "affirmative": "竹科實中",
-        "negative": "東港高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "竹科實中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s113",
-        "negative": "s089"
-      },
-      "id": "match-5dcda84823b6"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 7,
-      "teams": {
-        "affirmative": "中信國際",
-        "negative": "明道中學"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "明道中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p009",
-        "negative": "s081"
-      },
-      "id": "match-36c39f7baf6a"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 2,
-      "venue": 8,
-      "teams": {
-        "affirmative": "曉明女中",
-        "negative": "南湖高中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "曉明女中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s085",
-        "negative": "s024"
-      },
-      "id": "match-95f3c08d57a1"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "師大附中",
-        "negative": "平鎮高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "師大附中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s047",
-        "negative": "s048"
-      },
-      "id": "match-0ec97afa384f"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "小港高中",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s040",
-        "negative": "s096"
-      },
-      "id": "match-f57c45ac4485"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "新竹高商"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "成功高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s079"
-      },
-      "id": "match-273e1e1d0548"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "家齊高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s039"
-      },
-      "id": "match-6fc9450f5ccd"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 5,
-      "teams": {
-        "affirmative": "臺南二中",
-        "negative": "市立東山"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "市立東山",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s126",
-        "negative": "s046"
-      },
-      "id": "match-534faed3725f"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 6,
-      "teams": {
-        "affirmative": "建國中學",
-        "negative": "竹科實中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "建國中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s054",
-        "negative": "s113"
-      },
-      "id": "match-c8b4618999f2"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 7,
-      "teams": {
-        "affirmative": "興大附中",
-        "negative": "中信國際"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中信國際",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s131",
-        "negative": "p009"
-      },
-      "id": "match-540160cf1084"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-14",
-      "period": 3,
-      "venue": 8,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "曉明女中"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s085"
-      },
-      "id": "match-76ef81f5ed87"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "師大附中",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s047",
-        "negative": "s096"
-      },
-      "id": "match-f14d0efa4f73"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "成功高中",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s067",
-        "negative": "s125"
-      },
-      "id": "match-fbeb883ecb15"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "市立東山",
-        "negative": "建國中學"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "市立東山",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s046",
-        "negative": "s054"
-      },
-      "id": "match-c8a6e61f9f78"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "明道中學",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "明道中學",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s081",
-        "negative": "s006"
-      },
-      "id": "match-4c5045d6b026"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "武陵高中",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s096",
-        "negative": "s125"
-      },
-      "id": "match-ca356caaa969"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "市立東山",
-        "negative": "明道中學"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "市立東山",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s046",
-        "negative": "s081"
-      },
-      "id": "match-dc1322ed85b8"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "市立東山"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 2
-      },
-      "winner": "臺南一中",
-      "note": "冠亞賽；原公告註記：因有一張評分單平分，故以論點分判定",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s046"
-      },
-      "id": "match-dfa4f19c94c5"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "斗六高中",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s072",
-        "negative": "s125"
-      },
-      "id": "match-377db23e75f0"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "西松高中",
-        "negative": "虎尾高中（二）"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "虎尾高中（二）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s140",
-        "negative": "s138"
-      },
-      "id": "match-2f65824374cd"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "馬公高中（一）",
-        "negative": "虎尾高中（一）"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "馬公高中（一）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p094",
-        "negative": "p078"
-      },
-      "id": "match-89ffdee18b9d"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "新竹高中（一）",
-        "negative": "馬公高中（二）"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "馬公高中（二）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p057",
-        "negative": "s148"
-      },
-      "id": "match-e0bc32724b1d"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 1,
-      "venue": 5,
-      "teams": {
-        "affirmative": "員林高中",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s029",
-        "negative": "s006"
-      },
-      "id": "match-984f978db4ac"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "臺南一中",
-        "negative": "斗六高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s125",
-        "negative": "s072"
-      },
-      "id": "match-695be56ee4ab"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "武陵高中",
-        "negative": "聖功女中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s096",
-        "negative": "s118"
-      },
-      "id": "match-762e1bf6af37"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "虎尾高中（二）",
-        "negative": "西松高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "西松高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s138",
-        "negative": "s140"
-      },
-      "id": "match-e93b1280485a"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "虎尾高中（三）",
-        "negative": "新竹高中（二）"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "新竹高中（二）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p079",
-        "negative": "s078"
-      },
-      "id": "match-36167d5ba71c"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 2,
-      "venue": 5,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "員林高中"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s029"
-      },
-      "id": "match-1387474286c0"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "虎尾高中（一）",
-        "negative": "馬公高中（一）"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "馬公高中（一）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p078",
-        "negative": "p094"
-      },
-      "id": "match-e9e434c6670c"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "聖功女中",
-        "negative": "武陵高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "武陵高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s118",
-        "negative": "s096"
-      },
-      "id": "match-5ca4432395b5"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "新竹高中（二）",
-        "negative": "虎尾高中（三）"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "虎尾高中（三）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s078",
-        "negative": "p079"
-      },
-      "id": "match-ef246b724161"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-13",
-      "period": 3,
-      "venue": 4,
-      "teams": {
-        "affirmative": "馬公高中（二）",
-        "negative": "新竹高中（一）"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "馬公高中（二）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s148",
-        "negative": "p057"
-      },
-      "id": "match-1f1bd7496268"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "新竹高中（二）",
-        "negative": "馬公高中（一）"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "馬公高中（一）",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s078",
-        "negative": "p094"
-      },
-      "id": "match-584f9d0eac6c"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "虎尾高中（二）",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s138",
-        "negative": "s125"
-      },
-      "id": "match-cfb99875bad7"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "馬公高中（二）",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s148",
-        "negative": "s006"
-      },
-      "id": "match-ba2572ee8831"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "馬公高中（一）",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p094",
-        "negative": "s125"
-      },
-      "id": "match-a7b44786b5c8"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "武陵高中",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s096",
-        "negative": "s006"
-      },
-      "id": "match-0bb2573395cd"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "2025-12-14",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "臺南一中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "臺南一中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s125"
-      },
-      "id": "match-edcd551d2222"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "高市中正"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s150"
-      },
-      "id": "match-d77028e19cf5"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 1,
-      "venue": 2,
-      "teams": {
-        "affirmative": "前鎮高中",
-        "negative": "興國高中B"
-      },
-      "scores": {
-        "affirmative": 2,
-        "negative": 1
-      },
-      "winner": "前鎮高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s015",
-        "negative": "s130"
-      },
-      "id": "match-53eb2df30a73"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 1,
-      "venue": 3,
-      "teams": {
-        "affirmative": "嘉義高中",
-        "negative": "南科實中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "南科實中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s033",
-        "negative": "s025"
-      },
-      "id": "match-980c4706dd60"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 1,
-      "venue": 4,
-      "teams": {
-        "affirmative": "小港高中B",
-        "negative": "興國高中A"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "興國高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s040",
-        "negative": "s130"
-      },
-      "id": "match-c652b7b31bd9"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "興國高中B",
-        "negative": "高市中正B"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "興國高中B",
-      "note": "；高市中正B因選手未到，故以棄賽論",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s130",
-        "negative": "p096"
-      },
-      "id": "match-0292b31f233c"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "興國高中A",
-        "negative": "小港高中B"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "興國高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s130",
-        "negative": "s040"
-      },
-      "id": "match-a823c2acf500"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 2,
-      "venue": 3,
-      "teams": {
-        "affirmative": "中山高中",
-        "negative": "小港高中A"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "中山高中",
-      "note": "；小港高中A未填寫選手表單，故以棄賽論",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s007",
-        "negative": "s040"
-      },
-      "id": "match-7d9983a820a8"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 2,
-      "venue": 4,
-      "teams": {
-        "affirmative": "南科實中",
-        "negative": "嘉義高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "嘉義高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s025",
-        "negative": "s033"
-      },
-      "id": "match-2af7635e7d37"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "高市中正B",
-        "negative": "前鎮高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "前鎮高中",
-      "note": "；因前鎮高中、高市中正B棄賽，循環由興國高中B晉級",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p096",
-        "negative": "s015"
-      },
-      "id": "match-c132d71808b4"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 3,
-      "venue": 2,
-      "teams": {
-        "affirmative": "小港高中A",
-        "negative": "中山高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中山高中",
-      "note": "；小港高中A未填寫選手名單，故以棄賽論",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s040",
-        "negative": "s007"
-      },
-      "id": "match-ee59766c97dc"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-25",
-      "period": 3,
-      "venue": 3,
-      "teams": {
-        "affirmative": "高市中正A",
-        "negative": "中山女高"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 3
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "p095",
-        "negative": "s006"
-      },
-      "id": "match-89048abfc91e"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "period": 1,
-      "venue": 1,
-      "teams": {
-        "affirmative": "嘉義高中",
-        "negative": "興國高中A"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "興國高中A",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s033",
-        "negative": "s130"
-      },
-      "id": "match-6ea9296d9655"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "period": 2,
-      "venue": 1,
-      "teams": {
-        "affirmative": "興國高中A",
-        "negative": "中山高中"
-      },
-      "scores": {
-        "affirmative": 1,
-        "negative": 2
-      },
-      "winner": "中山高中",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s130",
-        "negative": "s007"
-      },
-      "id": "match-0d7d75be0a81"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "period": 2,
-      "venue": 2,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "興國高中B"
-      },
-      "scores": {
-        "affirmative": 3,
-        "negative": 0
-      },
-      "winner": "中山女高",
-      "note": "",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s130"
-      },
-      "id": "match-ad2e3ff59872"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "period": 3,
-      "venue": 1,
-      "teams": {
-        "affirmative": "中山女高",
-        "negative": "中山高中"
-      },
-      "scores": {
-        "affirmative": 0,
-        "negative": 0
-      },
-      "winner": "中山高中",
-      "note": "；未公告比分，依最終名次判定勝方",
-      "players": {
-        "affirmative": [],
-        "negative": []
-      },
-      "teamIds": {
-        "affirmative": "s006",
-        "negative": "s007"
-      },
-      "id": "match-265d12f8acfc"
     }
   ],
   "honors": [
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "冠軍",
+      "recipient": "臺南二中A",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s126",
+      "id": "honor-167e654c5db0"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "亞軍",
+      "recipient": "臺北市私立延平高級中學",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s124",
+      "id": "honor-b8a128a4b07f"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "季軍",
+      "recipient": "高雄市立前鎮高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s154",
+      "id": "honor-e0f0e2551117"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "季軍",
+      "recipient": "高雄市立瑞祥高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s155",
+      "id": "honor-d66ff8a4d050"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "最佳辯士",
+      "recipient": "黃禹叡",
+      "team": "臺南二中A",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s126",
+      "id": "honor-987a260fa9f9"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "2025-12-07",
+      "honorName": "最佳辯士",
+      "recipient": "王懷謙",
+      "team": "臺北市私立延平高級中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s124",
+      "id": "honor-13e33d92a134"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "冠軍",
+      "recipient": "心悸大戰",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p042",
+      "id": "honor-0aeb4da6856d"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "亞軍",
+      "recipient": "學測倒數259天",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p030",
+      "id": "honor-9e9e2949c1b9"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "季軍",
+      "recipient": "楊子甯說你很難改變一個人所以只能改辯稿",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p060",
+      "id": "honor-03d9d6300a82"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "季軍",
+      "recipient": "屏東女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s041",
+      "id": "honor-5b37e2140e9d"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "心悸大戰",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p042",
+      "id": "honor-01f3678471ad"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "最佳辯士",
+      "recipient": "薛舒晴",
+      "team": "學測倒數259天",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p030",
+      "id": "honor-c00e715ff044"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "最佳辯士",
+      "recipient": "潘巧云",
+      "team": "屏東女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s041",
+      "id": "honor-facfb50a4e03"
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "matchDate": "2026-05-03",
+      "honorName": "最佳辯士",
+      "recipient": "徐菱遙",
+      "team": "楊子甯說你很難改變一個人所以只能改辯稿",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p060",
+      "id": "honor-ff80e8d854d7"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "冠軍",
+      "recipient": "臺南一中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-0b794b58df47"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "亞軍",
+      "recipient": "中和高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s003",
+      "id": "honor-05dc1d517de2"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "季軍",
+      "recipient": "永豐高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s100",
+      "id": "honor-ceb79ecb852a"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "最佳辯士",
+      "recipient": "李鎧麟",
+      "team": "中和高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s003",
+      "id": "honor-6606edd9e61f"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "最佳辯士",
+      "recipient": "方凱佾",
+      "team": "臺南一中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-5880d7303e9b"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "最佳辯士",
+      "recipient": "陳佳皇",
+      "team": "臺南一中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-5776831f9a5f"
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "matchDate": "2025-04-13",
+      "honorName": "最佳辯士",
+      "recipient": "孫興宸",
+      "team": "永豐高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s100",
+      "id": "honor-ff628aa591d6"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "honorName": "冠軍",
+      "recipient": "成功高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s067",
+      "id": "honor-a9098957f4ea"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "honorName": "亞軍",
+      "recipient": "大直高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s038",
+      "id": "honor-b8e85500e15e"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "honorName": "季軍",
+      "recipient": "明倫高中A",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s080",
+      "id": "honor-367e924bd4dd"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "honorName": "季軍",
+      "recipient": "武陵高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s096",
+      "id": "honor-b6427f585453"
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "matchDate": "2025-11-16",
+      "honorName": "最佳辯士",
+      "recipient": "曾丞浩",
+      "team": "成功高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s067",
+      "id": "honor-ec4d6d4e0fda"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "冠軍",
+      "recipient": "臺南一中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-4bd619c24835"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "亞軍",
+      "recipient": "市立東山",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s046",
+      "id": "honor-0209bb08f34d"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "季軍",
+      "recipient": "明道中學",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s081",
+      "id": "honor-ea62c9fa1ebc"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "季軍",
+      "recipient": "武陵高中",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-463523a6a4f1"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "最佳辯士",
+      "recipient": "林軒嘉",
+      "team": "明道中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s081",
+      "id": "honor-c7cc38536bb2"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "最佳辯士",
+      "recipient": "陳筳皓",
+      "team": "武陵高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s096",
+      "id": "honor-64b82715177e"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "最佳辯士",
+      "recipient": "蘇博原",
+      "team": "臺南一中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-fda8d1d24ac6"
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "matchDate": "2026-03-15",
+      "honorName": "最佳辯士",
+      "recipient": "蔡秉譯",
+      "team": "市立東山",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s046",
+      "id": "honor-18b5c8b64a53"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "臺南一中",
+      "team": "臺南一中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-3125f8606e9b"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "中山女高",
+      "team": "中山女高",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s006",
+      "id": "honor-4da069f349fc"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "武陵高中",
+      "team": "武陵高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s096",
+      "id": "honor-e3c09dabfb0a"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "殿軍",
+      "recipient": "馬公高中（一）",
+      "team": "馬公高中（一）",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p094",
+      "id": "honor-9f7c0791b861"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "徐愷宏",
+      "team": "臺南一中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s125",
+      "id": "honor-c3236bcac249"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "陳品捷",
+      "team": "中山女高",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s006",
+      "id": "honor-be04a229430e"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "陳筳皓",
+      "team": "武陵高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s096",
+      "id": "honor-cbc50dc7d0aa"
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "林子芹",
+      "team": "馬公高中（一）",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p094",
+      "id": "honor-1573e567034f"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "冠軍",
+      "recipient": "中山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s007",
+      "id": "honor-140252702f0d"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "亞軍",
+      "recipient": "中山女高",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s006",
+      "id": "honor-a8b6aee217b3"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "季軍",
+      "recipient": "興國高中A",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s130",
+      "id": "honor-80dd55f255a5"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "殿軍",
+      "recipient": "興國高中B",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s130",
+      "id": "honor-5657a653a7be"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "最佳辯士",
+      "recipient": "林華慈",
+      "team": "中山高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s007",
+      "id": "honor-a83b115187c0"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "優秀辯士",
+      "recipient": "李馨",
+      "team": "中山女高",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s006",
+      "id": "honor-45985591159c"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "優秀辯士",
+      "recipient": "蔡佩璇",
+      "team": "興國高中A",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s130",
+      "id": "honor-64468a1bcb8a"
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "matchDate": "2024-05-26",
+      "honorName": "優秀辯士",
+      "recipient": "翁征承",
+      "team": "興國高中B",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s130",
+      "id": "honor-e02bf3caa6bb"
+    },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
       "matchDate": "2025-05-25",
@@ -25994,560 +26543,45 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "最終",
       "teamId": "p090",
       "id": "honor-38ac52306cef"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "冠軍",
-      "recipient": "臺南二中A",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s126",
-      "id": "honor-167e654c5db0"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "亞軍",
-      "recipient": "臺北市私立延平高級中學",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s124",
-      "id": "honor-b8a128a4b07f"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "季軍",
-      "recipient": "高雄市立前鎮高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s154",
-      "id": "honor-e0f0e2551117"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "季軍",
-      "recipient": "高雄市立瑞祥高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s155",
-      "id": "honor-d66ff8a4d050"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "最佳辯士",
-      "recipient": "黃禹叡",
-      "team": "臺南二中A",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s126",
-      "id": "honor-987a260fa9f9"
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "honorName": "最佳辯士",
-      "recipient": "王懷謙",
-      "team": "臺北市私立延平高級中學",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s124",
-      "id": "honor-13e33d92a134"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "冠軍",
-      "recipient": "心悸大戰",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "p042",
-      "id": "honor-0aeb4da6856d"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "亞軍",
-      "recipient": "學測倒數259天",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "p030",
-      "id": "honor-9e9e2949c1b9"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "季軍",
-      "recipient": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "p060",
-      "id": "honor-03d9d6300a82"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "季軍",
-      "recipient": "屏東女中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s041",
-      "id": "honor-5b37e2140e9d"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "最佳辯士",
-      "recipient": "張育棋",
-      "team": "心悸大戰",
-      "honorType": "player",
-      "note": "",
-      "teamId": "p042",
-      "id": "honor-01f3678471ad"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "最佳辯士",
-      "recipient": "薛舒晴",
-      "team": "學測倒數259天",
-      "honorType": "player",
-      "note": "",
-      "teamId": "p030",
-      "id": "honor-c00e715ff044"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "最佳辯士",
-      "recipient": "潘巧云",
-      "team": "屏東女中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s041",
-      "id": "honor-facfb50a4e03"
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "matchDate": "2026-05-03",
-      "honorName": "最佳辯士",
-      "recipient": "徐菱遙",
-      "team": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "honorType": "player",
-      "note": "",
-      "teamId": "p060",
-      "id": "honor-ff80e8d854d7"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "冠軍",
-      "recipient": "臺南一中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-0b794b58df47"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "亞軍",
-      "recipient": "中和高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s003",
-      "id": "honor-05dc1d517de2"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "季軍",
-      "recipient": "永豐高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s100",
-      "id": "honor-ceb79ecb852a"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "最佳辯士",
-      "recipient": "李鎧麟",
-      "team": "中和高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s003",
-      "id": "honor-6606edd9e61f"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "最佳辯士",
-      "recipient": "方凱佾",
-      "team": "臺南一中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-5880d7303e9b"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "最佳辯士",
-      "recipient": "陳佳皇",
-      "team": "臺南一中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-5776831f9a5f"
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "matchDate": "2025-04-13",
-      "honorName": "最佳辯士",
-      "recipient": "孫興宸",
-      "team": "永豐高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s100",
-      "id": "honor-ff628aa591d6"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "honorName": "冠軍",
-      "recipient": "成功高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s067",
-      "id": "honor-a9098957f4ea"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "honorName": "亞軍",
-      "recipient": "大直高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s038",
-      "id": "honor-b8e85500e15e"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "honorName": "季軍",
-      "recipient": "明倫高中A",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s080",
-      "id": "honor-367e924bd4dd"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "honorName": "季軍",
-      "recipient": "武陵高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s096",
-      "id": "honor-b6427f585453"
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "matchDate": "2025-11-16",
-      "honorName": "最佳辯士",
-      "recipient": "曾丞浩",
-      "team": "成功高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s067",
-      "id": "honor-ec4d6d4e0fda"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "冠軍",
-      "recipient": "臺南一中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-4bd619c24835"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "亞軍",
-      "recipient": "市立東山",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s046",
-      "id": "honor-0209bb08f34d"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "季軍",
-      "recipient": "明道中學",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s081",
-      "id": "honor-ea62c9fa1ebc"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "季軍",
-      "recipient": "武陵高中",
-      "team": "",
-      "honorType": "player",
-      "note": "",
-      "teamId": "",
-      "id": "honor-463523a6a4f1"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "最佳辯士",
-      "recipient": "林軒嘉",
-      "team": "明道中學",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s081",
-      "id": "honor-c7cc38536bb2"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "最佳辯士",
-      "recipient": "陳筳皓",
-      "team": "武陵高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s096",
-      "id": "honor-64b82715177e"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "最佳辯士",
-      "recipient": "蘇博原",
-      "team": "臺南一中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-fda8d1d24ac6"
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "matchDate": "2026-03-15",
-      "honorName": "最佳辯士",
-      "recipient": "蔡秉譯",
-      "team": "市立東山",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s046",
-      "id": "honor-18b5c8b64a53"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "冠軍",
-      "recipient": "臺南一中",
-      "team": "臺南一中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-3125f8606e9b"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "亞軍",
-      "recipient": "中山女高",
-      "team": "中山女高",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s006",
-      "id": "honor-4da069f349fc"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "季軍",
-      "recipient": "武陵高中",
-      "team": "武陵高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s096",
-      "id": "honor-e3c09dabfb0a"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "殿軍",
-      "recipient": "馬公高中（一）",
-      "team": "馬公高中（一）",
-      "honorType": "player",
-      "note": "",
-      "teamId": "p094",
-      "id": "honor-9f7c0791b861"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "最佳辯士",
-      "recipient": "徐愷宏",
-      "team": "臺南一中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s125",
-      "id": "honor-c3236bcac249"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "最佳辯士",
-      "recipient": "陳品捷",
-      "team": "中山女高",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s006",
-      "id": "honor-be04a229430e"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "最佳辯士",
-      "recipient": "陳筳皓",
-      "team": "武陵高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s096",
-      "id": "honor-cbc50dc7d0aa"
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "matchDate": "",
-      "honorName": "最佳辯士",
-      "recipient": "林子芹",
-      "team": "馬公高中（一）",
-      "honorType": "player",
-      "note": "",
-      "teamId": "p094",
-      "id": "honor-1573e567034f"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "冠軍",
-      "recipient": "中山高中",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s007",
-      "id": "honor-140252702f0d"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "亞軍",
-      "recipient": "中山女高",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s006",
-      "id": "honor-a8b6aee217b3"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "季軍",
-      "recipient": "興國高中A",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s130",
-      "id": "honor-80dd55f255a5"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "殿軍",
-      "recipient": "興國高中B",
-      "team": "",
-      "honorType": "team",
-      "note": "",
-      "teamId": "s130",
-      "id": "honor-5657a653a7be"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "最佳辯士",
-      "recipient": "林華慈",
-      "team": "中山高中",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s007",
-      "id": "honor-a83b115187c0"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
-      "recipient": "李馨",
-      "team": "中山女高",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s006",
-      "id": "honor-45985591159c"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
-      "recipient": "蔡佩璇",
-      "team": "興國高中A",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s130",
-      "id": "honor-64468a1bcb8a"
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
-      "recipient": "翁征承",
-      "team": "興國高中B",
-      "honorType": "player",
-      "note": "",
-      "teamId": "s130",
-      "id": "honor-e02bf3caa6bb"
     }
   ],
   "attendance": [],
   "topics": [
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "topic": "加強管制／自律教育更有利於解決青少年手機成癮問題",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
+      "topic": "辯題：我國刑法222條之法律效果應增設化學去勢",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第一屆夢箋盃",
+      "topic": "我國成年人性別變更登記應採自我決定模式 (self-determination model)",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
+      "topic": "我國普通刑法應廢除死刑",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第二十一屆齊揚盃",
+      "topic": "憂鬱文學的興起對現代年輕族群是利大於弊/弊大於利",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第十屆雲啟盃辯論比賽",
+      "topic": "我國應設立投票權行使之前提性公民素養標準",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
+      "topic": "幸福更歸屬於理性／感性",
+      "explanation": ""
+    },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
       "topic": "網路實名制對臺灣社會利大於弊 / 網路實名制對臺灣社會弊大於利",
@@ -26666,41 +26700,6 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第二屆青雲盃全國高中職辯論錦標賽",
       "topic": "富有/貧窮更容易暴露人性之惡",
-      "explanation": ""
-    },
-    {
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "topic": "加強管制／自律教育更有利於解決青少年手機成癮問題",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "topic": "辯題：我國刑法222條之法律效果應增設化學去勢",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第一屆夢箋盃",
-      "topic": "我國成年人性別變更登記應採自我決定模式 (self-determination model)",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第十九屆北區聯合新生盃辯論比賽",
-      "topic": "我國普通刑法應廢除死刑",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第二十一屆齊揚盃",
-      "topic": "憂鬱文學的興起對現代年輕族群是利大於弊/弊大於利",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第十屆雲啟盃辯論比賽",
-      "topic": "我國應設立投票權行使之前提性公民素養標準",
-      "explanation": ""
-    },
-    {
-      "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
-      "topic": "幸福更歸屬於理性／感性",
       "explanation": ""
     }
   ]
