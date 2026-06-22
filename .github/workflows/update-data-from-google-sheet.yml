@@ -1,0 +1,52 @@
+name: Update data from Google Sheet
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Download Google Sheet as Excel
+        env:
+          GOOGLE_SHEET_ID: 1_qO5YLLRlQt9R7NSA3MIqWsXDsp349B919D7WX_lj2w
+        run: |
+          set -euo pipefail
+          mkdir -p data
+          curl -L --fail \
+            "https://docs.google.com/spreadsheets/d/${GOOGLE_SHEET_ID}/export?format=xlsx" \
+            -o data/google-sheet-export.xlsx
+          python - <<'PY'
+          from pathlib import Path
+          path = Path("data/google-sheet-export.xlsx")
+          if path.stat().st_size < 10000 or path.read_bytes()[:4] != b"PK\x03\x04":
+              raise SystemExit("Google Sheet 匯出失敗：下載結果不是有效 Excel 檔。請確認試算表分享權限。")
+          print(f"已下載 Google Sheet：{path.stat().st_size:,} bytes")
+          PY
+
+      - name: Build website data
+        env:
+          PUBLIC_DATA_SOURCE: data/google-sheet-export.xlsx
+        run: python tools/build_data.py
+
+      - name: Commit updated data
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update public debate data from Google Sheet"
+          file_pattern: |
+            data/public-data.js
+            data/update-report.txt
+            data/entity-registry.csv
+            index.html
