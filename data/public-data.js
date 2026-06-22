@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-06-23T00:33:49",
+  "generatedAt": "2026-06-23T04:01:43",
   "sources": [
     "public-data.xlsx",
     "public-data2.xlsx"
@@ -580,6 +580,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p096",
       "type": "p",
       "name": "高市中正B",
+      "aliases": ""
+    },
+    {
+      "code": "p097",
+      "type": "p",
+      "name": "0.0",
       "aliases": ""
     },
     {

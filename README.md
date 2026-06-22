@@ -55,6 +55,14 @@ Numbers 可以直接開啟這份 `.xlsx`。編輯完畢後，請使用「檔案 
 
 每次更新也會產生 `data/update-report.txt`，裡面會列出本次讀取的資料來源、目前收錄幾個盃賽、盃賽清單，以及略過資料或提醒項目。若命令視窗顯示「資料檢查回報」，可先打開這個檔案確認是哪一列或哪個分頁需要修正。
 
+## 從 Google 試算表一鍵更新
+
+這版已加入 GitHub Actions：`.github/workflows/update-data-from-google-sheet.yml`。
+
+上傳到 GitHub 後，可到 repository 的 **Actions → Update data from Google Sheet → Run workflow** 手動更新。流程會自動下載 Google 試算表、轉成 `data/public-data.js`、產生 `data/update-report.txt`，並提交回 GitHub。
+
+只有對 repository 有寫入權限的人通常才能按 `Run workflow`；一般訪客不能按。這個測試版使用 Google Sheet 公開匯出連結，因此知道試算表網址的人可能讀得到資料。若要讓試算表保持私密，之後可改成 GitHub Secrets + Google 服務帳號版本。
+
 名冊更新方式：用 Numbers 或 Excel 編輯 `entity-registry.xlsx`，放在 `data` 資料夾後執行同一個更新工具即可。也可直接把該 Excel 拖到更新工具；舊版本會先備份至 `data/backups`。
 
 更新時也會自動改變 `index.html` 裡的資料、程式與樣式版本，避免 GitHub Pages 或瀏覽器繼續使用舊快取。上傳時請至少一併提交：

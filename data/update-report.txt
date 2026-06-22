@@ -1,10 +1,10 @@
-更新時間：2026-06-23T00:33:49
-快取版本：20260623003349
+更新時間：2026-06-23T04:01:43
+快取版本：20260623040143
 
 資料來源：public-data.xlsx、public-data2.xlsx
 目前收錄盃賽：27 個
 資料筆數：910 場戰績、205 筆榮譽、0 筆登場紀錄、31 筆辯題
-單位名冊：254 筆（來源 entity-registry.csv，已同步 entity-registry.csv）
+單位名冊：255 筆（來源 entity-registry.csv，已同步 entity-registry.csv）
 
 盃賽清單：
 - 2025「青聲說」全國高中職辯論賽

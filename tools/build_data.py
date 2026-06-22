@@ -2,6 +2,7 @@
 import csv
 import hashlib
 import json
+import os
 import re
 import zipfile
 from datetime import datetime, timedelta
@@ -231,6 +232,15 @@ def load_xlsx(path):
 
 
 def source_files():
+    explicit_sources = os.environ.get("PUBLIC_DATA_SOURCE", "").strip()
+    if explicit_sources:
+        paths = []
+        for source in explicit_sources.split(os.pathsep):
+            path = Path(source)
+            if not path.is_absolute():
+                path = ROOT / path
+            paths.append(path)
+        return paths
     xlsx = sorted(DATA_DIR.glob("public-data*.xlsx"), key=lambda path: path.name.lower())
     csv_files = sorted(DATA_DIR.glob("public-data*.csv"), key=lambda path: path.name.lower())
     if xlsx:

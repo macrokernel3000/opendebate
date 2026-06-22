@@ -51,6 +51,12 @@
 更新摘要
 每次更新後會產生 data/update-report.txt，內容包含資料來源、目前收錄盃賽數、盃賽清單，以及略過資料或提醒項目。若看到某個賽事好像沒有出現，請先搜尋這個檔案中的盃賽清單。
 
+GitHub 一鍵更新
+這版已加入 .github/workflows/update-data-from-google-sheet.yml。上傳到 GitHub 後，到 Actions → Update data from Google Sheet → Run workflow，即可從 Google 試算表下載最新資料、產生 public-data.js 與 update-report.txt，並自動提交。
+
+權限提醒
+一般訪客不能按 Run workflow，通常只有有 repository 寫入權限的人可以按。這個測試版使用公開匯出連結，因此知道 Google 試算表網址的人可能讀得到試算表；若要私密，之後可改成 GitHub Secrets 與 Google 服務帳號版本。
+
 請勿手動修改 data/public-data.js；它會由更新程式自動產生。
 
 Numbers 使用者請用「檔案 → 輸出至 → Excel」，不要只存成 .numbers。
