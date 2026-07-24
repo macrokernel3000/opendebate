@@ -3,10 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="查詢台灣高中辯論賽事、比賽結果、學校戰績與公開榮譽。" />
+  <meta name="description" content="公開辯論資訊網整理台灣高中辯論與高中職辯論比賽資料，可查詢辯論賽事、比賽結果、學校戰績、勝場、公開榮譽與辯題。" />
+  <meta name="keywords" content="辯論,辯論比賽,高中辯論,高中職辯論,辯論積分,辯論賽事,辯論戰績,辯題,台灣辯論" />
+  <meta name="author" content="公開辯論資訊網" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <link rel="canonical" href="https://macrokernel3000.github.io/opendebate/" />
+  <link rel="alternate" type="text/plain" href="llms.txt" title="公開辯論資訊網 AI 閱讀說明" />
+  <meta property="og:locale" content="zh_TW" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="公開辯論資訊網" />
+  <meta property="og:title" content="公開辯論資訊網｜台灣高中辯論賽事、戰績與榮譽資料庫" />
+  <meta property="og:description" content="查詢台灣高中職辯論比賽、學校戰績、勝場、公開榮譽與歷屆辯題。" />
+  <meta property="og:url" content="https://macrokernel3000.github.io/opendebate/" />
+  <meta property="og:image" content="https://macrokernel3000.github.io/opendebate/assets/debate-banner.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="icon" href="data:," />
-  <title>公開辯論資訊網</title>
-  <link rel="stylesheet" href="styles.css?v=20260623040143" data-versioned-asset />
+  <title>公開辯論資訊網｜台灣高中辯論賽事、戰績與榮譽資料庫</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "公開辯論資訊網",
+    "alternateName": ["台灣辯論資料庫", "高中辯論資訊網"],
+    "url": "https://macrokernel3000.github.io/opendebate/",
+    "inLanguage": "zh-Hant-TW",
+    "description": "整理台灣高中與高中職辯論比賽、賽果、學校戰績、勝場、公開榮譽與辯題的公共資料庫。",
+    "keywords": "辯論, 辯論比賽, 高中辯論, 高中職辯論, 辯論積分, 辯論戰績, 辯題",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://macrokernel3000.github.io/opendebate/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css?v=20260724115916" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -28,12 +58,17 @@
         <img src="assets/debate-banner.png" alt="學生在辯論賽場上進行公開辯論" />
         <div class="hero-shade"></div>
         <div class="hero-content">
-          <p class="eyebrow">TAIWAN DEBATE ARCHIVE</p>
-          <h1>公開辯論資訊網</h1>
-          <p>從一場比賽，看見每一所學校與每一位辯士走過的路。</p>
+          <p id="siteIntroductionEyebrow" class="eyebrow">TAIWAN HIGH SCHOOL DEBATE DATABASE</p>
+          <h1 id="siteIntroductionTitle">台灣高中辯論賽事與公開戰績資料庫</h1>
+          <div class="hero-introduction">
+            <p id="siteIntroductionParagraph1">本站持續整理高中與高中職辯論比賽的公開資訊，包含歷屆賽事、逐場賽果、參賽學校與隊伍、勝場、公開榮譽及辯題。</p>
+            <p id="siteIntroductionParagraph2">你可以依賽事名稱與年份查找比賽，也可以搜尋學校或選手，回顧已收錄的辯論紀錄。</p>
+          </div>
           <button class="hero-search" type="button" data-go-search><span aria-hidden="true">⌕</span> 搜尋學校或選手</button>
         </div>
       </div>
+
+      <p id="dataFreshness" class="data-freshness" role="status" aria-live="polite">正在確認資料更新時間與賽事數量…</p>
 
       <section class="stats-band" id="statsBand" aria-label="資料統計"></section>
 
@@ -138,10 +173,10 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260623040143" data-public-data-script></script>
-  <script src="js/site-config.js?v=20260623040143" data-versioned-asset></script>
-  <script src="js/core.js?v=20260623040143" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260623040143" data-versioned-asset></script>
-  <script src="app.js?v=20260623040143" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260724115916" data-public-data-script></script>
+  <script src="js/site-config.js?v=20260724115916" data-versioned-asset></script>
+  <script src="js/core.js?v=20260724115916" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260724115916" data-versioned-asset></script>
+  <script src="app.js?v=20260724115916" data-versioned-asset></script>
 </body>
 </html>

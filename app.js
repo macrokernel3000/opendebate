@@ -11,6 +11,11 @@ const els = {
   navButtons: document.querySelectorAll("[data-view]"),
   views: document.querySelectorAll("[data-view-panel]"),
   statsBand: document.querySelector("#statsBand"),
+  dataFreshness: document.querySelector("#dataFreshness"),
+  siteIntroductionEyebrow: document.querySelector("#siteIntroductionEyebrow"),
+  siteIntroductionTitle: document.querySelector("#siteIntroductionTitle"),
+  siteIntroductionParagraph1: document.querySelector("#siteIntroductionParagraph1"),
+  siteIntroductionParagraph2: document.querySelector("#siteIntroductionParagraph2"),
   eventTimeline: document.querySelector("#eventTimeline"),
   recentEvents: document.querySelector("#recentEvents"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
@@ -60,6 +65,27 @@ function renderStats() {
     ["🏆 公開榮譽", honors.length + (players.length ? 0 : 0)],
   ];
   els.statsBand.innerHTML = values.map(([label, value]) => `<div class="stat-item"><span>${label}</span><strong>${value}</strong></div>`).join("");
+}
+
+function renderDataFreshness() {
+  if (!els.dataFreshness) return;
+  const generatedAt = window.DEBATE_PUBLIC_DATA?.generatedAt || "";
+  const [, month, day] = generatedAt.slice(0, 10).split("-");
+  const dateLabel = month && day ? `${Number(month)} 月 ${Number(day)} 日` : "日期未載明";
+  els.dataFreshness.innerHTML = `<strong>資料狀態</strong><span>上次修改是 ${escapeHtml(dateLabel)}，目前有 ${events.length} 個比賽的訊息</span>`;
+}
+
+function renderSiteIntroduction() {
+  const content = window.DEBATE_PUBLIC_DATA?.siteContent || {};
+  const fields = {
+    siteIntroductionEyebrow: "introEyebrow",
+    siteIntroductionTitle: "introTitle",
+    siteIntroductionParagraph1: "introParagraph1",
+    siteIntroductionParagraph2: "introParagraph2",
+  };
+  Object.entries(fields).forEach(([elementName, contentKey]) => {
+    if (els[elementName] && content[contentKey]) els[elementName].textContent = content[contentKey];
+  });
 }
 
 function renderRecentEvents() {
@@ -272,7 +298,9 @@ function renderAll() {
       </section>`;
     return;
   }
+  renderSiteIntroduction();
   renderStats();
+  renderDataFreshness();
   renderTimeline();
   renderRecentEvents();
   renderLeaderboards();

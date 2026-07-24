@@ -1,0 +1,46 @@
+# macOS / Windows 自動產生的檔案
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+._*
+Thumbs.db
+Desktop.ini
+
+# 編輯器與暫存檔
+*~
+*.tmp
+*.temp
+*.swp
+*.swo
+*.log
+.idea/
+.vscode/
+
+# Python 快取與本機執行環境
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# JavaScript 相依套件（本站目前不需要提交）
+node_modules/
+
+# 本機環境變數與機密設定
+.env
+.env.*
+!.env.example
+
+# 試算表開啟時產生的鎖定檔
+~$*.xlsx
+~$*.csv
+
+# 正式資料已改用 CSV；Excel 僅作本機備份或下載暫存
+data/*.xlsx
+data/backups/
+data/google-sheet-export.xlsx
+*.numbers
+
+# 已停用的舊版資料備份，網站不會讀取
+data/seed-public-data.js

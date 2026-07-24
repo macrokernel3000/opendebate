@@ -1,23 +1,22 @@
 公開辯論資訊網：可累加資料更新
 
 建議方法
-1. 開啟既有 data/public-data.xlsx，或另存 public-data2.xlsx
-2. 每一個賽事使用一個工作分頁
-3. 每頁第二列只填一次完整賽事名稱
-4. 編輯完成後保持為 Excel .xlsx 格式
+1. 每一個賽事使用一個 CSV，檔名為 public-data-完整賽事名稱.csv
+2. 可複製既有 CSV，再清除舊資料並填入新賽事
+3. 每一列的「盃賽」都填完整且相同的賽事名稱
+4. 編輯完成後輸出為 UTF-8 CSV
 5. 雙擊「更新網站資料.command」
 6. 看到「目前收錄盃賽」與「更新完成」後按 Return
 7. 若要查看盃賽清單或資料檢查回報，打開 data/update-report.txt
 
 新增賽事
-可在原活頁簿複製分頁，也可以新增 public-data2.xlsx。所有 public-data 開頭的 Excel/CSV 都會合併，完全相同的資料會去重。
+複製一個既有賽事 CSV，改成新的賽事名稱。所有 public-data 開頭的 CSV 都會合併，完全相同的資料會去重。
 
 單位編號
-1. 請編輯 data/entity-registry.xlsx（也可用根目錄的 entity-registry.numbers 編輯後輸出）。
-2. Numbers 編輯完成後，選「檔案 → 輸出至 → Excel」。
-3. 檔名必須是 entity-registry.xlsx，放進 data 資料夾。
-4. 雙擊「更新網站資料.command」，程式會優先讀取 Excel，自動同步產生 entity-registry.csv 與 public-data.js。
-5. 也可以把 entity-registry.xlsx 直接拖到「更新網站資料.command」上；舊名冊會備份到 data/backups。
+1. 請編輯 data/entity-registry.csv。
+2. Numbers、Excel 或試算表編輯完成後，輸出為 UTF-8 CSV。
+3. 檔名必須維持 entity-registry.csv，放進 data 資料夾。
+4. 雙擊「更新網站資料.command」，程式會讀取名冊並產生 public-data.js。
 
 名冊欄位
 - code：固定代碼，s（學校）、p（特殊隊伍）、u（大學），例如 s001。
@@ -46,7 +45,7 @@
 表單網址設定在 js/site-config.js 的 formUrl。目前已連結至 https://forms.gle/14MujhAduSTHBtw69；日後更換表單時，只需修改這一個網址。
 
 拖放方法
-也可以直接把新的賽事 .xlsx/.csv 或 entity-registry.xlsx 拖到「更新網站資料.command」上。舊檔不會直接刪除。
+也可以直接把新的賽事 CSV 拖到「更新網站資料.command」上。舊檔不會直接刪除。
 
 更新摘要
 每次更新後會產生 data/update-report.txt，內容包含資料來源、目前收錄盃賽數、盃賽清單，以及略過資料或提醒項目。若看到某個賽事好像沒有出現，請先搜尋這個檔案中的盃賽清單。
@@ -59,7 +58,7 @@ GitHub 一鍵更新
 
 請勿手動修改 data/public-data.js；它會由更新程式自動產生。
 
-Numbers 使用者請用「檔案 → 輸出至 → Excel」，不要只存成 .numbers。
+Numbers 使用者請用「檔案 → 輸出至 → CSV」，文字編碼選 UTF-8。
 
 如果 macOS 第一次阻擋執行：
 對「更新網站資料.command」按右鍵，選「打開」並確認一次。

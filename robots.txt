@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://macrokernel3000.github.io/opendebate/sitemap.xml
