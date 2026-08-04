@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-04T15:43:07",
+  "generatedAt": "2026-08-04T16:31:24",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -674,12 +674,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p113",
       "type": "p",
       "name": "想念是會呼吸的痛",
-      "aliases": ""
-    },
-    {
-      "code": "p114",
-      "type": "p",
-      "name": "我有點想哭",
       "aliases": ""
     },
     {
@@ -25668,10 +25662,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p114",
+        "affirmative": "s105",
         "negative": "p111"
       },
-      "id": "match-85832a81c932"
+      "id": "match-4bdd79597811"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -25744,9 +25738,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p111",
-        "negative": "p114"
+        "negative": "s105"
       },
-      "id": "match-4a89a88d8e5b"
+      "id": "match-8e5e1f8c7c11"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -25894,9 +25888,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s044",
-        "negative": "p114"
+        "negative": "s105"
       },
-      "id": "match-2759b0b039ad"
+      "id": "match-d523ea0a6ca3"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -25944,9 +25938,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p108",
-        "negative": "p114"
+        "negative": "s105"
       },
-      "id": "match-7fd1bce4225c"
+      "id": "match-21bd31834694"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -28973,8 +28967,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "team",
       "note": "",
-      "teamId": "p114",
-      "id": "honor-b1ad516546f1"
+      "teamId": "s105",
+      "id": "honor-ca50174948b1"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -29017,8 +29011,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "我有點想哭",
       "honorType": "player",
       "note": "",
-      "teamId": "p114",
-      "id": "honor-8f772e4ea804"
+      "teamId": "s105",
+      "id": "honor-5543e620a3b2"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
