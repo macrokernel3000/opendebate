@@ -212,6 +212,7 @@ button { color: inherit; }
 footer { border-top: 1px solid var(--line); padding: 27px 0; background: var(--ink); color: white; }
 footer .page-shell { display: flex; justify-content: space-between; gap: 18px; }
 footer span { color: #b8c1bc; font-size: 12px; }
+footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 .data-error { min-height: calc(100vh - 130px); display: grid; align-content: center; justify-items: start; padding-block: 70px; }
 .data-error > span { font-size: 52px; }
 .data-error h1 { margin: 12px 0 6px; font-size: clamp(28px, 5vw, 46px); }

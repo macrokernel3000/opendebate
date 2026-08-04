@@ -20,6 +20,7 @@
 - 賽事資料庫：https://macrokernel3000.github.io/opendebate/#events
 - 學校與選手搜尋：https://macrokernel3000.github.io/opendebate/#search
 - 資料回報：https://macrokernel3000.github.io/opendebate/#reports
+- 辯論戰績與積分說明：https://macrokernel3000.github.io/opendebate/debate-records.html
 
 ## 資料說明
 

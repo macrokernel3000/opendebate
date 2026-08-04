@@ -16,6 +16,9 @@ REGISTRY_PATH = DATA_DIR / "entity-registry.csv"
 REGISTRY_XLSX_PATH = DATA_DIR / "entity-registry.xlsx"
 INDEX_PATH = ROOT / "index.html"
 REPORT_PATH = DATA_DIR / "update-report.txt"
+SITE_CONTENT_PATH = DATA_DIR / "site-content.csv"
+SITEMAP_PATH = ROOT / "sitemap.xml"
+SEO_PAGE_PATH = ROOT / "debate-records.html"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -41,7 +44,8 @@ def number(value):
     if not value:
         return ""
     try:
-        return int(float(value))
+        parsed = float(value)
+        return int(parsed) if parsed.is_integer() else parsed
     except ValueError:
         return ""
 
@@ -141,6 +145,20 @@ def load_csv(path):
         reader = csv.DictReader(source)
         validate_headers(reader.fieldnames or [], f"CSV「{path.name}」")
         return (*parse_rows(list(reader), f"CSV「{path.name}」"), path.name)
+
+
+def load_site_content():
+    if not SITE_CONTENT_PATH.exists():
+        return {}
+    with SITE_CONTENT_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        if not reader.fieldnames or not {"key", "value"}.issubset(reader.fieldnames):
+            raise SystemExit(f"{SITE_CONTENT_PATH.name} 必須包含 key、value 欄位")
+        return {
+            clean(row.get("key")): clean(row.get("value"))
+            for row in reader
+            if clean(row.get("key"))
+        }
 
 
 def cell_column(reference):
@@ -441,6 +459,28 @@ def update_asset_versions(version):
     INDEX_PATH.write_text(index_html, encoding="utf-8")
 
 
+def update_seo_files(events, records, honors):
+    today = datetime.now().strftime("%Y-%m-%d")
+    if SITEMAP_PATH.exists():
+        sitemap = SITEMAP_PATH.read_text(encoding="utf-8")
+        sitemap = re.sub(r"<lastmod>[^<]+</lastmod>", f"<lastmod>{today}</lastmod>", sitemap)
+        SITEMAP_PATH.write_text(sitemap, encoding="utf-8")
+    if SEO_PAGE_PATH.exists():
+        page = SEO_PAGE_PATH.read_text(encoding="utf-8")
+        summary = (
+            f'<p id="dataSummary"><strong>目前已收錄 {len(events)} 個辯論賽事、'
+            f'{len(records)} 場辯論戰績與 {len(honors)} 筆公開榮譽。</strong>'
+            '資料持續依公開賽務資訊更新。</p>'
+        )
+        page = re.sub(
+            r"<!-- DATA_SUMMARY_START -->.*?<!-- DATA_SUMMARY_END -->",
+            f"<!-- DATA_SUMMARY_START -->\n      {summary}\n      <!-- DATA_SUMMARY_END -->",
+            page,
+            flags=re.DOTALL,
+        )
+        SEO_PAGE_PATH.write_text(page, encoding="utf-8")
+
+
 def event_names(records, honors, topics):
     return sorted({
         clean(item.get("competitionName"))
@@ -488,6 +528,7 @@ def build():
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
     entities, lookup = build_entities(records, honors)
     attendance = attach_entities(records, honors, lookup)
+    site_content = load_site_content()
     payload = {
         "schemaVersion": 4,
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
@@ -497,11 +538,13 @@ def build():
         "honors": honors,
         "attendance": attendance,
         "topics": topics,
+        "siteContent": site_content,
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
     events = event_names(records, honors, topics)
+    update_seo_files(events, records, honors)
     registry_source = REGISTRY_XLSX_PATH.name if REGISTRY_XLSX_PATH.exists() else REGISTRY_PATH.name
     write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source)
     print("資料來源：" + "、".join(sources))

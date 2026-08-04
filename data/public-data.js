@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-07-24T12:16:30",
+  "generatedAt": "2026-08-04T13:21:03",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -9,6 +9,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-火雞肉飯盃全國高中職辯論比賽.csv",
     "public-data-第35屆蘇州盃.csv",
     "public-data-第36屆蘇州盃.csv",
+    "public-data-第37屆蘇州盃.csv",
     "public-data-第一屆夢箋盃.csv",
     "public-data-第一屆明哲盃全國高中職辯論比賽.csv",
     "public-data-第一屆東岸盃全國高中職辯論比賽.csv",
@@ -647,7 +648,13 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "code": "p103",
       "type": "p",
-      "name": "陽明高中種子隊B\"",
+      "name": "北市大同",
+      "aliases": ""
+    },
+    {
+      "code": "p104",
+      "type": "p",
+      "name": "北市陽明",
       "aliases": ""
     },
     {
@@ -1585,6 +1592,30 @@ window.DEBATE_PUBLIC_DATA = {
       "type": "s",
       "name": "麗山高中",
       "aliases": "麗山高中A|麗山高中B"
+    },
+    {
+      "code": "s159",
+      "type": "s",
+      "name": "中崙高中",
+      "aliases": "中崙高中A|中崙高中B"
+    },
+    {
+      "code": "s160",
+      "type": "s",
+      "name": "和平高中",
+      "aliases": "和平高中A|和平高中B"
+    },
+    {
+      "code": "s161",
+      "type": "s",
+      "name": "海山高中",
+      "aliases": "海山高中A|海山高中B"
+    },
+    {
+      "code": "s162",
+      "type": "s",
+      "name": "馬公高中",
+      "aliases": "馬公高中A|馬公高中B"
     }
   ],
   "records": [
@@ -3684,9 +3715,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s017",
-        "negative": "s148"
+        "negative": "s162"
       },
-      "id": "match-beb0dc8741b8"
+      "id": "match-f9e4fca480aa"
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
@@ -4109,9 +4140,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s139",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-aaffa56e7c8e"
+      "id": "match-f14e3dd6f6a3"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -4233,10 +4264,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s152"
       },
-      "id": "match-90260aa6bc08"
+      "id": "match-7b77ec4dcc37"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -4508,10 +4539,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s139"
       },
-      "id": "match-1908e44f0f97"
+      "id": "match-d9e9bfce7d22"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -4634,9 +4665,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s152",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-c265d9255211"
+      "id": "match-4d7c500ec603"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -4858,10 +4889,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
-        "negative": "s008"
+        "affirmative": "s161",
+        "negative": "s159"
       },
-      "id": "match-726285eb1207"
+      "id": "match-eab57a550fe8"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -5083,10 +5114,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
+        "affirmative": "s161",
         "negative": "s156"
       },
-      "id": "match-0dd8245c6cb7"
+      "id": "match-82ec3a4c05bc"
     },
     {
       "competitionName": "第35屆蘇州盃",
@@ -5583,10 +5614,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s023"
       },
-      "id": "match-73f59debf0e6"
+      "id": "match-f431e96798d2"
     },
     {
       "competitionName": "第36屆蘇州盃",
@@ -5683,10 +5714,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
+        "affirmative": "s161",
         "negative": "s153"
       },
-      "id": "match-5fd6f1bc7ef0"
+      "id": "match-0189b87e9e84"
     },
     {
       "competitionName": "第36屆蘇州盃",
@@ -5909,9 +5940,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s153",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-fd3eaadb03ca"
+      "id": "match-a220ed064b14"
     },
     {
       "competitionName": "第36屆蘇州盃",
@@ -6109,9 +6140,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s023",
-        "negative": "s008"
+        "negative": "s159"
       },
-      "id": "match-7896b829dedb"
+      "id": "match-aeaf450a7ffd"
     },
     {
       "competitionName": "第36屆蘇州盃",
@@ -6437,6 +6468,1306 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s153"
       },
       "id": "match-29078b86c268"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "馬公高中A",
+        "negative": "北市大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s162",
+        "negative": "p103"
+      },
+      "id": "match-e23b78b9313c"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "永豐高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s100"
+      },
+      "id": "match-27c1b187ed47"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "麗山高中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s158",
+        "negative": "s098"
+      },
+      "id": "match-e804664a3590"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明倫高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s080"
+      },
+      "id": "match-cf23f10c910d"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "精誠中學",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s114",
+        "negative": "s113"
+      },
+      "id": "match-55810c3262d9"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "海山高中B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s161"
+      },
+      "id": "match-13a737f62c32"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "中崙高中B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "北一女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s159"
+      },
+      "id": "match-308546b6c702"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "市立東山"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s046"
+      },
+      "id": "match-334bee0e773a"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "華江高中",
+        "negative": "嘉義女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "華江高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s133",
+        "negative": "s032"
+      },
+      "id": "match-805b0717ffbf"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "南山中學",
+        "negative": "大直高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "南山中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s021",
+        "negative": "s038"
+      },
+      "id": "match-8f5f80fc31cf"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "海山高中A",
+        "negative": "豐原高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "海山高中A",
+      "note": "經大會核實，豐原高中上場選手未登錄於選手名單，依比賽規則喪失比賽資格並沒收該場比賽及全額保證金，因此本場由海山高中A以3：0獲勝",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s161",
+        "negative": "s142"
+      },
+      "id": "match-9f38b6fe5b0a"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-25",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "景美女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s083"
+      },
+      "id": "match-d1e1c12f7f6d"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "臺中二中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s121",
+        "negative": "s006"
+      },
+      "id": "match-4a242fa6bbb9"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "北市大同",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p103",
+        "negative": "s125"
+      },
+      "id": "match-4aa696984f18"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "慧燈中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "永豐高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s066"
+      },
+      "id": "match-3fabd05fed4c"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "新竹高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s078"
+      },
+      "id": "match-f577ada967d6"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明倫高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s057"
+      },
+      "id": "match-5f8ad634f831"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s041"
+      },
+      "id": "match-20d6286b3cae"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "海山高中B",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s161",
+        "negative": "s096"
+      },
+      "id": "match-3c1156c2e6a7"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "中崙高中B",
+        "negative": "北一女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "北一女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s159",
+        "negative": "s017"
+      },
+      "id": "match-249d294cf486"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "北市陽明"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "p104"
+      },
+      "id": "match-9e94abe6ae76"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "馬公高中B",
+        "negative": "華江高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "馬公高中B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s162",
+        "negative": "s133"
+      },
+      "id": "match-5dec97a9258d"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "大直高中",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s038",
+        "negative": "s160"
+      },
+      "id": "match-eb4cec0dfc62"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "內湖高中",
+        "negative": "海山高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "海山高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s014",
+        "negative": "s161"
+      },
+      "id": "match-0c868d17b1d7"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-26",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "南湖高中",
+      "note": "原公告【註一】文字截斷：該場次景美女",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s024"
+      },
+      "id": "match-95a11ff45d74"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "臺中二中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中二中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s121"
+      },
+      "id": "match-2242e0e0a6e8"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "慧燈中學",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "鳳新高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s066",
+        "negative": "s157"
+      },
+      "id": "match-a4fa5bc12128"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "馬公高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s162"
+      },
+      "id": "match-a45a2a54dd50"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "桃園陽明"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "北一女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s092"
+      },
+      "id": "match-9bf40bf66610"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "新竹高中",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "麗山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s078",
+        "negative": "s158"
+      },
+      "id": "match-ddc57c1877af"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "薇閣中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s135"
+      },
+      "id": "match-80dfaa7a4e0e"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "精誠中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s114"
+      },
+      "id": "match-6e4f988ef77e"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s152"
+      },
+      "id": "match-d2cf889ffac4"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "北市陽明",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內壢高中",
+      "note": "該場次內壢高中提出抗議，經裁判一致裁決「抗議成立，已適當扣分」",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p104",
+        "negative": "s013"
+      },
+      "id": "match-66a702c821af"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "嘉義女中",
+        "negative": "馬公高中B"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "嘉義女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s032",
+        "negative": "s162"
+      },
+      "id": "match-f7d6796c9899"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "和平高中B",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s023"
+      },
+      "id": "match-83a76232e228"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-27",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "豐原高中",
+        "negative": "內湖高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s142",
+        "negative": "s014"
+      },
+      "id": "match-84c5bec4cf13"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "和平高中A",
+        "negative": "海山高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "和平高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s161"
+      },
+      "id": "match-39df5ecc3969"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s080"
+      },
+      "id": "match-ef5a866ace8e"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s006"
+      },
+      "id": "match-eb8447dba0c7"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "中崙高中A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永豐高中",
+      "note": "原公告標有【註一】，但未附註文",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s159"
+      },
+      "id": "match-2601ebcbd634"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "板橋高中",
+        "negative": "北市大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s091",
+        "negative": "p103"
+      },
+      "id": "match-a0928d66ffb1"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "南山中學",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s021",
+        "negative": "s152"
+      },
+      "id": "match-eda4ab615957"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "嘉義女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s032"
+      },
+      "id": "match-f5fe384ff775"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-28",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "s113"
+      },
+      "id": "match-410d123a80d6"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "和平高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "和平高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s160"
+      },
+      "id": "match-27e34d292f60"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 6
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s098"
+      },
+      "id": "match-a6a55a797c8f"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "北市大同",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 0.5,
+        "negative": 8.5
+      },
+      "winner": "永豐高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p103",
+        "negative": "s100"
+      },
+      "id": "match-d3bbeb4c6219"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s152"
+      },
+      "id": "match-55bf3959ceb9"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-30",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "和平高中A",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 4
+      },
+      "winner": "和平高中A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s098"
+      },
+      "id": "match-a7148cab39a4"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-30",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s152"
+      },
+      "id": "match-728783d01b54"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "2026-07-30",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "和平高中A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "未公告比分，依最終名次判定勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s160"
+      },
+      "id": "match-bd68555e1181"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -8608,10 +9939,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s134"
       },
-      "id": "match-73a46d172979"
+      "id": "match-b5122941f5bc"
     },
     {
       "competitionName": "第七屆惠蓀盃全國高中職辯論比賽",
@@ -8809,9 +10140,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s088",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-ceb89d0949f4"
+      "id": "match-dd8958b852ba"
     },
     {
       "competitionName": "第七屆惠蓀盃全國高中職辯論比賽",
@@ -9134,9 +10465,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s054",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-dc2b8e661c40"
+      "id": "match-3c3400f1196c"
     },
     {
       "competitionName": "第七屆惠蓀盃全國高中職辯論比賽",
@@ -10784,9 +12115,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s096",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-87d74af78f66"
+      "id": "match-e87b0a962f6a"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -11308,10 +12639,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
-        "negative": "s028"
+        "affirmative": "s159",
+        "negative": "s160"
       },
-      "id": "match-be07dc3157b2"
+      "id": "match-2f77861b6e4e"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -11983,10 +13314,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s135"
       },
-      "id": "match-d325612a6dcb"
+      "id": "match-25330e8c9660"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -12383,10 +13714,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
+        "affirmative": "s161",
         "negative": "s112"
       },
-      "id": "match-b7a911d15279"
+      "id": "match-65887ae4c41d"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -12584,9 +13915,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s135",
-        "negative": "s008"
+        "negative": "s159"
       },
-      "id": "match-f7350bb53044"
+      "id": "match-9464530a58ef"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -12934,9 +14265,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s052",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-6a7aba1d02be"
+      "id": "match-d27d1f5558b3"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -13808,10 +15139,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
+        "affirmative": "s161",
         "negative": "s107"
       },
-      "id": "match-f53830057357"
+      "id": "match-f78a8049e601"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -13908,10 +15239,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s121"
       },
-      "id": "match-e3b77e4c52ce"
+      "id": "match-21855b415a47"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -14033,10 +15364,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s081"
       },
-      "id": "match-577cc5a0ef25"
+      "id": "match-c6f457fc6c03"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -14409,9 +15740,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s121",
-        "negative": "s008"
+        "negative": "s159"
       },
-      "id": "match-59e567ef2928"
+      "id": "match-e2f66e7cc7aa"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -14784,9 +16115,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s080",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-e2486ef3d213"
+      "id": "match-044af3105c5f"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -14909,9 +16240,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s112",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-df966732f6d0"
+      "id": "match-bc3b38133695"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -15909,9 +17240,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s010",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-100ce9892dea"
+      "id": "match-5625e10a3d48"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -16284,9 +17615,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s135",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-4dee6e926878"
+      "id": "match-fd8f572451d6"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -16834,9 +18165,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p082",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-98eb0a1d2159"
+      "id": "match-f363f6600473"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -17208,10 +18539,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s085"
       },
-      "id": "match-8f3e7fb43cab"
+      "id": "match-44fa90cfe85d"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -17384,9 +18715,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p046",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-db934604e228"
+      "id": "match-ac90b4eab94c"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -19009,9 +20340,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s067",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-8b2dbe4142a5"
+      "id": "match-cc7c3fbabd19"
     },
     {
       "competitionName": "第二屆青雲盃全國高中職辯論錦標賽",
@@ -19134,9 +20465,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s023",
-        "negative": "s148"
+        "negative": "s162"
       },
-      "id": "match-227cae8e0cbd"
+      "id": "match-c5c17090217d"
     },
     {
       "competitionName": "第五屆輔仁盃全國高中職辯論比賽",
@@ -19209,9 +20540,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s051",
-        "negative": "s148"
+        "negative": "s162"
       },
-      "id": "match-cc422f933070"
+      "id": "match-b38e1f46124f"
     },
     {
       "competitionName": "第五屆輔仁盃全國高中職辯論比賽",
@@ -19583,10 +20914,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s101",
+        "affirmative": "s161",
         "negative": "s080"
       },
-      "id": "match-20a38ce72009"
+      "id": "match-30c892c1ff55"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -19683,10 +21014,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s091"
       },
-      "id": "match-8759e49f4b2e"
+      "id": "match-87f80a2eee30"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -19759,9 +21090,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s080",
-        "negative": "s101"
+        "negative": "s161"
       },
-      "id": "match-f393c4e35075"
+      "id": "match-654955cd19e8"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -19859,9 +21190,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s091",
-        "negative": "s008"
+        "negative": "s159"
       },
-      "id": "match-2eba6603090a"
+      "id": "match-30486211e231"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -20109,9 +21440,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s105",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-62ac1982caaa"
+      "id": "match-5c6c426f7817"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -20308,10 +21639,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s105"
       },
-      "id": "match-21bccb3a6ef8"
+      "id": "match-5541cc5fa513"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -20358,10 +21689,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s140"
       },
-      "id": "match-a1623894ff8d"
+      "id": "match-6ee11ce14d69"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -20608,10 +21939,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s038"
       },
-      "id": "match-377a4ef67b86"
+      "id": "match-0ecb4970b9a2"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -23358,10 +24689,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s099"
       },
-      "id": "match-f1dfd0314cd6"
+      "id": "match-e967f5acd19b"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -23534,9 +24865,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s041",
-        "negative": "s148"
+        "negative": "s162"
       },
-      "id": "match-9ca2e4dde1bd"
+      "id": "match-bd3918dfce8a"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -23709,9 +25040,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s086",
-        "negative": "s028"
+        "negative": "s160"
       },
-      "id": "match-2bc3ce1a94b6"
+      "id": "match-d042411519ed"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -23733,10 +25064,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s148",
+        "affirmative": "s162",
         "negative": "s020"
       },
-      "id": "match-c3a1f393f17d"
+      "id": "match-32ddfeecf806"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -23883,10 +25214,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s028",
+        "affirmative": "s160",
         "negative": "s041"
       },
-      "id": "match-eced0ff46d21"
+      "id": "match-d620b8a5a392"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -24284,9 +25615,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s032",
-        "negative": "s008"
+        "negative": "s159"
       },
-      "id": "match-0b2aa7c7ba8b"
+      "id": "match-ec003e0ea6c7"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -24433,10 +25764,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s008",
+        "affirmative": "s159",
         "negative": "s135"
       },
-      "id": "match-37f67e902167"
+      "id": "match-e60e9df60d7c"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -25255,6 +26586,105 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s153",
       "id": "honor-f8d86146b1d7"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "高雄中學",
+      "team": "高雄中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-0f8bb7814260"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "和平高中A",
+      "team": "和平高中A",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s160",
+      "id": "honor-5964e710cd80"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "永豐高中",
+      "team": "永豐高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s100",
+      "id": "honor-a8148967e9f1"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "永平高中",
+      "team": "永平高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-2bef32ef5ccc"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "陳秉銨",
+      "team": "高雄中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-dcbee3b51109"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "孫興宸",
+      "team": "永豐高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s100",
+      "id": "honor-e9dfac3c2b82"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "金承陽",
+      "team": "永平高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-eee9c0d91201"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "何宇軒",
+      "team": "高雄中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-67ad07f488d5"
+    },
+    {
+      "competitionName": "第37屆蘇州盃",
+      "matchDate": "",
+      "honorName": "優秀辯士",
+      "recipient": "張育棋",
+      "team": "竹科實中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s113",
+      "id": "honor-eec12892ed99"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -26474,8 +27904,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "team",
       "note": "",
-      "teamId": "s148",
-      "id": "honor-8a0645ecdcb4"
+      "teamId": "s162",
+      "id": "honor-e1bf7c1bd128"
     },
     {
       "competitionName": "第五屆輔仁盃全國高中職辯論比賽",
