@@ -36,11 +36,8 @@ const els = {
   overviewSchoolMeta: document.querySelector("#overviewSchoolMeta"),
   overviewSchoolGrid: document.querySelector("#overviewSchoolGrid"),
   overviewSchoolDetail: document.querySelector("#overviewSchoolDetail"),
-<<<<<<< HEAD
   overviewTopicFilter: document.querySelector("#overviewTopicFilter"),
   overviewTopicMeta: document.querySelector("#overviewTopicMeta"),
-=======
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
   overviewTopicList: document.querySelector("#overviewTopicList"),
   globalSearch: document.querySelector("#globalSearch"),
   clearSearch: document.querySelector("#clearSearch"),
@@ -231,7 +228,6 @@ function renderOverview() {
   els.overviewSchoolCount.textContent = schools.length;
   els.overviewTopicCount.textContent = topics.length;
   renderOverviewSchools();
-<<<<<<< HEAD
   renderOverviewTopics();
 }
 
@@ -243,12 +239,6 @@ function renderOverviewTopics() {
     .sort((a, b) => a.competitionName.localeCompare(b.competitionName, "zh-Hant") || a.topic.localeCompare(b.topic, "zh-Hant"))
     .map((item) => `<button class="overview-topic-card" type="button" data-topic-event="${escapeHtml(item.competitionName)}"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<p>${escapeHtml(item.explanation)}</p>` : ""}<small>查看該屆比賽 →</small></button>`).join("")
     : '<div class="search-empty"><div><span aria-hidden="true">💬</span><strong>沒有符合的辯題</strong><p>請縮短關鍵字再試一次。</p></div></div>';
-=======
-  els.overviewTopicList.innerHTML = topics.length ? [...topics]
-    .sort((a, b) => a.competitionName.localeCompare(b.competitionName, "zh-Hant") || a.topic.localeCompare(b.topic, "zh-Hant"))
-    .map((item) => `<article class="overview-topic-card"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<p>${escapeHtml(item.explanation)}</p>` : ""}</article>`).join("")
-    : '<div class="search-empty"><div><span aria-hidden="true">💬</span><strong>尚未收錄辯題</strong></div></div>';
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
 }
 
 function renderOverviewSchools() {
@@ -371,11 +361,7 @@ function selectEntity(entityId) {
   requestAnimationFrame(() => document.querySelector("#entityDetail")?.scrollIntoView({ behavior: "smooth", block: "start" }));
 }
 
-<<<<<<< HEAD
 window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab });
-=======
-window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, selectOverviewEntity, showOverviewTab });
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
 
 
 function renderAll() {

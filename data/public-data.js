@@ -1,10 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-<<<<<<< HEAD
-  "generatedAt": "2026-08-04T15:32:22",
-=======
-  "generatedAt": "2026-08-04T15:10:51",
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
+  "generatedAt": "2026-08-04T15:43:07",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",

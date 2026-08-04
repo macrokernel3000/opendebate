@@ -1,5 +1,4 @@
 (function () {
-<<<<<<< HEAD
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab }) {
     function openTopicEvent(event) {
       const card = event.target.closest("[data-topic-event]");
@@ -8,9 +7,6 @@
       showView("events");
       requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     }
-=======
-  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, selectOverviewEntity, showOverviewTab }) {
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
     window.addEventListener("hashchange", () => showView(location.hash.slice(1) || "home"));
@@ -75,11 +71,8 @@
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
     els.overviewSchoolFilter.addEventListener("input", renderOverviewSchools);
-<<<<<<< HEAD
     els.overviewTopicFilter.addEventListener("input", renderOverviewTopics);
     els.overviewTopicList.addEventListener("click", openTopicEvent);
-=======
->>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
     els.overviewSchoolGrid.addEventListener("click", (event) => {
       const card = event.target.closest("[data-overview-entity-id]");
       if (card) selectOverviewEntity(card.dataset.overviewEntityId);
