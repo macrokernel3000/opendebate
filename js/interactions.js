@@ -1,5 +1,5 @@
 (function () {
-  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity }) {
+  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, selectOverviewEntity, showOverviewTab }) {
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
     window.addEventListener("hashchange", () => showView(location.hash.slice(1) || "home"));
@@ -61,6 +61,12 @@
       if (!card) return;
       renderEvent(card.dataset.eventName);
       requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+    });
+    els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
+    els.overviewSchoolFilter.addEventListener("input", renderOverviewSchools);
+    els.overviewSchoolGrid.addEventListener("click", (event) => {
+      const card = event.target.closest("[data-overview-entity-id]");
+      if (card) selectOverviewEntity(card.dataset.overviewEntityId);
     });
     els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
     els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
