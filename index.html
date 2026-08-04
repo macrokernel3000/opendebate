@@ -51,7 +51,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260804132103" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260804153222" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -62,8 +62,9 @@
     <nav class="main-nav" aria-label="主要選單">
       <button class="nav-button is-active" type="button" data-view="home">首頁</button>
       <button class="nav-button" type="button" data-view="events">賽事</button>
+      <button class="nav-button" type="button" data-view="overview">總覽</button>
       <button class="nav-button" type="button" data-view="search">搜尋</button>
-      <button class="nav-button" type="button" data-view="reports">資料回報</button>
+      <button class="nav-button" type="button" data-view="reports">回報</button>
     </nav>
   </header>
 
@@ -79,7 +80,7 @@
             <p id="siteIntroductionParagraph1">本站持續整理高中與高中職辯論比賽的公開資訊，包含歷屆賽事、逐場賽果、參賽學校與隊伍、勝場、公開榮譽及辯題。</p>
             <p id="siteIntroductionParagraph2">你可以依賽事名稱與年份查找比賽，也可以搜尋學校或選手，回顧已收錄的辯論紀錄。</p>
           </div>
-          <button class="hero-search" type="button" data-go-search><span aria-hidden="true">⌕</span> 搜尋學校或選手</button>
+          <button class="hero-search" type="button" data-go-search><span aria-hidden="true">⌕</span> 搜尋學校、選手或辯題</button>
         </div>
       </div>
 
@@ -148,14 +149,45 @@
       </div>
     </section>
 
+    <section id="overviewView" class="view is-hidden" data-view-panel="overview">
+      <div class="page-intro page-shell">
+        <p class="kicker">DEBATE OVERVIEW</p>
+        <h1>辯論總覽 <span aria-hidden="true">🗺️</span></h1>
+        <p>瀏覽目前已登錄的學校與已收錄辯題，從資料庫看見各校走過的賽事紀錄。</p>
+      </div>
+      <div class="page-shell overview-page">
+        <div class="overview-tabs" role="tablist" aria-label="總覽分類">
+          <button id="overviewSchoolsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="schools">已登錄學校 <span id="overviewSchoolCount"></span></button>
+          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics">已收錄辯題 <span id="overviewTopicCount"></span></button>
+        </div>
+        <section id="overviewSchoolsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewSchoolsTab">
+          <div class="overview-toolbar">
+            <div><h2>學校紀錄</h2><p>點選學校，查看參加賽事、公開榮譽與勝場狀態。</p></div>
+            <label class="overview-filter"><span>篩選學校</span><input id="overviewSchoolFilter" type="search" autocomplete="off" placeholder="輸入學校名稱" /></label>
+          </div>
+          <p id="overviewSchoolMeta" class="overview-meta" aria-live="polite"></p>
+          <div id="overviewSchoolGrid" class="overview-school-grid"></div>
+          <div id="overviewSchoolDetail"></div>
+        </section>
+        <section id="overviewTopicsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTopicsTab">
+          <div class="overview-toolbar">
+            <div><h2>辯題資料庫</h2><p>依賽事整理目前已收錄的公開辯題，點選即可查看該屆比賽。</p></div>
+            <label class="overview-filter"><span>篩選辯題</span><input id="overviewTopicFilter" type="search" autocomplete="off" placeholder="輸入辯題或賽事關鍵字" /></label>
+          </div>
+          <p id="overviewTopicMeta" class="overview-meta" aria-live="polite"></p>
+          <div id="overviewTopicList" class="overview-topic-list"></div>
+        </section>
+      </div>
+    </section>
+
     <section id="searchView" class="view is-hidden" data-view-panel="search">
       <div class="search-stage">
         <div class="page-shell">
           <p class="kicker">FIND A STORY</p>
-          <h1>搜尋學校或選手 <span aria-hidden="true">🔎</span></h1>
+          <h1>搜尋學校、選手或辯題 <span aria-hidden="true">🔎</span></h1>
           <div class="search-box">
             <span aria-hidden="true">⌕</span>
-            <input id="globalSearch" type="search" autocomplete="off" placeholder="搜尋學校或選手" aria-label="搜尋學校或選手" />
+            <input id="globalSearch" type="search" autocomplete="off" placeholder="搜尋學校、選手或辯題" aria-label="搜尋學校、選手或辯題" />
             <button id="clearSearch" type="button" aria-label="清除搜尋">×</button>
           </div>
           <p id="searchMeta" class="search-meta" aria-live="polite"></p>
@@ -188,10 +220,10 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260804132103" data-public-data-script></script>
-  <script src="js/site-config.js?v=20260804132103" data-versioned-asset></script>
-  <script src="js/core.js?v=20260804132103" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260804132103" data-versioned-asset></script>
-  <script src="app.js?v=20260804132103" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260804153222" data-public-data-script></script>
+  <script src="js/site-config.js?v=20260804153222" data-versioned-asset></script>
+  <script src="js/core.js?v=20260804153222" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260804153222" data-versioned-asset></script>
+  <script src="app.js?v=20260804153222" data-versioned-asset></script>
 </body>
 </html>
