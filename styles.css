@@ -142,6 +142,7 @@ button { color: inherit; }
 .overview-school-code { color: var(--coral); font-weight: 900; }
 #overviewSchoolDetail .entity-detail { margin-top: 36px; }
 .overview-topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+<<<<<<< HEAD
 .overview-topic-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 18px; background: white; color: var(--ink); cursor: pointer; font: inherit; text-align: left; }
 .overview-topic-card:hover, .overview-topic-card:focus-visible { border-color: var(--green); background: var(--soft); box-shadow: 3px 3px 0 var(--yellow); }
 .overview-topic-card span { display: block; margin-bottom: 7px; color: var(--coral); font-size: 11px; font-weight: 900; }
@@ -149,6 +150,12 @@ button { color: inherit; }
 .overview-topic-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .overview-topic-card small { display: block; margin-top: 12px; color: var(--green); font-size: 11px; font-weight: 900; }
 .search-topic-list { margin-top: 0; }
+=======
+.overview-topic-card { border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 18px; background: white; }
+.overview-topic-card span { display: block; margin-bottom: 7px; color: var(--coral); font-size: 11px; font-weight: 900; }
+.overview-topic-card strong { line-height: 1.65; }
+.overview-topic-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+>>>>>>> 694dba6229add7ec0a5b93eeb22f401264305ec3
 .entity-event-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .entity-event-list span { padding: 7px 10px; background: var(--soft); color: var(--green-dark); font-size: 12px; font-weight: 800; }
 .event-summary { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin: 38px 0 22px; padding-bottom: 20px; border-bottom: 4px solid var(--ink); }
