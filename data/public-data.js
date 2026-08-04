@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-04T14:33:53",
+  "generatedAt": "2026-08-04T14:48:25",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -30,6 +30,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第十六屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十屆雲啟盃辯論比賽.csv",
     "public-data-第四屆輔仁盃全國高中職辯論比賽.csv",
+    "public-data-育南盃中文教育辯論賽.csv",
     "public-data-蒙泉盃全國高中職辯論比賽.csv"
   ],
   "entities": [
@@ -634,6 +635,66 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
+      "code": "p105",
+      "type": "p",
+      "name": "三校聯隊",
+      "aliases": ""
+    },
+    {
+      "code": "p106",
+      "type": "p",
+      "name": "不講吾德",
+      "aliases": ""
+    },
+    {
+      "code": "p107",
+      "type": "p",
+      "name": "台灣國中小思辨聯隊",
+      "aliases": ""
+    },
+    {
+      "code": "p108",
+      "type": "p",
+      "name": "台美聯隊",
+      "aliases": ""
+    },
+    {
+      "code": "p111",
+      "type": "p",
+      "name": "國際中文辯論課",
+      "aliases": ""
+    },
+    {
+      "code": "p112",
+      "type": "p",
+      "name": "小果仁辯論隊",
+      "aliases": ""
+    },
+    {
+      "code": "p113",
+      "type": "p",
+      "name": "想念是會呼吸的痛",
+      "aliases": ""
+    },
+    {
+      "code": "p114",
+      "type": "p",
+      "name": "我有點想哭",
+      "aliases": ""
+    },
+    {
+      "code": "p115",
+      "type": "p",
+      "name": "暑假辯不見",
+      "aliases": ""
+    },
+    {
+      "code": "p116",
+      "type": "p",
+      "name": "鱁",
+      "aliases": ""
+    },
+    {
       "code": "s001",
       "type": "s",
       "name": "三民高中",
@@ -912,8 +973,8 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "code": "s049",
       "type": "s",
-      "name": "康橋國際學校(秀岡校區)",
-      "aliases": ""
+      "name": "康橋國際學校",
+      "aliases": "嘿走去康橋|嘿跑去康橋|康橋國際學校(秀岡校區)"
     },
     {
       "code": "s050",
@@ -25297,6 +25358,531 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-7c901ee971ad"
     },
     {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "台美聯隊",
+        "negative": "三校聯隊"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "台美聯隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p108",
+        "negative": "p105"
+      },
+      "id": "match-a4d45ee962e5"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "內湖高中",
+        "negative": "想念是會呼吸的痛"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "內湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s014",
+        "negative": "p113"
+      },
+      "id": "match-adacbb2e9f6d"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "美國聯隊",
+        "negative": "暑假辯不見"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "美國聯隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p074",
+        "negative": "p115"
+      },
+      "id": "match-d788c059e5b6"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "嘿跑去康橋",
+        "negative": "鱁"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "嘿跑去康橋",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s049",
+        "negative": "p116"
+      },
+      "id": "match-8ebb393e0cf1"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "復興高中",
+        "negative": "小果仁辯論隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "小果仁辯論隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s059",
+        "negative": "p112"
+      },
+      "id": "match-63279c377025"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "台灣國中小思辨聯隊",
+        "negative": "不講吾德"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "台灣國中小思辨聯隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p107",
+        "negative": "p106"
+      },
+      "id": "match-9c151a89b922"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "想念是會呼吸的痛",
+        "negative": "內湖高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p113",
+        "negative": "s014"
+      },
+      "id": "match-6258ca861053"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "鱁",
+        "negative": "嘿跑去康橋"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "鱁",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p116",
+        "negative": "s049"
+      },
+      "id": "match-ddd66b593645"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "北市大同",
+        "negative": "嘿走去康橋"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s049"
+      },
+      "id": "match-9749ed3cf726"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "我有點想哭",
+        "negative": "國際中文辯論課"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "我有點想哭",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p114",
+        "negative": "p111"
+      },
+      "id": "match-85832a81c932"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "復興高中",
+        "negative": "小果仁辯論隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "小果仁辯論隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s059",
+        "negative": "p112"
+      },
+      "id": "match-b8f9c15b3df0"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "嘿走去康橋",
+        "negative": "北市大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s049",
+        "negative": "s044"
+      },
+      "id": "match-c830a3434d93"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "國際中文辯論課",
+        "negative": "我有點想哭"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "我有點想哭",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p111",
+        "negative": "p114"
+      },
+      "id": "match-4a89a88d8e5b"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "三校聯隊",
+        "negative": "台美聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "台美聯隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p105",
+        "negative": "p108"
+      },
+      "id": "match-ec737f7527f3"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "不講吾德",
+        "negative": "台灣國中小思辨聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "台灣國中小思辨聯隊",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p106",
+        "negative": "p107"
+      },
+      "id": "match-7fd35ce46a30"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "小果仁辯論隊",
+        "negative": "美國聯隊"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "小果仁辯論隊",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p112",
+        "negative": "p074"
+      },
+      "id": "match-69eda548a363"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "內湖高中",
+        "negative": "嘿跑去康橋"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "內湖高中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s014",
+        "negative": "s049"
+      },
+      "id": "match-a0584bdfe2c8"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "台美聯隊",
+        "negative": "台灣國中小思辨聯隊"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "台美聯隊",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p108",
+        "negative": "p107"
+      },
+      "id": "match-c7f677aa9f12"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "北市大同",
+        "negative": "我有點想哭"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "我有點想哭",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "p114"
+      },
+      "id": "match-2759b0b039ad"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "台美聯隊",
+        "negative": "我有點想哭"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "台美聯隊",
+      "note": "四強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p108",
+        "negative": "p114"
+      },
+      "id": "match-7fd1bce4225c"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "內湖高中",
+        "negative": "台美聯隊"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 3
+      },
+      "winner": "台美聯隊",
+      "note": "冠軍賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s014",
+        "negative": "p108"
+      },
+      "id": "match-dbffe40ebc58"
+    },
+    {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-30",
       "period": 3,
@@ -28267,6 +28853,512 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-d3ba12bb8a27"
     },
     {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "冠軍",
+      "recipient": "台美聯隊",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p108",
+      "id": "honor-67b0f632139c"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "亞軍",
+      "recipient": "內湖高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s014",
+      "id": "honor-be8cd6f0bf87"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "季軍",
+      "recipient": "我有點想哭",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p114",
+      "id": "honor-b1ad516546f1"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "季軍",
+      "recipient": "小果仁辯論隊",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p112",
+      "id": "honor-009c16bcfb07"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "全程最佳辯士",
+      "recipient": "蔡惟昱",
+      "team": "台美聯隊",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p108",
+      "id": "honor-829fcdc36bfc"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "全程最佳辯士",
+      "recipient": "張有風",
+      "team": "內湖高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s014",
+      "id": "honor-3392581647d0"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "全程最佳辯士",
+      "recipient": "林辰澔",
+      "team": "我有點想哭",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p114",
+      "id": "honor-8f772e4ea804"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "全程最佳辯士",
+      "recipient": "郭芊慈",
+      "team": "小果仁辯論隊",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p112",
+      "id": "honor-d0505f4b7952"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳申論辯士",
+      "recipient": "黃芢翔",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-e8df2d31ec58"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳申論辯士",
+      "recipient": "陳頤",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-863234401e60"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳申論辯士",
+      "recipient": "陳弘衍",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-f05c24d9eed9"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳質詢辯士",
+      "recipient": "陳昊廷",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-86e29bf31d79"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳質詢辯士",
+      "recipient": "蘇雨霏",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-2491c5b369fb"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳質詢辯士",
+      "recipient": "鄭淳尹",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-2ee994692b3e"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳答辯辯士",
+      "recipient": "劉品妍",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-f066148dd9ac"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳答辯辯士",
+      "recipient": "吳芷妍",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-6462c04c308a"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "最佳答辯辯士",
+      "recipient": "蔡惟昕",
+      "team": "",
+      "honorType": "player",
+      "note": "",
+      "teamId": "",
+      "id": "honor-4a3626815e31"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "蘇雨霏",
+      "team": "",
+      "honorType": "player",
+      "note": "第一時段：台美聯隊 vs 三校聯隊",
+      "teamId": "",
+      "id": "honor-3e7e69f118b6"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "蔡惟昱",
+      "team": "",
+      "honorType": "player",
+      "note": "第一時段：台美聯隊 vs 三校聯隊",
+      "teamId": "",
+      "id": "honor-a037796fb3a9"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "陳弘衍",
+      "team": "",
+      "honorType": "player",
+      "note": "第一時段：內湖高中 vs 想念是會呼吸的痛",
+      "teamId": "",
+      "id": "honor-a97c0c16cab0"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "鄒立安",
+      "team": "",
+      "honorType": "player",
+      "note": "第一時段：美國聯隊 vs 暑假辯不見",
+      "teamId": "",
+      "id": "honor-a76240db96f4"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "鄭詠云",
+      "team": "",
+      "honorType": "player",
+      "note": "第一時段：嘿跑去康橋 vs 鱁",
+      "teamId": "",
+      "id": "honor-5e559523e759"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "郭芊慈",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：復興高中 vs 小果仁辯論隊",
+      "teamId": "",
+      "id": "honor-4cf8fd6112d3"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "林立承",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：台灣國中小思辨聯隊 vs 不講吾德",
+      "teamId": "",
+      "id": "honor-44c3cd8a354b"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "陳弘衍",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：想念是會呼吸的痛 vs 內湖高中",
+      "teamId": "",
+      "id": "honor-fa37953fb2a0"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "江沅其",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：鱁 vs 嘿跑去康橋",
+      "teamId": "",
+      "id": "honor-631ff0ff9bb3"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "邵聖光",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：北市大同 vs 嘿走去康橋",
+      "teamId": "",
+      "id": "honor-e14bfbd61d08"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "蔡奕呈",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：北市大同 vs 嘿走去康橋",
+      "teamId": "",
+      "id": "honor-244e17b526a1"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "林辰澔",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：我有點想哭 vs 國際中文辯論課",
+      "teamId": "",
+      "id": "honor-a0b782df452b"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "陳昊廷",
+      "team": "",
+      "honorType": "player",
+      "note": "第二時段：我有點想哭 vs 國際中文辯論課",
+      "teamId": "",
+      "id": "honor-053c35019df1"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "郭芊慈",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：復興高中 vs 小果仁辯論隊",
+      "teamId": "",
+      "id": "honor-273f8c3acae8"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "邱語愛",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：暑假辯不見 vs 美國聯隊；比分未提供",
+      "teamId": "",
+      "id": "honor-9b76537f919f"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "邵聖光",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：嘿走去康橋 vs 北市大同",
+      "teamId": "",
+      "id": "honor-3f26583c9a7e"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "陳昊廷",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：國際中文辯論課 vs 我有點想哭",
+      "teamId": "",
+      "id": "honor-1e7f6fdb3f51"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "蔡惟昱",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：三校聯隊 vs 台美聯隊",
+      "teamId": "",
+      "id": "honor-9158b7893bc4"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "吳濬祐",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
+      "teamId": "",
+      "id": "honor-e17992561107"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-01",
+      "honorName": "單場最佳",
+      "recipient": "林立承",
+      "team": "",
+      "honorType": "player",
+      "note": "第三時段；原公示未標明對應場次",
+      "teamId": "",
+      "id": "honor-5fbbdca1f0a5"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "郭芊慈",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "teamId": "",
+      "id": "honor-4817aa3f2c9d"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "邱語愛",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "teamId": "",
+      "id": "honor-181205b947ef"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "鄒立安",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "teamId": "",
+      "id": "honor-c54b30cada20"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "張有風",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：內湖高中 vs 嘿跑去康橋",
+      "teamId": "",
+      "id": "honor-f20dbe55785d"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "鄭詠云",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：內湖高中 vs 嘿跑去康橋",
+      "teamId": "",
+      "id": "honor-7e80add58383"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "蔡惟昱",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：台美聯隊 vs 台灣國中小思辨聯隊",
+      "teamId": "",
+      "id": "honor-098874ac0d78"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "黃芢祥",
+      "team": "",
+      "honorType": "player",
+      "note": "八強：北市大同 vs 我有點想哭",
+      "teamId": "",
+      "id": "honor-9d4374829570"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "張有風",
+      "team": "",
+      "honorType": "player",
+      "note": "四強：小果仁辯論隊 vs 內湖高中",
+      "teamId": "",
+      "id": "honor-3eeb9df91b39"
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "matchDate": "2026-08-02",
+      "honorName": "單場最佳",
+      "recipient": "蔡惟昱",
+      "team": "",
+      "honorType": "player",
+      "note": "四強：台美聯隊 vs 我有點想哭",
+      "teamId": "",
+      "id": "honor-6ed7d01227eb"
+    },
+    {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "matchDate": "2026-05-31",
       "honorName": "冠軍",
@@ -28520,6 +29612,11 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
       "topic": "我國加價販售遊樂票券應合法化",
+      "explanation": ""
+    },
+    {
+      "competitionName": "育南盃中文教育辯論賽",
+      "topic": "面對死亡，我們更需要學會記得/放下",
       "explanation": ""
     },
     {
