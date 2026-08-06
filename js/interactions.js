@@ -4,19 +4,25 @@
       const card = event.target.closest("[data-topic-event]");
       if (!card) return;
       renderEvent(card.dataset.topicEvent);
-      showView("events");
+      showView("overview");
+      showOverviewTab("events");
       requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     }
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
-    window.addEventListener("hashchange", () => showView(location.hash.slice(1) || "home"));
+    window.addEventListener("hashchange", () => {
+      const target = location.hash.slice(1) || "home";
+      showView(target);
+      if (target === "events") showOverviewTab("events");
+    });
     document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => showView("search")));
-    document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => showView("events")));
+    document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => { showView("overview"); showOverviewTab("events"); }));
     els.recentEvents.addEventListener("click", (event) => {
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
       renderEvent(card.dataset.eventName);
-      showView("events");
+      showView("overview");
+      showOverviewTab("events");
     });
 
     let suppressTimelineClick = false;
@@ -59,7 +65,8 @@
         return;
       }
       renderEvent(node.dataset.eventName);
-      showView("events");
+      showView("overview");
+      showOverviewTab("events");
     });
     els.eventSearch.addEventListener("input", renderEventFinder);
     els.eventYear.addEventListener("change", renderEventFinder);

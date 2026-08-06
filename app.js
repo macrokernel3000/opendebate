@@ -28,8 +28,10 @@ const els = {
   eventFinderResults: document.querySelector("#eventFinderResults"),
   eventDetail: document.querySelector("#eventDetail"),
   overviewTabs: document.querySelectorAll("[data-overview-tab]"),
+  overviewEventsPanel: document.querySelector("#overviewEventsPanel"),
   overviewSchoolsPanel: document.querySelector("#overviewSchoolsPanel"),
   overviewTopicsPanel: document.querySelector("#overviewTopicsPanel"),
+  overviewEventCount: document.querySelector("#overviewEventCount"),
   overviewSchoolCount: document.querySelector("#overviewSchoolCount"),
   overviewTopicCount: document.querySelector("#overviewTopicCount"),
   overviewSchoolFilter: document.querySelector("#overviewSchoolFilter"),
@@ -60,7 +62,8 @@ function eventSummaries() {
 
 
 function showView(name) {
-  const target = ["home", "events", "overview", "search", "reports"].includes(name) ? name : "home";
+  const requested = name === "events" ? "overview" : name;
+  const target = ["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home";
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
   if (location.hash !== `#${target}`) history.replaceState(null, "", `#${target}`);
@@ -225,6 +228,7 @@ function renderEvent(name) {
 
 function renderOverview() {
   const schools = store.entities.filter((entity) => entity.type === "s").sort((a, b) => a.name.localeCompare(b.name, "zh-Hant"));
+  els.overviewEventCount.textContent = events.length;
   els.overviewSchoolCount.textContent = schools.length;
   els.overviewTopicCount.textContent = topics.length;
   renderOverviewSchools();
@@ -269,12 +273,13 @@ function selectOverviewEntity(entityId) {
 }
 
 function showOverviewTab(tabName) {
-  const target = tabName === "topics" ? "topics" : "schools";
+  const target = ["events", "schools", "topics"].includes(tabName) ? tabName : "events";
   els.overviewTabs.forEach((tab) => {
     const active = tab.dataset.overviewTab === target;
     tab.classList.toggle("is-active", active);
     tab.setAttribute("aria-selected", String(active));
   });
+  els.overviewEventsPanel.classList.toggle("is-hidden", target !== "events");
   els.overviewSchoolsPanel.classList.toggle("is-hidden", target !== "schools");
   els.overviewTopicsPanel.classList.toggle("is-hidden", target !== "topics");
 }
@@ -382,11 +387,14 @@ function renderAll() {
   renderLeaderboards();
   renderEventOptions();
   renderOverview();
+  window.DebatePersonalRecords?.init({ events: events.map((event) => event.name) });
   setupReportLinks();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
-  showView(initialQuery ? "search" : (["events", "overview", "search", "reports"].includes(location.hash.slice(1)) ? location.hash.slice(1) : "home"));
+  const initialView = location.hash.slice(1);
+  showView(initialQuery ? "search" : (["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
+  if (initialView === "events") showOverviewTab("events");
 }
 
 events = eventSummaries();

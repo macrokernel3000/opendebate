@@ -61,9 +61,9 @@
     </a>
     <nav class="main-nav" aria-label="主要選單">
       <button class="nav-button is-active" type="button" data-view="home">首頁</button>
-      <button class="nav-button" type="button" data-view="events">賽事</button>
       <button class="nav-button" type="button" data-view="overview">總覽</button>
       <button class="nav-button" type="button" data-view="search">搜尋</button>
+      <button class="nav-button" type="button" data-view="archive">建檔</button>
       <button class="nav-button" type="button" data-view="reports">回報</button>
     </nav>
   </header>
@@ -130,37 +130,32 @@
       </section>
     </section>
 
-    <section id="eventsView" class="view is-hidden" data-view-panel="events">
-      <div class="page-intro page-shell">
-        <p class="kicker">TOURNAMENTS</p>
-        <h1>賽事資料庫 <span aria-hidden="true">📣</span></h1>
-        <p>依年份、賽事名稱或辯題搜尋，查看完整比賽結果與公開榮譽。</p>
-      </div>
-      <div class="page-shell event-browser">
-        <section class="event-finder" aria-labelledby="eventFinderTitle">
-          <div class="event-finder-heading"><h2 id="eventFinderTitle">查找賽事</h2><span id="eventFinderMeta" aria-live="polite"></span></div>
-          <div class="event-filter-controls">
-            <label class="event-search-field"><span>名稱或辯題</span><input id="eventSearch" type="search" autocomplete="off" placeholder="例如：青雲盃、死刑、社群媒體" /></label>
-            <label class="event-year-field"><span>年份</span><select id="eventYear"><option value="">全部年份</option></select></label>
-          </div>
-          <div id="eventFinderResults" class="event-finder-results"></div>
-        </section>
-        <div id="eventDetail"></div>
-      </div>
-    </section>
-
     <section id="overviewView" class="view is-hidden" data-view-panel="overview">
       <div class="page-intro page-shell">
         <p class="kicker">DEBATE OVERVIEW</p>
         <h1>辯論總覽 <span aria-hidden="true">🗺️</span></h1>
-        <p>瀏覽目前已登錄的學校與已收錄辯題，從資料庫看見各校走過的賽事紀錄。</p>
+        <p>瀏覽目前已登錄的賽事、學校與辯題，從公開資料看見台灣辯論的發展軌跡。</p>
       </div>
       <div class="page-shell overview-page">
         <div class="overview-tabs" role="tablist" aria-label="總覽分類">
-          <button id="overviewSchoolsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="schools">已登錄學校 <span id="overviewSchoolCount"></span></button>
+          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events">已登錄賽事 <span id="overviewEventCount"></span></button>
+          <button id="overviewSchoolsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="schools">已登錄學校 <span id="overviewSchoolCount"></span></button>
           <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics">已收錄辯題 <span id="overviewTopicCount"></span></button>
         </div>
-        <section id="overviewSchoolsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewSchoolsTab">
+        <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
+          <div class="event-browser">
+            <section class="event-finder" aria-labelledby="eventFinderTitle">
+              <div class="event-finder-heading"><div><h2 id="eventFinderTitle">已登錄賽事</h2><p>依年份、賽事名稱或辯題查找完整比賽結果與公開榮譽。</p></div><span id="eventFinderMeta" aria-live="polite"></span></div>
+              <div class="event-filter-controls">
+                <label class="event-search-field"><span>名稱或辯題</span><input id="eventSearch" type="search" autocomplete="off" placeholder="例如：青雲盃、死刑、社群媒體" /></label>
+                <label class="event-year-field"><span>年份</span><select id="eventYear"><option value="">全部年份</option></select></label>
+              </div>
+              <div id="eventFinderResults" class="event-finder-results"></div>
+            </section>
+            <div id="eventDetail"></div>
+          </div>
+        </section>
+        <section id="overviewSchoolsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewSchoolsTab">
           <div class="overview-toolbar">
             <div><h2>學校紀錄</h2><p>點選學校，查看參加賽事、公開榮譽與勝場狀態。</p></div>
             <label class="overview-filter"><span>篩選學校</span><input id="overviewSchoolFilter" type="search" autocomplete="off" placeholder="輸入學校名稱" /></label>
@@ -177,6 +172,51 @@
           <p id="overviewTopicMeta" class="overview-meta" aria-live="polite"></p>
           <div id="overviewTopicList" class="overview-topic-list"></div>
         </section>
+      </div>
+    </section>
+
+    <section id="archiveView" class="view is-hidden" data-view-panel="archive">
+      <div class="page-intro page-shell archive-intro">
+        <p class="kicker">PERSONAL DEBATE RECORDS</p>
+        <h1>個人辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
+        <p>逐場記下自己的申論、質詢、答辯與結辯表現，完成後查看平均分數，並下載 CSV 留存。</p>
+      </div>
+      <div class="page-shell archive-page">
+        <aside class="archive-warning" role="note" aria-label="測試階段提醒">
+          <span aria-hidden="true">⚠️</span>
+          <div><strong>建檔目前為測試階段，尚無後台或帳號同步功能。</strong><p>資料僅暫存在這台裝置的瀏覽器中；清除快取、網站資料或更換裝置後可能消失。請務必下載 CSV 備份。</p></div>
+        </aside>
+        <div class="archive-layout">
+          <form id="personalRecordForm" class="record-form">
+            <div class="record-form-heading"><div><p class="kicker">NEW RECORD</p><h2>登錄一場比賽</h2></div><span id="personalDraftStatus">第 1 場</span></div>
+            <div class="record-form-grid">
+              <label class="record-field record-field-wide"><span>盃賽（可選平台已登錄賽事）</span><select id="personalCompetition"><option value="">未選擇盃賽</option></select></label>
+              <label class="record-field record-field-wide"><span>姓名</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入你的姓名" /></label>
+              <label class="record-field"><span>申論</span><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
+              <label class="record-field"><span>質詢</span><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
+              <label class="record-field"><span>答辯</span><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
+              <label class="record-field"><span>結辯</span><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
+            </div>
+            <div class="record-checks">
+              <label><input id="personalNoClosing" type="checkbox" /> 這場沒有結辯</label>
+              <label><input id="personalWin" type="checkbox" /> 這場勝利</label>
+            </div>
+            <p id="personalRecordMessage" class="record-message" role="status" aria-live="polite"></p>
+            <div class="record-actions">
+              <button class="record-button record-button-secondary" type="button" id="personalNextMatch">下一場</button>
+              <button class="record-button record-button-primary" type="submit">輸入完成</button>
+            </div>
+          </form>
+          <section class="record-summary" aria-labelledby="recordSummaryTitle">
+            <div class="record-summary-heading"><div><p class="kicker">MY RESULTS</p><h2 id="recordSummaryTitle">我的成績</h2></div><strong id="personalRecordCount">0 場</strong></div>
+            <div id="personalRecordStats" class="record-stats"></div>
+            <div class="record-data-actions">
+              <button id="personalExportCsv" class="record-button record-button-primary" type="button">下載 CSV</button>
+              <label class="record-import">匯入電腦內的 CSV<input id="personalImportCsv" type="file" accept=".csv,text/csv" /></label>
+            </div>
+            <div id="personalRecordList" class="personal-record-list"></div>
+          </section>
+        </div>
       </div>
     </section>
 
@@ -224,6 +264,7 @@
   <script src="js/site-config.js?v=20260804163124" data-versioned-asset></script>
   <script src="js/core.js?v=20260804163124" data-versioned-asset></script>
   <script src="js/interactions.js?v=20260804163124" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=202608060001" data-versioned-asset></script>
   <script src="app.js?v=20260804163124" data-versioned-asset></script>
 </body>
 </html>
