@@ -387,7 +387,7 @@ function renderAll() {
   renderLeaderboards();
   renderEventOptions();
   renderOverview();
-  window.DebatePersonalRecords?.init({ events: events.map((event) => event.name) });
+  window.DebatePersonalRecords?.init({ events: events.map((event) => ({ name: event.name, date: event.latestDate })) });
   setupReportLinks();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";
   els.globalSearch.value = initialQuery;
