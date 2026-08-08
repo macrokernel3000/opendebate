@@ -61,6 +61,7 @@
 ## 6. SEO 與 AI 搜尋入口
 
 - `index.html`：標題、描述、canonical、Open Graph、robots 指示與 JSON-LD。
+- `assets/site-logo.svg`：左上角品牌 Logo、瀏覽器 favicon 與搜尋引擎結構化品牌圖示的共同來源；更換品牌圖示時應維持正方形並同步檢查以上三處。
 - `robots.txt`：允許一般搜尋引擎擷取並指向 sitemap。
 - `sitemap.xml`：正式首頁索引。
 - `llms.txt`：向 AI 系統說明網站定位、內容範圍、重要入口與引用邊界。

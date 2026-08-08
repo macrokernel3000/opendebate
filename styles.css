@@ -24,7 +24,8 @@ button { color: inherit; }
 .site-header { position: sticky; z-index: 50; top: 0; min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 max(20px, calc((100vw - 1180px) / 2)); border-bottom: 1px solid rgba(23, 33, 29, .12); background: rgba(255, 253, 248, .95); backdrop-filter: blur(14px); }
 .brand { display: flex; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 900; cursor: pointer; }
 .brand:hover .brand-mark, .brand:focus-visible .brand-mark { transform: rotate(3deg) scale(1.05); }
-.brand-mark { display: grid; width: 38px; height: 38px; place-items: center; background: var(--yellow); border: 2px solid var(--ink); font-size: 20px; transform: rotate(-3deg); }
+.brand-mark { display: grid; width: 38px; height: 38px; place-items: center; transform: rotate(-3deg); }
+.brand-mark img { width: 100%; height: 100%; display: block; }
 .main-nav { display: flex; align-self: stretch; }
 .nav-button { min-width: 72px; border: 0; border-bottom: 3px solid transparent; background: transparent; cursor: pointer; font-weight: 800; }
 .nav-button:hover, .nav-button.is-active { color: var(--green); border-bottom-color: var(--coral); }
