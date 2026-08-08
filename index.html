@@ -13,13 +13,13 @@
   <meta property="og:locale" content="zh_TW" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="公開辯論資訊網" />
-  <meta property="og:title" content="公開辯論資訊網｜高中辯論戰績、辯論積分與賽事資料庫" />
+  <meta property="og:title" content="公開辯論資訊網｜台灣高中辯論戰績資料庫" />
   <meta property="og:description" content="查詢台灣高中職辯論比賽、逐場辯論戰績、學校勝場、辯論積分、公開榮譽與歷屆辯題。" />
   <meta property="og:url" content="https://macrokernel3000.github.io/opendebate/" />
   <meta property="og:image" content="https://macrokernel3000.github.io/opendebate/assets/debate-banner.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" href="data:," />
-  <title>公開辯論資訊網｜高中辯論戰績、辯論積分與賽事資料庫</title>
+  <link rel="icon" type="image/svg+xml" href="assets/site-logo.svg" />
+  <title>公開辯論資訊網｜台灣高中辯論戰績資料庫</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,6 +29,7 @@
         "name": "公開辯論資訊網",
         "alternateName": ["台灣辯論資料庫", "高中辯論資訊網", "辯論戰績資料庫", "辯論積分網"],
         "url": "https://macrokernel3000.github.io/opendebate/",
+        "image": "https://macrokernel3000.github.io/opendebate/assets/site-logo.svg",
         "inLanguage": "zh-Hant-TW",
         "description": "整理台灣高中辯論比賽、逐場辯論戰績、學校勝場、辯論積分、公開榮譽與辯題的公共資料庫。",
         "potentialAction": {
@@ -46,17 +47,24 @@
         "spatialCoverage": "Taiwan",
         "inLanguage": "zh-Hant-TW",
         "isAccessibleForFree": true,
-        "creator": {"@type": "Organization", "name": "公開辯論資訊網"}
+        "creator": {"@id": "https://macrokernel3000.github.io/opendebate/#organization"}
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://macrokernel3000.github.io/opendebate/#organization",
+        "name": "公開辯論資訊網",
+        "url": "https://macrokernel3000.github.io/opendebate/",
+        "logo": "https://macrokernel3000.github.io/opendebate/assets/site-logo.svg"
       }
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260806225131" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260809014401" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
     <a id="homeBrand" class="brand" href="#home" aria-label="回到公開辯論資訊網首頁">
-      <span class="brand-mark" aria-hidden="true">💬</span>
+      <span class="brand-mark" aria-hidden="true"><img src="assets/site-logo.svg" alt="" /></span>
       <span>公開辯論資訊網</span>
     </a>
     <nav class="main-nav" aria-label="主要選單">
@@ -179,7 +187,7 @@
       <div class="page-intro page-shell archive-intro">
         <p class="kicker">PERSONAL DEBATE RECORDS</p>
         <h1>個人辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
-        <p>逐場記下自己的申論、質詢、答辯與結辯表現，完成後查看平均分數，並下載 CSV 留存。</p>
+        <p>逐場記下自己的申論、質詢、答辯與結辯表現，完成後查看平均分數，本網站無後台，不會收錄您的成績。請自行下載 CSV 留存。</p>
       </div>
       <div class="page-shell archive-page">
         <aside class="archive-warning" role="note" aria-label="測試階段提醒">
@@ -188,31 +196,42 @@
         </aside>
         <div class="archive-layout">
           <form id="personalRecordForm" class="record-form">
-            <div class="record-form-heading"><div><p class="kicker">NEW RECORD</p><h2>登錄一場比賽</h2></div><span id="personalDraftStatus">第 1 場</span></div>
+            <div class="record-form-heading"><div><p class="kicker">NEW BALLOT</p><h2>登錄一張裁單</h2></div><span id="personalDraftStatus">第 1 張</span></div>
             <div class="record-form-grid">
-              <label class="record-field record-field-wide"><span>盃賽（可選平台已登錄賽事）</span><select id="personalCompetition"><option value="">未選擇盃賽</option></select></label>
-              <label class="record-field record-field-wide"><span>姓名</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入你的姓名" /></label>
-              <label class="record-field"><span>申論</span><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
-              <label class="record-field"><span>質詢</span><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
-              <label class="record-field"><span>答辯</span><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
-              <label class="record-field"><span>結辯</span><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /></label>
+              <label class="record-field record-field-wide record-competition-field"><span>盃賽（輸入關鍵字可選平台已登錄賽事）</span><input id="personalCompetition" type="text" autocomplete="off" placeholder="例如：輸入「育南」" aria-controls="personalCompetitionSuggestions" aria-autocomplete="list" /><div id="personalCompetitionSuggestions" class="record-suggestions is-hidden" role="listbox"></div></label>
+              <label class="record-field"><span>選手姓名</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入選手姓名" /></label>
+              <label class="record-field"><span>裁判姓名</span><input id="personalJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
+              <label class="record-field"><span>比賽日期</span><input id="personalMatchDate" type="date" /></label>
+              <label class="record-field"><span>此盃第幾場</span><input id="personalMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
+              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
+              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
+              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
+              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
+              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
             </div>
             <div class="record-checks">
               <label><input id="personalNoClosing" type="checkbox" /> 這場沒有結辯</label>
-              <label><input id="personalWin" type="checkbox" /> 這場勝利</label>
+              <label><input id="personalWin" type="checkbox" /> 該單獲勝</label>
+              <label><input id="personalRankFirst" type="checkbox" /> 排名為 1</label>
             </div>
             <p id="personalRecordMessage" class="record-message" role="status" aria-live="polite"></p>
             <div class="record-actions">
-              <button class="record-button record-button-secondary" type="button" id="personalNextMatch">下一場</button>
-              <button class="record-button record-button-primary" type="submit">輸入完成</button>
+              <button class="record-button record-button-secondary" type="button" id="personalNextMatch">下一張</button>
+              <button class="record-button record-button-secondary is-hidden" type="button" id="personalCancelEdit">取消修正</button>
+              <button class="record-button record-button-primary" type="submit" id="personalSubmitRecord">輸入完成</button>
             </div>
           </form>
           <section class="record-summary" aria-labelledby="recordSummaryTitle">
             <div class="record-summary-heading"><div><p class="kicker">MY RESULTS</p><h2 id="recordSummaryTitle">我的成績</h2></div><strong id="personalRecordCount">0 場</strong></div>
             <div id="personalRecordStats" class="record-stats"></div>
+            <div class="record-visualizations">
+              <article class="record-chart"><div class="record-chart-heading"><div><h3>能力雷達圖</h3><span>依各欄滿分換算</span></div><button type="button" data-expand-chart aria-label="放大能力雷達圖" title="放大圖表">⛶</button></div><div id="personalRadarChart"></div></article>
+              <article class="record-chart"><div class="record-chart-heading"><div><h3>進步折線圖</h3><span>依比賽日期排序</span></div><button type="button" data-expand-chart aria-label="放大進步折線圖" title="放大圖表">⛶</button></div><div id="personalProgressChart"></div></article>
+            </div>
             <div class="record-data-actions">
               <button id="personalExportCsv" class="record-button record-button-primary" type="button">下載 CSV</button>
               <label class="record-import">匯入電腦內的 CSV<input id="personalImportCsv" type="file" accept=".csv,text/csv" /></label>
+              <button id="personalDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button>
             </div>
             <div id="personalRecordList" class="personal-record-list"></div>
           </section>
@@ -260,11 +279,11 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260806225131" data-public-data-script></script>
-  <script src="js/site-config.js?v=20260806225131" data-versioned-asset></script>
-  <script src="js/core.js?v=20260806225131" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260806225131" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260806225131" data-versioned-asset></script>
-  <script src="app.js?v=20260806225131" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260809014401" data-public-data-script></script>
+  <script src="js/site-config.js?v=20260809014401" data-versioned-asset></script>
+  <script src="js/core.js?v=20260809014401" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260809014401" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260809014401" data-versioned-asset></script>
+  <script src="app.js?v=20260809014401" data-versioned-asset></script>
 </body>
 </html>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">公開辯論資訊網 Logo</title>
+  <desc id="description">黃色方框內的雙對話框，象徵公開辯論與資料交流。</desc>
+  <rect x="18" y="18" width="476" height="476" rx="54" fill="#f5c84c" stroke="#17211d" stroke-width="28"/>
+  <path d="M116 132h238c35 0 64 29 64 64v76c0 35-29 64-64 64H242l-74 58 13-58h-65c-35 0-64-29-64-64v-76c0-35 29-64 64-64Z" fill="#fffdf8" stroke="#17211d" stroke-width="24" stroke-linejoin="round"/>
+  <path d="M214 93h178c37 0 68 30 68 68v69c0 30-20 56-48 65l-6-108c-2-34-30-60-64-60H194c5-20 12-34 20-34Z" fill="#ef654f" stroke="#17211d" stroke-width="20" stroke-linejoin="round"/>
+  <circle cx="151" cy="236" r="18" fill="#176b52"/>
+  <circle cx="235" cy="236" r="18" fill="#176b52"/>
+  <circle cx="319" cy="236" r="18" fill="#176b52"/>
+</svg>
