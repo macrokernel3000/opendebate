@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-09T01:44:01",
+  "generatedAt": "2026-08-16T14:34:32",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -17,6 +17,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第三十五屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三十六屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三屆東岸盃全國高中職辯論比賽.csv",
+    "public-data-第二十一屆辯革盃全國高中辯論比賽.csv",
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
     "public-data-第二十八屆高中菁英盃.csv",
@@ -698,6 +699,48 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p118",
       "type": "p",
       "name": "劍潭一中",
+      "aliases": ""
+    },
+    {
+      "code": "p119",
+      "type": "p",
+      "name": "世宣67",
+      "aliases": ""
+    },
+    {
+      "code": "p120",
+      "type": "p",
+      "name": "我心目中的佳辯逢雨停",
+      "aliases": ""
+    },
+    {
+      "code": "p121",
+      "type": "p",
+      "name": "梭哈要曙光不要輸光",
+      "aliases": ""
+    },
+    {
+      "code": "p122",
+      "type": "p",
+      "name": "永平推土機",
+      "aliases": ""
+    },
+    {
+      "code": "p123",
+      "type": "p",
+      "name": "竹子的英文",
+      "aliases": ""
+    },
+    {
+      "code": "p124",
+      "type": "p",
+      "name": "能不能和我留在台北",
+      "aliases": ""
+    },
+    {
+      "code": "p125",
+      "type": "p",
+      "name": "黃山過台灣",
       "aliases": ""
     },
     {
@@ -8043,7 +8086,7 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-edb802aaad84"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 1,
       "venue": 1,
@@ -8065,10 +8108,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s055",
         "negative": "s158"
       },
-      "id": "match-17c203eedcb4"
+      "id": "match-c4e5fd0afd63"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 1,
       "venue": 2,
@@ -8090,10 +8133,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s092",
         "negative": "s153"
       },
-      "id": "match-d383f89ad49a"
+      "id": "match-f4694da523c3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 1,
       "venue": 3,
@@ -8115,10 +8158,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s105",
         "negative": "s014"
       },
-      "id": "match-181a56cf31b0"
+      "id": "match-9fe02e570c10"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 1,
       "venue": 4,
@@ -8140,10 +8183,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s094",
         "negative": "s090"
       },
-      "id": "match-9045e884875b"
+      "id": "match-4a420243001c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 1,
@@ -8165,10 +8208,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s020"
       },
-      "id": "match-d6a92ca880f6"
+      "id": "match-925e7b66d558"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 2,
@@ -8190,10 +8233,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s044",
         "negative": "s046"
       },
-      "id": "match-f021bc2f7380"
+      "id": "match-331393d7e7b3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 3,
@@ -8215,10 +8258,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s078",
         "negative": "s050"
       },
-      "id": "match-28111695598d"
+      "id": "match-a745bf45567c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 4,
@@ -8240,10 +8283,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s156",
         "negative": "s091"
       },
-      "id": "match-0f57c4e71103"
+      "id": "match-4d562c7b4eb2"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 5,
@@ -8265,10 +8308,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s056",
         "negative": "s058"
       },
-      "id": "match-6466843abfdc"
+      "id": "match-d26aab105d49"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 2,
       "venue": 6,
@@ -8290,10 +8333,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s151",
         "negative": "s096"
       },
-      "id": "match-5fad9578b9ab"
+      "id": "match-a1a02b416919"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 1,
@@ -8315,10 +8358,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s139",
         "negative": "s161"
       },
-      "id": "match-f14e3dd6f6a3"
+      "id": "match-93652272f9c8"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 2,
@@ -8340,10 +8383,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s038",
         "negative": "s017"
       },
-      "id": "match-bc93fda55cc8"
+      "id": "match-1f22242b097e"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 3,
@@ -8365,10 +8408,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s131",
         "negative": "s157"
       },
-      "id": "match-c5cc76ffec68"
+      "id": "match-482f1a0d8828"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 4,
@@ -8390,10 +8433,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s003",
         "negative": "s023"
       },
-      "id": "match-7f8503408798"
+      "id": "match-ff4501e2e78c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 5,
@@ -8415,10 +8458,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s135",
         "negative": "s006"
       },
-      "id": "match-1100f73d0fe9"
+      "id": "match-dda71f26d820"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-27",
       "period": 3,
       "venue": 6,
@@ -8440,10 +8483,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s160",
         "negative": "s152"
       },
-      "id": "match-7b77ec4dcc37"
+      "id": "match-01faf02c011f"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 1,
       "venue": 1,
@@ -8465,10 +8508,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s099",
         "negative": "s055"
       },
-      "id": "match-450bc93aaf51"
+      "id": "match-2be2d91776b9"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 1,
       "venue": 2,
@@ -8490,10 +8533,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s092"
       },
-      "id": "match-8a1e0d4dfc2a"
+      "id": "match-3f8facdb9306"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 1,
       "venue": 3,
@@ -8515,10 +8558,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s098",
         "negative": "s105"
       },
-      "id": "match-264f0ae5bb50"
+      "id": "match-e41681807f68"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 1,
       "venue": 4,
@@ -8540,10 +8583,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s090",
         "negative": "s094"
       },
-      "id": "match-49b7f8964f74"
+      "id": "match-7613e5f88c81"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 1,
@@ -8565,10 +8608,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s020",
         "negative": "s113"
       },
-      "id": "match-7024dcd8e509"
+      "id": "match-9468c0600d42"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 2,
@@ -8590,10 +8633,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s046",
         "negative": "s044"
       },
-      "id": "match-db726116109c"
+      "id": "match-0e2a3c7346e3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 3,
@@ -8615,10 +8658,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s050",
         "negative": "s133"
       },
-      "id": "match-61c7b2e9e90e"
+      "id": "match-19524b46e886"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 4,
@@ -8640,10 +8683,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s091",
         "negative": "s156"
       },
-      "id": "match-e8741064baf0"
+      "id": "match-17b86c0ed4c2"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 5,
@@ -8665,10 +8708,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s058",
         "negative": "s056"
       },
-      "id": "match-006695f2e106"
+      "id": "match-97c6931e1661"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 2,
       "venue": 6,
@@ -8690,10 +8733,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s096",
         "negative": "s151"
       },
-      "id": "match-79d974810b68"
+      "id": "match-1ae8939cafd6"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 1,
@@ -8715,10 +8758,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s159",
         "negative": "s139"
       },
-      "id": "match-d9e9bfce7d22"
+      "id": "match-780f1e9c46f3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 2,
@@ -8740,10 +8783,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s017",
         "negative": "s032"
       },
-      "id": "match-04662162ba86"
+      "id": "match-ca2b7f07c882"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 3,
@@ -8765,10 +8808,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s157",
         "negative": "s131"
       },
-      "id": "match-faf057609ccb"
+      "id": "match-21ad2e788992"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 4,
@@ -8790,10 +8833,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s003"
       },
-      "id": "match-c96de7bf9f65"
+      "id": "match-5f87bd8b8c8c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 5,
@@ -8815,10 +8858,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s006",
         "negative": "s135"
       },
-      "id": "match-2fa829d29bfb"
+      "id": "match-2fef062c598c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-28",
       "period": 3,
       "venue": 6,
@@ -8840,10 +8883,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s160"
       },
-      "id": "match-4d7c500ec603"
+      "id": "match-fa4b04364528"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 1,
       "venue": 1,
@@ -8865,10 +8908,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s106",
         "negative": "p074"
       },
-      "id": "match-6dc710eb5544"
+      "id": "match-a7d543810e05"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 1,
       "venue": 2,
@@ -8890,10 +8933,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s012",
         "negative": "s141"
       },
-      "id": "match-bf88a1538aa9"
+      "id": "match-cc2506b846b8"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 1,
@@ -8915,10 +8958,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s158",
         "negative": "s099"
       },
-      "id": "match-6c53b4406b45"
+      "id": "match-2f774eaa5da7"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 2,
@@ -8940,10 +8983,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s032",
         "negative": "s038"
       },
-      "id": "match-a44a44a9e411"
+      "id": "match-97e98d7b5f26"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 3,
@@ -8965,10 +9008,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s133",
         "negative": "s078"
       },
-      "id": "match-cdc0a9264470"
+      "id": "match-34be0590c3e1"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 4,
@@ -8990,10 +9033,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s022",
         "negative": "s084"
       },
-      "id": "match-d0430bec7292"
+      "id": "match-b669c4651968"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 5,
@@ -9015,10 +9058,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p074",
         "negative": "s012"
       },
-      "id": "match-da4274bf85cb"
+      "id": "match-875a232e77b6"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 2,
       "venue": 6,
@@ -9040,10 +9083,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s106",
         "negative": "s012"
       },
-      "id": "match-077f04794a68"
+      "id": "match-709268c938cb"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 3,
       "venue": 1,
@@ -9065,10 +9108,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s161",
         "negative": "s159"
       },
-      "id": "match-eab57a550fe8"
+      "id": "match-905d65218749"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 3,
       "venue": 2,
@@ -9090,10 +9133,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s014",
         "negative": "s098"
       },
-      "id": "match-c5f0a64adde7"
+      "id": "match-0223d8d84677"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 3,
       "venue": 3,
@@ -9115,10 +9158,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s084",
         "negative": "s022"
       },
-      "id": "match-ef41b0642fe4"
+      "id": "match-569a60507fa6"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 3,
       "venue": 4,
@@ -9140,10 +9183,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s012",
         "negative": "s106"
       },
-      "id": "match-d54ba6156c80"
+      "id": "match-fe44cf06cae3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-29",
       "period": 3,
       "venue": 5,
@@ -9165,10 +9208,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s141",
         "negative": "s106"
       },
-      "id": "match-4598bd16a8d5"
+      "id": "match-9621f0a0316a"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 1,
       "venue": 1,
@@ -9190,10 +9233,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s022",
         "negative": "s141"
       },
-      "id": "match-b2616d16c997"
+      "id": "match-3ba5ac77387b"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 2,
       "venue": 1,
@@ -9215,10 +9258,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s131"
       },
-      "id": "match-f6ded1237380"
+      "id": "match-ba17b37c3bc9"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 2,
       "venue": 2,
@@ -9240,10 +9283,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s158",
         "negative": "s050"
       },
-      "id": "match-1f3721115f59"
+      "id": "match-7b830a91d3ec"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 2,
       "venue": 3,
@@ -9265,10 +9308,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s044",
         "negative": "s135"
       },
-      "id": "match-73db694e8b96"
+      "id": "match-e6255180cae0"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 2,
       "venue": 4,
@@ -9290,10 +9333,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s161",
         "negative": "s156"
       },
-      "id": "match-82ec3a4c05bc"
+      "id": "match-3710883a01ed"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 2,
       "venue": 5,
@@ -9315,10 +9358,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p074",
         "negative": "s022"
       },
-      "id": "match-5f59cbcbc3d7"
+      "id": "match-310568b367fd"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 3,
       "venue": 1,
@@ -9340,10 +9383,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s090",
         "negative": "s153"
       },
-      "id": "match-649f25fb923e"
+      "id": "match-163447da7a64"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 3,
       "venue": 2,
@@ -9365,10 +9408,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s096",
         "negative": "s023"
       },
-      "id": "match-7132cec0ceb2"
+      "id": "match-b204ff2c8589"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 3,
       "venue": 3,
@@ -9390,10 +9433,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s014",
         "negative": "s032"
       },
-      "id": "match-267bc99cb3a0"
+      "id": "match-e03276b61857"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 3,
       "venue": 4,
@@ -9415,10 +9458,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s056"
       },
-      "id": "match-f720b6d0ad8f"
+      "id": "match-143c3fda5793"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-30",
       "period": 3,
       "venue": 5,
@@ -9440,10 +9483,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s141",
         "negative": "p074"
       },
-      "id": "match-6d1ec6c024e9"
+      "id": "match-975ba4f3322f"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-31",
       "period": 1,
       "venue": 1,
@@ -9465,10 +9508,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s090",
         "negative": "s023"
       },
-      "id": "match-a0e5ba7c0d5b"
+      "id": "match-caa56b0fc0ff"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-31",
       "period": 1,
       "venue": 2,
@@ -9490,10 +9533,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s014",
         "negative": "s152"
       },
-      "id": "match-606f9905969b"
+      "id": "match-17398b7ad593"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-31",
       "period": 2,
       "venue": 1,
@@ -9515,10 +9558,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s158"
       },
-      "id": "match-145ded04bfd0"
+      "id": "match-62511a09073c"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-07-31",
       "period": 2,
       "venue": 2,
@@ -9540,10 +9583,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s135",
         "negative": "s156"
       },
-      "id": "match-7937e1736a5e"
+      "id": "match-7f1b2f0a74a3"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "period": 1,
       "venue": 1,
@@ -9565,10 +9608,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s152"
       },
-      "id": "match-631d8cd22f02"
+      "id": "match-2013d4b6c953"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "period": 1,
       "venue": 2,
@@ -9590,10 +9633,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s135"
       },
-      "id": "match-44a03dd71526"
+      "id": "match-92ee61038daa"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "period": 2,
       "venue": 1,
@@ -9615,10 +9658,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s135"
       },
-      "id": "match-8d2a0f5c09ff"
+      "id": "match-58dd3fe5b4da"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 1,
       "venue": 1,
@@ -9640,10 +9683,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s093",
         "negative": "s102"
       },
-      "id": "match-9aa9ce7396f9"
+      "id": "match-ed3add87f4f8"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 1,
       "venue": 2,
@@ -9665,10 +9708,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s014",
         "negative": "s145"
       },
-      "id": "match-c252ae325a20"
+      "id": "match-da12ea5b996b"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 1,
       "venue": 3,
@@ -9690,10 +9733,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s017",
         "negative": "s091"
       },
-      "id": "match-b647305acfc5"
+      "id": "match-1467ec4838d7"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 1,
       "venue": 4,
@@ -9715,10 +9758,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s058",
         "negative": "s001"
       },
-      "id": "match-c0a9fdef9bf7"
+      "id": "match-d697b75e83ed"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 1,
       "venue": 5,
@@ -9740,10 +9783,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s092",
         "negative": "s066"
       },
-      "id": "match-c7662b5db699"
+      "id": "match-8ae07621d52d"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 1,
@@ -9765,10 +9808,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s057"
       },
-      "id": "match-f009beb6618c"
+      "id": "match-ea0a666af7a1"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 2,
@@ -9790,10 +9833,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s159",
         "negative": "s023"
       },
-      "id": "match-f431e96798d2"
+      "id": "match-d9fa6ad7c4cf"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 3,
@@ -9815,10 +9858,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s158",
         "negative": "s100"
       },
-      "id": "match-0e08892a82fd"
+      "id": "match-48cc5d176511"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 4,
@@ -9840,10 +9883,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s055",
         "negative": "s118"
       },
-      "id": "match-f907bb071fb4"
+      "id": "match-4dfd2b080ed0"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 5,
@@ -9865,10 +9908,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s038",
         "negative": "s157"
       },
-      "id": "match-a43d970ef72a"
+      "id": "match-a41be45f2f8d"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 2,
       "venue": 6,
@@ -9890,10 +9933,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s161",
         "negative": "s153"
       },
-      "id": "match-0189b87e9e84"
+      "id": "match-9a6f5353505c"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 1,
@@ -9915,10 +9958,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s102",
         "negative": "s123"
       },
-      "id": "match-e179be6f1360"
+      "id": "match-5bdda17966ca"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 2,
@@ -9940,10 +9983,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s145",
         "negative": "s108"
       },
-      "id": "match-72e271e9c337"
+      "id": "match-bb30df08ff51"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 3,
@@ -9965,10 +10008,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s071",
         "negative": "s017"
       },
-      "id": "match-3394435f105c"
+      "id": "match-311f14334c78"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 4,
@@ -9990,10 +10033,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s001",
         "negative": "s088"
       },
-      "id": "match-51219fb95e36"
+      "id": "match-b464f6ded4e9"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 5,
@@ -10015,10 +10058,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s066",
         "negative": "s152"
       },
-      "id": "match-bfd937819e37"
+      "id": "match-20c7ee8b4e58"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-05",
       "period": 3,
       "venue": 6,
@@ -10040,10 +10083,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s054",
         "negative": "s032"
       },
-      "id": "match-2bed577910de"
+      "id": "match-a9c78d04e769"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 1,
       "venue": 1,
@@ -10065,10 +10108,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s057",
         "negative": "s025"
       },
-      "id": "match-d9af4cb70902"
+      "id": "match-1233547f7945"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 1,
       "venue": 2,
@@ -10090,10 +10133,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s100",
         "negative": "s158"
       },
-      "id": "match-c12380485088"
+      "id": "match-1f236ed63c02"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 1,
       "venue": 3,
@@ -10115,10 +10158,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s161"
       },
-      "id": "match-a220ed064b14"
+      "id": "match-5a85b8b025d2"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 1,
       "venue": 4,
@@ -10140,10 +10183,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s048",
         "negative": "s038"
       },
-      "id": "match-7ac58b61fe84"
+      "id": "match-c8dff81d6026"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 2,
       "venue": 1,
@@ -10165,10 +10208,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s123",
         "negative": "s093"
       },
-      "id": "match-c23867a09284"
+      "id": "match-157978ca5f72"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 2,
       "venue": 2,
@@ -10190,10 +10233,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s108",
         "negative": "s014"
       },
-      "id": "match-408f4daa1ff3"
+      "id": "match-f43edb9dfdc0"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 2,
       "venue": 3,
@@ -10215,10 +10258,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s091",
         "negative": "s071"
       },
-      "id": "match-90e15a2140b3"
+      "id": "match-3089e6f8fd1d"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 2,
       "venue": 4,
@@ -10240,10 +10283,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s088",
         "negative": "s058"
       },
-      "id": "match-8fe77d46e3e9"
+      "id": "match-a2ce4458aca6"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 2,
       "venue": 5,
@@ -10265,10 +10308,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s092"
       },
-      "id": "match-8ecdcc948716"
+      "id": "match-8806df26d27b"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 3,
       "venue": 1,
@@ -10290,10 +10333,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s025",
         "negative": "s113"
       },
-      "id": "match-a9d33abcd594"
+      "id": "match-f25ca5922e34"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 3,
       "venue": 2,
@@ -10315,10 +10358,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s159"
       },
-      "id": "match-aeaf450a7ffd"
+      "id": "match-0705f4744407"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 3,
       "venue": 3,
@@ -10340,10 +10383,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s118",
         "negative": "s055"
       },
-      "id": "match-cc0a30e6c3b0"
+      "id": "match-bfa1055d2afd"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 3,
       "venue": 4,
@@ -10365,10 +10408,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s157",
         "negative": "s048"
       },
-      "id": "match-43cdb62f1388"
+      "id": "match-f3172efd23dd"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-06",
       "period": 3,
       "venue": 5,
@@ -10390,10 +10433,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s032",
         "negative": "s054"
       },
-      "id": "match-a167f7e51dcd"
+      "id": "match-498b2497317d"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 1,
       "venue": 1,
@@ -10415,10 +10458,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s054",
         "negative": "s088"
       },
-      "id": "match-70bd8b06e64c"
+      "id": "match-047225f2860d"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 1,
       "venue": 2,
@@ -10440,10 +10483,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s071"
       },
-      "id": "match-e894cc1c5718"
+      "id": "match-36903e45ff88"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 1,
       "venue": 3,
@@ -10465,10 +10508,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s048",
         "negative": "s153"
       },
-      "id": "match-84c21b1fb52d"
+      "id": "match-1a3f96dc031b"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 2,
       "venue": 1,
@@ -10490,10 +10533,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s102",
         "negative": "s113"
       },
-      "id": "match-25f083e070fe"
+      "id": "match-9477579553df"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 2,
       "venue": 2,
@@ -10515,10 +10558,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s054"
       },
-      "id": "match-70d1ebcb7d66"
+      "id": "match-b5b537e6b8e9"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 2,
       "venue": 3,
@@ -10540,10 +10583,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s071",
         "negative": "s158"
       },
-      "id": "match-14431741dc96"
+      "id": "match-7c6edef867f8"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-07",
       "period": 2,
       "venue": 4,
@@ -10565,10 +10608,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s055",
         "negative": "s153"
       },
-      "id": "match-03c00cc3b619"
+      "id": "match-420a95114c89"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "period": 1,
       "venue": 1,
@@ -10590,10 +10633,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s023"
       },
-      "id": "match-0f6ab924608c"
+      "id": "match-f8966fdcc183"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "period": 1,
       "venue": 2,
@@ -10615,10 +10658,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s158",
         "negative": "s153"
       },
-      "id": "match-2946badda048"
+      "id": "match-8bfeae10db5c"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "period": 2,
       "venue": 1,
@@ -10640,7 +10683,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s153"
       },
-      "id": "match-29078b86c268"
+      "id": "match-d4a2c65713c3"
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
@@ -11341,6 +11384,481 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "p091"
       },
       "id": "match-a0327b0f8888"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "長春小熊幫"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "長春小熊幫",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p039",
+        "negative": "p091"
+      },
+      "id": "match-8d9f50ec96af"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "永平推土機",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "永平推土機",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p122",
+        "negative": "s080"
+      },
+      "id": "match-8da2fc5860f3"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "了不起的公關們",
+        "negative": "竹子的英文"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "了不起的公關們",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p010",
+        "negative": "p123"
+      },
+      "id": "match-d08f666f25b2"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "梭哈要曙光不要輸光",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "世宣67",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p121",
+        "negative": "p119"
+      },
+      "id": "match-75f461fd91ec"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "百齡高中",
+        "negative": "能不能和我留在台北"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "百齡高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s105",
+        "negative": "p124"
+      },
+      "id": "match-4dcb2fa7c35a"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "黃山過台灣",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p125",
+        "negative": "s023"
+      },
+      "id": "match-320ceed817b3"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "長春小熊幫",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "長春小熊幫",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p091",
+        "negative": "p039"
+      },
+      "id": "match-a762b7e16a3c"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "永平推土機"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "永平推土機",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "p122"
+      },
+      "id": "match-a9a267c0b6c3"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "竹子的英文",
+        "negative": "了不起的公關們"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "了不起的公關們",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p123",
+        "negative": "p010"
+      },
+      "id": "match-089dd4bcf8a7"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-13",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "能不能和我留在台北",
+        "negative": "百齡高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "百齡高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p124",
+        "negative": "s105"
+      },
+      "id": "match-8afee873f9a7"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "世宣67",
+        "negative": "梭哈要曙光不要輸光"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "世宣67",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p119",
+        "negative": "p121"
+      },
+      "id": "match-3b2b473c3b8e"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "黃山過台灣"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "p125"
+      },
+      "id": "match-b598afe19922"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "永平推土機",
+        "negative": "我心目中的佳辯逢雨停"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "我心目中的佳辯逢雨停",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p122",
+        "negative": "p120"
+      },
+      "id": "match-2b00372b0b1c"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "了不起的公關們",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "世宣67",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p010",
+        "negative": "p119"
+      },
+      "id": "match-33bd5a04e285"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "長春小熊幫"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "p091"
+      },
+      "id": "match-ec533bf877fd"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-14",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "百齡高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s105"
+      },
+      "id": "match-0095c0a3603f"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-15",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "我心目中的佳辯逢雨停",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "世宣67",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p120",
+        "negative": "p119"
+      },
+      "id": "match-350f36dd8094"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-15",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s023"
+      },
+      "id": "match-259aded4736c"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "2026-08-15",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "世宣67",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p119",
+        "negative": "s023"
+      },
+      "id": "match-5a5c4a5f32c4"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -27552,7 +28070,7 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-157d3d15d989"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "冠軍",
       "recipient": "南山中學",
@@ -27560,10 +28078,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s023",
-      "id": "honor-dc5d56e2b9dc"
+      "id": "honor-7817f96eeaa8"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "亞軍",
       "recipient": "薇閣中學",
@@ -27571,10 +28089,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s135",
-      "id": "honor-e8af81e44a1c"
+      "id": "honor-e40f1e926908"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "季軍",
       "recipient": "竹科實中",
@@ -27582,10 +28100,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s113",
-      "id": "honor-c33c753860d3"
+      "id": "honor-7abf3e2447e2"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "季軍",
       "recipient": "高雄中學",
@@ -27593,10 +28111,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s152",
-      "id": "honor-9f7b307250bb"
+      "id": "honor-abd87aa03745"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "最佳辯士",
       "recipient": "劉恩聖",
@@ -27604,10 +28122,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "高中組",
       "teamId": "s135",
-      "id": "honor-4c24342f7e20"
+      "id": "honor-ce0af3b91b28"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "優秀辯士",
       "recipient": "詹舒涵",
@@ -27615,10 +28133,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "高中組",
       "teamId": "s023",
-      "id": "honor-c916b8317cf5"
+      "id": "honor-906b9608ab5b"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "優秀辯士",
       "recipient": "張睿恩",
@@ -27626,10 +28144,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "高中組",
       "teamId": "s152",
-      "id": "honor-d7f06c26a767"
+      "id": "honor-1afbdc992327"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "優秀辯士",
       "recipient": "任麒永",
@@ -27637,10 +28155,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "高中組",
       "teamId": "s158",
-      "id": "honor-836d61b6e37d"
+      "id": "honor-f3598df1c840"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "優秀辯士",
       "recipient": "郭奕辰",
@@ -27648,10 +28166,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "高中組",
       "teamId": "s023",
-      "id": "honor-98ccadfb1c77"
+      "id": "honor-7bd2d725e230"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組冠軍",
       "recipient": "美國聯隊",
@@ -27659,10 +28177,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "p074",
-      "id": "honor-a8dc90864648"
+      "id": "honor-b7ba8c1c5c94"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組亞軍",
       "recipient": "南山中學國中部",
@@ -27670,10 +28188,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s022",
-      "id": "honor-b775b9840b16"
+      "id": "honor-d4b01b141f3d"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組季軍",
       "recipient": "西苑高中國中部",
@@ -27681,10 +28199,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s141",
-      "id": "honor-c7cb80ca73cc"
+      "id": "honor-85d943399631"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組最佳辯士",
       "recipient": "葉愷悌",
@@ -27692,10 +28210,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "國中組",
       "teamId": "p074",
-      "id": "honor-301af0507e94"
+      "id": "honor-3d9864ea7e0a"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組優秀辯士",
       "recipient": "宏穎",
@@ -27703,10 +28221,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "國中組",
       "teamId": "p074",
-      "id": "honor-3ae6d16da223"
+      "id": "honor-f7bde3e51ccd"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組優秀辯士",
       "recipient": "陳詠翎",
@@ -27714,10 +28232,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "國中組",
       "teamId": "s022",
-      "id": "honor-86c51f906e9e"
+      "id": "honor-34a1552649bc"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組優秀辯士",
       "recipient": "楊千鋐",
@@ -27725,10 +28243,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "國中組",
       "teamId": "s022",
-      "id": "honor-8cd7a1adfbcc"
+      "id": "honor-f1b051ff8a21"
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
       "honorName": "國中組優秀辯士",
       "recipient": "黃宇潼",
@@ -27736,10 +28254,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "國中組",
       "teamId": "s141",
-      "id": "honor-0206bfa0b84c"
+      "id": "honor-c5be43ba1c9b"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "冠軍",
       "recipient": "高雄女中",
@@ -27747,10 +28265,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s153",
-      "id": "honor-5356327df7a5"
+      "id": "honor-9a8b403a7bef"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "亞軍",
       "recipient": "南山高中",
@@ -27758,10 +28276,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s023",
-      "id": "honor-7d4dfbab00d9"
+      "id": "honor-e3c3985422b7"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "季軍",
       "recipient": "麗山高中",
@@ -27769,10 +28287,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s158",
-      "id": "honor-25b8750aeb81"
+      "id": "honor-6645736e765a"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "季軍",
       "recipient": "竹科實中",
@@ -27780,10 +28298,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s113",
-      "id": "honor-f5d16834b81a"
+      "id": "honor-b551e66ff7b5"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "最佳辯士",
       "recipient": "張曦之",
@@ -27791,10 +28309,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s023",
-      "id": "honor-4dc1860d5ce8"
+      "id": "honor-8d6c5f653770"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "優秀辯士",
       "recipient": "林品遠",
@@ -27802,10 +28320,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s071",
-      "id": "honor-0acc3110338c"
+      "id": "honor-41f8bbda5336"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "優秀辯士",
       "recipient": "吳奕萱",
@@ -27813,10 +28331,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s153",
-      "id": "honor-06f5288f17c1"
+      "id": "honor-f9ae8b2d1151"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "優秀辯士",
       "recipient": "林可倫",
@@ -27824,10 +28342,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s113",
-      "id": "honor-18131412c9f2"
+      "id": "honor-c447ceb589f9"
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
       "honorName": "優秀辯士",
       "recipient": "林彥駖",
@@ -27835,7 +28353,7 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s153",
-      "id": "honor-f8d86146b1d7"
+      "id": "honor-5f659b13b4e3"
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
@@ -27902,6 +28420,50 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "p003",
       "id": "honor-950fa2ab1790"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "南山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-1aa234e68473"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "世宣67",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p119",
+      "id": "honor-740dd518743a"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "成功高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s067",
+      "id": "honor-21a2d6cd2e0f"
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "我心目中的佳辯逢雨停",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p120",
+      "id": "honor-b1b89afef8b7"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -29607,7 +30169,7 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "第一屆明哲盃全國高中職辯論比賽",
-      "topic": "辯題：我國刑法222條之法律效果應增設化學去勢",
+      "topic": "我國刑法222條之法律效果應增設化學去勢",
       "explanation": ""
     },
     {
@@ -29641,28 +30203,33 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "topic": "我國高級中等學校體育競賽之選手參賽資格規範應廢除轉學、重考就讀時間限制",
       "explanation": ""
     },
     {
-      "competitionName": "第35屆蘇州盃",
+      "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "topic": "邁爾斯-布里格斯性格分類法能不能讓我們更正確的認識自己",
       "explanation": ""
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "topic": "我國應廢除民法第1085條父母對子女懲戒權之規定",
       "explanation": ""
     },
     {
-      "competitionName": "第36屆蘇州盃",
+      "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "topic": "在奮鬥路上遇到好對手/好夥伴更重要",
       "explanation": ""
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
       "topic": "原住民族升學優待制度對於原住民族文化利大於弊/弊大於利",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
+      "topic": "成為自己討厭的人，是/不是件壞事",
       "explanation": ""
     },
     {

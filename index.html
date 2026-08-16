@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260809014401" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260816143432" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -185,16 +185,20 @@
 
     <section id="archiveView" class="view is-hidden" data-view-panel="archive">
       <div class="page-intro page-shell archive-intro">
-        <p class="kicker">PERSONAL DEBATE RECORDS</p>
-        <h1>個人辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
-        <p>逐場記下自己的申論、質詢、答辯與結辯表現，完成後查看平均分數，本網站無後台，不會收錄您的成績。請自行下載 CSV 留存。</p>
+        <p class="kicker">DEBATE RECORDS</p>
+        <h1>辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
+        <p>提供紀錄且能視覺化整理裁判單。本網站無後台，不會收錄您的成績。請自行下載 CSV 留存。</p>
       </div>
       <div class="page-shell archive-page">
+        <div class="archive-mode-picker" role="tablist" aria-label="選擇建檔方式">
+          <button id="personalArchiveMode" class="archive-mode-button is-active" type="button" role="tab" aria-selected="true" aria-controls="personalArchivePanel" data-archive-mode="personal"><span aria-hidden="true">👤</span><strong>選手建檔</strong><small>記錄個人的分數</small></button>
+          <button id="teamArchiveMode" class="archive-mode-button" type="button" role="tab" aria-selected="false" aria-controls="teamArchivePanel" data-archive-mode="team"><span aria-hidden="true">🏫</span><strong>隊伍建檔</strong><small>記錄整場比賽的三張裁判單</small></button>
+        </div>
         <aside class="archive-warning" role="note" aria-label="測試階段提醒">
           <span aria-hidden="true">⚠️</span>
           <div><strong>建檔目前為測試階段，尚無後台或帳號同步功能。</strong><p>資料僅暫存在這台裝置的瀏覽器中；清除快取、網站資料或更換裝置後可能消失。請務必下載 CSV 備份。</p></div>
         </aside>
-        <div class="archive-layout">
+        <div id="personalArchivePanel" role="tabpanel" aria-labelledby="personalArchiveMode" class="archive-mode-panel"><div class="archive-layout">
           <form id="personalRecordForm" class="record-form">
             <div class="record-form-heading"><div><p class="kicker">NEW BALLOT</p><h2>登錄一張裁單</h2></div><span id="personalDraftStatus">第 1 張</span></div>
             <div class="record-form-grid">
@@ -203,16 +207,12 @@
               <label class="record-field"><span>裁判姓名</span><input id="personalJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
               <label class="record-field"><span>比賽日期</span><input id="personalMatchDate" type="date" /></label>
               <label class="record-field"><span>此盃第幾場</span><input id="personalMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
-              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
-              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
-              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
-              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
-              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" placeholder="可不填" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
-            </div>
-            <div class="record-checks">
-              <label><input id="personalNoClosing" type="checkbox" /> 這場沒有結辯</label>
-              <label><input id="personalWin" type="checkbox" /> 該單獲勝</label>
-              <label><input id="personalRankFirst" type="checkbox" /> 排名為 1</label>
+              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
+              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
+              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
+              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
+              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
+              <label class="record-field"><span>排名（選填，1 最高、6 最低）</span><input id="personalRank" type="number" inputmode="numeric" min="1" max="6" step="1" /></label>
             </div>
             <p id="personalRecordMessage" class="record-message" role="status" aria-live="polite"></p>
             <div class="record-actions">
@@ -235,6 +235,51 @@
             </div>
             <div id="personalRecordList" class="personal-record-list"></div>
           </section>
+        </div></div>
+        <div id="teamArchivePanel" role="tabpanel" aria-labelledby="teamArchiveMode" class="archive-mode-panel is-hidden">
+          <div class="archive-layout team-archive-layout">
+            <form id="teamRecordForm" class="record-form team-record-form">
+              <div class="record-form-heading"><div><p class="kicker">TEAM BALLOT</p><h2>登錄一張隊伍裁單</h2></div><span id="teamDraftStatus">第 1 張</span></div>
+              <div class="record-form-grid">
+                <label class="record-field record-field-wide"><span>盃賽</span><input id="teamCompetition" type="text" list="teamCompetitionList" autocomplete="off" placeholder="輸入盃賽名稱" /><datalist id="teamCompetitionList"></datalist></label>
+                <label class="record-field"><span>隊伍名稱</span><input id="teamName" type="text" autocomplete="organization" placeholder="輸入自己的隊伍" /></label>
+                <label class="record-field"><span>裁判姓名</span><input id="teamJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
+                <label class="record-field"><span>比賽日期</span><input id="teamMatchDate" type="date" /></label>
+                <label class="record-field"><span>此盃第幾場</span><input id="teamMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
+                <label class="record-field record-field-wide"><span>我方持方</span><select id="teamSide"><option value="正">正方</option><option value="反">反方</option></select></label>
+              </div>
+              <section class="team-side-entry" aria-labelledby="affirmativeScoreTitle">
+                <h3 id="affirmativeScoreTitle">正方評分 <span id="affirmativeMySideBadge" class="team-side-badge">我方</span></h3>
+                <div class="team-score-table" aria-label="正方三位辯士評分">
+                  <div class="team-score-head"><span>出場序</span><span>申論<br><small>滿分 20</small></span><span>質詢<br><small>滿分 20</small></span><span>答辯<br><small>滿分 20</small></span></div>
+                  <div class="team-score-row"><strong>正一</strong><input id="teamAffP1Speech" type="number" min="0" step="0.1" aria-label="正一申論" /><input id="teamAffP1Question" type="number" min="0" step="0.1" aria-label="正一質詢" /><input id="teamAffP1Defense" type="number" min="0" step="0.1" aria-label="正一答辯" /></div>
+                  <div class="team-score-row"><strong>正二</strong><input id="teamAffP2Speech" type="number" min="0" step="0.1" aria-label="正二申論" /><input id="teamAffP2Question" type="number" min="0" step="0.1" aria-label="正二質詢" /><input id="teamAffP2Defense" type="number" min="0" step="0.1" aria-label="正二答辯" /></div>
+                  <div class="team-score-row"><strong>正三</strong><input id="teamAffP3Speech" type="number" min="0" step="0.1" aria-label="正三申論" /><input id="teamAffP3Question" type="number" min="0" step="0.1" aria-label="正三質詢" /><input id="teamAffP3Defense" type="number" min="0" step="0.1" aria-label="正三答辯" /></div>
+                </div>
+                <div class="team-side-extras"><label>架構／論點 <input id="teamAffArgument" type="number" min="0" step="0.1" /></label><label>結辯 <input id="teamAffClosing" type="number" min="0" step="0.1" /></label><strong id="teamAffTotal">總分 —</strong></div>
+              </section>
+              <section class="team-side-entry" aria-labelledby="negativeScoreTitle">
+                <h3 id="negativeScoreTitle">反方評分 <span id="negativeMySideBadge" class="team-side-badge is-hidden">我方</span></h3>
+                <div class="team-score-table" aria-label="反方三位辯士評分">
+                  <div class="team-score-head"><span>出場序</span><span>申論<br><small>滿分 20</small></span><span>質詢<br><small>滿分 20</small></span><span>答辯<br><small>滿分 20</small></span></div>
+                  <div class="team-score-row"><strong>反一</strong><input id="teamNegP1Speech" type="number" min="0" step="0.1" aria-label="反一申論" /><input id="teamNegP1Question" type="number" min="0" step="0.1" aria-label="反一質詢" /><input id="teamNegP1Defense" type="number" min="0" step="0.1" aria-label="反一答辯" /></div>
+                  <div class="team-score-row"><strong>反二</strong><input id="teamNegP2Speech" type="number" min="0" step="0.1" aria-label="反二申論" /><input id="teamNegP2Question" type="number" min="0" step="0.1" aria-label="反二質詢" /><input id="teamNegP2Defense" type="number" min="0" step="0.1" aria-label="反二答辯" /></div>
+                  <div class="team-score-row"><strong>反三</strong><input id="teamNegP3Speech" type="number" min="0" step="0.1" aria-label="反三申論" /><input id="teamNegP3Question" type="number" min="0" step="0.1" aria-label="反三質詢" /><input id="teamNegP3Defense" type="number" min="0" step="0.1" aria-label="反三答辯" /></div>
+                </div>
+                <div class="team-side-extras"><label>架構／論點 <input id="teamNegArgument" type="number" min="0" step="0.1" /></label><label>結辯 <input id="teamNegClosing" type="number" min="0" step="0.1" /></label><strong id="teamNegTotal">總分 —</strong></div>
+              </section>
+              <p id="teamRecordMessage" class="record-message" role="status" aria-live="polite"></p>
+              <div class="record-actions"><button class="record-button record-button-secondary" type="button" id="teamNextBallot">下一張</button><button class="record-button record-button-secondary is-hidden" type="button" id="teamCancelEdit">取消修正</button><button class="record-button record-button-primary" type="submit" id="teamSubmitRecord">輸入完成</button></div>
+            </form>
+            <section class="record-summary" aria-labelledby="teamSummaryTitle">
+              <div class="record-summary-heading"><div><p class="kicker">TEAM RESULTS</p><h2 id="teamSummaryTitle">隊伍比賽紀錄</h2></div><strong id="teamRecordCount">0 張</strong></div>
+              <div id="teamRecordStats" class="record-stats team-record-stats"></div>
+              <article class="record-chart team-radar-card"><div class="record-chart-heading"><div><h3>隊伍平均雷達圖</h3><span>累積超過兩張裁單後，計算我方申論、質詢與答辯平均</span></div><button type="button" data-expand-chart aria-label="放大隊伍平均雷達圖" title="放大圖表">⛶</button></div><div id="teamRadarChart"></div></article>
+              <p class="team-record-explanation">每張裁單會依正反方已輸入的所有分數加總，自動算出該張勝負。同一盃賽、同一場次的裁單會放在一起；一般累積三張後，再依裁判票多數決定整場勝負。</p>
+              <div class="record-data-actions"><button id="teamExportCsv" class="record-button record-button-primary" type="button">下載隊伍 CSV</button><label class="record-import">匯入隊伍 CSV<input id="teamImportCsv" type="file" accept=".csv,text/csv" /></label><button id="teamDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button></div>
+              <div id="teamRecordList" class="personal-record-list"></div>
+            </section>
+          </div>
         </div>
       </div>
     </section>
@@ -279,11 +324,12 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260809014401" data-public-data-script></script>
-  <script src="js/site-config.js?v=20260809014401" data-versioned-asset></script>
-  <script src="js/core.js?v=20260809014401" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260809014401" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260809014401" data-versioned-asset></script>
-  <script src="app.js?v=20260809014401" data-versioned-asset></script>
+  <script src="data/public-data.js?v=20260816143432" data-public-data-script></script>
+  <script src="js/site-config.js?v=20260816143432" data-versioned-asset></script>
+  <script src="js/core.js?v=20260816143432" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260816143432" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260816143432" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20260816143432" data-versioned-asset></script>
+  <script src="app.js?v=20260816143432" data-versioned-asset></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 (function () {
   const STORAGE_KEY = "opendebate.personal-records.v1";
-  const CSV_HEADERS = ["盃賽", "此盃第幾場", "比賽日期", "姓名", "裁判姓名", "論點分", "論點滿分", "申論", "申論滿分", "質詢", "質詢滿分", "答辯", "答辯滿分", "結辯", "結辯滿分", "無結辯", "該單獲勝", "排名為1", "建立時間"];
+  const CSV_HEADERS = ["盃賽", "此盃第幾場", "比賽日期", "姓名", "裁判姓名", "論點分", "論點滿分", "申論", "申論滿分", "質詢", "質詢滿分", "答辯", "答辯滿分", "結辯", "結辯滿分", "排名", "建立時間"];
   const METRICS = [
     { key: "argument", label: "論點", maxKey: "argumentMax", defaultMax: 10, color: "#ef654f" },
     { key: "speech", label: "申論", maxKey: "speechMax", defaultMax: 20, color: "#176b52" },
@@ -83,11 +83,9 @@
       questionMax: positiveNumber(els.questionMax.value, 20),
       defense: fieldNumber(els.defense),
       defenseMax: positiveNumber(els.defenseMax.value, 20),
-      closing: els.noClosing.checked ? "" : fieldNumber(els.closing),
+      closing: fieldNumber(els.closing),
       closingMax: positiveNumber(els.closingMax.value, 10),
-      noClosing: els.noClosing.checked,
-      win: els.win.checked,
-      rankFirst: els.rankFirst.checked,
+      rank: fieldNumber(els.rank),
       createdAt: existingRecord?.createdAt || new Date().toISOString(),
     };
   }
@@ -105,11 +103,7 @@
     [els.competition, els.matchNumber, els.name, els.judge, els.argument, els.speech, els.question, els.defense, els.closing].forEach((input) => { input.value = ""; });
     els.matchDate.value = defaultJulyDate();
     METRICS.forEach((metric) => { els[metric.maxKey].value = String(metric.defaultMax); });
-    els.noClosing.checked = false;
-    els.win.checked = false;
-    els.rankFirst.checked = false;
-    els.closing.disabled = false;
-    els.closingMax.disabled = false;
+    els.rank.value = "";
   }
 
   function startEdit(recordId) {
@@ -131,11 +125,7 @@
     setInputValue(els.defenseMax, record.defenseMax);
     setInputValue(els.closing, record.closing);
     setInputValue(els.closingMax, record.closingMax);
-    els.noClosing.checked = Boolean(record.noClosing);
-    els.win.checked = Boolean(record.win);
-    els.rankFirst.checked = Boolean(record.rankFirst);
-    els.closing.disabled = els.noClosing.checked;
-    els.closingMax.disabled = els.noClosing.checked;
+    setInputValue(els.rank, record.rank);
     els.nextButton.disabled = true;
     els.cancelEdit.classList.remove("is-hidden");
     els.submitButton.textContent = "儲存修正";
@@ -273,8 +263,8 @@
 
   function renderBallot(record, index) {
     return `<article class="personal-record-item">
-      <div class="personal-record-title"><div><span>第 ${index + 1} 張${record.win ? " · 獲勝" : ""}${record.rankFirst ? " · 排名 1" : ""} · ${escapeHtml(record.matchDate || "日期未填")}</span><strong>${escapeHtml(record.judge || "未填裁判")}</strong><small>${escapeHtml(record.name || "未填姓名")}</small></div><div class="personal-record-controls"><button type="button" data-edit-record="${escapeHtml(record.id)}" aria-label="修正第 ${index + 1} 張">修正</button><button type="button" data-delete-record="${escapeHtml(record.id)}" aria-label="刪除第 ${index + 1} 張">刪除</button></div></div>
-      <div class="personal-record-scores">${METRICS.map((metric) => `<span>${metric.label} <b>${record.noClosing && metric.key === "closing" ? "無" : formatScorePair(record, metric)}</b></span>`).join("")}</div>
+      <div class="personal-record-title"><div><span>第 ${index + 1} 張${record.rank ? ` · 排名 ${escapeHtml(record.rank)}` : ""} · ${escapeHtml(record.matchDate || "日期未填")}</span><strong>${escapeHtml(record.judge || "未填裁判")}</strong><small>${escapeHtml(record.name || "未填姓名")}</small></div><div class="personal-record-controls"><button type="button" data-edit-record="${escapeHtml(record.id)}" aria-label="修正第 ${index + 1} 張">修正</button><button type="button" data-delete-record="${escapeHtml(record.id)}" aria-label="刪除第 ${index + 1} 張">刪除</button></div></div>
+      <div class="personal-record-scores">${METRICS.map((metric) => `<span>${metric.label} <b>${formatScorePair(record, metric)}</b></span>`).join("")}</div>
     </article>`;
   }
 
@@ -295,15 +285,15 @@
   }
 
   function render() {
-    const wins = records.filter((record) => record.win).length;
-    els.count.textContent = `${records.length} 張`;
+    const eventKeys = new Set(records.filter((record) => record.matchNumber !== "" && record.matchNumber !== undefined).map((record) => `${record.competition}|${record.matchNumber}`));
+    els.count.textContent = `${eventKeys.size} 場 · ${records.length} 張`;
     els.draftStatus.textContent = `第 ${records.length + 1} 張`;
     els.stats.innerHTML = `
       <article class="record-stat record-stat-primary"><span>平均申論分</span><strong>${formatAverage(average("speech"))}</strong></article>
       <article class="record-stat"><span>平均質詢分</span><strong>${formatAverage(average("question"))}</strong></article>
       <article class="record-stat"><span>平均答辯分</span><strong>${formatAverage(average("defense"))}</strong></article>
-      <article class="record-stat"><span>獲勝裁單</span><strong>${wins}<small> / ${records.length}</small></strong></article>
-      <article class="record-stat"><span>排名 1</span><strong>${records.filter((record) => record.rankFirst).length}</strong></article>`;
+      <article class="record-stat"><span>已填排名</span><strong>${records.filter((record) => record.rank !== "" && record.rank !== undefined).length}<small> / ${records.length}</small></strong></article>
+      <article class="record-stat"><span>累積賽事</span><strong>${new Set(records.filter((record) => record.matchNumber !== "" && record.matchNumber !== undefined).map((record) => `${record.competition}|${record.matchNumber}`)).size}</strong></article>`;
     renderRadarChart();
     renderProgressChart();
     els.exportButton.disabled = !records.length;
@@ -360,7 +350,7 @@
       record.competition, record.matchNumber, record.matchDate, record.name, record.judge,
       record.argument, record.argumentMax, record.speech, record.speechMax, record.question, record.questionMax,
       record.defense, record.defenseMax, record.closing, record.closingMax,
-      record.noClosing ? "是" : "否", record.win ? "是" : "否", record.rankFirst ? "是" : "否", record.createdAt,
+      record.rank ?? "", record.createdAt,
     ])];
     const csv = `\uFEFF${rows.map((row) => row.map(csvCell).join(",")).join("\n")}`;
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
@@ -429,12 +419,10 @@
         defenseMax: positiveNumber(get(row, "答辯滿分"), 20),
         closing: importedNumber(get(row, "結辯")),
         closingMax: positiveNumber(get(row, "結辯滿分"), 10),
-        noClosing: parseBoolean(get(row, "無結辯")),
-        win: parseBoolean(get(row, "該單獲勝", "勝場")),
-        rankFirst: parseBoolean(get(row, "排名為1", "排名為 1")),
+        rank: importedNumber(get(row, "排名", "排名為1", "排名為 1")),
         createdAt: get(row, "建立時間") || new Date().toISOString(),
       })).map(normalizeRecord);
-      const key = (record) => [record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.noClosing, record.win, record.rankFirst, record.createdAt].join("|");
+      const key = (record) => [record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.rank, record.createdAt].join("|");
       const existing = new Set(records.map(key));
       const additions = imported.filter((record) => !existing.has(key(record)));
       records.push(...additions);
@@ -469,9 +457,7 @@
       defenseMax: document.querySelector("#personalDefenseMax"),
       closing: document.querySelector("#personalClosing"),
       closingMax: document.querySelector("#personalClosingMax"),
-      noClosing: document.querySelector("#personalNoClosing"),
-      win: document.querySelector("#personalWin"),
-      rankFirst: document.querySelector("#personalRankFirst"),
+      rank: document.querySelector("#personalRank"),
       nextButton: document.querySelector("#personalNextMatch"),
       cancelEdit: document.querySelector("#personalCancelEdit"),
       submitButton: document.querySelector("#personalSubmitRecord"),
@@ -505,11 +491,6 @@
       els.matchDate.value = eventDateByName.get(els.competition.value) || defaultJulyDate();
       els.competitionSuggestions.classList.add("is-hidden");
       els.name.focus();
-    });
-    els.noClosing.addEventListener("change", () => {
-      els.closing.disabled = els.noClosing.checked;
-      els.closingMax.disabled = els.noClosing.checked;
-      if (els.noClosing.checked) els.closing.value = "";
     });
     els.nextButton.addEventListener("click", () => addDraft({ continueEntry: true }));
     els.cancelEdit.addEventListener("click", () => { exitEditMode({ clearForm: true }); showMessage("已取消修正。", false); });
