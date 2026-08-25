@@ -1,9 +1,10 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-16T14:34:32",
+  "generatedAt": "2026-08-25T14:50:07",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
+    "public-data-2026司改盃全國高中職辯論比賽.csv",
     "public-data-吊嘎盃全國高中職辯論比賽.csv",
     "public-data-火雞盃全國高中職辯論比賽.csv",
     "public-data-火雞肉飯盃全國高中職辯論比賽.csv",
@@ -1624,6 +1625,36 @@ window.DEBATE_PUBLIC_DATA = {
       "type": "s",
       "name": "馬公高中",
       "aliases": "馬公高中A|馬公高中B|馬公高中（一）|馬公高中(二)|馬公高中（二）"
+    },
+    {
+      "code": "s163",
+      "type": "s",
+      "name": "大里高中",
+      "aliases": ""
+    },
+    {
+      "code": "s164",
+      "type": "s",
+      "name": "弘文高中",
+      "aliases": ""
+    },
+    {
+      "code": "s165",
+      "type": "s",
+      "name": "惠文高中",
+      "aliases": ""
+    },
+    {
+      "code": "s166",
+      "type": "s",
+      "name": "新民高中",
+      "aliases": ""
+    },
+    {
+      "code": "s167",
+      "type": "s",
+      "name": "普台高中",
+      "aliases": ""
     }
   ],
   "records": [
@@ -2484,6 +2515,756 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s071"
       },
       "id": "match-e225d409aefb"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "員林高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺中一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s029"
+      },
+      "id": "match-f9a1fff09409"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "高雄女中",
+        "negative": "明道中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s153",
+        "negative": "s081"
+      },
+      "id": "match-3dbd961968b5"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "大里高中",
+        "negative": "豐原高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "豐原高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s163",
+        "negative": "s142"
+      },
+      "id": "match-531a00f209ed"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南大附中",
+        "negative": "虎尾高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s020",
+        "negative": "s138"
+      },
+      "id": "match-44bd44e82e6d"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "康橋國際學校",
+        "negative": "精誠中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "康橋國際學校",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s049",
+        "negative": "s114"
+      },
+      "id": "match-6152916bbb39"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "惠文高中",
+        "negative": "弘文高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "惠文高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s165",
+        "negative": "s164"
+      },
+      "id": "match-266d0be2251c"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "新民高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s166"
+      },
+      "id": "match-bd29e3260e57"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "永春高中",
+        "negative": "臺中二中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永春高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s099",
+        "negative": "s121"
+      },
+      "id": "match-f1709b3240b0"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "員林高中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "員林高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s029",
+        "negative": "s071"
+      },
+      "id": "match-24b9e2f00479"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "明道中學",
+        "negative": "市立東山"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立東山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s081",
+        "negative": "s046"
+      },
+      "id": "match-f3daf548e855"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "豐原高中",
+        "negative": "西松高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "西松高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s142",
+        "negative": "s140"
+      },
+      "id": "match-d13b0a7a4511"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "虎尾高中",
+        "negative": "普台高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "虎尾高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s167"
+      },
+      "id": "match-1d3d49cca8ee"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "康橋國際學校"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "康橋國際學校",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s049"
+      },
+      "id": "match-72a2ef941702"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "忠明高中",
+        "negative": "惠文高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "忠明高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s063",
+        "negative": "s165"
+      },
+      "id": "match-fd62a0061e23"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "彰化高中",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "彰化高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s056",
+        "negative": "s003"
+      },
+      "id": "match-2a9ddafb96e3"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "臺中二中",
+        "negative": "永春高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中二中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s121",
+        "negative": "s099"
+      },
+      "id": "match-40afa4d10f1f"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "文華高中",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "文華高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s071",
+        "negative": "s120"
+      },
+      "id": "match-db81268acdf8"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "市立東山",
+        "negative": "高雄女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s046",
+        "negative": "s153"
+      },
+      "id": "match-9315e3b4d734"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "西松高中",
+        "negative": "大里高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "大里高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s140",
+        "negative": "s163"
+      },
+      "id": "match-a17fb63d4416"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "普台高中",
+        "negative": "南大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s167",
+        "negative": "s020"
+      },
+      "id": "match-c4289241bec1"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "精誠中學",
+        "negative": "曉明女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s114",
+        "negative": "s085"
+      },
+      "id": "match-028c21694b0a"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "弘文高中",
+        "negative": "忠明高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "忠明高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s164",
+        "negative": "s063"
+      },
+      "id": "match-76d099ec45a6"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "新民高中",
+        "negative": "彰化高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "彰化高中",
+      "note": "依公告：新民高中未到齊，判定棄賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s166",
+        "negative": "s056"
+      },
+      "id": "match-9f679bdbd9f7"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "員林高中",
+        "negative": "高雄女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s029",
+        "negative": "s153"
+      },
+      "id": "match-c8c40be066a2"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 4,
+      "venue": 2,
+      "teams": {
+        "affirmative": "大里高中",
+        "negative": "南大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s163",
+        "negative": "s020"
+      },
+      "id": "match-222c62c473c1"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 4,
+      "venue": 3,
+      "teams": {
+        "affirmative": "康橋國際學校",
+        "negative": "忠明高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "康橋國際學校",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s049",
+        "negative": "s063"
+      },
+      "id": "match-cc42a9493825"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-25",
+      "period": 4,
+      "venue": 4,
+      "teams": {
+        "affirmative": "彰化高中",
+        "negative": "臺中二中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "彰化高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s056",
+        "negative": "s121"
+      },
+      "id": "match-349181c6e75b"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "康橋國際學校",
+        "negative": "彰化高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "康橋國際學校",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s049",
+        "negative": "s056"
+      },
+      "id": "match-4fdb7223cc66"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "高雄女中",
+        "negative": "南大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s153",
+        "negative": "s020"
+      },
+      "id": "match-d0f2d4caab65"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "南大附中",
+        "negative": "康橋國際學校"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 0
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s020",
+        "negative": "s049"
+      },
+      "id": "match-45a2b21ee767"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -27232,6 +28013,39 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s071",
       "id": "honor-7b89bf7ebbc6"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "南大附中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s020",
+      "id": "honor-3b768ab920ce"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "康橋國際學校",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s049",
+      "id": "honor-55f999d04a1f"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "全程最佳辯士",
+      "recipient": "高偉辰",
+      "team": "南大附中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s020",
+      "id": "honor-4fa35f74acec"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
