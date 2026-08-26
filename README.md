@@ -54,7 +54,9 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 ## 更新網站
 
-新增或編輯任一 `public-data*.csv` 後，雙擊根目錄的 `更新網站資料.command`。
+新增或編輯任一 `public-data*.csv` 後，Windows 可執行根目錄的 `更新網站資料.ps1`，macOS 可雙擊 `更新網站資料.command`。CSV 是正式資料來源；Excel 僅在透過 `PUBLIC_DATA_SOURCE` 明確指定時作為輔助匯入。
+
+程式檢查可在根目錄執行 `python -m unittest discover -s tests -v`。若要明確匯入 Excel，可在 PowerShell 先設定 ` $env:PUBLIC_DATA_SOURCE = "data\\檔案.xlsx" ` 再執行更新工具。
 
 更新程式會逐一讀取所有 CSV、檢查欄位，再合併產生 `data/public-data.js`。看到「目前收錄盃賽」與「更新完成」後，按 Return 即會開啟網站。
 

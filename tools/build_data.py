@@ -277,11 +277,11 @@ def source_files():
                 path = ROOT / path
             paths.append(path)
         return paths
-    xlsx = sorted(DATA_DIR.glob("public-data*.xlsx"), key=lambda path: path.name.lower())
     csv_files = sorted(DATA_DIR.glob("public-data*.csv"), key=lambda path: path.name.lower())
-    if xlsx:
-        csv_files = [path for path in csv_files if path.name.lower() != "public-data.csv"]
-    return xlsx + csv_files
+    # CSV is the canonical source. XLSX is intentionally opt-in through
+    # PUBLIC_DATA_SOURCE so an old workbook cannot silently override or
+    # duplicate the maintained CSV dataset.
+    return csv_files
 
 
 def deduplicate(items):
@@ -313,7 +313,14 @@ def suggested_type(name):
 def read_registry():
     entries = []
     source_name = REGISTRY_PATH.name
-    if REGISTRY_XLSX_PATH.exists():
+    # Keep the maintained CSV registry authoritative; XLSX is a fallback for
+    # legacy imports when the CSV registry is not present.
+    if REGISTRY_PATH.exists():
+        with REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+            for row in csv.DictReader(source):
+                if clean(row.get("name")):
+                    entries.append({key: clean(row.get(key)) for key in ("code", "type", "name", "aliases")})
+    elif REGISTRY_XLSX_PATH.exists():
         source_name = REGISTRY_XLSX_PATH.name
         with zipfile.ZipFile(REGISTRY_XLSX_PATH) as book:
             shared_strings = []
@@ -358,11 +365,6 @@ def read_registry():
             item = {header: clean(row[index]) if index < len(row) else "" for index, header in enumerate(headers)}
             if item.get("name"):
                 entries.append({key: clean(item.get(key)) for key in ("code", "type", "name", "aliases")})
-    elif REGISTRY_PATH.exists():
-        with REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
-            for row in csv.DictReader(source):
-                if clean(row.get("name")):
-                    entries.append({key: clean(row.get(key)) for key in ("code", "type", "name", "aliases")})
     seen_codes = set()
     seen_names = {}
     for line_number, entry in enumerate(entries, start=2):
@@ -565,7 +567,7 @@ def build():
     update_asset_versions(version)
     events = event_names(records, honors, topics)
     update_seo_files(events, records, honors)
-    registry_source = REGISTRY_XLSX_PATH.name if REGISTRY_XLSX_PATH.exists() else REGISTRY_PATH.name
+    registry_source = REGISTRY_PATH.name if REGISTRY_PATH.exists() else REGISTRY_XLSX_PATH.name
     write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source)
     print("資料來源：" + "、".join(sources))
     print(f"目前收錄盃賽：{len(events)} 個")
