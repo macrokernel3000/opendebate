@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-25T14:50:07",
+  "generatedAt": "2026-08-26T13:40:59",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -28035,6 +28035,28 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s049",
       "id": "honor-55f999d04a1f"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "彰化高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s056",
+      "id": "honor-95b38e457f31"
+    },
+    {
+      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "高雄女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s153",
+      "id": "honor-5c63a1c52656"
     },
     {
       "competitionName": "2026年司改盃全國高中職辯論比賽",
