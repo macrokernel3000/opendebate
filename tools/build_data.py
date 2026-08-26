@@ -17,6 +17,7 @@ REGISTRY_XLSX_PATH = DATA_DIR / "entity-registry.xlsx"
 INDEX_PATH = ROOT / "index.html"
 REPORT_PATH = DATA_DIR / "update-report.txt"
 SITE_CONTENT_PATH = DATA_DIR / "site-content.csv"
+EVENT_METADATA_PATH = DATA_DIR / "event-metadata.csv"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 SEO_PAGE_PATH = ROOT / "debate-records.html"
 
@@ -158,6 +159,23 @@ def load_site_content():
             clean(row.get("key")): clean(row.get("value"))
             for row in reader
             if clean(row.get("key"))
+        }
+
+
+def load_event_metadata():
+    if not EVENT_METADATA_PATH.exists():
+        return {}
+    with EVENT_METADATA_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        if not reader.fieldnames or "盃賽" not in reader.fieldnames:
+            raise SystemExit(f"{EVENT_METADATA_PATH.name} 必須包含盃賽欄位")
+        return {
+            clean(row.get("盃賽")): {
+                "organizer": clean(row.get("主辦單位")),
+                "location": clean(row.get("舉辦地點")),
+                "note": clean(row.get("備註")),
+            }
+            for row in reader if clean(row.get("盃賽"))
         }
 
 
@@ -529,6 +547,7 @@ def build():
     entities, lookup = build_entities(records, honors)
     attendance = attach_entities(records, honors, lookup)
     site_content = load_site_content()
+    event_metadata = load_event_metadata()
     payload = {
         "schemaVersion": 4,
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
@@ -539,6 +558,7 @@ def build():
         "attendance": attendance,
         "topics": topics,
         "siteContent": site_content,
+        "eventMetadata": event_metadata,
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")

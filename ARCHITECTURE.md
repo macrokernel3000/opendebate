@@ -42,6 +42,7 @@
 - `topics`：賽事辯題與說明。
 - `generatedAt`：資料檔產生時間；首頁「上次修改」以此為唯一依據。
 - `siteContent`：由 `data/site-content.csv` 產生，控制 Banner 下方的英文小標、中文標題與兩段網站介紹。
+- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存未來賽事的主辦單位、舉辦地點與備註；歷史賽事可不回填。
 
 賽事數量不是固定設定值。`app.js` 會合併 `records`、`honors`、`topics` 中的賽事名稱後去重計算，首頁狀態列與統計區都使用這個結果。
 
@@ -50,6 +51,7 @@
 - `index.html`：語意結構、SEO metadata、結構化資料與畫面容器。
 - `styles.css`：全站視覺、桌機／手機響應式版面。
 - `app.js`：首頁統計、時間軸、賽事卡、排行榜、賽事詳情、辯論總覽及搜尋結果。
+- `data/event-metadata.csv`：未來賽事的可選基本資訊來源；賽事詳情會顯示已填的主辦單位與地點，日後可直接作為地圖資料。
 - `js/interactions.js`：導覽、按鈕、篩選與使用者操作。
 - `js/personal-records.js`：使用者個人成績、實際平均分數與 CSV 備份；雷達圖和進步圖以緊湊雙欄預覽呈現並可放大，圖表內才依各欄滿分換算比例。資料只存在該瀏覽器的 `localStorage`，不可當成公開資料或後台資料。
 - `js/core.js`：不可見的共用資料處理層。

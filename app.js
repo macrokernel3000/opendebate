@@ -49,13 +49,14 @@ const els = {
 };
 
 function eventSummaries() {
+  const metadata = window.DEBATE_PUBLIC_DATA?.eventMetadata || {};
   const names = unique([...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName), ...topics.map((item) => item.competitionName)]);
   return names.map((name) => {
     const eventRecords = records.filter((item) => item.competitionName === name);
     const eventHonors = honors.filter((item) => item.competitionName === name);
     const dates = unique([...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
     const eventTopics = topics.filter((item) => item.competitionName === name);
-    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "" };
+    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "", metadata: metadata[name] || {} };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
@@ -213,6 +214,8 @@ function renderEvent(name) {
       }).join("")}</div>
     </section>`).join("");
   const eventHonors = [...event.honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
+  const metadata = event.metadata || {};
+  const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
   const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
   els.eventDetail.innerHTML = `
     <div class="event-summary">
@@ -220,6 +223,7 @@ function renderEvent(name) {
       <div class="event-summary-count"><span class="count-chip">${event.records.length} 場比賽</span><span class="count-chip">${event.honors.length} 筆榮譽</span></div>
     </div>
     ${topicSection}
+    ${metadataSection}
     <div class="event-content-grid">
       <div><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
       <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? eventHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("") : "<p>尚無公開榮譽。</p>"}</aside>

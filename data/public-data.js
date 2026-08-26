@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-26T13:40:59",
+  "generatedAt": "2026-08-26T14:32:31",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2517,7 +2517,7 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-e225d409aefb"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 1,
@@ -2539,10 +2539,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s120",
         "negative": "s029"
       },
-      "id": "match-f9a1fff09409"
+      "id": "match-226a55297983"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 2,
@@ -2564,10 +2564,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s081"
       },
-      "id": "match-3dbd961968b5"
+      "id": "match-791645f2a6d1"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 3,
@@ -2589,10 +2589,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s163",
         "negative": "s142"
       },
-      "id": "match-531a00f209ed"
+      "id": "match-f9e74e182c9b"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 4,
@@ -2614,10 +2614,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s020",
         "negative": "s138"
       },
-      "id": "match-44bd44e82e6d"
+      "id": "match-37e2285b3082"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 5,
@@ -2639,10 +2639,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s114"
       },
-      "id": "match-6152916bbb39"
+      "id": "match-44426577522d"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 6,
@@ -2664,10 +2664,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s165",
         "negative": "s164"
       },
-      "id": "match-266d0be2251c"
+      "id": "match-c35f3e8d73da"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 7,
@@ -2689,10 +2689,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s003",
         "negative": "s166"
       },
-      "id": "match-bd29e3260e57"
+      "id": "match-ed8380d1927e"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 1,
       "venue": 8,
@@ -2714,10 +2714,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s099",
         "negative": "s121"
       },
-      "id": "match-f1709b3240b0"
+      "id": "match-d0acc24af3f2"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 1,
@@ -2739,10 +2739,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s029",
         "negative": "s071"
       },
-      "id": "match-24b9e2f00479"
+      "id": "match-4f1f7d21e3f4"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 2,
@@ -2764,10 +2764,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s081",
         "negative": "s046"
       },
-      "id": "match-f3daf548e855"
+      "id": "match-b44dafc26d49"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 3,
@@ -2789,10 +2789,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s142",
         "negative": "s140"
       },
-      "id": "match-d13b0a7a4511"
+      "id": "match-46947bde426f"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 4,
@@ -2814,10 +2814,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s138",
         "negative": "s167"
       },
-      "id": "match-1d3d49cca8ee"
+      "id": "match-e09402dfcd91"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 5,
@@ -2839,10 +2839,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s085",
         "negative": "s049"
       },
-      "id": "match-72a2ef941702"
+      "id": "match-5c089c964df4"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 6,
@@ -2864,10 +2864,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s063",
         "negative": "s165"
       },
-      "id": "match-fd62a0061e23"
+      "id": "match-e0b6f22deb9c"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 7,
@@ -2889,10 +2889,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s056",
         "negative": "s003"
       },
-      "id": "match-2a9ddafb96e3"
+      "id": "match-bf3310f226d0"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 2,
       "venue": 8,
@@ -2914,10 +2914,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s121",
         "negative": "s099"
       },
-      "id": "match-40afa4d10f1f"
+      "id": "match-b066af3511cb"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 1,
@@ -2939,10 +2939,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s071",
         "negative": "s120"
       },
-      "id": "match-db81268acdf8"
+      "id": "match-b89cbbb38168"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 2,
@@ -2964,10 +2964,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s046",
         "negative": "s153"
       },
-      "id": "match-9315e3b4d734"
+      "id": "match-d494244acc55"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 3,
@@ -2989,10 +2989,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s140",
         "negative": "s163"
       },
-      "id": "match-a17fb63d4416"
+      "id": "match-9448a709c506"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 4,
@@ -3014,10 +3014,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s167",
         "negative": "s020"
       },
-      "id": "match-c4289241bec1"
+      "id": "match-b7a82ce679fd"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 5,
@@ -3039,10 +3039,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s114",
         "negative": "s085"
       },
-      "id": "match-028c21694b0a"
+      "id": "match-0436bc24dbb8"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 6,
@@ -3064,10 +3064,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s164",
         "negative": "s063"
       },
-      "id": "match-76d099ec45a6"
+      "id": "match-d2bc3e03329c"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 3,
       "venue": 7,
@@ -3089,10 +3089,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s166",
         "negative": "s056"
       },
-      "id": "match-9f679bdbd9f7"
+      "id": "match-e0333abcc507"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 4,
       "venue": 1,
@@ -3114,10 +3114,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s029",
         "negative": "s153"
       },
-      "id": "match-c8c40be066a2"
+      "id": "match-720b68819b50"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 4,
       "venue": 2,
@@ -3139,10 +3139,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s163",
         "negative": "s020"
       },
-      "id": "match-222c62c473c1"
+      "id": "match-61995c646e5e"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 4,
       "venue": 3,
@@ -3164,10 +3164,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s063"
       },
-      "id": "match-cc42a9493825"
+      "id": "match-2494fff861d6"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-25",
       "period": 4,
       "venue": 4,
@@ -3189,10 +3189,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s056",
         "negative": "s121"
       },
-      "id": "match-349181c6e75b"
+      "id": "match-eadd8d2e5188"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-26",
       "period": 1,
       "venue": "",
@@ -3214,10 +3214,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s056"
       },
-      "id": "match-4fdb7223cc66"
+      "id": "match-018e5a08f7a8"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-26",
       "period": 1,
       "venue": "",
@@ -3239,10 +3239,10 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s020"
       },
-      "id": "match-d0f2d4caab65"
+      "id": "match-a905881a38b2"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-26",
       "period": 2,
       "venue": "",
@@ -3264,7 +3264,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s020",
         "negative": "s049"
       },
-      "id": "match-45a2b21ee767"
+      "id": "match-f40b5746736c"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -28015,7 +28015,7 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-7b89bf7ebbc6"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "冠軍",
       "recipient": "南大附中",
@@ -28023,10 +28023,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s020",
-      "id": "honor-3b768ab920ce"
+      "id": "honor-660f52a3a335"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "亞軍",
       "recipient": "康橋國際學校",
@@ -28034,10 +28034,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s049",
-      "id": "honor-55f999d04a1f"
+      "id": "honor-dc625ba0465b"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "季軍",
       "recipient": "彰化高中",
@@ -28045,10 +28045,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s056",
-      "id": "honor-95b38e457f31"
+      "id": "honor-e5bd92708434"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "季軍",
       "recipient": "高雄女中",
@@ -28056,10 +28056,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "team",
       "note": "",
       "teamId": "s153",
-      "id": "honor-5c63a1c52656"
+      "id": "honor-045558f1036f"
     },
     {
-      "competitionName": "2026年司改盃全國高中職辯論比賽",
+      "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "全程最佳辯士",
       "recipient": "高偉辰",
@@ -28067,7 +28067,7 @@ window.DEBATE_PUBLIC_DATA = {
       "honorType": "player",
       "note": "",
       "teamId": "s020",
-      "id": "honor-4fa35f74acec"
+      "id": "honor-2eb68c556dfb"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -30984,6 +30984,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "2026司改盃全國高中職辯論比賽",
+      "topic": "我國代理孕母應合法化",
+      "explanation": ""
+    },
+    {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
       "topic": "路見不平，應拔刀相助/明哲保身",
       "explanation": ""
@@ -31159,5 +31164,6 @@ window.DEBATE_PUBLIC_DATA = {
     "introTitle": "台灣高中辯論戰績資料庫",
     "introParagraph1": "本站持續整理高中公開資訊，包含歷屆賽事、公開榮譽及辯題。",
     "introParagraph2": "你可以依賽事名稱與年份查找比賽，也可以搜尋學校或選手，回顧已收錄的辯論紀錄。"
-  }
+  },
+  "eventMetadata": {}
 };
