@@ -2,6 +2,8 @@
 
 後續 AI 或新維護者請先閱讀 [`ARCHITECTURE.md`](ARCHITECTURE.md)；該文件說明載入順序、資料流、SEO／AI 搜尋入口與安全修改規則。
 
+本機工作請直接使用既有 repository，不另建重複 clone；Codex 協作規則見 [AGENTS.md](AGENTS.md)。
+
 這是純公開查詢網站。網站可直接雙擊 `index.html` 開啟，不需要網路或額外伺服器。
 
 ## 首頁內容
