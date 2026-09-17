@@ -42,7 +42,7 @@
 - `topics`：賽事辯題與說明。
 - `generatedAt`：資料檔產生時間；首頁「上次修改」以此為唯一依據。
 - `siteContent`：由 `data/site-content.csv` 產生，控制 Banner 下方的英文小標、中文標題與兩段網站介紹。
-- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存未來賽事的主辦單位、舉辦地點與備註；歷史賽事可不回填。
+- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、舉辦地點、備註與選填的開始日期／結束日期（YYYY-MM-DD）；歷史賽事可不回填。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
 
 賽事數量不是固定設定值。`app.js` 會合併 `records`、`honors`、`topics` 中的賽事名稱後去重計算，首頁狀態列與統計區都使用這個結果。
 

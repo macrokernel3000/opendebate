@@ -1,10 +1,11 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-08-26T19:20:57",
+  "generatedAt": "2026-09-17T10:59:51",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
     "public-data-2026司改盃全國高中職辯論比賽.csv",
+    "public-data-2026西灣盃全國高中職辯論賽.csv",
     "public-data-吊嘎盃全國高中職辯論比賽.csv",
     "public-data-火雞盃全國高中職辯論比賽.csv",
     "public-data-火雞肉飯盃全國高中職辯論比賽.csv",
@@ -754,7 +755,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s002",
       "type": "s",
       "name": "中信高中",
-      "aliases": ""
+      "aliases": "中信國際高中"
     },
     {
       "code": "s003",
@@ -778,7 +779,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s006",
       "type": "s",
       "name": "中山女高",
-      "aliases": ""
+      "aliases": "中山女中"
     },
     {
       "code": "s007",
@@ -1546,7 +1547,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s146",
       "type": "s",
       "name": "陽交附中",
-      "aliases": ""
+      "aliases": "陽明交大附中"
     },
     {
       "code": "s147",
@@ -1654,6 +1655,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s167",
       "type": "s",
       "name": "普台高中",
+      "aliases": ""
+    },
+    {
+      "code": "s168",
+      "type": "s",
+      "name": "文山高中",
       "aliases": ""
     }
   ],
@@ -3265,6 +3272,606 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s049"
       },
       "id": "match-f40b5746736c"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "臺中二中",
+        "negative": "華江高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中二中",
+      "note": "小循環甲組第一場；晉級：臺中二中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s121",
+        "negative": "s133"
+      },
+      "id": "match-542861ec0b81"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "華江高中",
+        "negative": "臺中二中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "華江高中",
+      "note": "小循環甲組第二場（互換持方）；晉級：臺中二中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s133",
+        "negative": "s121"
+      },
+      "id": "match-c80a275fee02"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "三民高中",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "屏東女中",
+      "note": "小循環乙組第一場；晉級：屏東女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s001",
+        "negative": "s041"
+      },
+      "id": "match-e267607df274"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "三民高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "三民高中",
+      "note": "小循環乙組第二場（互換持方）；晉級：屏東女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s001"
+      },
+      "id": "match-df0b38663cee"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "嘉義高中",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "嘉義高中",
+      "note": "小循環丙組第一場；晉級：嘉義高中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s033",
+        "negative": "s157"
+      },
+      "id": "match-30114daa9fd0"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "嘉義高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "鳳新高中",
+      "note": "小循環丙組第二場（互換持方）；晉級：嘉義高中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s033"
+      },
+      "id": "match-a73cf6359464"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "陽明交大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "師大附中",
+      "note": "小循環丁組第一場；晉級：師大附中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s146"
+      },
+      "id": "match-fb1ed82eea43"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "陽明交大附中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "陽明交大附中",
+      "note": "小循環丁組第二場（互換持方）；晉級：師大附中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s146",
+        "negative": "s047"
+      },
+      "id": "match-0354c48626b9"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "文山高中",
+        "negative": "中山女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女中",
+      "note": "小循環戊組第一場；晉級：中山女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s168",
+        "negative": "s006"
+      },
+      "id": "match-dad41925ae32"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "中山女中",
+        "negative": "文山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山女中",
+      "note": "小循環戊組第二場（互換持方）；晉級：中山女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s168"
+      },
+      "id": "match-40d557108936"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "臺南女中",
+        "negative": "德光高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南女中",
+      "note": "小循環己組第一場；晉級：臺南女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s127",
+        "negative": "s061"
+      },
+      "id": "match-6ca3081bab4a"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "德光高中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南女中",
+      "note": "小循環己組第二場（互換持方）；晉級：臺南女中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s061",
+        "negative": "s127"
+      },
+      "id": "match-35a42887a035"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "中信國際高中",
+        "negative": "前鎮高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中信國際高中",
+      "note": "小循環庚組第一場；晉級：中信國際高中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s002",
+        "negative": "s015"
+      },
+      "id": "match-c8ce3a6e551f"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "前鎮高中",
+        "negative": "中信國際高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中信國際高中",
+      "note": "小循環庚組第二場（互換持方）；晉級：中信國際高中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s002"
+      },
+      "id": "match-0ba68d60bcc1"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "臺南二中",
+        "negative": "東山高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "東山高中",
+      "note": "小循環辛組第一場；晉級：臺南二中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s126",
+        "negative": "s088"
+      },
+      "id": "match-f7dc0311fbac"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "東山高中",
+        "negative": "臺南二中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南二中",
+      "note": "小循環辛組第二場（互換持方）；晉級：臺南二中（依賽程圖）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s088",
+        "negative": "s126"
+      },
+      "id": "match-42f656ee2a18"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "臺中二中",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "屏東女中",
+      "note": "八強賽（甲對乙）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s121",
+        "negative": "s041"
+      },
+      "id": "match-c87f5c279a1f"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "嘉義高中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "師大附中",
+      "note": "八強賽（丙對丁）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s033",
+        "negative": "s047"
+      },
+      "id": "match-0935365711d1"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "中山女中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南女中",
+      "note": "八強賽（戊對己）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s127"
+      },
+      "id": "match-1b82fe82f778"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "中信國際高中",
+        "negative": "臺南二中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中信國際高中",
+      "note": "八強賽（庚對辛）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s002",
+        "negative": "s126"
+      },
+      "id": "match-eb3938de3424"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "屏東女中",
+      "note": "四強賽（民主對臺灣）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s047"
+      },
+      "id": "match-078b73798c10"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "臺南女中",
+        "negative": "中信國際高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南女中",
+      "note": "四強賽（韌性對教育）",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s127",
+        "negative": "s002"
+      },
+      "id": "match-4d4faab3077a"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 4
+      },
+      "winner": "臺南女中",
+      "note": "冠亞賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s127"
+      },
+      "id": "match-61573038fa92"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "中信國際高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 4
+      },
+      "winner": "中信國際高中",
+      "note": "季殿賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s002"
+      },
+      "id": "match-6d0822750107"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
@@ -28070,6 +28677,61 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-2eb68c556dfb"
     },
     {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "臺南女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s127",
+      "id": "honor-fd9f1bac7443"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "屏東女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s041",
+      "id": "honor-6aea4a2aa54b"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "中信國際高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s002",
+      "id": "honor-dbc9b6b510d9"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "honorName": "殿軍",
+      "recipient": "師大附中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s047",
+      "id": "honor-ec7627ecfddf"
+    },
+    {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "matchDate": "",
+      "honorName": "最佳辯士",
+      "recipient": "蘇歆蕾",
+      "team": "中信國際高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s002",
+      "id": "honor-41eaad0dc5e9"
+    },
+    {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
       "matchDate": "2026-04-19",
       "honorName": "冠軍",
@@ -30989,6 +31651,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "2026西灣盃全國高中職辯論賽",
+      "topic": "我國政府是否應在國際運動會上正名",
+      "explanation": ""
+    },
+    {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
       "topic": "路見不平，應拔刀相助/明哲保身",
       "explanation": ""
@@ -31165,5 +31832,13 @@ window.DEBATE_PUBLIC_DATA = {
     "introParagraph1": "本站持續整理高中公開資訊，包含歷屆賽事、公開榮譽及辯題。",
     "introParagraph2": "你可以依賽事名稱與年份查找比賽，也可以搜尋學校或選手，回顧已收錄的辯論紀錄。"
   },
-  "eventMetadata": {}
+  "eventMetadata": {
+    "2026西灣盃全國高中職辯論賽": {
+      "startDate": "2026-09-11",
+      "endDate": "2026-09-14",
+      "organizer": "",
+      "location": "",
+      "note": "賽期：2026/9/11–9/14。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。"
+    }
+  }
 };

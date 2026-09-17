@@ -54,7 +54,8 @@ function eventSummaries() {
   return names.map((name) => {
     const eventRecords = records.filter((item) => item.competitionName === name);
     const eventHonors = honors.filter((item) => item.competitionName === name);
-    const dates = unique([...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
+    const eventMetadata = metadata[name] || {};
+    const dates = unique([eventMetadata.startDate, eventMetadata.endDate, ...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
     const eventTopics = topics.filter((item) => item.competitionName === name);
     return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "", metadata: metadata[name] || {} };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
@@ -219,7 +220,7 @@ function renderEvent(name) {
   const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
   els.eventDetail.innerHTML = `
     <div class="event-summary">
-      <div><h2>${escapeHtml(event.name)}</h2><p>${event.dates.map(formatDate).join("、")}</p></div>
+      <div><h2>${escapeHtml(event.name)}</h2><p>${event.metadata.startDate && event.metadata.endDate ? `${formatDate(event.metadata.startDate)}–${formatDate(event.metadata.endDate)}` : event.dates.map(formatDate).join("、")}</p></div>
       <div class="event-summary-count"><span class="count-chip">${event.records.length} 場比賽</span><span class="count-chip">${event.honors.length} 筆榮譽</span></div>
     </div>
     ${topicSection}

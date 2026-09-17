@@ -171,6 +171,8 @@ def load_event_metadata():
             raise SystemExit(f"{EVENT_METADATA_PATH.name} 必須包含盃賽欄位")
         return {
             clean(row.get("盃賽")): {
+                "startDate": normalize_date(row.get("開始日期")),
+                "endDate": normalize_date(row.get("結束日期")),
                 "organizer": clean(row.get("主辦單位")),
                 "location": clean(row.get("舉辦地點")),
                 "note": clean(row.get("備註")),
