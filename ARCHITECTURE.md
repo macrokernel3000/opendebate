@@ -50,6 +50,7 @@
 
 - `index.html`：語意結構、SEO metadata、結構化資料與畫面容器。
 - `styles.css`：全站視覺、桌機／手機響應式版面。
+- `assets/debate-banner.webp`：首頁使用的壓縮主圖（1813×868）；`assets/debate-banner.png` 保留為原圖與社群分享預覽。換圖時同步產生 WebP，避免首頁再次直接下載大型 PNG。效能量測見 `docs/首頁圖片效能.md`。
 - `app.js`：首頁統計、時間軸、賽事卡、排行榜、賽事詳情、辯論總覽及搜尋結果。
 - `data/event-metadata.csv`：未來賽事的可選基本資訊來源；賽事詳情會顯示已填的主辦單位與地點，日後可直接作為地圖資料。
 - `js/interactions.js`：導覽、按鈕、篩選與使用者操作。
