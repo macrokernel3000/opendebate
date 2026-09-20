@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-17T10:59:51",
+  "generatedAt": "2026-09-20T19:53:23",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -31828,7 +31828,7 @@ window.DEBATE_PUBLIC_DATA = {
   ],
   "siteContent": {
     "introEyebrow": "TAIWAN HIGH SCHOOL DEBATE DATABASE",
-    "introTitle": "台灣高中辯論戰績資料庫",
+    "introTitle": "台灣高中辯論公開網",
     "introParagraph1": "本站持續整理高中公開資訊，包含歷屆賽事、公開榮譽及辯題。",
     "introParagraph2": "你可以依賽事名稱與年份查找比賽，也可以搜尋學校或選手，回顧已收錄的辯論紀錄。"
   },
