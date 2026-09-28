@@ -520,6 +520,24 @@ def event_names(records, honors, topics):
     }, key=lambda name: name.lower())
 
 
+def validate_best_debater_categories(records, honors):
+    match_counts = {}
+    for record in records:
+        match_counts[record["competitionName"]] = match_counts.get(record["competitionName"], 0) + 1
+    best_names = {"單場最佳辯士", "單場最佳", "最佳辯士"}
+    by_event = {}
+    for honor in honors:
+        if honor["honorName"].strip() in best_names:
+            by_event.setdefault(honor["competitionName"], []).append(honor)
+    for competition, event_honors in by_event.items():
+        count = len(event_honors)
+        if 1 <= count <= 4 and match_counts.get(competition, 0) > count:
+            warn(
+                f"分類提醒：{competition} 只有 {count} 筆單場／最佳辯士類榮譽、"
+                f"但有 {match_counts.get(competition, 0)} 場戰績；請依賽事規則確認是否應列為全程最佳辯士。"
+            )
+
+
 def write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source):
     lines = [
         f"更新時間：{datetime.now().isoformat(timespec='seconds')}",
@@ -557,6 +575,7 @@ def build():
     records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
+    validate_best_debater_categories(records, honors)
     entities, lookup = build_entities(records, honors)
     attendance = attach_entities(records, honors, lookup)
     site_content = load_site_content()
