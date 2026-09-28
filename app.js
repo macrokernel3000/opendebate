@@ -40,6 +40,8 @@ const els = {
   overviewSchoolCount: document.querySelector("#overviewSchoolCount"),
   overviewTopicCount: document.querySelector("#overviewTopicCount"),
   overviewSchoolFilter: document.querySelector("#overviewSchoolFilter"),
+  overviewEntitySortBy: document.querySelector("#overviewEntitySortBy"),
+  overviewEntitySortDirection: document.querySelector("#overviewEntitySortDirection"),
   overviewSchoolMeta: document.querySelector("#overviewSchoolMeta"),
   overviewSchoolGrid: document.querySelector("#overviewSchoolGrid"),
   overviewSchoolDetail: document.querySelector("#overviewSchoolDetail"),
@@ -356,9 +358,9 @@ function renderEvent(name) {
 }
 
 function renderOverview() {
-  const schools = store.entities.filter((entity) => entity.type === "s").sort((a, b) => a.name.localeCompare(b.name, "zh-Hant"));
+  const teams = store.entities;
   els.overviewEventCount.textContent = events.length;
-  els.overviewSchoolCount.textContent = schools.length;
+  els.overviewSchoolCount.textContent = teams.length;
   els.overviewTopicCount.textContent = topics.length;
   renderOverviewSchools();
   renderOverviewTopics();
@@ -376,7 +378,9 @@ function renderOverviewTopics() {
 
 function renderOverviewSchools() {
   const needle = normalize(els.overviewSchoolFilter.value);
-  const schools = store.entities.filter((entity) => entity.type === "s" && [entity.name, ...(entity.aliases || "").split("|")].some((name) => normalize(name).includes(needle)))
+  const sortBy = els.overviewEntitySortBy.value;
+  const direction = els.overviewEntitySortDirection.value === "asc" ? 1 : -1;
+  const teams = store.entities.filter((entity) => [entity.name, ...(entity.aliases || "").split("|")].some((name) => normalize(name).includes(needle)))
     .map((entity) => {
       const schoolRecords = records.filter((item) => item.teamIds?.affirmative === entity.code || item.teamIds?.negative === entity.code);
       const schoolHonors = honors.filter((item) => item.teamId === entity.code);
@@ -384,14 +388,30 @@ function renderOverviewSchools() {
       const eventCount = unique(schoolRecords.map((item) => item.competitionName)).length;
       return { entity, games: schoolRecords.length, wins, honors: schoolHonors.length, eventCount };
     })
-    .sort((a, b) => b.games - a.games || a.entity.name.localeCompare(b.entity.name, "zh-Hant"));
-  els.overviewSchoolMeta.textContent = `目前顯示 ${schools.length} 所已登錄的學校`;
-  els.overviewSchoolGrid.innerHTML = schools.length ? schools.map(({ entity, games, wins, honors: awardCount, eventCount }) => `
-    <button class="overview-school-card${selectedOverviewEntityId === entity.code ? " is-selected" : ""}" type="button" data-overview-entity-id="${escapeHtml(entity.code)}">
+    .sort((a, b) => {
+      const comparison = sortBy === "name"
+        ? a.entity.name.localeCompare(b.entity.name, "zh-Hant")
+        : a[sortBy] - b[sortBy];
+      return comparison * direction || a.entity.name.localeCompare(b.entity.name, "zh-Hant");
+    });
+  const schools = teams.filter((item) => item.entity.type === "s");
+  const groups = teams.filter((item) => item.entity.type !== "s");
+  els.overviewSchoolMeta.textContent = `目前顯示 ${schools.length} 所學校、${groups.length} 支組隊`;
+  const renderCards = (items, type) => items.length ? items.map(({ entity, games, wins, honors: awardCount, eventCount }) => `
+    <button class="overview-school-card ${type}${selectedOverviewEntityId === entity.code ? " is-selected" : ""}" type="button" data-overview-entity-id="${escapeHtml(entity.code)}">
       <span class="overview-school-code">${escapeHtml(entity.code)}</span><strong>${escapeHtml(entity.name)}</strong>
-      <small>${eventCount} 個賽事 · ${games} 場 · ${wins} 勝 · ${awardCount} 項榮譽</small>
-    </button>`).join("") : '<div class="event-finder-empty">沒有符合的學校。</div>';
-  if (selectedOverviewEntityId && !schools.some((item) => item.entity.code === selectedOverviewEntityId)) selectedOverviewEntityId = "";
+      <small>${games} 場 · ${wins} 勝 · ${eventCount} 個賽事 · ${awardCount} 項榮譽</small>
+    </button>`).join("") : '<p class="overview-empty-group">目前沒有符合項目。</p>';
+  els.overviewSchoolGrid.innerHTML = `
+    <section class="overview-entity-group school-group" aria-labelledby="overviewSchoolGroupTitle">
+      <h3 id="overviewSchoolGroupTitle">學校 <span>${schools.length}</span></h3>
+      <div class="overview-entity-list">${renderCards(schools, "school")}</div>
+    </section>
+    <section class="overview-entity-group team-group" aria-labelledby="overviewTeamGroupTitle">
+      <h3 id="overviewTeamGroupTitle">組隊 <span>${groups.length}</span></h3>
+      <div class="overview-entity-list">${renderCards(groups, "team")}</div>
+    </section>`;
+  if (selectedOverviewEntityId && !teams.some((item) => item.entity.code === selectedOverviewEntityId)) selectedOverviewEntityId = "";
   els.overviewSchoolDetail.innerHTML = selectedOverviewEntityId ? renderEntityDetail(store.entityById.get(selectedOverviewEntityId), "overviewEntityDetail") : "";
 }
 

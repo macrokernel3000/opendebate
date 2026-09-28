@@ -134,14 +134,26 @@ button { color: inherit; }
 .overview-toolbar h2 { margin: 0; font-size: 25px; }
 .overview-toolbar p { margin: 7px 0 0; color: var(--muted); }
 .overview-filter { width: min(320px, 100%); display: grid; gap: 6px; color: var(--muted); font-size: 12px; font-weight: 850; }
-.overview-filter input { min-height: 46px; border: 2px solid var(--ink); padding: 0 12px; background: white; }
+.overview-filter input, .overview-filter select { min-height: 46px; width: 100%; border: 2px solid var(--ink); border-radius: 12px; padding: 0 12px; background: white; color: var(--ink); font: inherit; }
+.overview-team-controls { width: min(700px, 100%); display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(132px, .8fr)); gap: 10px; }
 .overview-meta { margin: 16px 0 10px; color: var(--muted); font-size: 12px; font-weight: 800; }
-.overview-school-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 9px; max-height: 430px; overflow-y: auto; padding: 3px 4px 14px 0; }
-.overview-school-card { display: grid; gap: 5px; min-height: 106px; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 14px; background: white; cursor: pointer; text-align: left; }
-.overview-school-card:hover, .overview-school-card.is-selected { border-color: var(--green); background: var(--soft); box-shadow: 3px 3px 0 var(--yellow); }
-.overview-school-card strong { font-size: 15px; }
-.overview-school-card small, .overview-school-code { color: var(--muted); font-size: 11px; line-height: 1.5; }
+.overview-entity-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
+.overview-entity-group { min-width: 0; border: 1px solid var(--line); border-radius: 18px; padding: 14px; }
+.overview-entity-group.school-group { border-color: #c9dfd4; background: #eff7f2; }
+.overview-entity-group.team-group { border-color: #ead99e; background: #fff8e2; }
+.overview-entity-group > h3 { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; font-size: 16px; }
+.school-group > h3 { color: var(--green); }
+.team-group > h3 { color: #80620f; }
+.overview-entity-group > h3 span { display: grid; min-width: 28px; height: 28px; place-items: center; border-radius: 50%; background: rgba(255,255,255,.8); font-size: 12px; }
+.overview-entity-list { display: grid; gap: 7px; }
+.overview-school-card { display: grid; gap: 4px; width: 100%; min-width: 0; min-height: 82px; border: 1px solid rgba(29, 73, 60, .14); border-left: 4px solid var(--green); border-radius: 12px; padding: 10px 11px; background: rgba(255,255,255,.9); color: var(--ink); cursor: pointer; text-align: left; }
+.overview-school-card.team { border-left-color: #d5a92c; }
+.overview-school-card:hover, .overview-school-card.is-selected { border-color: var(--green); box-shadow: 2px 2px 0 rgba(24, 95, 72, .18); }
+.overview-school-card.team:hover, .overview-school-card.team.is-selected { border-color: #c69a20; box-shadow: 2px 2px 0 rgba(198, 154, 32, .2); }
+.overview-school-card strong { overflow-wrap: anywhere; font-size: 14px; line-height: 1.35; }
+.overview-school-card small, .overview-school-code { color: var(--muted); font-size: 11px; line-height: 1.45; }
 .overview-school-code { color: var(--coral); font-weight: 900; }
+.overview-empty-group { margin: 4px; color: var(--muted); font-size: 13px; }
 #overviewSchoolDetail .entity-detail { margin-top: 36px; }
 .overview-topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
 .overview-topic-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 18px; background: white; color: var(--ink); cursor: pointer; font: inherit; text-align: left; }
@@ -421,7 +433,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .event-finder-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .overview-school-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .overview-entity-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-honor-list { grid-template-columns: 1fr; }
   .match-row { grid-template-columns: 58px minmax(0, 1fr) 62px minmax(0, 1fr); }
   .match-note { grid-column: 2 / -1; }
@@ -544,10 +556,15 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .entity-grid { grid-template-columns: 1fr; }
   .overview-toolbar { display: grid; align-items: start; }
   .overview-filter { width: 100%; }
-  .overview-school-grid, .overview-topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .overview-school-grid { max-height: none; gap: 8px; overflow: visible; }
-  .overview-school-card { min-height: 84px; padding: 10px; }
-  .overview-school-card strong { font-size: 13px; line-height: 1.35; }
+  .overview-team-controls { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .overview-team-controls > .overview-filter:first-child { grid-column: 1 / -1; }
+  .overview-entity-columns, .overview-topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .overview-entity-group { padding: 8px; border-radius: 14px; }
+  .overview-entity-group > h3 { margin-bottom: 7px; font-size: 14px; }
+  .overview-entity-list { gap: 6px; }
+  .overview-school-card { min-height: 76px; padding: 8px; }
+  .overview-school-card strong { font-size: 12px; line-height: 1.35; }
+  .overview-school-card small, .overview-school-code { font-size: 10px; line-height: 1.35; }
   .overview-topic-list { gap: 8px; margin-top: 14px; }
   .overview-topic-card { border-left-width: 4px; padding: 10px; }
   .overview-topic-card strong { font-size: 13px; line-height: 1.4; }

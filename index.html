@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260929004606" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260929005525" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -166,12 +166,12 @@
       <div class="page-intro page-shell">
         <p class="kicker">DEBATE OVERVIEW</p>
         <h1>辯論總覽</h1>
-        <p>瀏覽目前已登錄的賽事、學校與辯題，從公開資料看見台灣辯論的發展軌跡。</p>
+        <p>瀏覽目前已登錄的賽事、學校與組隊、辯題，從公開資料看見台灣辯論的發展軌跡。</p>
       </div>
       <div class="page-shell overview-page">
         <div class="overview-tabs" role="tablist" aria-label="總覽分類">
           <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events">已登錄賽事 <span id="overviewEventCount"></span></button>
-          <button id="overviewSchoolsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="schools">已登錄學校 <span id="overviewSchoolCount"></span></button>
+          <button id="overviewSchoolsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="schools">已登錄隊伍 <span id="overviewSchoolCount"></span></button>
           <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics">已收錄辯題 <span id="overviewTopicCount"></span></button>
         </div>
         <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
@@ -189,11 +189,15 @@
         </section>
         <section id="overviewSchoolsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewSchoolsTab">
           <div class="overview-toolbar">
-            <div><h2>學校紀錄</h2><p>點選學校，查看參加賽事、公開榮譽與勝場狀態。</p></div>
-            <label class="overview-filter"><span>篩選學校</span><input id="overviewSchoolFilter" type="search" autocomplete="off" placeholder="輸入學校名稱" /></label>
+            <div><h2>隊伍紀錄</h2><p>學校與組隊分區呈現，預設依參賽場數由多到少排列。</p></div>
+            <div class="overview-team-controls">
+              <label class="overview-filter"><span>篩選隊伍</span><input id="overviewSchoolFilter" type="search" autocomplete="off" placeholder="輸入學校或隊伍名稱" /></label>
+              <label class="overview-filter overview-sort-filter"><span>排序項目</span><select id="overviewEntitySortBy"><option value="games">參賽場數</option><option value="wins">勝場</option><option value="honors">榮譽數</option><option value="events">參賽賽事</option><option value="name">名稱</option></select></label>
+              <label class="overview-filter overview-sort-filter"><span>排序方向</span><select id="overviewEntitySortDirection"><option value="desc">由多到少</option><option value="asc">由少到多</option></select></label>
+            </div>
           </div>
           <p id="overviewSchoolMeta" class="overview-meta" aria-live="polite"></p>
-          <div id="overviewSchoolGrid" class="overview-school-grid"></div>
+          <div id="overviewSchoolGrid" class="overview-entity-columns"></div>
           <div id="overviewSchoolDetail"></div>
         </section>
         <section id="overviewTopicsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTopicsTab">
@@ -348,13 +352,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260929004606" data-public-data-script></script>
+  <script src="data/public-data.js?v=20260929005525" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20260929004606" data-versioned-asset></script>
-  <script src="js/core.js?v=20260929004606" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260929004606" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260929004606" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20260929004606" data-versioned-asset></script>
-  <script src="app.js?v=20260929004606" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20260929005525" data-versioned-asset></script>
+  <script src="js/core.js?v=20260929005525" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260929005525" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260929005525" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20260929005525" data-versioned-asset></script>
+  <script src="app.js?v=20260929005525" data-versioned-asset></script>
 </body>
 </html>

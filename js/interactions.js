@@ -119,6 +119,8 @@
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
     els.overviewSchoolFilter.addEventListener("input", renderOverviewSchools);
+    els.overviewEntitySortBy.addEventListener("change", renderOverviewSchools);
+    els.overviewEntitySortDirection.addEventListener("change", renderOverviewSchools);
     els.overviewTopicFilter.addEventListener("input", renderOverviewTopics);
     els.overviewTopicList.addEventListener("click", openTopicEvent);
     els.overviewSchoolGrid.addEventListener("click", (event) => {
