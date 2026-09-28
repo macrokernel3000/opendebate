@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T01:43:04",
+  "generatedAt": "2026-09-29T01:45:27",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -993,6 +993,12 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": "北市大同"
     },
     {
+      "code": "s045",
+      "type": "s",
+      "name": "市立復興",
+      "aliases": ""
+    },
+    {
       "code": "s046",
       "type": "s",
       "name": "市立東山",
@@ -1059,10 +1065,16 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
+      "code": "s058",
+      "type": "s",
+      "name": "復興實中",
+      "aliases": ""
+    },
+    {
       "code": "s059",
       "type": "s",
       "name": "復興高中",
-      "aliases": "市立復興|復興實中"
+      "aliases": ""
     },
     {
       "code": "s060",
@@ -9701,9 +9713,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s056",
-        "negative": "s059"
+        "negative": "s058"
       },
-      "id": "match-f1d8d0a35b60"
+      "id": "match-d26aab105d49"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -10100,10 +10112,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s059",
+        "affirmative": "s058",
         "negative": "s056"
       },
-      "id": "match-b2ac564bac15"
+      "id": "match-97c6931e1661"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -11150,10 +11162,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s059",
+        "affirmative": "s058",
         "negative": "s001"
       },
-      "id": "match-a83572b34200"
+      "id": "match-d697b75e83ed"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
@@ -11676,9 +11688,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s088",
-        "negative": "s059"
+        "negative": "s058"
       },
-      "id": "match-c1c1d22b2012"
+      "id": "match-a2ce4458aca6"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
@@ -23525,10 +23537,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s059",
+        "affirmative": "s045",
         "negative": "s080"
       },
-      "id": "match-901511ca52f8"
+      "id": "match-4c8690c3611e"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -23876,9 +23888,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s080",
-        "negative": "s059"
+        "negative": "s045"
       },
-      "id": "match-1ea992b3902e"
+      "id": "match-2c304ff28a2c"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",

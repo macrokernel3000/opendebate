@@ -322,7 +322,7 @@ function renderEventFinder() {
     return `${yearMarker}<button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}" data-timeline-side="${side}">
       <span class="event-result-year">${escapeHtml(dateLabel)}</span>
       <strong>${escapeHtml(event.name)}</strong>
-      <small>${event.records.length} 場 · ${event.honors.length} 項榮譽${event.topics.length ? ` · ${event.topics.length} 筆辯題` : ""}</small>
+      <small>${event.teamCount} 隊 · ${event.records.length} 場 · ${event.honors.length} 榮譽</small>
     </button>`;
   }).join("");
   els.eventFinderResults.innerHTML = timelineCards || '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
