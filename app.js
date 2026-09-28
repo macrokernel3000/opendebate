@@ -29,6 +29,9 @@ const els = {
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
   honorRangeToggle: document.querySelector("#honorRangeToggle"),
   honorLeaderboardTitle: document.querySelector("#honorLeaderboardTitle"),
+  gamesLeaderboardTitle: document.querySelector("#gamesLeaderboardTitle"),
+  winsLeaderboardTitle: document.querySelector("#winsLeaderboardTitle"),
+  leaderboardBand: document.querySelector(".leaderboard-band"),
   mobileHonorTitle: document.querySelector("#mobileHonorTitle"),
   eventSearch: document.querySelector("#eventSearch"),
   eventYear: document.querySelector("#eventYear"),
@@ -262,13 +265,12 @@ function renderLeaderboards() {
   const eventYears = new Map(events.map((event) => [event.name, (event.latestDate || "").slice(0, 4)]));
   const years = [...new Set([...eventYears.values()].filter((year) => /^\d{4}$/.test(year)))].sort();
   const recentYears = new Set(years.slice(-2));
-  const visibleHonors = honorRange === "all" ? honors : honors.filter((honor) => {
-    const year = eventYears.get(honor.competitionName) || (honor.matchDate || "").slice(0, 4);
-    return recentYears.has(year);
-  });
+  const isInRange = (item) => honorRange === "all" || recentYears.has(eventYears.get(item.competitionName) || (item.matchDate || "").slice(0, 4));
+  const visibleHonors = honors.filter(isInRange);
+  const visibleRecords = records.filter(isInRange);
   const schoolAwards = countBy(visibleHonors, (honor) => schoolIds.has(honor.teamId) ? honor.teamId : "").slice(0, 10);
-  const schoolGames = countBy(records.flatMap((record) => Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))), (id) => id).slice(0, 10);
-  const winIds = records.map((record) => {
+  const schoolGames = countBy(visibleRecords.flatMap((record) => Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))), (id) => id).slice(0, 10);
+  const winIds = visibleRecords.map((record) => {
     const winnerId = store.entityForName(record.winner)?.code;
     if (schoolIds.has(winnerId)) return winnerId;
     if (record.winner) return "";
@@ -283,11 +285,15 @@ function renderLeaderboards() {
   els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽", "項");
   els.gamesLeaderboard.innerHTML = rows(schoolGames, "已收錄公開賽果", "場");
   els.winsLeaderboard.innerHTML = rows(schoolWins, "已收錄勝場", "勝");
-  const title = honorRange === "all" ? "全年度榮譽榜" : "近年度榮譽榜";
+  const period = honorRange === "all" ? "全年度" : "近年度";
+  const title = `${period}榮譽榜`;
   if (els.honorLeaderboardTitle) els.honorLeaderboardTitle.textContent = title;
   if (els.mobileHonorTitle) els.mobileHonorTitle.textContent = title;
+  if (els.gamesLeaderboardTitle) els.gamesLeaderboardTitle.textContent = `${period}參賽場次`;
+  if (els.winsLeaderboardTitle) els.winsLeaderboardTitle.textContent = `${period}總勝場`;
+  if (els.leaderboardBand) els.leaderboardBand.dataset.range = honorRange;
   if (els.honorRangeToggle) {
-    els.honorRangeToggle.textContent = honorRange === "all" ? "切換近兩年" : "切換全年度";
+    els.honorRangeToggle.textContent = honorRange === "all" ? "目前：全部年度　切換近年度" : "目前：近兩年　切換全年";
     els.honorRangeToggle.setAttribute("aria-pressed", String(honorRange === "all"));
     els.honorRangeToggle.classList.toggle("is-all-years", honorRange === "all");
   }
