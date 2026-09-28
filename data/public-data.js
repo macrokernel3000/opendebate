@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-20T19:53:23",
+  "generatedAt": "2026-09-28T20:11:15",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -23,6 +23,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
     "public-data-第二十八屆高中菁英盃.csv",
+    "public-data-第二十屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第二十屆辯革盃全國高中職辯論比賽.csv",
     "public-data-第二屆夢箋盃.csv",
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
@@ -743,6 +744,66 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p125",
       "type": "p",
       "name": "黃山過台灣",
+      "aliases": ""
+    },
+    {
+      "code": "p126",
+      "type": "p",
+      "name": "Harve",
+      "aliases": ""
+    },
+    {
+      "code": "p127",
+      "type": "p",
+      "name": "白烏鴉辯論隊",
+      "aliases": ""
+    },
+    {
+      "code": "p128",
+      "type": "p",
+      "name": "最佳英鎊辯論隊",
+      "aliases": ""
+    },
+    {
+      "code": "p129",
+      "type": "p",
+      "name": "殘陽是香香軟軟小蛋糕",
+      "aliases": "殘陽是香香柔軟小蛋糕"
+    },
+    {
+      "code": "p130",
+      "type": "p",
+      "name": "成功口技社",
+      "aliases": ""
+    },
+    {
+      "code": "p131",
+      "type": "p",
+      "name": "誤入商業帝國的長髮男",
+      "aliases": "誤入商噎帝國的長髮男"
+    },
+    {
+      "code": "p132",
+      "type": "p",
+      "name": "大家都不想講話",
+      "aliases": ""
+    },
+    {
+      "code": "p133",
+      "type": "p",
+      "name": "衛道中學辯論社",
+      "aliases": "衛道中學辯論隊"
+    },
+    {
+      "code": "p134",
+      "type": "p",
+      "name": "竹林七賢",
+      "aliases": ""
+    },
+    {
+      "code": "p135",
+      "type": "p",
+      "name": "宮燈最佳辯士",
       "aliases": ""
     },
     {
@@ -1661,6 +1722,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s168",
       "type": "s",
       "name": "文山高中",
+      "aliases": ""
+    },
+    {
+      "code": "s169",
+      "type": "s",
+      "name": "澎湖一中",
       "aliases": ""
     }
   ],
@@ -20024,6 +20091,581 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-31c082ee668a"
     },
     {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "Harve",
+        "negative": "白烏鴉辯論隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "白烏鴉辯論隊",
+      "note": "D1-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p126",
+        "negative": "p127"
+      },
+      "id": "match-35658f3378aa"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "最佳英鎊辯論隊",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 9,
+        "negative": 0
+      },
+      "winner": "最佳英鎊辯論隊",
+      "note": "D1-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p128",
+        "negative": "s068"
+      },
+      "id": "match-8a914b3081a5"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "殘陽是香香軟軟小蛋糕"
+      },
+      "scores": {
+        "affirmative": 6.5,
+        "negative": 2.5
+      },
+      "winner": "建竹實聯隊",
+      "note": "D1-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p039",
+        "negative": "p129"
+      },
+      "id": "match-d408c694b7fd"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "成功口技社",
+        "negative": "誤入商業帝國的長髮男"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "誤入商業帝國的長髮男",
+      "note": "D1-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p130",
+        "negative": "p131"
+      },
+      "id": "match-2296c4713d03"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "世宣67",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 7.5,
+        "negative": 1.5
+      },
+      "winner": "世宣67",
+      "note": "D1-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p119",
+        "negative": "s024"
+      },
+      "id": "match-2693aec695d8"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "竹林七賢",
+        "negative": "衛道中學辯論社"
+      },
+      "scores": {
+        "affirmative": 4.5,
+        "negative": 4.5
+      },
+      "winner": "竹林七賢",
+      "note": "D1-2；總結票比數 2：1，公告判定正方勝",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p134",
+        "negative": "p133"
+      },
+      "id": "match-706a88fb4810"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "殘陽是香香軟軟小蛋糕",
+        "negative": "大家都不想講話"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "大家都不想講話",
+      "note": "D1-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p129",
+        "negative": "p132"
+      },
+      "id": "match-3d91ea802f54"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "宮燈最佳辯士",
+        "negative": "澎湖一中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 7
+      },
+      "winner": "澎湖一中",
+      "note": "D1-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p135",
+        "negative": "s169"
+      },
+      "id": "match-79239c464a82"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "大家都不想講話",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "建竹實聯隊",
+      "note": "D2-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p132",
+        "negative": "p039"
+      },
+      "id": "match-fa0b6b498482"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "最佳英鎊辯論隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "最佳英鎊辯論隊",
+      "note": "D2-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "p128"
+      },
+      "id": "match-0f2e50a1041d"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "白烏鴉辯論隊",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 2.5,
+        "negative": 6.5
+      },
+      "winner": "南山高中",
+      "note": "D2-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p127",
+        "negative": "s023"
+      },
+      "id": "match-72370b62718d"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "誤入商業帝國的長髮男",
+        "negative": "成功口技社"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "成功口技社",
+      "note": "D2-1",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p131",
+        "negative": "p130"
+      },
+      "id": "match-25d95aec2dc2"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "Harve"
+      },
+      "scores": {
+        "affirmative": 4,
+        "negative": 5
+      },
+      "winner": "Harve",
+      "note": "D2-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "p126"
+      },
+      "id": "match-c42da7d9c344"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "衛道中學辯論社",
+        "negative": "竹林七賢"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 6
+      },
+      "winner": "竹林七賢",
+      "note": "D2-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p133",
+        "negative": "p134"
+      },
+      "id": "match-d0262bd03877"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 6
+      },
+      "winner": "世宣67",
+      "note": "D2-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "p119"
+      },
+      "id": "match-21db8b68a776"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "澎湖一中",
+        "negative": "宮燈最佳辯士"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "宮燈最佳辯士",
+      "note": "D2-2",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s169",
+        "negative": "p135"
+      },
+      "id": "match-9bacea26d178"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "白烏鴉辯論隊",
+        "negative": "最佳英鎊辯論隊"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 4
+      },
+      "winner": "白烏鴉辯論隊",
+      "note": "D2-3",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p127",
+        "negative": "p128"
+      },
+      "id": "match-43c39a971900"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "陽交附中",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 6
+      },
+      "winner": "世宣67",
+      "note": "D2-3",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s146",
+        "negative": "p119"
+      },
+      "id": "match-7a344239675d"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "成功口技社",
+        "negative": "宮燈最佳辯士"
+      },
+      "scores": {
+        "affirmative": 9,
+        "negative": 0
+      },
+      "winner": "成功口技社",
+      "note": "D2-3",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p130",
+        "negative": "p135"
+      },
+      "id": "match-10d4c5c6e055"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "竹林七賢",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "建竹實聯隊",
+      "note": "D2-3",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p134",
+        "negative": "p039"
+      },
+      "id": "match-523fca62326c"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "白烏鴉辯論隊",
+        "negative": "世宣67"
+      },
+      "scores": {
+        "affirmative": 4,
+        "negative": 5
+      },
+      "winner": "世宣67",
+      "note": "D3 複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p127",
+        "negative": "p119"
+      },
+      "id": "match-d930c2b9fd48"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "成功口技社",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 8
+      },
+      "winner": "建竹實聯隊",
+      "note": "D3 複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p130",
+        "negative": "p039"
+      },
+      "id": "match-0418647fd1c0"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "世宣67",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 12
+      },
+      "winner": "建竹實聯隊",
+      "note": "D3 決賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p119",
+        "negative": "p039"
+      },
+      "id": "match-3dd00250120c"
+    },
+    {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
       "matchDate": "2025-07-25",
       "period": 1,
@@ -30228,6 +30870,303 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-d9bd44eb7197"
     },
     {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "高偉承",
+      "team": "白烏鴉辯論隊",
+      "honorType": "player",
+      "note": "D1-1",
+      "teamId": "p127",
+      "id": "honor-c85da6a4041a"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "黃忻恩",
+      "team": "最佳英鎊辯論隊",
+      "honorType": "player",
+      "note": "D1-1",
+      "teamId": "p128",
+      "id": "honor-7534624fc763"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "潘彥成",
+      "team": "成淵高中",
+      "honorType": "player",
+      "note": "D1-1",
+      "teamId": "s068",
+      "id": "honor-7348c13813db"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "D1-1",
+      "teamId": "p039",
+      "id": "honor-b39b0dda0556"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "董科男",
+      "team": "誤入商業帝國的長髮男",
+      "honorType": "player",
+      "note": "D1-1",
+      "teamId": "p131",
+      "id": "honor-1e1fcb8397bb"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "謝欣瑜",
+      "team": "南湖高中",
+      "honorType": "player",
+      "note": "D1-2",
+      "teamId": "s024",
+      "id": "honor-d486e7f47b28"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "洪棋恩",
+      "team": "竹林七賢",
+      "honorType": "player",
+      "note": "D1-2",
+      "teamId": "p134",
+      "id": "honor-aab5880148fe"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "吳翰宇",
+      "team": "大家都不想講話",
+      "honorType": "player",
+      "note": "D1-2",
+      "teamId": "p132",
+      "id": "honor-82836530a3cc"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-25",
+      "honorName": "最佳辯士",
+      "recipient": "陳廣賢",
+      "team": "澎湖一中",
+      "honorType": "player",
+      "note": "D1-2",
+      "teamId": "s169",
+      "id": "honor-719cb661421e"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "D2-1",
+      "teamId": "p039",
+      "id": "honor-2c008b1faf45"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "吳易睿",
+      "team": "最佳英鎊辯論隊",
+      "honorType": "player",
+      "note": "D2-1",
+      "teamId": "p128",
+      "id": "honor-00d23cbf5acc"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "高偉承",
+      "team": "白烏鴉辯論隊",
+      "honorType": "player",
+      "note": "D2-1",
+      "teamId": "p127",
+      "id": "honor-c0446f6968ed"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "陳羿廷",
+      "team": "成功口技社",
+      "honorType": "player",
+      "note": "D2-1",
+      "teamId": "p130",
+      "id": "honor-0147a44106c6"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "于潤萱",
+      "team": "南山高中",
+      "honorType": "player",
+      "note": "D2-2",
+      "teamId": "s023",
+      "id": "honor-54464a1fc262"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "張承儀",
+      "team": "衛道中學辯論社",
+      "honorType": "player",
+      "note": "D2-2",
+      "teamId": "p133",
+      "id": "honor-81b2728c148d"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "孫興宸",
+      "team": "世宣67",
+      "honorType": "player",
+      "note": "D2-2",
+      "teamId": "p119",
+      "id": "honor-b685be01e1cd"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "林宥澄",
+      "team": "宮燈最佳辯士",
+      "honorType": "player",
+      "note": "D2-2",
+      "teamId": "p135",
+      "id": "honor-7875dd57ed67"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "林毓晴",
+      "team": "宮燈最佳辯士",
+      "honorType": "player",
+      "note": "D2-2",
+      "teamId": "p135",
+      "id": "honor-94ab5fc8b9e9"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "高偉承",
+      "team": "白烏鴉辯論隊",
+      "honorType": "player",
+      "note": "D2-3",
+      "teamId": "p127",
+      "id": "honor-cd4a2a0bbc44"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "孫興宸",
+      "team": "世宣67",
+      "honorType": "player",
+      "note": "D2-3",
+      "teamId": "p119",
+      "id": "honor-ae45650cc37d"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "陳羿廷",
+      "team": "成功口技社",
+      "honorType": "player",
+      "note": "D2-3",
+      "teamId": "p130",
+      "id": "honor-eb9eb7e42019"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-26",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "D2-3",
+      "teamId": "p039",
+      "id": "honor-398ed87bf1c9"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "最佳辯士",
+      "recipient": "高偉承",
+      "team": "白烏鴉辯論隊",
+      "honorType": "player",
+      "note": "D3 複賽",
+      "teamId": "p127",
+      "id": "honor-34ed8e75f24f"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "D3 複賽",
+      "teamId": "p039",
+      "id": "honor-73aab58dcdba"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "D3 決賽",
+      "teamId": "p039",
+      "id": "honor-a26d9239fa7e"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "冠軍",
+      "recipient": "建竹實聯隊",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p039",
+      "id": "honor-413016bfd5c9"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "亞軍",
+      "recipient": "世宣67",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p119",
+      "id": "honor-d3b3834a567a"
+    },
+    {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "冠軍",
@@ -31839,6 +32778,13 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "賽期：2026/9/11–9/14。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。"
+    },
+    "第二十屆宮燈盃辯論公開賽青少年組": {
+      "startDate": "2026-09-25",
+      "endDate": "2026-09-27",
+      "organizer": "",
+      "location": "淡水",
+      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。"
     }
   }
 };
