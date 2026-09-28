@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T01:50:13",
+  "generatedAt": "2026-09-29T01:55:36",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -30509,47 +30509,47 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-15",
       "honorName": "冠軍",
       "recipient": "南山高中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s023",
-      "id": "honor-1aa234e68473"
+      "id": "honor-ea16f47df4f9"
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-15",
       "honorName": "亞軍",
       "recipient": "世宣67",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "p119",
-      "id": "honor-740dd518743a"
+      "id": "honor-5c475bab534c"
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-15",
       "honorName": "季軍",
       "recipient": "成功高中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s067",
-      "id": "honor-21a2d6cd2e0f"
+      "id": "honor-77ec01e755d4"
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-15",
       "honorName": "季軍",
       "recipient": "我心目中的佳辯逢雨停",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "p120",
-      "id": "honor-b1b89afef8b7"
+      "id": "honor-ed4d7f8cb6e3"
     },
     {
       "competitionName": "第二十一屆齊揚盃",

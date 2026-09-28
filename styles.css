@@ -170,6 +170,18 @@ button { color: inherit; }
 .overview-topic-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .overview-topic-card small { display: block; margin-top: 12px; color: var(--green); font-size: 11px; font-weight: 900; }
 .search-topic-list { margin-top: 0; }
+.entity-trophy-heading { display: flex; align-items: baseline; flex-wrap: wrap; gap: 10px; }
+.entity-trophy-heading small { color: var(--muted); font-size: 11px; font-weight: 650; }
+.entity-trophy-heading small b { color: var(--green-dark); }
+.entity-trophy-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-bottom: 24px; }
+.entity-trophy-card { display: flex; min-width: 0; min-height: 52px; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 11px 9px 14px; border: 1px solid #ead89e; border-left: 4px solid #d9b744; border-radius: 13px; background: linear-gradient(110deg, #fff9e8, #fffdf7); box-shadow: 0 3px 10px rgba(91,72,21,.07); }
+.entity-trophy-card > strong { overflow-wrap: anywhere; color: #314139; font-size: 12px; line-height: 1.35; }
+.entity-trophy-medals { display: flex; flex: 0 0 auto; gap: 4px; }
+.trophy-medal { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid transparent; border-radius: 9px; font-size: 12px; font-weight: 950; box-shadow: 0 2px 0 rgba(30,40,34,.1); }
+.trophy-medal.gold { background: #f5d25e; color: #584508; }
+.trophy-medal.silver { background: #dce4e1; color: #394944; }
+.trophy-medal.bronze { background: #dca06f; color: #512d15; }
+.trophy-medal.white { border-color: #cbd5d1; background: #fff; color: #53645d; }
 .entity-event-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .entity-event-list span { padding: 7px 10px; background: var(--soft); color: var(--green-dark); font-size: 12px; font-weight: 800; }
 .event-summary { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin: 38px 0 22px; padding-bottom: 20px; border-bottom: 4px solid var(--ink); }
@@ -442,6 +454,9 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .entity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .overview-entity-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-honor-list { grid-template-columns: 1fr; }
+  .entity-trophy-list { grid-template-columns: 1fr; gap: 7px; }
+  .entity-trophy-card { min-height: 46px; padding-block: 7px; }
+  .entity-trophy-heading { gap: 5px 8px; }
   .match-row { grid-template-columns: 58px minmax(0, 1fr) 62px minmax(0, 1fr); }
   .match-note { grid-column: 2 / -1; }
 }
