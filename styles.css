@@ -97,6 +97,9 @@ button { color: inherit; }
 .leaderboard-panel.teal { border-top-color: var(--teal); }
 .leaderboard-panel.coral { border-top-color: var(--coral); }
 .leaderboard-panel h3 { margin: 0 0 12px; font-size: 20px; }
+.leaderboard-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: -8px 0 16px; color: var(--muted); font-size: 12px; }
+.honor-range-toggle { min-height: 36px; border: 1px solid #176b52; border-radius: 999px; padding: 0 14px; background: #176b52; color: white; font-size: 12px; font-weight: 850; cursor: pointer; }
+.honor-range-toggle.is-all-years { border-color: #bf8d17; background: #fff0bf; color: #684e0b; }
 .ranking-list { margin: 0; padding: 0; list-style: none; counter-reset: ranking; }
 .ranking-list li { counter-increment: ranking; display: grid; grid-template-columns: 36px 1fr auto; align-items: center; gap: 10px; min-height: 52px; border-bottom: 1px solid var(--line); }
 .ranking-list li::before { content: counter(ranking); display: grid; width: 28px; height: 28px; place-items: center; border-radius: 50%; background: var(--soft); font-size: 12px; font-weight: 900; }
@@ -497,13 +500,15 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .mobile-upcoming-card small { display: -webkit-box; margin-top: auto; overflow: hidden; color: #5e562f; font-size: 12px; line-height: 1.3; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
   .mobile-rankings-title { display: block; width: min(100% - 24px, 1180px); margin: 0 auto 10px; }
   #homeView > .leaderboard-band .page-shell { width: 100%; }
-  #homeView > .leaderboard-band .leaderboard-scroll { grid-auto-columns: minmax(78vw, 78vw); padding-top: 2px; padding-right: 22vw; padding-bottom: 14px; }
-  #homeView > .leaderboard-band .leaderboard-panel { padding: 13px; border-top-width: 4px; border-radius: 15px; box-shadow: 0 3px 12px rgba(23,33,29,.07); }
-  #homeView > .leaderboard-band .leaderboard-panel h3 { margin-bottom: 5px; font-size: 14px; }
-  #homeView > .leaderboard-band .ranking-list li { grid-template-columns: 22px minmax(0,1fr) auto; gap: 7px; min-height: 39px; }
-  #homeView > .leaderboard-band .ranking-list li::before { width: 19px; height: 19px; font-size: 10px; }
-  #homeView > .leaderboard-band .ranking-list li strong { font-size: 12px; line-height: 1.25; }
-  #homeView > .leaderboard-band .ranking-list li span { font-size: 10px; }
+  #homeView > .leaderboard-band .leaderboard-scroll { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: minmax(46vw, 46vw); padding-top: 2px; padding-right: 8vw; padding-bottom: 14px; }
+  #homeView > .leaderboard-band .leaderboard-controls { width: calc(100% - 24px); margin: 0 auto 10px; font-size: 10px; }
+  #homeView > .leaderboard-band .honor-range-toggle { min-height: 32px; flex: 0 0 auto; padding: 0 11px; font-size: 11px; }
+  #homeView > .leaderboard-band .leaderboard-panel { min-width: 0; padding: 10px; border-top-width: 4px; border-radius: 13px; box-shadow: 0 3px 12px rgba(23,33,29,.07); }
+  #homeView > .leaderboard-band .leaderboard-panel h3 { margin-bottom: 4px; font-size: 12px; line-height: 1.25; }
+  #homeView > .leaderboard-band .ranking-list li { grid-template-columns: 18px minmax(0,1fr) auto; gap: 4px; min-height: 32px; }
+  #homeView > .leaderboard-band .ranking-list li::before { width: 17px; height: 17px; font-size: 9px; }
+  #homeView > .leaderboard-band .ranking-list li strong { overflow: hidden; font-size: 10px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+  #homeView > .leaderboard-band .ranking-list li span { font-size: 9px; }
   #homeView > .leaderboard-band .ranking-list li div>span { display: none; }
   .page-shell, .hero-content, .stats-band { width: min(100% - 24px, 1180px); }
   .site-header { min-height: 60px; gap: 6px; padding-inline: 12px; backdrop-filter: none; }

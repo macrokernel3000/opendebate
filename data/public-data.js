@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
-  "schemaVersion": 4,
-  "generatedAt": "2026-09-29T01:17:02",
+  "schemaVersion": 5,
+  "generatedAt": "2026-09-29T01:32:47",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -32751,14 +32751,146 @@ window.DEBATE_PUBLIC_DATA = {
       "endDate": "2026-09-14",
       "organizer": "",
       "location": "",
-      "note": "賽期：2026/9/11–9/14。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。"
+      "note": "賽期：2026/9/11–9/14。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。",
+      "ageRestriction": null,
+      "teamCount": 16
     },
     "第二十屆宮燈盃辯論公開賽青少年組": {
       "startDate": "2026-09-25",
       "endDate": "2026-09-27",
       "organizer": "",
       "location": "淡水",
-      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。"
+      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。",
+      "ageRestriction": true,
+      "teamCount": 17
+    },
+    "2025「青聲說」全國高中職辯論賽": {
+      "teamCount": 5,
+      "ageRestriction": null
+    },
+    "2025司改盃全國高中職辯論比賽": {
+      "teamCount": 23,
+      "ageRestriction": null
+    },
+    "2026司改盃全國高中職辯論比賽": {
+      "teamCount": 23,
+      "ageRestriction": null
+    },
+    "吊嘎盃全國高中職辯論比賽": {
+      "teamCount": 10,
+      "ageRestriction": null
+    },
+    "火雞盃全國高中職辯論比賽": {
+      "teamCount": 21,
+      "ageRestriction": null
+    },
+    "火雞肉飯盃全國高中職辯論比賽": {
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第一屆夢箋盃": {
+      "teamCount": 12,
+      "ageRestriction": null
+    },
+    "第一屆明哲盃全國高中職辯論比賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第一屆東岸盃全國高中職辯論比賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第一屆陽明盃全國辯論公開賽": {
+      "teamCount": 10,
+      "ageRestriction": null
+    },
+    "第一屆青雲盃全國高中職辯論錦標賽": {
+      "teamCount": 12,
+      "ageRestriction": null
+    },
+    "第七屆惠蓀盃全國高中職辯論比賽": {
+      "teamCount": 25,
+      "ageRestriction": null
+    },
+    "第三十七屆蘇州盃高中職辯論錦標賽": {
+      "teamCount": 42,
+      "ageRestriction": null
+    },
+    "第三十五屆蘇州盃高中職辯論錦標賽": {
+      "teamCount": 45,
+      "ageRestriction": null
+    },
+    "第三十六屆蘇州盃高中職辯論錦標賽": {
+      "teamCount": 31,
+      "ageRestriction": null
+    },
+    "第三屆東岸盃全國高中職辯論比賽": {
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第二十一屆辯革盃全國高中辯論比賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第二十一屆齊揚盃": {
+      "teamCount": 24,
+      "ageRestriction": null
+    },
+    "第二十七屆高中菁英盃": {
+      "teamCount": 82,
+      "ageRestriction": null
+    },
+    "第二十八屆高中菁英盃": {
+      "teamCount": 92,
+      "ageRestriction": null
+    },
+    "第二十屆辯革盃全國高中職辯論比賽": {
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第二屆夢箋盃": {
+      "teamCount": 11,
+      "ageRestriction": null
+    },
+    "第二屆東岸盃全國高中職辯論比賽": {
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第二屆青雲盃全國高中職辯論錦標賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第五屆輔仁盃全國高中職辯論比賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第十九屆北區聯合新生盃辯論比賽": {
+      "teamCount": 32,
+      "ageRestriction": null
+    },
+    "第十五屆風雩盃中學辯論錦標賽": {
+      "teamCount": 20,
+      "ageRestriction": null
+    },
+    "第十六屆明京盃全國高中職辯論比賽": {
+      "teamCount": 42,
+      "ageRestriction": null
+    },
+    "第十屆雲啟盃辯論比賽": {
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第四屆輔仁盃全國高中職辯論比賽": {
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "育南盃中文教育辯論賽": {
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "蒙泉盃全國高中職辯論比賽": {
+      "teamCount": 19,
+      "ageRestriction": null
     }
   }
 };

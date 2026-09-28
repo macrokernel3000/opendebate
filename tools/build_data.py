@@ -180,6 +180,11 @@ def load_event_metadata():
                 "organizer": clean(row.get("主辦單位")),
                 "location": clean(row.get("舉辦地點")),
                 "note": clean(row.get("備註")),
+                "ageRestriction": (
+                    True if clean(row.get("年齡限制")).lower() in {"是", "有", "true", "1", "yes", "✓"}
+                    else False if clean(row.get("年齡限制")).lower() in {"否", "無", "false", "0", "no"}
+                    else None
+                ),
             }
             for row in reader if clean(row.get("盃賽"))
         }
@@ -556,8 +561,17 @@ def build():
     attendance = attach_entities(records, honors, lookup)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    for competition in event_names(records, honors, topics):
+        metadata = event_metadata.setdefault(competition, {})
+        participating_teams = {
+            clean(team)
+            for record in records if record["competitionName"] == competition
+            for team in record["teams"].values() if clean(team)
+        }
+        metadata["teamCount"] = len(participating_teams)
+        metadata.setdefault("ageRestriction", None)
     payload = {
-        "schemaVersion": 4,
+        "schemaVersion": 5,
         "generatedAt": datetime.now().isoformat(timespec="seconds"),
         "sources": sources,
         "entities": entities,

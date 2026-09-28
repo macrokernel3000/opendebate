@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260929011702" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260929013247" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -139,14 +139,15 @@
 
       <section class="leaderboard-band">
         <div class="page-shell">
-          <h2 class="mobile-rankings-title">榮譽榜</h2>
+          <h2 id="mobileHonorTitle" class="mobile-rankings-title">近年度榮譽榜</h2>
           <div class="section-heading">
             <div><p class="kicker">資料榜</p><h2>學校排行榜</h2></div>
             <p class="section-note">依目前已收錄資料與積分歸戶統計</p>
           </div>
+          <div class="leaderboard-controls"><span>近年度涵蓋最近兩個有資料的年度</span><button id="honorRangeToggle" class="honor-range-toggle" type="button" aria-pressed="false">切換全年度</button></div>
           <div class="leaderboard-scroll" aria-label="學校排行榜，可左右滑動">
             <article class="leaderboard-panel">
-              <h3><span aria-hidden="true">🏆</span> 累積榮譽</h3>
+              <h3><span aria-hidden="true">🏆</span> <span id="honorLeaderboardTitle">近年度榮譽榜</span></h3>
               <ol id="schoolLeaderboard" class="ranking-list"></ol>
             </article>
             <article class="leaderboard-panel teal">
@@ -352,13 +353,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260929011702" data-public-data-script></script>
+  <script src="data/public-data.js?v=20260929013247" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20260929011702" data-versioned-asset></script>
-  <script src="js/core.js?v=20260929011702" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260929011702" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260929011702" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20260929011702" data-versioned-asset></script>
-  <script src="app.js?v=20260929011702" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20260929013247" data-versioned-asset></script>
+  <script src="js/core.js?v=20260929013247" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260929013247" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260929013247" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20260929013247" data-versioned-asset></script>
+  <script src="app.js?v=20260929013247" data-versioned-asset></script>
 </body>
 </html>

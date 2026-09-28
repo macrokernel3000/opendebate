@@ -6,6 +6,7 @@ let topics = store.topics;
 let events = [];
 let selectedEntityId = "";
 let selectedOverviewEntityId = "";
+let honorRange = "recent";
 
 const els = {
   homeBrand: document.querySelector("#homeBrand"),
@@ -26,6 +27,9 @@ const els = {
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
   gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
+  honorRangeToggle: document.querySelector("#honorRangeToggle"),
+  honorLeaderboardTitle: document.querySelector("#honorLeaderboardTitle"),
+  mobileHonorTitle: document.querySelector("#mobileHonorTitle"),
   eventSearch: document.querySelector("#eventSearch"),
   eventYear: document.querySelector("#eventYear"),
   eventFinderMeta: document.querySelector("#eventFinderMeta"),
@@ -64,7 +68,8 @@ function eventSummaries() {
     const eventMetadata = metadata[name] || {};
     const dates = unique([eventMetadata.startDate, eventMetadata.endDate, ...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
     const eventTopics = topics.filter((item) => item.competitionName === name);
-    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "", metadata: metadata[name] || {} };
+    const teamCount = unique(eventRecords.flatMap((item) => Object.values(item.teams || {})).filter(Boolean)).length;
+    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "", teamCount, metadata: metadata[name] || {} };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
@@ -150,7 +155,7 @@ function renderRecentEvents() {
           ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
         </div>
         ${compact ? renderMobileCardHonors(event) : ""}
-        <span class="event-card-meta"><span>${event.records.length} 場戰果</span><span>${event.honors.length} 筆榮譽</span></span>
+        <span class="event-card-meta"><span>${event.teamCount} 隊</span><span>${event.records.length} 場</span><span>${event.honors.length} 榮譽</span></span>
       </button>`;
   };
   els.recentEvents.innerHTML = events.map(renderCard).join("");
@@ -254,7 +259,14 @@ function renderTimeline() {
 
 function renderLeaderboards() {
   const schoolIds = new Set(store.entities.filter((entity) => entity.type === "s").map((entity) => entity.code));
-  const schoolAwards = countBy(honors, (honor) => schoolIds.has(honor.teamId) ? honor.teamId : "").slice(0, 10);
+  const eventYears = new Map(events.map((event) => [event.name, (event.latestDate || "").slice(0, 4)]));
+  const years = [...new Set([...eventYears.values()].filter((year) => /^\d{4}$/.test(year)))].sort();
+  const recentYears = new Set(years.slice(-2));
+  const visibleHonors = honorRange === "all" ? honors : honors.filter((honor) => {
+    const year = eventYears.get(honor.competitionName) || (honor.matchDate || "").slice(0, 4);
+    return recentYears.has(year);
+  });
+  const schoolAwards = countBy(visibleHonors, (honor) => schoolIds.has(honor.teamId) ? honor.teamId : "").slice(0, 10);
   const schoolGames = countBy(records.flatMap((record) => Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))), (id) => id).slice(0, 10);
   const winIds = records.map((record) => {
     const winnerId = store.entityForName(record.winner)?.code;
@@ -271,6 +283,14 @@ function renderLeaderboards() {
   els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽", "項");
   els.gamesLeaderboard.innerHTML = rows(schoolGames, "已收錄公開賽果", "場");
   els.winsLeaderboard.innerHTML = rows(schoolWins, "已收錄勝場", "勝");
+  const title = honorRange === "all" ? "全年度榮譽榜" : "近年度榮譽榜";
+  if (els.honorLeaderboardTitle) els.honorLeaderboardTitle.textContent = title;
+  if (els.mobileHonorTitle) els.mobileHonorTitle.textContent = title;
+  if (els.honorRangeToggle) {
+    els.honorRangeToggle.textContent = honorRange === "all" ? "切換近兩年" : "切換全年度";
+    els.honorRangeToggle.setAttribute("aria-pressed", String(honorRange === "all"));
+    els.honorRangeToggle.classList.toggle("is-all-years", honorRange === "all");
+  }
 }
 
 function renderEventOptions() {
@@ -347,7 +367,7 @@ function renderEvent(name) {
     <button class="event-back-button" type="button" data-back-to-events>← 返回賽事列表</button>
     <div class="event-summary">
       <div><h2>${escapeHtml(event.name)}</h2><p>${event.metadata.startDate && event.metadata.endDate ? `${formatDate(event.metadata.startDate)}–${formatDate(event.metadata.endDate)}` : event.dates.map(formatDate).join("、")}</p></div>
-      <div class="event-summary-count"><span class="count-chip">${event.records.length} 場比賽</span><span class="count-chip">${event.honors.length} 筆榮譽</span></div>
+      <div class="event-summary-count"><span class="count-chip">${event.teamCount} 隊</span><span class="count-chip">${event.records.length} 場</span><span class="count-chip">${event.honors.length} 榮譽</span></div>
     </div>
     ${topicSection}
     ${metadataSection}
@@ -516,6 +536,10 @@ function selectEntity(entityId) {
 }
 
 window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab });
+els.honorRangeToggle?.addEventListener("click", () => {
+  honorRange = honorRange === "all" ? "recent" : "all";
+  renderLeaderboards();
+});
 
 
 function renderAll() {

@@ -42,7 +42,7 @@
 - `topics`：賽事辯題與說明。
 - `generatedAt`：資料檔產生時間；首頁「上次修改」以此為唯一依據。
 - `siteContent`：由 `data/site-content.csv` 產生，控制 Banner 下方的英文小標、中文標題與兩段網站介紹。
-- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、舉辦地點、備註與選填的開始日期／結束日期（YYYY-MM-DD）；歷史賽事可不回填。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
+- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、舉辦地點、備註、選填的開始日期／結束日期（YYYY-MM-DD）及年齡限制狀態；`teamCount` 由該賽事戰績中實際出現的隊伍名稱去重計算。年齡限制未知時保留 `null`，不推定為否。年齡限制和隊伍數目前只在資料中保存，不顯示在網頁介面。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
 
 賽事數量不是固定設定值。`app.js` 會合併 `records`、`honors`、`topics` 中的賽事名稱後去重計算，首頁狀態列與統計區都使用這個結果。
 
@@ -52,7 +52,7 @@
 - `styles.css`：全站視覺、桌機／手機響應式版面。
 - `assets/debate-banner.webp`：首頁使用的壓縮主圖（1813×868）；`assets/debate-banner.png` 保留為原圖與社群分享預覽。換圖時同步產生 WebP，避免首頁再次直接下載大型 PNG。效能量測見 `docs/首頁圖片效能.md`。
 - `app.js`：首頁統計、時間軸、賽事卡、排行榜、賽事詳情、辯論總覽及搜尋結果。
-- `data/event-metadata.csv`：未來賽事的可選基本資訊來源；賽事詳情會顯示已填的主辦單位與地點，日後可直接作為地圖資料。
+- `data/event-metadata.csv`：賽事的可選基本資訊來源；賽事詳情會顯示已填的主辦單位與地點。年齡限制只做資料欄位，不在前台呈現。
 - `js/interactions.js`：導覽、按鈕、篩選與使用者操作。
 - `js/personal-records.js`：使用者個人成績、實際平均分數與 CSV 備份；雷達圖和進步圖以緊湊雙欄預覽呈現並可放大，圖表內才依各欄滿分換算比例。資料只存在該瀏覽器的 `localStorage`，不可當成公開資料或後台資料。
 - `js/core.js`：不可見的共用資料處理層。
