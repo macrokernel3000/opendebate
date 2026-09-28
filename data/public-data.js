@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-29T01:04:39",
+  "generatedAt": "2026-09-29T01:08:05",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -369,12 +369,6 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
-      "code": "p057",
-      "type": "p",
-      "name": "新竹高中（一）",
-      "aliases": ""
-    },
-    {
       "code": "p058",
       "type": "p",
       "name": "普羅多慧喵喵",
@@ -384,12 +378,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p060",
       "type": "p",
       "name": "楊子甯說你很難改變一個人所以只能改辯稿",
-      "aliases": ""
-    },
-    {
-      "code": "p061",
-      "type": "p",
-      "name": "永平紫極演辯社",
       "aliases": ""
     },
     {
@@ -570,12 +558,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p093",
       "type": "p",
       "name": "霍金活祭皇家火雞",
-      "aliases": ""
-    },
-    {
-      "code": "p097",
-      "type": "p",
-      "name": "0.0",
       "aliases": ""
     },
     {
@@ -763,12 +745,6 @@ window.DEBATE_PUBLIC_DATA = {
       "type": "p",
       "name": "大家都不想講話",
       "aliases": ""
-    },
-    {
-      "code": "p133",
-      "type": "p",
-      "name": "衛道中學辯論社",
-      "aliases": "衛道中學辯論隊"
     },
     {
       "code": "p134",
@@ -1206,7 +1182,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s078",
       "type": "s",
       "name": "新竹高中",
-      "aliases": "新竹高中（二）"
+      "aliases": "新竹高中（二）|新竹高中（一）"
     },
     {
       "code": "s079",
@@ -1326,7 +1302,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s098",
       "type": "s",
       "name": "永平高中",
-      "aliases": ""
+      "aliases": "永平紫極演辯社"
     },
     {
       "code": "s099",
@@ -1542,7 +1518,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s139",
       "type": "s",
       "name": "衛道中學",
-      "aliases": ""
+      "aliases": "衛道中學辯論社|衛道中學辯論隊"
     },
     {
       "code": "s140",
@@ -20212,9 +20188,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p134",
-        "negative": "p133"
+        "negative": "s139"
       },
-      "id": "match-706a88fb4810"
+      "id": "match-0cedfb66c586"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -20411,10 +20387,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p133",
+        "affirmative": "s139",
         "negative": "p134"
       },
-      "id": "match-d0262bd03877"
+      "id": "match-0429bf40f20b"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -20686,10 +20662,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p061",
+        "affirmative": "s098",
         "negative": "s023"
       },
-      "id": "match-343e404e1a17"
+      "id": "match-f38d213c3d02"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -21062,9 +21038,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p080",
-        "negative": "p061"
+        "negative": "s098"
       },
-      "id": "match-c1c00f22d7cc"
+      "id": "match-f12bb65fecf6"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -21261,10 +21237,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p061",
+        "affirmative": "s098",
         "negative": "p089"
       },
-      "id": "match-19b6cdc1bf2f"
+      "id": "match-c4c30556e078"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -21436,10 +21412,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p061",
+        "affirmative": "s098",
         "negative": "p015"
       },
-      "id": "match-32d9af3355b8"
+      "id": "match-ec5de2e39bff"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -26811,10 +26787,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p057",
+        "affirmative": "s078",
         "negative": "s162"
       },
-      "id": "match-59da5454bbf1"
+      "id": "match-8370a4b65ec1"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -27062,9 +27038,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s162",
-        "negative": "p057"
+        "negative": "s078"
       },
-      "id": "match-b4dfe8bcd42a"
+      "id": "match-9aa2f205f7cc"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -31007,8 +30983,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "衛道中學辯論社",
       "honorType": "player",
       "note": "D2-2",
-      "teamId": "p133",
-      "id": "honor-213704710202"
+      "teamId": "s139",
+      "id": "honor-47af00bdbe65"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
