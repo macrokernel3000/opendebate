@@ -35,6 +35,8 @@
     document.addEventListener("click", (event) => {
       const entityLink = event.target.closest("[data-entity-route]");
       if (entityLink) { showView(`school/${encodeURIComponent(entityLink.dataset.entityRoute)}`); return; }
+      const playerLink = event.target.closest("[data-player-route]");
+      if (playerLink) { showView(`player/${encodeURIComponent(playerLink.dataset.playerRoute)}`); return; }
       const eventLink = event.target.closest("[data-event-route]");
       if (eventLink) { openCompetition(eventLink.dataset.eventRoute); return; }
       if (event.target.closest("[data-detail-back]")) {

@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T01:55:36",
+  "generatedAt": "2026-09-29T02:23:57",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2538,7 +2538,7 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 1,
       "teams": {
@@ -2559,11 +2559,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s120",
         "negative": "s029"
       },
-      "id": "match-226a55297983"
+      "id": "match-3ee0ff7ee09d"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 2,
       "teams": {
@@ -2584,11 +2584,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s081"
       },
-      "id": "match-791645f2a6d1"
+      "id": "match-381e1cac33cf"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 3,
       "teams": {
@@ -2609,11 +2609,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s163",
         "negative": "s142"
       },
-      "id": "match-f9e74e182c9b"
+      "id": "match-5763f7e4d660"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 4,
       "teams": {
@@ -2634,11 +2634,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s020",
         "negative": "s138"
       },
-      "id": "match-37e2285b3082"
+      "id": "match-db280373fa0f"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 5,
       "teams": {
@@ -2659,11 +2659,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s114"
       },
-      "id": "match-44426577522d"
+      "id": "match-a905203114b3"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 6,
       "teams": {
@@ -2684,11 +2684,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s165",
         "negative": "s164"
       },
-      "id": "match-c35f3e8d73da"
+      "id": "match-1c94a57735ee"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 7,
       "teams": {
@@ -2709,11 +2709,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s003",
         "negative": "s166"
       },
-      "id": "match-ed8380d1927e"
+      "id": "match-2c92872a52c9"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 1,
       "venue": 8,
       "teams": {
@@ -2734,11 +2734,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s099",
         "negative": "s121"
       },
-      "id": "match-d0acc24af3f2"
+      "id": "match-77f7e4b45b1c"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 1,
       "teams": {
@@ -2759,11 +2759,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s029",
         "negative": "s071"
       },
-      "id": "match-4f1f7d21e3f4"
+      "id": "match-291f44117382"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 2,
       "teams": {
@@ -2784,11 +2784,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s081",
         "negative": "s046"
       },
-      "id": "match-b44dafc26d49"
+      "id": "match-004c188977b6"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 3,
       "teams": {
@@ -2809,11 +2809,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s142",
         "negative": "s140"
       },
-      "id": "match-46947bde426f"
+      "id": "match-13664c9b2fee"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 4,
       "teams": {
@@ -2834,11 +2834,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s138",
         "negative": "s167"
       },
-      "id": "match-e09402dfcd91"
+      "id": "match-2d9919f2b68d"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 5,
       "teams": {
@@ -2859,11 +2859,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s085",
         "negative": "s049"
       },
-      "id": "match-5c089c964df4"
+      "id": "match-31c18a569082"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 6,
       "teams": {
@@ -2884,11 +2884,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s063",
         "negative": "s165"
       },
-      "id": "match-e0b6f22deb9c"
+      "id": "match-b4a61d29a42a"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 7,
       "teams": {
@@ -2909,11 +2909,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s056",
         "negative": "s003"
       },
-      "id": "match-bf3310f226d0"
+      "id": "match-21cc79051147"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 2,
       "venue": 8,
       "teams": {
@@ -2934,11 +2934,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s121",
         "negative": "s099"
       },
-      "id": "match-b066af3511cb"
+      "id": "match-46e0585f5faf"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 1,
       "teams": {
@@ -2959,11 +2959,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s071",
         "negative": "s120"
       },
-      "id": "match-b89cbbb38168"
+      "id": "match-89aad4e6bb84"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 2,
       "teams": {
@@ -2984,11 +2984,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s046",
         "negative": "s153"
       },
-      "id": "match-d494244acc55"
+      "id": "match-af39b38cb70a"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 3,
       "teams": {
@@ -3009,11 +3009,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s140",
         "negative": "s163"
       },
-      "id": "match-9448a709c506"
+      "id": "match-fdcc683905e9"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 4,
       "teams": {
@@ -3034,11 +3034,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s167",
         "negative": "s020"
       },
-      "id": "match-b7a82ce679fd"
+      "id": "match-59d5f7c27efd"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 5,
       "teams": {
@@ -3059,11 +3059,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s114",
         "negative": "s085"
       },
-      "id": "match-0436bc24dbb8"
+      "id": "match-36c25eff74d3"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 6,
       "teams": {
@@ -3084,11 +3084,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s164",
         "negative": "s063"
       },
-      "id": "match-d2bc3e03329c"
+      "id": "match-4147b3a3f83b"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 3,
       "venue": 7,
       "teams": {
@@ -3109,11 +3109,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s166",
         "negative": "s056"
       },
-      "id": "match-e0333abcc507"
+      "id": "match-f95e0d74c6ea"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 4,
       "venue": 1,
       "teams": {
@@ -3134,11 +3134,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s029",
         "negative": "s153"
       },
-      "id": "match-720b68819b50"
+      "id": "match-9102838dbb09"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 4,
       "venue": 2,
       "teams": {
@@ -3159,11 +3159,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s163",
         "negative": "s020"
       },
-      "id": "match-61995c646e5e"
+      "id": "match-3de0359c75f1"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 4,
       "venue": 3,
       "teams": {
@@ -3184,11 +3184,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s063"
       },
-      "id": "match-2494fff861d6"
+      "id": "match-35cdc8dea980"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-25",
+      "matchDate": "2026-08-22",
       "period": 4,
       "venue": 4,
       "teams": {
@@ -3209,11 +3209,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s056",
         "negative": "s121"
       },
-      "id": "match-eadd8d2e5188"
+      "id": "match-28728d24f2e9"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-26",
+      "matchDate": "2026-08-23",
       "period": 1,
       "venue": "",
       "teams": {
@@ -3234,11 +3234,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s049",
         "negative": "s056"
       },
-      "id": "match-018e5a08f7a8"
+      "id": "match-e5106cdbaf12"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-26",
+      "matchDate": "2026-08-23",
       "period": 1,
       "venue": "",
       "teams": {
@@ -3259,11 +3259,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s153",
         "negative": "s020"
       },
-      "id": "match-a905881a38b2"
+      "id": "match-7f661ae805b1"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "2026-08-26",
+      "matchDate": "2026-08-23",
       "period": 2,
       "venue": "",
       "teams": {
@@ -3284,7 +3284,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s020",
         "negative": "s049"
       },
-      "id": "match-f40b5746736c"
+      "id": "match-44dda79b8464"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -29809,10 +29809,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "晉級",
       "recipient": "銨芯爬陽明山",
       "team": "銨芯爬陽明山",
-      "honorType": "player",
+      "honorType": "team",
       "note": "循環一",
       "teamId": "p102",
-      "id": "honor-a5509a57c8af"
+      "id": "honor-f7460efdd2e8"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -29820,10 +29820,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "晉級",
       "recipient": "明倫高中",
       "team": "明倫高中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "循環二",
       "teamId": "s080",
-      "id": "honor-be50942a936e"
+      "id": "honor-c804ef4bccbf"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -29831,10 +29831,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "冠軍",
       "recipient": "銨芯爬陽明山",
       "team": "銨芯爬陽明山",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "p102",
-      "id": "honor-2f44a5204deb"
+      "id": "honor-844c8ca5b4f2"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -29842,10 +29842,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "亞軍",
       "recipient": "陽明高中種子隊B",
       "team": "陽明高中種子隊B",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s147",
-      "id": "honor-fbd650aff257"
+      "id": "honor-202703654a56"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -29853,10 +29853,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "明倫高中",
       "team": "明倫高中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s080",
-      "id": "honor-a68eaba9643c"
+      "id": "honor-69eb98d8ac10"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -29864,10 +29864,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "學分辯辯辯",
       "team": "學分辯辯辯",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "p098",
-      "id": "honor-99778cd4064f"
+      "id": "honor-23c8f4a672b2"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -30590,10 +30590,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "武陵高中",
       "team": "",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
-      "teamId": "",
-      "id": "honor-463523a6a4f1"
+      "teamId": "s096",
+      "id": "honor-de9a02a47235"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -31734,10 +31734,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "冠軍",
       "recipient": "臺南一中",
       "team": "臺南一中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s125",
-      "id": "honor-3125f8606e9b"
+      "id": "honor-fca8000ccd50"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -31745,10 +31745,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "亞軍",
       "recipient": "中山女高",
       "team": "中山女高",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s006",
-      "id": "honor-4da069f349fc"
+      "id": "honor-49a6df9a7518"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -31756,10 +31756,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "武陵高中",
       "team": "武陵高中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s096",
-      "id": "honor-e3c09dabfb0a"
+      "id": "honor-8e9edabd0b02"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -31767,10 +31767,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "殿軍",
       "recipient": "馬公高中（一）",
       "team": "馬公高中（一）",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s162",
-      "id": "honor-f29af12d60c2"
+      "id": "honor-f7ee60f708da"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -32094,321 +32094,321 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蘇雨霏",
       "team": "",
       "honorType": "player",
       "note": "第一時段：台美聯隊 vs 三校聯隊",
       "teamId": "",
-      "id": "honor-3e7e69f118b6"
+      "id": "honor-c18529cae7ac"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蔡惟昱",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "第一時段：台美聯隊 vs 三校聯隊",
-      "teamId": "",
-      "id": "honor-a037796fb3a9"
+      "teamId": "p108",
+      "id": "honor-c71c172bd283"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "陳弘衍",
       "team": "",
       "honorType": "player",
       "note": "第一時段：內湖高中 vs 想念是會呼吸的痛",
       "teamId": "",
-      "id": "honor-a97c0c16cab0"
+      "id": "honor-c02d8dc50028"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "鄒立安",
       "team": "",
       "honorType": "player",
       "note": "第一時段：美國聯隊 vs 暑假辯不見",
       "teamId": "",
-      "id": "honor-a76240db96f4"
+      "id": "honor-d02a4bd07c08"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "鄭詠云",
       "team": "",
       "honorType": "player",
       "note": "第一時段：嘿跑去康橋 vs 鱁",
       "teamId": "",
-      "id": "honor-5e559523e759"
+      "id": "honor-88932a945c4c"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "郭芊慈",
-      "team": "",
+      "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "第二時段：復興高中 vs 小果仁辯論隊",
-      "teamId": "",
-      "id": "honor-4cf8fd6112d3"
+      "teamId": "p112",
+      "id": "honor-dda5b2897094"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "林立承",
       "team": "",
       "honorType": "player",
       "note": "第二時段：台灣國中小思辨聯隊 vs 不講吾德",
       "teamId": "",
-      "id": "honor-44c3cd8a354b"
+      "id": "honor-55ccc29b9a81"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "陳弘衍",
       "team": "",
       "honorType": "player",
       "note": "第二時段：想念是會呼吸的痛 vs 內湖高中",
       "teamId": "",
-      "id": "honor-fa37953fb2a0"
+      "id": "honor-2f4c39e9e875"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "江沅其",
       "team": "",
       "honorType": "player",
       "note": "第二時段：鱁 vs 嘿跑去康橋",
       "teamId": "",
-      "id": "honor-631ff0ff9bb3"
+      "id": "honor-9c448d990b73"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "邵聖光",
       "team": "",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
       "teamId": "",
-      "id": "honor-e14bfbd61d08"
+      "id": "honor-3ae3933016a1"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蔡奕呈",
       "team": "",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
       "teamId": "",
-      "id": "honor-244e17b526a1"
+      "id": "honor-39cf8892d607"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "林辰澔",
-      "team": "",
+      "team": "我有點想哭",
       "honorType": "player",
       "note": "第二時段：我有點想哭 vs 國際中文辯論課",
-      "teamId": "",
-      "id": "honor-a0b782df452b"
+      "teamId": "s105",
+      "id": "honor-df569039cbc4"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "陳昊廷",
       "team": "",
       "honorType": "player",
       "note": "第二時段：我有點想哭 vs 國際中文辯論課",
       "teamId": "",
-      "id": "honor-053c35019df1"
+      "id": "honor-cef1b5eff874"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "郭芊慈",
-      "team": "",
+      "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "第三時段：復興高中 vs 小果仁辯論隊",
-      "teamId": "",
-      "id": "honor-273f8c3acae8"
+      "teamId": "p112",
+      "id": "honor-75b2b03923bd"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "邱語愛",
       "team": "",
       "honorType": "player",
       "note": "第三時段：暑假辯不見 vs 美國聯隊；比分未提供",
       "teamId": "",
-      "id": "honor-9b76537f919f"
+      "id": "honor-f47e9aa7d545"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "邵聖光",
       "team": "",
       "honorType": "player",
       "note": "第三時段：嘿走去康橋 vs 北市大同",
       "teamId": "",
-      "id": "honor-3f26583c9a7e"
+      "id": "honor-e3346cc6768c"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "陳昊廷",
       "team": "",
       "honorType": "player",
       "note": "第三時段：國際中文辯論課 vs 我有點想哭",
       "teamId": "",
-      "id": "honor-1e7f6fdb3f51"
+      "id": "honor-5c642ab7ea26"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蔡惟昱",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "第三時段：三校聯隊 vs 台美聯隊",
-      "teamId": "",
-      "id": "honor-9158b7893bc4"
+      "teamId": "p108",
+      "id": "honor-7dfaa6988279"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "吳濬祐",
       "team": "",
       "honorType": "player",
       "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
       "teamId": "",
-      "id": "honor-e17992561107"
+      "id": "honor-8337b573d315"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "林立承",
       "team": "",
       "honorType": "player",
       "note": "第三時段；原公示未標明對應場次",
       "teamId": "",
-      "id": "honor-5fbbdca1f0a5"
+      "id": "honor-8f450460a8c4"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "郭芊慈",
-      "team": "",
+      "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
-      "teamId": "",
-      "id": "honor-4817aa3f2c9d"
+      "teamId": "p112",
+      "id": "honor-a28d9234ec1b"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "邱語愛",
       "team": "",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
       "teamId": "",
-      "id": "honor-181205b947ef"
+      "id": "honor-b47178773b4c"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "鄒立安",
       "team": "",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
       "teamId": "",
-      "id": "honor-c54b30cada20"
+      "id": "honor-ecde977af2db"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "張有風",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "八強：內湖高中 vs 嘿跑去康橋",
-      "teamId": "",
-      "id": "honor-f20dbe55785d"
+      "teamId": "s014",
+      "id": "honor-606e3e3403e8"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "鄭詠云",
       "team": "",
       "honorType": "player",
       "note": "八強：內湖高中 vs 嘿跑去康橋",
       "teamId": "",
-      "id": "honor-7e80add58383"
+      "id": "honor-7b762e56c45f"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蔡惟昱",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "八強：台美聯隊 vs 台灣國中小思辨聯隊",
-      "teamId": "",
-      "id": "honor-098874ac0d78"
+      "teamId": "p108",
+      "id": "honor-fad044f6fa80"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "黃芢祥",
       "team": "",
       "honorType": "player",
       "note": "八強：北市大同 vs 我有點想哭",
       "teamId": "",
-      "id": "honor-9d4374829570"
+      "id": "honor-1a0459f30513"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "張有風",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "四強：小果仁辯論隊 vs 內湖高中",
-      "teamId": "",
-      "id": "honor-3eeb9df91b39"
+      "teamId": "s014",
+      "id": "honor-96b5e57a3952"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
-      "honorName": "單場最佳",
+      "honorName": "單場最佳辯士",
       "recipient": "蔡惟昱",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "四強：台美聯隊 vs 我有點想哭",
-      "teamId": "",
-      "id": "honor-6ed7d01227eb"
+      "teamId": "p108",
+      "id": "honor-1b994106b1cb"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -32763,15 +32763,20 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "teamCount": 17
     },
+    "2026司改盃全國高中職辯論比賽": {
+      "startDate": "2026-08-22",
+      "endDate": "2026-08-23",
+      "organizer": "",
+      "location": "",
+      "note": "依主辦方公開活動資訊：初賽、複賽於 2026-08-22；四強賽、決賽於 2026-08-23。原始戰績日期依賽程階段校正。",
+      "ageRestriction": null,
+      "teamCount": 23
+    },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,
       "ageRestriction": null
     },
     "2025司改盃全國高中職辯論比賽": {
-      "teamCount": 23,
-      "ageRestriction": null
-    },
-    "2026司改盃全國高中職辯論比賽": {
       "teamCount": 23,
       "ageRestriction": null
     },
