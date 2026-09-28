@@ -60,7 +60,11 @@ def normalize_date(value):
 
 def normalize_honor_type(value, team):
     value = clean(value).lower()
-    if value in {"player", "個人", "個人榮譽", "選手", "選手榮譽"} or team:
+    if value in {"player", "個人", "個人榮譽", "選手", "選手榮譽"}:
+        return "player"
+    if value in {"team", "團體", "團體榮譽", "隊伍", "隊伍榮譽", "團隊", "團隊榮譽"}:
+        return "team"
+    if team:
         return "player"
     return "team"
 

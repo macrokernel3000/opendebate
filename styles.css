@@ -219,8 +219,8 @@ button { color: inherit; }
 .result-section h2 { margin-bottom: 15px; font-size: 22px; }
 .entity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .entity-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 16px; background: white; color: var(--ink); cursor: pointer; font: inherit; text-align: left; }
-.entity-card:hover, .entity-card.is-selected { border-color: var(--green); background: var(--soft); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--yellow); }
-.entity-card.player { border-left-color: var(--coral); }
+button.entity-card:hover, button.entity-card.is-selected { border-color: var(--green); background: var(--soft); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--yellow); }
+.entity-card.player { border-left-color: var(--coral); cursor: default; }
 .entity-card h3 { margin: 0; font-size: 17px; }
 .entity-card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .entity-card small { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }

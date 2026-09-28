@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-29T01:08:05",
+  "generatedAt": "2026-09-29T01:17:02",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -30068,10 +30068,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "冠軍",
       "recipient": "高雄中學",
       "team": "高雄中學",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s152",
-      "id": "honor-ec19ba28c3c7"
+      "id": "honor-6cd0131e6743"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -30079,10 +30079,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "亞軍",
       "recipient": "和平高中A",
       "team": "和平高中A",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s160",
-      "id": "honor-639f2427ddd8"
+      "id": "honor-a801ef8a658f"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -30090,10 +30090,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "永豐高中",
       "team": "永豐高中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s100",
-      "id": "honor-e87473bd04e1"
+      "id": "honor-aa86bdaaad8b"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -30101,10 +30101,10 @@ window.DEBATE_PUBLIC_DATA = {
       "honorName": "季軍",
       "recipient": "永平高中",
       "team": "永平高中",
-      "honorType": "player",
+      "honorType": "team",
       "note": "",
       "teamId": "s098",
-      "id": "honor-24faeed47d8d"
+      "id": "honor-336694b7246d"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
