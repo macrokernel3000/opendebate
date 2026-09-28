@@ -19,6 +19,10 @@ const els = {
   siteIntroductionParagraph2: document.querySelector("#siteIntroductionParagraph2"),
   eventTimeline: document.querySelector("#eventTimeline"),
   recentEvents: document.querySelector("#recentEvents"),
+  mobileRecentEvents: document.querySelector("#mobileRecentEvents"),
+  mobileEventCount: document.querySelector("#mobileEventCount"),
+  mobileMatchCount: document.querySelector("#mobileMatchCount"),
+  mobileUpcomingEvents: document.querySelector("#mobileUpcomingEvents"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
   gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
@@ -29,6 +33,7 @@ const els = {
   eventDetail: document.querySelector("#eventDetail"),
   overviewTabs: document.querySelectorAll("[data-overview-tab]"),
   overviewEventsPanel: document.querySelector("#overviewEventsPanel"),
+  overviewView: document.querySelector("#overviewView"),
   overviewSchoolsPanel: document.querySelector("#overviewSchoolsPanel"),
   overviewTopicsPanel: document.querySelector("#overviewTopicsPanel"),
   overviewEventCount: document.querySelector("#overviewEventCount"),
@@ -65,10 +70,26 @@ function eventSummaries() {
 
 function showView(name) {
   const requested = name === "events" ? "overview" : name;
-  const target = ["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home";
+  const eventRoute = requested.match(/^event\/(.+)$/);
+  let eventName = "";
+  if (eventRoute) {
+    try { eventName = decodeURIComponent(eventRoute[1]); } catch { eventName = ""; }
+    if (!events.some((event) => event.name === eventName)) eventName = "";
+  }
+  const target = eventName ? "overview" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
-  if (location.hash !== `#${target}`) history.replaceState(null, "", `#${target}`);
+  els.overviewView.classList.toggle("is-event-open", Boolean(eventName));
+  els.overviewEventsPanel.classList.remove("is-event-open");
+  if (eventName) {
+    showOverviewTab("events");
+    els.overviewEventsPanel.classList.add("is-event-open");
+    renderEvent(eventName);
+  } else if (target === "overview") {
+    els.eventDetail.innerHTML = "";
+  }
+  const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : `#${target}`;
+  if (location.hash !== routeHash) history.replaceState(null, "", routeHash);
   window.scrollTo({ top: 0, behavior: "smooth" });
   if (target === "search") requestAnimationFrame(() => els.globalSearch.focus());
 }
@@ -117,18 +138,40 @@ function renderSiteIntroduction() {
 }
 
 function renderRecentEvents() {
-  els.recentEvents.innerHTML = events.map((event) => {
+  const renderCard = (event, compact = false) => {
     const topicPreview = event.topics.slice(0, 2).map((item) => `<p class="event-card-topic"><span>辯題：</span>${escapeHtml(item.topic)}</p>`).join("");
     return `
       <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
-        <span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>
+        ${compact ? `<span class="event-card-time"><i class="event-time-point" aria-hidden="true"></i><span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span></span>` : `<span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>`}
         <div class="event-card-body">
           <h3>${escapeHtml(event.name)}</h3>
           ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
         </div>
+        ${compact ? renderMobileCardHonors(event) : ""}
         <span class="event-card-meta"><span>${event.records.length} 場戰果</span><span>${event.honors.length} 筆榮譽</span></span>
       </button>`;
-  }).join("");
+  };
+  els.recentEvents.innerHTML = events.map(renderCard).join("");
+  if (els.mobileEventCount) els.mobileEventCount.textContent = events.length;
+  if (els.mobileMatchCount) els.mobileMatchCount.textContent = records.length;
+  if (els.mobileRecentEvents) els.mobileRecentEvents.innerHTML = events.slice(0, 8).map((event) => renderCard(event, true)).join("");
+}
+
+function renderMobileUpcomingEvents() {
+  if (!els.mobileUpcomingEvents) return;
+  const upcoming = [...(window.DEBATE_UPCOMING_EVENTS || [])].sort((a, b) => a.startDate.localeCompare(b.startDate));
+  const dateLabel = (event) => {
+    const start = event.startDate.slice(5).replace("-", "/");
+    const end = event.endDate.slice(5).replace("-", "/");
+    return start === end ? start : `${start}–${end}`;
+  };
+  els.mobileUpcomingEvents.innerHTML = upcoming.map((event) => `
+    <article class="mobile-upcoming-card">
+      <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event))}</span>
+      <h3>${escapeHtml(event.name)}</h3>
+      <p>${escapeHtml(event.location || "地點未提供")}</p>
+      <small><b>辯題：</b>${escapeHtml(event.topic || "未提供")}</small>
+    </article>`).join("");
 }
 
 function honorSubject(honor) {
@@ -136,8 +179,24 @@ function honorSubject(honor) {
 }
 
 function eventChampion(event) {
-  const champion = event.honors.find((honor) => honor.honorName?.trim() === "冠軍");
+  const champion = event.honors.find((honor) => /(?:^|組)冠軍$/.test(honor.honorName?.trim() || ""));
   return champion ? honorSubject(champion) : "尚未收錄冠軍";
+}
+
+function renderMobileCardHonors(event) {
+  const priority = (honor) => {
+    const name = honor.honorName?.trim() || "";
+    if (/(?:^|組)冠軍$/.test(name)) return 0;
+    if (/(?:^|組)亞軍$/.test(name)) return 1;
+    if (/(?:^|組)季軍$/.test(name)) return 2;
+    if (name.includes("全程最佳")) return 3;
+    return 9;
+  };
+  const highlights = event.honors.filter((honor) => priority(honor) < 9)
+    .sort((a, b) => priority(a) - priority(b) || a.honorName.localeCompare(b.honorName, "zh-Hant"))
+    .slice(0, 4);
+  if (!highlights.length) return `<ul class="event-card-honors"><li><b>冠軍</b><span>${escapeHtml(eventChampion(event))}</span></li></ul>`;
+  return `<ul class="event-card-honors">${highlights.map((honor) => `<li><b>${escapeHtml(honor.honorName)}</b><span>${escapeHtml(honorSubject(honor))}</span></li>`).join("")}</ul>`;
 }
 
 function renderTimeline() {
@@ -186,13 +245,25 @@ function renderEventFinder() {
     const topicText = event.topics.flatMap((item) => [item.topic, item.explanation]).join(" ");
     return matchesYear && (!needle || normalize(`${event.name} ${topicText}`).includes(needle));
   });
-  els.eventFinderMeta.textContent = `找到 ${filtered.length} 個賽事`;
-  els.eventFinderResults.innerHTML = filtered.length ? filtered.map((event) => `
-    <button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}">
-      <span class="event-result-year">${escapeHtml(event.latestDate.slice(0, 4) || "年份未載明")}</span>
+  const isMobileTimeline = window.matchMedia("(max-width: 640px)").matches;
+  const visibleEvents = isMobileTimeline
+    ? [...filtered].sort((a, b) => (b.latestDate || "").localeCompare(a.latestDate || "") || a.name.localeCompare(b.name, "zh-Hant"))
+    : filtered;
+  els.eventFinderMeta.textContent = `找到 ${visibleEvents.length} 個賽事`;
+  let previousYear = null;
+  const timelineCards = visibleEvents.map((event, index) => {
+    const eventYear = event.latestDate?.slice(0, 4) || "年份未載明";
+    const yearMarker = isMobileTimeline && eventYear !== previousYear ? `<div class="event-year-divider"><span>${escapeHtml(eventYear)}${eventYear === "年份未載明" ? "" : " 年"}</span></div>` : "";
+    previousYear = eventYear;
+    const dateLabel = isMobileTimeline ? (event.latestDate ? formatDate(event.latestDate) : "日期未載明") : eventYear;
+    const side = index % 2 === 0 ? "left" : "right";
+    return `${yearMarker}<button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}" data-timeline-side="${side}">
+      <span class="event-result-year">${escapeHtml(dateLabel)}</span>
       <strong>${escapeHtml(event.name)}</strong>
       <small>${event.records.length} 場 · ${event.honors.length} 項榮譽${event.topics.length ? ` · ${event.topics.length} 筆辯題` : ""}</small>
-    </button>`).join("") : '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
+    </button>`;
+  }).join("");
+  els.eventFinderResults.innerHTML = timelineCards || '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
 }
 
 function renderEvent(name) {
@@ -219,6 +290,7 @@ function renderEvent(name) {
   const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
   const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
   els.eventDetail.innerHTML = `
+    <button class="event-back-button" type="button" data-back-to-events>← 返回賽事列表</button>
     <div class="event-summary">
       <div><h2>${escapeHtml(event.name)}</h2><p>${event.metadata.startDate && event.metadata.endDate ? `${formatDate(event.metadata.startDate)}–${formatDate(event.metadata.endDate)}` : event.dates.map(formatDate).join("、")}</p></div>
       <div class="event-summary-count"><span class="count-chip">${event.records.length} 場比賽</span><span class="count-chip">${event.honors.length} 筆榮譽</span></div>
@@ -226,7 +298,7 @@ function renderEvent(name) {
     ${topicSection}
     ${metadataSection}
     <div class="event-content-grid">
-      <div><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
+      <div class="event-scores"><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
       <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? eventHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("") : "<p>尚無公開榮譽。</p>"}</aside>
     </div>`;
 }
@@ -389,6 +461,7 @@ function renderAll() {
   renderDataFreshness();
   renderTimeline();
   renderRecentEvents();
+  renderMobileUpcomingEvents();
   renderLeaderboards();
   renderEventOptions();
   renderOverview();
@@ -399,7 +472,7 @@ function renderAll() {
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
   const initialView = location.hash.slice(1);
-  showView(initialQuery ? "search" : (["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
+  showView(initialQuery ? "search" : (/^event\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
 }
 

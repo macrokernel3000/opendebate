@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260928201115" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260928-mobile-public1" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -68,16 +68,39 @@
       <span>公開辯論資訊網</span>
     </a>
     <nav class="main-nav" aria-label="主要選單">
-      <button class="nav-button is-active" type="button" data-view="home">首頁</button>
-      <button class="nav-button" type="button" data-view="overview">總覽</button>
-      <button class="nav-button" type="button" data-view="search">搜尋</button>
-      <button class="nav-button" type="button" data-view="archive">建檔</button>
-      <button class="nav-button" type="button" data-view="reports">回報</button>
+      <button class="nav-button is-active" type="button" data-view="home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5.5 9v11h13V9M9 20v-6h6v6"/></svg><span>首頁</span></button>
+      <button class="nav-button" type="button" data-view="overview"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>總覽</span></button>
+      <button class="nav-button" type="button" data-view="search"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>搜尋</span></button>
+      <button class="nav-button" type="button" data-view="archive"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM6 9v11h12V9M9 13h6M9 16h6"/></svg><span>建檔</span></button>
+      <button class="nav-button" type="button" data-view="reports"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 18 6M8 6h10v10M5 5v14h14"/></svg><span>回報</span></button>
+    </nav>
+    <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="開啟快捷選單" aria-expanded="false" aria-controls="mobileQuickMenu">
+      <span aria-hidden="true">☰</span>
+    </button>
+    <nav id="mobileQuickMenu" class="mobile-quick-menu" aria-label="快捷選單" hidden>
+      <button type="button" data-menu-view="home"><span aria-hidden="true">⌂</span>首頁</button>
+      <button type="button" data-menu-view="overview"><span aria-hidden="true">▦</span>比賽總覽</button>
+      <button type="button" data-menu-view="search"><span aria-hidden="true">⌕</span>戰績搜尋</button>
+      <button type="button" data-menu-view="archive"><span aria-hidden="true">▤</span>辯論建檔</button>
+      <button type="button" data-menu-view="reports"><span aria-hidden="true">↗</span>問題回報</button>
     </nav>
   </header>
 
   <main>
     <section id="homeView" class="view" data-view-panel="home">
+      <div class="mobile-home page-shell" aria-label="手機首頁快捷內容">
+        <section class="mobile-home-section mobile-home-results" aria-labelledby="mobileRecentTitle">
+          <div class="section-heading"><h2 id="mobileRecentTitle">已收錄 <span id="mobileEventCount">0</span> 場比賽與 <span id="mobileMatchCount">0</span> 場賽果</h2><span class="mobile-home-hint">左右滑動查看</span></div>
+          <div id="mobileRecentEvents" class="mobile-results-strip" aria-label="近期賽果，可左右滑動"></div>
+        </section>
+        <section class="mobile-home-search" aria-label="戰績搜尋入口">
+          <button type="button" data-go-search><span aria-hidden="true">⌕</span><span><strong>戰績搜尋</strong><small>選手・學校・隊伍・辯題</small></span><b aria-hidden="true">→</b></button>
+        </section>
+        <section class="mobile-home-section mobile-home-upcoming" aria-labelledby="mobileUpcomingTitle">
+          <div class="section-heading"><h2 id="mobileUpcomingTitle">未來賽事</h2><span class="mobile-home-hint">公告資訊</span></div>
+          <div id="mobileUpcomingEvents" class="mobile-upcoming-strip" aria-label="未來賽事，可左右滑動"></div>
+        </section>
+      </div>
       <div class="hero">
         <img src="assets/debate-banner.webp" width="1813" height="868" fetchpriority="high" alt="學生在辯論賽場上進行公開辯論" />
         <div class="hero-shade"></div>
@@ -116,6 +139,7 @@
 
       <section class="leaderboard-band">
         <div class="page-shell">
+          <h2 class="mobile-rankings-title">榮譽榜</h2>
           <div class="section-heading">
             <div><p class="kicker">資料榜</p><h2>學校排行榜</h2></div>
             <p class="section-note">依目前已收錄資料與積分歸戶統計</p>
@@ -141,7 +165,7 @@
     <section id="overviewView" class="view is-hidden" data-view-panel="overview">
       <div class="page-intro page-shell">
         <p class="kicker">DEBATE OVERVIEW</p>
-        <h1>辯論總覽 <span aria-hidden="true">🗺️</span></h1>
+        <h1>辯論總覽</h1>
         <p>瀏覽目前已登錄的賽事、學校與辯題，從公開資料看見台灣辯論的發展軌跡。</p>
       </div>
       <div class="page-shell overview-page">
@@ -325,11 +349,12 @@
   </footer>
 
   <script src="data/public-data.js?v=20260928201115" data-public-data-script></script>
+  <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/site-config.js?v=20260928201115" data-versioned-asset></script>
   <script src="js/core.js?v=20260928201115" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260928201115" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20260928201115" data-versioned-asset></script>
   <script src="js/team-records.js?v=20260928201115" data-versioned-asset></script>
-  <script src="app.js?v=20260928201115" data-versioned-asset></script>
+  <script src="app.js?v=20260928-mobile-public1" data-versioned-asset></script>
 </body>
 </html>

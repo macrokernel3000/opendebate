@@ -1,14 +1,57 @@
 (function () {
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab }) {
+    const openCompetition = (name, mobileDirect = true) => {
+      if (mobileDirect && window.matchMedia("(max-width: 640px)").matches) {
+        showView(`event/${encodeURIComponent(name)}`);
+        return;
+      }
+      showView("overview");
+      showOverviewTab("events");
+      renderEvent(name);
+    };
+    const closeMobileMenu = () => {
+      const toggle = document.querySelector("#mobileMenuToggle");
+      const menu = document.querySelector("#mobileQuickMenu");
+      toggle?.setAttribute("aria-expanded", "false");
+      toggle?.setAttribute("aria-label", "開啟快捷選單");
+      if (menu) menu.hidden = true;
+    };
     function openTopicEvent(event) {
       const card = event.target.closest("[data-topic-event]");
       if (!card) return;
-      renderEvent(card.dataset.topicEvent);
-      showView("overview");
-      showOverviewTab("events");
-      requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+      openCompetition(card.dataset.topicEvent);
+      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     }
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
+    const mobileMenuToggle = document.querySelector("#mobileMenuToggle");
+    const mobileQuickMenu = document.querySelector("#mobileQuickMenu");
+    mobileMenuToggle?.addEventListener("click", () => {
+      const expanded = mobileMenuToggle.getAttribute("aria-expanded") === "true";
+      mobileMenuToggle.setAttribute("aria-expanded", String(!expanded));
+      mobileMenuToggle.setAttribute("aria-label", expanded ? "開啟快捷選單" : "關閉快捷選單");
+      mobileQuickMenu.hidden = expanded;
+    });
+    mobileQuickMenu?.addEventListener("click", (event) => {
+      const button = event.target.closest("[data-menu-view]");
+      if (!button) return;
+      showView(button.dataset.menuView);
+      closeMobileMenu();
+    });
+    document.addEventListener("click", (event) => {
+      if (!mobileQuickMenu?.hidden && !event.target.closest("#mobileQuickMenu, #mobileMenuToggle")) closeMobileMenu();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && mobileQuickMenu && !mobileQuickMenu.hidden) {
+        closeMobileMenu();
+        mobileMenuToggle?.focus();
+      }
+    });
+    els.eventDetail.addEventListener("click", (event) => {
+      if (event.target.closest("[data-back-to-events]")) {
+        showView("overview");
+        showOverviewTab("events");
+      }
+    });
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
     window.addEventListener("hashchange", () => {
       const target = location.hash.slice(1) || "home";
@@ -17,13 +60,13 @@
     });
     document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => showView("search")));
     document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => { showView("overview"); showOverviewTab("events"); }));
-    els.recentEvents.addEventListener("click", (event) => {
+    const openRecentEvent = (event) => {
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
-      renderEvent(card.dataset.eventName);
-      showView("overview");
-      showOverviewTab("events");
-    });
+      openCompetition(card.dataset.eventName);
+    };
+    els.recentEvents.addEventListener("click", openRecentEvent);
+    els.mobileRecentEvents?.addEventListener("click", openRecentEvent);
 
     let suppressTimelineClick = false;
     let timelineDrag = null;
@@ -64,17 +107,15 @@
         node.focus();
         return;
       }
-      renderEvent(node.dataset.eventName);
-      showView("overview");
-      showOverviewTab("events");
+      openCompetition(node.dataset.eventName);
     });
     els.eventSearch.addEventListener("input", renderEventFinder);
     els.eventYear.addEventListener("change", renderEventFinder);
     els.eventFinderResults.addEventListener("click", (event) => {
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
-      renderEvent(card.dataset.eventName);
-      requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+      openCompetition(card.dataset.eventName);
+      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
     els.overviewSchoolFilter.addEventListener("input", renderOverviewSchools);
