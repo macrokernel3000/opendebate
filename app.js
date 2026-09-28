@@ -38,6 +38,8 @@ const els = {
   eventFinderMeta: document.querySelector("#eventFinderMeta"),
   eventFinderResults: document.querySelector("#eventFinderResults"),
   eventDetail: document.querySelector("#eventDetail"),
+  eventPageDetail: document.querySelector("#eventPageDetail"),
+  schoolPageDetail: document.querySelector("#schoolPageDetail"),
   overviewTabs: document.querySelectorAll("[data-overview-tab]"),
   overviewEventsPanel: document.querySelector("#overviewEventsPanel"),
   overviewView: document.querySelector("#overviewView"),
@@ -78,28 +80,35 @@ function eventSummaries() {
 
 
 
+let hasRenderedRoute = false;
 function showView(name) {
   const requested = name === "events" ? "overview" : name;
   const eventRoute = requested.match(/^event\/(.+)$/);
+  const schoolRoute = requested.match(/^school\/(.+)$/);
   let eventName = "";
+  let schoolId = "";
   if (eventRoute) {
     try { eventName = decodeURIComponent(eventRoute[1]); } catch { eventName = ""; }
     if (!events.some((event) => event.name === eventName)) eventName = "";
   }
-  const target = eventName ? "overview" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
+  if (schoolRoute) {
+    try { schoolId = decodeURIComponent(schoolRoute[1]); } catch { schoolId = ""; }
+    if (!store.entityById.has(schoolId)) schoolId = "";
+  }
+  const target = eventName ? "event-page" : schoolId ? "school-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
-  els.overviewView.classList.toggle("is-event-open", Boolean(eventName));
+  els.overviewView.classList.remove("is-event-open");
   els.overviewEventsPanel.classList.remove("is-event-open");
-  if (eventName) {
-    showOverviewTab("events");
-    els.overviewEventsPanel.classList.add("is-event-open");
-    renderEvent(eventName);
-  } else if (target === "overview") {
-    els.eventDetail.innerHTML = "";
+  if (eventName) renderEvent(eventName, els.eventPageDetail);
+  if (schoolId) els.schoolPageDetail.innerHTML = renderEntityDetail(store.entityById.get(schoolId), "schoolPageEntityDetail", true);
+  if (target === "overview") els.eventDetail.innerHTML = "";
+  const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : `#${target}`;
+  if (location.hash !== routeHash) {
+    if (!hasRenderedRoute) history.replaceState(null, "", routeHash);
+    else history.pushState({ from: location.hash || "#home" }, "", routeHash);
   }
-  const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : `#${target}`;
-  if (location.hash !== routeHash) history.replaceState(null, "", routeHash);
+  hasRenderedRoute = true;
   window.scrollTo({ top: 0, behavior: "smooth" });
   if (target === "search") requestAnimationFrame(() => els.globalSearch.focus());
 }
@@ -192,6 +201,11 @@ function isSingleMatchBest(honor) {
   return ["單場最佳辯士", "最佳辯士"].includes(honor.honorName?.trim());
 }
 
+function entityPageLink(entityId, label, className = "") {
+  if (!store.entityById.has(entityId)) return escapeHtml(label);
+  return `<button type="button" class="inline-entity-link ${className}" data-entity-route="${escapeHtml(entityId)}">${escapeHtml(label)}</button>`;
+}
+
 function renderEventHonors(event) {
   const singleBestGroups = new Map();
   const podiumHonors = [];
@@ -200,7 +214,8 @@ function renderEventHonors(event) {
     const honorName = honor.honorName?.trim() || "";
     const rank = /(?:^|組)冠軍$/.test(honorName) ? 0
       : /(?:^|組)亞軍$/.test(honorName) ? 1
-        : /(?:^|組)季軍$/.test(honorName) ? 2 : -1;
+        : /(?:^|組)季軍$/.test(honorName) ? 2
+          : /(?:^|組)殿軍$/.test(honorName) ? 3 : -1;
     if (rank >= 0) {
       podiumHonors.push({ honor, rank });
       continue;
@@ -210,21 +225,21 @@ function renderEventHonors(event) {
       continue;
     }
     const key = `${honor.recipient}\u0000${honor.team}`;
-    const group = singleBestGroups.get(key) || { recipient: honor.recipient, team: honor.team, count: 0 };
+    const group = singleBestGroups.get(key) || { recipient: honor.recipient, team: honor.team, teamId: honor.teamId, count: 0 };
     group.count += 1;
     singleBestGroups.set(key, group);
   }
   const podiumRows = podiumHonors
     .sort((a, b) => a.rank - b.rank)
-    .map(({ honor }) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`)
+    .map(({ honor }) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${entityPageLink(honor.teamId, honorSubject(honor))}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}</div>`)
     .join("");
   const bestRows = [...singleBestGroups.values()].map((group) => `
     <div class="event-honor">
       <span>單場最佳辯士</span>
       <strong>${escapeHtml(group.recipient)}${group.count > 1 ? `<span class="honor-count-badge" aria-label="獲獎 ${group.count} 次">*${group.count}</span>` : ""}</strong>
-      ${group.team ? `<small>${escapeHtml(group.team)}</small>` : ""}
+      ${group.team ? `<small>${entityPageLink(group.teamId, group.team)}</small>` : ""}
     </div>`).join("");
-  const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("");
+  const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${entityPageLink(honor.teamId, honorSubject(honor))}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}</div>`).join("");
   return `${podiumRows ? `<h4 class="event-honor-section-title">賽事名次</h4>${podiumRows}` : ""}${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
 }
 
@@ -334,7 +349,7 @@ function renderEventFinder() {
   els.eventFinderResults.innerHTML = timelineCards || '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
 }
 
-function renderEvent(name) {
+function renderEvent(name, target = els.eventDetail) {
   const event = events.find((item) => item.name === name);
   if (!event) return;
   const matchNoteKey = (value) => String(value || "").split(/[；;]/, 1)[0].replace(/\s+/g, "");
@@ -358,9 +373,9 @@ function renderEvent(name) {
         const singleBest = singleBestFor(match);
         return `<div class="match-row">
           <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}</span>
-          <span class="team-name">${escapeHtml(match.teams?.affirmative)}</span>
+          <span class="team-name">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}</span>
           <span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>
-          <span class="team-name negative">${escapeHtml(match.teams?.negative)}</span>
+          <span class="team-name negative">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}</span>
           <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleBest.length ? `<span class="match-single-best"><b>單場最佳辯士</b>${singleBest.map(escapeHtml).join("、")}</span>` : ""}</span>
         </div>`;
       }).join("")}</div>
@@ -369,8 +384,8 @@ function renderEvent(name) {
   const metadata = event.metadata || {};
   const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
   const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
-  els.eventDetail.innerHTML = `
-    <button class="event-back-button" type="button" data-back-to-events>← 返回賽事列表</button>
+  target.innerHTML = `
+    <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
     <div class="event-summary">
       <div><h2>${escapeHtml(event.name)}</h2><p>${event.metadata.startDate && event.metadata.endDate ? `${formatDate(event.metadata.startDate)}–${formatDate(event.metadata.endDate)}` : event.dates.map(formatDate).join("、")}</p></div>
       <div class="event-summary-count"><span class="count-chip">${event.teamCount} 隊</span><span class="count-chip">${event.records.length} 場</span><span class="count-chip">${event.honors.length} 榮譽</span></div>
@@ -438,13 +453,13 @@ function renderOverviewSchools() {
       <div class="overview-entity-list">${renderCards(groups, "team")}</div>
     </section>`;
   if (selectedOverviewEntityId && !teams.some((item) => item.entity.code === selectedOverviewEntityId)) selectedOverviewEntityId = "";
-  els.overviewSchoolDetail.innerHTML = selectedOverviewEntityId ? renderEntityDetail(store.entityById.get(selectedOverviewEntityId), "overviewEntityDetail") : "";
+  els.overviewSchoolDetail.innerHTML = "";
 }
 
 function selectOverviewEntity(entityId) {
   selectedOverviewEntityId = entityId;
   renderOverviewSchools();
-  requestAnimationFrame(() => document.querySelector("#overviewEntityDetail")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  showView(`school/${encodeURIComponent(entityId)}`);
 }
 
 function showOverviewTab(tabName) {
@@ -520,16 +535,18 @@ function renderSearch(query) {
   els.searchResults.innerHTML = entitySection + topicSection + entityDetail + (selectedEntity ? "" : historySection) || '<div class="search-empty"><div><span aria-hidden="true">🤔</span><strong>目前沒有相符資料</strong><p>可以縮短關鍵字再試一次。</p></div></div>';
 }
 
-function renderEntityDetail(entity, detailId = "entityDetail") {
+function renderEntityDetail(entity, detailId = "entityDetail", standalone = false) {
   if (!entity) return "";
   const entityRecords = records.filter((item) => item.teamIds?.affirmative === entity.code || item.teamIds?.negative === entity.code)
     .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(b.period) - Number(a.period));
   const entityHonors = honors.filter((item) => item.teamId === entity.code).sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
   const wins = entityRecords.filter((match) => matchResultForEntity(match, entity.code) === "勝").length;
   const participatedEvents = unique([...entityRecords.map((item) => item.competitionName), ...entityHonors.map((item) => item.competitionName)]);
+  const entityLink = entityPageLink;
+  const eventLink = (name, className = "") => `<button type="button" class="entity-event-link ${className}" data-event-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
   const matchRows = entityRecords.map((match) => {
     const result = matchResultForEntity(match, entity.code);
-    return `<article class="entity-match"><span class="history-date">${escapeHtml(formatDate(match.matchDate))}</span><div><strong>${escapeHtml(match.teams?.affirmative)} ${match.scores?.affirmative ?? 0}：${match.scores?.negative ?? 0} ${escapeHtml(match.teams?.negative)}</strong><p>${escapeHtml(match.competitionName)} · 時段 ${escapeHtml(match.period || "-")} · 會場 ${escapeHtml(match.venue || "-")}</p></div><span class="result-badge result-${result === "勝" ? "win" : result === "敗" ? "loss" : "draw"}">${result}</span></article>`;
+    return `<article class="entity-match"><span class="history-date">${escapeHtml(formatDate(match.matchDate))}</span><div><strong>${entityLink(match.teamIds?.affirmative, match.teams?.affirmative)} ${match.scores?.affirmative ?? 0}：${match.scores?.negative ?? 0} ${entityLink(match.teamIds?.negative, match.teams?.negative)}</strong><p>${eventLink(match.competitionName)} · 時段 ${escapeHtml(match.period || "-")} · 會場 ${escapeHtml(match.venue || "-")}</p></div><span class="result-badge result-${result === "勝" ? "win" : result === "敗" ? "loss" : "draw"}">${result}</span></article>`;
   }).join("");
   const podium = (honorName) => {
     const name = honorName?.trim() || "";
@@ -548,16 +565,15 @@ function renderEntityDetail(entity, detailId = "entityDetail") {
   });
   const trophyRows = [...awardGroups.values()].map((group) => {
     group.awards.sort((a, b) => a.order - b.order);
-    return `<article class="entity-trophy-card"><strong>${escapeHtml(group.name)}</strong><span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.medal}</span>`).join("")}</span></article>`;
+    return `<article class="entity-trophy-card"><strong>${eventLink(group.name)}</strong><span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.medal}</span>`).join("")}</span></article>`;
   }).join("");
-  const honorRows = entityHonors.map((honor) => `<article class="entity-honor-row"><span>${escapeHtml(formatDate(honor.matchDate))}</span><div><strong>${escapeHtml(honor.honorName)}｜${escapeHtml(honorSubject(honor))}</strong><p>${escapeHtml(honor.competitionName)}</p></div></article>`).join("");
-  return `<section id="${detailId}" class="result-section entity-detail"><div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽 <small><b>金</b>冠軍 · <b>銀</b>亞軍 · <b>銅</b>季軍 · <b>白</b>殿軍</small></h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次。</p>"}</div><h3>參加賽事</h3><div class="entity-event-list">${participatedEvents.map((name) => `<span>${escapeHtml(name)}</span>`).join("") || "<p>尚無參賽紀錄。</p>"}</div><h3>所有戰績</h3><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div><h3>相關榮譽</h3><div class="entity-honor-list">${honorRows || "<p>尚無相關榮譽。</p>"}</div></section>`;
+  const honorRows = entityHonors.map((honor) => `<article class="entity-honor-row"><span>${escapeHtml(formatDate(honor.matchDate))}</span><div><strong>${escapeHtml(honor.honorName)}｜${entityLink(honor.teamId, honorSubject(honor))}</strong><p>${eventLink(honor.competitionName)}</p></div></article>`).join("");
+  return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽 <small><b>金</b>冠軍 · <b>銀</b>亞軍 · <b>銅</b>季軍 · <b>白</b>殿軍</small></h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次。</p>"}</div><h3>參加賽事</h3><div class="entity-event-list">${participatedEvents.map((name) => eventLink(name)).join("") || "<p>尚無參賽紀錄。</p>"}</div><h3>所有戰績</h3><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div><h3>相關榮譽</h3><div class="entity-honor-list">${honorRows || "<p>尚無相關榮譽。</p>"}</div></section>`;
 }
 
 function selectEntity(entityId) {
-  selectedEntityId = entityId;
-  renderSearch(els.globalSearch.value.trim());
-  requestAnimationFrame(() => document.querySelector("#entityDetail")?.scrollIntoView({ behavior: "smooth", block: "start" }));
+  if (!store.entityById.has(entityId)) return;
+  showView(`school/${encodeURIComponent(entityId)}`);
 }
 
 window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab });
@@ -593,7 +609,7 @@ function renderAll() {
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
   const initialView = location.hash.slice(1);
-  showView(initialQuery ? "search" : (/^event\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
+  showView(initialQuery ? "search" : (/^(?:event|school)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
 }
 

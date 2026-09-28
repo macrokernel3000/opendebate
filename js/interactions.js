@@ -1,14 +1,6 @@
 (function () {
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab }) {
-    const openCompetition = (name, mobileDirect = true) => {
-      if (mobileDirect && window.matchMedia("(max-width: 640px)").matches) {
-        showView(`event/${encodeURIComponent(name)}`);
-        return;
-      }
-      showView("overview");
-      showOverviewTab("events");
-      renderEvent(name);
-    };
+    const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
       const menu = document.querySelector("#mobileQuickMenu");
@@ -40,18 +32,23 @@
     document.addEventListener("click", (event) => {
       if (!mobileQuickMenu?.hidden && !event.target.closest("#mobileQuickMenu, #mobileMenuToggle")) closeMobileMenu();
     });
+    document.addEventListener("click", (event) => {
+      const entityLink = event.target.closest("[data-entity-route]");
+      if (entityLink) { showView(`school/${encodeURIComponent(entityLink.dataset.entityRoute)}`); return; }
+      const eventLink = event.target.closest("[data-event-route]");
+      if (eventLink) { openCompetition(eventLink.dataset.eventRoute); return; }
+      if (event.target.closest("[data-detail-back]")) {
+        if (history.state?.from) history.back();
+        else showView("overview");
+      }
+    });
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && mobileQuickMenu && !mobileQuickMenu.hidden) {
         closeMobileMenu();
         mobileMenuToggle?.focus();
       }
     });
-    els.eventDetail.addEventListener("click", (event) => {
-      if (event.target.closest("[data-back-to-events]")) {
-        showView("overview");
-        showOverviewTab("events");
-      }
-    });
+
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
     window.addEventListener("hashchange", () => {
       const target = location.hash.slice(1) || "home";
