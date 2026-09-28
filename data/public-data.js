@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-28T20:11:15",
+  "generatedAt": "2026-09-29T00:22:41",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -30872,277 +30872,277 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "高偉承",
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D1-1",
       "teamId": "p127",
-      "id": "honor-c85da6a4041a"
+      "id": "honor-7b9a37495558"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "黃忻恩",
       "team": "最佳英鎊辯論隊",
       "honorType": "player",
       "note": "D1-1",
       "teamId": "p128",
-      "id": "honor-7534624fc763"
+      "id": "honor-a36c66fa69ec"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "潘彥成",
       "team": "成淵高中",
       "honorType": "player",
       "note": "D1-1",
       "teamId": "s068",
-      "id": "honor-7348c13813db"
+      "id": "honor-17037cd0a33e"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張育棋",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D1-1",
       "teamId": "p039",
-      "id": "honor-b39b0dda0556"
+      "id": "honor-d7eb39759de7"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "董科男",
       "team": "誤入商業帝國的長髮男",
       "honorType": "player",
       "note": "D1-1",
       "teamId": "p131",
-      "id": "honor-1e1fcb8397bb"
+      "id": "honor-995f031181da"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "謝欣瑜",
       "team": "南湖高中",
       "honorType": "player",
       "note": "D1-2",
       "teamId": "s024",
-      "id": "honor-d486e7f47b28"
+      "id": "honor-31daec52ffde"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "洪棋恩",
       "team": "竹林七賢",
       "honorType": "player",
       "note": "D1-2",
       "teamId": "p134",
-      "id": "honor-aab5880148fe"
+      "id": "honor-5eb8a5144374"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "吳翰宇",
       "team": "大家都不想講話",
       "honorType": "player",
       "note": "D1-2",
       "teamId": "p132",
-      "id": "honor-82836530a3cc"
+      "id": "honor-6eadb04521f2"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "陳廣賢",
       "team": "澎湖一中",
       "honorType": "player",
       "note": "D1-2",
       "teamId": "s169",
-      "id": "honor-719cb661421e"
+      "id": "honor-dc95352e96ee"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張育棋",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D2-1",
       "teamId": "p039",
-      "id": "honor-2c008b1faf45"
+      "id": "honor-41104188a55c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "吳易睿",
       "team": "最佳英鎊辯論隊",
       "honorType": "player",
       "note": "D2-1",
       "teamId": "p128",
-      "id": "honor-00d23cbf5acc"
+      "id": "honor-d8dbfaeb1ecb"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "高偉承",
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D2-1",
       "teamId": "p127",
-      "id": "honor-c0446f6968ed"
+      "id": "honor-eeb935c46fe9"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "陳羿廷",
       "team": "成功口技社",
       "honorType": "player",
       "note": "D2-1",
       "teamId": "p130",
-      "id": "honor-0147a44106c6"
+      "id": "honor-a5921687758a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "于潤萱",
       "team": "南山高中",
       "honorType": "player",
       "note": "D2-2",
       "teamId": "s023",
-      "id": "honor-54464a1fc262"
+      "id": "honor-2eacf905419c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張承儀",
       "team": "衛道中學辯論社",
       "honorType": "player",
       "note": "D2-2",
       "teamId": "p133",
-      "id": "honor-81b2728c148d"
+      "id": "honor-213704710202"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "孫興宸",
       "team": "世宣67",
       "honorType": "player",
       "note": "D2-2",
       "teamId": "p119",
-      "id": "honor-b685be01e1cd"
+      "id": "honor-733931c7306a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "林宥澄",
       "team": "宮燈最佳辯士",
       "honorType": "player",
       "note": "D2-2",
       "teamId": "p135",
-      "id": "honor-7875dd57ed67"
+      "id": "honor-2538ea4f7379"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "林毓晴",
       "team": "宮燈最佳辯士",
       "honorType": "player",
       "note": "D2-2",
       "teamId": "p135",
-      "id": "honor-94ab5fc8b9e9"
+      "id": "honor-665e5517059a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "高偉承",
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D2-3",
       "teamId": "p127",
-      "id": "honor-cd4a2a0bbc44"
+      "id": "honor-07c714b2d26c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "孫興宸",
       "team": "世宣67",
       "honorType": "player",
       "note": "D2-3",
       "teamId": "p119",
-      "id": "honor-ae45650cc37d"
+      "id": "honor-684632aa6968"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "陳羿廷",
       "team": "成功口技社",
       "honorType": "player",
       "note": "D2-3",
       "teamId": "p130",
-      "id": "honor-eb9eb7e42019"
+      "id": "honor-98f608460f17"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張育棋",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D2-3",
       "teamId": "p039",
-      "id": "honor-398ed87bf1c9"
+      "id": "honor-177f4c8ff48d"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "高偉承",
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D3 複賽",
       "teamId": "p127",
-      "id": "honor-34ed8e75f24f"
+      "id": "honor-c36a5e95ea08"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張育棋",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D3 複賽",
       "teamId": "p039",
-      "id": "honor-73aab58dcdba"
+      "id": "honor-fc62c6381cfa"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "honorName": "最佳辯士",
+      "honorName": "單場最佳辯士",
       "recipient": "張育棋",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D3 決賽",
       "teamId": "p039",
-      "id": "honor-a26d9239fa7e"
+      "id": "honor-0bf9cd9a4dc9"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",

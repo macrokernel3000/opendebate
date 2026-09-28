@@ -269,6 +269,18 @@ function renderEventFinder() {
 function renderEvent(name) {
   const event = events.find((item) => item.name === name);
   if (!event) return;
+  const matchNoteKey = (value) => String(value || "").split(/[；;]/, 1)[0].replace(/\s+/g, "");
+  const singleBestFor = (match) => {
+    const teamNames = Object.values(match.teams || {});
+    const noteKey = matchNoteKey(match.note);
+    if (!noteKey) return [];
+    return unique(event.honors.filter((honor) =>
+      ["單場最佳辯士", "最佳辯士"].includes(honor.honorName?.trim()) &&
+      honor.matchDate === match.matchDate &&
+      matchNoteKey(honor.note) === noteKey &&
+      teamNames.includes(honor.team)
+    ).map((honor) => honor.recipient));
+  };
   const grouped = groupByDate([...event.records].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(a.period) - Number(b.period) || Number(a.venue) - Number(b.venue)));
   const matchDays = Object.entries(grouped).map(([date, matches]) => `
     <section class="match-day">
@@ -276,12 +288,13 @@ function renderEvent(name) {
       <div class="match-list">${matches.map((match) => {
         const a = Number(match.scores?.affirmative) || 0;
         const n = Number(match.scores?.negative) || 0;
+        const singleBest = singleBestFor(match);
         return `<div class="match-row">
           <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}</span>
           <span class="team-name">${escapeHtml(match.teams?.affirmative)}</span>
           <span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>
           <span class="team-name negative">${escapeHtml(match.teams?.negative)}</span>
-          <span class="match-note">${escapeHtml(match.note || "公開賽果")}</span>
+          <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleBest.length ? `<span class="match-single-best"><b>單場最佳辯士</b>${singleBest.map(escapeHtml).join("、")}</span>` : ""}</span>
         </div>`;
       }).join("")}</div>
     </section>`).join("");
