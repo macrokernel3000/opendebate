@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-29T00:46:06",
+  "generatedAt": "2026-09-29T01:04:39",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -84,12 +84,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p008",
       "type": "p",
       "name": "世界第一大美女何亮諼",
-      "aliases": ""
-    },
-    {
-      "code": "p009",
-      "type": "p",
-      "name": "中信國際",
       "aliases": ""
     },
     {
@@ -387,12 +381,6 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
-      "code": "p059",
-      "type": "p",
-      "name": "板橋高中無教練的小朋友",
-      "aliases": ""
-    },
-    {
       "code": "p060",
       "type": "p",
       "name": "楊子甯說你很難改變一個人所以只能改辯稿",
@@ -498,18 +486,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p077",
       "type": "p",
       "name": "萬芳華江家齊聯隊",
-      "aliases": ""
-    },
-    {
-      "code": "p078",
-      "type": "p",
-      "name": "虎尾高中（一）",
-      "aliases": ""
-    },
-    {
-      "code": "p079",
-      "type": "p",
-      "name": "虎尾高中（三）",
       "aliases": ""
     },
     {
@@ -816,7 +792,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s002",
       "type": "s",
       "name": "中信高中",
-      "aliases": "中信國際高中"
+      "aliases": "中信國際高中|中信國際"
     },
     {
       "code": "s003",
@@ -1560,7 +1536,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s138",
       "type": "s",
       "name": "虎尾高中",
-      "aliases": "虎尾高中A|虎尾高中B|虎尾高中（二）|虎尾國小"
+      "aliases": "虎尾高中A|虎尾高中B|虎尾高中（二）|虎尾國小|虎尾高中（一）|虎尾高中（三）"
     },
     {
       "code": "s139",
@@ -13685,10 +13661,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p009",
+        "affirmative": "s002",
         "negative": "s081"
       },
-      "id": "match-36c39f7baf6a"
+      "id": "match-bfb617bcec2a"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -13886,9 +13862,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s131",
-        "negative": "p009"
+        "negative": "s002"
       },
-      "id": "match-540160cf1084"
+      "id": "match-949fb4b75984"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -21021,7 +20997,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": 1,
       "teams": {
-        "affirmative": "板橋高中無教練的小朋友",
+        "affirmative": "板橋高中",
         "negative": "無教練的小朋友"
       },
       "scores": {
@@ -21035,10 +21011,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p059",
+        "affirmative": "s091",
         "negative": "p067"
       },
-      "id": "match-1ff7891afd49"
+      "id": "match-128458d59fea"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -26811,9 +26787,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s162",
-        "negative": "p078"
+        "negative": "s138"
       },
-      "id": "match-64eedad79b90"
+      "id": "match-654c80920935"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -26960,10 +26936,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p079",
+        "affirmative": "s138",
         "negative": "s078"
       },
-      "id": "match-36167d5ba71c"
+      "id": "match-b0d376a7ebfa"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -27010,10 +26986,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p078",
+        "affirmative": "s138",
         "negative": "s162"
       },
-      "id": "match-11daa6f8fd5b"
+      "id": "match-4698c4cb0563"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -27061,9 +27037,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s078",
-        "negative": "p079"
+        "negative": "s138"
       },
-      "id": "match-ef246b724161"
+      "id": "match-db229123fc9e"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
