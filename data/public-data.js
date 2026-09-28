@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T01:45:27",
+  "generatedAt": "2026-09-29T01:50:13",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -993,12 +993,6 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": "北市大同"
     },
     {
-      "code": "s045",
-      "type": "s",
-      "name": "市立復興",
-      "aliases": ""
-    },
-    {
       "code": "s046",
       "type": "s",
       "name": "市立東山",
@@ -1074,7 +1068,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s059",
       "type": "s",
       "name": "復興高中",
-      "aliases": ""
+      "aliases": "市立復興"
     },
     {
       "code": "s060",
@@ -23537,10 +23531,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s045",
+        "affirmative": "s059",
         "negative": "s080"
       },
-      "id": "match-4c8690c3611e"
+      "id": "match-901511ca52f8"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -23888,9 +23882,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s080",
-        "negative": "s045"
+        "negative": "s059"
       },
-      "id": "match-2c304ff28a2c"
+      "id": "match-1ea992b3902e"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
