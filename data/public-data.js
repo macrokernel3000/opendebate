@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T01:39:07",
+  "generatedAt": "2026-09-29T01:43:04",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -32667,6 +32667,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "topic": "如果你撿到一本死亡筆記本，你要使用它/銷毀它",
+      "explanation": ""
+    },
+    {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
       "topic": "註定分開的愛情還要／不要開始",
       "explanation": ""
@@ -32747,7 +32752,7 @@ window.DEBATE_PUBLIC_DATA = {
       "startDate": "2026-09-25",
       "endDate": "2026-09-27",
       "organizer": "",
-      "location": "淡水",
+      "location": "淡江大學",
       "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。",
       "ageRestriction": true,
       "teamCount": 17
