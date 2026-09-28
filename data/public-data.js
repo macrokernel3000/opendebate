@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 4,
-  "generatedAt": "2026-09-29T00:31:36",
+  "generatedAt": "2026-09-29T00:46:06",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -31165,6 +31165,28 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "p119",
       "id": "honor-d3b3834a567a"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "季軍",
+      "recipient": "白烏鴉辯論隊",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p127",
+      "id": "honor-36f26bbd78a4"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-27",
+      "honorName": "季軍",
+      "recipient": "成功口技社",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p130",
+      "id": "honor-0ab66a8b117f"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",

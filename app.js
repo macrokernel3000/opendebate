@@ -184,8 +184,17 @@ function isSingleMatchBest(honor) {
 
 function renderEventHonors(event) {
   const singleBestGroups = new Map();
+  const podiumHonors = [];
   const otherHonors = [];
   for (const honor of event.honors) {
+    const honorName = honor.honorName?.trim() || "";
+    const rank = /(?:^|組)冠軍$/.test(honorName) ? 0
+      : /(?:^|組)亞軍$/.test(honorName) ? 1
+        : /(?:^|組)季軍$/.test(honorName) ? 2 : -1;
+    if (rank >= 0) {
+      podiumHonors.push({ honor, rank });
+      continue;
+    }
     if (!isSingleMatchBest(honor)) {
       otherHonors.push(honor);
       continue;
@@ -195,6 +204,10 @@ function renderEventHonors(event) {
     group.count += 1;
     singleBestGroups.set(key, group);
   }
+  const podiumRows = podiumHonors
+    .sort((a, b) => a.rank - b.rank)
+    .map(({ honor }) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`)
+    .join("");
   const bestRows = [...singleBestGroups.values()].map((group) => `
     <div class="event-honor">
       <span>單場最佳辯士</span>
@@ -202,7 +215,7 @@ function renderEventHonors(event) {
       ${group.team ? `<small>${escapeHtml(group.team)}</small>` : ""}
     </div>`).join("");
   const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("");
-  return `${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
+  return `${podiumRows ? `<h4 class="event-honor-section-title">賽事名次</h4>${podiumRows}` : ""}${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
 }
 
 function eventChampion(event) {
