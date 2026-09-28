@@ -189,6 +189,9 @@ button { color: inherit; }
 .event-honor span { color: var(--coral); font-size: 11px; font-weight: 900; }
 .event-honor strong { margin-top: 3px; }
 .event-honor small { display: block; margin-top: 3px; color: var(--muted); }
+.event-honor-section-title { margin: 14px 0 0; color: var(--green-dark); font-size: 13px; }
+.event-honor-section-title:first-of-type { margin-top: 4px; }
+.event-honor strong .honor-count-badge { display: inline-grid; min-width: 28px; height: 20px; box-sizing: border-box; place-items: center; margin-left: 8px; border-radius: 7px; padding: 0 5px; background: #fff0bd; color: #77600f; font-size: 10px; line-height: 1; vertical-align: middle; }
 
 .search-stage { padding: 64px 0 40px; background: var(--green-dark); color: white; }
 .search-stage .kicker { color: var(--yellow); }
@@ -501,6 +504,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .mobile-quick-menu button { display: flex; align-items: center; gap: 12px; min-height: 46px; border: 0; border-radius: 12px; padding: 0 12px; background: transparent; color: var(--ink); text-align: left; font: inherit; font-weight: 750; cursor: pointer; }
   .mobile-quick-menu button:hover, .mobile-quick-menu button:focus-visible { outline: 0; background: #e7f1eb; color: var(--green-dark); }
   .mobile-quick-menu button span { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; background: #edf3ee; font-size: 17px; }
+  .mobile-quick-menu button span .nav-icon { display: block; width: 19px; height: 19px; flex: 0 0 19px; }
   .main-nav { position: fixed; z-index: 100; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); left: 12px; display: flex; height: 66px; gap: 4px; align-items: stretch; min-width: 0; overflow: visible; border: 1px solid rgba(23, 33, 29, .12); border-radius: 999px; padding: 5px; background: rgba(255, 253, 248, .96); box-shadow: 0 8px 28px rgba(23, 33, 29, .2); backdrop-filter: blur(16px); }
   .nav-button { position: relative; display: flex; flex: 1 1 0; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0; border: 0; border-radius: 999px; padding: 3px 2px; background: transparent; font-size: 11px; font-weight: 800; line-height: 1.2; white-space: nowrap; }
   .nav-icon { display: block; width: 19px; height: 19px; flex: 0 0 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }

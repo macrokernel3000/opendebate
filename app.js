@@ -178,6 +178,33 @@ function honorSubject(honor) {
   return honor.honorType === "player" ? honor.recipient : honor.recipient || honor.team;
 }
 
+function isSingleMatchBest(honor) {
+  return ["單場最佳辯士", "最佳辯士"].includes(honor.honorName?.trim());
+}
+
+function renderEventHonors(event) {
+  const singleBestGroups = new Map();
+  const otherHonors = [];
+  for (const honor of event.honors) {
+    if (!isSingleMatchBest(honor)) {
+      otherHonors.push(honor);
+      continue;
+    }
+    const key = `${honor.recipient}\u0000${honor.team}`;
+    const group = singleBestGroups.get(key) || { recipient: honor.recipient, team: honor.team, count: 0 };
+    group.count += 1;
+    singleBestGroups.set(key, group);
+  }
+  const bestRows = [...singleBestGroups.values()].map((group) => `
+    <div class="event-honor">
+      <span>單場最佳辯士</span>
+      <strong>${escapeHtml(group.recipient)}${group.count > 1 ? `<span class="honor-count-badge" aria-label="獲獎 ${group.count} 次">*${group.count}</span>` : ""}</strong>
+      ${group.team ? `<small>${escapeHtml(group.team)}</small>` : ""}
+    </div>`).join("");
+  const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("");
+  return `${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
+}
+
 function eventChampion(event) {
   const champion = event.honors.find((honor) => /(?:^|組)冠軍$/.test(honor.honorName?.trim() || ""));
   return champion ? honorSubject(champion) : "尚未收錄冠軍";
@@ -273,13 +300,12 @@ function renderEvent(name) {
   const singleBestFor = (match) => {
     const teamNames = Object.values(match.teams || {});
     const noteKey = matchNoteKey(match.note);
-    if (!noteKey) return [];
-    return unique(event.honors.filter((honor) =>
-      ["單場最佳辯士", "最佳辯士"].includes(honor.honorName?.trim()) &&
-      honor.matchDate === match.matchDate &&
-      matchNoteKey(honor.note) === noteKey &&
-      teamNames.includes(honor.team)
-    ).map((honor) => honor.recipient));
+    return unique(event.honors.filter((honor) => {
+      if (!isSingleMatchBest(honor) || honor.matchDate !== match.matchDate || !teamNames.includes(honor.team)) return false;
+      if (honor.note) return noteKey && matchNoteKey(honor.note) === noteKey;
+      const sameDayTeamMatches = event.records.filter((record) => record.matchDate === honor.matchDate && Object.values(record.teams || {}).includes(honor.team));
+      return sameDayTeamMatches.length === 1 && sameDayTeamMatches[0] === match;
+    }).map((honor) => honor.recipient));
   };
   const grouped = groupByDate([...event.records].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(a.period) - Number(b.period) || Number(a.venue) - Number(b.venue)));
   const matchDays = Object.entries(grouped).map(([date, matches]) => `
@@ -312,7 +338,7 @@ function renderEvent(name) {
     ${metadataSection}
     <div class="event-content-grid">
       <div class="event-scores"><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
-      <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? eventHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${escapeHtml(honorSubject(honor))}</strong>${honor.team ? `<small>${escapeHtml(honor.team)}</small>` : ""}</div>`).join("") : "<p>尚無公開榮譽。</p>"}</aside>
+      <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? renderEventHonors(event) : "<p>尚無公開榮譽。</p>"}</aside>
     </div>`;
 }
 
