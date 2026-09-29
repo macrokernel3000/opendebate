@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:23:29",
+  "generatedAt": "2026-09-29T12:40:17",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -1074,16 +1074,10 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": "市立復興"
     },
     {
-      "code": "s060",
-      "type": "s",
-      "name": "德光中學",
-      "aliases": ""
-    },
-    {
       "code": "s061",
       "type": "s",
       "name": "德光高中",
-      "aliases": ""
+      "aliases": "德光中學"
     },
     {
       "code": "s063",
@@ -28727,9 +28721,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s044",
-        "negative": "s060"
+        "negative": "s061"
       },
-      "id": "match-532db420774a"
+      "id": "match-4a77832ee74e"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -28976,10 +28970,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s060",
+        "affirmative": "s061",
         "negative": "s044"
       },
-      "id": "match-71912bbd597b"
+      "id": "match-d949b6bd3d40"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -31455,9 +31449,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s033",
-        "negative": "s060"
+        "negative": "s061"
       },
-      "id": "match-61487495697a"
+      "id": "match-635ec113be1c"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -31604,10 +31598,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s060",
+        "affirmative": "s061",
         "negative": "s159"
       },
-      "id": "match-1b8604c0ee6e"
+      "id": "match-972da4ea4224"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
