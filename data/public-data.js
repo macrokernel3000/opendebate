@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T02:36:19",
+  "generatedAt": "2026-09-29T10:34:11",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -22,6 +22,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十一屆辯革盃全國高中辯論比賽.csv",
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
+    "public-data-第二十三屆延平盃全國高中職辯論賽.csv",
     "public-data-第二十八屆高中菁英盃.csv",
     "public-data-第二十屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第二十屆辯革盃全國高中職辯論比賽.csv",
@@ -1020,7 +1021,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s050",
       "type": "s",
       "name": "延平中學",
-      "aliases": "延平高中|臺北市私立延平高級中學"
+      "aliases": "延平高中|臺北市私立延平高級中學|延平中學A|延平中學B"
     },
     {
       "code": "s052",
@@ -16912,6 +16913,681 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-ce4cb6d30a0d"
     },
     {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "海山高中",
+        "negative": "竹北高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "海山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s161",
+        "negative": "s109"
+      },
+      "id": "match-37381ba45e54"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "曙光女中",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "松山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s086",
+        "negative": "s090"
+      },
+      "id": "match-28a696ad5672"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s067"
+      },
+      "id": "match-6b82d2fc19b2"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "北市大同",
+        "negative": "曉明女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s085"
+      },
+      "id": "match-d17298e6af70"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "文華高中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s071",
+        "negative": "s005"
+      },
+      "id": "match-ff4d18e686f4"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "百齡高中",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s105",
+        "negative": "s120"
+      },
+      "id": "match-b4455fb17e8b"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s070"
+      },
+      "id": "match-ead653a91544"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "和平高中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s054"
+      },
+      "id": "match-2e1fe53b02b2"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "竹北高中",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "麗山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s109",
+        "negative": "s158"
+      },
+      "id": "match-e83d96995320"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "延平中學B"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "延平中學B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s090",
+        "negative": "s050"
+      },
+      "id": "match-10e381132b37"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s100"
+      },
+      "id": "match-9b55f2f0256a"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "北市大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "北市大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s044"
+      },
+      "id": "match-090092cedf3d"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "文華高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s071"
+      },
+      "id": "match-4a0c42948e6c"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "延平中學A"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "延平中學A",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s050"
+      },
+      "id": "match-36993bb6a2c3"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "聖心女中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s119",
+        "negative": "s122"
+      },
+      "id": "match-0b257bbfa54f"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "建國中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s160"
+      },
+      "id": "match-061ec49c7ea0"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "麗山高中",
+        "negative": "海山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "麗山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s158",
+        "negative": "s161"
+      },
+      "id": "match-a37ba684ef76"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "延平中學B",
+        "negative": "曙光女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "延平中學B",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s086"
+      },
+      "id": "match-c4c38fe2ccc7"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "竹科實中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s113"
+      },
+      "id": "match-f6469d404794"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s098"
+      },
+      "id": "match-836f3a6c05d4"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s057"
+      },
+      "id": "match-b0fac9d92876"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "延平中學A",
+        "negative": "百齡高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "百齡高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s105"
+      },
+      "id": "match-d653e5f108f6"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "period": 3,
+      "venue": 8,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "聖心女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s119"
+      },
+      "id": "match-ebe6f450ebd2"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "和平高中",
+        "negative": "麗山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "麗山高中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s158"
+      },
+      "id": "match-02a2d01efcbd"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "延平中學B",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "竹科實中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s113"
+      },
+      "id": "match-eb6ec321496e"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "曉明女中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s005"
+      },
+      "id": "match-3a608129e7b8"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中女中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s122"
+      },
+      "id": "match-6ea7b43755ab"
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "matchDate": "2026-01-30",
       "period": 3,
@@ -30728,6 +31404,237 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-b8588c5046ca"
     },
     {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "冠軍",
+      "recipient": "竹科實中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s113",
+      "id": "honor-6d4e7622d3f1"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "亞軍",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s085",
+      "id": "honor-98478b9794ed"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "季軍",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-01835594c980"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "季軍",
+      "recipient": "麗山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s158",
+      "id": "honor-c9e3b611c6f0"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "全程最佳辯士",
+      "recipient": "張育棋",
+      "team": "竹科實中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s113",
+      "id": "honor-c4832b467480"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "全程最佳辯士",
+      "recipient": "賴芯妍",
+      "team": "曉明女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s085",
+      "id": "honor-57b337c519c9"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "全程最佳辯士",
+      "recipient": "張嘉晏",
+      "team": "臺中女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-876cc3d399c3"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "全程最佳辯士",
+      "recipient": "黃忻恩",
+      "team": "竹科實中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s113",
+      "id": "honor-a816c7daa6f2"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "同舟共濟獎",
+      "recipient": "和平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s160",
+      "id": "honor-71b18a19eeb4"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "和平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜米奇組：和平高中與建國中學各1勝；和平評分單4張、建國2張，和平高中晉級。",
+      "teamId": "s160",
+      "id": "honor-6b1ca135684f"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "麗山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜唐老鴨組",
+      "teamId": "s158",
+      "id": "honor-557998b201ca"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "延平中學B",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜海綿寶寶組",
+      "teamId": "s050",
+      "id": "honor-73cf71ab0f1c"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "竹科實中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜豆豆先生組",
+      "teamId": "s113",
+      "id": "honor-42a20da5e4fb"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜七龍珠組",
+      "teamId": "s085",
+      "id": "honor-59dfc262dc4e"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "中大壢中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜航海王組",
+      "teamId": "s005",
+      "id": "honor-91fcc8f4c633"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "臺中一中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜哆啦A夢組：臺中一中、延平中學A、百齡高中各1勝、評分單各3張；架構（論點）張數依序4、2、3，臺中一中晉級。",
+      "teamId": "s120",
+      "id": "honor-f068436e5715"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-07",
+      "honorName": "晉級",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜蠟筆小新組",
+      "teamId": "s122",
+      "id": "honor-14923db3334b"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "晉級",
+      "recipient": "麗山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜迪士尼經典組",
+      "teamId": "s158",
+      "id": "honor-0c0ceee36391"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "晉級",
+      "recipient": "竹科實中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜歡樂搞笑組",
+      "teamId": "s113",
+      "id": "honor-b80975653de4"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "晉級",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜熱血冒險組",
+      "teamId": "s085",
+      "id": "honor-8dd9b226a079"
+    },
+    {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "matchDate": "2026-03-08",
+      "honorName": "晉級",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜童年回憶組",
+      "teamId": "s122",
+      "id": "honor-380463f991a9"
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "matchDate": "2026-01-30",
       "honorName": "冠軍",
@@ -32663,6 +33570,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
+      "topic": "應支持以人工智慧實踐數位永生／不應支持以人工智慧實踐數位永生",
+      "explanation": ""
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "topic": "我國應禁止舉辦賽鴿賽事",
       "explanation": ""
@@ -32769,6 +33681,15 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "依主辦方公開活動資訊：初賽、複賽於 2026-08-22；四強賽、決賽於 2026-08-23。原始戰績日期依賽程階段校正。",
+      "ageRestriction": null,
+      "teamCount": 23
+    },
+    "第二十三屆延平盃全國高中職辯論賽": {
+      "startDate": "2026-03-07",
+      "endDate": "2026-03-08",
+      "organizer": "",
+      "location": "臺北市私立延平高級中學",
+      "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位；預計錄取24隊。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
       "ageRestriction": null,
       "teamCount": 23
     },
