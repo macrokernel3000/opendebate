@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T21:22:53",
+  "generatedAt": "2026-09-30T01:52:48",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -35934,11 +35934,11 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "最佳申論辯士",
       "recipient": "陳頤",
-      "team": "",
+      "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-863234401e60"
+      "teamId": "p112",
+      "id": "honor-c09470121faa"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35978,11 +35978,11 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "最佳質詢辯士",
       "recipient": "鄭淳尹",
-      "team": "",
+      "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-2ee994692b3e"
+      "teamId": "p112",
+      "id": "honor-cce50a30a7fd"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
