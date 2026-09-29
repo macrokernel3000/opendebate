@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:08:25",
+  "generatedAt": "2026-09-29T12:18:05",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3312,8 +3312,8 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "臺中二中",
@@ -3334,12 +3334,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s121",
         "negative": "s133"
       },
-      "id": "match-73d726ef316b"
+      "id": "match-3fc7d5b17c3a"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "華江高中",
@@ -3360,12 +3360,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s133",
         "negative": "s121"
       },
-      "id": "match-ab32b1c06aa1"
+      "id": "match-d1b2b261bd3b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "三民高中",
@@ -3386,12 +3386,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s001",
         "negative": "s041"
       },
-      "id": "match-dc25fed8583f"
+      "id": "match-932a328830b0"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "屏東女中",
@@ -3412,12 +3412,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s041",
         "negative": "s001"
       },
-      "id": "match-09eed7745d75"
+      "id": "match-18a57cd093e1"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "嘉義高中",
@@ -3438,12 +3438,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s033",
         "negative": "s157"
       },
-      "id": "match-0e89da85c933"
+      "id": "match-a0e4597cd4f7"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "鳳新高中",
@@ -3464,12 +3464,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s157",
         "negative": "s033"
       },
-      "id": "match-7d3928851aec"
+      "id": "match-1cec6b41a9ea"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "師大附中",
@@ -3490,12 +3490,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s047",
         "negative": "s146"
       },
-      "id": "match-a7d51f8889e1"
+      "id": "match-351e345a4887"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "陽明交大附中",
@@ -3516,12 +3516,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s146",
         "negative": "s047"
       },
-      "id": "match-e0a9d8e99a3c"
+      "id": "match-2d867284a3fb"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "文山高中",
@@ -3542,12 +3542,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s168",
         "negative": "s006"
       },
-      "id": "match-e432e9bef247"
+      "id": "match-fa7fc43dc23d"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "中山女中",
@@ -3568,12 +3568,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s006",
         "negative": "s168"
       },
-      "id": "match-be2a3c70cf1e"
+      "id": "match-f4a386b2f23b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "臺南女中",
@@ -3594,12 +3594,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s127",
         "negative": "s061"
       },
-      "id": "match-e6af429290cf"
+      "id": "match-c50f527e250a"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "德光高中",
@@ -3620,12 +3620,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s061",
         "negative": "s127"
       },
-      "id": "match-06b2a8962d91"
+      "id": "match-a566d7600f03"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "中信國際高中",
@@ -3646,12 +3646,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s002",
         "negative": "s015"
       },
-      "id": "match-edccc603370e"
+      "id": "match-81ae9e156f2b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "前鎮高中",
@@ -3672,12 +3672,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s015",
         "negative": "s002"
       },
-      "id": "match-1d328b48c2e5"
+      "id": "match-cdf7c9a252e8"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "臺南二中",
@@ -3698,12 +3698,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s126",
         "negative": "s088"
       },
-      "id": "match-1956ee074f64"
+      "id": "match-1bd2539d5429"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "東山高中",
@@ -3724,12 +3724,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s088",
         "negative": "s126"
       },
-      "id": "match-2a693e5fdf48"
+      "id": "match-8850c662b92e"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "臺中二中",
@@ -3749,12 +3749,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s121",
         "negative": "s041"
       },
-      "id": "match-c87f5c279a1f"
+      "id": "match-768c3b3f4e34"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "嘉義高中",
@@ -3774,12 +3774,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s033",
         "negative": "s047"
       },
-      "id": "match-0935365711d1"
+      "id": "match-8854bbc57319"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "中山女中",
@@ -3799,12 +3799,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s006",
         "negative": "s127"
       },
-      "id": "match-1b82fe82f778"
+      "id": "match-004c641d8371"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-12",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "中信國際高中",
@@ -3824,12 +3824,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s002",
         "negative": "s126"
       },
-      "id": "match-eb3938de3424"
+      "id": "match-d677a7870049"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-13",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "屏東女中",
@@ -3849,12 +3849,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s041",
         "negative": "s047"
       },
-      "id": "match-078b73798c10"
+      "id": "match-bb2254a9e77a"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-13",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "臺南女中",
@@ -3874,12 +3874,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s127",
         "negative": "s002"
       },
-      "id": "match-4d4faab3077a"
+      "id": "match-95aabc005b1b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-13",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "屏東女中",
@@ -3899,12 +3899,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s041",
         "negative": "s127"
       },
-      "id": "match-61573038fa92"
+      "id": "match-10bdca2c615f"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
-      "matchDate": "",
-      "period": "",
+      "matchDate": "2026-09-13",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "師大附中",
@@ -3924,7 +3924,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s047",
         "negative": "s002"
       },
-      "id": "match-6d0822750107"
+      "id": "match-37ffecf23521"
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
