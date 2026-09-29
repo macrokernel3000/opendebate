@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T13:27:38",
+  "generatedAt": "2026-09-29T16:29:19",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -33355,28 +33355,6 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
       "matchDate": "",
-      "honorName": "晉級",
-      "recipient": "銨芯爬陽明山",
-      "team": "銨芯爬陽明山",
-      "honorType": "team",
-      "note": "循環一",
-      "teamId": "p102",
-      "id": "honor-f7460efdd2e8"
-    },
-    {
-      "competitionName": "第一屆陽明盃全國辯論公開賽",
-      "matchDate": "",
-      "honorName": "晉級",
-      "recipient": "明倫高中",
-      "team": "明倫高中",
-      "honorType": "team",
-      "note": "循環二",
-      "teamId": "s080",
-      "id": "honor-c804ef4bccbf"
-    },
-    {
-      "competitionName": "第一屆陽明盃全國辯論公開賽",
-      "matchDate": "",
       "honorName": "冠軍",
       "recipient": "銨芯爬陽明山",
       "team": "銨芯爬陽明山",
@@ -34464,72 +34442,6 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-71b18a19eeb4"
     },
     {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-07",
-      "honorName": "特殊晉級",
-      "recipient": "和平高中",
-      "team": "",
-      "honorType": "team",
-      "note": "八強｜米奇組：和平高中與建國中學各1勝；和平評分單4張、建國2張，和平高中晉級。",
-      "teamId": "s160",
-      "id": "honor-357e373d86ec"
-    },
-    {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-07",
-      "honorName": "特殊晉級",
-      "recipient": "臺中一中",
-      "team": "",
-      "honorType": "team",
-      "note": "八強｜哆啦A夢組：臺中一中、延平中學A、百齡高中各1勝、評分單各3張；架構（論點）張數依序4、2、3，臺中一中晉級。",
-      "teamId": "s120",
-      "id": "honor-ecc57628dca7"
-    },
-    {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-08",
-      "honorName": "晉級",
-      "recipient": "麗山高中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜迪士尼經典組",
-      "teamId": "s158",
-      "id": "honor-0c0ceee36391"
-    },
-    {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-08",
-      "honorName": "晉級",
-      "recipient": "竹科實中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜歡樂搞笑組",
-      "teamId": "s113",
-      "id": "honor-b80975653de4"
-    },
-    {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-08",
-      "honorName": "晉級",
-      "recipient": "曉明女中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜熱血冒險組",
-      "teamId": "s085",
-      "id": "honor-8dd9b226a079"
-    },
-    {
-      "competitionName": "第二十三屆延平盃全國高中職辯論賽",
-      "matchDate": "2026-03-08",
-      "honorName": "晉級",
-      "recipient": "臺中女中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜童年回憶組",
-      "teamId": "s122",
-      "id": "honor-380463f991a9"
-    },
-    {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
       "matchDate": "2025-03-01",
       "honorName": "冠軍",
@@ -34627,61 +34539,6 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s122",
       "id": "honor-70f66c7fe5ab"
-    },
-    {
-      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
-      "matchDate": "2025-02-28",
-      "honorName": "特殊晉級",
-      "recipient": "板橋高中",
-      "team": "",
-      "honorType": "team",
-      "note": "八強｜藝術組：竹科實中、板橋高中、聖心女中各1勝、各3張評分單及3張架構（論點）單；辯士個人成績排名加總依序57、54、64，板橋高中晉級。",
-      "teamId": "s091",
-      "id": "honor-3cc621de1a3e"
-    },
-    {
-      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
-      "matchDate": "2025-02-28",
-      "honorName": "晉級",
-      "recipient": "市立大同",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜葛來分多組",
-      "teamId": "s044",
-      "id": "honor-428dfdc0423b"
-    },
-    {
-      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
-      "matchDate": "2025-02-28",
-      "honorName": "晉級",
-      "recipient": "南山高中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜雷文克勞組",
-      "teamId": "s023",
-      "id": "honor-01783760e0d9"
-    },
-    {
-      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
-      "matchDate": "2025-02-28",
-      "honorName": "晉級",
-      "recipient": "曉明女中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜史萊哲林組",
-      "teamId": "s085",
-      "id": "honor-15259295ffbc"
-    },
-    {
-      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
-      "matchDate": "2025-02-28",
-      "honorName": "晉級",
-      "recipient": "永平高中",
-      "team": "",
-      "honorType": "team",
-      "note": "四強｜赫夫帕夫組",
-      "teamId": "s098",
-      "id": "honor-7157207e8e63"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
