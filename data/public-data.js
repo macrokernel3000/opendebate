@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T16:29:19",
+  "generatedAt": "2026-09-29T16:32:22",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -18658,7 +18658,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 1
       },
       "winner": "建國中學",
-      "note": "",
+      "note": "米奇組晉級判定：和平高中與建國中學各1勝；評分單和平高中4張、建國中學2張，和平高中晉級。",
       "players": {
         "affirmative": [],
         "negative": []
@@ -18668,7 +18668,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s054",
         "negative": "s160"
       },
-      "id": "match-e5c7e827e160"
+      "id": "match-d7c5ce291b65"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -18814,7 +18814,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 3
       },
       "winner": "百齡高中",
-      "note": "",
+      "note": "哆啦A夢組晉級判定：臺中一中、延平中學A、百齡高中各1勝、評分單各3張；架構（論點）張數依序4、2、3，臺中一中晉級。",
       "players": {
         "affirmative": [],
         "negative": []
@@ -18824,7 +18824,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s050",
         "negative": "s105"
       },
-      "id": "match-93420b22832a"
+      "id": "match-aadd3528bbe2"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -19438,7 +19438,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 0
       },
       "winner": "竹科實中",
-      "note": "分組賽八強資格賽",
+      "note": "分組賽八強資格賽；藝術組晉級判定：竹科實中、板橋高中、聖心女中各1勝，評分單及架構票各3張；辯士個人成績排名總和依序57、54、64，板橋高中晉級。",
       "players": {
         "affirmative": [],
         "negative": []
@@ -19448,7 +19448,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s091"
       },
-      "id": "match-52df43767c16"
+      "id": "match-bf96777d703f"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
