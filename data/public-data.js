@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T11:27:04",
+  "generatedAt": "2026-09-29T11:41:16",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -19,6 +19,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第三十五屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三十六屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三屆東岸盃全國高中職辯論比賽.csv",
+    "public-data-第三屆輔仁盃全國高中職辯論比賽.csv",
     "public-data-第二十一屆辯革盃全國高中辯論比賽.csv",
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
@@ -1676,6 +1677,24 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s169",
       "type": "s",
       "name": "澎湖一中",
+      "aliases": ""
+    },
+    {
+      "code": "s170",
+      "type": "s",
+      "name": "新興高中",
+      "aliases": ""
+    },
+    {
+      "code": "s171",
+      "type": "s",
+      "name": "金陵女中",
+      "aliases": ""
+    },
+    {
+      "code": "s172",
+      "type": "s",
+      "name": "錦和高中",
       "aliases": ""
     }
   ],
@@ -12807,6 +12826,1306 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "p091"
       },
       "id": "match-a0327b0f8888"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "溪湖高中",
+        "negative": "壽山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "溪湖高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s103",
+        "negative": "s035"
+      },
+      "id": "match-0bf2bb52c22d"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "金陵女中",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內壢高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s171",
+        "negative": "s013"
+      },
+      "id": "match-3a69da30780b"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "板橋高中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "明倫高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s091",
+        "negative": "s080"
+      },
+      "id": "match-b696b8e3b0a6"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "錦和高中",
+        "negative": "斗六高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "斗六高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s172",
+        "negative": "s072"
+      },
+      "id": "match-cccdf285f71c"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "馬公高中",
+        "negative": "羅東高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "馬公高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s162",
+        "negative": "s116"
+      },
+      "id": "match-4e108249c1c8"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "臺南護專"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺南護專",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s128"
+      },
+      "id": "match-9daedfb20f85"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "新竹高商"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "瑞祥高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s079"
+      },
+      "id": "match-e4b7c744b757"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "曙光女中",
+        "negative": "立人高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "曙光女中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s086",
+        "negative": "s108"
+      },
+      "id": "match-df211b8053e0"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 9,
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "薇閣高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成淵高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "s135"
+      },
+      "id": "match-1ed3cad08fa0"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 10,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s047"
+      },
+      "id": "match-72f5d2eb2ba6"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 11,
+      "teams": {
+        "affirmative": "新興高中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "文華高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s170",
+        "negative": "s071"
+      },
+      "id": "match-fc2ebfdb6d4f"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 1,
+      "venue": 12,
+      "teams": {
+        "affirmative": "新北三民",
+        "negative": "景美女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "景美女中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s075",
+        "negative": "s083"
+      },
+      "id": "match-d4100979ff6c"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "壽山高中",
+        "negative": "虎尾高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "壽山高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s035",
+        "negative": "s138"
+      },
+      "id": "match-8cd65d062e6f"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "內壢高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s152"
+      },
+      "id": "match-45a8fd0ffc57"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "嶺東高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明倫高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s042"
+      },
+      "id": "match-3a1e0878c8ad"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "斗六高中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "永平高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s072",
+        "negative": "s098"
+      },
+      "id": "match-56494ec15f3e"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "羅東高中",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中一中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s116",
+        "negative": "s120"
+      },
+      "id": "match-af4ad9920fc4"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "臺南護專",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南護專",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s128",
+        "negative": "s131"
+      },
+      "id": "match-0cda925c96a7"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "新竹高商",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s079",
+        "negative": "s067"
+      },
+      "id": "match-28f9bcbfd6fc"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "立人高中",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "立人高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s108",
+        "negative": "s090"
+      },
+      "id": "match-bb8e8047c5c8"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 9,
+      "teams": {
+        "affirmative": "薇閣高中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "薇閣高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s068"
+      },
+      "id": "match-c0257a118c28"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 10,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "聖心女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "師大附中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s119"
+      },
+      "id": "match-c700ba233597"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 11,
+      "teams": {
+        "affirmative": "文華高中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "文華高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s071",
+        "negative": "s057"
+      },
+      "id": "match-cfbb25291f30"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 2,
+      "venue": 12,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "臺南一中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "景美女中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s125"
+      },
+      "id": "match-608eb07a2144"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "虎尾高中",
+        "negative": "溪湖高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "虎尾高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s103"
+      },
+      "id": "match-f82d12fdcc5b"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "金陵女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s171"
+      },
+      "id": "match-c90c1a6669b8"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "嶺東高中",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "嶺東高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s042",
+        "negative": "s091"
+      },
+      "id": "match-fe692e8c3f10"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "錦和高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "永平高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s172"
+      },
+      "id": "match-b997c1872250"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "馬公高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中一中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s162"
+      },
+      "id": "match-838184e44061"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "興大附中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s005"
+      },
+      "id": "match-47808d8d4a88"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "瑞祥高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s104"
+      },
+      "id": "match-1fd603f30028"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 8,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "曙光女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "曙光女中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s090",
+        "negative": "s086"
+      },
+      "id": "match-8a000d5e9180"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 9,
+      "teams": {
+        "affirmative": "聖心女中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s119",
+        "negative": "s023"
+      },
+      "id": "match-768b9835b8ef"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 10,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "新興高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "復旦高中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s170"
+      },
+      "id": "match-36bb1e32c822"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-01",
+      "period": 3,
+      "venue": 11,
+      "teams": {
+        "affirmative": "臺南一中",
+        "negative": "新北三民"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南一中",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
+      "teamIds": {
+        "affirmative": "s125",
+        "negative": "s075"
+      },
+      "id": "match-9c3c8e09a99c"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "壽山高中",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "內壢高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s035",
+        "negative": "s013"
+      },
+      "id": "match-4ef3c5a44b70"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中一中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s120"
+      },
+      "id": "match-8fff3306bacb"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "曙光女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "曙光女中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "s086"
+      },
+      "id": "match-7a202dd778f6"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "景美女中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s071"
+      },
+      "id": "match-aadbdd062be1"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "內壢高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s080"
+      },
+      "id": "match-f1e61913da55"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "臺南護專"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺南護專",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s128"
+      },
+      "id": "match-cca16ab9b3a4"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "曙光女中",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "瑞祥高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s086",
+        "negative": "s104"
+      },
+      "id": "match-61d613151d08"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "文華高中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s071",
+        "negative": "s023"
+      },
+      "id": "match-f580d2e164b9"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "壽山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明倫高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s035"
+      },
+      "id": "match-036b0eb19097"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "臺南護專",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "永平高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s128",
+        "negative": "s098"
+      },
+      "id": "match-15ee1e6d7f6f"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "瑞祥高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s068"
+      },
+      "id": "match-78e30d735193"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-02",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "景美女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定複賽日期為 6/2；按圖片由上至下編為會場 1–4。",
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s083"
+      },
+      "id": "match-976305ae5d2f"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "永平高中",
+      "note": "四強分流｜09:30–11:30｜利瑪竇國際會議廳 LMB1-01",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "賽程表明列 6/3 四強分流；依公布場序編為會場 1–2。",
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s098"
+      },
+      "id": "match-b12476d4f0b9"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "瑞祥高中",
+      "note": "四強分流｜09:30–11:30｜進修部地下演講廳 ES001",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "賽程表明列 6/3 四強分流；依公布場序編為會場 1–2。",
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s023"
+      },
+      "id": "match-17a0cdbfa539"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "永平高中",
+      "note": "冠亞賽｜12:30–15:00｜利瑪竇國際會議廳 LMB1-01",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "賽程表明列 6/3 冠亞賽；比數依使用者提供的賽果公告；賽場依官方時程編為會場 1。",
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s104"
+      },
+      "id": "match-bcd405aa0374"
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
@@ -31987,6 +33306,94 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-5d1bd9f77e1f"
     },
     {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "冠軍",
+      "recipient": "永平高中",
+      "team": "永平高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-a729d03e2fc6"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "亞軍",
+      "recipient": "瑞祥高中",
+      "team": "瑞祥高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s104",
+      "id": "honor-145e611ab011"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "季軍",
+      "recipient": "南山高中",
+      "team": "南山高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-9fee2e382c0e"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "季軍",
+      "recipient": "內壢高中",
+      "team": "內壢高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s013",
+      "id": "honor-c7c8c9a50d8b"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "全程最佳辯士",
+      "recipient": "李昱賢",
+      "team": "瑞祥高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s104",
+      "id": "honor-c70e3bfbd334"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "全程最佳辯士",
+      "recipient": "彭筱涵",
+      "team": "南山高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-4eb8005bbd1f"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "全程最佳辯士",
+      "recipient": "金承陽",
+      "team": "永平高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-abb6fdb8e547"
+    },
+    {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "matchDate": "2024-06-03",
+      "honorName": "全程最佳辯士",
+      "recipient": "詹舒涵",
+      "team": "南山高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-c72f5e179940"
+    },
+    {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
       "matchDate": "2026-08-15",
       "honorName": "冠軍",
@@ -34470,6 +35877,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
+      "topic": "我國以付費方式觀賞或取得性犯罪內容應入罪化",
+      "explanation": "題稱性犯罪內容包含《兒童及少年性剝削防制條例》、《性侵害犯罪防治法》、《刑法》第十六章妨礙性自主罪及第二十八章之一妨害性隱私及不實性影像罪所列不法行為；入罪化立場主刑至少訂定拘役以上。"
+    },
+    {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
       "topic": "成為自己討厭的人，是/不是件壞事",
       "explanation": ""
@@ -34628,6 +36040,16 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 24,
       "teamCount": 24
+    },
+    "第三屆輔仁盃全國高中職辯論比賽": {
+      "startDate": "2024-06-01",
+      "endDate": "2024-06-03",
+      "organizer": "輔仁大學健言社",
+      "location": "輔仁大學",
+      "note": "簡章資格為全國高中職暨五專在學學生，滿額36隊；公告賽果可辨識35隊。初賽第三時段圖片僅列11場，未提供場次不補猜。初賽與複賽日期依階段順序及6/3官方賽程推定。",
+      "ageRestriction": true,
+      "brochureTeamLimit": 36,
+      "teamCount": 35
     },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,
