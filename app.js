@@ -454,7 +454,7 @@ function renderLeaderboards() {
     button.classList.toggle("is-sort-primary", key === leaderboardSortKey);
     button.setAttribute("aria-label", `${label}排序，${direction < 0 ? "降冪" : "升冪"}${key === leaderboardSortKey ? "，目前主要排序" : ""}`);
   });
-  const rows = (key, unit) => allRows.filter((row) => row[key] > 0).sort((a, b) => b[key] - a[key] || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10).map((row, index) => `<li><div><strong>${escapeHtml(store.entityName(row.id, row.id))}</strong></div><span class="rank-count">${index + 1} · ${row[key]} ${unit}</span></li>`).join("");
+  const rows = (key, unit) => allRows.filter((row) => row[key] > 0).sort((a, b) => b[key] - a[key] || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10).map((row) => `<li><div><strong>${escapeHtml(store.entityName(row.id, row.id))}</strong></div><span class="rank-count">${row[key]} ${unit}</span></li>`).join("");
   els.gamesLeaderboard.innerHTML = rows("games", "場");
   els.winsLeaderboard.innerHTML = rows("wins", "勝");
   const period = honorRange === "all" ? "全年度" : "近年度";
