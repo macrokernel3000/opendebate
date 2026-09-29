@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T11:49:49",
+  "generatedAt": "2026-09-29T11:52:30",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -23020,7 +23020,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 1,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "大家都不想講話",
         "negative": "建竹實聯隊"
@@ -23035,18 +23035,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-1 推定",
+      "inferenceNote": "時段依公告標記 D2-1 推定；第二天 D2-1 公告順序依序對應會場1",
       "teamIds": {
         "affirmative": "p132",
         "negative": "p039"
       },
-      "id": "match-62fac19e51cf"
+      "id": "match-da55a642403f"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 1,
-      "venue": "",
+      "venue": 2,
       "teams": {
         "affirmative": "成淵高中",
         "negative": "最佳英鎊辯論隊"
@@ -23061,18 +23061,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-1 推定",
+      "inferenceNote": "時段依公告標記 D2-1 推定；第二天 D2-1 公告順序依序對應會場2",
       "teamIds": {
         "affirmative": "s068",
         "negative": "p128"
       },
-      "id": "match-84ca34f6f6a4"
+      "id": "match-c301a05597bf"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 1,
-      "venue": "",
+      "venue": 3,
       "teams": {
         "affirmative": "白烏鴉辯論隊",
         "negative": "南山高中"
@@ -23087,18 +23087,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-1 推定",
+      "inferenceNote": "時段依公告標記 D2-1 推定；第二天 D2-1 公告順序依序對應會場3",
       "teamIds": {
         "affirmative": "p127",
         "negative": "s023"
       },
-      "id": "match-3751a54747ea"
+      "id": "match-ddd42308deba"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 1,
-      "venue": "",
+      "venue": 4,
       "teams": {
         "affirmative": "誤入商業帝國的長髮男",
         "negative": "成功口技社"
@@ -23113,18 +23113,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-1 推定",
+      "inferenceNote": "時段依公告標記 D2-1 推定；第二天 D2-1 公告順序依序對應會場4",
       "teamIds": {
         "affirmative": "p131",
         "negative": "p130"
       },
-      "id": "match-302cea044b0e"
+      "id": "match-7deb3289b731"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 2,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "南山高中",
         "negative": "Harve"
@@ -23139,18 +23139,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-2 推定",
+      "inferenceNote": "時段依公告標記 D2-2 推定；第二天 D2-2 公告順序依序對應會場1",
       "teamIds": {
         "affirmative": "s023",
         "negative": "p126"
       },
-      "id": "match-40ed86f8a03f"
+      "id": "match-c3ca1f2a0853"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 2,
-      "venue": "",
+      "venue": 2,
       "teams": {
         "affirmative": "衛道中學辯論社",
         "negative": "竹林七賢"
@@ -23165,18 +23165,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-2 推定",
+      "inferenceNote": "時段依公告標記 D2-2 推定；第二天 D2-2 公告順序依序對應會場2",
       "teamIds": {
         "affirmative": "s139",
         "negative": "p134"
       },
-      "id": "match-8059abdb12d0"
+      "id": "match-23ed07e6bdc1"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 2,
-      "venue": "",
+      "venue": 3,
       "teams": {
         "affirmative": "南湖高中",
         "negative": "世宣67"
@@ -23191,18 +23191,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-2 推定",
+      "inferenceNote": "時段依公告標記 D2-2 推定；第二天 D2-2 公告順序依序對應會場3",
       "teamIds": {
         "affirmative": "s024",
         "negative": "p119"
       },
-      "id": "match-c8931a235fd9"
+      "id": "match-2bfe1acb42be"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 2,
-      "venue": "",
+      "venue": 4,
       "teams": {
         "affirmative": "澎湖一中",
         "negative": "宮燈最佳辯士"
@@ -23217,18 +23217,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-2 推定",
+      "inferenceNote": "時段依公告標記 D2-2 推定；第二天 D2-2 公告順序依序對應會場4",
       "teamIds": {
         "affirmative": "s169",
         "negative": "p135"
       },
-      "id": "match-51c78a52ec0e"
+      "id": "match-3f992d9ce5e6"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 3,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "白烏鴉辯論隊",
         "negative": "最佳英鎊辯論隊"
@@ -23243,18 +23243,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-3 推定",
+      "inferenceNote": "時段依公告標記 D2-3 推定；第二天 D2-3 公告順序依序對應會場1",
       "teamIds": {
         "affirmative": "p127",
         "negative": "p128"
       },
-      "id": "match-095118a63130"
+      "id": "match-2d38304639a7"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 3,
-      "venue": "",
+      "venue": 2,
       "teams": {
         "affirmative": "陽交附中",
         "negative": "世宣67"
@@ -23269,18 +23269,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-3 推定",
+      "inferenceNote": "時段依公告標記 D2-3 推定；第二天 D2-3 公告順序依序對應會場2",
       "teamIds": {
         "affirmative": "s146",
         "negative": "p119"
       },
-      "id": "match-246adf6d3282"
+      "id": "match-408a23e60bd9"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 3,
-      "venue": "",
+      "venue": 3,
       "teams": {
         "affirmative": "成功口技社",
         "negative": "宮燈最佳辯士"
@@ -23295,18 +23295,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-3 推定",
+      "inferenceNote": "時段依公告標記 D2-3 推定；第二天 D2-3 公告順序依序對應會場3",
       "teamIds": {
         "affirmative": "p130",
         "negative": "p135"
       },
-      "id": "match-01718c83d34c"
+      "id": "match-8af3935fb358"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
       "period": 3,
-      "venue": "",
+      "venue": 4,
       "teams": {
         "affirmative": "竹林七賢",
         "negative": "建竹實聯隊"
@@ -23321,12 +23321,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "時段依公告標記 D2-3 推定",
+      "inferenceNote": "時段依公告標記 D2-3 推定；第二天 D2-3 公告順序依序對應會場4",
       "teamIds": {
         "affirmative": "p134",
         "negative": "p039"
       },
-      "id": "match-a285519d6995"
+      "id": "match-6ae2ff4c3084"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
