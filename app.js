@@ -8,8 +8,9 @@ let selectedEntityId = "";
 let selectedOverviewEntityId = "";
 let honorRange = "recent";
 let honorCategoryFilter = "all";
-const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, games: -1, wins: -1 };
-const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "games", "wins"];
+const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, totalHonors: -1 };
+const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "totalHonors"];
+let leaderboardSortKey = "gold";
 
 const els = {
   homeBrand: document.querySelector("#homeBrand"),
@@ -387,10 +388,11 @@ function renderLeaderboards() {
       : /(?:^|組)季軍$/.test(honor.honorName?.trim() || "") ? "bronze"
         : /(?:^|組)殿軍$/.test(honor.honorName?.trim() || "") ? "white" : "";
   const isCoursePlayerHonor = (honor) => isFullCourseBest(honor) || isFullCourseExcellent(honor);
-  const schoolRows = new Map([...schoolIds].map((id) => [id, { id, gold: 0, silver: 0, bronze: 0, white: 0, fullCourse: 0, fullBest: 0, fullExcellent: 0, other: 0, singleBest: 0, otherAwards: 0, games: 0, wins: 0 }]));
+  const schoolRows = new Map([...schoolIds].map((id) => [id, { id, gold: 0, silver: 0, bronze: 0, white: 0, fullCourse: 0, fullBest: 0, fullExcellent: 0, other: 0, singleBest: 0, otherAwards: 0, totalHonors: 0, games: 0, wins: 0 }]));
   visibleHonors.forEach((honor) => {
     const row = schoolRows.get(honor.teamId);
     if (!row) return;
+    row.totalHonors += 1;
     const rank = rankByHonor(honor);
     if (rank) row[rank] += 1;
     else if (honor.honorType === "player" && isCoursePlayerHonor(honor)) {
@@ -421,7 +423,7 @@ function renderLeaderboards() {
   const rowHasAwards = (row) => row.gold + row.silver + row.bronze + row.white + row.fullCourse + row.other > 0;
   const rowHasCategory = (row) => honorCategoryFilter === "all" ? rowHasAwards(row) : row[honorCategoryFilter] > 0;
   const orderedRows = allRows.filter(rowHasCategory).sort((a, b) => {
-    for (const key of leaderboardSortPriority) {
+    for (const key of [leaderboardSortKey, ...leaderboardSortPriority.filter((item) => item !== leaderboardSortKey)]) {
       const difference = (a[key] - b[key]) * leaderboardSortDirections[key];
       if (difference) return difference;
     }
@@ -429,16 +431,17 @@ function renderLeaderboards() {
   });
   const medalLabel = (key) => ({ gold: "冠", silver: "亞", bronze: "季", white: "殿" }[key]);
   const medalCell = (row, key) => `<td class="medal-cell"><span class="trophy-medal ${key}">${medalLabel(key)}</span><strong>${row[key]}</strong></td>`;
-  const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
+  const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, , count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
   const topRows = orderedRows.slice(0, 10);
-  els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${escapeHtml(store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}<td>${row.games}</td><td>${row.wins}</td></tr>`).join("") || '<tr><td class="olympic-empty" colspan="10">目前沒有符合條件的榮譽紀錄。</td></tr>';
+  els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${escapeHtml(store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}<td class="total-honors-cell"><strong>${row.totalHonors}</strong></td></tr>`).join("") || '<tr><td class="olympic-empty" colspan="9">目前沒有符合條件的榮譽紀錄。</td></tr>';
   document.querySelectorAll("[data-rank-sort]").forEach((button) => {
     const key = button.dataset.rankSort;
     const direction = leaderboardSortDirections[key];
     const marker = direction < 0 ? "↓" : "↑";
     const label = button.textContent.replace(/[↓↑]/g, "").trim();
     button.innerHTML = `${escapeHtml(label)} <span aria-hidden="true">${marker}</span>`;
-    button.setAttribute("aria-label", `${label}排序，${direction < 0 ? "降冪" : "升冪"}`);
+    button.classList.toggle("is-sort-primary", key === leaderboardSortKey);
+    button.setAttribute("aria-label", `${label}排序，${direction < 0 ? "降冪" : "升冪"}${key === leaderboardSortKey ? "，目前主要排序" : ""}`);
   });
   const rows = (key, unit) => allRows.filter((row) => row[key] > 0).sort((a, b) => b[key] - a[key] || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10).map((row, index) => `<li><div><strong>${escapeHtml(store.entityName(row.id, row.id))}</strong></div><span class="rank-count">${index + 1} · ${row[key]} ${unit}</span></li>`).join("");
   els.gamesLeaderboard.innerHTML = rows("games", "場");
@@ -786,7 +789,8 @@ document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addE
 }));
 document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEventListener("click", () => {
   const key = button.dataset.rankSort;
-  leaderboardSortDirections[key] *= -1;
+  if (key === leaderboardSortKey) leaderboardSortDirections[key] *= -1;
+  leaderboardSortKey = key;
   renderLeaderboards();
 }));
 
