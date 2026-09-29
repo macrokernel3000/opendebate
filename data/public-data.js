@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T10:34:11",
+  "generatedAt": "2026-09-29T10:43:51",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -23,6 +23,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
     "public-data-第二十三屆延平盃全國高中職辯論賽.csv",
+    "public-data-第二十二屆延平盃全國高中職辯論賽.csv",
     "public-data-第二十八屆高中菁英盃.csv",
     "public-data-第二十屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第二十屆辯革盃全國高中職辯論比賽.csv",
@@ -17588,6 +17589,706 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-6ea7b43755ab"
     },
     {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "桃園高中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "桃園高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s093",
+        "negative": "s054"
+      },
+      "id": "match-36221e583d43"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "溪湖高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "溪湖高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s103"
+      },
+      "id": "match-f528ccb583ed"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s003"
+      },
+      "id": "match-54573901a5b2"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "聖心女中",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "聖心女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s119",
+        "negative": "s113"
+      },
+      "id": "match-ee0d94c0d396"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "曉明女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s085"
+      },
+      "id": "match-2576239db441"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 6,
+      "teams": {
+        "affirmative": "成淵高中",
+        "negative": "北一女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "成淵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s068",
+        "negative": "s017"
+      },
+      "id": "match-a9d0c9613fa9"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 7,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s024"
+      },
+      "id": "match-a14b124315ad"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 1,
+      "venue": 8,
+      "teams": {
+        "affirmative": "和平高中",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s013"
+      },
+      "id": "match-b914ce77dbcf"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "延平中學B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s050"
+      },
+      "id": "match-4a80351c85e5"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "板橋高中",
+        "negative": "聖心女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "板橋高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s091",
+        "negative": "s119"
+      },
+      "id": "match-13b88bde6eee"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "桃園高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s093"
+      },
+      "id": "match-e08d6a719d91"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "溪湖高中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s103",
+        "negative": "s122"
+      },
+      "id": "match-1f9828321bc0"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "永平高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "永平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s098"
+      },
+      "id": "match-9f368f7c4900"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "永豐高中",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s100",
+        "negative": "s160"
+      },
+      "id": "match-9557758e65ac"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "延平中學A"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "曉明女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s050"
+      },
+      "id": "match-03c248bc6a2c"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 2,
+      "venue": 8,
+      "teams": {
+        "affirmative": "高師附中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成淵高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s151",
+        "negative": "s068"
+      },
+      "id": "match-8740efaf8a22"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s096"
+      },
+      "id": "match-e950373306c2"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "市立大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立大同",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s044"
+      },
+      "id": "match-343219965ac0"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "竹科實中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s091"
+      },
+      "id": "match-130bed2e2863"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "延平中學B",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s023"
+      },
+      "id": "match-b3e5382f9eca"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "高師附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "北一女中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s151"
+      },
+      "id": "match-43c9e35bfcca"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "延平中學A",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "延平中學A",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s070"
+      },
+      "id": "match-2312b434ae4f"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "永豐高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "內壢高中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "s100"
+      },
+      "id": "match-e052d7ef4dc5"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "period": 3,
+      "venue": 8,
+      "teams": {
+        "affirmative": "南湖高中",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南湖高中",
+      "note": "分組賽八強資格賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s024",
+        "negative": "s131"
+      },
+      "id": "match-40c624893aab"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "市立大同",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s122"
+      },
+      "id": "match-abef578b3117"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s091"
+      },
+      "id": "match-54423a233719"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "曉明女中",
+        "negative": "成淵高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "曉明女中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s085",
+        "negative": "s068"
+      },
+      "id": "match-41ce19cdc5c5"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "永平高中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s160"
+      },
+      "id": "match-96f8f20fdb96"
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "matchDate": "2026-01-30",
       "period": 3,
@@ -31635,6 +32336,237 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-380463f991a9"
     },
     {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "冠軍",
+      "recipient": "市立大同",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s044",
+      "id": "honor-b6cd18d7221b"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "亞軍",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s085",
+      "id": "honor-a1246002f9f4"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "季軍",
+      "recipient": "南山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-3a2152482ffb"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "季軍",
+      "recipient": "永平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-1039ef1798b7"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "全程最佳辯士",
+      "recipient": "蔡子竣",
+      "team": "南山高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-6d5010a456f5"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "全程最佳辯士",
+      "recipient": "金承陽",
+      "team": "永平高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s098",
+      "id": "honor-7ba4b1a607a1"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "全程最佳辯士",
+      "recipient": "蔡茂揚",
+      "team": "市立大同",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s044",
+      "id": "honor-717ac892f3f7"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "全程最佳辯士",
+      "recipient": "王文杉",
+      "team": "南山高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-e10bbe85bf7b"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-03-01",
+      "honorName": "同舟共濟獎",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-70f66c7fe5ab"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "市立大同",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜寶劍組",
+      "teamId": "s044",
+      "id": "honor-22571b6b0299"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜符咒學組",
+      "teamId": "s122",
+      "id": "honor-c4aed2038191"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "南山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜冠冕組",
+      "teamId": "s023",
+      "id": "honor-97c4e17ad8db"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "板橋高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜藝術組：竹科實中、板橋高中、聖心女中各1勝、各3張評分單及3張架構（論點）單；辯士個人成績排名加總依序57、54、64，板橋高中晉級。",
+      "teamId": "s091",
+      "id": "honor-545dc8bd502c"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜密室組",
+      "teamId": "s085",
+      "id": "honor-f21454229c2d"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "成淵高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜黑魔法組",
+      "teamId": "s068",
+      "id": "honor-01f6ec95c1a4"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "永平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜金盃組",
+      "teamId": "s098",
+      "id": "honor-60bc4aea092a"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "和平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "八強｜藥草學組",
+      "teamId": "s160",
+      "id": "honor-d1b284827b67"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "市立大同",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜葛來分多組",
+      "teamId": "s044",
+      "id": "honor-428dfdc0423b"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "南山高中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜雷文克勞組",
+      "teamId": "s023",
+      "id": "honor-01783760e0d9"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "曉明女中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜史萊哲林組",
+      "teamId": "s085",
+      "id": "honor-15259295ffbc"
+    },
+    {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "matchDate": "2025-02-28",
+      "honorName": "晉級",
+      "recipient": "永平高中",
+      "team": "",
+      "honorType": "team",
+      "note": "四強｜赫夫帕夫組",
+      "teamId": "s098",
+      "id": "honor-7157207e8e63"
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "matchDate": "2026-01-30",
       "honorName": "冠軍",
@@ -33575,6 +34507,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+      "topic": "世界糧食計劃署的糧食援助對受捐助國利大於弊／世界糧食計劃署的糧食援助對受捐助國弊大於利",
+      "explanation": ""
+    },
+    {
       "competitionName": "第二十八屆高中菁英盃",
       "topic": "我國應禁止舉辦賽鴿賽事",
       "explanation": ""
@@ -33692,6 +34629,15 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位；預計錄取24隊。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
       "ageRestriction": null,
       "teamCount": 23
+    },
+    "第二十二屆延平盃全國高中職辯論賽": {
+      "startDate": "2025-02-28",
+      "endDate": "2025-03-01",
+      "organizer": "臺北市私立延平高級中學",
+      "location": "臺北市私立延平高級中學",
+      "note": "簡章預計錄取24隊；賽果公告可辨識24支隊伍（延平中學A、B分開計算）。賽期為2025-02-28至2025-03-01；公告明列28場比分（2/28三時段各8場、3/1第一時段4場）。3/1第二時段準決賽及第三時段冠亞賽只有賽程、未提供比分，不推測補登。藝術組由竹科實中、板橋高中、聖心女中同勝場、評分單及架構票後，再按個人排名總和決定板橋高中晉級。簡章規定參賽資格為高中職及五專一至三年級。辯題依簡章登錄。",
+      "ageRestriction": true,
+      "teamCount": 24
     },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,
