@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:40:17",
+  "generatedAt": "2026-09-29T12:51:50",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -28,6 +28,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十八屆高中菁英盃.csv",
     "public-data-第二十屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第二十屆辯革盃全國高中職辯論比賽.csv",
+    "public-data-第二十屆齊揚盃.csv",
     "public-data-第二屆夢箋盃.csv",
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
@@ -1689,6 +1690,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s172",
       "type": "s",
       "name": "錦和高中",
+      "aliases": ""
+    },
+    {
+      "code": "s173",
+      "type": "s",
+      "name": "屏東高中",
       "aliases": ""
     }
   ],
@@ -24326,6 +24333,756 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-b9f70022b7b0"
     },
     {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "彰化女中",
+        "negative": "屏東高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "彰化女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s055",
+        "negative": "s173"
+      },
+      "id": "match-2f94a89bce49"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "大理高中",
+        "negative": "小港高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "大理高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s037",
+        "negative": "s040"
+      },
+      "id": "match-69ccbac0568b"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "聖功女中",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "鳳新高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s118",
+        "negative": "s157"
+      },
+      "id": "match-b4fcb4f698ab"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺南二中",
+        "negative": "家齊高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南二中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s126",
+        "negative": "s039"
+      },
+      "id": "match-98f6cec2af42"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "屏東高中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "文華高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s173",
+        "negative": "s071"
+      },
+      "id": "match-a84d8af75036"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "薇閣中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "鳳新高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s135"
+      },
+      "id": "match-bf63ca02fd09"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "新化高中",
+        "negative": "高市中正"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "高市中正",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s074",
+        "negative": "s150"
+      },
+      "id": "match-7ffb044f46ce"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "永仁高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "永仁高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s097"
+      },
+      "id": "match-8117b0893ded"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "大灣高中",
+        "negative": "明道中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "明道中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s036",
+        "negative": "s081"
+      },
+      "id": "match-c1eb3bbf3904"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 2,
+      "venue": 7,
+      "teams": {
+        "affirmative": "美和高中",
+        "negative": "光復高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "美和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s117",
+        "negative": "s011"
+      },
+      "id": "match-ba95676029a7"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "家齊高中",
+        "negative": "景美女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "景美女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s039",
+        "negative": "s083"
+      },
+      "id": "match-d13c78a7c7f7"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "小港高中",
+        "negative": "南大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s020"
+      },
+      "id": "match-b2051318d8b3"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "文華高中",
+        "negative": "彰化女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "文華高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s071",
+        "negative": "s055"
+      },
+      "id": "match-afa3d881e567"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "高市中正",
+        "negative": "南科實中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高市中正",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s150",
+        "negative": "s025"
+      },
+      "id": "match-0372bc770916"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "永仁高中",
+        "negative": "高市三民"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "高市三民",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s097",
+        "negative": "s149"
+      },
+      "id": "match-490edad57512"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "明道中學",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "明道中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s081",
+        "negative": "s041"
+      },
+      "id": "match-b2869e6534bb"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 3,
+      "venue": 7,
+      "teams": {
+        "affirmative": "光復高中",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s011",
+        "negative": "s131"
+      },
+      "id": "match-d3e20c86282f"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "臺南二中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "景美女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s126"
+      },
+      "id": "match-d9ab2d625664"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 2,
+      "teams": {
+        "affirmative": "南大附中",
+        "negative": "大理高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s020",
+        "negative": "s037"
+      },
+      "id": "match-ff42071a243f"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 3,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "聖功女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s118"
+      },
+      "id": "match-f084b505c63c"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南科實中",
+        "negative": "新化高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "新化高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s025",
+        "negative": "s074"
+      },
+      "id": "match-1dba6cb8c4f3"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 5,
+      "teams": {
+        "affirmative": "高市三民",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高市三民",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s149",
+        "negative": "s104"
+      },
+      "id": "match-5416c3cdc620"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 6,
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "大灣高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s036"
+      },
+      "id": "match-b3ceeb6c3df2"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-03",
+      "period": 4,
+      "venue": 7,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "美和高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "美和高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s117"
+      },
+      "id": "match-529dbe19903f"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "南大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "景美女中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s020"
+      },
+      "id": "match-c7a4ab4584de"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "高市中正"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高市中正",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s150"
+      },
+      "id": "match-a9b99521b7ee"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "高市三民",
+        "negative": "明道中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高市三民",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s149",
+        "negative": "s081"
+      },
+      "id": "match-443e0fc64c0e"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "美和高中",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "文華高中",
+      "note": "八強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s117",
+        "negative": "s071"
+      },
+      "id": "match-3eb2695e725d"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "景美女中",
+        "negative": "高市中正"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "高市中正",
+      "note": "四強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s083",
+        "negative": "s150"
+      },
+      "id": "match-3366cdecd693"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "高市三民",
+        "negative": "文華高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高市三民",
+      "note": "四強賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s149",
+        "negative": "s071"
+      },
+      "id": "match-5a29b3901653"
+    },
+    {
       "competitionName": "第二屆夢箋盃",
       "matchDate": "2026-04-04",
       "period": 1,
@@ -34447,6 +35204,94 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-a850fc140dce"
     },
     {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "冠軍",
+      "recipient": "高市三民",
+      "team": "",
+      "honorType": "team",
+      "note": "冠軍公告用名：三民高中",
+      "teamId": "s149",
+      "id": "honor-0c44d26af8fd"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "亞軍",
+      "recipient": "高市中正",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s150",
+      "id": "honor-012b8a6a2f3f"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "季軍",
+      "recipient": "景美女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s083",
+      "id": "honor-b8255c7d8682"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "季軍",
+      "recipient": "文華高中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s071",
+      "id": "honor-a73288335a61"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "全程最佳辯士",
+      "recipient": "薛舒晴",
+      "team": "高市三民",
+      "honorType": "player",
+      "note": "公告用名：三民高中",
+      "teamId": "s149",
+      "id": "honor-586fe6f60d8e"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "全程最佳辯士",
+      "recipient": "洪士凱",
+      "team": "高市中正",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s150",
+      "id": "honor-cb0e63206ea4"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "全程最佳辯士",
+      "recipient": "陳沅妤",
+      "team": "景美女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s083",
+      "id": "honor-adbbbdf61dd8"
+    },
+    {
+      "competitionName": "第二十屆齊揚盃",
+      "matchDate": "2025-05-04",
+      "honorName": "全程最佳辯士",
+      "recipient": "林品遠",
+      "team": "文華高中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s071",
+      "id": "honor-df076d1404d0"
+    },
+    {
       "competitionName": "第二屆夢箋盃",
       "matchDate": "2026-04-05",
       "honorName": "冠軍",
@@ -35951,6 +36796,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第二十屆齊揚盃",
+      "topic": "「我們終將成為自己討厭的人」是／不是一件壞事。",
+      "explanation": ""
+    },
+    {
       "competitionName": "第二屆夢箋盃",
       "topic": "我國應施行無條件基本收入",
       "explanation": ""
@@ -36069,6 +36919,15 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 36,
       "teamCount": 35
+    },
+    "第二十屆齊揚盃": {
+      "startDate": "2025-05-03",
+      "endDate": "2025-05-04",
+      "organizer": "",
+      "location": "",
+      "note": "",
+      "ageRestriction": null,
+      "teamCount": 24
     },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,
