@@ -187,6 +187,7 @@ button { color: inherit; }
 .entity-trophy-honor { display: flex; min-width: 0; align-items: center; gap: 8px; padding-top: 7px; border-top: 1px solid rgba(49,65,57,.12); }
 .trophy-honor-badge { display: grid; width: 27px; height: 27px; flex: 0 0 27px; place-items: center; border: 1px solid #cbd5d1; border-radius: 8px; background: #fff; color: #53645d; font-size: 12px; font-weight: 950; }
 .entity-trophy-honor.full-course .trophy-honor-badge { border-color: #e3bf3c; background: #f5d25e; color: #584508; }
+.entity-trophy-honor.full-course-excellence .trophy-honor-badge { border-color: #cbd5d1; background: #dce4e1; color: #394944; }
 .trophy-honor-copy { display: flex; min-width: 0; flex: 1; flex-wrap: wrap; align-items: baseline; gap: 2px 7px; }
 .trophy-honor-copy strong { color: #56655e; font-size: 11px; }
 .trophy-honor-copy > span { font-size: 12px; font-weight: 800; }

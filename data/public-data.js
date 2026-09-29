@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:18:05",
+  "generatedAt": "2026-09-29T12:23:29",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -32560,46 +32560,46 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第一屆東岸盃全國高中職辯論比賽",
       "matchDate": "2024-05-20",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "馬郁晴",
       "team": "南山高中",
       "honorType": "player",
       "note": "",
       "teamId": "s023",
-      "id": "honor-491a7bbf6a45"
+      "id": "honor-d5eddb46f40e"
     },
     {
       "competitionName": "第一屆東岸盃全國高中職辯論比賽",
       "matchDate": "2024-05-20",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "洪可芸",
       "team": "汪汪隊立大功",
       "honorType": "player",
       "note": "",
       "teamId": "p063",
-      "id": "honor-b1203c92d3bd"
+      "id": "honor-5da1b12f46be"
     },
     {
       "competitionName": "第一屆東岸盃全國高中職辯論比賽",
       "matchDate": "2024-05-20",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "林奕鋐",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "",
       "teamId": "p039",
-      "id": "honor-aa241d359cda"
+      "id": "honor-d44cb7ea1d08"
     },
     {
       "competitionName": "第一屆東岸盃全國高中職辯論比賽",
       "matchDate": "2024-05-20",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "蔡智鈞",
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "",
       "teamId": "p039",
-      "id": "honor-775f450607e2"
+      "id": "honor-3a1377ad7073"
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
@@ -32736,35 +32736,35 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
       "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "李馨",
       "team": "中山女高",
       "honorType": "player",
       "note": "",
       "teamId": "s006",
-      "id": "honor-45985591159c"
+      "id": "honor-3e1cd2fd950b"
     },
     {
       "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
       "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "蔡佩璇",
       "team": "興國高中A",
       "honorType": "player",
       "note": "",
       "teamId": "s130",
-      "id": "honor-64468a1bcb8a"
+      "id": "honor-ea429c2e43dd"
     },
     {
       "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
       "matchDate": "2024-05-26",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "翁征承",
       "team": "興國高中B",
       "honorType": "player",
       "note": "",
       "teamId": "s130",
-      "id": "honor-e02bf3caa6bb"
+      "id": "honor-6c4861917534"
     },
     {
       "competitionName": "第七屆惠蓀盃全國高中職辯論比賽",
@@ -32912,46 +32912,46 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "matchDate": "",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "孫興宸",
       "team": "永豐高中",
       "honorType": "player",
       "note": "",
       "teamId": "s100",
-      "id": "honor-d3f57b5e2e82"
+      "id": "honor-4b04e8235bc1"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "matchDate": "",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "金承陽",
       "team": "永平高中",
       "honorType": "player",
       "note": "",
       "teamId": "s098",
-      "id": "honor-e2bab260b4f0"
+      "id": "honor-5b7b33c4f94a"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "matchDate": "",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "何宇軒",
       "team": "高雄中學",
       "honorType": "player",
       "note": "",
       "teamId": "s152",
-      "id": "honor-109dc4f5a1f6"
+      "id": "honor-6de6b31c2f27"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "matchDate": "",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "張育棋",
       "team": "竹科實中",
       "honorType": "player",
       "note": "",
       "teamId": "s113",
-      "id": "honor-157d3d15d989"
+      "id": "honor-3bbcfadfcab6"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -33011,46 +33011,46 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "詹舒涵",
       "team": "南山中學",
       "honorType": "player",
       "note": "高中組",
       "teamId": "s023",
-      "id": "honor-906b9608ab5b"
+      "id": "honor-726e3755080e"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "張睿恩",
       "team": "高雄中學",
       "honorType": "player",
       "note": "高中組",
       "teamId": "s152",
-      "id": "honor-1afbdc992327"
+      "id": "honor-d32293350e59"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "任麒永",
       "team": "麗山高中",
       "honorType": "player",
       "note": "高中組",
       "teamId": "s158",
-      "id": "honor-f3598df1c840"
+      "id": "honor-5f52f6269629"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2024-08-01",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "郭奕辰",
       "team": "南山中學",
       "honorType": "player",
       "note": "高中組",
       "teamId": "s023",
-      "id": "honor-7bd2d725e230"
+      "id": "honor-bc3d30739c77"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -33198,46 +33198,46 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "林品遠",
       "team": "文華高中",
       "honorType": "player",
       "note": "",
       "teamId": "s071",
-      "id": "honor-41f8bbda5336"
+      "id": "honor-9aea9fe6d41c"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "吳奕萱",
       "team": "高雄女中",
       "honorType": "player",
       "note": "",
       "teamId": "s153",
-      "id": "honor-f9ae8b2d1151"
+      "id": "honor-eee4f8dfca03"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "林可倫",
       "team": "竹科實中",
       "honorType": "player",
       "note": "",
       "teamId": "s113",
-      "id": "honor-c447ceb589f9"
+      "id": "honor-bbf48508d371"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2025-07-08",
-      "honorName": "優秀辯士",
+      "honorName": "全程優秀辯士",
       "recipient": "林彥駖",
       "team": "高雄女中",
       "honorType": "player",
       "note": "",
       "teamId": "s153",
-      "id": "honor-5f659b13b4e3"
+      "id": "honor-7d833e129f86"
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",

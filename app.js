@@ -220,6 +220,18 @@ function isFullCourseBest(honor) {
   return honor.honorName?.trim() === "全程最佳辯士";
 }
 
+function isFullCourseExcellent(honor) {
+  return honor.honorName?.trim() === "全程優秀辯士";
+}
+
+function isSingleMatchExcellent(honor) {
+  return ["單場優秀辯士", "單場優秀"].includes(honor.honorName?.trim());
+}
+
+function isSingleMatchHonor(honor) {
+  return isSingleMatchBest(honor) || isSingleMatchExcellent(honor);
+}
+
 function entityPageLink(entityId, label, className = "") {
   if (!store.entityById.has(entityId)) return escapeHtml(label);
   return `<button type="button" class="inline-entity-link ${className}" data-entity-route="${escapeHtml(entityId)}">${escapeHtml(label)}</button>`;
@@ -246,10 +258,12 @@ function honorDateLabel(honor, event) {
 
 function renderEventHonors(event) {
   const singleBestGroups = new Map();
+  const singleExcellentGroups = new Map();
   const podiumHonors = [];
   const otherHonors = [];
   const progressions = [];
   const fullCourseBestHonors = [];
+  const fullCourseExcellentHonors = [];
   for (const honor of event.honors) {
     const honorName = honor.honorName?.trim() || "";
     if (honorName === "晉級") {
@@ -268,15 +282,27 @@ function renderEventHonors(event) {
       fullCourseBestHonors.push(honor);
       continue;
     }
-    if (!isSingleMatchBest(honor)) {
-      otherHonors.push(honor);
+    if (isFullCourseExcellent(honor)) {
+      fullCourseExcellentHonors.push(honor);
       continue;
     }
-    const key = `${honor.recipient}\u0000${honor.team}`;
-    const group = singleBestGroups.get(key) || { recipient: honor.recipient, team: honor.team, teamId: honor.teamId, count: 0, dateLabels: new Set() };
-    group.count += 1;
-    group.dateLabels.add(honorDateLabel(honor, event));
-    singleBestGroups.set(key, group);
+    if (isSingleMatchBest(honor)) {
+      const key = `${honor.recipient}\u0000${honor.team}`;
+      const group = singleBestGroups.get(key) || { recipient: honor.recipient, team: honor.team, teamId: honor.teamId, count: 0, dateLabels: new Set() };
+      group.count += 1;
+      group.dateLabels.add(honorDateLabel(honor, event));
+      singleBestGroups.set(key, group);
+      continue;
+    }
+    if (isSingleMatchExcellent(honor)) {
+      const key = `${honor.recipient}\u0000${honor.team}`;
+      const group = singleExcellentGroups.get(key) || { recipient: honor.recipient, team: honor.team, teamId: honor.teamId, count: 0, dateLabels: new Set() };
+      group.count += 1;
+      group.dateLabels.add(honorDateLabel(honor, event));
+      singleExcellentGroups.set(key, group);
+      continue;
+    }
+    otherHonors.push(honor);
   }
   const podiumRows = podiumHonors
     .sort((a, b) => a.rank - b.rank)
@@ -290,9 +316,11 @@ function renderEventHonors(event) {
       <small class="honor-date">${escapeHtml([...group.dateLabels].join("、"))}</small>
     </div>`).join("");
   const fullCourseRows = fullCourseBestHonors.map((honor) => `<div class="event-honor"><span>全程最佳辯士</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
+  const fullCourseExcellentRows = fullCourseExcellentHonors.map((honor) => `<div class="event-honor"><span>全程優秀辯士</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
+  const singleExcellentRows = [...singleExcellentGroups.values()].map((group) => `<div class="event-honor"><span>單場優秀辯士</span><strong>${playerPageLink(group.recipient)}${group.count > 1 ? `<span class="honor-count-badge" aria-label="獲獎 ${group.count} 次">*${group.count}</span>` : ""}</strong>${group.team ? `<small>${entityPageLink(group.teamId, group.team)}</small>` : ""}<small class="honor-date">${escapeHtml([...group.dateLabels].join("、"))}</small></div>`).join("");
   const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${honor.honorType === "player" ? playerPageLink(honor.recipient) : entityPageLink(honor.teamId, honorSubject(honor))}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
   const progressionRows = progressions.map((honor) => `<div class="event-honor"><span>晉級</span><strong>${entityPageLink(honor.teamId, honor.recipient)}</strong>${honor.note ? `<small>${escapeHtml(honor.note)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
-  return `${podiumRows ? `<h4 class="event-honor-section-title">賽事名次</h4>${podiumRows}` : ""}${progressionRows ? `<h4 class="event-honor-section-title">晉級隊伍</h4>${progressionRows}` : ""}${fullCourseRows ? `<h4 class="event-honor-section-title">全程最佳辯士</h4>${fullCourseRows}` : ""}${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
+  return `${podiumRows ? `<h4 class="event-honor-section-title">賽事名次</h4>${podiumRows}` : ""}${progressionRows ? `<h4 class="event-honor-section-title">晉級隊伍</h4>${progressionRows}` : ""}${fullCourseRows ? `<h4 class="event-honor-section-title">全程最佳辯士</h4>${fullCourseRows}` : ""}${fullCourseExcellentRows ? `<h4 class="event-honor-section-title">全程優秀辯士</h4>${fullCourseExcellentRows}` : ""}${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${singleExcellentRows ? `<h4 class="event-honor-section-title">單場優秀辯士</h4>${singleExcellentRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
 }
 
 function eventRouteLink(name) {
@@ -423,10 +451,11 @@ function renderEventFinder() {
 function renderEvent(name, target = els.eventDetail) {
   const event = events.find((item) => item.name === name);
   if (!event) return;
-  const singleBestFor = (match) => {
+  const singleHonorsFor = (match) => {
     const teamNames = Object.values(match.teams || {});
-    return unique(event.honors.filter((honor) => {
-      if (!isSingleMatchBest(honor) || honor.matchDate !== match.matchDate) return false;
+    const grouped = new Map();
+    event.honors.filter((honor) => {
+      if (!isSingleMatchHonor(honor) || honor.matchDate !== match.matchDate) return false;
       if (honor.period && Number(honor.period) !== Number(match.period)) return false;
       if (honor.team && !teamNames.includes(honor.team)) return false;
       if (honor.note) {
@@ -448,7 +477,13 @@ function renderEvent(name, target = els.eventDetail) {
         return Object.values(record.teams || {}).includes(honor.team);
       });
       return candidates.length === 1 && candidates[0] === match;
-    }).map((honor) => honor.recipient));
+    }).forEach((honor) => {
+      const label = isSingleMatchExcellent(honor) ? "單場優秀辯士" : "單場最佳辯士";
+      const key = `${label}\u0000${honor.recipient}`;
+      const group = grouped.get(key) || { label, recipient: honor.recipient };
+      grouped.set(key, group);
+    });
+    return [...grouped.values()];
   };
   const grouped = groupByDate([...event.records].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(a.period) - Number(b.period) || Number(a.venue) - Number(b.venue)));
   const matchDays = Object.entries(grouped).map(([date, matches]) => `
@@ -457,13 +492,13 @@ function renderEvent(name, target = els.eventDetail) {
       <div class="match-list">${matches.map((match) => {
         const a = Number(match.scores?.affirmative) || 0;
         const n = Number(match.scores?.negative) || 0;
-        const singleBest = singleBestFor(match);
+        const singleHonors = singleHonorsFor(match);
         return `<div class="match-row">
           <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}${match.groupName ? `<small class="match-group-name" aria-label="循環／分組：${escapeHtml(match.groupName)}">↻ ${escapeHtml(match.groupName)}</small>` : ""}</span>
           <span class="team-name">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}</span>
           <span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>
           <span class="team-name negative">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}</span>
-          <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleBest.length ? `<span class="match-single-best"><b>單場最佳辯士</b>${singleBest.map(playerPageLink).join("、")}</span>` : ""}</span>
+          <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleHonors.map((honor) => `<span class="match-single-best"><b>${honor.label}</b>${playerPageLink(honor.recipient)}</span>`).join("")}</span>
         </div>`;
       }).join("")}</div>
     </section>`).join("");
@@ -650,7 +685,7 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
     if (rank) {
       if (!group.awards.some((item) => item.label === rank.label)) group.awards.push(rank);
     } else {
-      const kind = isFullCourseBest(honor) ? "full-course" : isSingleMatchBest(honor) ? "single-match" : "other";
+      const kind = isFullCourseBest(honor) ? "full-course" : isFullCourseExcellent(honor) ? "full-course-excellence" : isSingleMatchBest(honor) ? "single-match" : isSingleMatchExcellent(honor) ? "single-excellence" : "other";
       group.honors.push({ honor, kind });
     }
     awardGroups.set(honor.competitionName, group);
@@ -667,11 +702,11 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
       groupedHonors.set(key, entry);
     });
     const honorsForEvent = [...groupedHonors.values()].map(({ honor, kind, count }) => {
-      const badge = kind === "other" ? "獎" : "佳";
+      const badge = kind === "other" ? "獎" : kind === "full-course-excellence" ? "優" : "佳";
       const subject = honor.honorType === "player" ? playerPageLink(honor.recipient) : entityLink(honor.teamId, honorSubject(honor));
       const date = honor.matchDate ? `<small>${escapeHtml(formatDate(honor.matchDate))}</small>` : "";
       const repeat = count > 1 ? `<span class="trophy-honor-count">×${count}</span>` : "";
-      const label = kind === "full-course" ? "全程最佳辯士" : kind === "single-match" ? "單場最佳辯士" : honor.honorName;
+      const label = kind === "full-course" ? "全程最佳辯士" : kind === "full-course-excellence" ? "全程優秀辯士" : kind === "single-match" ? "單場最佳辯士" : kind === "single-excellence" ? "單場優秀辯士" : honor.honorName;
       return `<div class="entity-trophy-honor ${kind}"><span class="trophy-honor-badge" aria-label="${escapeHtml(label)}">${badge}</span><span class="trophy-honor-copy"><strong>${escapeHtml(label)}</strong><span>${subject}</span></span>${repeat}${date}</div>`;
     }).join("");
     return `<article class="entity-trophy-card"><div class="entity-trophy-title"><strong>${eventLink(group.name)}</strong>${medals}</div>${honorsForEvent ? `<div class="entity-trophy-honors">${honorsForEvent}</div>` : ""}</article>`;
