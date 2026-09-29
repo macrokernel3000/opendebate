@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T11:41:16",
+  "generatedAt": "2026-09-29T11:49:49",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -35202,11 +35202,11 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "最佳申論辯士",
       "recipient": "黃芢翔",
-      "team": "",
+      "team": "我有點想哭",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-e8df2d31ec58"
+      "teamId": "s105",
+      "id": "honor-dfada979e26e"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35290,11 +35290,11 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "最佳答辯辯士",
       "recipient": "蔡惟昕",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-4a3626815e31"
+      "teamId": "p108",
+      "id": "honor-5c2e41c7faea"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35613,12 +35613,12 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "單場最佳辯士",
       "recipient": "黃芢翔",
-      "team": "",
+      "team": "我有點想哭",
       "honorType": "player",
       "note": "八強：北市大同 vs 我有點想哭",
       "period": 1,
-      "teamId": "",
-      "id": "honor-94cead931aa3"
+      "teamId": "s105",
+      "id": "honor-9d654ab3718b"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
