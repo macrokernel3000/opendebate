@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:51:50",
+  "generatedAt": "2026-09-29T13:27:38",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3369,7 +3369,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": "",
       "teams": {
-        "affirmative": "三民高中",
+        "affirmative": "高市三民",
         "negative": "屏東女中"
       },
       "scores": {
@@ -3384,10 +3384,10 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "groupName": "乙組",
       "teamIds": {
-        "affirmative": "s001",
+        "affirmative": "s149",
         "negative": "s041"
       },
-      "id": "match-932a328830b0"
+      "id": "match-88105cdc4b1d"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3396,13 +3396,13 @@ window.DEBATE_PUBLIC_DATA = {
       "venue": "",
       "teams": {
         "affirmative": "屏東女中",
-        "negative": "三民高中"
+        "negative": "高市三民"
       },
       "scores": {
         "affirmative": 1,
         "negative": 2
       },
-      "winner": "三民高中",
+      "winner": "高市三民",
       "note": "小循環乙組第二場（互換持方）；晉級：屏東女中（依賽程圖）",
       "players": {
         "affirmative": [],
@@ -3411,9 +3411,9 @@ window.DEBATE_PUBLIC_DATA = {
       "groupName": "乙組",
       "teamIds": {
         "affirmative": "s041",
-        "negative": "s001"
+        "negative": "s149"
       },
-      "id": "match-18a57cd093e1"
+      "id": "match-02b5215412cf"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -11185,13 +11185,13 @@ window.DEBATE_PUBLIC_DATA = {
       "venue": 4,
       "teams": {
         "affirmative": "復興實中",
-        "negative": "三民高中"
+        "negative": "新北三民"
       },
       "scores": {
         "affirmative": 0,
         "negative": 3
       },
-      "winner": "三民高中",
+      "winner": "新北三民",
       "note": "",
       "players": {
         "affirmative": [],
@@ -11199,9 +11199,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s058",
-        "negative": "s001"
+        "negative": "s075"
       },
-      "id": "match-d697b75e83ed"
+      "id": "match-16de905c9ddd"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
@@ -11459,7 +11459,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": 4,
       "teams": {
-        "affirmative": "三民高中",
+        "affirmative": "新北三民",
         "negative": "東山高中"
       },
       "scores": {
@@ -11473,10 +11473,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s001",
+        "affirmative": "s075",
         "negative": "s088"
       },
-      "id": "match-b464f6ded4e9"
+      "id": "match-da28c962f2b7"
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
