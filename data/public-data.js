@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-30T01:52:48",
+  "generatedAt": "2026-09-30T02:01:39",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -35989,22 +35989,22 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "最佳答辯辯士",
       "recipient": "劉品妍",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-f066148dd9ac"
+      "teamId": "s014",
+      "id": "honor-e472342d8fdd"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "honorName": "最佳答辯辯士",
       "recipient": "吳芷妍",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "",
-      "teamId": "",
-      "id": "honor-6462c04c308a"
+      "teamId": "s014",
+      "id": "honor-511f3528ba00"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
