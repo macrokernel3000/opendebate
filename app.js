@@ -181,7 +181,7 @@ function renderRecentEvents() {
           <h3>${escapeHtml(event.name)}</h3>
           ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
         </div>
-        ${compact ? renderMobileCardHonors(event) : ""}
+        ${renderEventPodium(event)}
         <span class="event-card-meta"><span>${event.teamCount} 隊</span><span>${event.records.length} 場</span><span>${event.honors.length} 榮譽</span></span>
       </button>`;
   };
@@ -346,21 +346,18 @@ function eventChampion(event) {
   return champion ? honorSubject(champion) : "尚未收錄冠軍";
 }
 
-function renderMobileCardHonors(event) {
-  const priority = (honor) => {
-    const name = honor.honorName?.trim() || "";
-    if (/(?:^|組)冠軍$/.test(name)) return 0;
-    if (/(?:^|組)亞軍$/.test(name)) return 1;
-    if (/(?:^|組)季軍$/.test(name)) return 2;
-    if (name.includes("全程最佳")) return 3;
-    return 9;
-  };
-  const highlights = event.honors.filter((honor) => priority(honor) < 9)
-    .sort((a, b) => priority(a) - priority(b) || a.honorName.localeCompare(b.honorName, "zh-Hant"))
-    .slice(0, 4);
-  if (!highlights.length) return `<ul class="event-card-honors"><li><b>冠軍</b><span>${escapeHtml(eventChampion(event))}</span></li></ul>`;
-  const rankClass = (honor) => ["podium-gold", "podium-silver", "podium-bronze", "award-other"][priority(honor)] || "award-other";
-  return `<ul class="event-card-honors">${highlights.map((honor) => `<li class="${rankClass(honor)}"><b>${escapeHtml(honor.honorName)}</b><span>${escapeHtml(honorSubject(honor))}</span></li>`).join("")}</ul>`;
+function renderEventPodium(event) {
+  const rankDetails = [
+    { label: "冠", honor: /(?:^|組)冠軍$/, className: "gold" },
+    { label: "亞", honor: /(?:^|組)亞軍$/, className: "silver" },
+    { label: "季", honor: /(?:^|組)季軍$/, className: "bronze" },
+    { label: "殿", honor: /(?:^|組)殿軍$/, className: "white" },
+  ];
+  const honors = rankDetails.flatMap((rank) => event.honors
+    .filter((honor) => rank.honor.test(honor.honorName?.trim() || ""))
+    .map((honor) => ({ ...rank, recipient: honorSubject(honor) })));
+  if (!honors.length) return "";
+  return `<ul class="event-card-honors" aria-label="賽事名次">${honors.map((honor) => `<li><span class="trophy-medal ${honor.className}" aria-label="${honor.label}軍">${honor.label}</span><span class="event-honor-recipient">${escapeHtml(honor.recipient)}</span></li>`).join("")}</ul>`;
 }
 
 function renderTimeline() {
