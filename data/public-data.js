@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T11:52:30",
+  "generatedAt": "2026-09-29T12:01:56",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -34028,8 +34028,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D1-1",
+      "period": 1,
       "teamId": "p127",
-      "id": "honor-7b9a37495558"
+      "id": "honor-c0bb719fe25a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34039,8 +34040,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "最佳英鎊辯論隊",
       "honorType": "player",
       "note": "D1-1",
+      "period": 1,
       "teamId": "p128",
-      "id": "honor-a36c66fa69ec"
+      "id": "honor-5d516857f649"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34050,8 +34052,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成淵高中",
       "honorType": "player",
       "note": "D1-1",
+      "period": 1,
       "teamId": "s068",
-      "id": "honor-17037cd0a33e"
+      "id": "honor-cb86abd158b0"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34061,8 +34064,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D1-1",
+      "period": 1,
       "teamId": "p039",
-      "id": "honor-d7eb39759de7"
+      "id": "honor-9154892abb8c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34072,8 +34076,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "誤入商業帝國的長髮男",
       "honorType": "player",
       "note": "D1-1",
+      "period": 1,
       "teamId": "p131",
-      "id": "honor-995f031181da"
+      "id": "honor-3e546af90e31"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34083,8 +34088,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南湖高中",
       "honorType": "player",
       "note": "D1-2",
+      "period": 2,
       "teamId": "s024",
-      "id": "honor-31daec52ffde"
+      "id": "honor-38e1e4875b7f"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34094,8 +34100,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "竹林七賢",
       "honorType": "player",
       "note": "D1-2",
+      "period": 2,
       "teamId": "p134",
-      "id": "honor-5eb8a5144374"
+      "id": "honor-9f17ece8c49d"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34105,8 +34112,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "大家都不想講話",
       "honorType": "player",
       "note": "D1-2",
+      "period": 2,
       "teamId": "p132",
-      "id": "honor-6eadb04521f2"
+      "id": "honor-cfbe1995322a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34116,8 +34124,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "澎湖一中",
       "honorType": "player",
       "note": "D1-2",
+      "period": 2,
       "teamId": "s169",
-      "id": "honor-dc95352e96ee"
+      "id": "honor-cb4b3ba7eeaa"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34127,8 +34136,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D2-1",
+      "period": 1,
       "teamId": "p039",
-      "id": "honor-41104188a55c"
+      "id": "honor-b14ad5d2b234"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34138,8 +34148,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "最佳英鎊辯論隊",
       "honorType": "player",
       "note": "D2-1",
+      "period": 1,
       "teamId": "p128",
-      "id": "honor-d8dbfaeb1ecb"
+      "id": "honor-514c40ac26b7"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34149,8 +34160,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D2-1",
+      "period": 1,
       "teamId": "p127",
-      "id": "honor-eeb935c46fe9"
+      "id": "honor-c8d248220fb8"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34160,8 +34172,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功口技社",
       "honorType": "player",
       "note": "D2-1",
+      "period": 1,
       "teamId": "p130",
-      "id": "honor-a5921687758a"
+      "id": "honor-00d20bb69683"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34171,8 +34184,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "南山高中",
       "honorType": "player",
       "note": "D2-2",
+      "period": 2,
       "teamId": "s023",
-      "id": "honor-2eacf905419c"
+      "id": "honor-3904114fa665"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34182,8 +34196,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "衛道中學辯論社",
       "honorType": "player",
       "note": "D2-2",
+      "period": 2,
       "teamId": "s139",
-      "id": "honor-47af00bdbe65"
+      "id": "honor-c76fbf436f1d"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34193,8 +34208,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "世宣67",
       "honorType": "player",
       "note": "D2-2",
+      "period": 2,
       "teamId": "p119",
-      "id": "honor-733931c7306a"
+      "id": "honor-00f67a6396cc"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34204,8 +34220,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "宮燈最佳辯士",
       "honorType": "player",
       "note": "D2-2",
+      "period": 2,
       "teamId": "p135",
-      "id": "honor-2538ea4f7379"
+      "id": "honor-27e31771ca09"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34215,8 +34232,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "宮燈最佳辯士",
       "honorType": "player",
       "note": "D2-2",
+      "period": 2,
       "teamId": "p135",
-      "id": "honor-665e5517059a"
+      "id": "honor-bd4e5d8e2a06"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34226,8 +34244,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D2-3",
+      "period": 3,
       "teamId": "p127",
-      "id": "honor-07c714b2d26c"
+      "id": "honor-e73c30c6368c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34237,8 +34256,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "世宣67",
       "honorType": "player",
       "note": "D2-3",
+      "period": 3,
       "teamId": "p119",
-      "id": "honor-684632aa6968"
+      "id": "honor-8f96a35be91c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34248,8 +34268,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "成功口技社",
       "honorType": "player",
       "note": "D2-3",
+      "period": 3,
       "teamId": "p130",
-      "id": "honor-98f608460f17"
+      "id": "honor-5e95a6bc5088"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34259,8 +34280,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D2-3",
+      "period": 3,
       "teamId": "p039",
-      "id": "honor-177f4c8ff48d"
+      "id": "honor-02d29093df66"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34270,8 +34292,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "白烏鴉辯論隊",
       "honorType": "player",
       "note": "D3 複賽",
+      "period": 1,
       "teamId": "p127",
-      "id": "honor-c36a5e95ea08"
+      "id": "honor-a4db2972ba29"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34281,8 +34304,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D3 複賽",
+      "period": 1,
       "teamId": "p039",
-      "id": "honor-fc62c6381cfa"
+      "id": "honor-e34aac54df77"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -34292,8 +34316,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "建竹實聯隊",
       "honorType": "player",
       "note": "D3 決賽",
+      "period": 2,
       "teamId": "p039",
-      "id": "honor-0bf9cd9a4dc9"
+      "id": "honor-17ea67697101"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",

@@ -331,7 +331,8 @@ function renderMobileCardHonors(event) {
     .sort((a, b) => priority(a) - priority(b) || a.honorName.localeCompare(b.honorName, "zh-Hant"))
     .slice(0, 4);
   if (!highlights.length) return `<ul class="event-card-honors"><li><b>冠軍</b><span>${escapeHtml(eventChampion(event))}</span></li></ul>`;
-  return `<ul class="event-card-honors">${highlights.map((honor) => `<li><b>${escapeHtml(honor.honorName)}</b><span>${escapeHtml(honorSubject(honor))}</span></li>`).join("")}</ul>`;
+  const rankClass = (honor) => ["podium-gold", "podium-silver", "podium-bronze", "award-other"][priority(honor)] || "award-other";
+  return `<ul class="event-card-honors">${highlights.map((honor) => `<li class="${rankClass(honor)}"><b>${escapeHtml(honor.honorName)}</b><span>${escapeHtml(honorSubject(honor))}</span></li>`).join("")}</ul>`;
 }
 
 function renderTimeline() {
