@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T12:01:56",
+  "generatedAt": "2026-09-29T12:08:25",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -35326,12 +35326,12 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "蘇雨霏",
-      "team": "",
+      "team": "台美聯隊",
       "honorType": "player",
       "note": "第一時段：台美聯隊 vs 三校聯隊",
       "period": 1,
-      "teamId": "",
-      "id": "honor-67eb34c158f3"
+      "teamId": "p108",
+      "id": "honor-5a260bcc2c51"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35350,36 +35350,36 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "陳弘衍",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "第一時段：內湖高中 vs 想念是會呼吸的痛",
       "period": 1,
-      "teamId": "",
-      "id": "honor-7f82093840e6"
+      "teamId": "s014",
+      "id": "honor-2204e1cf9054"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "鄒立安",
-      "team": "",
+      "team": "美國聯隊",
       "honorType": "player",
       "note": "第一時段：美國聯隊 vs 暑假辯不見",
       "period": 1,
-      "teamId": "",
-      "id": "honor-d204dbed5b10"
+      "teamId": "p074",
+      "id": "honor-5125d1fc8fd3"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "鄭詠云",
-      "team": "",
+      "team": "嘿跑去康橋",
       "honorType": "player",
       "note": "第一時段：嘿跑去康橋 vs 鱁",
       "period": 1,
-      "teamId": "",
-      "id": "honor-224413af153c"
+      "teamId": "s049",
+      "id": "honor-e24c34533ddb"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35398,60 +35398,60 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "林立承",
-      "team": "",
+      "team": "台灣國中小思辨聯隊",
       "honorType": "player",
       "note": "第二時段：台灣國中小思辨聯隊 vs 不講吾德",
       "period": 2,
-      "teamId": "",
-      "id": "honor-95f1bb9fe44e"
+      "teamId": "p107",
+      "id": "honor-23981b7113a7"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "陳弘衍",
-      "team": "",
+      "team": "內湖高中",
       "honorType": "player",
       "note": "第二時段：想念是會呼吸的痛 vs 內湖高中",
       "period": 2,
-      "teamId": "",
-      "id": "honor-bc9bdc991457"
+      "teamId": "s014",
+      "id": "honor-5d729e6a64e8"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "江沅其",
-      "team": "",
+      "team": "鱁",
       "honorType": "player",
       "note": "第二時段：鱁 vs 嘿跑去康橋",
       "period": 2,
-      "teamId": "",
-      "id": "honor-d8959a30e46c"
+      "teamId": "p116",
+      "id": "honor-bb718221884d"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "邵聖光",
-      "team": "",
+      "team": "北市大同",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
       "period": 2,
-      "teamId": "",
-      "id": "honor-4c966d5d6e07"
+      "teamId": "s044",
+      "id": "honor-c59493966671"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "蔡奕呈",
-      "team": "",
+      "team": "嘿走去康橋",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
       "period": 2,
-      "teamId": "",
-      "id": "honor-1d30db98cfde"
+      "teamId": "s049",
+      "id": "honor-07932a7d4bf7"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35470,12 +35470,12 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "陳昊廷",
-      "team": "",
+      "team": "我有點想哭",
       "honorType": "player",
       "note": "第二時段：我有點想哭 vs 國際中文辯論課",
       "period": 2,
-      "teamId": "",
-      "id": "honor-85347d93fea6"
+      "teamId": "s105",
+      "id": "honor-564c091d31aa"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35494,36 +35494,36 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "邱語愛",
-      "team": "",
+      "team": "美國聯隊",
       "honorType": "player",
       "note": "第三時段：暑假辯不見 vs 美國聯隊；比分未提供",
       "period": 3,
-      "teamId": "",
-      "id": "honor-24d3d9591bc1"
+      "teamId": "p074",
+      "id": "honor-3710143b0476"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "邵聖光",
-      "team": "",
+      "team": "北市大同",
       "honorType": "player",
       "note": "第三時段：嘿走去康橋 vs 北市大同",
       "period": 3,
-      "teamId": "",
-      "id": "honor-bd8b2ccb267e"
+      "teamId": "s044",
+      "id": "honor-be600b4af964"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "陳昊廷",
-      "team": "",
+      "team": "我有點想哭",
       "honorType": "player",
       "note": "第三時段：國際中文辯論課 vs 我有點想哭",
       "period": 3,
-      "teamId": "",
-      "id": "honor-f604419f90b2"
+      "teamId": "s105",
+      "id": "honor-dd25575159d5"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35542,24 +35542,24 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "吳濬祐",
-      "team": "",
+      "team": "台灣國中小思辨聯隊",
       "honorType": "player",
       "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
       "period": 3,
-      "teamId": "",
-      "id": "honor-42f47116b2eb"
+      "teamId": "p107",
+      "id": "honor-14b889965c6a"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
       "recipient": "林立承",
-      "team": "",
+      "team": "台灣國中小思辨聯隊",
       "honorType": "player",
       "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
       "period": 3,
-      "teamId": "",
-      "id": "honor-3a098a6b11fe"
+      "teamId": "p107",
+      "id": "honor-99290628a444"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35578,24 +35578,24 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "單場最佳辯士",
       "recipient": "邱語愛",
-      "team": "",
+      "team": "美國聯隊",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
       "period": 1,
-      "teamId": "",
-      "id": "honor-b268fbd8047f"
+      "teamId": "p074",
+      "id": "honor-f54cf3b26240"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "honorName": "單場最佳辯士",
       "recipient": "鄒立安",
-      "team": "",
+      "team": "美國聯隊",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
       "period": 1,
-      "teamId": "",
-      "id": "honor-eb2c287616b2"
+      "teamId": "p074",
+      "id": "honor-a7732fcecf18"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -35614,12 +35614,12 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-08-02",
       "honorName": "單場最佳辯士",
       "recipient": "鄭詠云",
-      "team": "",
+      "team": "嘿跑去康橋",
       "honorType": "player",
       "note": "八強：內湖高中 vs 嘿跑去康橋",
       "period": 1,
-      "teamId": "",
-      "id": "honor-525003932abe"
+      "teamId": "s049",
+      "id": "honor-73876ccad309"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
