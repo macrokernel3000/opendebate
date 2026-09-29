@@ -644,21 +644,46 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
     return null;
   };
   const awardGroups = new Map();
-  entityHonors.filter((honor) => honor.honorType === "team" && podium(honor.honorName)).forEach((honor) => {
-    const award = podium(honor.honorName);
-    const group = awardGroups.get(honor.competitionName) || { name: honor.competitionName, awards: [] };
-    if (!group.awards.some((item) => item.label === award.label)) group.awards.push(award);
+  entityHonors.forEach((honor) => {
+    const group = awardGroups.get(honor.competitionName) || { name: honor.competitionName, awards: [], honors: [] };
+    const rank = honor.honorType === "team" ? podium(honor.honorName) : null;
+    if (rank) {
+      if (!group.awards.some((item) => item.label === rank.label)) group.awards.push(rank);
+    } else {
+      const kind = isFullCourseBest(honor) ? "full-course" : isSingleMatchBest(honor) ? "single-match" : "other";
+      group.honors.push({ honor, kind });
+    }
     awardGroups.set(honor.competitionName, group);
   });
   const trophyRows = [...awardGroups.values()].map((group) => {
     group.awards.sort((a, b) => a.order - b.order);
-    return `<article class="entity-trophy-card"><strong>${eventLink(group.name)}</strong><span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.rank}</span>`).join("")}</span></article>`;
+    const medals = group.awards.length ? `<span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.rank}</span>`).join("")}</span>` : "";
+    const groupedHonors = new Map();
+    group.honors.forEach(({ honor, kind }) => {
+      const key = kind === "single-match" ? `${kind}|${honor.recipient}` : `${kind}|${honor.honorName}|${honor.recipient}`;
+      const entry = groupedHonors.get(key) || { honor, kind, count: 0 };
+      entry.count += 1;
+      if ((honor.matchDate || "") > (entry.honor.matchDate || "")) entry.honor = honor;
+      groupedHonors.set(key, entry);
+    });
+    const honorsForEvent = [...groupedHonors.values()].map(({ honor, kind, count }) => {
+      const badge = kind === "other" ? "獎" : "佳";
+      const subject = honor.honorType === "player" ? playerPageLink(honor.recipient) : entityLink(honor.teamId, honorSubject(honor));
+      const date = honor.matchDate ? `<small>${escapeHtml(formatDate(honor.matchDate))}</small>` : "";
+      const repeat = count > 1 ? `<span class="trophy-honor-count">×${count}</span>` : "";
+      const label = kind === "full-course" ? "全程最佳辯士" : kind === "single-match" ? "單場最佳辯士" : honor.honorName;
+      return `<div class="entity-trophy-honor ${kind}"><span class="trophy-honor-badge" aria-label="${escapeHtml(label)}">${badge}</span><span class="trophy-honor-copy"><strong>${escapeHtml(label)}</strong><span>${subject}</span></span>${repeat}${date}</div>`;
+    }).join("");
+    return `<article class="entity-trophy-card"><div class="entity-trophy-title"><strong>${eventLink(group.name)}</strong>${medals}</div>${honorsForEvent ? `<div class="entity-trophy-honors">${honorsForEvent}</div>` : ""}</article>`;
   }).join("");
-  const honorRows = entityHonors.map((honor) => {
-    const event = events.find((item) => item.name === honor.competitionName) || { records: [], dates: [], metadata: {} };
-    return `<article class="entity-honor-row"><span>${escapeHtml(honorDateLabel(honor, event))}</span><div><strong>${escapeHtml(honor.honorName)}｜${honor.honorType === "player" ? playerPageLink(honor.recipient) : entityLink(honor.teamId, honorSubject(honor))}</strong><p>${eventLink(honor.competitionName)}</p></div></article>`;
-  }).join("");
-  return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽</h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次。</p>"}</div><h3>參加賽事</h3><div class="entity-event-list">${participatedEvents.map((name) => eventLink(name)).join("") || "<p>尚無參賽紀錄。</p>"}</div><h3>所有戰績</h3><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div><h3>相關榮譽</h3><div class="entity-honor-list">${honorRows || "<p>尚無相關榮譽。</p>"}</div></section>`;
+  const eventsByYear = new Map();
+  participatedEvents.forEach((name) => {
+    const event = events.find((item) => item.name === name);
+    const year = (event?.latestDate || "").slice(0, 4) || "年份未載明";
+    eventsByYear.set(year, [...(eventsByYear.get(year) || []), name]);
+  });
+  const participatedRows = [...eventsByYear.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([year, names]) => `<section class="entity-event-year"><h4>${escapeHtml(year)}</h4><div class="entity-event-list">${names.map((name) => eventLink(name)).join("")}</div></section>`).join("");
+  return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽</h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次或榮譽。</p>"}</div><h3>參加賽事</h3><div class="entity-event-years">${participatedRows || "<p>尚無參賽紀錄。</p>"}</div><details class="entity-records-disclosure"><summary><span>所有戰績</span><span>${entityRecords.length} 場</span></summary><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div></details></section>`;
 }
 
 function selectEntity(entityId) {

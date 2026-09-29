@@ -174,14 +174,26 @@ button { color: inherit; }
 .entity-trophy-heading small { color: var(--muted); font-size: 11px; font-weight: 650; }
 .entity-trophy-heading small b { color: var(--green-dark); }
 .entity-trophy-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-bottom: 24px; }
-.entity-trophy-card { display: flex; min-width: 0; min-height: 52px; align-items: center; justify-content: space-between; gap: 10px; padding: 9px 11px 9px 14px; border: 1px solid #ead89e; border-left: 4px solid #d9b744; border-radius: 13px; background: linear-gradient(110deg, #fff9e8, #fffdf7); box-shadow: 0 3px 10px rgba(91,72,21,.07); }
-.entity-trophy-card > strong { overflow-wrap: anywhere; color: #314139; font-size: 12px; line-height: 1.35; }
+.entity-trophy-card { display: grid; min-width: 0; gap: 8px; padding: 10px 11px 10px 14px; border: 1px solid #ead89e; border-left: 4px solid #d9b744; border-radius: 13px; background: linear-gradient(110deg, #fff9e8, #fffdf7); box-shadow: 0 3px 10px rgba(91,72,21,.07); }
+.entity-trophy-title { display: flex; min-width: 0; align-items: center; justify-content: space-between; gap: 10px; }
+.entity-trophy-title > strong { min-width: 0; overflow-wrap: anywhere; color: #314139; font-size: 12px; line-height: 1.35; }
 .entity-trophy-medals { display: flex; flex: 0 0 auto; gap: 4px; }
 .trophy-medal { display: grid; width: 27px; height: 27px; place-items: center; border: 1px solid transparent; border-radius: 9px; font-size: 12px; font-weight: 950; box-shadow: 0 2px 0 rgba(30,40,34,.1); }
 .trophy-medal.gold { background: #f5d25e; color: #584508; }
 .trophy-medal.silver { background: #dce4e1; color: #394944; }
 .trophy-medal.bronze { background: #dca06f; color: #512d15; }
 .trophy-medal.white { border-color: #cbd5d1; background: #fff; color: #53645d; }
+.entity-trophy-honors { display: grid; gap: 5px; }
+.entity-trophy-honor { display: flex; min-width: 0; align-items: center; gap: 8px; padding-top: 7px; border-top: 1px solid rgba(49,65,57,.12); }
+.trophy-honor-badge { display: grid; width: 27px; height: 27px; flex: 0 0 27px; place-items: center; border: 1px solid #cbd5d1; border-radius: 8px; background: #fff; color: #53645d; font-size: 12px; font-weight: 950; }
+.entity-trophy-honor.full-course .trophy-honor-badge { border-color: #e3bf3c; background: #f5d25e; color: #584508; }
+.trophy-honor-copy { display: flex; min-width: 0; flex: 1; flex-wrap: wrap; align-items: baseline; gap: 2px 7px; }
+.trophy-honor-copy strong { color: #56655e; font-size: 11px; }
+.trophy-honor-copy > span { font-size: 12px; font-weight: 800; }
+.entity-trophy-count { flex: 0 0 auto; padding: 2px 5px; border-radius: 5px; background: #e7efe9; color: var(--green-dark); font-size: 10px; font-weight: 900; }
+.entity-trophy-honor > small { flex: 0 0 auto; color: var(--muted); font-size: 10px; }
+.entity-event-years { display: grid; gap: 10px; }
+.entity-event-year h4 { margin: 0 0 6px; color: var(--coral); font-size: 12px; }
 .entity-event-list { display: flex; flex-wrap: wrap; gap: 8px; }
 .entity-event-list span { padding: 7px 10px; background: var(--soft); color: var(--green-dark); font-size: 12px; font-weight: 800; }
 .event-summary { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin: 38px 0 22px; padding-bottom: 20px; border-bottom: 4px solid var(--ink); }
@@ -251,6 +263,13 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .entity-detail-heading h2 { margin: 0; }
 .entity-detail-heading > div:last-child { color: var(--muted); font-size: 13px; }
 .entity-detail h3 { margin: 28px 0 12px; }
+.entity-records-disclosure { margin-top: 28px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.entity-records-disclosure > summary { display: flex; min-height: 48px; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 14px; color: var(--ink); font-weight: 850; cursor: pointer; list-style: none; }
+.entity-records-disclosure > summary::-webkit-details-marker { display: none; }
+.entity-records-disclosure > summary::after { content: "＋"; margin-left: auto; color: var(--green); }
+.entity-records-disclosure[open] > summary::after { content: "−"; }
+.entity-records-disclosure > summary span:last-child { color: var(--muted); font-size: 12px; font-weight: 700; }
+.entity-records-disclosure .history-list { padding: 0 10px 10px; }
 .entity-match { display: grid; grid-template-columns: 105px 1fr auto; gap: 14px; align-items: center; border: 1px solid var(--line); padding: 13px 15px; }
 .entity-match strong { font-size: 14px; }
 .entity-match p, .entity-honor-row p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
