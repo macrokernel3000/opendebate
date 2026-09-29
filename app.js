@@ -636,10 +636,10 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
   }).join("");
   const podium = (honorName) => {
     const name = honorName?.trim() || "";
-    if (name.endsWith("冠軍")) return { label: "冠軍", medal: "金", tone: "gold", order: 0 };
-    if (name.endsWith("亞軍")) return { label: "亞軍", medal: "銀", tone: "silver", order: 1 };
-    if (name.endsWith("季軍")) return { label: "季軍", medal: "銅", tone: "bronze", order: 2 };
-    if (name.endsWith("殿軍")) return { label: "殿軍", medal: "白", tone: "white", order: 3 };
+    if (name.endsWith("冠軍")) return { label: "冠軍", rank: "冠", tone: "gold", order: 0 };
+    if (name.endsWith("亞軍")) return { label: "亞軍", rank: "亞", tone: "silver", order: 1 };
+    if (name.endsWith("季軍")) return { label: "季軍", rank: "季", tone: "bronze", order: 2 };
+    if (name.endsWith("殿軍")) return { label: "殿軍", rank: "殿", tone: "white", order: 3 };
     return null;
   };
   const awardGroups = new Map();
@@ -651,13 +651,13 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
   });
   const trophyRows = [...awardGroups.values()].map((group) => {
     group.awards.sort((a, b) => a.order - b.order);
-    return `<article class="entity-trophy-card"><strong>${eventLink(group.name)}</strong><span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.medal}</span>`).join("")}</span></article>`;
+    return `<article class="entity-trophy-card"><strong>${eventLink(group.name)}</strong><span class="entity-trophy-medals">${group.awards.map((award) => `<span class="trophy-medal ${award.tone}" aria-label="${award.label}">${award.rank}</span>`).join("")}</span></article>`;
   }).join("");
   const honorRows = entityHonors.map((honor) => {
     const event = events.find((item) => item.name === honor.competitionName) || { records: [], dates: [], metadata: {} };
     return `<article class="entity-honor-row"><span>${escapeHtml(honorDateLabel(honor, event))}</span><div><strong>${escapeHtml(honor.honorName)}｜${honor.honorType === "player" ? playerPageLink(honor.recipient) : entityLink(honor.teamId, honorSubject(honor))}</strong><p>${eventLink(honor.competitionName)}</p></div></article>`;
   }).join("");
-  return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽 <small><b>金</b>冠軍 · <b>銀</b>亞軍 · <b>銅</b>季軍 · <b>白</b>殿軍</small></h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次。</p>"}</div><h3>參加賽事</h3><div class="entity-event-list">${participatedEvents.map((name) => eventLink(name)).join("") || "<p>尚無參賽紀錄。</p>"}</div><h3>所有戰績</h3><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div><h3>相關榮譽</h3><div class="entity-honor-list">${honorRows || "<p>尚無相關榮譽。</p>"}</div></section>`;
+  return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽</h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次。</p>"}</div><h3>參加賽事</h3><div class="entity-event-list">${participatedEvents.map((name) => eventLink(name)).join("") || "<p>尚無參賽紀錄。</p>"}</div><h3>所有戰績</h3><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div><h3>相關榮譽</h3><div class="entity-honor-list">${honorRows || "<p>尚無相關榮譽。</p>"}</div></section>`;
 }
 
 function selectEntity(entityId) {
