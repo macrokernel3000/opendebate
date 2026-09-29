@@ -33,7 +33,6 @@ const els = {
   gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
   honorRangeToggle: document.querySelector("#honorRangeToggle"),
-  mobileHonorFilter: document.querySelector("#mobileHonorFilter"),
   honorLeaderboardTitle: document.querySelector("#honorLeaderboardTitle"),
   gamesLeaderboardTitle: document.querySelector("#gamesLeaderboardTitle"),
   winsLeaderboardTitle: document.querySelector("#winsLeaderboardTitle"),
@@ -792,7 +791,6 @@ els.honorRangeToggle?.addEventListener("click", () => {
 });
 document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addEventListener("click", () => {
   honorCategoryFilter = button.dataset.honorFilter;
-  if (els.mobileHonorFilter) els.mobileHonorFilter.value = honorCategoryFilter;
   document.querySelectorAll("[data-honor-filter]").forEach((item) => {
     const active = item === button;
     item.classList.toggle("is-active", active);
@@ -800,15 +798,6 @@ document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addE
   });
   renderLeaderboards();
 }));
-els.mobileHonorFilter?.addEventListener("change", () => {
-  honorCategoryFilter = els.mobileHonorFilter.value;
-  document.querySelectorAll("[data-honor-filter]").forEach((item) => {
-    const active = item.dataset.honorFilter === honorCategoryFilter;
-    item.classList.toggle("is-active", active);
-    item.setAttribute("aria-pressed", String(active));
-  });
-  renderLeaderboards();
-});
 document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEventListener("click", () => {
   const key = button.dataset.rankSort;
   if (key === leaderboardSortKey) leaderboardSortDirections[key] *= -1;
