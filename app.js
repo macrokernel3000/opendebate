@@ -10,7 +10,7 @@ let honorRange = "recent";
 let honorCategoryFilter = "all";
 const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, totalHonors: -1 };
 const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "totalHonors"];
-let leaderboardSortKey = "gold";
+let leaderboardSortKey = "totalHonors";
 
 const els = {
   homeBrand: document.querySelector("#homeBrand"),

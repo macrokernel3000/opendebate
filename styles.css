@@ -76,6 +76,12 @@ button { color: inherit; }
 
 .collected-events { padding-top: 76px; padding-bottom: 84px; }
 .event-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: stretch; }
+@media (min-width: 901px) {
+  .collected-events .event-grid { max-height: 1200px; overflow-y: auto; overscroll-behavior: contain; border: 1px solid #d9e2dc; border-radius: 14px; padding: 16px; background: #f8faf8; scrollbar-color: var(--green) #e8eee9; scrollbar-width: thin; }
+  .collected-events .event-grid::-webkit-scrollbar { width: 10px; }
+  .collected-events .event-grid::-webkit-scrollbar-track { border-radius: 999px; background: #e8eee9; }
+  .collected-events .event-grid::-webkit-scrollbar-thumb { border: 2px solid #e8eee9; border-radius: 999px; background: var(--green); }
+}
 .event-card { position: relative; min-height: 226px; display: flex; flex-direction: column; justify-content: flex-start; gap: 8px; border: 1px solid #d9e2dc; border-top: 3px solid var(--green); border-radius: 13px; padding: 17px 18px 15px; background: linear-gradient(145deg, #fff 0%, #fffefa 100%); cursor: pointer; text-align: left; overflow: hidden; box-shadow: 0 4px 14px rgba(32,54,43,.055); transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease; }
 .event-card:hover { border-color: var(--green); transform: translateY(-3px); box-shadow: 0 10px 22px rgba(32,54,43,.11); }
 .event-date { color: #bd5d4e; font-size: 12px; font-variant-numeric: tabular-nums; font-weight: 850; }
