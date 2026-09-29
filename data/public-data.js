@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T10:43:51",
+  "generatedAt": "2026-09-29T10:52:24",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -33938,8 +33938,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第一時段：台美聯隊 vs 三校聯隊",
+      "period": 1,
       "teamId": "",
-      "id": "honor-c18529cae7ac"
+      "id": "honor-67eb34c158f3"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -33949,8 +33950,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "台美聯隊",
       "honorType": "player",
       "note": "第一時段：台美聯隊 vs 三校聯隊",
+      "period": 1,
       "teamId": "p108",
-      "id": "honor-c71c172bd283"
+      "id": "honor-9a198c9dc054"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -33960,8 +33962,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第一時段：內湖高中 vs 想念是會呼吸的痛",
+      "period": 1,
       "teamId": "",
-      "id": "honor-c02d8dc50028"
+      "id": "honor-7f82093840e6"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -33971,8 +33974,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第一時段：美國聯隊 vs 暑假辯不見",
+      "period": 1,
       "teamId": "",
-      "id": "honor-d02a4bd07c08"
+      "id": "honor-d204dbed5b10"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -33982,8 +33986,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第一時段：嘿跑去康橋 vs 鱁",
+      "period": 1,
       "teamId": "",
-      "id": "honor-88932a945c4c"
+      "id": "honor-224413af153c"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -33993,8 +33998,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "第二時段：復興高中 vs 小果仁辯論隊",
+      "period": 2,
       "teamId": "p112",
-      "id": "honor-dda5b2897094"
+      "id": "honor-d0186f4532f7"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34004,8 +34010,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：台灣國中小思辨聯隊 vs 不講吾德",
+      "period": 2,
       "teamId": "",
-      "id": "honor-55ccc29b9a81"
+      "id": "honor-95f1bb9fe44e"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34015,8 +34022,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：想念是會呼吸的痛 vs 內湖高中",
+      "period": 2,
       "teamId": "",
-      "id": "honor-2f4c39e9e875"
+      "id": "honor-bc9bdc991457"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34026,8 +34034,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：鱁 vs 嘿跑去康橋",
+      "period": 2,
       "teamId": "",
-      "id": "honor-9c448d990b73"
+      "id": "honor-d8959a30e46c"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34037,8 +34046,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
+      "period": 2,
       "teamId": "",
-      "id": "honor-3ae3933016a1"
+      "id": "honor-4c966d5d6e07"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34048,8 +34058,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
+      "period": 2,
       "teamId": "",
-      "id": "honor-39cf8892d607"
+      "id": "honor-1d30db98cfde"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34059,8 +34070,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "我有點想哭",
       "honorType": "player",
       "note": "第二時段：我有點想哭 vs 國際中文辯論課",
+      "period": 2,
       "teamId": "s105",
-      "id": "honor-df569039cbc4"
+      "id": "honor-b9eb54030401"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34070,8 +34082,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第二時段：我有點想哭 vs 國際中文辯論課",
+      "period": 2,
       "teamId": "",
-      "id": "honor-cef1b5eff874"
+      "id": "honor-85347d93fea6"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34081,8 +34094,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "第三時段：復興高中 vs 小果仁辯論隊",
+      "period": 3,
       "teamId": "p112",
-      "id": "honor-75b2b03923bd"
+      "id": "honor-5c71be80a882"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34092,8 +34106,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第三時段：暑假辯不見 vs 美國聯隊；比分未提供",
+      "period": 3,
       "teamId": "",
-      "id": "honor-f47e9aa7d545"
+      "id": "honor-24d3d9591bc1"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34103,8 +34118,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第三時段：嘿走去康橋 vs 北市大同",
+      "period": 3,
       "teamId": "",
-      "id": "honor-e3346cc6768c"
+      "id": "honor-bd8b2ccb267e"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34114,8 +34130,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第三時段：國際中文辯論課 vs 我有點想哭",
+      "period": 3,
       "teamId": "",
-      "id": "honor-5c642ab7ea26"
+      "id": "honor-f604419f90b2"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34125,8 +34142,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "台美聯隊",
       "honorType": "player",
       "note": "第三時段：三校聯隊 vs 台美聯隊",
+      "period": 3,
       "teamId": "p108",
-      "id": "honor-7dfaa6988279"
+      "id": "honor-0e8c0e400a15"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34136,8 +34154,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
+      "period": 3,
       "teamId": "",
-      "id": "honor-8337b573d315"
+      "id": "honor-42f47116b2eb"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34146,9 +34165,10 @@ window.DEBATE_PUBLIC_DATA = {
       "recipient": "林立承",
       "team": "",
       "honorType": "player",
-      "note": "第三時段；原公示未標明對應場次",
+      "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊",
+      "period": 3,
       "teamId": "",
-      "id": "honor-8f450460a8c4"
+      "id": "honor-3a098a6b11fe"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34158,8 +34178,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "小果仁辯論隊",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "period": 1,
       "teamId": "p112",
-      "id": "honor-a28d9234ec1b"
+      "id": "honor-b1179559e13b"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34169,8 +34190,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "period": 1,
       "teamId": "",
-      "id": "honor-b47178773b4c"
+      "id": "honor-b268fbd8047f"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34180,8 +34202,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "八強：小果仁辯論隊 vs 美國聯隊",
+      "period": 1,
       "teamId": "",
-      "id": "honor-ecde977af2db"
+      "id": "honor-eb2c287616b2"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34191,8 +34214,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "內湖高中",
       "honorType": "player",
       "note": "八強：內湖高中 vs 嘿跑去康橋",
+      "period": 1,
       "teamId": "s014",
-      "id": "honor-606e3e3403e8"
+      "id": "honor-131234cc2fe4"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34202,8 +34226,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "player",
       "note": "八強：內湖高中 vs 嘿跑去康橋",
+      "period": 1,
       "teamId": "",
-      "id": "honor-7b762e56c45f"
+      "id": "honor-525003932abe"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34213,19 +34238,21 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "台美聯隊",
       "honorType": "player",
       "note": "八強：台美聯隊 vs 台灣國中小思辨聯隊",
+      "period": 1,
       "teamId": "p108",
-      "id": "honor-fad044f6fa80"
+      "id": "honor-f0ab2709f1aa"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "honorName": "單場最佳辯士",
-      "recipient": "黃芢祥",
+      "recipient": "黃芢翔",
       "team": "",
       "honorType": "player",
       "note": "八強：北市大同 vs 我有點想哭",
+      "period": 1,
       "teamId": "",
-      "id": "honor-1a0459f30513"
+      "id": "honor-94cead931aa3"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34235,8 +34262,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "內湖高中",
       "honorType": "player",
       "note": "四強：小果仁辯論隊 vs 內湖高中",
+      "period": 2,
       "teamId": "s014",
-      "id": "honor-96b5e57a3952"
+      "id": "honor-8a04eeee86fe"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -34246,8 +34274,9 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "台美聯隊",
       "honorType": "player",
       "note": "四強：台美聯隊 vs 我有點想哭",
+      "period": 2,
       "teamId": "p108",
-      "id": "honor-1b994106b1cb"
+      "id": "honor-03ea8b8f9c17"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",

@@ -127,7 +127,7 @@ def parse_rows(rows, source_name, default_competition=""):
                 warn(f"略過 {source_name} 第 {line_number} 列：榮譽缺少盃賽、名稱或獲獎者")
                 continue
             team = clean(row.get("所屬學校"))
-            honors.append({
+            honor = {
                 "competitionName": competition,
                 "matchDate": normalize_date(row.get("日期")),
                 "honorName": honor_name,
@@ -135,7 +135,11 @@ def parse_rows(rows, source_name, default_competition=""):
                 "team": team,
                 "honorType": normalize_honor_type(row.get("榮譽類型"), team),
                 "note": clean(row.get("備註")),
-            })
+            }
+            period = number(row.get("時段"))
+            if period:
+                honor["period"] = period
+            honors.append(honor)
     return records, honors, topics
 
 

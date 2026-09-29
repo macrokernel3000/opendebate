@@ -422,22 +422,31 @@ function renderEventFinder() {
 function renderEvent(name, target = els.eventDetail) {
   const event = events.find((item) => item.name === name);
   if (!event) return;
-  const matchNoteKey = (value) => String(value || "").split(/[；;]/, 1)[0].replace(/\s+/g, "");
   const singleBestFor = (match) => {
     const teamNames = Object.values(match.teams || {});
-    const noteKey = matchNoteKey(match.note);
     return unique(event.honors.filter((honor) => {
       if (!isSingleMatchBest(honor) || honor.matchDate !== match.matchDate) return false;
+      if (honor.period && Number(honor.period) !== Number(match.period)) return false;
       if (honor.team && !teamNames.includes(honor.team)) return false;
-      if (!honor.team && honor.note) {
+      if (honor.note) {
         const keyedNote = normalize(honor.note);
-        if (!teamNames.every((team) => keyedNote.includes(normalize(team)))) return false;
-        const matchingRecords = event.records.filter((record) => record.matchDate === honor.matchDate && teamNames.every((team) => Object.values(record.teams || {}).includes(team)));
-        if (matchingRecords.length !== 1 || matchingRecords[0] !== match) return false;
-      } else if (!teamNames.includes(honor.team)) return false;
-      if (honor.note) return teamNames.every((team) => normalize(honor.note).includes(normalize(team))) || (noteKey && matchNoteKey(honor.note) === noteKey);
-      const sameDayTeamMatches = event.records.filter((record) => record.matchDate === honor.matchDate && Object.values(record.teams || {}).includes(honor.team));
-      return sameDayTeamMatches.length === 1 && sameDayTeamMatches[0] === match;
+        if (teamNames.every((team) => keyedNote.includes(normalize(team)))) {
+          const pairMatches = event.records.filter((record) => {
+            if (record.matchDate !== honor.matchDate) return false;
+            if (honor.period && Number(record.period) !== Number(honor.period)) return false;
+            return teamNames.every((team) => Object.values(record.teams || {}).includes(team));
+          });
+          return pairMatches.length === 1 && pairMatches[0] === match;
+        }
+        if (!match.note || !keyedNote.includes(normalize(match.note))) return false;
+      }
+      if (!honor.team) return false;
+      const candidates = event.records.filter((record) => {
+        if (record.matchDate !== honor.matchDate) return false;
+        if (honor.period && Number(record.period) !== Number(honor.period)) return false;
+        return Object.values(record.teams || {}).includes(honor.team);
+      });
+      return candidates.length === 1 && candidates[0] === match;
     }).map((honor) => honor.recipient));
   };
   const grouped = groupByDate([...event.records].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(a.period) - Number(b.period) || Number(a.venue) - Number(b.venue)));
