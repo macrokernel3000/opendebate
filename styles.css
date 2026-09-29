@@ -101,6 +101,8 @@ button { color: inherit; }
 .leaderboard-panel.coral { border-top-color: var(--coral); }
 .leaderboard-panel h3 { margin: 0 0 12px; font-size: 20px; }
 .olympic-panel { margin-bottom: 18px; }
+.mobile-honor-ranking { display: none; }
+.mobile-honor-filter { display: none; }
 .olympic-filters { display: flex; flex-wrap: wrap; gap: 7px; margin: 0 0 14px; }
 .olympic-filter { display: inline-flex; min-height: 36px; align-items: center; gap: 6px; border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; background: white; color: var(--ink); font-size: 12px; font-weight: 800; cursor: pointer; }
 .olympic-filter .trophy-medal { width: 22px; height: 22px; border-radius: 7px; font-size: 10px; }
@@ -591,12 +593,22 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #homeView > .leaderboard-band .leaderboard-panel { min-width: 0; padding: 10px; border-top-width: 4px; border-radius: 13px; box-shadow: 0 3px 12px rgba(23,33,29,.07); }
   #homeView > .leaderboard-band .olympic-panel { margin: 0 12px 12px; padding: 12px; }
   #homeView > .leaderboard-band .olympic-panel h3 { margin-bottom: 9px; font-size: 16px; }
-  #homeView > .leaderboard-band .olympic-filters { flex-wrap: nowrap; margin-right: -3px; padding: 0 3px 5px; overflow-x: auto; }
-  #homeView > .leaderboard-band .olympic-filter { min-height: 32px; flex: 0 0 auto; padding: 3px 9px; font-size: 11px; }
-  #homeView > .leaderboard-band .olympic-table { min-width: 680px; font-size: 11px; }
-  #homeView > .leaderboard-band .olympic-table th, #homeView > .leaderboard-band .olympic-table td { height: 39px; padding: 5px 7px; }
-  #homeView > .leaderboard-band .olympic-table .school-column { min-width: 120px; }
-  #homeView > .leaderboard-band .medal-cell .trophy-medal { width: 19px; height: 19px; margin-right: 2px; }
+  #homeView > .leaderboard-band .olympic-filters { display: none; }
+  #homeView > .leaderboard-band .mobile-honor-filter { display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; gap: 9px; margin-bottom: 7px; color: var(--muted); font-size: 11px; font-weight: 800; }
+  #homeView > .leaderboard-band .mobile-honor-filter select { width: 100%; min-height: 36px; border: 1px solid var(--line); border-radius: 10px; padding: 0 10px; background: #fff; color: var(--ink); font-size: 12px; font-weight: 750; }
+  #homeView > .leaderboard-band .olympic-table-wrap { display: none; }
+  #homeView > .leaderboard-band .mobile-honor-ranking { display: grid; gap: 0; margin: 0; padding: 0; list-style: none; }
+  #homeView > .leaderboard-band .mobile-honor-ranking li { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-height: 38px; border-bottom: 1px solid var(--line); }
+  #homeView > .leaderboard-band .mobile-honor-ranking li:last-child { border-bottom: 0; }
+  #homeView > .leaderboard-band .mobile-honor-rank { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--soft); font-size: 10px; font-weight: 850; }
+  #homeView > .leaderboard-band .mobile-honor-ranking li:first-child .mobile-honor-rank { background: var(--yellow); }
+  #homeView > .leaderboard-band .mobile-honor-ranking strong { overflow: hidden; font-size: 12px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
+  #homeView > .leaderboard-band .mobile-honor-values { display: flex; min-width: 34px; align-items: center; justify-content: flex-end; gap: 6px; color: var(--green-dark); }
+  #homeView > .leaderboard-band .mobile-award-value { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 850; }
+  #homeView > .leaderboard-band .mobile-award-value .trophy-medal { display: inline-grid; width: 21px; height: 21px; place-items: center; border-radius: 7px; font-size: 9px; font-style: normal; }
+  #homeView > .leaderboard-band .mobile-total-value { font-size: 13px; font-weight: 900; }
+  #homeView > .leaderboard-band .mobile-total-value small { margin-left: 2px; color: var(--muted); font-size: 9px; }
+  #homeView > .leaderboard-band .mobile-honor-empty { display: block; min-height: 36px; padding: 10px 0; color: var(--muted); font-size: 12px; text-align: center; }
   #homeView > .leaderboard-band .leaderboard-scroll { grid-auto-columns: minmax(82vw, 82vw); }
   #homeView > .leaderboard-band .leaderboard-panel h3 { margin-bottom: 4px; font-size: 12px; line-height: 1.25; }
   #homeView > .leaderboard-band .ranking-list li { grid-template-columns: 18px minmax(0,1fr) auto; gap: 4px; min-height: 32px; }
@@ -656,7 +668,6 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .leaderboard-scroll { width: calc(100vw - 12px); margin-right: calc((100vw - min(100% - 24px, 1180px)) / -2); grid-template-columns: repeat(3, minmax(82vw, 82vw)); gap: 12px; padding: 4px 18vw 24px 0; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; overscroll-behavior-inline: contain; scrollbar-width: thin; scrollbar-color: var(--coral) transparent; }
   .leaderboard-panel { scroll-snap-align: start; }
   .olympic-panel { margin-inline: 0; padding: 14px; }
-  .olympic-table { min-width: 680px; }
   .entity-grid { grid-template-columns: 1fr; }
   .overview-toolbar { display: grid; align-items: start; }
   .overview-filter { width: 100%; }

@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260929131602" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260929132417" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -156,6 +156,7 @@
               <button type="button" class="olympic-filter" data-honor-filter="fullCourse" aria-pressed="false">全程選手榮譽</button>
               <button type="button" class="olympic-filter" data-honor-filter="other" aria-pressed="false">其他</button>
             </div>
+            <label class="mobile-honor-filter"><span>榮譽類別</span><select id="mobileHonorFilter"><option value="all">全部榮譽</option><option value="gold">冠軍</option><option value="silver">亞軍</option><option value="bronze">季軍</option><option value="white">殿軍</option><option value="fullCourse">全程選手榮譽</option><option value="other">其他</option></select></label>
             <div class="olympic-table-wrap" tabindex="0" aria-label="榮譽榜，可左右捲動">
               <table class="olympic-table">
                 <thead><tr>
@@ -171,6 +172,7 @@
                 <tbody id="schoolLeaderboard"></tbody>
               </table>
             </div>
+            <ol id="mobileHonorRanking" class="mobile-honor-ranking" aria-label="榮譽排行榜"></ol>
           </article>
           <div class="leaderboard-scroll">
             <article class="leaderboard-panel teal">
@@ -393,6 +395,6 @@
   <script src="js/interactions.js?v=20260929125150" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20260929125150" data-versioned-asset></script>
   <script src="js/team-records.js?v=20260929125150" data-versioned-asset></script>
-  <script src="app.js?v=20260929131602" data-versioned-asset></script>
+  <script src="app.js?v=20260929132417" data-versioned-asset></script>
 </body>
 </html>
