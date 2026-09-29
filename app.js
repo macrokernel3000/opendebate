@@ -7,6 +7,9 @@ let events = [];
 let selectedEntityId = "";
 let selectedOverviewEntityId = "";
 let honorRange = "recent";
+let honorCategoryFilter = "all";
+const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, games: -1, wins: -1 };
+const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "games", "wins"];
 
 const els = {
   homeBrand: document.querySelector("#homeBrand"),
@@ -379,23 +382,67 @@ function renderLeaderboards() {
   const isInRange = (item) => honorRange === "all" || recentYears.has(eventYears.get(item.competitionName) || (item.matchDate || "").slice(0, 4));
   const visibleHonors = honors.filter(isInRange);
   const visibleRecords = records.filter(isInRange);
-  const schoolAwards = countBy(visibleHonors, (honor) => schoolIds.has(honor.teamId) ? honor.teamId : "").slice(0, 10);
-  const schoolGames = countBy(visibleRecords.flatMap((record) => Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))), (id) => id).slice(0, 10);
+  const rankByHonor = (honor) => /(?:^|組)冠軍$/.test(honor.honorName?.trim() || "") ? "gold"
+    : /(?:^|組)亞軍$/.test(honor.honorName?.trim() || "") ? "silver"
+      : /(?:^|組)季軍$/.test(honor.honorName?.trim() || "") ? "bronze"
+        : /(?:^|組)殿軍$/.test(honor.honorName?.trim() || "") ? "white" : "";
+  const isCoursePlayerHonor = (honor) => isFullCourseBest(honor) || isFullCourseExcellent(honor);
+  const schoolRows = new Map([...schoolIds].map((id) => [id, { id, gold: 0, silver: 0, bronze: 0, white: 0, fullCourse: 0, fullBest: 0, fullExcellent: 0, other: 0, singleBest: 0, otherAwards: 0, games: 0, wins: 0 }]));
+  visibleHonors.forEach((honor) => {
+    const row = schoolRows.get(honor.teamId);
+    if (!row) return;
+    const rank = rankByHonor(honor);
+    if (rank) row[rank] += 1;
+    else if (honor.honorType === "player" && isCoursePlayerHonor(honor)) {
+      row.fullCourse += 1;
+      if (isFullCourseBest(honor)) row.fullBest += 1;
+      else row.fullExcellent += 1;
+    } else {
+      row.other += 1;
+      if (honor.honorType === "player" && isSingleMatchBest(honor)) row.singleBest += 1;
+      else row.otherAwards += 1;
+    }
+  });
+  const appearanceIds = visibleRecords.flatMap((record) => unique(Object.values(record.teamIds || {}).filter((id) => schoolIds.has(id))));
+  appearanceIds.forEach((id) => { schoolRows.get(id).games += 1; });
   const winIds = visibleRecords.map((record) => {
     const winnerId = store.entityForName(record.winner)?.code;
     if (schoolIds.has(winnerId)) return winnerId;
-    if (record.winner) return "";
+    if (record.winner === "正方勝") return schoolIds.has(record.teamIds?.affirmative) ? record.teamIds.affirmative : "";
+    if (record.winner === "反方勝") return schoolIds.has(record.teamIds?.negative) ? record.teamIds.negative : "";
     const affirmative = Number(record.scores?.affirmative) || 0;
     const negative = Number(record.scores?.negative) || 0;
     if (affirmative === negative) return "";
     const scoreWinner = affirmative > negative ? record.teamIds?.affirmative : record.teamIds?.negative;
     return schoolIds.has(scoreWinner) ? scoreWinner : "";
   });
-  const schoolWins = countBy(winIds, (id) => id).slice(0, 10);
-  const rows = (items, label, unit) => items.map(([id, count]) => `<li><div><strong>${escapeHtml(store.entityName(id, id))}</strong><span>${label}</span></div><span class="rank-count">${count} ${unit}</span></li>`).join("");
-  els.schoolLeaderboard.innerHTML = rows(schoolAwards, "公開團體與選手榮譽", "項");
-  els.gamesLeaderboard.innerHTML = rows(schoolGames, "已收錄公開賽果", "場");
-  els.winsLeaderboard.innerHTML = rows(schoolWins, "已收錄勝場", "勝");
+  winIds.forEach((id) => { if (id && schoolRows.has(id)) schoolRows.get(id).wins += 1; });
+  const allRows = [...schoolRows.values()];
+  const rowHasAwards = (row) => row.gold + row.silver + row.bronze + row.white + row.fullCourse + row.other > 0;
+  const rowHasCategory = (row) => honorCategoryFilter === "all" ? rowHasAwards(row) : row[honorCategoryFilter] > 0;
+  const orderedRows = allRows.filter(rowHasCategory).sort((a, b) => {
+    for (const key of leaderboardSortPriority) {
+      const difference = (a[key] - b[key]) * leaderboardSortDirections[key];
+      if (difference) return difference;
+    }
+    return store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant");
+  });
+  const medalLabel = (key) => ({ gold: "冠", silver: "亞", bronze: "季", white: "殿" }[key]);
+  const medalCell = (row, key) => `<td class="medal-cell"><span class="trophy-medal ${key}">${medalLabel(key)}</span><strong>${row[key]}</strong></td>`;
+  const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
+  const topRows = orderedRows.slice(0, 10);
+  els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${escapeHtml(store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}<td>${row.games}</td><td>${row.wins}</td></tr>`).join("") || '<tr><td class="olympic-empty" colspan="10">目前沒有符合條件的榮譽紀錄。</td></tr>';
+  document.querySelectorAll("[data-rank-sort]").forEach((button) => {
+    const key = button.dataset.rankSort;
+    const direction = leaderboardSortDirections[key];
+    const marker = direction < 0 ? "↓" : "↑";
+    const label = button.textContent.replace(/[↓↑]/g, "").trim();
+    button.innerHTML = `${escapeHtml(label)} <span aria-hidden="true">${marker}</span>`;
+    button.setAttribute("aria-label", `${label}排序，${direction < 0 ? "降冪" : "升冪"}`);
+  });
+  const rows = (key, unit) => allRows.filter((row) => row[key] > 0).sort((a, b) => b[key] - a[key] || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10).map((row, index) => `<li><div><strong>${escapeHtml(store.entityName(row.id, row.id))}</strong></div><span class="rank-count">${index + 1} · ${row[key]} ${unit}</span></li>`).join("");
+  els.gamesLeaderboard.innerHTML = rows("games", "場");
+  els.winsLeaderboard.innerHTML = rows("wins", "勝");
   const period = honorRange === "all" ? "全年度" : "近年度";
   const title = `${period}榮譽榜`;
   if (els.honorLeaderboardTitle) els.honorLeaderboardTitle.textContent = title;
@@ -728,6 +775,20 @@ els.honorRangeToggle?.addEventListener("click", () => {
   honorRange = honorRange === "all" ? "recent" : "all";
   renderLeaderboards();
 });
+document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addEventListener("click", () => {
+  honorCategoryFilter = button.dataset.honorFilter;
+  document.querySelectorAll("[data-honor-filter]").forEach((item) => {
+    const active = item === button;
+    item.classList.toggle("is-active", active);
+    item.setAttribute("aria-pressed", String(active));
+  });
+  renderLeaderboards();
+}));
+document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEventListener("click", () => {
+  const key = button.dataset.rankSort;
+  leaderboardSortDirections[key] *= -1;
+  renderLeaderboards();
+}));
 
 
 function renderAll() {

@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260929125150" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260929130319" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -145,11 +145,35 @@
             <p class="section-note">依目前已收錄資料與積分歸戶統計</p>
           </div>
           <div class="leaderboard-controls"><span class="leaderboard-range-legend"><i aria-hidden="true"></i> 綠色：近兩個年度　<span aria-hidden="true">·</span>　金色：全部年度</span><button id="honorRangeToggle" class="honor-range-toggle" type="button" aria-pressed="false">目前：近年度　切換全年</button></div>
-          <div class="leaderboard-scroll" aria-label="學校排行榜，可左右滑動">
-            <article class="leaderboard-panel">
-              <h3><span aria-hidden="true">🏆</span> <span id="honorLeaderboardTitle">近年度榮譽榜</span></h3>
-              <ol id="schoolLeaderboard" class="ranking-list"></ol>
-            </article>
+          <article class="leaderboard-panel olympic-panel">
+            <h3><span id="honorLeaderboardTitle">近年度榮譽榜</span></h3>
+            <div class="olympic-filters" role="group" aria-label="榮譽類別篩選">
+              <button type="button" class="olympic-filter is-active" data-honor-filter="all" aria-pressed="true">全部</button>
+              <button type="button" class="olympic-filter" data-honor-filter="gold" aria-pressed="false"><span class="trophy-medal gold">冠</span>冠軍</button>
+              <button type="button" class="olympic-filter" data-honor-filter="silver" aria-pressed="false"><span class="trophy-medal silver">亞</span>亞軍</button>
+              <button type="button" class="olympic-filter" data-honor-filter="bronze" aria-pressed="false"><span class="trophy-medal bronze">季</span>季軍</button>
+              <button type="button" class="olympic-filter" data-honor-filter="white" aria-pressed="false"><span class="trophy-medal white">殿</span>殿軍</button>
+              <button type="button" class="olympic-filter" data-honor-filter="fullCourse" aria-pressed="false">全程選手榮譽</button>
+              <button type="button" class="olympic-filter" data-honor-filter="other" aria-pressed="false">其他</button>
+            </div>
+            <div class="olympic-table-wrap" tabindex="0" aria-label="榮譽榜，可左右捲動">
+              <table class="olympic-table">
+                <thead><tr>
+                  <th scope="col">排名</th><th scope="col" class="school-column">學校</th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="gold" aria-label="冠軍數排序，降冪">冠 <span aria-hidden="true">↓</span></button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="silver" aria-label="亞軍數排序，降冪">亞 <span aria-hidden="true">↓</span></button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="bronze" aria-label="季軍數排序，降冪">季 <span aria-hidden="true">↓</span></button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="white" aria-label="殿軍數排序，降冪">殿 <span aria-hidden="true">↓</span></button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="fullCourse" aria-label="全程選手榮譽數排序，降冪">全程</button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="other" aria-label="其他榮譽數排序，降冪">其他</button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="games" aria-label="參賽場次排序，降冪">場次</button></th>
+                  <th scope="col"><button class="medal-sort" type="button" data-rank-sort="wins" aria-label="勝場排序，降冪">勝場</button></th>
+                </tr></thead>
+                <tbody id="schoolLeaderboard"></tbody>
+              </table>
+            </div>
+          </article>
+          <div class="leaderboard-scroll">
             <article class="leaderboard-panel teal">
               <h3><span aria-hidden="true">📋</span> <span id="gamesLeaderboardTitle">近年度參賽場次</span></h3>
               <ol id="gamesLeaderboard" class="ranking-list"></ol>
@@ -370,6 +394,6 @@
   <script src="js/interactions.js?v=20260929125150" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20260929125150" data-versioned-asset></script>
   <script src="js/team-records.js?v=20260929125150" data-versioned-asset></script>
-  <script src="app.js?v=20260929125150" data-versioned-asset></script>
+  <script src="app.js?v=20260929130319" data-versioned-asset></script>
 </body>
 </html>
