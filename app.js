@@ -29,6 +29,7 @@ const els = {
   mobileMatchCount: document.querySelector("#mobileMatchCount"),
   mobileUpcomingEvents: document.querySelector("#mobileUpcomingEvents"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
+  mobileHonorRanking: document.querySelector("#mobileHonorRanking"),
   gamesLeaderboard: document.querySelector("#gamesLeaderboard"),
   winsLeaderboard: document.querySelector("#winsLeaderboard"),
   honorRangeToggle: document.querySelector("#honorRangeToggle"),
