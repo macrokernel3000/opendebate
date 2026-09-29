@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-29T10:52:24",
+  "generatedAt": "2026-09-29T11:13:23",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3217,7 +3217,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-23",
       "period": 1,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "康橋國際學校",
         "negative": "彰化高中"
@@ -3232,17 +3232,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依兩場四強賽使用1、2號場推定",
       "teamIds": {
         "affirmative": "s049",
         "negative": "s056"
       },
-      "id": "match-e5106cdbaf12"
+      "id": "match-944c21c2a532"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-23",
       "period": 1,
-      "venue": "",
+      "venue": 2,
       "teams": {
         "affirmative": "高雄女中",
         "negative": "南大附中"
@@ -3257,17 +3258,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依兩場四強賽使用1、2號場推定",
       "teamIds": {
         "affirmative": "s153",
         "negative": "s020"
       },
-      "id": "match-7f661ae805b1"
+      "id": "match-c4d8cb6a9ad9"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "2026-08-23",
       "period": 2,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "南大附中",
         "negative": "康橋國際學校"
@@ -3282,11 +3284,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依冠亞賽使用1號場推定",
       "teamIds": {
         "affirmative": "s020",
         "negative": "s049"
       },
-      "id": "match-44dda79b8464"
+      "id": "match-858708e4546c"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3307,11 +3310,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "甲組",
       "teamIds": {
         "affirmative": "s121",
         "negative": "s133"
       },
-      "id": "match-542861ec0b81"
+      "id": "match-73d726ef316b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3332,11 +3336,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "甲組",
       "teamIds": {
         "affirmative": "s133",
         "negative": "s121"
       },
-      "id": "match-c80a275fee02"
+      "id": "match-ab32b1c06aa1"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3357,11 +3362,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "乙組",
       "teamIds": {
         "affirmative": "s001",
         "negative": "s041"
       },
-      "id": "match-e267607df274"
+      "id": "match-dc25fed8583f"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3382,11 +3388,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "乙組",
       "teamIds": {
         "affirmative": "s041",
         "negative": "s001"
       },
-      "id": "match-df0b38663cee"
+      "id": "match-09eed7745d75"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3407,11 +3414,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "丙組",
       "teamIds": {
         "affirmative": "s033",
         "negative": "s157"
       },
-      "id": "match-30114daa9fd0"
+      "id": "match-0e89da85c933"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3432,11 +3440,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "丙組",
       "teamIds": {
         "affirmative": "s157",
         "negative": "s033"
       },
-      "id": "match-a73cf6359464"
+      "id": "match-7d3928851aec"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3457,11 +3466,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "丁組",
       "teamIds": {
         "affirmative": "s047",
         "negative": "s146"
       },
-      "id": "match-fb1ed82eea43"
+      "id": "match-a7d51f8889e1"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3482,11 +3492,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "丁組",
       "teamIds": {
         "affirmative": "s146",
         "negative": "s047"
       },
-      "id": "match-0354c48626b9"
+      "id": "match-e0a9d8e99a3c"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3507,11 +3518,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "戊組",
       "teamIds": {
         "affirmative": "s168",
         "negative": "s006"
       },
-      "id": "match-dad41925ae32"
+      "id": "match-e432e9bef247"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3532,11 +3544,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "戊組",
       "teamIds": {
         "affirmative": "s006",
         "negative": "s168"
       },
-      "id": "match-40d557108936"
+      "id": "match-be2a3c70cf1e"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3557,11 +3570,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "己組",
       "teamIds": {
         "affirmative": "s127",
         "negative": "s061"
       },
-      "id": "match-6ca3081bab4a"
+      "id": "match-e6af429290cf"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3582,11 +3596,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "己組",
       "teamIds": {
         "affirmative": "s061",
         "negative": "s127"
       },
-      "id": "match-35a42887a035"
+      "id": "match-06b2a8962d91"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3607,11 +3622,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "庚組",
       "teamIds": {
         "affirmative": "s002",
         "negative": "s015"
       },
-      "id": "match-c8ce3a6e551f"
+      "id": "match-edccc603370e"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3632,11 +3648,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "庚組",
       "teamIds": {
         "affirmative": "s015",
         "negative": "s002"
       },
-      "id": "match-0ba68d60bcc1"
+      "id": "match-1d328b48c2e5"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3657,11 +3674,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "辛組",
       "teamIds": {
         "affirmative": "s126",
         "negative": "s088"
       },
-      "id": "match-f7dc0311fbac"
+      "id": "match-1956ee074f64"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -3682,11 +3700,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "辛組",
       "teamIds": {
         "affirmative": "s088",
         "negative": "s126"
       },
-      "id": "match-42f656ee2a18"
+      "id": "match-2a693e5fdf48"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -9467,7 +9486,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "matchDate": "2026-07-30",
       "period": 3,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "高雄中學",
         "negative": "和平高中A"
@@ -9482,11 +9501,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依唯一冠亞賽使用1號場推定",
       "teamIds": {
         "affirmative": "s152",
         "negative": "s160"
       },
-      "id": "match-edb802aaad84"
+      "id": "match-444ad1eeb4c8"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -13242,7 +13262,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
       "matchDate": "2026-08-15",
       "period": 2,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "世宣67",
         "negative": "南山高中"
@@ -13257,11 +13277,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依冠亞賽使用1號場推定",
       "teamIds": {
         "affirmative": "p119",
         "negative": "s023"
       },
-      "id": "match-5a5c4a5f32c4"
+      "id": "match-2269f9cc0529"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -16932,11 +16953,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "唐老鴨組",
       "teamIds": {
         "affirmative": "s161",
         "negative": "s109"
       },
-      "id": "match-37381ba45e54"
+      "id": "match-465200574ed6"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -16957,11 +16979,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "海綿寶寶組",
       "teamIds": {
         "affirmative": "s086",
         "negative": "s090"
       },
-      "id": "match-28a696ad5672"
+      "id": "match-6fa03bee3f6a"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -16982,11 +17005,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "豆豆先生組",
       "teamIds": {
         "affirmative": "s113",
         "negative": "s067"
       },
-      "id": "match-6b82d2fc19b2"
+      "id": "match-573958dd07c9"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17007,11 +17031,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "七龍珠組",
       "teamIds": {
         "affirmative": "s044",
         "negative": "s085"
       },
-      "id": "match-d17298e6af70"
+      "id": "match-f0433c6e56b1"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17032,11 +17057,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "航海王組",
       "teamIds": {
         "affirmative": "s071",
         "negative": "s005"
       },
-      "id": "match-ff4d18e686f4"
+      "id": "match-ac996c31e494"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17057,11 +17083,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "哆啦A夢組",
       "teamIds": {
         "affirmative": "s105",
         "negative": "s120"
       },
-      "id": "match-b4455fb17e8b"
+      "id": "match-307e5b91feab"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17082,11 +17109,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "蠟筆小新組",
       "teamIds": {
         "affirmative": "s122",
         "negative": "s070"
       },
-      "id": "match-ead653a91544"
+      "id": "match-6fc97a290877"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17107,11 +17135,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "米奇組",
       "teamIds": {
         "affirmative": "s160",
         "negative": "s054"
       },
-      "id": "match-2e1fe53b02b2"
+      "id": "match-578db619662b"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17132,11 +17161,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "唐老鴨組",
       "teamIds": {
         "affirmative": "s109",
         "negative": "s158"
       },
-      "id": "match-e83d96995320"
+      "id": "match-18aca6ce85cc"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17157,11 +17187,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "海綿寶寶組",
       "teamIds": {
         "affirmative": "s090",
         "negative": "s050"
       },
-      "id": "match-10e381132b37"
+      "id": "match-f99296cb6b51"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17182,11 +17213,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "豆豆先生組",
       "teamIds": {
         "affirmative": "s067",
         "negative": "s100"
       },
-      "id": "match-9b55f2f0256a"
+      "id": "match-e35123575018"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17207,11 +17239,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "七龍珠組",
       "teamIds": {
         "affirmative": "s098",
         "negative": "s044"
       },
-      "id": "match-090092cedf3d"
+      "id": "match-6f9bbb28166d"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17232,11 +17265,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "航海王組",
       "teamIds": {
         "affirmative": "s057",
         "negative": "s071"
       },
-      "id": "match-4a0c42948e6c"
+      "id": "match-af6ab5e48ca3"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17257,11 +17291,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "哆啦A夢組",
       "teamIds": {
         "affirmative": "s120",
         "negative": "s050"
       },
-      "id": "match-36993bb6a2c3"
+      "id": "match-ca1212700118"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17282,11 +17317,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "蠟筆小新組",
       "teamIds": {
         "affirmative": "s119",
         "negative": "s122"
       },
-      "id": "match-0b257bbfa54f"
+      "id": "match-32d94f5d9b64"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17307,11 +17343,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "米奇組",
       "teamIds": {
         "affirmative": "s054",
         "negative": "s160"
       },
-      "id": "match-061ec49c7ea0"
+      "id": "match-e5c7e827e160"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17332,11 +17369,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "唐老鴨組",
       "teamIds": {
         "affirmative": "s158",
         "negative": "s161"
       },
-      "id": "match-a37ba684ef76"
+      "id": "match-90578a87710f"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17357,11 +17395,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "海綿寶寶組",
       "teamIds": {
         "affirmative": "s050",
         "negative": "s086"
       },
-      "id": "match-c4c38fe2ccc7"
+      "id": "match-2ad221063bc8"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17382,11 +17421,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "豆豆先生組",
       "teamIds": {
         "affirmative": "s100",
         "negative": "s113"
       },
-      "id": "match-f6469d404794"
+      "id": "match-8100c7d48955"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17407,11 +17447,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "七龍珠組",
       "teamIds": {
         "affirmative": "s085",
         "negative": "s098"
       },
-      "id": "match-836f3a6c05d4"
+      "id": "match-3a7f3f3bb1b5"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17432,11 +17473,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "航海王組",
       "teamIds": {
         "affirmative": "s005",
         "negative": "s057"
       },
-      "id": "match-b0fac9d92876"
+      "id": "match-1347dac3e201"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17457,11 +17499,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "哆啦A夢組",
       "teamIds": {
         "affirmative": "s050",
         "negative": "s105"
       },
-      "id": "match-d653e5f108f6"
+      "id": "match-93420b22832a"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17482,11 +17525,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "蠟筆小新組",
       "teamIds": {
         "affirmative": "s070",
         "negative": "s119"
       },
-      "id": "match-ebe6f450ebd2"
+      "id": "match-5fd9d16d66e2"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17507,11 +17551,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "迪士尼經典組",
       "teamIds": {
         "affirmative": "s160",
         "negative": "s158"
       },
-      "id": "match-02a2d01efcbd"
+      "id": "match-703b5dfe2664"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17532,11 +17577,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "歡樂搞笑組",
       "teamIds": {
         "affirmative": "s050",
         "negative": "s113"
       },
-      "id": "match-eb6ec321496e"
+      "id": "match-98ad0d791bd0"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17557,11 +17603,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "熱血冒險組",
       "teamIds": {
         "affirmative": "s085",
         "negative": "s005"
       },
-      "id": "match-3a608129e7b8"
+      "id": "match-b7c741d50864"
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
@@ -17582,11 +17629,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "童年回憶組",
       "teamIds": {
         "affirmative": "s120",
         "negative": "s122"
       },
-      "id": "match-6ea7b43755ab"
+      "id": "match-c15a0c23e617"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17607,11 +17655,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "寶劍組",
       "teamIds": {
         "affirmative": "s093",
         "negative": "s054"
       },
-      "id": "match-36221e583d43"
+      "id": "match-c3aa53a5b29c"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17632,11 +17681,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "符咒學組",
       "teamIds": {
         "affirmative": "s096",
         "negative": "s103"
       },
-      "id": "match-f528ccb583ed"
+      "id": "match-c1f0ee75cfed"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17657,11 +17707,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "冠冕組",
       "teamIds": {
         "affirmative": "s023",
         "negative": "s003"
       },
-      "id": "match-54573901a5b2"
+      "id": "match-6367214c41b9"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17682,11 +17733,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藝術組",
       "teamIds": {
         "affirmative": "s119",
         "negative": "s113"
       },
-      "id": "match-ee0d94c0d396"
+      "id": "match-c3e93dd58f8c"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17707,11 +17759,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "密室組",
       "teamIds": {
         "affirmative": "s070",
         "negative": "s085"
       },
-      "id": "match-2576239db441"
+      "id": "match-7cac80a17e11"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17732,11 +17785,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "黑魔法組",
       "teamIds": {
         "affirmative": "s068",
         "negative": "s017"
       },
-      "id": "match-a9d0c9613fa9"
+      "id": "match-153fcd5b8412"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17757,11 +17811,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "金盃組",
       "teamIds": {
         "affirmative": "s098",
         "negative": "s024"
       },
-      "id": "match-a14b124315ad"
+      "id": "match-f3ef705ad84f"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17782,11 +17837,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藥草學組",
       "teamIds": {
         "affirmative": "s160",
         "negative": "s013"
       },
-      "id": "match-b914ce77dbcf"
+      "id": "match-647418569fe3"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17807,11 +17863,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "冠冕組",
       "teamIds": {
         "affirmative": "s003",
         "negative": "s050"
       },
-      "id": "match-4a80351c85e5"
+      "id": "match-a9617d57a7f4"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17832,11 +17889,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藝術組",
       "teamIds": {
         "affirmative": "s091",
         "negative": "s119"
       },
-      "id": "match-13b88bde6eee"
+      "id": "match-451a7dab136c"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17857,11 +17915,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "寶劍組",
       "teamIds": {
         "affirmative": "s044",
         "negative": "s093"
       },
-      "id": "match-e08d6a719d91"
+      "id": "match-fe323336b3ce"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17882,11 +17941,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "符咒學組",
       "teamIds": {
         "affirmative": "s103",
         "negative": "s122"
       },
-      "id": "match-1f9828321bc0"
+      "id": "match-5d2a46c7e999"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17907,11 +17967,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "金盃組",
       "teamIds": {
         "affirmative": "s131",
         "negative": "s098"
       },
-      "id": "match-9f368f7c4900"
+      "id": "match-ab55646ae01c"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17932,11 +17993,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藥草學組",
       "teamIds": {
         "affirmative": "s100",
         "negative": "s160"
       },
-      "id": "match-9557758e65ac"
+      "id": "match-8961c2608e58"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17957,11 +18019,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "密室組",
       "teamIds": {
         "affirmative": "s085",
         "negative": "s050"
       },
-      "id": "match-03c248bc6a2c"
+      "id": "match-8c26d502a70b"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -17982,11 +18045,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "黑魔法組",
       "teamIds": {
         "affirmative": "s151",
         "negative": "s068"
       },
-      "id": "match-8740efaf8a22"
+      "id": "match-ed86690d45f8"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18007,11 +18071,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "符咒學組",
       "teamIds": {
         "affirmative": "s122",
         "negative": "s096"
       },
-      "id": "match-e950373306c2"
+      "id": "match-8d14f5016a8d"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18032,11 +18097,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "寶劍組",
       "teamIds": {
         "affirmative": "s054",
         "negative": "s044"
       },
-      "id": "match-343219965ac0"
+      "id": "match-9a80d985190f"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18057,11 +18123,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藝術組",
       "teamIds": {
         "affirmative": "s113",
         "negative": "s091"
       },
-      "id": "match-130bed2e2863"
+      "id": "match-52df43767c16"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18082,11 +18149,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "冠冕組",
       "teamIds": {
         "affirmative": "s050",
         "negative": "s023"
       },
-      "id": "match-b3e5382f9eca"
+      "id": "match-890adc24a33d"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18107,11 +18175,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "黑魔法組",
       "teamIds": {
         "affirmative": "s017",
         "negative": "s151"
       },
-      "id": "match-43c9e35bfcca"
+      "id": "match-30d9672c08ef"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18132,11 +18201,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "密室組",
       "teamIds": {
         "affirmative": "s050",
         "negative": "s070"
       },
-      "id": "match-2312b434ae4f"
+      "id": "match-f4e37b848f00"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18157,11 +18227,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "藥草學組",
       "teamIds": {
         "affirmative": "s013",
         "negative": "s100"
       },
-      "id": "match-e052d7ef4dc5"
+      "id": "match-5b5bc691c0fd"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18182,11 +18253,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "金盃組",
       "teamIds": {
         "affirmative": "s024",
         "negative": "s131"
       },
-      "id": "match-40c624893aab"
+      "id": "match-3f8d0cf4046c"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18207,11 +18279,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "葛來分多組",
       "teamIds": {
         "affirmative": "s044",
         "negative": "s122"
       },
-      "id": "match-abef578b3117"
+      "id": "match-4404f94fc449"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18232,11 +18305,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "雷文克勞組",
       "teamIds": {
         "affirmative": "s023",
         "negative": "s091"
       },
-      "id": "match-54423a233719"
+      "id": "match-b34f850145fe"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18257,11 +18331,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "史萊哲林組",
       "teamIds": {
         "affirmative": "s085",
         "negative": "s068"
       },
-      "id": "match-41ce19cdc5c5"
+      "id": "match-21d698431c65"
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
@@ -18282,11 +18357,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "groupName": "赫夫帕夫組",
       "teamIds": {
         "affirmative": "s098",
         "negative": "s160"
       },
-      "id": "match-96f8f20fdb96"
+      "id": "match-b349bc5d3e69"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -21416,7 +21492,7 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "Harve",
@@ -21432,16 +21508,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-1 推定",
       "teamIds": {
         "affirmative": "p126",
         "negative": "p127"
       },
-      "id": "match-35658f3378aa"
+      "id": "match-a8575ea14844"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "最佳英鎊辯論隊",
@@ -21457,16 +21534,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-1 推定",
       "teamIds": {
         "affirmative": "p128",
         "negative": "s068"
       },
-      "id": "match-8a914b3081a5"
+      "id": "match-223ecafcb0c8"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "建竹實聯隊",
@@ -21482,16 +21560,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-1 推定",
       "teamIds": {
         "affirmative": "p039",
         "negative": "p129"
       },
-      "id": "match-d408c694b7fd"
+      "id": "match-2f37c9a28f5e"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "成功口技社",
@@ -21507,16 +21586,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-1 推定",
       "teamIds": {
         "affirmative": "p130",
         "negative": "p131"
       },
-      "id": "match-2296c4713d03"
+      "id": "match-67a77439fde7"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "世宣67",
@@ -21532,16 +21612,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-2 推定",
       "teamIds": {
         "affirmative": "p119",
         "negative": "s024"
       },
-      "id": "match-2693aec695d8"
+      "id": "match-8b3e213e1008"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "竹林七賢",
@@ -21557,16 +21638,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-2 推定",
       "teamIds": {
         "affirmative": "p134",
         "negative": "s139"
       },
-      "id": "match-0cedfb66c586"
+      "id": "match-e5fb7a7c55ca"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "殘陽是香香軟軟小蛋糕",
@@ -21582,16 +21664,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-2 推定",
       "teamIds": {
         "affirmative": "p129",
         "negative": "p132"
       },
-      "id": "match-3d91ea802f54"
+      "id": "match-f292cdc72dc5"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-25",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "宮燈最佳辯士",
@@ -21607,16 +21690,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D1-2 推定",
       "teamIds": {
         "affirmative": "p135",
         "negative": "s169"
       },
-      "id": "match-79239c464a82"
+      "id": "match-6b4d03ba8472"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "大家都不想講話",
@@ -21632,16 +21716,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-1 推定",
       "teamIds": {
         "affirmative": "p132",
         "negative": "p039"
       },
-      "id": "match-fa0b6b498482"
+      "id": "match-62fac19e51cf"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "成淵高中",
@@ -21657,16 +21742,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-1 推定",
       "teamIds": {
         "affirmative": "s068",
         "negative": "p128"
       },
-      "id": "match-0f2e50a1041d"
+      "id": "match-84ca34f6f6a4"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "白烏鴉辯論隊",
@@ -21682,16 +21768,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-1 推定",
       "teamIds": {
         "affirmative": "p127",
         "negative": "s023"
       },
-      "id": "match-72370b62718d"
+      "id": "match-3751a54747ea"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 1,
       "venue": "",
       "teams": {
         "affirmative": "誤入商業帝國的長髮男",
@@ -21707,16 +21794,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-1 推定",
       "teamIds": {
         "affirmative": "p131",
         "negative": "p130"
       },
-      "id": "match-25d95aec2dc2"
+      "id": "match-302cea044b0e"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "南山高中",
@@ -21732,16 +21820,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-2 推定",
       "teamIds": {
         "affirmative": "s023",
         "negative": "p126"
       },
-      "id": "match-c42da7d9c344"
+      "id": "match-40ed86f8a03f"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "衛道中學辯論社",
@@ -21757,16 +21846,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-2 推定",
       "teamIds": {
         "affirmative": "s139",
         "negative": "p134"
       },
-      "id": "match-0429bf40f20b"
+      "id": "match-8059abdb12d0"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "南湖高中",
@@ -21782,16 +21872,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-2 推定",
       "teamIds": {
         "affirmative": "s024",
         "negative": "p119"
       },
-      "id": "match-21db8b68a776"
+      "id": "match-c8931a235fd9"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 2,
       "venue": "",
       "teams": {
         "affirmative": "澎湖一中",
@@ -21807,16 +21898,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-2 推定",
       "teamIds": {
         "affirmative": "s169",
         "negative": "p135"
       },
-      "id": "match-9bacea26d178"
+      "id": "match-51c78a52ec0e"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "白烏鴉辯論隊",
@@ -21832,16 +21924,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-3 推定",
       "teamIds": {
         "affirmative": "p127",
         "negative": "p128"
       },
-      "id": "match-43c39a971900"
+      "id": "match-095118a63130"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "陽交附中",
@@ -21857,16 +21950,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-3 推定",
       "teamIds": {
         "affirmative": "s146",
         "negative": "p119"
       },
-      "id": "match-7a344239675d"
+      "id": "match-246adf6d3282"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "成功口技社",
@@ -21882,16 +21976,17 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-3 推定",
       "teamIds": {
         "affirmative": "p130",
         "negative": "p135"
       },
-      "id": "match-10d4c5c6e055"
+      "id": "match-01718c83d34c"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-26",
-      "period": "",
+      "period": 3,
       "venue": "",
       "teams": {
         "affirmative": "竹林七賢",
@@ -21907,17 +22002,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依公告標記 D2-3 推定",
       "teamIds": {
         "affirmative": "p134",
         "negative": "p039"
       },
-      "id": "match-523fca62326c"
+      "id": "match-a285519d6995"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "period": "",
-      "venue": "",
+      "period": 1,
+      "venue": 1,
       "teams": {
         "affirmative": "白烏鴉辯論隊",
         "negative": "世宣67"
@@ -21932,17 +22028,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依同日先複賽後決賽；會場依四強分配1、2號場推定",
       "teamIds": {
         "affirmative": "p127",
         "negative": "p119"
       },
-      "id": "match-d930c2b9fd48"
+      "id": "match-48386e1f6b7a"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "period": "",
-      "venue": "",
+      "period": 1,
+      "venue": 2,
       "teams": {
         "affirmative": "成功口技社",
         "negative": "建竹實聯隊"
@@ -21957,17 +22054,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依同日先複賽後決賽；會場依四強分配1、2號場推定",
       "teamIds": {
         "affirmative": "p130",
         "negative": "p039"
       },
-      "id": "match-0418647fd1c0"
+      "id": "match-638354070b6d"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "matchDate": "2026-09-27",
-      "period": "",
-      "venue": "",
+      "period": 2,
+      "venue": 1,
       "teams": {
         "affirmative": "世宣67",
         "negative": "建竹實聯隊"
@@ -21982,11 +22080,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "時段依同日複賽後舉行決賽；會場依冠亞賽使用1號場推定",
       "teamIds": {
         "affirmative": "p119",
         "negative": "p039"
       },
-      "id": "match-3dd00250120c"
+      "id": "match-d8bc3323a41c"
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
@@ -29767,7 +29866,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "period": 2,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "小果仁辯論隊",
         "negative": "內湖高中"
@@ -29782,17 +29881,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依四強賽使用1、2號場推定",
       "teamIds": {
         "affirmative": "p112",
         "negative": "s014"
       },
-      "id": "match-da0b8cb48c3b"
+      "id": "match-7c558335e8c0"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "period": 2,
-      "venue": "",
+      "venue": 2,
       "teams": {
         "affirmative": "台美聯隊",
         "negative": "我有點想哭"
@@ -29807,17 +29907,18 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依四強賽使用1、2號場推定",
       "teamIds": {
         "affirmative": "p108",
         "negative": "s105"
       },
-      "id": "match-21bd31834694"
+      "id": "match-cd6c644c7c4a"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-02",
       "period": 3,
-      "venue": "",
+      "venue": 1,
       "teams": {
         "affirmative": "內湖高中",
         "negative": "台美聯隊"
@@ -29832,11 +29933,12 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "會場依冠亞賽使用1號場推定",
       "teamIds": {
         "affirmative": "s014",
         "negative": "p108"
       },
-      "id": "match-dbffe40ebc58"
+      "id": "match-5f3e3fefcb6e"
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
@@ -34655,8 +34757,9 @@ window.DEBATE_PUBLIC_DATA = {
       "endDate": "2026-03-08",
       "organizer": "",
       "location": "臺北市私立延平高級中學",
-      "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位；預計錄取24隊。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
+      "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
       "ageRestriction": null,
+      "brochureTeamLimit": 24,
       "teamCount": 23
     },
     "第二十二屆延平盃全國高中職辯論賽": {
@@ -34664,8 +34767,9 @@ window.DEBATE_PUBLIC_DATA = {
       "endDate": "2025-03-01",
       "organizer": "臺北市私立延平高級中學",
       "location": "臺北市私立延平高級中學",
-      "note": "簡章預計錄取24隊；賽果公告可辨識24支隊伍（延平中學A、B分開計算）。賽期為2025-02-28至2025-03-01；公告明列28場比分（2/28三時段各8場、3/1第一時段4場）。3/1第二時段準決賽及第三時段冠亞賽只有賽程、未提供比分，不推測補登。藝術組由竹科實中、板橋高中、聖心女中同勝場、評分單及架構票後，再按個人排名總和決定板橋高中晉級。簡章規定參賽資格為高中職及五專一至三年級。辯題依簡章登錄。",
+      "note": "賽果公告可辨識24支隊伍（延平中學A、B分開計算）。賽期為2025-02-28至2025-03-01；公告明列28場比分（2/28三時段各8場、3/1第一時段4場）。3/1第二時段準決賽及第三時段冠亞賽只有賽程、未提供比分，不推測補登。藝術組由竹科實中、板橋高中、聖心女中同勝場、評分單及架構票後，再按個人排名總和決定板橋高中晉級。簡章規定參賽資格為高中職及五專一至三年級。辯題依簡章登錄。",
       "ageRestriction": true,
+      "brochureTeamLimit": 24,
       "teamCount": 24
     },
     "2025「青聲說」全國高中職辯論賽": {

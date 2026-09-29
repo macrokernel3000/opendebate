@@ -106,7 +106,7 @@ def parse_rows(rows, source_name, default_competition=""):
             if not competition or not affirmative or not negative:
                 warn(f"略過 {source_name} 第 {line_number} 列：戰績缺少盃賽或隊伍名稱")
                 continue
-            records.append({
+            record = {
                 "competitionName": competition,
                 "matchDate": normalize_date(row.get("日期")),
                 "period": number(row.get("時段")),
@@ -119,7 +119,14 @@ def parse_rows(rows, source_name, default_competition=""):
                     "affirmative": split_players(row.get("正方登場選手")),
                     "negative": split_players(row.get("反方登場選手")),
                 },
-            })
+            }
+            group_name = clean(row.get("分組名稱"))
+            inference_note = clean(row.get("推定依據"))
+            if group_name:
+                record["groupName"] = group_name
+            if inference_note:
+                record["inferenceNote"] = inference_note
+            records.append(record)
         elif "榮譽" in data_type:
             honor_name = clean(row.get("榮譽名稱"))
             recipient = clean(row.get("獲獎者"))
@@ -177,8 +184,12 @@ def load_event_metadata():
         reader = csv.DictReader(source)
         if not reader.fieldnames or "盃賽" not in reader.fieldnames:
             raise SystemExit(f"{EVENT_METADATA_PATH.name} 必須包含盃賽欄位")
-        return {
-            clean(row.get("盃賽")): {
+        metadata = {}
+        for row in reader:
+            competition = clean(row.get("盃賽"))
+            if not competition:
+                continue
+            item = {
                 "startDate": normalize_date(row.get("開始日期")),
                 "endDate": normalize_date(row.get("結束日期")),
                 "organizer": clean(row.get("主辦單位")),
@@ -190,8 +201,11 @@ def load_event_metadata():
                     else None
                 ),
             }
-            for row in reader if clean(row.get("盃賽"))
-        }
+            team_limit = number(row.get("簡章滿額隊數"))
+            if team_limit:
+                item["brochureTeamLimit"] = team_limit
+            metadata[competition] = item
+        return metadata
 
 
 def cell_column(reference):

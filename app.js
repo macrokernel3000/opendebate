@@ -458,7 +458,7 @@ function renderEvent(name, target = els.eventDetail) {
         const n = Number(match.scores?.negative) || 0;
         const singleBest = singleBestFor(match);
         return `<div class="match-row">
-          <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}</span>
+          <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}${match.groupName ? `<small class="match-group-name" aria-label="循環／分組：${escapeHtml(match.groupName)}">↻ ${escapeHtml(match.groupName)}</small>` : ""}</span>
           <span class="team-name">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}</span>
           <span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>
           <span class="team-name negative">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}</span>
