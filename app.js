@@ -40,6 +40,8 @@ const els = {
   mobileHonorTitle: document.querySelector("#mobileHonorTitle"),
   eventSearch: document.querySelector("#eventSearch"),
   eventYear: document.querySelector("#eventYear"),
+  eventSortBy: document.querySelector("#eventSortBy"),
+  eventSortDirection: document.querySelector("#eventSortDirection"),
   eventFinderMeta: document.querySelector("#eventFinderMeta"),
   eventFinderResults: document.querySelector("#eventFinderResults"),
   eventDetail: document.querySelector("#eventDetail"),
@@ -51,6 +53,11 @@ const els = {
   overviewView: document.querySelector("#overviewView"),
   overviewSchoolsPanel: document.querySelector("#overviewSchoolsPanel"),
   overviewTopicsPanel: document.querySelector("#overviewTopicsPanel"),
+  overviewStatsPanel: document.querySelector("#overviewStatsPanel"),
+  overviewStatsRange: document.querySelector("#overviewStatsRange"),
+  overviewStatsMetric: document.querySelector("#overviewStatsMetric"),
+  overviewStatsMeta: document.querySelector("#overviewStatsMeta"),
+  overviewStatsChart: document.querySelector("#overviewStatsChart"),
   overviewEventCount: document.querySelector("#overviewEventCount"),
   overviewSchoolCount: document.querySelector("#overviewSchoolCount"),
   overviewTopicCount: document.querySelector("#overviewTopicCount"),
@@ -492,6 +499,90 @@ function renderLeaderboards() {
   }
 }
 
+function monthKeyFromDate(value) {
+  return /^\d{4}-\d{2}/.test(value || "") ? value.slice(0, 7) : "";
+}
+
+function addMonths(monthKey, offset) {
+  const [year, month] = monthKey.split("-").map(Number);
+  const date = new Date(year, month - 1 + offset, 1);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
+}
+
+function renderOverviewStats() {
+  if (!els.overviewStatsChart) return;
+  const eventCounts = new Map();
+  const teamsByMonth = new Map();
+  const eventMonthByName = new Map();
+  events.forEach((event) => {
+    const eventMonth = monthKeyFromDate(event.metadata?.startDate)
+      || event.dates.map(monthKeyFromDate).find(Boolean)
+      || monthKeyFromDate(event.latestDate);
+    if (eventMonth) {
+      eventMonthByName.set(event.name, eventMonth);
+      eventCounts.set(eventMonth, (eventCounts.get(eventMonth) || 0) + 1);
+    }
+    event.records.forEach((record) => {
+      const month = monthKeyFromDate(record.matchDate) || eventMonth;
+      if (!month) return;
+      if (!teamsByMonth.has(month)) teamsByMonth.set(month, new Set());
+      Object.entries(record.teams || {}).forEach(([side, teamName]) => {
+        if (!teamName) return;
+        const teamKey = record.teamIds?.[side] || normalize(teamName);
+        teamsByMonth.get(month).add(teamKey);
+      });
+    });
+  });
+  const current = new Date();
+  const currentMonth = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, "0")}`;
+  const firstRecordedMonth = [...eventMonthByName.values()].sort()[0] || currentMonth;
+  const range = els.overviewStatsRange.value;
+  const firstMonth = range === "all" ? firstRecordedMonth : addMonths(currentMonth, 1 - Number(range));
+  const months = [];
+  for (let month = firstMonth; month <= currentMonth; month = addMonths(month, 1)) months.push(month);
+  const metric = els.overviewStatsMetric.value;
+  const isTeamMetric = metric === "teams";
+  const values = months.map((month) => isTeamMetric ? (teamsByMonth.get(month)?.size || 0) : (eventCounts.get(month) || 0));
+  const unit = isTeamMetric ? "隊" : "場";
+  const metricName = isTeamMetric ? "每月參與隊伍數" : "每月賽事數";
+  const label = (month) => month.replace("-", "/");
+  const peak = Math.max(0, ...values);
+  const peakIndex = values.indexOf(peak);
+  els.overviewStatsMeta.textContent = months.length
+    ? `${label(months[0])}－${label(months.at(-1))}　·　${metricName}　·　最高 ${peak} ${unit}`
+    : "目前沒有可繪製的月份資料。";
+  if (!months.length) {
+    els.overviewStatsChart.innerHTML = '<p class="overview-stats-empty">目前沒有可呈現的統計資料。</p>';
+    return;
+  }
+
+  const width = 960;
+  const height = 350;
+  const plot = { left: 70, right: 28, top: 24, bottom: 62 };
+  const plotWidth = width - plot.left - plot.right;
+  const plotHeight = height - plot.top - plot.bottom;
+  const step = Math.max(1, Math.ceil(peak / 4));
+  const maxY = step * 4;
+  const points = values.map((value, index) => ({
+    x: months.length === 1 ? plot.left + plotWidth / 2 : plot.left + (index / (months.length - 1)) * plotWidth,
+    y: plot.top + plotHeight - (value / maxY) * plotHeight,
+    value,
+    month: months[index],
+  }));
+  const path = points.map((point, index) => `${index ? "L" : "M"}${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const grid = Array.from({ length: 5 }, (_, index) => {
+    const value = maxY - index * step;
+    const y = plot.top + (index / 4) * plotHeight;
+    return `<g class="overview-chart-tick"><line x1="${plot.left}" y1="${y}" x2="${width - plot.right}" y2="${y}" /><text x="${plot.left - 14}" y="${y + 4}" text-anchor="end">${value}</text></g>`;
+  }).join("");
+  const labelIndexes = [...new Set(Array.from({ length: Math.min(6, months.length) }, (_, index) => Math.round(index * (months.length - 1) / (Math.min(6, months.length) - 1 || 1))))];
+  const xLabels = labelIndexes.map((index) => `<text class="overview-chart-x-label" x="${points[index].x}" y="${height - 22}" text-anchor="middle">${escapeHtml(label(months[index]))}</text>`).join("");
+  const circles = points.map((point) => `<circle class="overview-chart-point" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="4"><title>${escapeHtml(label(point.month))}：${point.value} ${unit}</title></circle>`).join("");
+  const title = `${metricName}折線圖`;
+  const desc = `${label(months[0])}至${label(months.at(-1))}共${months.length}個月，最高值為${label(months[peakIndex])}的${peak}${unit}。`;
+  els.overviewStatsChart.innerHTML = `<svg class="overview-stats-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="overviewChartTitle overviewChartDesc"><title id="overviewChartTitle">${escapeHtml(title)}</title><desc id="overviewChartDesc">${escapeHtml(desc)}</desc>${grid}<line class="overview-chart-axis" x1="${plot.left}" y1="${plot.top + plotHeight}" x2="${width - plot.right}" y2="${plot.top + plotHeight}" /><path class="overview-chart-line" d="${path}" />${circles}${xLabels}</svg>`;
+}
+
 function renderEventOptions() {
   const years = unique(events.map((event) => event.latestDate.slice(0, 4))).sort((a, b) => b.localeCompare(a));
   els.eventYear.innerHTML = '<option value="">全部年份</option>' + years.map((year) => `<option value="${year}">${year} 年</option>`).join("");
@@ -507,9 +598,15 @@ function renderEventFinder() {
     return matchesYear && (!needle || normalize(`${event.name} ${topicText}`).includes(needle));
   });
   const isMobileTimeline = window.matchMedia("(max-width: 640px)").matches;
-  const visibleEvents = isMobileTimeline
-    ? [...filtered].sort((a, b) => (b.latestDate || "").localeCompare(a.latestDate || "") || a.name.localeCompare(b.name, "zh-Hant"))
-    : filtered;
+  const sortBy = els.eventSortBy?.value || "year";
+  const sortDirection = els.eventSortDirection?.value === "asc" ? 1 : -1;
+  const sortedEvents = [...filtered].sort((a, b) => {
+    const comparison = sortBy === "teams" ? a.teamCount - b.teamCount
+      : sortBy === "honors" ? a.honors.length - b.honors.length
+        : (a.latestDate || "").localeCompare(b.latestDate || "");
+    return comparison * sortDirection || (b.latestDate || "").localeCompare(a.latestDate || "") || a.name.localeCompare(b.name, "zh-Hant");
+  });
+  const visibleEvents = sortedEvents;
   els.eventFinderMeta.textContent = `找到 ${visibleEvents.length} 個賽事`;
   let previousYear = null;
   const timelineCards = visibleEvents.map((event, index) => {
@@ -606,6 +703,7 @@ function renderOverview() {
   els.overviewTopicCount.textContent = topics.length;
   renderOverviewSchools();
   renderOverviewTopics();
+  renderOverviewStats();
 }
 
 function renderOverviewTopics() {
@@ -664,7 +762,7 @@ function selectOverviewEntity(entityId) {
 }
 
 function showOverviewTab(tabName) {
-  const target = ["events", "schools", "topics"].includes(tabName) ? tabName : "events";
+  const target = ["events", "schools", "topics", "stats"].includes(tabName) ? tabName : "events";
   els.overviewTabs.forEach((tab) => {
     const active = tab.dataset.overviewTab === target;
     tab.classList.toggle("is-active", active);
@@ -673,6 +771,8 @@ function showOverviewTab(tabName) {
   els.overviewEventsPanel.classList.toggle("is-hidden", target !== "events");
   els.overviewSchoolsPanel.classList.toggle("is-hidden", target !== "schools");
   els.overviewTopicsPanel.classList.toggle("is-hidden", target !== "topics");
+  els.overviewStatsPanel.classList.toggle("is-hidden", target !== "stats");
+  if (target === "stats") renderOverviewStats();
 }
 
 function setupReportLinks() {

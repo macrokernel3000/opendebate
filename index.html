@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260930-timeline-status-colors" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260930-overview-stats1" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -205,6 +205,7 @@
           <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events">已登錄賽事 <span id="overviewEventCount"></span></button>
           <button id="overviewSchoolsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="schools">已登錄隊伍 <span id="overviewSchoolCount"></span></button>
           <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics">已收錄辯題 <span id="overviewTopicCount"></span></button>
+          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" data-overview-tab="stats">統計</button>
         </div>
         <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
           <div class="event-browser">
@@ -212,7 +213,9 @@
               <div class="event-finder-heading"><div><h2 id="eventFinderTitle">已登錄賽事</h2><p>依年份、賽事名稱或辯題查找完整比賽結果與公開榮譽。</p></div><span id="eventFinderMeta" aria-live="polite"></span></div>
               <div class="event-filter-controls">
                 <label class="event-search-field"><span>名稱或辯題</span><input id="eventSearch" type="search" autocomplete="off" placeholder="例如：青雲盃、死刑、社群媒體" /></label>
-                <label class="event-year-field"><span>年份</span><select id="eventYear"><option value="">全部年份</option></select></label>
+                <label class="event-year-field"><span>年份篩選</span><select id="eventYear"><option value="">全部年份</option></select></label>
+                <label class="event-sort-field"><span>排序依據</span><select id="eventSortBy"><option value="year">年份</option><option value="teams">隊伍數</option><option value="honors">榮譽數</option></select></label>
+                <label class="event-sort-field"><span>排序方向</span><select id="eventSortDirection"><option value="desc">降冪</option><option value="asc">升冪</option></select></label>
               </div>
               <div id="eventFinderResults" class="event-finder-results"></div>
             </section>
@@ -239,6 +242,20 @@
           </div>
           <p id="overviewTopicMeta" class="overview-meta" aria-live="polite"></p>
           <div id="overviewTopicList" class="overview-topic-list"></div>
+        </section>
+        <section id="overviewStatsPanel" class="overview-panel overview-stats-panel is-hidden" role="tabpanel" aria-labelledby="overviewStatsTab">
+          <div class="overview-stats-frame">
+            <div class="overview-toolbar overview-stats-toolbar">
+              <div><p class="overview-stats-eyebrow">DATA TRENDS</p><h2>賽事統計</h2><p>按月查看目前已收錄的賽事與參與隊伍變化。</p></div>
+              <div class="overview-stats-controls">
+                <label class="overview-filter"><span>時間段</span><select id="overviewStatsRange"><option value="12">近 12 個月</option><option value="24">近 24 個月</option><option value="all">全部期間</option></select></label>
+                <label class="overview-filter"><span>統計項目</span><select id="overviewStatsMetric"><option value="events">賽事數</option><option value="teams">參與隊伍數</option></select></label>
+              </div>
+            </div>
+            <p id="overviewStatsMeta" class="overview-stats-meta" aria-live="polite"></p>
+            <div id="overviewStatsChart" class="overview-stats-chart"></div>
+            <p class="overview-stats-note">依賽事開始月份統計；參與隊伍依逐場紀錄按月去重。數字反映目前已收錄的公開資料。</p>
+          </div>
         </section>
       </div>
     </section>
@@ -384,13 +401,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260930020139" data-public-data-script></script>
+  <script src="data/public-data.js?v=20260930-overview-stats1" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20260930020139" data-versioned-asset></script>
-  <script src="js/core.js?v=20260930020139" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260930020139" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260930020139" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20260930020139" data-versioned-asset></script>
-  <script src="app.js?v=20260930020139" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="js/core.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="app.js?v=20260930-overview-stats1" data-versioned-asset></script>
 </body>
 </html>

@@ -164,9 +164,9 @@ button { color: inherit; }
 .event-finder-heading h2 { margin: 0; font-size: 22px; }
 .event-finder-heading p { margin: 6px 0 0; color: var(--muted); font-size: 13px; line-height: 1.6; }
 .event-finder-heading span { color: var(--muted); font-size: 12px; font-weight: 800; }
-.event-filter-controls { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 12px; margin-top: 18px; }
-.event-search-field, .event-year-field { display: grid; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 850; }
-.event-search-field input, .event-year-field select { width: 100%; min-height: 50px; border: 2px solid var(--ink); border-radius: 0; padding: 0 14px; background: white; color: var(--ink); }
+.event-filter-controls { display: grid; grid-template-columns: minmax(170px, 1.6fr) repeat(3, minmax(130px, .8fr)); gap: 10px; margin-top: 18px; }
+.event-search-field, .event-year-field, .event-sort-field { display: grid; min-width: 0; gap: 7px; color: var(--muted); font-size: 12px; font-weight: 850; }
+.event-search-field input, .event-year-field select, .event-sort-field select { width: 100%; min-height: 50px; border: 2px solid var(--ink); border-radius: 0; padding: 0 12px; background: white; color: var(--ink); font: inherit; }
 .event-finder-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-height: 330px; margin-top: 14px; padding-right: 4px; overflow-y: auto; }
 .event-result-card { display: grid; gap: 5px; min-height: 112px; border: 1px solid var(--line); padding: 14px; background: var(--paper); cursor: pointer; text-align: left; }
 .event-result-card:hover, .event-result-card:focus-visible { border-color: var(--green); background: var(--soft); box-shadow: 3px 3px 0 var(--yellow); }
@@ -176,6 +176,22 @@ button { color: inherit; }
 .event-finder-empty { grid-column: 1 / -1; padding: 28px; color: var(--muted); text-align: center; }
 .overview-page { padding-bottom: 84px; }
 .overview-tabs { display: flex; gap: 8px; margin-bottom: 22px; border-bottom: 2px solid var(--ink); }
+.overview-stats-frame { border: 1px solid #d5e2da; border-top: 6px solid var(--green); padding: clamp(18px, 3vw, 32px); background: linear-gradient(145deg, #fff 0%, #f9fbf8 100%); box-shadow: 0 12px 32px rgba(16, 57, 43, .08); }
+.overview-stats-toolbar { align-items: end; gap: 28px; }
+.overview-stats-toolbar h2 { color: var(--ink); font-size: clamp(24px, 3vw, 32px); }
+.overview-stats-toolbar p { color: var(--muted); }
+.overview-stats-eyebrow { margin: 0 0 6px !important; color: var(--coral) !important; font-size: 10px; font-weight: 900; letter-spacing: .12em; }
+.overview-stats-controls { display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 10px; width: min(440px, 100%); }
+.overview-stats-meta { margin: 24px 0 10px; color: var(--green-dark); font-size: 13px; font-weight: 850; font-variant-numeric: tabular-nums; }
+.overview-stats-chart { min-width: 0; border: 1px solid #dce7df; border-radius: 14px; padding: 14px 14px 4px; background: #fff; }
+.overview-stats-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.overview-chart-tick line { stroke: #e5ede7; stroke-width: 1; }
+.overview-chart-tick text, .overview-chart-x-label { fill: #6b7d74; font-family: inherit; font-size: 12px; font-variant-numeric: tabular-nums; }
+.overview-chart-axis { stroke: #bdcec3; stroke-width: 1.5; }
+.overview-chart-line { fill: none; stroke: var(--green); stroke-linecap: round; stroke-linejoin: round; stroke-width: 4; }
+.overview-chart-point { fill: var(--yellow); stroke: var(--green); stroke-width: 2; }
+.overview-stats-note, .overview-stats-empty { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
+.overview-stats-empty { padding: 48px; text-align: center; }
 .overview-tab { min-height: 48px; border: 0; padding: 0 18px; background: var(--soft); cursor: pointer; font-weight: 900; }
 .overview-tab span { margin-left: 7px; color: var(--muted); font-size: 12px; }
 .overview-tab.is-active { background: var(--green); color: white; }
@@ -536,6 +552,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 }
 
 @media (max-width: 640px) {
+  .overview-stats-tab, #overviewStatsPanel { display: none !important; }
   /* Keep page movement vertical; horizontal movement belongs to the card rails. */
   html { overflow-x: hidden; }
   body { min-width: 0; overflow-x: clip; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
@@ -746,9 +763,10 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-finder-heading h2 { font-size: 17px; }
   .event-finder-heading p { display: none; }
   .event-finder-heading span { font-size: 12px; white-space: nowrap; }
-  .event-filter-controls { grid-template-columns: minmax(0, 1fr) 104px; gap: 8px; margin-top: 10px; }
-  .event-search-field, .event-year-field { gap: 4px; font-size: 12px; }
-  .event-search-field input, .event-year-field select { min-height: 40px; padding-inline: 9px; font-size: 13px; }
+  .event-filter-controls { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-top: 10px; }
+  .event-search-field { grid-column: 1 / -1; }
+  .event-search-field, .event-year-field, .event-sort-field { gap: 4px; font-size: 12px; }
+  .event-search-field input, .event-year-field select, .event-sort-field select { min-height: 40px; padding-inline: 9px; font-size: 13px; }
   #eventFinderResults { position: relative; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 11px 0; max-height: none; margin-top: 14px; padding: 0; overflow: visible; }
   #eventFinderResults::before { position: absolute; top: 12px; bottom: 12px; left: 50%; width: 2px; background: linear-gradient(var(--yellow), #d8e7dc 35%, #d8e7dc 65%, var(--coral)); content: ""; }
   #eventFinderResults .event-year-divider { position: relative; z-index: 1; grid-column: 1 / -1; justify-self: center; margin: 3px 0; border: 1px solid #d5e4d9; border-radius: 999px; padding: 5px 12px; background: var(--paper); color: var(--green-dark); font-size: 13px; font-weight: 900; letter-spacing: .04em; }
@@ -815,7 +833,8 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .section-note { max-width: 150px; text-align: right; }
   .page-intro, .search-stage { padding-top: 42px; }
   .event-summary { grid-template-columns: 1fr; }
-  .event-filter-controls { grid-template-columns: minmax(0, 1fr) 104px; }
+  .event-filter-controls { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .event-search-field { grid-column: 1 / -1; }
   .event-finder-results { max-height: 430px; }
   .event-summary-count { flex-wrap: wrap; }
   .match-row { grid-template-columns: 46px minmax(0, 1fr) 52px minmax(0, 1fr); gap: 6px; padding-inline: 8px; }

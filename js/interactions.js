@@ -110,6 +110,10 @@
     });
     els.eventSearch.addEventListener("input", renderEventFinder);
     els.eventYear.addEventListener("change", renderEventFinder);
+    els.eventSortBy.addEventListener("change", renderEventFinder);
+    els.eventSortDirection.addEventListener("change", renderEventFinder);
+    els.overviewStatsRange.addEventListener("change", renderOverviewStats);
+    els.overviewStatsMetric.addEventListener("change", renderOverviewStats);
     els.eventFinderResults.addEventListener("click", (event) => {
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
