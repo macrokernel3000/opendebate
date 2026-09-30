@@ -57,6 +57,7 @@ const els = {
   overviewStatsRange: document.querySelector("#overviewStatsRange"),
   overviewStatsMetric: document.querySelector("#overviewStatsMetric"),
   overviewStatsMeta: document.querySelector("#overviewStatsMeta"),
+  overviewStatsSummary: document.querySelector("#overviewStatsSummary"),
   overviewStatsChart: document.querySelector("#overviewStatsChart"),
   overviewEventCount: document.querySelector("#overviewEventCount"),
   overviewSchoolCount: document.querySelector("#overviewSchoolCount"),
@@ -503,17 +504,12 @@ function monthKeyFromDate(value) {
   return /^\d{4}-\d{2}/.test(value || "") ? value.slice(0, 7) : "";
 }
 
-function addMonths(monthKey, offset) {
-  const [year, month] = monthKey.split("-").map(Number);
-  const date = new Date(year, month - 1 + offset, 1);
-  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, "0")}`;
-}
-
 function renderOverviewStats() {
   if (!els.overviewStatsChart) return;
   const eventCounts = new Map();
-  const teamsByMonth = new Map();
+  const teamEntriesByMonth = new Map();
   const eventMonthByName = new Map();
+  const teamsByEvent = new Map();
   events.forEach((event) => {
     const eventMonth = monthKeyFromDate(event.metadata?.startDate)
       || event.dates.map(monthKeyFromDate).find(Boolean)
@@ -522,65 +518,109 @@ function renderOverviewStats() {
       eventMonthByName.set(event.name, eventMonth);
       eventCounts.set(eventMonth, (eventCounts.get(eventMonth) || 0) + 1);
     }
+    const eventTeams = new Set();
     event.records.forEach((record) => {
-      const month = monthKeyFromDate(record.matchDate) || eventMonth;
-      if (!month) return;
-      if (!teamsByMonth.has(month)) teamsByMonth.set(month, new Set());
       Object.entries(record.teams || {}).forEach(([side, teamName]) => {
         if (!teamName) return;
-        const teamKey = record.teamIds?.[side] || normalize(teamName);
-        teamsByMonth.get(month).add(teamKey);
+        eventTeams.add(record.teamIds?.[side] || normalize(teamName));
       });
     });
+    teamsByEvent.set(event.name, eventTeams);
+    if (eventMonth && eventTeams.size) teamEntriesByMonth.set(eventMonth, (teamEntriesByMonth.get(eventMonth) || 0) + eventTeams.size);
   });
   const current = new Date();
-  const currentMonth = `${current.getFullYear()}-${String(current.getMonth() + 1).padStart(2, "0")}`;
-  const firstRecordedMonth = [...eventMonthByName.values()].sort()[0] || currentMonth;
+  const currentYear = current.getFullYear();
+  const currentMonthNumber = current.getMonth() + 1;
   const range = els.overviewStatsRange.value;
-  const firstMonth = range === "all" ? firstRecordedMonth : addMonths(currentMonth, 1 - Number(range));
-  const months = [];
-  for (let month = firstMonth; month <= currentMonth; month = addMonths(month, 1)) months.push(month);
+  const isYtd = range === "ytd";
+  const recentYear = isYtd ? currentYear : currentYear - 1;
+  const compareYear = recentYear - 1;
+  const monthCount = isYtd ? currentMonthNumber : 12;
+  const months = Array.from({ length: monthCount }, (_, index) => index + 1);
+  const eventTotals = new Map();
+  const teamEntryTotals = new Map();
+  const uniqueTeamsByYear = new Map();
+  [recentYear, compareYear].forEach((year) => {
+    eventTotals.set(year, 0);
+    teamEntryTotals.set(year, 0);
+    uniqueTeamsByYear.set(year, new Set());
+  });
+  eventMonthByName.forEach((month, eventName) => {
+    const year = Number(month.slice(0, 4));
+    if (!eventTotals.has(year) || Number(month.slice(5, 7)) > monthCount) return;
+    eventTotals.set(year, eventTotals.get(year) + 1);
+    const teams = teamsByEvent.get(eventName) || new Set();
+    teamEntryTotals.set(year, teamEntryTotals.get(year) + teams.size);
+    teams.forEach((teamKey) => uniqueTeamsByYear.get(year).add(teamKey));
+  });
   const metric = els.overviewStatsMetric.value;
   const isTeamMetric = metric === "teams";
-  const values = months.map((month) => isTeamMetric ? (teamsByMonth.get(month)?.size || 0) : (eventCounts.get(month) || 0));
-  const unit = isTeamMetric ? "隊" : "場";
-  const metricName = isTeamMetric ? "每月參與隊伍數" : "每月賽事數";
-  const label = (month) => month.replace("-", "/");
-  const peak = Math.max(0, ...values);
-  const peakIndex = values.indexOf(peak);
-  els.overviewStatsMeta.textContent = months.length
-    ? `${label(months[0])}－${label(months.at(-1))}　·　${metricName}　·　最高 ${peak} ${unit}`
-    : "目前沒有可繪製的月份資料。";
-  if (!months.length) {
-    els.overviewStatsChart.innerHTML = '<p class="overview-stats-empty">目前沒有可呈現的統計資料。</p>';
-    return;
-  }
+  const metricName = isTeamMetric ? "每月參賽隊次" : "每月賽事數";
+  const monthLabel = (month) => `${month} 月`;
+  const yearLabel = (year) => `${year} 年${isYtd ? ` 1–${monthCount} 月` : ""}`;
+  const yearValues = (year) => months.map((month) => {
+    const key = `${year}-${String(month).padStart(2, "0")}`;
+    return isTeamMetric ? (teamEntryTotals.get(year) === undefined ? 0 : (teamEntriesByMonth.get(key) || 0)) : (eventCounts.get(key) || 0);
+  });
+  const recentValues = yearValues(recentYear);
+  const compareValues = yearValues(compareYear);
+  const annualValues = {
+    events: [eventTotals.get(recentYear) || 0, eventTotals.get(compareYear) || 0],
+    entries: [teamEntryTotals.get(recentYear) || 0, teamEntryTotals.get(compareYear) || 0],
+    unique: [uniqueTeamsByYear.get(recentYear)?.size || 0, uniqueTeamsByYear.get(compareYear)?.size || 0],
+  };
+  const comparisonLabel = `${yearLabel(recentYear)}　對　${yearLabel(compareYear)}`;
+  els.overviewStatsMeta.textContent = `${comparisonLabel}　·　逐月同比；暑假月份另以淡金底標示`;
+  const formatChange = (currentValue, previousValue) => {
+    if (currentValue === previousValue) return "持平";
+    if (previousValue === 0) return currentValue > 0 ? "較去年新增" : "—";
+    const change = ((currentValue - previousValue) / previousValue) * 100;
+    return `${change > 0 ? "增加" : "減少"} ${Math.abs(change).toFixed(1)}%`;
+  };
+  const summaryItems = [
+    ["賽事數", annualValues.events[0], annualValues.events[1], "場"],
+    ["參賽隊次", annualValues.entries[0], annualValues.entries[1], "次"],
+    ["不重複隊伍", annualValues.unique[0], annualValues.unique[1], "隊"],
+  ];
+  els.overviewStatsSummary.innerHTML = summaryItems.map(([label, currentValue, previousValue, unit]) => {
+    const delta = currentValue - previousValue;
+    const trend = delta > 0 ? "up" : delta < 0 ? "down" : "flat";
+    const changeText = `較 ${compareYear} 年${isYtd ? "同期" : ""}${formatChange(currentValue, previousValue)} · ${previousValue}${unit}`;
+    return `<article class="overview-stats-card"><span>${label}</span><strong>${currentValue}<small>${unit}</small></strong><em class="is-${trend}">${escapeHtml(changeText)}</em></article>`;
+  }).join("");
 
   const width = 960;
   const height = 350;
   const plot = { left: 70, right: 28, top: 24, bottom: 62 };
   const plotWidth = width - plot.left - plot.right;
   const plotHeight = height - plot.top - plot.bottom;
+  const peak = Math.max(0, ...recentValues, ...compareValues);
   const step = Math.max(1, Math.ceil(peak / 4));
   const maxY = step * 4;
-  const points = values.map((value, index) => ({
+  const makePoints = (values, year) => values.map((value, index) => ({
     x: months.length === 1 ? plot.left + plotWidth / 2 : plot.left + (index / (months.length - 1)) * plotWidth,
     y: plot.top + plotHeight - (value / maxY) * plotHeight,
     value,
     month: months[index],
+    year,
   }));
-  const path = points.map((point, index) => `${index ? "L" : "M"}${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ");
+  const recentPoints = makePoints(recentValues, recentYear);
+  const comparePoints = makePoints(compareValues, compareYear);
   const grid = Array.from({ length: 5 }, (_, index) => {
     const value = maxY - index * step;
     const y = plot.top + (index / 4) * plotHeight;
     return `<g class="overview-chart-tick"><line x1="${plot.left}" y1="${y}" x2="${width - plot.right}" y2="${y}" /><text x="${plot.left - 14}" y="${y + 4}" text-anchor="end">${value}</text></g>`;
   }).join("");
-  const labelIndexes = [...new Set(Array.from({ length: Math.min(6, months.length) }, (_, index) => Math.round(index * (months.length - 1) / (Math.min(6, months.length) - 1 || 1))))];
-  const xLabels = labelIndexes.map((index) => `<text class="overview-chart-x-label" x="${points[index].x}" y="${height - 22}" text-anchor="middle">${escapeHtml(label(months[index]))}</text>`).join("");
-  const circles = points.map((point) => `<circle class="overview-chart-point" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="4"><title>${escapeHtml(label(point.month))}：${point.value} ${unit}</title></circle>`).join("");
-  const title = `${metricName}折線圖`;
-  const desc = `${label(months[0])}至${label(months.at(-1))}共${months.length}個月，最高值為${label(months[peakIndex])}的${peak}${unit}。`;
-  els.overviewStatsChart.innerHTML = `<svg class="overview-stats-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="overviewChartTitle overviewChartDesc"><title id="overviewChartTitle">${escapeHtml(title)}</title><desc id="overviewChartDesc">${escapeHtml(desc)}</desc>${grid}<line class="overview-chart-axis" x1="${plot.left}" y1="${plot.top + plotHeight}" x2="${width - plot.right}" y2="${plot.top + plotHeight}" /><path class="overview-chart-line" d="${path}" />${circles}${xLabels}</svg>`;
+  const summerStartX = plot.left + (5.5 / (months.length - 1 || 1)) * plotWidth;
+  const summerEndX = plot.left + (7.5 / (months.length - 1 || 1)) * plotWidth;
+  const summerBand = months.length >= 8 ? `<rect class="overview-chart-summer" x="${summerStartX}" y="${plot.top}" width="${summerEndX - summerStartX}" height="${plotHeight}" rx="6" /><text class="overview-chart-summer-label" x="${(summerStartX + summerEndX) / 2}" y="${plot.top + 14}" text-anchor="middle">暑假</text>` : "";
+  const labelIndexes = [...new Set(Array.from({ length: Math.min(12, months.length) }, (_, index) => Math.round(index * (months.length - 1) / (Math.min(12, months.length) - 1 || 1))))];
+  const xLabels = labelIndexes.map((index) => `<text class="overview-chart-x-label" x="${recentPoints[index].x}" y="${height - 22}" text-anchor="middle">${months[index]}</text>`).join("");
+  const lineFor = (points, className) => `<path class="overview-chart-line ${className}" d="${points.map((point, index) => `${index ? "L" : "M"}${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(" ")}" />${points.map((point) => `<circle class="overview-chart-point ${className}" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="4"><title>${point.year} 年 ${point.month} 月：${point.value} ${isTeamMetric ? "隊次" : "場"}</title></circle>`).join("")}`;
+  const legend = `<div class="overview-chart-legend"><span><i class="is-current"></i>${recentYear} 年</span><span><i class="is-compare"></i>${compareYear} 年</span><span><i class="is-summer"></i>暑假檔期</span></div>`;
+  const title = `${metricName}年度同比折線圖`;
+  const desc = `${recentYear} 年與 ${compareYear} 年 1 至 ${monthCount} 月逐月比較；7、8 月以淡金底標示暑假。`;
+  els.overviewStatsChart.innerHTML = `${legend}<svg class="overview-stats-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="overviewChartTitle overviewChartDesc"><title id="overviewChartTitle">${escapeHtml(title)}</title><desc id="overviewChartDesc">${escapeHtml(desc)}</desc>${summerBand}${grid}<line class="overview-chart-axis" x1="${plot.left}" y1="${plot.top + plotHeight}" x2="${width - plot.right}" y2="${plot.top + plotHeight}" />${lineFor(comparePoints, "is-compare")}${lineFor(recentPoints, "is-current")}${xLabels}</svg>`;
 }
 
 function renderEventOptions() {

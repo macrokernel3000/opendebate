@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20260930-overview-stats1" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20260930-overview-stats2" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -246,15 +246,16 @@
         <section id="overviewStatsPanel" class="overview-panel overview-stats-panel is-hidden" role="tabpanel" aria-labelledby="overviewStatsTab">
           <div class="overview-stats-frame">
             <div class="overview-toolbar overview-stats-toolbar">
-              <div><p class="overview-stats-eyebrow">DATA TRENDS</p><h2>賽事統計</h2><p>按月查看目前已收錄的賽事與參與隊伍變化。</p></div>
+              <div><p class="overview-stats-eyebrow">YEAR OVER YEAR</p><h2>年度賽事趨勢</h2><p>對照相同月份，看看賽事與參與情形的變化。</p></div>
               <div class="overview-stats-controls">
-                <label class="overview-filter"><span>時間段</span><select id="overviewStatsRange"><option value="12">近 12 個月</option><option value="24">近 24 個月</option><option value="all">全部期間</option></select></label>
-                <label class="overview-filter"><span>統計項目</span><select id="overviewStatsMetric"><option value="events">賽事數</option><option value="teams">參與隊伍數</option></select></label>
+                <label class="overview-filter"><span>比較期間</span><select id="overviewStatsRange"><option value="ytd">今年至今 vs 去年同期</option><option value="full">最近完整年度 vs 前一年度</option></select></label>
+                <label class="overview-filter"><span>趨勢線</span><select id="overviewStatsMetric"><option value="events">賽事數</option><option value="teams">參賽隊次</option></select></label>
               </div>
             </div>
             <p id="overviewStatsMeta" class="overview-stats-meta" aria-live="polite"></p>
+            <div id="overviewStatsSummary" class="overview-stats-summary" aria-live="polite"></div>
             <div id="overviewStatsChart" class="overview-stats-chart"></div>
-            <p class="overview-stats-note">依賽事開始月份統計；參與隊伍依逐場紀錄按月去重。數字反映目前已收錄的公開資料。</p>
+            <p class="overview-stats-note">賽事依開始月份歸類；參賽隊次為每支隊伍參與一項賽事計一次，不重複隊伍數則跨賽事去重。暑假檔期以淡金色標示。統計反映目前已收錄的公開資料。</p>
           </div>
         </section>
       </div>
@@ -401,13 +402,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20260930-overview-stats1" data-public-data-script></script>
+  <script src="data/public-data.js?v=20260930-overview-stats2" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20260930-overview-stats1" data-versioned-asset></script>
-  <script src="js/core.js?v=20260930-overview-stats1" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20260930-overview-stats1" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20260930-overview-stats1" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20260930-overview-stats1" data-versioned-asset></script>
-  <script src="app.js?v=20260930-overview-stats1" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20260930-overview-stats2" data-versioned-asset></script>
+  <script src="js/core.js?v=20260930-overview-stats2" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20260930-overview-stats2" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20260930-overview-stats2" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20260930-overview-stats2" data-versioned-asset></script>
+  <script src="app.js?v=20260930-overview-stats2" data-versioned-asset></script>
 </body>
 </html>

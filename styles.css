@@ -183,13 +183,32 @@ button { color: inherit; }
 .overview-stats-eyebrow { margin: 0 0 6px !important; color: var(--coral) !important; font-size: 10px; font-weight: 900; letter-spacing: .12em; }
 .overview-stats-controls { display: grid; grid-template-columns: repeat(2, minmax(150px, 1fr)); gap: 10px; width: min(440px, 100%); }
 .overview-stats-meta { margin: 24px 0 10px; color: var(--green-dark); font-size: 13px; font-weight: 850; font-variant-numeric: tabular-nums; }
+.overview-stats-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin: 0 0 16px; }
+.overview-stats-card { display: grid; gap: 7px; border: 1px solid #dce7df; border-radius: 12px; padding: 14px 16px; background: #fff; }
+.overview-stats-card > span { color: var(--muted); font-size: 12px; font-weight: 800; }
+.overview-stats-card > strong { color: var(--green-dark); font-size: 26px; font-variant-numeric: tabular-nums; line-height: 1; }
+.overview-stats-card > strong small { margin-left: 4px; font-size: 13px; }
+.overview-stats-card > em { color: var(--muted); font-size: 11px; font-style: normal; line-height: 1.45; }
+.overview-stats-card > em.is-up { color: #16734f; }
+.overview-stats-card > em.is-down { color: #c65b50; }
 .overview-stats-chart { min-width: 0; border: 1px solid #dce7df; border-radius: 14px; padding: 14px 14px 4px; background: #fff; }
+.overview-chart-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 0 4px 10px; color: var(--muted); font-size: 11px; font-weight: 800; }
+.overview-chart-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.overview-chart-legend i { display: inline-block; width: 18px; height: 3px; border-radius: 9px; background: var(--green); }
+.overview-chart-legend i.is-compare { background: var(--coral); }
+.overview-chart-legend i.is-summer { width: 12px; height: 12px; border: 1px solid #e9d891; background: #fff4cc; }
 .overview-stats-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.overview-chart-summer { fill: #fff7dd; }
+.overview-chart-summer-label { fill: #96752b; font-family: inherit; font-size: 11px; font-weight: 800; }
 .overview-chart-tick line { stroke: #e5ede7; stroke-width: 1; }
 .overview-chart-tick text, .overview-chart-x-label { fill: #6b7d74; font-family: inherit; font-size: 12px; font-variant-numeric: tabular-nums; }
 .overview-chart-axis { stroke: #bdcec3; stroke-width: 1.5; }
 .overview-chart-line { fill: none; stroke: var(--green); stroke-linecap: round; stroke-linejoin: round; stroke-width: 4; }
 .overview-chart-point { fill: var(--yellow); stroke: var(--green); stroke-width: 2; }
+.overview-chart-line.is-compare { stroke: var(--coral); stroke-width: 3; stroke-dasharray: 8 7; }
+.overview-chart-point.is-compare { fill: #fff; stroke: var(--coral); }
+.overview-chart-line.is-current { stroke: var(--green); }
+.overview-chart-point.is-current { fill: var(--yellow); stroke: var(--green); }
 .overview-stats-note, .overview-stats-empty { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .overview-stats-empty { padding: 48px; text-align: center; }
 .overview-tab { min-height: 48px; border: 0; padding: 0 18px; background: var(--soft); cursor: pointer; font-weight: 900; }
