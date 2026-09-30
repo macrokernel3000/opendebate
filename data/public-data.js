@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-30T20:59:10",
+  "generatedAt": "2026-09-30T21:07:12",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -28294,7 +28294,7 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
-      "matchDate": "2025",
+      "matchDate": "2025-08-09",
       "period": "",
       "venue": 3,
       "teams": {
@@ -28306,7 +28306,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 2
       },
       "winner": "延平中學",
-      "note": "小宮燈十九賽果",
+      "note": "第二天（D2）小宮燈十九賽果",
       "players": {
         "affirmative": [],
         "negative": []
@@ -28316,11 +28316,11 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s050",
         "negative": "p144"
       },
-      "id": "match-842be98f71bb"
+      "id": "match-76913e61203e"
     },
     {
       "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
-      "matchDate": "2025",
+      "matchDate": "2025-08-09",
       "period": "",
       "venue": 4,
       "teams": {
@@ -28332,7 +28332,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 9
       },
       "winner": "小貓喵喵隊",
-      "note": "小宮燈十九賽果",
+      "note": "第二天（D2）小宮燈十九賽果",
       "players": {
         "affirmative": [],
         "negative": []
@@ -28342,7 +28342,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p152",
         "negative": "p139"
       },
-      "id": "match-58cad72b3f8c"
+      "id": "match-6ca4bdf64948"
     },
     {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
@@ -36240,25 +36240,25 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
-      "matchDate": "2025",
+      "matchDate": "2025-08-09",
       "honorName": "單場最佳辯士",
       "recipient": "黃耕鴻",
       "team": "延平中學",
       "honorType": "player",
-      "note": "正方四辯；延平中學 vs 我打宮燈？真的假的？",
+      "note": "第二天（D2）；正方四辯；延平中學 vs 我打宮燈？真的假的？",
       "teamId": "s050",
-      "id": "honor-9b5eb03c930e"
+      "id": "honor-26e9c561cbe8"
     },
     {
       "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
-      "matchDate": "2025",
+      "matchDate": "2025-08-09",
       "honorName": "單場最佳辯士",
       "recipient": "劉冠廷",
       "team": "小貓喵喵隊",
       "honorType": "player",
-      "note": "反方四辯；輸了許詠雋買恐龍氣球給你 vs 小貓喵喵隊",
+      "note": "第二天（D2）；反方四辯；輸了許詠雋買恐龍氣球給你 vs 小貓喵喵隊",
       "teamId": "p139",
-      "id": "honor-97eeb00c4493"
+      "id": "honor-e8b6b4e388ff"
     },
     {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
@@ -37842,11 +37842,11 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 24
     },
     "第十九屆宮燈盃辯論公開賽青少年組": {
-      "startDate": "2025",
-      "endDate": "2025",
+      "startDate": "2025-08-08",
+      "endDate": "2025-08-09",
       "organizer": "",
       "location": "",
-      "note": "年份由使用者確認為2025；逐場日期與時段未載明，僅登錄目前提供的兩場賽果。",
+      "note": "賽期為2025-08-08至2025-08-09；目前提供的兩場小宮燈十九賽果皆為第二天（2025-08-09），逐場時段未載明。",
       "ageRestriction": null,
       "teamCount": 4
     },
