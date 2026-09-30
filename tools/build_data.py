@@ -542,7 +542,7 @@ def validate_best_debater_categories(records, honors):
     match_counts = {}
     for record in records:
         match_counts[record["competitionName"]] = match_counts.get(record["competitionName"], 0) + 1
-    best_names = {"單場最佳辯士", "單場最佳", "最佳辯士"}
+    best_names = {"單場最佳辯士", "單場最佳", "最佳辯士", "單場優秀辯士", "單場優秀"}
     by_event = {}
     for honor in honors:
         if honor["honorName"].strip() in best_names:

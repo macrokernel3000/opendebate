@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-09-30T02:01:39",
+  "generatedAt": "2026-09-30T20:59:10",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -34,7 +34,9 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
     "public-data-第五屆輔仁盃全國高中職辯論比賽.csv",
     "public-data-第十九屆北區聯合新生盃辯論比賽.csv",
+    "public-data-第十九屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第十五屆風雩盃中學辯論錦標賽.csv",
+    "public-data-第十八屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第十六屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十屆雲啟盃辯論比賽.csv",
     "public-data-第四屆輔仁盃全國高中職辯論比賽.csv",
@@ -760,6 +762,114 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p135",
       "type": "p",
       "name": "宮燈最佳辯士",
+      "aliases": ""
+    },
+    {
+      "code": "p136",
+      "type": "p",
+      "name": "7/14一領前皆可向大會申請更換",
+      "aliases": ""
+    },
+    {
+      "code": "p137",
+      "type": "p",
+      "name": "你剛剛攻擊了我的村莊",
+      "aliases": ""
+    },
+    {
+      "code": "p138",
+      "type": "p",
+      "name": "喜歡漂亮的凱怡學姐沒有不隊",
+      "aliases": ""
+    },
+    {
+      "code": "p139",
+      "type": "p",
+      "name": "小貓喵喵隊",
+      "aliases": ""
+    },
+    {
+      "code": "p140",
+      "type": "p",
+      "name": "彰化邊緣聯盟",
+      "aliases": ""
+    },
+    {
+      "code": "p141",
+      "type": "p",
+      "name": "彰化邊緣陣線聯盟",
+      "aliases": ""
+    },
+    {
+      "code": "p142",
+      "type": "p",
+      "name": "我國不應廢除單一性別學校",
+      "aliases": ""
+    },
+    {
+      "code": "p143",
+      "type": "p",
+      "name": "我學長們喝醉了",
+      "aliases": ""
+    },
+    {
+      "code": "p144",
+      "type": "p",
+      "name": "我打宮燈？真的假的？",
+      "aliases": ""
+    },
+    {
+      "code": "p145",
+      "type": "p",
+      "name": "曌",
+      "aliases": ""
+    },
+    {
+      "code": "p146",
+      "type": "p",
+      "name": "正方反方都不隊",
+      "aliases": ""
+    },
+    {
+      "code": "p147",
+      "type": "p",
+      "name": "沒錢對不隊",
+      "aliases": ""
+    },
+    {
+      "code": "p148",
+      "type": "p",
+      "name": "燈燈燈燈",
+      "aliases": ""
+    },
+    {
+      "code": "p149",
+      "type": "p",
+      "name": "甜甜豬小隊",
+      "aliases": ""
+    },
+    {
+      "code": "p150",
+      "type": "p",
+      "name": "破房的辯士",
+      "aliases": ""
+    },
+    {
+      "code": "p151",
+      "type": "p",
+      "name": "謝謝學姐！！",
+      "aliases": ""
+    },
+    {
+      "code": "p152",
+      "type": "p",
+      "name": "輸了許詠雋買恐龍氣球給你",
+      "aliases": ""
+    },
+    {
+      "code": "p153",
+      "type": "p",
+      "name": "霸道總裁小嬌7",
       "aliases": ""
     },
     {
@@ -28183,6 +28293,58 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-cd1a58e238b3"
     },
     {
+      "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2025",
+      "period": "",
+      "venue": 3,
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "我打宮燈？真的假的？"
+      },
+      "scores": {
+        "affirmative": 7,
+        "negative": 2
+      },
+      "winner": "延平中學",
+      "note": "小宮燈十九賽果",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "大成功",
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "p144"
+      },
+      "id": "match-842be98f71bb"
+    },
+    {
+      "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2025",
+      "period": "",
+      "venue": 4,
+      "teams": {
+        "affirmative": "輸了許詠雋買恐龍氣球給你",
+        "negative": "小貓喵喵隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "小貓喵喵隊",
+      "note": "小宮燈十九賽果",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "小宮燈",
+      "teamIds": {
+        "affirmative": "p152",
+        "negative": "p139"
+      },
+      "id": "match-58cad72b3f8c"
+    },
+    {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -28831,6 +28993,538 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s048"
       },
       "id": "match-1267da7e9079"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "沒錢對不隊",
+        "negative": "正方反方都不隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "正方反方都不隊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p147",
+        "negative": "p146"
+      },
+      "id": "match-9ec761c61773"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "謝謝學姐！！",
+        "negative": "你剛剛攻擊了我的村莊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "你剛剛攻擊了我的村莊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p151",
+        "negative": "p137"
+      },
+      "id": "match-26fb1adc2d33"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "破房的辯士",
+        "negative": "彰化邊緣陣線聯盟"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "彰化邊緣陣線聯盟",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p150",
+        "negative": "p141"
+      },
+      "id": "match-52c133ce8cfd"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "7/14一領前皆可向大會申請更換",
+        "negative": "建竹實聯隊"
+      },
+      "scores": {
+        "affirmative": 4.5,
+        "negative": 4.5
+      },
+      "winner": "",
+      "note": "初賽；公告未載明勝方",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p136",
+        "negative": "p039"
+      },
+      "id": "match-eb39891b5999"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "正方反方都不隊",
+        "negative": "沒錢對不隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "沒錢對不隊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p146",
+        "negative": "p147"
+      },
+      "id": "match-fb609cac24a1"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "你剛剛攻擊了我的村莊",
+        "negative": "謝謝學姐！！"
+      },
+      "scores": {
+        "affirmative": 5,
+        "negative": 4
+      },
+      "winner": "你剛剛攻擊了我的村莊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p137",
+        "negative": "p151"
+      },
+      "id": "match-710d6669f307"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "喜歡漂亮的凱怡學姐沒有不隊",
+        "negative": "甜甜豬小隊"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 6
+      },
+      "winner": "甜甜豬小隊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p138",
+        "negative": "p149"
+      },
+      "id": "match-9b8540a81894"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "我學長們喝醉了",
+        "negative": "曌"
+      },
+      "scores": {
+        "affirmative": 7,
+        "negative": 2
+      },
+      "winner": "我學長們喝醉了",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p143",
+        "negative": "p145"
+      },
+      "id": "match-5c7fd1bf40b7"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "燈燈燈燈",
+        "negative": "霸道總裁小嬌7"
+      },
+      "scores": {
+        "affirmative": 9,
+        "negative": 0
+      },
+      "winner": "燈燈燈燈",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p148",
+        "negative": "p153"
+      },
+      "id": "match-ff311194c37f"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "彰化邊緣陣線聯盟",
+        "negative": "破房的辯士"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 7
+      },
+      "winner": "破房的辯士",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p141",
+        "negative": "p150"
+      },
+      "id": "match-bb6b35b8c3ab"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建竹實聯隊",
+        "negative": "7/14一領前皆可向大會申請更換"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "7/14一領前皆可向大會申請更換",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p039",
+        "negative": "p136"
+      },
+      "id": "match-42df21fdf4d4"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "甜甜豬小隊",
+        "negative": "喜歡漂亮的凱怡學姐沒有不隊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "喜歡漂亮的凱怡學姐沒有不隊",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p149",
+        "negative": "p138"
+      },
+      "id": "match-c4c59fa0adba"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "曌",
+        "negative": "我學長們喝醉了"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "我學長們喝醉了",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p145",
+        "negative": "p143"
+      },
+      "id": "match-35eadf8cdba6"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "霸道總裁小嬌7",
+        "negative": "燈燈燈燈"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "燈燈燈燈",
+      "note": "初賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p153",
+        "negative": "p148"
+      },
+      "id": "match-a4a76c4701da"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "沒錢對不隊",
+        "negative": "你剛剛攻擊了我的村莊"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "你剛剛攻擊了我的村莊",
+      "note": "八進四複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "當日公告僅列八進四賽果，時段依該日階段順序推定為1",
+      "teamIds": {
+        "affirmative": "p147",
+        "negative": "p137"
+      },
+      "id": "match-a8a8c95b1008"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "彰化邊緣聯盟",
+        "negative": "7/14一領前皆可向大會申請更換"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "7/14一領前皆可向大會申請更換",
+      "note": "八進四複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "當日公告僅列八進四賽果，時段依該日階段順序推定為1",
+      "teamIds": {
+        "affirmative": "p140",
+        "negative": "p136"
+      },
+      "id": "match-2b95fa298853"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "燈燈燈燈",
+        "negative": "我國不應廢除單一性別學校"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 8
+      },
+      "winner": "我國不應廢除單一性別學校",
+      "note": "八進四複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "當日公告僅列八進四賽果，時段依該日階段順序推定為1",
+      "teamIds": {
+        "affirmative": "p148",
+        "negative": "p142"
+      },
+      "id": "match-e33fefb712e1"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "喜歡漂亮的凱怡學姐沒有不隊",
+        "negative": "我學長們喝醉了"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 7
+      },
+      "winner": "我學長們喝醉了",
+      "note": "八進四複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "當日公告僅列八進四賽果，時段依該日階段順序推定為1",
+      "teamIds": {
+        "affirmative": "p138",
+        "negative": "p143"
+      },
+      "id": "match-160fa8fa1dd0"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "你剛剛攻擊了我的村莊",
+        "negative": "7/14一領前皆可向大會申請更換"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 9
+      },
+      "winner": "7/14一領前皆可向大會申請更換",
+      "note": "四進二複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "公告順序先列四進二複賽，時段推定為1",
+      "teamIds": {
+        "affirmative": "p137",
+        "negative": "p136"
+      },
+      "id": "match-64752d28e85c"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "我國不應廢除單一性別學校",
+        "negative": "我學長們喝醉了"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 7
+      },
+      "winner": "我學長們喝醉了",
+      "note": "四進二複賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "公告順序先列四進二複賽，時段推定為1",
+      "teamIds": {
+        "affirmative": "p142",
+        "negative": "p143"
+      },
+      "id": "match-003395e73064"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "7/14一領前皆可向大會申請更換",
+        "negative": "我學長們喝醉了"
+      },
+      "scores": {
+        "affirmative": 4,
+        "negative": 5
+      },
+      "winner": "我學長們喝醉了",
+      "note": "冠亞決賽",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "公告順序先四進二後冠亞決賽，時段推定為2；依專案慣例冠亞賽會場推定為1",
+      "teamIds": {
+        "affirmative": "p136",
+        "negative": "p143"
+      },
+      "id": "match-9982647d0113"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -34973,6 +35667,28 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-0ab66a8b117f"
     },
     {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-28",
+      "honorName": "全程最佳辯士",
+      "recipient": "張育棋",
+      "team": "建竹實聯隊",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p039",
+      "id": "honor-1a420249c772"
+    },
+    {
+      "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2026-09-28",
+      "honorName": "粉紅色的雪",
+      "recipient": "黃忻恩",
+      "team": "最佳英鎊辯論隊",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p128",
+      "id": "honor-c4ab43219081"
+    },
+    {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "冠軍",
@@ -35523,6 +36239,28 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-73aae721597a"
     },
     {
+      "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2025",
+      "honorName": "單場最佳辯士",
+      "recipient": "黃耕鴻",
+      "team": "延平中學",
+      "honorType": "player",
+      "note": "正方四辯；延平中學 vs 我打宮燈？真的假的？",
+      "teamId": "s050",
+      "id": "honor-9b5eb03c930e"
+    },
+    {
+      "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2025",
+      "honorName": "單場最佳辯士",
+      "recipient": "劉冠廷",
+      "team": "小貓喵喵隊",
+      "honorType": "player",
+      "note": "反方四辯；輸了許詠雋買恐龍氣球給你 vs 小貓喵喵隊",
+      "teamId": "p139",
+      "id": "honor-97eeb00c4493"
+    },
+    {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "冠軍",
@@ -35609,6 +36347,313 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s067",
       "id": "honor-8527af0b8699"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "簡睿霆",
+      "team": "",
+      "honorType": "player",
+      "note": "正方反方都不隊 vs 沒錢對不隊",
+      "period": 1,
+      "teamId": "",
+      "id": "honor-a0d7894230c4"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "洪暄茹",
+      "team": "",
+      "honorType": "player",
+      "note": "謝謝學姐！！ vs 你剛剛攻擊了我的村莊",
+      "period": 1,
+      "teamId": "",
+      "id": "honor-df03ce4ff676"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "劉仲恩",
+      "team": "",
+      "honorType": "player",
+      "note": "破房的辯士 vs 彰化邊緣陣線聯盟",
+      "period": 1,
+      "teamId": "",
+      "id": "honor-24239fb1e1b3"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "林奕鋐",
+      "team": "",
+      "honorType": "player",
+      "note": "7/14一領前皆可向大會申請更換 vs 建竹實聯隊",
+      "period": 1,
+      "teamId": "",
+      "id": "honor-75abf4593641"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "彭聖芯",
+      "team": "",
+      "honorType": "player",
+      "note": "正方反方都不隊 vs 沒錢對不隊",
+      "period": 2,
+      "teamId": "",
+      "id": "honor-9fb2197ee539"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "李瀅熙",
+      "team": "謝謝學姐！！",
+      "honorType": "player",
+      "note": "你剛剛攻擊了我的村莊 vs 謝謝學姐！！；反方四辯",
+      "period": 2,
+      "teamId": "p151",
+      "id": "honor-cf034fd23fdf"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "汪雅媛",
+      "team": "甜甜豬小隊",
+      "honorType": "player",
+      "note": "喜歡漂亮的凱怡學姐沒有不隊 vs 甜甜豬小隊；反方三辯",
+      "period": 2,
+      "teamId": "p149",
+      "id": "honor-0e4e3d8d193c"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "詹舒涵",
+      "team": "我學長們喝醉了",
+      "honorType": "player",
+      "note": "我學長們喝醉了 vs 曌；正方二辯",
+      "period": 2,
+      "teamId": "p143",
+      "id": "honor-5a04423dd56b"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "黃有晟",
+      "team": "燈燈燈燈",
+      "honorType": "player",
+      "note": "燈燈燈燈 vs 霸道總裁小嬌7；正方二辯",
+      "period": 2,
+      "teamId": "p148",
+      "id": "honor-d2551a377a8e"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "石永晴",
+      "team": "破房的辯士",
+      "honorType": "player",
+      "note": "彰化邊緣陣線聯盟 vs 破房的辯士；反方三辯",
+      "period": 3,
+      "teamId": "p150",
+      "id": "honor-8193c354f795"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "劉恩聖",
+      "team": "7/14一領前皆可向大會申請更換",
+      "honorType": "player",
+      "note": "建竹實聯隊 vs 7/14一領前皆可向大會申請更換；反方二辯",
+      "period": 3,
+      "teamId": "p136",
+      "id": "honor-427316b91db8"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "董安裕",
+      "team": "喜歡漂亮的凱怡學姐沒有不隊",
+      "honorType": "player",
+      "note": "甜甜豬小隊 vs 喜歡漂亮的凱怡學姐沒有不隊；反方四辯",
+      "period": 3,
+      "teamId": "p138",
+      "id": "honor-a38e325a6dd2"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "彭筱涵",
+      "team": "我學長們喝醉了",
+      "honorType": "player",
+      "note": "曌 vs 我學長們喝醉了；反方四辯",
+      "period": 3,
+      "teamId": "p143",
+      "id": "honor-32716cbe164d"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-17",
+      "honorName": "單場優秀辯士",
+      "recipient": "曾蜜莉",
+      "team": "燈燈燈燈",
+      "honorType": "player",
+      "note": "霸道總裁小嬌7 vs 燈燈燈燈；反方三辯",
+      "period": 3,
+      "teamId": "p148",
+      "id": "honor-651a2b35838f"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "honorName": "單場優秀辯士",
+      "recipient": "洪暄茹",
+      "team": "你剛剛攻擊了我的村莊",
+      "honorType": "player",
+      "note": "八進四：沒錢對不隊 vs 你剛剛攻擊了我的村莊；反方三辯",
+      "period": 1,
+      "teamId": "p137",
+      "id": "honor-229f275b0366"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "honorName": "單場優秀辯士",
+      "recipient": "劉恩聖",
+      "team": "7/14一領前皆可向大會申請更換",
+      "honorType": "player",
+      "note": "八進四：彰化邊緣聯盟 vs 7/14一領前皆可向大會申請更換；反方二辯",
+      "period": 1,
+      "teamId": "p136",
+      "id": "honor-91c74638455c"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "honorName": "單場優秀辯士",
+      "recipient": "周庭碩",
+      "team": "我國不應廢除單一性別學校",
+      "honorType": "player",
+      "note": "八進四：燈燈燈燈 vs 我國不應廢除單一性別學校；正方四辯",
+      "period": 1,
+      "teamId": "p142",
+      "id": "honor-f470702d040b"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-18",
+      "honorName": "單場優秀辯士",
+      "recipient": "董安裕",
+      "team": "喜歡漂亮的凱怡學姐沒有不隊",
+      "honorType": "player",
+      "note": "八進四：喜歡漂亮的凱怡學姐沒有不隊 vs 我學長們喝醉了；正方四辯",
+      "period": 1,
+      "teamId": "p138",
+      "id": "honor-ab5abe2d9247"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "單場優秀辯士",
+      "recipient": "劉恩聖",
+      "team": "7/14一領前皆可向大會申請更換",
+      "honorType": "player",
+      "note": "四進二：你剛剛攻擊了我的村莊 vs 7/14一領前皆可向大會申請更換；反方二辯",
+      "period": 1,
+      "teamId": "p136",
+      "id": "honor-3dc625813761"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "單場優秀辯士",
+      "recipient": "彭筱涵",
+      "team": "我學長們喝醉了",
+      "honorType": "player",
+      "note": "四進二：我國不應廢除單一性別學校 vs 我學長們喝醉了；反方四辯",
+      "period": 1,
+      "teamId": "p143",
+      "id": "honor-411b2f2eaaaf"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "單場最佳辯士",
+      "recipient": "彭筱涵",
+      "team": "我學長們喝醉了",
+      "honorType": "player",
+      "note": "冠亞決賽：7/14一領前皆可向大會申請更換 vs 我學長們喝醉了；反方四辯",
+      "period": 2,
+      "teamId": "p143",
+      "id": "honor-e8eb25ff97e9"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "冠軍",
+      "recipient": "我學長們喝醉了",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p143",
+      "id": "honor-8f5adaa0bc67"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "亞軍",
+      "recipient": "7/14一領前皆可向大會申請更換",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p136",
+      "id": "honor-bac9fc1e595f"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "季軍",
+      "recipient": "你剛剛攻擊了我的村莊",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p137",
+      "id": "honor-15ea345f4717"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "季軍",
+      "recipient": "我國不應廢除單一性別學校",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "p142",
+      "id": "honor-5b899b194581"
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "matchDate": "2024-08-19",
+      "honorName": "全程最佳辯士",
+      "recipient": "彭筱涵",
+      "team": "我學長們喝醉了",
+      "honorType": "player",
+      "note": "",
+      "teamId": "p143",
+      "id": "honor-485e1dea02da"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -36683,8 +37728,18 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
+      "topic": "當代年輕人更應承擔責任／追求理想",
+      "explanation": ""
+    },
+    {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "topic": "當代耽美文化有利於／不利於消除男性中心主義",
+      "explanation": ""
+    },
+    {
+      "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
+      "topic": "當代年輕人更應承擔責任／追求理想",
       "explanation": ""
     },
     {
@@ -36731,10 +37786,10 @@ window.DEBATE_PUBLIC_DATA = {
     },
     "第二十屆宮燈盃辯論公開賽青少年組": {
       "startDate": "2026-09-25",
-      "endDate": "2026-09-27",
+      "endDate": "2026-09-28",
       "organizer": "",
       "location": "淡江大學",
-      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。",
+      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。閉幕式與最終獎項公告日期為2026-09-28。",
       "ageRestriction": true,
       "teamCount": 17
     },
@@ -36785,6 +37840,24 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "ageRestriction": null,
       "teamCount": 24
+    },
+    "第十九屆宮燈盃辯論公開賽青少年組": {
+      "startDate": "2025",
+      "endDate": "2025",
+      "organizer": "",
+      "location": "",
+      "note": "年份由使用者確認為2025；逐場日期與時段未載明，僅登錄目前提供的兩場賽果。",
+      "ageRestriction": null,
+      "teamCount": 4
+    },
+    "第十八屆宮燈盃辯論公開賽青少年組": {
+      "startDate": "2024-08-17",
+      "endDate": "2024-08-19",
+      "organizer": "",
+      "location": "",
+      "note": "2024年8月17日至19日；8月17日各時段、8月18日八進四、8月19日四進二及冠亞決賽。冠亞決賽會場依專案慣例推定為1。",
+      "ageRestriction": null,
+      "teamCount": 16
     },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,

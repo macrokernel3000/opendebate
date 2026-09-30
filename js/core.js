@@ -5,6 +5,7 @@
 
   function formatDate(value) {
     if (!value || value === "日期未載明") return "日期未載明";
+    if (/^\d{4}$/.test(String(value))) return String(value);
     const [year, month, day] = value.split("-");
     return `${year}.${Number(month)}.${Number(day)}`;
   }
