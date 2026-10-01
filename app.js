@@ -372,32 +372,37 @@ function renderEventPodium(event) {
 }
 
 function renderTimeline() {
-  const timelineEvents = [...events].sort((a, b) => (b.latestDate || "").localeCompare(a.latestDate || ""));
   const now = new Date();
   const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
   const upcomingEvents = [...(window.DEBATE_UPCOMING_EVENTS || [])]
-    .filter((event) => event.startDate >= today)
-    .sort((a, b) => a.startDate.localeCompare(b.startDate));
+    .filter((event) => event.startDate >= today);
   const dateRange = (event) => {
     const start = event.startDate.slice(5).replace("-", "/");
     const end = event.endDate.slice(5).replace("-", "/");
     return start === end ? start : `${start}–${end}`;
   };
-  const upcomingNodes = upcomingEvents.map((event) => `
-    <article class="timeline-node timeline-upcoming-node" aria-label="即將舉行：${escapeHtml(event.name)}，${escapeHtml(dateRange(event))}">
-      <span class="timeline-date">${escapeHtml(dateRange(event))}</span>
-      <span class="timeline-dot" aria-hidden="true">✦</span>
-      <span class="timeline-upcoming-label">即將舉行</span>
-      <span class="timeline-name">${escapeHtml(event.name)}</span>
-    </article>`).join("");
-  const recentNodes = timelineEvents.map((event) => `
-    <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
-      <span class="timeline-date">${escapeHtml(formatDate(event.latestDate))}</span>
-      <span class="timeline-dot" aria-hidden="true"></span>
-      <span class="timeline-name">${escapeHtml(event.name)}</span>
-      <span class="timeline-tooltip" role="tooltip"><small>冠軍</small><strong>${escapeHtml(eventChampion(event))}</strong><em>點擊查看完整賽果</em></span>
-    </button>`).join("");
-  els.eventTimeline.innerHTML = upcomingNodes + recentNodes;
+  const timelineItems = [
+    ...upcomingEvents.map((event) => ({ type: "upcoming", event, sortDate: event.endDate || event.startDate })),
+    ...events.map((event) => ({ type: "recorded", event, sortDate: event.latestDate || "" })),
+  ].sort((a, b) => b.sortDate.localeCompare(a.sortDate) || a.event.name.localeCompare(b.event.name, "zh-Hant"));
+  els.eventTimeline.innerHTML = timelineItems.map(({ type, event }) => {
+    if (type === "upcoming") {
+      return `
+        <article class="timeline-node timeline-upcoming-node" aria-label="即將舉行：${escapeHtml(event.name)}，${escapeHtml(dateRange(event))}">
+          <span class="timeline-date">${escapeHtml(dateRange(event))}</span>
+          <span class="timeline-dot" aria-hidden="true">✦</span>
+          <span class="timeline-upcoming-label">即將舉行</span>
+          <span class="timeline-name">${escapeHtml(event.name)}</span>
+        </article>`;
+    }
+    return `
+      <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
+        <span class="timeline-date">${escapeHtml(formatDate(event.latestDate))}</span>
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <span class="timeline-name">${escapeHtml(event.name)}</span>
+        <span class="timeline-tooltip" role="tooltip"><small>冠軍</small><strong>${escapeHtml(eventChampion(event))}</strong><em>點擊查看完整賽果</em></span>
+      </button>`;
+  }).join("");
 }
 
 function renderLeaderboards() {
