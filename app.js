@@ -93,10 +93,21 @@ function eventSummaries() {
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
+function playerRosterEntries(playerName) {
+  return Object.entries(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flatMap(([competitionName, entries]) =>
+    entries.filter((roster) => [...(roster.leaders || []), ...(roster.players || [])].includes(playerName))
+      .map((roster) => ({ ...roster, competitionName }))
+  );
+}
+
 function knownPlayers() {
+  const rosterPeople = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flatMap((entries) =>
+    entries.flatMap((roster) => [...(roster.leaders || []), ...(roster.players || [])])
+  );
   return unique([
     ...honors.filter((item) => item.honorType === "player").map((item) => item.recipient),
     ...records.flatMap((record) => Object.values(record.players || {}).flat()),
+    ...rosterPeople,
   ].filter(Boolean));
 }
 
@@ -344,13 +355,15 @@ function renderPlayerDetail(playerName) {
     .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || a.competitionName.localeCompare(b.competitionName, "zh-Hant"));
   const playerMatches = records.filter((record) => Object.values(record.players || {}).some((names) => names.includes(playerName)))
     .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
-  const affiliations = unique(playerHonors.map((honor) => honor.team).filter(Boolean));
+  const playerRosters = playerRosterEntries(playerName);
+  const affiliations = unique([...playerHonors.map((honor) => honor.team), ...playerRosters.map((roster) => roster.team)].filter(Boolean));
+  const rosterRows = playerRosters.map((roster) => `<article class="entity-match"><span class="history-date">名單</span><div><strong>${entityPageLink(store.entityForName(roster.team)?.code, roster.team)}</strong><p>${eventRouteLink(roster.competitionName)} · ${roster.players?.includes(playerName) ? "選手" : "領隊"}</p></div></article>`).join("");
   const honorRows = playerHonors.map((honor) => {
     const event = events.find((item) => item.name === honor.competitionName) || { records: [], dates: [], metadata: {} };
     return `<article class="entity-match"><span class="history-date">${escapeHtml(honorDateLabel(honor, event))}</span><div><strong>${escapeHtml(honor.honorName)}</strong><p>${eventRouteLink(honor.competitionName)}${honor.team ? ` · ${entityPageLink(honor.teamId, honor.team)}` : " · 所屬隊伍未載明"}${honor.note ? ` · ${escapeHtml(honor.note)}` : ""}</p></div></article>`;
   }).join("");
   const matchRows = playerMatches.map((record) => `<article class="entity-match"><span class="history-date">${escapeHtml(formatDate(record.matchDate))}</span><div><strong>${entityPageLink(record.teamIds?.affirmative, record.teams?.affirmative)} ${record.scores?.affirmative ?? 0}：${record.scores?.negative ?? 0} ${entityPageLink(record.teamIds?.negative, record.teams?.negative)}</strong><p>${eventRouteLink(record.competitionName)} · 時段 ${escapeHtml(record.period || "-")} · 會場 ${escapeHtml(record.venue || "-")}</p></div></article>`).join("");
-  return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">選手紀錄</p><h2>${escapeHtml(playerName)}的辯論紀錄</h2></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p><h3>公開榮譽</h3><div class="history-list">${honorRows || "<p>目前沒有個人公開榮譽。</p>"}</div><h3>登場紀錄</h3><div class="history-list">${matchRows || "<p>目前沒有逐場選手名單；此頁僅列出可查證的個人榮譽。</p>"}</div></section>`;
+  return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">選手紀錄</p><h2>${escapeHtml(playerName)}的辯論紀錄</h2></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄${playerRosters.length ? ` · <strong>${playerRosters.length}</strong> 筆隊伍名單` : ""}</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p>${playerRosters.length ? `<h3>隊伍名單</h3><div class="history-list">${rosterRows}</div>` : ""}<h3>公開榮譽</h3><div class="history-list">${honorRows || "<p>目前沒有個人公開榮譽。</p>"}</div><h3>登場紀錄</h3><div class="history-list">${matchRows || "<p>目前沒有逐場選手名單；此頁僅列出可查證的個人榮譽。</p>"}</div></section>`;
 }
 
 function eventChampion(event) {
@@ -881,8 +894,10 @@ function renderSearch(query) {
       return `<button class="entity-card${selectedEntityId === entity.code ? " is-selected" : ""}" type="button" data-entity-id="${escapeHtml(entity.code)}"><h3>🏫 ${escapeHtml(entity.name)}</h3><p>${games} 場公開賽果 · ${awards} 筆相關榮譽</p><small>${escapeHtml(entity.code)}${aliases.length ? ` · 別名：${aliases.map(escapeHtml).join("、")}` : ""}</small></button>`;
     }).join("")}
     ${matchedPlayers.map((name) => {
-      const personHonors = honors.filter((item) => item.recipient === name);
-      return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="player-icon" aria-hidden="true">🎤</span>${escapeHtml(name)}</h3><p>${escapeHtml(unique(personHonors.map((item) => item.team)).join("、") || "所屬學校未載明")} · ${personHonors.length} 筆榮譽</p></button>`;
+      const personHonors = honors.filter((item) => item.honorType === "player" && item.recipient === name);
+      const personRosters = playerRosterEntries(name);
+      const teams = unique([...personHonors.map((item) => item.team), ...personRosters.map((roster) => roster.team)].filter(Boolean));
+      return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="player-icon" aria-hidden="true">🎤</span>${escapeHtml(name)}</h3><p>${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆榮譽${personRosters.length ? ` · ${personRosters.length} 筆隊伍名單` : ""}</p></button>`;
     }).join("")}
   </div></section>` : "";
 

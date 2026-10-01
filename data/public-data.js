@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T00:18:01",
+  "generatedAt": "2026-10-02T01:08:08",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -744,8 +744,8 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "code": "p131",
       "type": "p",
-      "name": "誤入商業帝國的長髮男",
-      "aliases": "誤入商噎帝國的長髮男"
+      "name": "誤入商噎帝國的長髮男",
+      "aliases": "誤入商業帝國的長髮男"
     },
     {
       "code": "p132",
@@ -22999,13 +22999,13 @@ window.DEBATE_PUBLIC_DATA = {
       "venue": "",
       "teams": {
         "affirmative": "成功口技社",
-        "negative": "誤入商業帝國的長髮男"
+        "negative": "誤入商噎帝國的長髮男"
       },
       "scores": {
         "affirmative": 0,
         "negative": 9
       },
-      "winner": "誤入商業帝國的長髮男",
+      "winner": "誤入商噎帝國的長髮男",
       "note": "D1-1",
       "players": {
         "affirmative": [],
@@ -23016,7 +23016,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p130",
         "negative": "p131"
       },
-      "id": "match-67a77439fde7"
+      "id": "match-68d515da3600"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -23206,7 +23206,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 1,
       "venue": 4,
       "teams": {
-        "affirmative": "誤入商業帝國的長髮男",
+        "affirmative": "誤入商噎帝國的長髮男",
         "negative": "成功口技社"
       },
       "scores": {
@@ -23224,7 +23224,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p131",
         "negative": "p130"
       },
-      "id": "match-7deb3289b731"
+      "id": "match-785b10bebe2d"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -35370,12 +35370,12 @@ window.DEBATE_PUBLIC_DATA = {
       "matchDate": "2026-09-25",
       "honorName": "單場最佳辯士",
       "recipient": "董科男",
-      "team": "誤入商業帝國的長髮男",
+      "team": "誤入商噎帝國的長髮男",
       "honorType": "player",
       "note": "D1-1",
       "period": 1,
       "teamId": "p131",
-      "id": "honor-3e546af90e31"
+      "id": "honor-76dadc76edcb"
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -37986,44 +37986,44 @@ window.DEBATE_PUBLIC_DATA = {
         "team": "澎湖一中",
         "leaders": [
           "陳廣賢",
-          "陳輝"
+          "陳燁"
         ],
         "players": [
           "陳廣賢",
-          "楊書荷",
+          "楊書荀",
           "蔡孟妘",
           "劉耀仁",
-          "呂榮辰"
+          "呂桀辰"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
         "team": "南湖高中",
         "leaders": [
           "劉書廷",
-          "吳佩蓉"
+          "吳佩臻"
         ],
         "players": [
           "王柏凱",
-          "戴勝清",
+          "戴滕靖",
           "林妤潔",
           "謝欣瑜",
           "黃靖俊"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
         "team": "成淵高中",
         "leaders": [
-          "姚暐伶",
+          "姚暄伶",
           "潘彥成"
         ],
         "players": [
-          "姚暐伶",
+          "姚暄伶",
           "潘彥成",
           "黃鈺琳",
           "陳品菲",
@@ -38031,25 +38031,25 @@ window.DEBATE_PUBLIC_DATA = {
           "張祈恩"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
         "team": "南山高中",
         "leaders": [
           "呂芊穎",
-          "柯宇亘"
+          "柯芓亘"
         ],
         "players": [
           "于潤萱",
           "邱靖",
           "侯品丞",
-          "黃禹埕",
+          "黃禹珵",
           "王毓麟",
-          "陳珮瑋"
+          "陳珀瑋"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38062,11 +38062,11 @@ window.DEBATE_PUBLIC_DATA = {
           "楊浚棋",
           "張育棋",
           "黃浩原",
-          "羅翔全",
+          "羅翊荃",
           "洪睿榮"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38078,29 +38078,29 @@ window.DEBATE_PUBLIC_DATA = {
         "players": [
           "詹于萱",
           "林思涵",
-          "張凱閔",
+          "張凱閎",
           "黃子盈",
           "莊子玄",
           "張承儀"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
         "team": "Harve",
         "leaders": [
-          "吳祐佑",
+          "吳昶佑",
           "賴楷沛"
         ],
         "players": [
-          "吳祐佑",
+          "吳昶佑",
           "賴楷沛",
-          "詹勝鈞",
-          "邱鈺凱"
+          "詹勝鈜",
+          "邱鈺剴"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38114,13 +38114,13 @@ window.DEBATE_PUBLIC_DATA = {
           "林毓晴",
           "張沁宇",
           "黃瑞靖",
-          "林勝雍",
+          "林睦雍",
           "張亞晞",
           "陳薇庭",
-          "林宇澤"
+          "林宇瀞"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38144,21 +38144,21 @@ window.DEBATE_PUBLIC_DATA = {
         "team": "世宣67",
         "leaders": [
           "洪郁穗",
-          "黃瑋珉"
+          "黃瑋珏"
         ],
         "players": [
           "洪郁穗",
-          "許芷棋",
-          "劉品勛",
+          "許芷稘",
+          "劉品劼",
           "陳佳苓",
           "孫興宸"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
-        "team": "誤入商業帝國的長髮男",
+        "team": "誤入商噎帝國的長髮男",
         "leaders": [
           "魏冠宇",
           "劉庭蓁"
@@ -38172,7 +38172,7 @@ window.DEBATE_PUBLIC_DATA = {
           "翁子芸"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38185,10 +38185,10 @@ window.DEBATE_PUBLIC_DATA = {
           "鄧丞霖",
           "蔡岳翰",
           "張方易",
-          "楊勁棠"
+          "楊勁梟"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38213,19 +38213,19 @@ window.DEBATE_PUBLIC_DATA = {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
         "team": "白烏鴉辯論隊",
         "leaders": [
-          "陳威銘",
+          "陳咸鋐",
           "劉仲恩"
         ],
         "players": [
           "許芯睿",
-          "劉芷筠",
+          "劉芷甯",
           "高偉承",
           "鄭馨宇",
           "林辰澔",
           "廖家玉"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38252,14 +38252,14 @@ window.DEBATE_PUBLIC_DATA = {
           "曾丞浩"
         ],
         "players": [
-          "鄭昱凱",
+          "鄢昱凱",
           "陳羿廷",
           "曾丞浩",
           "黃紹齊",
-          "檀易辰"
+          "檀易宸"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       },
       {
         "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
@@ -38274,11 +38274,11 @@ window.DEBATE_PUBLIC_DATA = {
           "張宸睿",
           "葉智安",
           "童守鈞",
-          "吳桐華",
+          "吳栩華",
           "陳柏均"
         ],
         "status": "公告名單",
-        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期"
+        "sourceNote": "使用者提供的2026年第二十屆宮燈盃選手名單圖片；圖片未標日期；姓名依使用者人工校正版"
       }
     ]
   }
