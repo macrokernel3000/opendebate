@@ -12,16 +12,16 @@ if [[ -n "$1" ]]; then
   fi
   NAME="${1:t}"
   if [[ "$NAME" == entity-registry* ]]; then
-    if [[ "$EXT" != "xlsx" ]]; then
-      echo "單位名冊請輸出為 Excel .xlsx。按 Return 關閉。"
+    if [[ "$EXT" != "csv" ]]; then
+      echo "單位名冊請輸出為 UTF-8 CSV，更新程式會直接讀取 entity-registry.csv。按 Return 關閉。"
       read
       exit 1
     fi
     mkdir -p "$DIR/data/backups"
-    if [[ -e "$DIR/data/entity-registry.xlsx" ]]; then
-      cp "$DIR/data/entity-registry.xlsx" "$DIR/data/backups/entity-registry-$(date +%Y%m%d-%H%M%S).xlsx"
+    if [[ -e "$DIR/data/entity-registry.csv" ]]; then
+      cp "$DIR/data/entity-registry.csv" "$DIR/data/backups/entity-registry-$(date +%Y%m%d-%H%M%S).csv"
     fi
-    TARGET="$DIR/data/entity-registry.xlsx"
+    TARGET="$DIR/data/entity-registry.csv"
   else
     [[ "$NAME" == public-data* ]] || NAME="public-data-${NAME}"
     TARGET="$DIR/data/$NAME"

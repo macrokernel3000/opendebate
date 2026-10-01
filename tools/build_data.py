@@ -20,6 +20,7 @@ SITE_CONTENT_PATH = DATA_DIR / "site-content.csv"
 EVENT_METADATA_PATH = DATA_DIR / "event-metadata.csv"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 SEO_PAGE_PATH = ROOT / "debate-records.html"
+EVENT_ROSTERS_PATH = DATA_DIR / "event-rosters.csv"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -206,6 +207,40 @@ def load_event_metadata():
                 item["brochureTeamLimit"] = team_limit
             metadata[competition] = item
         return metadata
+
+
+def load_event_rosters():
+    """Load published team rosters separately from confirmed match appearances."""
+    if not EVENT_ROSTERS_PATH.exists():
+        return {}
+    with EVENT_ROSTERS_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        required = {"盃賽", "隊伍", "領隊", "選手", "名單狀態", "來源說明"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise SystemExit(f"{EVENT_ROSTERS_PATH.name} 必須包含欄位：" + "、".join(sorted(required)))
+        rosters = {}
+        for line_number, row in enumerate(reader, start=2):
+            competition = clean(row.get("盃賽"))
+            team = clean(row.get("隊伍"))
+            if not competition or not team:
+                warn(f"略過 {EVENT_ROSTERS_PATH.name} 第 {line_number} 列：缺少盃賽或隊伍")
+                continue
+            item = {
+                "competitionName": competition,
+                "team": team,
+                "leaders": split_players(row.get("領隊")),
+                "players": split_players(row.get("選手")),
+                "status": clean(row.get("名單狀態")) or "公告名單",
+                "sourceNote": clean(row.get("來源說明")),
+            }
+            rosters.setdefault(competition, []).append(item)
+        for competition, entries in rosters.items():
+            seen = set()
+            for entry in entries:
+                if entry["team"] in seen:
+                    raise SystemExit(f"{EVENT_ROSTERS_PATH.name}：{competition} 的隊伍「{entry['team']}」重複")
+                seen.add(entry["team"])
+        return rosters
 
 
 def cell_column(reference):
@@ -556,7 +591,7 @@ def validate_best_debater_categories(records, honors):
             )
 
 
-def write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source):
+def write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source, event_rosters):
     lines = [
         f"更新時間：{datetime.now().isoformat(timespec='seconds')}",
         f"快取版本：{version}",
@@ -564,6 +599,7 @@ def write_update_report(version, sources, events, records, honors, attendance, t
         "資料來源：" + "、".join(sources),
         f"目前收錄盃賽：{len(events)} 個",
         f"資料筆數：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題",
+        f"公告隊伍名單：{sum(len(items) for items in event_rosters.values())} 隊（獨立保存，不計入逐場登場紀錄）",
         f"單位名冊：{len(entities)} 筆（來源 {registry_source}，已同步 {REGISTRY_PATH.name}）",
         "",
         "盃賽清單：",
@@ -598,6 +634,20 @@ def build():
     attendance = attach_entities(records, honors, lookup)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    event_rosters = load_event_rosters()
+    if event_rosters:
+        sources.append(EVENT_ROSTERS_PATH.name)
+    for competition, entries in event_rosters.items():
+        match_teams = {
+            clean(team)
+            for record in records if record["competitionName"] == competition
+            for team in record["teams"].values() if clean(team)
+        }
+        roster_teams = {entry["team"] for entry in entries}
+        if match_teams != roster_teams:
+            missing = sorted(match_teams - roster_teams)
+            additional = sorted(roster_teams - match_teams)
+            warn(f"名單核對提醒：{competition} 公布名單與已收錄賽事隊伍不同；未列於名單：{missing}；名單另列：{additional}")
     for competition in event_names(records, honors, topics):
         metadata = event_metadata.setdefault(competition, {})
         participating_teams = {
@@ -618,6 +668,7 @@ def build():
         "topics": topics,
         "siteContent": site_content,
         "eventMetadata": event_metadata,
+        "eventRosters": event_rosters,
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
@@ -625,7 +676,7 @@ def build():
     events = event_names(records, honors, topics)
     update_seo_files(events, records, honors)
     registry_source = REGISTRY_PATH.name if REGISTRY_PATH.exists() else REGISTRY_XLSX_PATH.name
-    write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source)
+    write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source, event_rosters)
     print("資料來源：" + "、".join(sources))
     print(f"目前收錄盃賽：{len(events)} 個")
     print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題")

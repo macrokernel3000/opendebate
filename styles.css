@@ -125,6 +125,11 @@ button { color: inherit; }
 .olympic-table { width: 100%; min-width: 760px; border-collapse: collapse; background: white; font-size: 13px; }
 .olympic-table th, .olympic-table td { height: 46px; border-bottom: 1px solid var(--line); padding: 7px 10px; text-align: center; white-space: nowrap; }
 .olympic-table thead th { height: 42px; background: #f5f4ed; color: var(--muted); font-size: 11px; font-weight: 850; }
+.olympic-table thead .olympic-group-head th { height: 36px; border-bottom: 1px solid #c9d9ce; background: #e8f1eb; color: var(--green-dark); }
+.olympic-table thead .olympic-group-head th[rowspan="2"] { background: #f5f4ed; color: var(--muted); }
+.olympic-table thead .olympic-detail-head th { height: 34px; background: #f5f4ed; }
+.olympic-table thead th[rowspan="2"] { min-width: 0; }
+.olympic-table thead th[rowspan="2"]:nth-last-child(2) { min-width: 176px; white-space: normal; line-height: 1.35; }
 .olympic-table .school-column { min-width: 165px; text-align: left; }
 .olympic-table tbody .school-column { color: var(--ink); font-size: 13px; font-weight: 850; }
 .medal-sort { display: inline-flex; align-items: center; gap: 3px; border: 0; padding: 4px; background: transparent; color: inherit; font: inherit; cursor: pointer; }
@@ -136,7 +141,7 @@ button { color: inherit; }
 .award-symbol-group { display: inline-flex; align-items: center; gap: 3px; margin: 0 3px; font-variant-numeric: tabular-nums; }
 .award-symbol-group .trophy-medal { display: inline-grid; width: 22px; height: 22px; border-radius: 7px; font-size: 10px; }
 .award-symbol-group strong { font-size: 12px; }
-.total-honors-cell { min-width: 76px; background: #fbf7e9; color: var(--green-dark); font-variant-numeric: tabular-nums; }
+.total-honors-cell { min-width: 176px; background: #fbf7e9; color: var(--green-dark); font-variant-numeric: tabular-nums; }
 .total-honors-cell strong { font-size: 15px; }
 .medal-sort.is-sort-primary { color: var(--green-dark); font-weight: 950; }
 .leaderboard-band[data-range="all"] .medal-sort.is-sort-primary { color: #825f00; }
@@ -270,8 +275,19 @@ button { color: inherit; }
 .entity-trophy-honor > small { flex: 0 0 auto; color: var(--muted); font-size: 10px; }
 .entity-event-years { display: grid; gap: 10px; }
 .entity-event-year h4 { margin: 0 0 6px; color: var(--coral); font-size: 12px; }
-.entity-event-list { display: flex; flex-wrap: wrap; gap: 8px; }
+.entity-event-list { display: flex; flex-wrap: wrap; align-items: start; gap: 9px; }
 .entity-event-list span { padding: 7px 10px; background: var(--soft); color: var(--green-dark); font-size: 12px; font-weight: 800; }
+.entity-event-entry { display: grid; min-width: min(220px, 100%); max-width: 340px; align-content: start; gap: 5px; }
+.entity-event-roster { border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: #fffdf7; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.entity-event-roster > summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--green-dark); font-weight: 850; cursor: pointer; list-style: none; }
+.entity-event-roster > summary::-webkit-details-marker { display: none; }
+.entity-event-roster > summary::after { content: "＋"; color: var(--teal); font-size: 14px; }
+.entity-event-roster[open] > summary::after { content: "−"; }
+.entity-event-roster > summary span:last-child { margin-left: auto; color: var(--muted); font-size: 10px; font-weight: 700; }
+.entity-event-roster p { margin: 5px 0; color: var(--muted); font-size: 10px; }
+.entity-event-roster > div { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 5px; margin-top: 4px; overflow-wrap: anywhere; }
+.entity-event-roster > div strong { color: var(--coral); }
+.entity-event-roster > div span { padding: 0; background: transparent; color: var(--ink); font-size: 11px; font-weight: 500; }
 .event-summary { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin: 38px 0 22px; padding-bottom: 20px; border-bottom: 4px solid var(--ink); }
 .event-summary h2 { margin: 0; max-width: 780px; font-size: clamp(25px, 4vw, 38px); }
 .event-summary p { margin: 8px 0 0; color: var(--muted); }
@@ -281,6 +297,27 @@ button { color: inherit; }
 .event-metadata span { color: var(--coral); font-weight: 900; }
 .event-metadata strong { color: var(--ink); }
 .event-topics { margin: 0 0 32px; border: 1px solid var(--line); border-left: 7px solid var(--yellow); padding: 20px; background: #fffaf0; }
+.event-rosters { margin: 0 0 28px; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 16px 18px; background: #f7fbf8; }
+.event-rosters > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green-dark); font-size: 17px; font-weight: 900; cursor: pointer; list-style: none; }
+.event-rosters > summary::-webkit-details-marker { display: none; }
+.event-rosters > summary::after { content: "＋"; color: var(--teal); font-size: 19px; }
+.event-rosters[open] > summary::after { content: "−"; }
+.event-rosters > summary span:last-child { margin-left: auto; color: var(--muted); font-size: 12px; }
+.event-roster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+.event-roster-card { min-width: 0; border: 1px solid var(--line); padding: 12px; background: white; }
+.event-roster-card h4 { margin: 0 0 8px; color: var(--green-dark); font-size: 14px; line-height: 1.5; }
+.event-roster-card p { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 7px; margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.event-roster-card p strong { color: var(--coral); }
+.entity-roster-disclosure { margin: 22px 0; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 14px 16px; background: #f7fbf8; }
+.entity-roster-disclosure > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green-dark); font-weight: 900; cursor: pointer; list-style: none; }
+.entity-roster-disclosure > summary::-webkit-details-marker { display: none; }
+.entity-roster-disclosure > summary::after { content: "＋"; color: var(--teal); font-size: 18px; }
+.entity-roster-disclosure[open] > summary::after { content: "−"; }
+.entity-roster-disclosure > summary span:last-child { margin-left: auto; color: var(--muted); font-size: 12px; }
+.entity-roster-entry { border-top: 1px solid var(--line); padding-top: 10px; }
+.entity-roster-entry h4 { margin: 0; font-size: 14px; }
+.entity-roster-entry p { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px; margin: 6px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.entity-roster-entry p strong { color: var(--coral); }
 .subheading-row { display: flex; align-items: center; justify-content: space-between; gap: 15px; }
 .subheading-row .subheading { margin: 0; }
 .subheading-row > span { color: var(--muted); font-size: 12px; font-weight: 850; }
@@ -567,6 +604,8 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 }
 
 @media (max-width: 640px) {
+  .event-roster-grid { grid-template-columns: minmax(0, 1fr); }
+  .event-rosters { padding: 12px; }
   .overview-stats-tab, #overviewStatsPanel { display: none !important; }
   /* Keep page movement vertical; horizontal movement belongs to the card rails. */
   html { overflow-x: hidden; }

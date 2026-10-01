@@ -27,6 +27,7 @@ Banner 下方的網站介紹文字由 `data/site-content.csv` 控制。修改 `v
 - `honors`：團體或個人榮譽。
 - `entities`：固定編號的學校、特殊隊伍與大學。
 - `attendance`：登場選手紀錄，目前不顯示在網頁，保留給未來的登場次數統計。
+- `eventRosters`：主辦方公布的隊伍名單，獨立保存並顯示在賽事頁及隊伍的參賽賽事紀錄中。
 - `topics`：各屆賽事的多筆辯題，目前不顯示在網頁，保留給未來賽事頁使用。
 
 單位代碼採三種前綴：`s001` 起為中學端學校、`p001` 起為特殊或跨校隊伍、`u001` 起為大學。名冊目前使用 `data/entity-registry.csv`。同校不同名稱可用 `|` 放在 `aliases` 欄，搜尋、戰績與積分都會依同一代碼歸戶。名稱 `0` 是有效隊名，空白列則會忽略。
@@ -75,7 +76,7 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 只有對 repository 有寫入權限的人通常才能按 `Run workflow`；一般訪客不能按。這個測試版使用 Google Sheet 公開匯出連結，因此知道試算表網址的人可能讀得到資料。若要讓試算表保持私密，之後可改成 GitHub Secrets + Google 服務帳號版本。
 
-名冊更新方式：用 Numbers、Excel 或試算表編輯 `entity-registry.csv`，保留 UTF-8 CSV 格式後執行同一個更新工具。
+名冊更新方式：用 Numbers、Excel 或試算表編輯 `entity-registry.csv`，匯出 UTF-8 CSV 後可直接拖到 `更新網站資料.command`；工具會先備份現有名冊，再更新正式讀取的 `data/entity-registry.csv`。此檔案是別名與固定代碼的唯一正式來源，Google 試算表更新及本機建置都會沿用其中的歸戶設定。
 
 更新時也會自動改變 `index.html` 裡的資料、程式與樣式版本，避免 GitHub Pages 或瀏覽器繼續使用舊快取。上傳時請至少一併提交：
 
@@ -92,6 +93,7 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 - `data/public-data*.csv`：一個賽事一個檔案，所有歷史與新增來源都會合併讀取。
 - `data/entity-registry.csv`：固定單位代碼、正式名稱與別名的主要編輯來源。
+- `data/event-rosters.csv`：有來源可查的隊伍公告名單；領隊及選手名單不填入逐場出賽欄位。
 - `data/public-data.js`：由更新程式自動產生，不需編輯。
 - `tools/build_data.py`：資料轉換程式，不需編輯。
 - `data/seed-public-data.js`：舊版備份，網站不會讀取。

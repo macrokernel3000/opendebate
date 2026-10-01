@@ -80,7 +80,8 @@ const els = {
 
 function eventSummaries() {
   const metadata = window.DEBATE_PUBLIC_DATA?.eventMetadata || {};
-  const names = unique([...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName), ...topics.map((item) => item.competitionName)]);
+  const rosters = window.DEBATE_PUBLIC_DATA?.eventRosters || {};
+  const names = unique([...Object.keys(rosters), ...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName), ...topics.map((item) => item.competitionName)]);
   return names.map((name) => {
     const eventRecords = records.filter((item) => item.competitionName === name);
     const eventHonors = honors.filter((item) => item.competitionName === name);
@@ -88,7 +89,7 @@ function eventSummaries() {
     const dates = unique([eventMetadata.startDate, eventMetadata.endDate, ...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
     const eventTopics = topics.filter((item) => item.competitionName === name);
     const teamCount = unique(eventRecords.flatMap((item) => Object.values(item.teams || {})).filter(Boolean)).length;
-    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, dates, latestDate: dates.at(-1) || "", teamCount, metadata: metadata[name] || {} };
+    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, rosters: rosters[name] || [], dates, latestDate: dates.at(-1) || "", teamCount, metadata: metadata[name] || {} };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 
@@ -422,11 +423,14 @@ function renderLeaderboards() {
   visibleHonors.forEach((honor) => {
     const row = schoolRows.get(honor.teamId);
     if (!row) return;
-    row.totalHonors += 1;
     const rank = rankByHonor(honor);
-    if (rank) row[rank] += 1;
+    if (rank) {
+      row[rank] += 1;
+      row.totalHonors += 1;
+    }
     else if (honor.honorType === "player" && isCoursePlayerHonor(honor)) {
       row.fullCourse += 1;
+      row.totalHonors += 1;
       if (isFullCourseBest(honor)) row.fullBest += 1;
       else row.fullExcellent += 1;
     } else {
@@ -450,7 +454,7 @@ function renderLeaderboards() {
   });
   winIds.forEach((id) => { if (id && schoolRows.has(id)) schoolRows.get(id).wins += 1; });
   const allRows = [...schoolRows.values()];
-  const rowHasAwards = (row) => row.gold + row.silver + row.bronze + row.white + row.fullCourse + row.other > 0;
+  const rowHasAwards = (row) => row.totalHonors > 0;
   const teamAwardCount = (row) => row.gold + row.silver + row.bronze + row.white;
   const categoryCount = (row, category) => category === "team" ? teamAwardCount(row) : category === "individual" ? row.fullCourse : category === "otherOnly" ? row.other : category === "all" ? row.totalHonors : row[category];
   const rowHasCategory = (row) => honorCategoryFilter === "all" ? rowHasAwards(row) : categoryCount(row, honorCategoryFilter) > 0;
@@ -467,7 +471,7 @@ function renderLeaderboards() {
   const medalCell = (row, key) => `<td class="medal-cell"><span class="trophy-medal ${key}">${medalLabel(key)}</span><strong>${row[key]}</strong></td>`;
   const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, , count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
   const topRows = orderedRows.slice(0, 10);
-  els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${entityPageLink(row.id, store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}<td class="total-honors-cell"><strong>${row.totalHonors}</strong></td></tr>`).join("") || '<tr><td class="olympic-empty" colspan="9">目前沒有符合條件的榮譽紀錄。</td></tr>';
+  els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${entityPageLink(row.id, store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}<td class="total-honors-cell"><strong>${row.totalHonors}</strong></td>${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}</tr>`).join("") || '<tr><td class="olympic-empty" colspan="9">目前沒有符合條件的榮譽紀錄。</td></tr>';
   const mobileRows = allRows.filter(rowHasCategory).sort((a, b) => categoryCount(b, honorCategoryFilter) - categoryCount(a, honorCategoryFilter) || b.totalHonors - a.totalHonors || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10);
   const mobileAwardValue = (tone, label, count) => count ? `<span class="mobile-award-value"><i class="trophy-medal ${tone}">${label}</i><b>${count}</b></span>` : "";
   const mobileCount = (row) => {
@@ -736,6 +740,11 @@ function renderEvent(name, target = els.eventDetail) {
   const metadata = event.metadata || {};
   const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
   const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
+  const rosterSection = event.rosters.length ? `<details class="event-rosters"><summary><span>📋 隊伍名單</span><span>${event.rosters.length} 隊</span></summary><div class="event-roster-grid">${event.rosters.map((roster) => {
+    const teamEntity = store.entityForName(roster.team);
+    const team = teamEntity ? entityPageLink(teamEntity.code, roster.team) : escapeHtml(roster.team);
+    return `<article class="event-roster-card"><h4>${team}</h4>${roster.leaders?.length ? `<p><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></p>` : ""}${roster.players?.length ? `<p><strong>選手</strong><span>${roster.players.map(escapeHtml).join("、")}</span></p>` : ""}</article>`;
+  }).join("")}</div></details>` : "";
   target.innerHTML = `
     <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
     <div class="event-summary">
@@ -744,6 +753,7 @@ function renderEvent(name, target = els.eventDetail) {
     </div>
     ${topicSection}
     ${metadataSection}
+    ${rosterSection}
     <div class="event-content-grid">
       <div class="event-scores"><h3 class="subheading">比賽結果</h3>${matchDays || '<div class="search-empty"><p>尚無公開戰果</p></div>'}</div>
       <aside class="event-honors"><h3 class="subheading">🏆 公開榮譽</h3>${eventHonors.length ? renderEventHonors(event) : "<p>尚無公開榮譽。</p>"}</aside>
@@ -895,8 +905,10 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
   const entityRecords = records.filter((item) => item.teamIds?.affirmative === entity.code || item.teamIds?.negative === entity.code)
     .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(b.period) - Number(a.period));
   const entityHonors = honors.filter((item) => item.teamId === entity.code).sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
+  const entityRosters = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat()
+    .filter((roster) => store.entityForName(roster.team)?.code === entity.code);
   const wins = entityRecords.filter((match) => matchResultForEntity(match, entity.code) === "勝").length;
-  const participatedEvents = unique([...entityRecords.map((item) => item.competitionName), ...entityHonors.map((item) => item.competitionName)]);
+  const participatedEvents = unique([...entityRecords.map((item) => item.competitionName), ...entityHonors.map((item) => item.competitionName), ...entityRosters.map((item) => item.competitionName)]);
   const entityLink = entityPageLink;
   const eventLink = (name, className = "") => `<button type="button" class="entity-event-link ${className}" data-event-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
   const matchRows = entityRecords.map((match) => {
@@ -950,7 +962,14 @@ function renderEntityDetail(entity, detailId = "entityDetail", standalone = fals
     const year = (event?.latestDate || "").slice(0, 4) || "年份未載明";
     eventsByYear.set(year, [...(eventsByYear.get(year) || []), name]);
   });
-  const participatedRows = [...eventsByYear.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([year, names]) => `<section class="entity-event-year"><h4>${escapeHtml(year)}</h4><div class="entity-event-list">${names.map((name) => eventLink(name)).join("")}</div></section>`).join("");
+  const rosterByEvent = new Map(entityRosters.map((roster) => [roster.competitionName, roster]));
+  const rosterInEventRecord = (name) => {
+    const roster = rosterByEvent.get(name);
+    if (!roster) return "";
+    const players = roster.players || [];
+    return `<details class="entity-event-roster"><summary><span>📋 選手名單</span><span>${players.length} 位</span></summary>${roster.leaders?.length ? `<div><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></div>` : ""}${players.length ? `<div><strong>選手</strong><span>${players.map(escapeHtml).join("、")}</span></div>` : ""}</details>`;
+  };
+  const participatedRows = [...eventsByYear.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([year, names]) => `<section class="entity-event-year"><h4>${escapeHtml(year)}</h4><div class="entity-event-list">${names.map((name) => `<article class="entity-event-entry">${eventLink(name)}${rosterInEventRecord(name)}</article>`).join("")}</div></section>`).join("");
   return `<section id="${detailId}" class="result-section entity-detail">${standalone ? '<button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>' : ""}<div class="entity-detail-heading"><div><p class="kicker">${escapeHtml(entity.code)}</p><h2>${escapeHtml(entity.name)}的完整紀錄</h2></div><div><strong>${participatedEvents.length}</strong> 個賽事 · <strong>${entityRecords.length}</strong> 場 · <strong>${wins}</strong> 勝 · <strong>${entityHonors.length}</strong> 項榮譽</div></div><h3 class="entity-trophy-heading">獲獎盃賽</h3><div class="entity-trophy-list">${trophyRows || "<p>尚無盃賽名次或榮譽。</p>"}</div><h3>參加賽事</h3><div class="entity-event-years">${participatedRows || "<p>尚無參賽紀錄。</p>"}</div><details class="entity-records-disclosure"><summary><span>所有戰績</span><span>${entityRecords.length} 場</span></summary><div class="history-list">${matchRows || "<p>尚無公開戰績。</p>"}</div></details></section>`;
 }
 
