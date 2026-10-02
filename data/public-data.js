@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T00:01:13",
+  "generatedAt": "2026-10-03T02:39:50",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -248,13 +248,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p035",
       "type": "p",
       "name": "小丑們要特選和分科",
-      "aliases": ""
-    },
-    {
-      "code": "p036",
-      "type": "p",
-      "name": "小丑們要特選跟分科",
-      "aliases": ""
+      "aliases": "小丑們要特選跟分科"
     },
     {
       "code": "p037",
@@ -4404,9 +4398,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p006",
-        "negative": "p036"
+        "negative": "p035"
       },
-      "id": "match-b38b16c027ad"
+      "id": "match-0859afb3f4f7"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -4753,10 +4747,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p036",
+        "affirmative": "p035",
         "negative": "p045"
       },
-      "id": "match-107928a4903f"
+      "id": "match-e15dabf72f0d"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
@@ -4979,9 +4973,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "p011",
-        "negative": "p036"
+        "negative": "p035"
       },
-      "id": "match-09f21468022d"
+      "id": "match-499f2aac9cd5"
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
