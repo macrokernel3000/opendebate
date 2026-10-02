@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T09:03:33",
+  "generatedAt": "2026-10-02T09:21:45",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -34575,58 +34575,58 @@ window.DEBATE_PUBLIC_DATA = {
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-23",
       "honorName": "冠軍",
       "recipient": "南大附中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s020",
-      "id": "honor-660f52a3a335"
+      "id": "honor-579e7f2e9123"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-23",
       "honorName": "亞軍",
       "recipient": "康橋國際學校",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s049",
-      "id": "honor-dc625ba0465b"
+      "id": "honor-6486e6a72e90"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-23",
       "honorName": "季軍",
       "recipient": "彰化高中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s056",
-      "id": "honor-e5bd92708434"
+      "id": "honor-42964aaa08bf"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-23",
       "honorName": "季軍",
       "recipient": "高雄女中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s153",
-      "id": "honor-045558f1036f"
+      "id": "honor-87ea9505ead1"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
-      "matchDate": "",
+      "matchDate": "2026-08-22",
       "honorName": "全程最佳辯士",
       "recipient": "高偉承",
       "team": "南大附中",
       "honorType": "player",
       "note": "",
       "teamId": "s020",
-      "id": "honor-2eb68c556dfb"
+      "id": "honor-2acd8adcb44b"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -39895,18 +39895,6 @@ window.DEBATE_PUBLIC_DATA = {
         ],
         "status": "報名名單",
         "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄"
-      },
-      {
-        "competitionName": "第十七屆明京盃全國高中職辯論比賽",
-        "team": "高市中正",
-        "leaders": [],
-        "players": [
-          "顏子怡",
-          "鄭巧筑",
-          "蘇映玹"
-        ],
-        "status": "報名名單",
-        "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄；表單校名「中正高中」依使用者確認連結至高市中正"
       },
       {
         "competitionName": "第十七屆明京盃全國高中職辯論比賽",

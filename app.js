@@ -7,7 +7,7 @@ let events = [];
 let selectedEntityId = "";
 let selectedOverviewEntityId = "";
 let honorRange = "recent";
-let honorCategoryFilter = "all";
+let mobileHonorFilters = new Set(["team", "individual"]);
 const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, totalHonors: -1 };
 const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "totalHonors"];
 let leaderboardSortKey = "totalHonors";
@@ -470,12 +470,9 @@ function renderLeaderboards() {
   const rowHasAwards = (row) => row.totalHonors > 0;
   const teamAwardCount = (row) => row.gold + row.silver + row.bronze + row.white;
   const categoryCount = (row, category) => category === "team" ? teamAwardCount(row) : category === "individual" ? row.fullCourse : category === "otherOnly" ? row.other : category === "all" ? row.totalHonors : row[category];
-  const rowHasCategory = (row) => honorCategoryFilter === "all" ? rowHasAwards(row) : categoryCount(row, honorCategoryFilter) > 0;
-  const orderedRows = allRows.filter(rowHasCategory).sort((a, b) => {
+  const orderedRows = allRows.filter(rowHasAwards).sort((a, b) => {
     for (const key of [leaderboardSortKey, ...leaderboardSortPriority.filter((item) => item !== leaderboardSortKey)]) {
-      const aValue = key === leaderboardSortKey && key === "totalHonors" && honorCategoryFilter !== "all" ? categoryCount(a, honorCategoryFilter) : a[key];
-      const bValue = key === leaderboardSortKey && key === "totalHonors" && honorCategoryFilter !== "all" ? categoryCount(b, honorCategoryFilter) : b[key];
-      const difference = (aValue - bValue) * leaderboardSortDirections[key];
+      const difference = (a[key] - b[key]) * leaderboardSortDirections[key];
       if (difference) return difference;
     }
     return store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant");
@@ -485,17 +482,17 @@ function renderLeaderboards() {
   const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, , count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
   const topRows = orderedRows.slice(0, 10);
   els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${entityPageLink(row.id, store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}<td class="total-honors-cell"><strong>${row.totalHonors}</strong></td>${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}</tr>`).join("") || '<tr><td class="olympic-empty" colspan="9">目前沒有符合條件的榮譽紀錄。</td></tr>';
-  const mobileRows = allRows.filter(rowHasCategory).sort((a, b) => categoryCount(b, honorCategoryFilter) - categoryCount(a, honorCategoryFilter) || b.totalHonors - a.totalHonors || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10);
-  const mobileAwardValue = (tone, label, count) => count ? `<span class="mobile-award-value"><i class="trophy-medal ${tone}">${label}</i><b>${count}</b></span>` : "";
-  const mobileCount = (row) => {
-    if (honorCategoryFilter === "all") return `${mobileAwardValue("gold", "團", teamAwardCount(row))}${mobileAwardValue("gold", "個", row.fullCourse)}<span class="mobile-total-value">${row.totalHonors}<small>項</small></span>`;
-    if (honorCategoryFilter === "team") return `${mobileAwardValue("gold", "冠", row.gold)}${mobileAwardValue("silver", "亞", row.silver)}${mobileAwardValue("bronze", "季", row.bronze)}${mobileAwardValue("white", "殿", row.white)}`;
-    if (honorCategoryFilter === "individual") return `${mobileAwardValue("gold", "佳", row.fullBest)}${mobileAwardValue("silver", "優", row.fullExcellent)}`;
-    if (honorCategoryFilter === "otherOnly") return mobileAwardValue("white", "獎", row.other);
-    if (honorCategoryFilter === "fullCourse") return `${mobileAwardValue("gold", "佳", row.fullBest)}${mobileAwardValue("silver", "優", row.fullExcellent)}`;
-    return mobileAwardValue("white", "獎", row.other);
-  };
-  if (els.mobileHonorRanking) els.mobileHonorRanking.innerHTML = mobileRows.map((row, index) => `<li><span class="mobile-honor-rank">${index + 1}</span><strong>${entityPageLink(row.id, store.entityName(row.id, row.id))}</strong><span class="mobile-honor-values">${mobileCount(row)}</span></li>`).join("") || '<li class="mobile-honor-empty">目前沒有符合的榮譽</li>';
+  const mobileTotal = (row) => [...mobileHonorFilters].reduce((sum, category) => sum + categoryCount(row, category), 0);
+  const mobileRows = allRows.filter((row) => mobileTotal(row) > 0).sort((a, b) => mobileTotal(b) - mobileTotal(a) || b.totalHonors - a.totalHonors || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10);
+  const mobileAwardValue = (tone, label, count) => `<span class="mobile-award-value"><i class="trophy-medal ${tone}">${label}</i><b>${count}</b></span>`;
+  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileAwardValue("gold", "個", row.fullCourse) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
+  if (els.mobileHonorRanking) els.mobileHonorRanking.innerHTML = mobileRows.map((row, index) => `<li><span class="mobile-honor-rank">${index + 1}</span><strong>${entityPageLink(row.id, store.entityName(row.id, row.id))}</strong><span class="mobile-honor-values">${mobileCount(row)}</span></li>`).join("") || '<li class="mobile-honor-empty">目前沒有符合選取類別的榮譽</li>';
+  document.querySelectorAll("[data-honor-filter]").forEach((button) => {
+    const filter = button.dataset.honorFilter;
+    const active = mobileHonorFilters.has(filter);
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
   document.querySelectorAll("[data-rank-sort]").forEach((button) => {
     const key = button.dataset.rankSort;
     const direction = leaderboardSortDirections[key];
@@ -1001,12 +998,9 @@ els.honorRangeToggle?.addEventListener("click", () => {
   renderLeaderboards();
 });
 document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addEventListener("click", () => {
-  honorCategoryFilter = button.dataset.honorFilter;
-  document.querySelectorAll("[data-honor-filter]").forEach((item) => {
-    const active = item.dataset.honorFilter === honorCategoryFilter;
-    item.classList.toggle("is-active", active);
-    item.setAttribute("aria-pressed", String(active));
-  });
+  const filter = button.dataset.honorFilter;
+  if (mobileHonorFilters.has(filter)) mobileHonorFilters.delete(filter);
+  else mobileHonorFilters.add(filter);
   renderLeaderboards();
 }));
 document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEventListener("click", () => {
