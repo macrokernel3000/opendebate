@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T08:17:49",
+  "generatedAt": "2026-10-02T08:24:43",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -1009,8 +1009,8 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "code": "s026",
       "type": "s",
-      "name": "台南一中",
-      "aliases": ""
+      "name": "臺南一中",
+      "aliases": "台南一中"
     },
     {
       "code": "s027",
@@ -1544,12 +1544,6 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s123",
       "type": "s",
       "name": "臺中高工",
-      "aliases": ""
-    },
-    {
-      "code": "s125",
-      "type": "s",
-      "name": "臺南一中",
       "aliases": ""
     },
     {
@@ -2191,9 +2185,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s029",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-52d77a9a6e9c"
+      "id": "match-c4cbeaa106a4"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -2390,10 +2384,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s108"
       },
-      "id": "match-64939083e6c1"
+      "id": "match-9244ba00d5e0"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -2541,9 +2535,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s114",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-f6ddd3bacd0c"
+      "id": "match-1ed7120c701d"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -2616,9 +2610,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s138",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-926850de8118"
+      "id": "match-6506fcce43c1"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -2665,10 +2659,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s071"
       },
-      "id": "match-e225d409aefb"
+      "id": "match-d56a4d96d5f3"
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
@@ -5559,10 +5553,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s080"
       },
-      "id": "match-1c6dac2688c9"
+      "id": "match-fc5c9dfd7960"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -5785,9 +5779,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s068",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-189ca05339ac"
+      "id": "match-e5b7e7d4c81a"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -5859,10 +5853,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s005"
       },
-      "id": "match-a76043dd72e6"
+      "id": "match-a47eee090d17"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -5934,10 +5928,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s003"
       },
-      "id": "match-43c33db0e529"
+      "id": "match-314cb1b4ed14"
     },
     {
       "competitionName": "第一屆明哲盃全國高中職辯論比賽",
@@ -8685,9 +8679,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s044",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-9c7b50090630"
+      "id": "match-c793e8863aeb"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9034,10 +9028,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s162"
       },
-      "id": "match-1f2d3c77031f"
+      "id": "match-d0a34f359b76"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -13560,9 +13554,9 @@ window.DEBATE_PUBLIC_DATA = {
       "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編為會場 1–12。",
       "teamIds": {
         "affirmative": "s083",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-608eb07a2144"
+      "id": "match-bd450d8136ed"
     },
     {
       "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
@@ -13845,10 +13839,10 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "inferenceNote": "依官方賽期、階段順序及 6/3 四強分流與冠亞賽時程推定初賽日期為 6/1；場序按圖片左欄由上至下，再右欄由上至下編場；圖片僅列 11 場。",
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s075"
       },
-      "id": "match-9c3c8e09a99c"
+      "id": "match-d16f9a5c74ee"
     },
     {
       "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
@@ -14812,9 +14806,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s120",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-b5886475ece6"
+      "id": "match-1a724c9462fe"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -15211,10 +15205,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s039"
       },
-      "id": "match-6fc9450f5ccd"
+      "id": "match-38e8d2485869"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -15362,9 +15356,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s067",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-fbeb883ecb15"
+      "id": "match-7ea463548ba5"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -15437,9 +15431,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s096",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-ca356caaa969"
+      "id": "match-cb2d6e827bec"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -15486,10 +15480,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s046"
       },
-      "id": "match-dfa4f19c94c5"
+      "id": "match-83c009ab14df"
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
@@ -20216,10 +20210,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s120"
       },
-      "id": "match-d4f1b6e9aecb"
+      "id": "match-64b907d56495"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -21867,9 +21861,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s120",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-578b116ee77e"
+      "id": "match-ff194887d6dc"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -22366,10 +22360,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s077"
       },
-      "id": "match-78b1763b2fc1"
+      "id": "match-ee1d467077c3"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -22667,9 +22661,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s018",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-830b06850df5"
+      "id": "match-09893bbb72eb"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -22767,9 +22761,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s122",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-e3d8c13911f3"
+      "id": "match-89a2325e6c72"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -22866,10 +22860,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s104"
       },
-      "id": "match-1b58c4287e67"
+      "id": "match-c90361f066b7"
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
@@ -30748,10 +30742,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s081"
       },
-      "id": "match-94e71fa55b74"
+      "id": "match-d8825b1ae176"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -30899,9 +30893,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s007",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-2b696de95f58"
+      "id": "match-69a31fb8f662"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -31799,9 +31793,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s047",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-aa16469d6052"
+      "id": "match-04467c8efc44"
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
@@ -32074,9 +32068,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s072",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-377db23e75f0"
+      "id": "match-91ee122eb656"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -32198,10 +32192,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s072"
       },
-      "id": "match-695be56ee4ab"
+      "id": "match-2851e7609740"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -32449,9 +32443,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s138",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-cfb99875bad7"
+      "id": "match-ef2be94e1050"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -32499,9 +32493,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s162",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-b024be579bd7"
+      "id": "match-e10b216f748b"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -32549,9 +32543,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s006",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-edcd551d2222"
+      "id": "match-16ae9a7a9451"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -32598,10 +32592,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s125",
+        "affirmative": "s026",
         "negative": "s088"
       },
-      "id": "match-fce91ead684d"
+      "id": "match-3d165bbbc18b"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -32949,9 +32943,9 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "teamIds": {
         "affirmative": "s050",
-        "negative": "s125"
+        "negative": "s026"
       },
-      "id": "match-2a84b8653c44"
+      "id": "match-9aa490787400"
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
@@ -34532,8 +34526,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "team",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-d18d500fcf8b"
+      "teamId": "s026",
+      "id": "honor-bca5b0c4f7fa"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -34906,8 +34900,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "team",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-0b794b58df47"
+      "teamId": "s026",
+      "id": "honor-4ef3c34a29f8"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -34950,8 +34944,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺南一中",
       "honorType": "player",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-b3b26e898bad"
+      "teamId": "s026",
+      "id": "honor-e78093558636"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -34961,8 +34955,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺南一中",
       "honorType": "player",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-8946b50d8c58"
+      "teamId": "s026",
+      "id": "honor-3adb4bc701dc"
     },
     {
       "competitionName": "第一屆夢箋盃",
@@ -35995,8 +35989,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "",
       "honorType": "team",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-4bd619c24835"
+      "teamId": "s026",
+      "id": "honor-4c9c27a7cd44"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -36061,8 +36055,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺南一中",
       "honorType": "player",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-f0b0fe124d16"
+      "teamId": "s026",
+      "id": "honor-6493a269452c"
     },
     {
       "competitionName": "第二十一屆齊揚盃",
@@ -37357,68 +37351,68 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "京日之星",
+      "honorName": "全程優秀辯士",
       "recipient": "陳品安",
       "team": "市立大同",
       "honorType": "player",
       "note": "",
       "teamId": "s044",
-      "id": "honor-cacae5244231"
+      "id": "honor-7d15db83e346"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "京日之星",
+      "honorName": "全程優秀辯士",
       "recipient": "洪子茵",
       "team": "臺南女中",
       "honorType": "player",
       "note": "",
       "teamId": "s127",
-      "id": "honor-2b91b07f4096"
+      "id": "honor-4d1a1dc1617f"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "京日之星",
+      "honorName": "全程優秀辯士",
       "recipient": "黃珮萱",
       "team": "嘉義女中",
       "honorType": "player",
       "note": "",
       "teamId": "s032",
-      "id": "honor-ac96ce8292a1"
+      "id": "honor-6b6529234518"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "明京之星",
+      "honorName": "全程最佳辯士",
       "recipient": "胡仲亨",
       "team": "高雄中學",
       "honorType": "player",
       "note": "",
       "teamId": "s152",
-      "id": "honor-980c2ab4167c"
+      "id": "honor-16235b5c233d"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "明京之星",
+      "honorName": "全程最佳辯士",
       "recipient": "張嘉晏",
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
       "teamId": "s122",
-      "id": "honor-a51c25ab2895"
+      "id": "honor-41c6e3553717"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "明京之星",
+      "honorName": "全程最佳辯士",
       "recipient": "徐惟熙",
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
       "teamId": "s122",
-      "id": "honor-281f93f9598d"
+      "id": "honor-065c93a8abc0"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -37944,8 +37938,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺南一中",
       "honorType": "team",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-fca8000ccd50"
+      "teamId": "s026",
+      "id": "honor-36ff006f8ad9"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
@@ -37988,8 +37982,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "臺南一中",
       "honorType": "player",
       "note": "",
-      "teamId": "s125",
-      "id": "honor-5ca9f73abfa5"
+      "teamId": "s026",
+      "id": "honor-9cdff28f3683"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
