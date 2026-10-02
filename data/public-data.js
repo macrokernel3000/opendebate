@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T07:50:48",
+  "generatedAt": "2026-10-02T08:07:25",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -33,6 +33,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
     "public-data-第五屆輔仁盃全國高中職辯論比賽.csv",
+    "public-data-第十七屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十九屆北區聯合新生盃辯論比賽.csv",
     "public-data-第十九屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第十五屆風雩盃中學辯論錦標賽.csv",
@@ -1801,6 +1802,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s173",
       "type": "s",
       "name": "屏東高中",
+      "aliases": ""
+    },
+    {
+      "code": "s174",
+      "type": "s",
+      "name": "金門高中",
       "aliases": ""
     }
   ],
@@ -27113,6 +27120,1131 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-e57a7f99a712"
     },
     {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "新化高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s074"
+      },
+      "id": "match-9e514492a4ca"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "板橋高中",
+        "negative": "大灣高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "板橋高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s091",
+        "negative": "s036"
+      },
+      "id": "match-6dd342f2445b"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "虎尾高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "虎尾高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s138"
+      },
+      "id": "match-e9207c6970ca"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "港明高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s102"
+      },
+      "id": "match-9a161e0acd84"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "協同中學",
+        "negative": "臺中一中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s019",
+        "negative": "s120"
+      },
+      "id": "match-cfe5e0d46204"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "市立大同"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s044"
+      },
+      "id": "match-b581774549ca"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "前鎮高中",
+        "negative": "三民高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "三民高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s001"
+      },
+      "id": "match-9c3bed06023f"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "中信高中",
+        "negative": "臺南二中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中信高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s002",
+        "negative": "s126"
+      },
+      "id": "match-6baea7f8c357"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "嘉義女中",
+        "negative": "嘉華中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "嘉義女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s032",
+        "negative": "s034"
+      },
+      "id": "match-9f2d9a2af2fc"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "長榮中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s145"
+      },
+      "id": "match-6ce17625a449"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-26",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "中大壢中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s005",
+        "negative": "s006"
+      },
+      "id": "match-22fb21a18d7e"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄女中",
+        "negative": "鳳山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s153",
+        "negative": "s156"
+      },
+      "id": "match-353a931a2bb7"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "港明高中",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "政大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s102",
+        "negative": "s070"
+      },
+      "id": "match-36417b09652c"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "協同中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺中一中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s019"
+      },
+      "id": "match-c12ff21cb308"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s047"
+      },
+      "id": "match-988bed4204a8"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "和平高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s160"
+      },
+      "id": "match-7be6960f28e7"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "臺南二中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺南女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s126",
+        "negative": "s127"
+      },
+      "id": "match-66832070502e"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "嘉華中學",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "鳳新高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s034",
+        "negative": "s157"
+      },
+      "id": "match-6fab0182d051"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "三民高中",
+        "negative": "前鎮高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "前鎮高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s001",
+        "negative": "s015"
+      },
+      "id": "match-49ca369c6505"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中大壢中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s005"
+      },
+      "id": "match-5353bcfd5718"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "新化高中",
+        "negative": "家齊高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "家齊高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s074",
+        "negative": "s039"
+      },
+      "id": "match-30cf41fef7ff"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "大灣高中",
+        "negative": "市立復興"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "市立復興",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s036",
+        "negative": "s059"
+      },
+      "id": "match-a39355db1352"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "虎尾高中",
+        "negative": "金門高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "金門高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s174"
+      },
+      "id": "match-4f9c23f62e7b"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-27",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s023"
+      },
+      "id": "match-d96a76901fe8"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "和平高中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s160",
+        "negative": "s122"
+      },
+      "id": "match-59281a646313"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "臺南女中",
+        "negative": "中信高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s127",
+        "negative": "s002"
+      },
+      "id": "match-26122189691d"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "嘉義女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "嘉義女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s032"
+      },
+      "id": "match-d4f95c6340e6"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "家齊高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s039",
+        "negative": "s152"
+      },
+      "id": "match-a46018f4fc0a"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "市立復興",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "板橋高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s059",
+        "negative": "s091"
+      },
+      "id": "match-6e0e3f614cc9"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "金門高中",
+        "negative": "北一女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "北一女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s174",
+        "negative": "s017"
+      },
+      "id": "match-3e6872948506"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "鳳山高中",
+        "negative": "高雄女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s156",
+        "negative": "s153"
+      },
+      "id": "match-6eade181aea4"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "長榮中學",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s145",
+        "negative": "s131"
+      },
+      "id": "match-a27db121799a"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-28",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "薇閣中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "師大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s135"
+      },
+      "id": "match-57ba8e7613a2"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "三民高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s001"
+      },
+      "id": "match-e93ae482dd21"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "板橋高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s091"
+      },
+      "id": "match-c17e62e226a0"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "金門高中",
+        "negative": "市立大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s174",
+        "negative": "s044"
+      },
+      "id": "match-59798c1461fa"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "高雄女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "s153"
+      },
+      "id": "match-a499d3196fe3"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s131"
+      },
+      "id": "match-2ecd8cf9ebab"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "薇閣中學",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "薇閣中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s135",
+        "negative": "s070"
+      },
+      "id": "match-80b2032d6821"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "臺南女中",
+        "negative": "中大壢中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s127",
+        "negative": "s005"
+      },
+      "id": "match-cbe00cef41ae"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺中一中",
+        "negative": "嘉義女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "嘉義女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s120",
+        "negative": "s032"
+      },
+      "id": "match-e8d9f8d42b45"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "板橋高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高雄中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s091"
+      },
+      "id": "match-f46e9c224f29"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s041"
+      },
+      "id": "match-1ff7f5826fe5"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "薇閣中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s135"
+      },
+      "id": "match-95a75206616b"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺南女中",
+        "negative": "嘉義女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺南女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s127",
+        "negative": "s032"
+      },
+      "id": "match-12805cddc0cd"
+    },
+    {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
       "matchDate": "2025-11-08",
       "period": 1,
@@ -36179,6 +37311,116 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-93cb8c17efa9"
     },
     {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "冠軍",
+      "recipient": "臺中女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-4339ec4a6dee"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "亞軍",
+      "recipient": "市立大同",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s044",
+      "id": "honor-ce7d115e65ce"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "季軍",
+      "recipient": "臺南女中",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s127",
+      "id": "honor-7df89af2bca5"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "季軍",
+      "recipient": "高雄中學",
+      "team": "",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-11e2f81dc153"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "京日之星",
+      "recipient": "陳品安",
+      "team": "市立大同",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s044",
+      "id": "honor-cacae5244231"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "京日之星",
+      "recipient": "洪子茵",
+      "team": "臺南女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s127",
+      "id": "honor-2b91b07f4096"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "京日之星",
+      "recipient": "黃珮萱",
+      "team": "嘉義女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s032",
+      "id": "honor-ac96ce8292a1"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "明京之星",
+      "recipient": "胡仲亨",
+      "team": "高雄中學",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-980c2ab4167c"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "明京之星",
+      "recipient": "張嘉晏",
+      "team": "臺中女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-a51c25ab2895"
+    },
+    {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "matchDate": "2026-08-30",
+      "honorName": "明京之星",
+      "recipient": "徐惟熙",
+      "team": "臺中女中",
+      "honorType": "player",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-281f93f9598d"
+    },
+    {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
       "matchDate": "2025-11-16",
       "honorName": "冠軍",
@@ -37718,6 +38960,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "第十七屆明京盃全國高中職辯論比賽",
+      "topic": "我國重大暴力犯罪判處十年以上有期徒刑者應得以禁止假釋",
+      "explanation": "辯題補充：大會說明指出，尚未符合假釋要件、經個案審查不予許可假釋、法律禁止或排除假釋，可能具有不同意義及法律效果；「得以」仍須結合題目主詞、句意及制度範圍理解。說明供辨析題意，不構成強制限定，各隊可提出合理解釋與制度設計。"
+    },
+    {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
       "topic": "我國普通刑法應廢除死刑",
       "explanation": ""
@@ -37853,6 +39100,15 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "2024年8月17日至19日；8月17日各時段、8月18日八進四、8月19日四進二及冠亞決賽。冠亞決賽會場依專案慣例推定為1。",
       "ageRestriction": null,
       "teamCount": 16
+    },
+    "第十七屆明京盃全國高中職辯論比賽": {
+      "startDate": "2026-08-26",
+      "endDate": "2026-08-30",
+      "organizer": "",
+      "location": "",
+      "note": "",
+      "ageRestriction": null,
+      "teamCount": 35
     },
     "2025「青聲說」全國高中職辯論賽": {
       "teamCount": 5,
