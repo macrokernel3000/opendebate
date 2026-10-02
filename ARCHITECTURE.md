@@ -41,7 +41,7 @@
 - `attendance`：選手登場紀錄，目前保留但尚未在前台呈現。
 - `topics`：賽事辯題與說明。
 - `generatedAt`：資料檔產生時間；首頁「上次修改」以此為唯一依據。
-- `siteContent`：由 `data/site-content.csv` 產生，控制 Banner 下方的英文小標、中文標題與兩段網站介紹。
+- `siteContent`：舊版首頁介紹文案資料，目前仍由建置程式載入，但首頁已移除該介紹區，不會顯示。
 - `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、舉辦地點、備註、選填的開始日期／結束日期（YYYY-MM-DD）、年齡限制與選填的簡章滿額隊數；可選 `awardSelectionCriteria` 保存並於賽事頁折疊呈現大會獎項遴選辦法；`teamCount` 由該賽事戰績中實際出現的隊伍名稱去重計算，簡章滿額隊數不覆蓋或改寫實際收錄隊數，也不顯示在網頁。年齡限制未知時保留 `null`，不推定為否。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
 - `eventRosters`：由 `data/event-rosters.csv` 產生，保存主辦方公布的隊伍名單、領隊、選手、名單狀態與來源說明。這是「公布名單」，不代表每位名單選手都實際上場，也不併入 `records[].players`、`attendance`、逐場出賽數或賽事實際隊數。若之後收到修正版名單，需保留版本與來源差異，不可直接當作已確認的出賽紀錄。
 
@@ -51,7 +51,7 @@
 
 - `index.html`：語意結構、SEO metadata、結構化資料與畫面容器。
 - `styles.css`：全站視覺、桌機／手機響應式版面。
-- `assets/debate-banner.webp`：首頁使用的壓縮主圖（1813×868）；`assets/debate-banner.png` 保留為原圖與社群分享預覽。換圖時同步產生 WebP，避免首頁再次直接下載大型 PNG。效能量測見 `docs/首頁圖片效能.md`。
+- `assets/debate-banner.png`：保留作為 Open Graph 社群分享預覽圖；首頁目前不顯示 Banner。首頁圖片效能紀錄見 `docs/首頁圖片效能.md`。
 - `app.js`：首頁統計、時間軸、賽事卡、排行榜、獨立賽事／單位／選手詳情、辯論總覽及搜尋結果。
 - `data/event-metadata.csv`：賽事的可選基本資訊來源；賽事詳情會顯示已填的主辦單位與地點。年齡限制與簡章滿額隊數只保存於資料層，不在前台呈現。
 - `js/interactions.js`：導覽、按鈕、篩選與使用者操作。

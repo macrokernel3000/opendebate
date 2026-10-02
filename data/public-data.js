@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T09:21:45",
+  "generatedAt": "2026-10-02T23:39:52",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -8343,8 +8343,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "北市大同"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "北市大同",
       "note": "",
@@ -8356,7 +8356,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s162",
         "negative": "s044"
       },
-      "id": "match-bd9e1591adbb"
+      "id": "match-703f76e2cb8e"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8368,8 +8368,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永豐高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "永豐高中",
       "note": "",
@@ -8381,7 +8381,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s157",
         "negative": "s100"
       },
-      "id": "match-c24b0165a1a8"
+      "id": "match-d38cd9db05fa"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8393,8 +8393,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永平高中"
       },
       "scores": {
-        "affirmative": 2,
-        "negative": 1
+        "affirmative": 1,
+        "negative": 2
       },
       "winner": "永平高中",
       "note": "",
@@ -8406,7 +8406,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s158",
         "negative": "s098"
       },
-      "id": "match-5ffb1c739fa0"
+      "id": "match-0f90c87c184d"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8418,8 +8418,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "明倫高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "明倫高中",
       "note": "",
@@ -8431,7 +8431,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s135",
         "negative": "s080"
       },
-      "id": "match-cd8d086636b7"
+      "id": "match-ad8c1f366d65"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8443,8 +8443,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "竹科實中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "竹科實中",
       "note": "",
@@ -8456,7 +8456,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s114",
         "negative": "s113"
       },
-      "id": "match-bad5c9247b9c"
+      "id": "match-0fb9685fde8e"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8468,8 +8468,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "海山高中B"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "高雄中學",
       "note": "",
@@ -8481,7 +8481,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s161"
       },
-      "id": "match-4260eafd750c"
+      "id": "match-98401a4075d5"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8493,8 +8493,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "中崙高中B"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "北一女中",
       "note": "",
@@ -8506,7 +8506,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s017",
         "negative": "s159"
       },
-      "id": "match-8741eae63edb"
+      "id": "match-1313f1fd0176"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8518,8 +8518,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "市立東山"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "市立東山",
       "note": "",
@@ -8531,7 +8531,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s013",
         "negative": "s046"
       },
-      "id": "match-202f5dea841a"
+      "id": "match-42741cdc4f35"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8543,8 +8543,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "嘉義女中"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "華江高中",
       "note": "",
@@ -8556,7 +8556,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s133",
         "negative": "s032"
       },
-      "id": "match-2b38cb54376a"
+      "id": "match-fabb038d5010"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8568,8 +8568,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "大直高中"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "南山中學",
       "note": "",
@@ -8581,7 +8581,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s038"
       },
-      "id": "match-cde473884ad8"
+      "id": "match-8092256d19ab"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8593,8 +8593,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "豐原高中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "海山高中A",
       "note": "經大會核實，豐原高中上場選手未登錄於選手名單，依比賽規則喪失比賽資格並沒收該場比賽及全額保證金，因此本場由海山高中A以3：0獲勝",
@@ -8606,7 +8606,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s161",
         "negative": "s142"
       },
-      "id": "match-3db71eaa824d"
+      "id": "match-8920ee4172c2"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8618,8 +8618,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "景美女中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "南湖高中",
       "note": "",
@@ -8631,7 +8631,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s024",
         "negative": "s083"
       },
-      "id": "match-201f36925f09"
+      "id": "match-5d517a8edf02"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8643,8 +8643,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "中山女高"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "中山女高",
       "note": "",
@@ -8656,7 +8656,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s121",
         "negative": "s006"
       },
-      "id": "match-06f5a7080a75"
+      "id": "match-07730d07be0f"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8668,8 +8668,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "臺南一中"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "北市大同",
       "note": "",
@@ -8681,7 +8681,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s044",
         "negative": "s026"
       },
-      "id": "match-c793e8863aeb"
+      "id": "match-8a98ed2bd754"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8693,8 +8693,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "慧燈中學"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "永豐高中",
       "note": "",
@@ -8706,7 +8706,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s100",
         "negative": "s066"
       },
-      "id": "match-69b8d51b4e35"
+      "id": "match-dd7a6061fedc"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8718,8 +8718,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "新竹高中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "永平高中",
       "note": "",
@@ -8731,7 +8731,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s098",
         "negative": "s078"
       },
-      "id": "match-8fe37cfd88da"
+      "id": "match-06f77ed56812"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8743,8 +8743,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "復旦高中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "明倫高中",
       "note": "",
@@ -8756,7 +8756,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s080",
         "negative": "s057"
       },
-      "id": "match-61c65a207da9"
+      "id": "match-ade00185984e"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8768,8 +8768,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "屏東女中"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "竹科實中",
       "note": "",
@@ -8781,7 +8781,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s041"
       },
-      "id": "match-03abb7146270"
+      "id": "match-07c11a9ee1f9"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8793,8 +8793,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "武陵高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "武陵高中",
       "note": "",
@@ -8806,7 +8806,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s161",
         "negative": "s096"
       },
-      "id": "match-a436e02f8541"
+      "id": "match-a660c47e256d"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8818,8 +8818,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "北一女中"
       },
       "scores": {
-        "affirmative": 2,
-        "negative": 1
+        "affirmative": 1,
+        "negative": 2
       },
       "winner": "北一女中",
       "note": "",
@@ -8831,7 +8831,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s159",
         "negative": "s017"
       },
-      "id": "match-9c15b5ad92f6"
+      "id": "match-4c7f506267d4"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8843,8 +8843,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "北市陽明"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "市立東山",
       "note": "",
@@ -8856,7 +8856,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s046",
         "negative": "p104"
       },
-      "id": "match-d6c327b57ee4"
+      "id": "match-a691a0cf873a"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8868,8 +8868,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "華江高中"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "馬公高中B",
       "note": "",
@@ -8881,7 +8881,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s162",
         "negative": "s133"
       },
-      "id": "match-30fafd1041c3"
+      "id": "match-d7426d5622f8"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8893,8 +8893,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "和平高中"
       },
       "scores": {
-        "affirmative": 2,
-        "negative": 1
+        "affirmative": 1,
+        "negative": 2
       },
       "winner": "和平高中",
       "note": "",
@@ -8906,7 +8906,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s038",
         "negative": "s160"
       },
-      "id": "match-509416aaae93"
+      "id": "match-899eed0c32ba"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8918,8 +8918,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "海山高中A"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "海山高中A",
       "note": "",
@@ -8931,7 +8931,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s014",
         "negative": "s161"
       },
-      "id": "match-c8bcd76be580"
+      "id": "match-e88963966db0"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8943,8 +8943,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "南湖高中"
       },
       "scores": {
-        "affirmative": 2,
-        "negative": 1
+        "affirmative": 1,
+        "negative": 2
       },
       "winner": "南湖高中",
       "note": "原公告【註一】文字截斷：該場次景美女",
@@ -8956,7 +8956,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s083",
         "negative": "s024"
       },
-      "id": "match-c4a8032eaa91"
+      "id": "match-b2b1d605a136"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8968,8 +8968,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "臺中二中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "臺中二中",
       "note": "",
@@ -8981,7 +8981,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s006",
         "negative": "s121"
       },
-      "id": "match-2cae845de187"
+      "id": "match-066b476aa7c5"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8993,8 +8993,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "鳳新高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "鳳新高中",
       "note": "",
@@ -9006,7 +9006,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s066",
         "negative": "s157"
       },
-      "id": "match-ec1bb79e999f"
+      "id": "match-4df081f6dec8"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9018,8 +9018,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "馬公高中A"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "臺南一中",
       "note": "",
@@ -9031,7 +9031,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s026",
         "negative": "s162"
       },
-      "id": "match-d0a34f359b76"
+      "id": "match-63c99330d18e"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9043,8 +9043,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "桃園陽明"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "北一女中",
       "note": "",
@@ -9056,7 +9056,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s017",
         "negative": "s092"
       },
-      "id": "match-28a999f6d256"
+      "id": "match-cc492d4bb2cd"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9068,8 +9068,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "麗山高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "麗山高中",
       "note": "",
@@ -9081,7 +9081,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s078",
         "negative": "s158"
       },
-      "id": "match-8ffaa5d962ef"
+      "id": "match-ce5e1ecd5c60"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9093,8 +9093,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "薇閣中學"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "薇閣中學",
       "note": "",
@@ -9106,7 +9106,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s057",
         "negative": "s135"
       },
-      "id": "match-757e242f321f"
+      "id": "match-b8a199132fc4"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9118,8 +9118,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "精誠中學"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "屏東女中",
       "note": "",
@@ -9131,7 +9131,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s041",
         "negative": "s114"
       },
-      "id": "match-0c765ed51595"
+      "id": "match-d873b5c32182"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9143,8 +9143,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "高雄中學"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "高雄中學",
       "note": "",
@@ -9156,7 +9156,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s096",
         "negative": "s152"
       },
-      "id": "match-1728ab82155a"
+      "id": "match-acc057703955"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9168,8 +9168,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "內壢高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "內壢高中",
       "note": "該場次內壢高中提出抗議，經裁判一致裁決「抗議成立，已適當扣分」",
@@ -9181,7 +9181,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p104",
         "negative": "s013"
       },
-      "id": "match-81679d4d5bb7"
+      "id": "match-8a3d7ae73088"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9193,8 +9193,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "馬公高中B"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "嘉義女中",
       "note": "",
@@ -9206,7 +9206,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s032",
         "negative": "s162"
       },
-      "id": "match-1c1a56f8bfa5"
+      "id": "match-64b59182537b"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9218,8 +9218,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "南山高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "南山高中",
       "note": "",
@@ -9231,7 +9231,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s160",
         "negative": "s023"
       },
-      "id": "match-4a1377eb1795"
+      "id": "match-e38e9513612a"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9243,8 +9243,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "內湖高中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "內湖高中",
       "note": "",
@@ -9256,7 +9256,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s142",
         "negative": "s014"
       },
-      "id": "match-79f5f990b49a"
+      "id": "match-fcd3b06056f5"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9268,8 +9268,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "海山高中A"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "和平高中A",
       "note": "",
@@ -9281,7 +9281,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s160",
         "negative": "s161"
       },
-      "id": "match-63d3ca6a1bad"
+      "id": "match-b48f491d96b2"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9293,8 +9293,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "明倫高中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "永平高中",
       "note": "",
@@ -9306,7 +9306,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s098",
         "negative": "s080"
       },
-      "id": "match-2c1898ab1e14"
+      "id": "match-a488878a0ead"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9318,8 +9318,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "中山女高"
       },
       "scores": {
-        "affirmative": 1,
-        "negative": 2
+        "affirmative": 2,
+        "negative": 1
       },
       "winner": "高雄中學",
       "note": "",
@@ -9331,7 +9331,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s152",
         "negative": "s006"
       },
-      "id": "match-7a7b58d2ba80"
+      "id": "match-856c9e57753c"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9343,8 +9343,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "中崙高中A"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "永豐高中",
       "note": "原公告標有【註一】，但未附註文",
@@ -9356,7 +9356,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s100",
         "negative": "s159"
       },
-      "id": "match-2cadfe0d8a07"
+      "id": "match-e59150a92a55"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9368,8 +9368,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "北市大同"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "北市大同",
       "note": "",
@@ -9381,7 +9381,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s091",
         "negative": "s044"
       },
-      "id": "match-84074c02d68a"
+      "id": "match-4660a0d98cd5"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9393,8 +9393,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "高雄中學"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "高雄中學",
       "note": "",
@@ -9406,7 +9406,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s152"
       },
-      "id": "match-65501c3d27f9"
+      "id": "match-b5a59de14087"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9418,8 +9418,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "嘉義女中"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 0
       },
       "winner": "南湖高中",
       "note": "",
@@ -9431,7 +9431,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s024",
         "negative": "s032"
       },
-      "id": "match-679bba5793f7"
+      "id": "match-25accc2cfa35"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9443,8 +9443,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "竹科實中"
       },
       "scores": {
-        "affirmative": 3,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 3
       },
       "winner": "竹科實中",
       "note": "",
@@ -9456,7 +9456,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s046",
         "negative": "s113"
       },
-      "id": "match-56dba517e4a2"
+      "id": "match-39f0fe335ed1"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9468,8 +9468,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "和平高中A"
       },
       "scores": {
-        "affirmative": 9,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 9
       },
       "winner": "和平高中A",
       "note": "",
@@ -9481,7 +9481,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s017",
         "negative": "s160"
       },
-      "id": "match-c0138bfde491"
+      "id": "match-697bdc0dfb67"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9493,8 +9493,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永平高中"
       },
       "scores": {
-        "affirmative": 6,
-        "negative": 3
+        "affirmative": 3,
+        "negative": 6
       },
       "winner": "永平高中",
       "note": "",
@@ -9506,7 +9506,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s113",
         "negative": "s098"
       },
-      "id": "match-4b361c4a1364"
+      "id": "match-13502fa1ff89"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9518,8 +9518,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永豐高中"
       },
       "scores": {
-        "affirmative": 8.5,
-        "negative": 0.5
+        "affirmative": 0.5,
+        "negative": 8.5
       },
       "winner": "永豐高中",
       "note": "",
@@ -9531,7 +9531,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s044",
         "negative": "s100"
       },
-      "id": "match-6b5db5e5adfe"
+      "id": "match-1c4a010ade02"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9543,8 +9543,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "高雄中學"
       },
       "scores": {
-        "affirmative": 9,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 9
       },
       "winner": "高雄中學",
       "note": "",
@@ -9556,7 +9556,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s024",
         "negative": "s152"
       },
-      "id": "match-a7ddada677e0"
+      "id": "match-e88b39164deb"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9568,8 +9568,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永平高中"
       },
       "scores": {
-        "affirmative": 4,
-        "negative": 5
+        "affirmative": 5,
+        "negative": 4
       },
       "winner": "和平高中A",
       "note": "",
@@ -9581,7 +9581,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s160",
         "negative": "s098"
       },
-      "id": "match-0b7d52d331f2"
+      "id": "match-ee8369e2db2b"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9593,8 +9593,8 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "高雄中學"
       },
       "scores": {
-        "affirmative": 9,
-        "negative": 0
+        "affirmative": 0,
+        "negative": 9
       },
       "winner": "高雄中學",
       "note": "",
@@ -9606,7 +9606,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s100",
         "negative": "s152"
       },
-      "id": "match-8dfc1fd8eb93"
+      "id": "match-c4285eda2c01"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
