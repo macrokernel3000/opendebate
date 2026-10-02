@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T23:39:52",
+  "generatedAt": "2026-10-03T00:01:13",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -1214,7 +1214,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s066",
       "type": "s",
       "name": "慧燈中學",
-      "aliases": ""
+      "aliases": "慧燈高中"
     },
     {
       "code": "s067",
@@ -8564,7 +8564,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 3,
       "venue": "",
       "teams": {
-        "affirmative": "南山中學",
+        "affirmative": "南山高中",
         "negative": "大直高中"
       },
       "scores": {
@@ -8581,7 +8581,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s038"
       },
-      "id": "match-8092256d19ab"
+      "id": "match-8000e3686203"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -8947,7 +8947,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 2
       },
       "winner": "南湖高中",
-      "note": "原公告【註一】文字截斷：該場次景美女",
+      "note": "景美女中提出抗議；裁決結果為未構成違規要件，抗議不成立。",
       "players": {
         "affirmative": [],
         "negative": []
@@ -8956,7 +8956,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s083",
         "negative": "s024"
       },
-      "id": "match-b2b1d605a136"
+      "id": "match-672594488185"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9347,7 +9347,7 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": 0
       },
       "winner": "永豐高中",
-      "note": "原公告標有【註一】，但未附註文",
+      "note": "永豐高中提出抗議；廖凱森、賴羿慈認為抗議成立並適當扣分，傅悅恆認為未構成違規要件、抗議不成立。",
       "players": {
         "affirmative": [],
         "negative": []
@@ -9356,7 +9356,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s100",
         "negative": "s159"
       },
-      "id": "match-e59150a92a55"
+      "id": "match-ae977e0aedab"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9389,7 +9389,7 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": "",
       "teams": {
-        "affirmative": "南山中學",
+        "affirmative": "南山高中",
         "negative": "高雄中學"
       },
       "scores": {
@@ -9406,7 +9406,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s023",
         "negative": "s152"
       },
-      "id": "match-b5a59de14087"
+      "id": "match-62ce2c5d46f3"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9568,20 +9568,21 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "永平高中"
       },
       "scores": {
-        "affirmative": 5,
-        "negative": 4
+        "affirmative": null,
+        "negative": null
       },
       "winner": "和平高中A",
-      "note": "",
+      "note": "公告未列比分；勝方依最終名次與冠亞賽晉級結果推定。",
       "players": {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "和平高中A獲亞軍並出賽冠亞賽；永平高中列季軍，推定和平高中A勝。官方最終公告未公布此場比分。",
       "teamIds": {
         "affirmative": "s160",
         "negative": "s098"
       },
-      "id": "match-ee8369e2db2b"
+      "id": "match-ef82735c2b0e"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9593,20 +9594,21 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "高雄中學"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 9
+        "affirmative": null,
+        "negative": null
       },
       "winner": "高雄中學",
-      "note": "",
+      "note": "公告未列比分；勝方依最終名次與冠亞賽晉級結果推定。",
       "players": {
         "affirmative": [],
         "negative": []
       },
+      "inferenceNote": "高雄中學獲冠軍並出賽冠亞賽；永豐高中列季軍，推定高雄中學勝。官方最終公告未公布此場比分。",
       "teamIds": {
         "affirmative": "s100",
         "negative": "s152"
       },
-      "id": "match-c4285eda2c01"
+      "id": "match-a0489d6f5bcc"
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
@@ -9618,21 +9620,21 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "和平高中A"
       },
       "scores": {
-        "affirmative": 0,
-        "negative": 0
+        "affirmative": null,
+        "negative": null
       },
       "winner": "高雄中學",
-      "note": "未公告比分，依最終名次判定勝方",
+      "note": "未公告比分，依最終名次判定勝方。",
       "players": {
         "affirmative": [],
         "negative": []
       },
-      "inferenceNote": "會場依唯一冠亞賽使用1號場推定",
+      "inferenceNote": "官方最終公告列高雄中學冠軍、和平高中A亞軍，推定高雄中學勝；未公告比分。",
       "teamIds": {
         "affirmative": "s152",
         "negative": "s160"
       },
-      "id": "match-444ad1eeb4c8"
+      "id": "match-74ccfa2979f4"
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -39165,7 +39167,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": null
     },
     "第三十七屆蘇州盃高中職辯論錦標賽": {
-      "teamCount": 42,
+      "teamCount": 41,
       "ageRestriction": null
     },
     "第三十五屆蘇州盃高中職辯論錦標賽": {
@@ -40249,6 +40251,570 @@ window.DEBATE_PUBLIC_DATA = {
         ],
         "status": "報名名單",
         "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄"
+      }
+    ],
+    "第三十七屆蘇州盃高中職辯論錦標賽": [
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "北一女中",
+        "leaders": [],
+        "players": [
+          "李心維",
+          "李辰妤",
+          "周振琳",
+          "洪彩育",
+          "陳昱穎",
+          "蔡沛倢",
+          "蔡馨誼"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "中崙高中A",
+        "leaders": [],
+        "players": [
+          "李允菾",
+          "陳南蓁",
+          "陳品熹",
+          "郭懿萱",
+          "李之羽",
+          "陳品研"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "中崙高中B",
+        "leaders": [],
+        "players": [
+          "謝欣瑜",
+          "王芊文",
+          "張至和",
+          "劉增驊",
+          "洪雅涵",
+          "于澄心",
+          "黃崴琳"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "桃園陽明",
+        "leaders": [],
+        "players": [
+          "王嫄喬",
+          "林珮筠",
+          "柯程允"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "和平高中A",
+        "leaders": [],
+        "players": [
+          "劉品劼",
+          "許芷稘",
+          "洪詩淳",
+          "趙梓盛"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "和平高中B",
+        "leaders": [],
+        "players": [
+          "喻璽萌",
+          "鄭愛臻",
+          "趙子薰",
+          "呂銘洋"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "海山高中A",
+        "leaders": [],
+        "players": [
+          "錢榛宜",
+          "陳則祐",
+          "余有斌",
+          "李芊瑩",
+          "王傑民",
+          "顏詩穎"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "海山高中B",
+        "leaders": [],
+        "players": [
+          "王正晴",
+          "蔡宗邑",
+          "林宛孜"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "豐原高中",
+        "leaders": [],
+        "players": [
+          "連敏惠",
+          "林若妍",
+          "陳昀葶",
+          "王芮翎"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "內湖高中",
+        "leaders": [],
+        "players": [
+          "黃瑞靖",
+          "劉品妍",
+          "李詠晴",
+          "賴睿嫻",
+          "張羿泓",
+          "陳冠廷"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "市立東山",
+        "leaders": [],
+        "players": [
+          "鐘靖恩",
+          "田上敬祐",
+          "周永凌",
+          "鄭玉萱",
+          "林忻潼"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "北市陽明",
+        "leaders": [],
+        "players": [
+          "李秉勳",
+          "葉沁恩",
+          "吳克珣",
+          "張恩睿",
+          "丁瑭綸",
+          "許航嘉"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "內壢高中",
+        "leaders": [],
+        "players": [
+          "曾恩漩",
+          "林芷芸",
+          "葛沅羲",
+          "葉欲丞",
+          "羅志勳"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "精誠中學",
+        "leaders": [],
+        "players": [
+          "魏上程",
+          "謝兆菱",
+          "謝欣諭",
+          "黃芷淇",
+          "陳宥瑄"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "竹科實中",
+        "leaders": [],
+        "players": [
+          "黃忻恩",
+          "張育棋",
+          "高立維",
+          "洪睿榮",
+          "黃浩原"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "屏東女中",
+        "leaders": [],
+        "players": [
+          "潘巧云",
+          "潘梓音",
+          "李佳容",
+          "楊鈁喬",
+          "周耘淇"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "麗山高中",
+        "leaders": [],
+        "players": [
+          "黃薇庭",
+          "楊婷萓",
+          "葉柏昇"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "永平高中",
+        "leaders": [],
+        "players": [
+          "李子嫻",
+          "金承陽",
+          "洪妤瑄",
+          "莊廷威",
+          "陳亭潔",
+          "蘇彥榕"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "新竹高中",
+        "leaders": [],
+        "players": [
+          "鄧丞霖",
+          "張方易",
+          "鍾仁軒",
+          "蔡岳翰"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "薇閣中學",
+        "leaders": [],
+        "players": [
+          "張景茜",
+          "林芷嫀",
+          "陳宥樺",
+          "洪瑋翎",
+          "紀婷",
+          "陳柔羽"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "明倫高中",
+        "leaders": [],
+        "players": [
+          "駱建勳",
+          "賴宥辰",
+          "吳杰恩",
+          "吳芸姍",
+          "陳映潔"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "復旦高中",
+        "leaders": [],
+        "players": [
+          "王璿雅",
+          "施岑霖",
+          "鄭宇恬",
+          "曾宣穎",
+          "徐丞叡",
+          "古天樂"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "板橋高中",
+        "leaders": [],
+        "players": [
+          "孫柏熙",
+          "顏燦宇",
+          "陳語治"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "馬公高中A",
+        "leaders": [],
+        "players": [
+          "蔡孟妘",
+          "陳沁妍",
+          "林子芹",
+          "許晁維"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "馬公高中B",
+        "leaders": [],
+        "players": [
+          "陳廣賢",
+          "吳冠穎",
+          "陳燁",
+          "王羽婕"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "臺南一中",
+        "leaders": [],
+        "players": [
+          "王佑喆",
+          "方正毅",
+          "陳宇揚"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "北市大同",
+        "leaders": [],
+        "players": [
+          "陳品安",
+          "邵聖光",
+          "林芝羽",
+          "陳子涵",
+          "盧秄妍"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "鳳新高中",
+        "leaders": [],
+        "players": [
+          "王秉鴻",
+          "張齊越",
+          "邱愷睿"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "永豐高中",
+        "leaders": [],
+        "players": [
+          "林宥琪",
+          "林芊妤",
+          "蔡羽璇",
+          "翁巧羽",
+          "吳芷妍",
+          "孫興宸",
+          "張育萱"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "慧燈中學",
+        "leaders": [],
+        "players": [
+          "黃云宥",
+          "張峻豪",
+          "林衍佑",
+          "陳千愛",
+          "張博鈞",
+          "陳裕凱"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "景美女中",
+        "leaders": [],
+        "players": [
+          "陳沅妤",
+          "朱思璇",
+          "李禹岑",
+          "廖玟璇",
+          "馬羽利",
+          "林渝玹",
+          "張濬鑠"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "南湖高中",
+        "leaders": [],
+        "players": [
+          "王柏凱",
+          "戴滕靖",
+          "潘禹璇",
+          "楊耿偉",
+          "林妤潔"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "華江高中",
+        "leaders": [],
+        "players": [
+          "李紫瑄",
+          "劉逸洋",
+          "李孟杰",
+          "范舒涵",
+          "陳翊竛",
+          "黃宥菱",
+          "林孟萱",
+          "張芸茜",
+          "藍睿勳",
+          "周鈺婷",
+          "林羿佑"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "嘉義女中",
+        "leaders": [],
+        "players": [
+          "蘇育琳",
+          "曾筱甯",
+          "周語芊",
+          "黃湘詞",
+          "黃珮萱"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "大直高中",
+        "leaders": [],
+        "players": [
+          "吳栩華",
+          "吳芸希",
+          "姚盛文",
+          "張景皓"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "南山高中",
+        "leaders": [],
+        "players": [
+          "蔡子竣",
+          "劉哲安",
+          "于潤萱",
+          "夏緁忻",
+          "徐舒妍"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "高雄中學",
+        "leaders": [],
+        "players": [
+          "林子右",
+          "陳秉銨",
+          "郭宥威",
+          "何宇軒",
+          "陳柏瑞",
+          "姚鴻誼",
+          "胡仲亨"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "武陵高中",
+        "leaders": [],
+        "players": [
+          "林毓晴",
+          "張沁宇",
+          "葉智安",
+          "林宥澄"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "中山女高",
+        "leaders": [],
+        "players": [
+          "許芯睿",
+          "劉芷甯",
+          "藍季姍"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "臺中二中",
+        "leaders": [],
+        "players": [
+          "吳易叡",
+          "張善喆",
+          "杜品嫻",
+          "賴奕侖",
+          "黃子芸"
+        ],
+        "status": "公告名單",
+        "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
       }
     ]
   }

@@ -113,7 +113,10 @@ def parse_rows(rows, source_name, default_competition=""):
                 "period": number(row.get("時段")),
                 "venue": number(row.get("會場")),
                 "teams": {"affirmative": affirmative, "negative": negative},
-                "scores": {"affirmative": number(row.get("正方比分")) or 0, "negative": number(row.get("反方比分")) or 0},
+                "scores": {
+                    "affirmative": number(row.get("正方比分")) if clean(row.get("正方比分")) else None,
+                    "negative": number(row.get("反方比分")) if clean(row.get("反方比分")) else None,
+                },
                 "winner": clean(row.get("勝方")),
                 "note": clean(row.get("備註")),
                 "players": {
