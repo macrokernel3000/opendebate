@@ -752,7 +752,7 @@ function renderEvent(name, target = els.eventDetail) {
   const eventHonors = [...event.honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
   const metadata = event.metadata || {};
   const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
-  const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong></article>`).join("")}</section>` : "";
+  const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}</article>`).join("")}</section>` : "";
   const rosterSection = event.rosters.length ? `<details class="event-rosters"><summary><span>📋 隊伍名單</span><span>${event.rosters.length} 隊</span></summary><div class="event-roster-grid">${event.rosters.map((roster) => {
     const teamEntity = store.entityForName(roster.team);
     const team = teamEntity ? entityPageLink(teamEntity.code, roster.team) : escapeHtml(roster.team);
@@ -789,7 +789,7 @@ function renderOverviewTopics() {
   els.overviewTopicMeta.textContent = `目前顯示 ${filteredTopics.length} 筆辯題`;
   els.overviewTopicList.innerHTML = filteredTopics.length ? [...filteredTopics]
     .sort((a, b) => a.competitionName.localeCompare(b.competitionName, "zh-Hant") || a.topic.localeCompare(b.topic, "zh-Hant"))
-    .map((item) => `<button class="overview-topic-card" type="button" data-topic-event="${escapeHtml(item.competitionName)}"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<p>${escapeHtml(item.explanation)}</p>` : ""}<small>查看該屆比賽 →</small></button>`).join("")
+    .map((item) => `<article class="overview-topic-card"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}<button class="topic-event-link" type="button" data-topic-event="${escapeHtml(item.competitionName)}">查看該屆比賽 →</button></article>`).join("")
     : '<div class="search-empty"><div><span aria-hidden="true">💬</span><strong>沒有符合的辯題</strong><p>請縮短關鍵字再試一次。</p></div></div>';
 }
 
@@ -901,7 +901,7 @@ function renderSearch(query) {
     }).join("")}
   </div></section>` : "";
 
-  const topicSection = matchedTopics.length ? `<section class="result-section"><h2>符合辯題</h2><div class="overview-topic-list search-topic-list">${matchedTopics.map((item) => `<button class="overview-topic-card" type="button" data-topic-event="${escapeHtml(item.competitionName)}"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<p>${escapeHtml(item.explanation)}</p>` : ""}<small>查看該屆比賽 →</small></button>`).join("")}</div></section>` : "";
+  const topicSection = matchedTopics.length ? `<section class="result-section"><h2>符合辯題</h2><div class="overview-topic-list search-topic-list">${matchedTopics.map((item) => `<article class="overview-topic-card"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}<button class="topic-event-link" type="button" data-topic-event="${escapeHtml(item.competitionName)}">查看該屆比賽 →</button></article>`).join("")}</div></section>` : "";
 
   const selectedEntity = store.entityById.get(selectedEntityId);
   const entityDetail = selectedEntity ? renderEntityDetail(selectedEntity) : "";
