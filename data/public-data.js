@@ -34621,7 +34621,7 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "2026司改盃全國高中職辯論比賽",
       "matchDate": "",
       "honorName": "全程最佳辯士",
-      "recipient": "高偉辰",
+      "recipient": "高偉承",
       "team": "南大附中",
       "honorType": "player",
       "note": "",
