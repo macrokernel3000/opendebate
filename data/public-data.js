@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-02T08:34:02",
+  "generatedAt": "2026-10-02T09:03:33",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -1538,7 +1538,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s122",
       "type": "s",
       "name": "臺中女中",
-      "aliases": ""
+      "aliases": "台中女中"
     },
     {
       "code": "s123",
@@ -1556,7 +1556,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s127",
       "type": "s",
       "name": "臺南女中",
-      "aliases": ""
+      "aliases": "台南女中"
     },
     {
       "code": "s128",
@@ -1676,7 +1676,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s150",
       "type": "s",
       "name": "高市中正",
-      "aliases": "高市中正A|高市中正B"
+      "aliases": "高市中正A|高市中正B|中正高中"
     },
     {
       "code": "s151",
@@ -37351,68 +37351,74 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程優秀辯士",
+      "honorName": "京日之星",
       "recipient": "陳品安",
       "team": "市立大同",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程優秀辯士",
       "teamId": "s044",
-      "id": "honor-7d15db83e346"
+      "id": "honor-9c95a9a56f85"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程優秀辯士",
+      "honorName": "京日之星",
       "recipient": "洪子茵",
       "team": "臺南女中",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程優秀辯士",
       "teamId": "s127",
-      "id": "honor-4d1a1dc1617f"
+      "id": "honor-0bbd8070ca5c"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程優秀辯士",
+      "honorName": "京日之星",
       "recipient": "黃珮萱",
       "team": "嘉義女中",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程優秀辯士",
       "teamId": "s032",
-      "id": "honor-6b6529234518"
+      "id": "honor-286fdacf500e"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程最佳辯士",
+      "honorName": "明京之星",
       "recipient": "胡仲亨",
       "team": "高雄中學",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程最佳辯士",
       "teamId": "s152",
-      "id": "honor-16235b5c233d"
+      "id": "honor-4ce2e1583409"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程最佳辯士",
+      "honorName": "明京之星",
       "recipient": "張嘉晏",
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程最佳辯士",
       "teamId": "s122",
-      "id": "honor-41c6e3553717"
+      "id": "honor-344b886eee72"
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "matchDate": "2026-08-30",
-      "honorName": "全程最佳辯士",
+      "honorName": "明京之星",
       "recipient": "徐惟熙",
       "team": "臺中女中",
       "honorType": "player",
       "note": "",
+      "honorLevel": "全程最佳辯士",
       "teamId": "s122",
-      "id": "honor-065c93a8abc0"
+      "id": "honor-cad12fa391d2"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
@@ -39017,6 +39023,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "國立中山大學社會科學院",
       "note": "賽期：2026/9/11–9/13。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 16
     },
@@ -39026,6 +39033,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "淡江大學",
       "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。閉幕式與最終獎項公告日期為2026-09-28。",
+      "awardSelectionCriteria": "",
       "ageRestriction": true,
       "teamCount": 17
     },
@@ -39035,6 +39043,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "依主辦方公開活動資訊：初賽、複賽於 2026-08-22；四強賽、決賽於 2026-08-23。原始戰績日期依賽程階段校正。",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 23
     },
@@ -39044,6 +39053,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "臺北市私立延平高級中學",
       "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "brochureTeamLimit": 24,
       "teamCount": 23
@@ -39054,6 +39064,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "臺北市私立延平高級中學",
       "location": "臺北市私立延平高級中學",
       "note": "賽果公告可辨識24支隊伍（延平中學A、B分開計算）。賽期為2025-02-28至2025-03-01；公告明列28場比分（2/28三時段各8場、3/1第一時段4場）。3/1第二時段準決賽及第三時段冠亞賽只有賽程、未提供比分，不推測補登。藝術組由竹科實中、板橋高中、聖心女中同勝場、評分單及架構票後，再按個人排名總和決定板橋高中晉級。簡章規定參賽資格為高中職及五專一至三年級。辯題依簡章登錄。",
+      "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 24,
       "teamCount": 24
@@ -39064,6 +39075,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "輔仁大學健言社",
       "location": "輔仁大學",
       "note": "簡章資格為全國高中職暨五專在學學生，滿額36隊；公告賽果可辨識35隊。初賽第三時段圖片僅列11場，未提供場次不補猜。初賽與複賽日期依階段順序及6/3官方賽程推定。",
+      "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 36,
       "teamCount": 35
@@ -39074,6 +39086,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 24
     },
@@ -39083,6 +39096,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "賽期為2025-08-08至2025-08-09；目前提供的兩場小宮燈十九賽果皆為第二天（2025-08-09），逐場時段未載明。",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 4
     },
@@ -39092,6 +39106,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "2024年8月17日至19日；8月17日各時段、8月18日八進四、8月19日四進二及冠亞決賽。冠亞決賽會場依專案慣例推定為1。",
+      "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 16
     },
@@ -39101,6 +39116,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "location": "",
       "note": "",
+      "awardSelectionCriteria": "(1)星星評分方式:\n(一)每位裁判於每一場比賽中,共有六顆星星,應依自身判斷分配予該場六位辯士,並應將六顆星星全數分配完畢。\n(二)同一位辯士單場至多獲同一位裁判給予四顆星星。\n(三)每位裁判至多將星星分配予三位辯士。\n(四)辯士於單場比賽所獲之星星數,為該場所有裁判給予該辯士之星星總和。\n(五)每場比賽中,獲得星星總數最高之辯士,記為該場之「星星王」;如有複數辯士並列最高,均記為該場之「星星王」。\n(2)京日之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、以辯士獲得「星星王」之場次數遴選,場次數多者優先。\n三、如「星星王」場次數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,先比較表現最佳一場所獲之星星數,星星數較多者優先。\n(三)如表現最佳一場所獲星星數相同,則比較表現最佳兩場所獲星星數總和;仍相同者,依序增加比較場次,直至得以分出高下。\n(四)如前述星星數比較仍相同,則以勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。\n(3)明京之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、京日之星與明京之星不得重複獲獎;已獲得京日之星者,不再列入明京之星之遴選。\n三、以辯士於本屆賽事所獲「星星總數」遴選,星星總數較多者優先。\n四、如星星總數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,則以表現最好的三場所獲星星數總和較多者優先。\n(三)如表現最好的三場星星數總和相同,則比較第四場之星星數;仍相同者再比較第五場之星星數。\n(四)如五場(四場)之星星數比較後仍相同,則以五場(四場)比賽中之勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。",
       "ageRestriction": null,
       "teamCount": 35
     },
@@ -39882,7 +39898,7 @@ window.DEBATE_PUBLIC_DATA = {
       },
       {
         "competitionName": "第十七屆明京盃全國高中職辯論比賽",
-        "team": "中正高中",
+        "team": "高市中正",
         "leaders": [],
         "players": [
           "顏子怡",
@@ -39890,7 +39906,7 @@ window.DEBATE_PUBLIC_DATA = {
           "蘇映玹"
         ],
         "status": "報名名單",
-        "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄"
+        "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄；表單校名「中正高中」依使用者確認連結至高市中正"
       },
       {
         "competitionName": "第十七屆明京盃全國高中職辯論比賽",
@@ -40038,18 +40054,6 @@ window.DEBATE_PUBLIC_DATA = {
           "林育漳",
           "郭昱辰",
           "邢殿軍"
-        ],
-        "status": "報名名單",
-        "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄"
-      },
-      {
-        "competitionName": "第十七屆明京盃全國高中職辯論比賽",
-        "team": "南湖高中",
-        "leaders": [],
-        "players": [
-          "林妤潔",
-          "李洋宙",
-          "魏胤然"
         ],
         "status": "報名名單",
         "sourceNote": "2026 明京盃選手名單 Google 試算表「表單回覆 1」；僅取姓名欄，不收錄聯絡電話；表單名單不等同實際上場紀錄"

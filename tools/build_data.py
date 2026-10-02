@@ -144,6 +144,9 @@ def parse_rows(rows, source_name, default_competition=""):
                 "honorType": normalize_honor_type(row.get("榮譽類型"), team),
                 "note": clean(row.get("備註")),
             }
+            honor_level = clean(row.get("榮譽層級"))
+            if honor_level:
+                honor["honorLevel"] = honor_level
             period = number(row.get("時段"))
             if period:
                 honor["period"] = period
@@ -196,6 +199,7 @@ def load_event_metadata():
                 "organizer": clean(row.get("主辦單位")),
                 "location": clean(row.get("舉辦地點")),
                 "note": clean(row.get("備註")),
+                "awardSelectionCriteria": clean(row.get("個人獎遴選標準")),
                 "ageRestriction": (
                     True if clean(row.get("年齡限制")).lower() in {"是", "有", "true", "1", "yes", "✓"}
                     else False if clean(row.get("年齡限制")).lower() in {"否", "無", "false", "0", "no"}
