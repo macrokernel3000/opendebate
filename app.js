@@ -482,14 +482,17 @@ function renderLeaderboards() {
   const awardCell = (parts) => `<td class="award-symbol-cell">${parts.filter(([, , count]) => count > 0).map(([tone, label, count, title]) => `<span class="award-symbol-group" title="${title} ${count} 筆"><span class="trophy-medal ${tone}">${label}</span><strong>${count}</strong></span>`).join("") || "—"}</td>`;
   const topRows = orderedRows.slice(0, 10);
   els.schoolLeaderboard.innerHTML = topRows.map((row, index) => `<tr><td class="rank-position">${index + 1}</td><th scope="row" class="school-column">${entityPageLink(row.id, store.entityName(row.id, row.id))}</th>${medalCell(row, "gold")}${medalCell(row, "silver")}${medalCell(row, "bronze")}${medalCell(row, "white")}${awardCell([["gold", "佳", row.fullBest, "全程最佳辯士"], ["silver", "優", row.fullExcellent, "全程優秀辯士"]])}<td class="total-honors-cell"><strong>${row.totalHonors}</strong></td>${awardCell([["white", "佳", row.singleBest, "單場最佳辯士"], ["white", "獎", row.otherAwards, "其他榮譽"]])}</tr>`).join("") || '<tr><td class="olympic-empty" colspan="9">目前沒有符合條件的榮譽紀錄。</td></tr>';
-  const mobileTotal = (row) => [...mobileHonorFilters].reduce((sum, category) => sum + categoryCount(row, category), 0);
+  const mobileShowsAll = mobileHonorFilters.has("team") && mobileHonorFilters.has("individual");
+  const mobileTotal = (row) => (mobileHonorFilters.has("team") ? categoryCount(row, "team") : 0)
+    + (mobileHonorFilters.has("individual") ? categoryCount(row, "individual") : 0)
+    + (mobileShowsAll ? categoryCount(row, "otherOnly") : 0);
   const mobileRows = allRows.filter((row) => mobileTotal(row) > 0).sort((a, b) => mobileTotal(b) - mobileTotal(a) || b.totalHonors - a.totalHonors || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10);
   const mobileAwardValue = (tone, label, count) => `<span class="mobile-award-value"><i class="trophy-medal ${tone}">${label}</i><b>${count}</b></span>`;
-  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileAwardValue("gold", "個", row.fullCourse) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
+  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileAwardValue("gold", "個", row.fullCourse) : ""}${mobileShowsAll ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
   if (els.mobileHonorRanking) els.mobileHonorRanking.innerHTML = mobileRows.map((row, index) => `<li><span class="mobile-honor-rank">${index + 1}</span><strong>${entityPageLink(row.id, store.entityName(row.id, row.id))}</strong><span class="mobile-honor-values">${mobileCount(row)}</span></li>`).join("") || '<li class="mobile-honor-empty">目前沒有符合選取類別的榮譽</li>';
   document.querySelectorAll("[data-honor-filter]").forEach((button) => {
     const filter = button.dataset.honorFilter;
-    const active = mobileHonorFilters.has(filter);
+    const active = filter === "all" ? mobileShowsAll : mobileHonorFilters.has(filter);
     button.classList.toggle("is-active", active);
     button.setAttribute("aria-pressed", String(active));
   });
@@ -999,7 +1002,10 @@ els.honorRangeToggle?.addEventListener("click", () => {
 });
 document.querySelectorAll("[data-honor-filter]").forEach((button) => button.addEventListener("click", () => {
   const filter = button.dataset.honorFilter;
-  if (mobileHonorFilters.has(filter)) mobileHonorFilters.delete(filter);
+  if (filter === "all") {
+    if (mobileHonorFilters.has("team") && mobileHonorFilters.has("individual")) mobileHonorFilters.clear();
+    else mobileHonorFilters = new Set(["team", "individual"]);
+  } else if (mobileHonorFilters.has(filter)) mobileHonorFilters.delete(filter);
   else mobileHonorFilters.add(filter);
   renderLeaderboards();
 }));
