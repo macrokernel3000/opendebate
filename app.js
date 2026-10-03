@@ -16,7 +16,6 @@ const els = {
   navButtons: document.querySelectorAll("[data-view]"),
   views: document.querySelectorAll("[data-view-panel]"),
   statsBand: document.querySelector("#statsBand"),
-  dataFreshness: document.querySelector("#dataFreshness"),
   siteIntroductionEyebrow: document.querySelector("#siteIntroductionEyebrow"),
   siteIntroductionTitle: document.querySelector("#siteIntroductionTitle"),
   siteIntroductionParagraph1: document.querySelector("#siteIntroductionParagraph1"),
@@ -134,9 +133,11 @@ function showView(name) {
   let eventName = "";
   let schoolId = "";
   let playerName = "";
+  let upcomingEvent = null;
   if (eventRoute) {
     try { eventName = decodeURIComponent(eventRoute[1]); } catch { eventName = ""; }
-    if (!events.some((event) => event.name === eventName)) eventName = "";
+    upcomingEvent = window.DEBATE_UPCOMING_EVENTS?.find((event) => event.name === eventName) || null;
+    if (!events.some((event) => event.name === eventName) && !upcomingEvent) eventName = "";
   }
   if (schoolRoute) {
     try { schoolId = decodeURIComponent(schoolRoute[1]); } catch { schoolId = ""; }
@@ -151,7 +152,10 @@ function showView(name) {
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
   els.overviewView.classList.remove("is-event-open");
   els.overviewEventsPanel.classList.remove("is-event-open");
-  if (eventName) renderEvent(eventName, els.eventPageDetail);
+  if (eventName) {
+    if (events.some((event) => event.name === eventName)) renderEvent(eventName, els.eventPageDetail);
+    else renderUpcomingEvent(upcomingEvent, els.eventPageDetail);
+  }
   if (schoolId) els.schoolPageDetail.innerHTML = renderEntityDetail(store.entityById.get(schoolId), "schoolPageEntityDetail", true);
   if (playerName) els.playerPageDetail.innerHTML = renderPlayerDetail(playerName);
   if (target === "overview") els.eventDetail.innerHTML = "";
@@ -185,14 +189,6 @@ function renderStats() {
     ["🏆 公開榮譽", honors.length + (players.length ? 0 : 0)],
   ];
   els.statsBand.innerHTML = values.map(([label, value]) => `<div class="stat-item"><span>${label}</span><strong>${value}</strong></div>`).join("");
-}
-
-function renderDataFreshness() {
-  if (!els.dataFreshness) return;
-  const generatedAt = window.DEBATE_PUBLIC_DATA?.generatedAt || "";
-  const [, month, day] = generatedAt.slice(0, 10).split("-");
-  const dateLabel = month && day ? `${Number(month)} 月 ${Number(day)} 日` : "日期未載明";
-  els.dataFreshness.innerHTML = `<strong>資料狀態</strong><span>上次修改是 ${escapeHtml(dateLabel)}，目前有 ${events.length} 個比賽的訊息</span>`;
 }
 
 function renderSiteIntroduction() {
@@ -432,12 +428,12 @@ function renderTimeline() {
   els.eventTimeline.innerHTML = timelineItems.map(({ type, event }) => {
     if (type === "upcoming") {
       return `
-        <article class="timeline-node timeline-upcoming-node" aria-label="即將舉行：${escapeHtml(event.name)}，${escapeHtml(dateRange(event))}">
+        <button class="timeline-node timeline-upcoming-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="開啟賽事：${escapeHtml(event.name)}，${escapeHtml(dateRange(event))}，即將舉行">
           <span class="timeline-date">${escapeHtml(dateRange(event))}</span>
           <span class="timeline-dot" aria-hidden="true">✦</span>
           <span class="timeline-upcoming-label">即將舉行</span>
           <span class="timeline-name">${escapeHtml(event.name)}</span>
-        </article>`;
+        </button>`;
     }
     return `
       <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
@@ -730,6 +726,26 @@ function renderEventFinder() {
     </button>`;
   }).join("");
   els.eventFinderResults.innerHTML = timelineCards || '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';
+}
+
+function renderUpcomingEvent(event, target = els.eventPageDetail) {
+  if (!event) return;
+  const dateLabel = event.startDate && event.endDate
+    ? `${formatDate(event.startDate)}–${formatDate(event.endDate)}`
+    : formatDate(event.startDate || event.endDate || "");
+  const metadata = [
+    event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : "",
+    event.location ? `<div><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
+  ].filter(Boolean).join("");
+  target.innerHTML = `
+    <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
+    <div class="event-summary">
+      <div><p class="kicker">賽事公告</p><h2>${escapeHtml(event.name)}</h2><p>${escapeHtml(dateLabel)}</p></div>
+      <div class="event-summary-count"><span class="count-chip">即將舉行</span></div>
+    </div>
+    ${metadata ? `<div class="event-metadata">${metadata}</div>` : ""}
+    ${event.topic ? `<section class="event-topics"><h3>比賽辯題</h3><p>${escapeHtml(event.topic)}</p>${event.topicNote ? `<p>${escapeHtml(event.topicNote)}</p>` : ""}</section>` : ""}
+    <p class="search-empty">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
 }
 
 function renderEvent(name, target = els.eventDetail) {
@@ -1049,7 +1065,6 @@ function renderAll() {
   }
   renderSiteIntroduction();
   renderStats();
-  renderDataFreshness();
   renderTimeline();
   renderRecentEvents();
   renderMobileUpcomingEvents();

@@ -100,7 +100,7 @@
       if (suppressTimelineClick) { event.preventDefault(); suppressTimelineClick = false; return; }
       const node = event.target.closest("[data-event-name]");
       if (!node) return;
-      if (window.matchMedia("(hover: none)").matches && !node.classList.contains("is-revealed")) {
+      if (window.matchMedia("(hover: none)").matches && !node.classList.contains("timeline-upcoming-node") && !node.classList.contains("is-revealed")) {
         els.eventTimeline.querySelectorAll(".is-revealed").forEach((item) => item.classList.remove("is-revealed"));
         node.classList.add("is-revealed");
         node.focus();
