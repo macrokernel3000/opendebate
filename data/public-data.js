@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T08:46:45",
+  "generatedAt": "2026-10-03T09:08:38",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -872,7 +872,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s001",
       "type": "s",
       "name": "三民高中",
-      "aliases": ""
+      "aliases": "三民高中A|三民高中B"
     },
     {
       "code": "s002",
@@ -950,7 +950,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s015",
       "type": "s",
       "name": "前鎮高中",
-      "aliases": "高雄市立前鎮高中"
+      "aliases": "高雄市立前鎮高中|前鎮高中A|前鎮高中B"
     },
     {
       "code": "s017",
@@ -1010,7 +1010,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s027",
       "type": "s",
       "name": "台南二中",
-      "aliases": ""
+      "aliases": "台南二中A|台南二中B"
     },
     {
       "code": "s029",
@@ -1797,116 +1797,588 @@ window.DEBATE_PUBLIC_DATA = {
       "type": "s",
       "name": "金門高中",
       "aliases": ""
+    },
+    {
+      "code": "s178",
+      "type": "s",
+      "name": "楠梓高中",
+      "aliases": ""
+    },
+    {
+      "code": "s179",
+      "type": "s",
+      "name": "陸興中學",
+      "aliases": ""
+    },
+    {
+      "code": "s180",
+      "type": "s",
+      "name": "高師大附中",
+      "aliases": ""
+    },
+    {
+      "code": "s181",
+      "type": "s",
+      "name": "高雄高商",
+      "aliases": "高雄高商A|高雄高商B"
+    },
+    {
+      "code": "s182",
+      "type": "s",
+      "name": "中正預校",
+      "aliases": ""
     }
   ],
   "records": [
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "period": "",
       "venue": "",
       "teams": {
-        "affirmative": "臺南二中A",
+        "affirmative": "三民高中A",
+        "negative": "華僑高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "華僑高中",
+      "note": "A",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s001",
+        "negative": "s132"
+      },
+      "id": "match-6d2f8f15cc10"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "楠梓高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "鳳新高中",
+      "note": "B",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s178"
+      },
+      "id": "match-93e1e6c570b5"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "前鎮高中A",
+        "negative": "高師大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "前鎮高中A",
+      "note": "C",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s180"
+      },
+      "id": "match-d01d26f19dac"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "台南二中B",
+        "negative": "三民高中B"
+      },
+      "scores": {
+        "affirmative": null,
+        "negative": null
+      },
+      "winner": "台南二中B",
+      "note": "D；三民高中棄賽；文件未載票數",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s027",
+        "negative": "s001"
+      },
+      "id": "match-cd25be373660"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "高雄高商B",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "E",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s181",
+        "negative": "s067"
+      },
+      "id": "match-bffae1590654"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "陸興中學",
+        "negative": "東港高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "陸興中學",
+      "note": "F",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s179",
+        "negative": "s089"
+      },
+      "id": "match-1f0951cfba49"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "小港高中",
+        "negative": "高市中正B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "小港高中",
+      "note": "G",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s150"
+      },
+      "id": "match-63acdc1eecf5"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "台南二中A",
         "negative": "華僑高中"
       },
       "scores": {
         "affirmative": 3,
         "negative": 0
       },
-      "winner": "臺南二中A",
-      "note": "",
+      "winner": "台南二中A",
+      "note": "甲",
       "players": {
-        "affirmative": [
-          "黃禹叡"
-        ],
+        "affirmative": [],
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s126",
+        "affirmative": "s027",
         "negative": "s132"
       },
-      "id": "match-cfbd48e23c95"
+      "id": "match-50e52b5296bf"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "period": "",
       "venue": "",
       "teams": {
-        "affirmative": "臺南二中A",
+        "affirmative": "高市中正A",
+        "negative": "嘉義高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "嘉義高中",
+      "note": "乙",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s150",
+        "negative": "s033"
+      },
+      "id": "match-bbfc9f06f0f8"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "中正預校",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "鳳新高中",
+      "note": "丙",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s182",
+        "negative": "s157"
+      },
+      "id": "match-b63ec8c19c8f"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "前鎮高中A",
+        "negative": "高雄高商A"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "前鎮高中A",
+      "note": "丁",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s181"
+      },
+      "id": "match-d6bf1163059c"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "台南二中B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "延平中學",
+      "note": "戊",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s027"
+      },
+      "id": "match-fce95fbd4d94"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "前鎮高中B",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "己",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s015",
+        "negative": "s067"
+      },
+      "id": "match-b412520ef9dd"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "陸興中學"
+      },
+      "scores": {
+        "affirmative": null,
+        "negative": null
+      },
+      "winner": "瑞祥高中",
+      "note": "庚；陸興中學棄賽；文件未載票數",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s179"
+      },
+      "id": "match-b4c007bd7525"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "小港高中",
+        "negative": "南湖高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "小港高中",
+      "note": "辛",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s024"
+      },
+      "id": "match-4e9e589800cf"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "台南二中A",
         "negative": "嘉義高中"
       },
       "scores": {
         "affirmative": 3,
         "negative": 0
       },
-      "winner": "臺南二中A",
-      "note": "",
+      "winner": "台南二中A",
+      "note": "高",
       "players": {
-        "affirmative": [
-          "黃禹叡"
-        ],
+        "affirmative": [],
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s126",
+        "affirmative": "s027",
         "negative": "s033"
       },
-      "id": "match-c2f3699424ba"
+      "id": "match-324d04616f14"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "period": "",
       "venue": "",
       "teams": {
-        "affirmative": "臺南二中A",
-        "negative": "前鎮高中"
+        "affirmative": "鳳新高中",
+        "negative": "前鎮高中A"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "前鎮高中A",
+      "note": "雄",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s015"
+      },
+      "id": "match-a840483aa30d"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": null,
+        "negative": null
+      },
+      "winner": "延平中學",
+      "note": "青；成功高中棄賽；文件未載票數",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s067"
+      },
+      "id": "match-aff8c8f6cfbd"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "小港高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "瑞祥高中",
+      "note": "年",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s040"
+      },
+      "id": "match-ce3a57d985be"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "台南二中A",
+        "negative": "前鎮高中A"
       },
       "scores": {
         "affirmative": 4,
         "negative": 1
       },
-      "winner": "臺南二中A",
-      "note": "",
+      "winner": "台南二中A",
+      "note": "準決賽（高雄）",
       "players": {
-        "affirmative": [
-          "黃禹叡"
-        ],
+        "affirmative": [],
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s126",
+        "affirmative": "s027",
         "negative": "s015"
       },
-      "id": "match-8abfe04d67a6"
+      "id": "match-3994d41a387d"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "period": "",
       "venue": "",
       "teams": {
-        "affirmative": "臺南二中A",
-        "negative": "延平高中"
+        "affirmative": "延平中學",
+        "negative": "瑞祥高中"
       },
       "scores": {
         "affirmative": 5,
         "negative": 0
       },
-      "winner": "臺南二中A",
-      "note": "",
+      "winner": "延平中學",
+      "note": "準決賽（青年）",
       "players": {
-        "affirmative": [
-          "黃禹叡"
-        ],
+        "affirmative": [],
         "negative": []
       },
       "teamIds": {
-        "affirmative": "s126",
+        "affirmative": "s050",
+        "negative": "s104"
+      },
+      "id": "match-a60994a2f17d"
+    },
+    {
+      "competitionName": "2025「青聲說」全國高中職辯論賽",
+      "matchDate": "",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "台南二中A",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": null,
+        "negative": null
+      },
+      "winner": "台南二中A",
+      "note": "決賽；原表列「台南二中」，依準決賽隊名對應台南二中A；未載比分",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s027",
         "negative": "s050"
       },
-      "id": "match-54e299117551"
+      "id": "match-8a2423cffa2a"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -34450,69 +34922,69 @@ window.DEBATE_PUBLIC_DATA = {
   "honors": [
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "冠軍",
-      "recipient": "臺南二中A",
+      "recipient": "台南二中A",
       "team": "",
       "honorType": "team",
-      "note": "",
-      "teamId": "s126",
-      "id": "honor-167e654c5db0"
+      "note": "原表列「台南二中」；依準決賽晉級隊名對應台南二中A。",
+      "teamId": "s027",
+      "id": "honor-68b5c10ad03e"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "亞軍",
-      "recipient": "臺北市私立延平高級中學",
+      "recipient": "延平中學",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s050",
-      "id": "honor-23ab302f1dc9"
+      "id": "honor-2bfd59da2634"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "季軍",
       "recipient": "高雄市立前鎮高中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s015",
-      "id": "honor-c8096f348193"
+      "id": "honor-f30be1064bdb"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "季軍",
       "recipient": "高雄市立瑞祥高中",
       "team": "",
       "honorType": "team",
       "note": "",
       "teamId": "s104",
-      "id": "honor-2ec5c2247777"
+      "id": "honor-8934e87997e5"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "全程最佳辯士",
       "recipient": "黃禹叡",
       "team": "臺南二中A",
       "honorType": "player",
       "note": "",
       "teamId": "s126",
-      "id": "honor-7e80d82e87f6"
+      "id": "honor-91208c1e2d0d"
     },
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
+      "matchDate": "",
       "honorName": "全程最佳辯士",
       "recipient": "王懷謙",
       "team": "臺北市私立延平高級中學",
       "honorType": "player",
       "note": "",
       "teamId": "s050",
-      "id": "honor-ffda76497bb7"
+      "id": "honor-505280f1d687"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
@@ -38732,48 +39204,7 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-86e6a094404c"
     }
   ],
-  "attendance": [
-    {
-      "id": "appearance-14f871adf722",
-      "matchId": "match-cfbd48e23c95",
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "side": "affirmative",
-      "player": "黃禹叡",
-      "team": "臺南二中A",
-      "teamId": "s126"
-    },
-    {
-      "id": "appearance-8f3f5445b16c",
-      "matchId": "match-c2f3699424ba",
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "side": "affirmative",
-      "player": "黃禹叡",
-      "team": "臺南二中A",
-      "teamId": "s126"
-    },
-    {
-      "id": "appearance-4d40bcbfd7a2",
-      "matchId": "match-8abfe04d67a6",
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "side": "affirmative",
-      "player": "黃禹叡",
-      "team": "臺南二中A",
-      "teamId": "s126"
-    },
-    {
-      "id": "appearance-3b7c6590864d",
-      "matchId": "match-54e299117551",
-      "competitionName": "2025「青聲說」全國高中職辯論賽",
-      "matchDate": "2025-12-07",
-      "side": "affirmative",
-      "player": "黃禹叡",
-      "team": "臺南二中A",
-      "teamId": "s126"
-    }
-  ],
+  "attendance": [],
   "topics": [
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
@@ -39117,8 +39548,14 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 35
     },
     "2025「青聲說」全國高中職辯論賽": {
-      "teamCount": 5,
-      "ageRestriction": null
+      "startDate": "2025-12-06",
+      "endDate": "2025-12-07",
+      "organizer": "高雄市政府青年局",
+      "location": "高雄高商",
+      "note": "賽期與舉辦地點依高雄市政府青年局公告；逐場日期未載於賽果表。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "teamCount": 23
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,

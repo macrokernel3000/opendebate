@@ -365,12 +365,30 @@ function renderPlayerDetail(playerName) {
   const playerRosters = playerRosterEntries(playerName);
   const affiliations = unique([...playerHonors.map((honor) => honor.team), ...playerRosters.map((roster) => roster.team)].filter(Boolean));
   const rosterRows = playerRosters.map((roster) => `<article class="entity-match"><span class="history-date">名單</span><div><strong>${entityPageLink(store.entityForName(roster.team)?.code, roster.team)}</strong><p>${eventRouteLink(roster.competitionName)} · ${roster.players?.includes(playerName) ? "選手" : "領隊"}</p></div></article>`).join("");
-  const honorRows = playerHonors.map((honor) => {
-    const event = events.find((item) => item.name === honor.competitionName) || { records: [], dates: [], metadata: {} };
-    return `<article class="entity-match"><span class="history-date">${escapeHtml(honorDateLabel(honor, event))}</span><div><strong>${escapeHtml(honor.honorName)}</strong><p>${eventRouteLink(honor.competitionName)}${honor.team ? ` · ${entityPageLink(honor.teamId, honor.team)}` : " · 所屬隊伍未載明"}${honor.note ? ` · ${escapeHtml(honor.note)}` : ""}</p></div></article>`;
+  const playerHonorsByEvent = new Map();
+  playerHonors.forEach((honor) => {
+    const group = playerHonorsByEvent.get(honor.competitionName) || { name: honor.competitionName, awards: new Map() };
+    const kind = isFullCourseBest(honor) ? "full-course" : isFullCourseExcellent(honor) ? "full-course-excellence" : isSingleMatchBest(honor) ? "single-match" : isSingleMatchExcellent(honor) ? "single-excellence" : "other";
+    const key = `${kind}|${honor.honorName}|${honor.team || ""}`;
+    const award = group.awards.get(key) || { honor, kind, count: 0 };
+    award.count += 1;
+    if ((honor.matchDate || "") > (award.honor.matchDate || "")) award.honor = honor;
+    group.awards.set(key, award);
+    playerHonorsByEvent.set(honor.competitionName, group);
+  });
+  const honorCards = [...playerHonorsByEvent.values()].map((group) => {
+    const event = events.find((item) => item.name === group.name) || { records: [], dates: [], metadata: {} };
+    const awards = [...group.awards.values()].map(({ honor, kind, count }) => {
+      const badge = kind === "full-course-excellence" || kind === "single-excellence" ? "優" : kind === "other" ? "獎" : "佳";
+      const levelLabel = kind === "full-course" ? "全程最佳辯士" : kind === "full-course-excellence" ? "全程優秀辯士" : kind === "single-match" ? "單場最佳辯士" : kind === "single-excellence" ? "單場優秀辯士" : honor.honorName;
+      const affiliation = honor.team ? entityPageLink(honor.teamId, honor.team) : "所屬隊伍未載明";
+      const repeat = count > 1 ? `<span class="trophy-honor-count">×${count}</span>` : "";
+      return `<div class="entity-trophy-honor ${kind}"><span class="trophy-honor-badge" aria-label="${escapeHtml(levelLabel)}">${badge}</span><span class="trophy-honor-copy"><strong>${escapeHtml(honor.honorName)}</strong><span>${affiliation}</span></span>${repeat}<small>${escapeHtml(honorDateLabel(honor, event))}</small></div>`;
+    }).join("");
+    return `<article class="entity-trophy-card"><div class="entity-trophy-title"><strong>${eventRouteLink(group.name)}</strong></div><div class="entity-trophy-honors">${awards}</div></article>`;
   }).join("");
   const matchRows = playerMatches.map((record) => `<article class="entity-match"><span class="history-date">${escapeHtml(formatDate(record.matchDate))}</span><div><strong>${entityPageLink(record.teamIds?.affirmative, record.teams?.affirmative)} ${escapeHtml(matchScoreLabel(record))} ${entityPageLink(record.teamIds?.negative, record.teams?.negative)}</strong><p>${eventRouteLink(record.competitionName)} · 時段 ${escapeHtml(record.period || "-")} · 會場 ${escapeHtml(record.venue || "-")}</p></div></article>`).join("");
-  return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">選手紀錄</p><h2>${escapeHtml(playerName)}的辯論紀錄</h2></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄${playerRosters.length ? ` · <strong>${playerRosters.length}</strong> 筆隊伍名單` : ""}</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p>${playerRosters.length ? `<h3>隊伍名單</h3><div class="history-list">${rosterRows}</div>` : ""}<h3>公開榮譽</h3><div class="history-list">${honorRows || "<p>目前沒有個人公開榮譽。</p>"}</div><h3>登場紀錄</h3><div class="history-list">${matchRows || "<p>目前沒有逐場選手名單；此頁僅列出可查證的個人榮譽。</p>"}</div></section>`;
+  return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">選手紀錄</p><h2>${escapeHtml(playerName)}的辯論紀錄</h2></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄${playerRosters.length ? ` · <strong>${playerRosters.length}</strong> 筆隊伍名單` : ""}</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p>${playerRosters.length ? `<h3>隊伍名單</h3><div class="history-list">${rosterRows}</div>` : ""}<h3>公開榮譽</h3><div class="entity-trophy-list player-trophy-list">${honorCards || "<p>目前沒有個人公開榮譽。</p>"}</div><h3>登場紀錄</h3><div class="history-list">${matchRows || "<p>目前沒有逐場選手名單；此頁僅列出可查證的個人榮譽。</p>"}</div></section>`;
 }
 
 function eventChampion(event) {
@@ -747,9 +765,9 @@ function renderEvent(name, target = els.eventDetail) {
         const singleHonors = singleHonorsFor(match);
         return `<div class="match-row">
           <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}${match.groupName ? `<small class="match-group-name" aria-label="循環／分組：${escapeHtml(match.groupName)}">↻ ${escapeHtml(match.groupName)}</small>` : ""}</span>
-          <span class="team-name ${!hasScore && match.winner === match.teams?.affirmative ? "inferred-match-winner" : ""}">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}${!hasScore && match.winner === match.teams?.affirmative ? '<small>推定勝方</small>' : ""}</span>
+          <span class="team-name ${!hasScore && match.winner === match.teams?.affirmative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}${!hasScore && match.winner === match.teams?.affirmative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
           ${hasScore ? `<span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>` : '<span class="score-unreported" aria-label="比分未公告">未公告</span>'}
-          <span class="team-name negative ${!hasScore && match.winner === match.teams?.negative ? "inferred-match-winner" : ""}">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}${!hasScore && match.winner === match.teams?.negative ? '<small>推定勝方</small>' : ""}</span>
+          <span class="team-name negative ${!hasScore && match.winner === match.teams?.negative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}${!hasScore && match.winner === match.teams?.negative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
           <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleHonors.map((honor) => `<span class="match-single-best"><b>${honor.label}</b>${playerPageLink(honor.recipient)}</span>`).join("")}</span>
         </div>`;
       }).join("")}</div>

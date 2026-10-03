@@ -257,6 +257,7 @@ button { color: inherit; }
 .entity-trophy-heading small { color: var(--muted); font-size: 11px; font-weight: 650; }
 .entity-trophy-heading small b { color: var(--green-dark); }
 .entity-trophy-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-bottom: 24px; }
+.player-trophy-list { grid-template-columns: minmax(0, 1fr); }
 .entity-trophy-card { display: grid; min-width: 0; gap: 8px; padding: 10px 11px 10px 14px; border: 1px solid #ead89e; border-left: 4px solid #d9b744; border-radius: 13px; background: linear-gradient(110deg, #fff9e8, #fffdf7); box-shadow: 0 3px 10px rgba(91,72,21,.07); }
 .entity-trophy-title { display: flex; min-width: 0; align-items: center; justify-content: space-between; gap: 10px; }
 .entity-trophy-title > strong { min-width: 0; overflow-wrap: anywhere; color: #314139; font-size: 12px; line-height: 1.35; }
@@ -343,8 +344,8 @@ button { color: inherit; }
 .match-score { display: flex; justify-content: center; align-items: center; gap: 8px; font-weight: 950; font-size: 18px; }
 .match-score .winner-score { color: var(--coral); }
 .score-unreported { color: var(--muted); font-size: 12px; font-weight: 800; text-align: center; }
-.inferred-match-winner .team-name-link { color: var(--coral); font-weight: 900; }
-.inferred-match-winner small { display: block; color: var(--coral); font-size: 10px; font-weight: 800; margin-top: 2px; }
+.unscored-match-winner .team-name-link { color: var(--coral); font-weight: 900; }
+.unscored-match-winner small { display: block; color: var(--coral); font-size: 10px; font-weight: 800; margin-top: 2px; }
 .event-honors { align-self: start; border: 1px solid var(--line); border-top: 6px solid var(--coral); padding: 18px; background: white; }
 .event-honor { padding: 13px 0; border-bottom: 1px solid var(--line); }
 .event-honor:last-child { border-bottom: 0; }
