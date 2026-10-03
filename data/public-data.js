@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T09:08:38",
+  "generatedAt": "2026-10-03T09:13:09",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2365,11 +2365,11 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "延平中學"
       },
       "scores": {
-        "affirmative": null,
-        "negative": null
+        "affirmative": 5,
+        "negative": 0
       },
       "winner": "台南二中A",
-      "note": "決賽；原表列「台南二中」，依準決賽隊名對應台南二中A；未載比分",
+      "note": "決賽；比分依選手回報為5：0；原表列「台南二中」，依準決賽隊名對應台南二中A",
       "players": {
         "affirmative": [],
         "negative": []
@@ -2378,7 +2378,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "s027",
         "negative": "s050"
       },
-      "id": "match-8a2423cffa2a"
+      "id": "match-755fc0fcd4dc"
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
