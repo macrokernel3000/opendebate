@@ -1,5 +1,5 @@
 (function () {
-  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewPlayers, renderOverviewTopics, selectOverviewPlayer, showOverviewTab }) {
+  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
@@ -121,12 +121,12 @@
       if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
-    els.overviewPlayerFilter.addEventListener("input", renderOverviewPlayers);
+    els.overviewTeamFilter.addEventListener("input", renderOverviewTeams);
     els.overviewTopicFilter.addEventListener("input", renderOverviewTopics);
     els.overviewTopicList.addEventListener("click", openTopicEvent);
-    els.overviewPlayerList.addEventListener("click", (event) => {
-      const card = event.target.closest("[data-overview-player-name]");
-      if (card) selectOverviewPlayer(card.dataset.overviewPlayerName);
+    els.overviewTeamList.addEventListener("click", (event) => {
+      const card = event.target.closest("[data-overview-team-id]");
+      if (card) selectOverviewTeam(card.dataset.overviewTeamId);
     });
     els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
     els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });

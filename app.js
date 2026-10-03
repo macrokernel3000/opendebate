@@ -49,7 +49,7 @@ const els = {
   overviewTabs: document.querySelectorAll("[data-overview-tab]"),
   overviewEventsPanel: document.querySelector("#overviewEventsPanel"),
   overviewView: document.querySelector("#overviewView"),
-  overviewPlayersPanel: document.querySelector("#overviewPlayersPanel"),
+  overviewTeamsPanel: document.querySelector("#overviewTeamsPanel"),
   overviewTopicsPanel: document.querySelector("#overviewTopicsPanel"),
   overviewStatsPanel: document.querySelector("#overviewStatsPanel"),
   overviewStatsMetric: document.querySelector("#overviewStatsMetric"),
@@ -58,11 +58,11 @@ const els = {
   overviewStatsSummary: document.querySelector("#overviewStatsSummary"),
   overviewStatsChart: document.querySelector("#overviewStatsChart"),
   overviewEventCount: document.querySelector("#overviewEventCount"),
-  overviewPlayerCount: document.querySelector("#overviewPlayerCount"),
+  overviewTeamCount: document.querySelector("#overviewTeamCount"),
   overviewTopicCount: document.querySelector("#overviewTopicCount"),
-  overviewPlayerFilter: document.querySelector("#overviewPlayerFilter"),
-  overviewPlayerMeta: document.querySelector("#overviewPlayerMeta"),
-  overviewPlayerList: document.querySelector("#overviewPlayerList"),
+  overviewTeamFilter: document.querySelector("#overviewTeamFilter"),
+  overviewTeamMeta: document.querySelector("#overviewTeamMeta"),
+  overviewTeamList: document.querySelector("#overviewTeamList"),
   overviewTopicFilter: document.querySelector("#overviewTopicFilter"),
   overviewTopicMeta: document.querySelector("#overviewTopicMeta"),
   overviewTopicList: document.querySelector("#overviewTopicList"),
@@ -103,15 +103,6 @@ function knownPlayers() {
     ...honors.filter((item) => item.honorType === "player").map((item) => item.recipient),
     ...records.flatMap((record) => Object.values(record.players || {}).flat()),
     ...rosterPeople,
-  ].filter(Boolean));
-}
-
-function overviewPlayerNames() {
-  const rosters = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat();
-  return unique([
-    ...honors.filter((honor) => honor.honorType === "player").map((honor) => honor.recipient),
-    ...records.flatMap((record) => Object.values(record.players || {}).flat()),
-    ...rosters.flatMap((roster) => roster.players || []),
   ].filter(Boolean));
 }
 
@@ -831,38 +822,54 @@ function renderEvent(name, target = els.eventDetail) {
 
 function renderOverview() {
   els.overviewEventCount.textContent = events.length;
-  els.overviewPlayerCount.textContent = overviewPlayerNames().length;
+  els.overviewTeamCount.textContent = overviewTeams().length;
   els.overviewTopicCount.textContent = topics.length;
-  renderOverviewPlayers();
+  renderOverviewTeams();
   renderOverviewTopics();
   renderOverviewStats();
 }
 
-function renderOverviewPlayers() {
-  const needle = normalize(els.overviewPlayerFilter.value);
-  const rosterEntries = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat();
-  const players = overviewPlayerNames();
-  const rows = new Map(players.map((name) => [name, { name, honors: 0, matches: 0, rosters: 0 }]));
-  honors.forEach((honor) => {
-    const row = rows.get(honor.recipient);
-    if (row && honor.honorType === "player") row.honors += 1;
+function overviewTeams() {
+  const rows = new Map();
+  const ensure = (name, code = "") => {
+    const entity = (code && store.entityById.get(code)) || store.entityForName(name);
+    if (!entity) return null;
+    if (!rows.has(entity.code)) rows.set(entity.code, { entity, matches: 0, wins: 0, honors: 0, events: new Set() });
+    return rows.get(entity.code);
+  };
+  records.forEach((record) => {
+    [[record.teams?.affirmative, record.teamIds?.affirmative], [record.teams?.negative, record.teamIds?.negative]].forEach(([name, code]) => {
+      const row = ensure(name, code);
+      if (!row) return;
+      row.matches += 1;
+      row.events.add(record.competitionName);
+      if (matchResultForEntity(record, row.entity.code) === "勝") row.wins += 1;
+    });
   });
-  records.forEach((record) => unique(Object.values(record.players || {}).flat()).forEach((name) => {
-    const row = rows.get(name);
-    if (row) row.matches += 1;
-  }));
-  rosterEntries.forEach((roster) => unique(roster.players || []).forEach((name) => {
-    const row = rows.get(name);
-    if (row) row.rosters += 1;
-  }));
-  const filtered = [...rows.values()].filter((row) => !needle || normalize(row.name).includes(needle))
-    .sort((a, b) => a.name.localeCompare(b.name, "zh-Hant"));
-  els.overviewPlayerMeta.textContent = `目前顯示 ${filtered.length} 位選手`;
-  els.overviewPlayerList.innerHTML = filtered.length ? filtered.map((row) => `
-    <button class="overview-player-card" type="button" data-overview-player-name="${escapeHtml(row.name)}">
-      <strong>${escapeHtml(row.name)}</strong>
-      <small>${row.honors} 項個人榮譽 · ${row.rosters} 筆隊伍名單 · ${row.matches} 場登場紀錄</small>
-    </button>`).join("") : '<div class="search-empty"><div><span aria-hidden="true">👤</span><strong>沒有符合的選手</strong><p>請縮短關鍵字再試一次。</p></div></div>';
+  honors.forEach((honor) => {
+    const row = ensure(honor.team, honor.teamId);
+    if (!row) return;
+    row.honors += 1;
+    row.events.add(honor.competitionName);
+  });
+  const rosterEntries = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat();
+  rosterEntries.forEach((roster) => {
+    const row = ensure(roster.team);
+    if (row) row.events.add(roster.competitionName);
+  });
+  return [...rows.values()];
+}
+
+function renderOverviewTeams() {
+  const needle = normalize(els.overviewTeamFilter.value);
+  const filtered = overviewTeams().filter((row) => !needle || normalize(`${row.entity.name} ${row.entity.code} ${row.entity.aliases || ""}`).includes(needle))
+    .sort((a, b) => b.matches - a.matches || b.honors - a.honors || a.entity.name.localeCompare(b.entity.name, "zh-Hant"));
+  els.overviewTeamMeta.textContent = `目前顯示 ${filtered.length} 支隊伍／學校`;
+  els.overviewTeamList.innerHTML = filtered.length ? filtered.map((row) => `
+    <button class="overview-team-card" type="button" data-overview-team-id="${escapeHtml(row.entity.code)}">
+      <strong>${escapeHtml(row.entity.name)}</strong>
+      <small>${row.events.size} 個賽事 · ${row.matches} 場 · ${row.wins} 勝 · ${row.honors} 項榮譽</small>
+    </button>`).join("") : '<div class="search-empty"><div><span aria-hidden="true">🏫</span><strong>沒有符合的隊伍或學校</strong><p>請縮短關鍵字再試一次。</p></div></div>';
 }
 
 function renderOverviewTopics() {
@@ -875,19 +882,19 @@ function renderOverviewTopics() {
     : '<div class="search-empty"><div><span aria-hidden="true">💬</span><strong>沒有符合的辯題</strong><p>請縮短關鍵字再試一次。</p></div></div>';
 }
 
-function selectOverviewPlayer(playerName) {
-  showView(`player/${encodeURIComponent(playerName)}`);
+function selectOverviewTeam(entityId) {
+  selectEntity(entityId);
 }
 
 function showOverviewTab(tabName) {
-  const target = ["events", "players", "topics", "stats"].includes(tabName) ? tabName : "events";
+  const target = ["events", "teams", "topics", "stats"].includes(tabName) ? tabName : "events";
   els.overviewTabs.forEach((tab) => {
     const active = tab.dataset.overviewTab === target;
     tab.classList.toggle("is-active", active);
     tab.setAttribute("aria-selected", String(active));
   });
   els.overviewEventsPanel.classList.toggle("is-hidden", target !== "events");
-  els.overviewPlayersPanel.classList.toggle("is-hidden", target !== "players");
+  els.overviewTeamsPanel.classList.toggle("is-hidden", target !== "teams");
   els.overviewTopicsPanel.classList.toggle("is-hidden", target !== "topics");
   els.overviewStatsPanel.classList.toggle("is-hidden", target !== "stats");
   if (target === "stats") renderOverviewStats();
@@ -1034,7 +1041,7 @@ function selectEntity(entityId) {
   showView(`school/${encodeURIComponent(entityId)}`);
 }
 
-window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewPlayers, renderOverviewTopics, selectOverviewPlayer, showOverviewTab });
+window.DebateInteractions.setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab });
 els.honorRangeToggle?.addEventListener("click", () => {
   honorRange = honorRange === "all" ? "recent" : "all";
   renderLeaderboards();
