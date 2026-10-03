@@ -688,10 +688,11 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #homeView > .leaderboard-band .mobile-honor-rank { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--soft); font-size: 10px; font-weight: 850; }
   #homeView > .leaderboard-band .mobile-honor-ranking li:first-child .mobile-honor-rank { background: var(--yellow); }
   #homeView > .leaderboard-band .mobile-honor-ranking strong { overflow: hidden; font-size: 12px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
-  #homeView > .leaderboard-band .mobile-honor-values { display: flex; min-width: 34px; align-items: center; justify-content: flex-end; gap: 6px; color: var(--green-dark); }
-  #homeView > .leaderboard-band .mobile-award-value { display: inline-flex; align-items: center; gap: 3px; font-size: 11px; font-weight: 850; }
-  #homeView > .leaderboard-band .mobile-award-value .trophy-medal { display: inline-grid; width: 21px; height: 21px; place-items: center; border-radius: 7px; font-size: 9px; font-style: normal; }
-  #homeView > .leaderboard-band .mobile-total-value { font-size: 13px; font-weight: 900; }
+  #homeView > .leaderboard-band .mobile-honor-values { display: flex; max-width: 62%; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: 3px 5px; color: var(--green-dark); }
+  #homeView > .leaderboard-band .mobile-team-awards { display: grid; grid-template-columns: repeat(2, max-content); gap: 2px 5px; }
+  #homeView > .leaderboard-band .mobile-award-value { display: inline-flex; align-items: center; gap: 2px; font-size: 10px; font-weight: 850; }
+  #homeView > .leaderboard-band .mobile-award-value .trophy-medal { display: inline-grid; width: 18px; height: 18px; place-items: center; border-radius: 6px; font-size: 8px; font-style: normal; }
+  #homeView > .leaderboard-band .mobile-total-value { font-size: 12px; font-weight: 900; }
   #homeView > .leaderboard-band .mobile-total-value small { margin-left: 2px; color: var(--muted); font-size: 9px; }
   #homeView > .leaderboard-band .mobile-honor-empty { display: block; min-height: 36px; padding: 10px 0; color: var(--muted); font-size: 12px; text-align: center; }
   #homeView > .leaderboard-band .leaderboard-scroll { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }

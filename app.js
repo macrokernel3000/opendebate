@@ -519,7 +519,13 @@ function renderLeaderboards() {
     row.fullBest ? mobileAwardValue("gold", "佳", row.fullBest) : "",
     row.fullExcellent ? mobileAwardValue("silver", "優", row.fullExcellent) : "",
   ].join("");
-  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileIndividualAwards(row) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
+  const mobileTeamAwards = (row) => `<span class="mobile-team-awards">${[
+    row.gold ? mobileAwardValue("gold", "冠", row.gold) : "",
+    row.silver ? mobileAwardValue("silver", "亞", row.silver) : "",
+    row.bronze ? mobileAwardValue("bronze", "季", row.bronze) : "",
+    row.white ? mobileAwardValue("white", "殿", row.white) : "",
+  ].join("")}</span>`;
+  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileTeamAwards(row) : ""}${mobileHonorFilters.has("individual") ? mobileIndividualAwards(row) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
   if (els.mobileHonorRanking) els.mobileHonorRanking.innerHTML = mobileRows.map((row, index) => `<li><span class="mobile-honor-rank">${index + 1}</span><strong>${entityPageLink(row.id, store.entityName(row.id, row.id))}</strong><span class="mobile-honor-values">${mobileCount(row)}</span></li>`).join("") || '<li class="mobile-honor-empty">目前沒有符合選取類別的榮譽</li>';
   document.querySelectorAll("[data-honor-filter]").forEach((button) => {
     const filter = button.dataset.honorFilter;
