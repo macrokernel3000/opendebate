@@ -122,6 +122,8 @@
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
     els.overviewTeamFilter.addEventListener("input", renderOverviewTeams);
+    els.overviewTeamSortBy.addEventListener("change", renderOverviewTeams);
+    els.overviewTeamSortDirection.addEventListener("change", renderOverviewTeams);
     els.overviewTopicFilter.addEventListener("input", renderOverviewTopics);
     els.overviewTopicList.addEventListener("click", openTopicEvent);
     els.overviewTeamList.addEventListener("click", (event) => {

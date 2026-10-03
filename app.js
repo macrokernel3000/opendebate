@@ -61,6 +61,8 @@ const els = {
   overviewTeamCount: document.querySelector("#overviewTeamCount"),
   overviewTopicCount: document.querySelector("#overviewTopicCount"),
   overviewTeamFilter: document.querySelector("#overviewTeamFilter"),
+  overviewTeamSortBy: document.querySelector("#overviewTeamSortBy"),
+  overviewTeamSortDirection: document.querySelector("#overviewTeamSortDirection"),
   overviewTeamMeta: document.querySelector("#overviewTeamMeta"),
   overviewTeamList: document.querySelector("#overviewTeamList"),
   overviewTopicFilter: document.querySelector("#overviewTopicFilter"),
@@ -862,14 +864,32 @@ function overviewTeams() {
 
 function renderOverviewTeams() {
   const needle = normalize(els.overviewTeamFilter.value);
+  const sortBy = els.overviewTeamSortBy.value;
+  const direction = els.overviewTeamSortDirection.value === "asc" ? 1 : -1;
   const filtered = overviewTeams().filter((row) => !needle || normalize(`${row.entity.name} ${row.entity.code} ${row.entity.aliases || ""}`).includes(needle))
-    .sort((a, b) => b.matches - a.matches || b.honors - a.honors || a.entity.name.localeCompare(b.entity.name, "zh-Hant"));
-  els.overviewTeamMeta.textContent = `目前顯示 ${filtered.length} 支隊伍／學校`;
-  els.overviewTeamList.innerHTML = filtered.length ? filtered.map((row) => `
-    <button class="overview-team-card" type="button" data-overview-team-id="${escapeHtml(row.entity.code)}">
+    .sort((a, b) => {
+      const comparison = sortBy === "name"
+        ? a.entity.name.localeCompare(b.entity.name, "zh-Hant")
+        : (sortBy === "events" ? a.events.size : a[sortBy]) - (sortBy === "events" ? b.events.size : b[sortBy]);
+      return comparison * direction || a.entity.name.localeCompare(b.entity.name, "zh-Hant");
+    });
+  const schools = filtered.filter((row) => row.entity.type === "s");
+  const teams = filtered.filter((row) => row.entity.type !== "s");
+  els.overviewTeamMeta.textContent = `目前顯示 ${schools.length} 所學校、${teams.length} 支隊伍`;
+  const renderCards = (rows, kind) => rows.length ? rows.map((row) => `
+    <button class="overview-team-card ${kind}" type="button" data-overview-team-id="${escapeHtml(row.entity.code)}">
       <strong>${escapeHtml(row.entity.name)}</strong>
-      <small>${row.events.size} 個賽事 · ${row.matches} 場 · ${row.wins} 勝 · ${row.honors} 項榮譽</small>
-    </button>`).join("") : '<div class="search-empty"><div><span aria-hidden="true">🏫</span><strong>沒有符合的隊伍或學校</strong><p>請縮短關鍵字再試一次。</p></div></div>';
+      <small>${row.matches} 場 · ${row.wins} 勝 · ${row.events.size} 個賽事 · ${row.honors} 項榮譽</small>
+    </button>`).join("") : '<p class="overview-empty-group">目前沒有符合項目。</p>';
+  els.overviewTeamList.innerHTML = `
+    <section class="overview-entity-group school-group" aria-labelledby="overviewSchoolGroupTitle">
+      <h3 id="overviewSchoolGroupTitle">學校 <span>${schools.length}</span></h3>
+      <div class="overview-entity-list">${renderCards(schools, "school")}</div>
+    </section>
+    <section class="overview-entity-group team-group" aria-labelledby="overviewTeamGroupTitle">
+      <h3 id="overviewTeamGroupTitle">隊伍 <span>${teams.length}</span></h3>
+      <div class="overview-entity-list">${renderCards(teams, "team")}</div>
+    </section>`;
 }
 
 function renderOverviewTopics() {

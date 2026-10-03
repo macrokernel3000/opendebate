@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261004002042" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261004003711" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -212,11 +212,15 @@
         </section>
         <section id="overviewTeamsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTeamsTab">
           <div class="overview-toolbar">
-            <div><h2>隊伍資料庫</h2><p>依隊伍或學校查找已收錄的參賽場次、勝場與公開榮譽。</p></div>
-            <label class="overview-filter"><span>篩選隊伍</span><input id="overviewTeamFilter" type="search" autocomplete="off" placeholder="輸入隊伍或學校名稱" /></label>
+            <div><h2>學校與隊伍</h2><p>分區查找已收錄的參賽場次、勝場與公開榮譽。</p></div>
+            <div class="overview-team-controls">
+              <label class="overview-filter"><span>搜尋學校或隊伍</span><input id="overviewTeamFilter" type="search" autocomplete="off" placeholder="輸入名稱" /></label>
+              <label class="overview-filter overview-sort-filter"><span>排序依據</span><select id="overviewTeamSortBy"><option value="matches">參賽場數</option><option value="wins">勝場</option><option value="honors">榮譽數</option><option value="events">參賽賽事</option><option value="name">名稱</option></select></label>
+              <label class="overview-filter overview-sort-filter"><span>排序方向</span><select id="overviewTeamSortDirection"><option value="desc">由多到少</option><option value="asc">由少到多</option></select></label>
+            </div>
           </div>
           <p id="overviewTeamMeta" class="overview-meta" aria-live="polite"></p>
-          <div id="overviewTeamList" class="overview-team-list"></div>
+          <div id="overviewTeamList" class="overview-entity-columns"></div>
         </section>
         <section id="overviewTopicsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTopicsTab">
           <div class="overview-toolbar">
@@ -385,13 +389,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20261004002042" data-public-data-script></script>
+  <script src="data/public-data.js?v=20261004003711" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20261004002042" data-versioned-asset></script>
-  <script src="js/core.js?v=20261004002042" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261004002042" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261004002042" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261004002042" data-versioned-asset></script>
-  <script src="app.js?v=20261004002042" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20261004003711" data-versioned-asset></script>
+  <script src="js/core.js?v=20261004003711" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261004003711" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261004003711" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261004003711" data-versioned-asset></script>
+  <script src="app.js?v=20261004003711" data-versioned-asset></script>
 </body>
 </html>
