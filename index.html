@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261003092506" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261003094247" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -192,10 +192,10 @@
       </div>
       <div class="page-shell overview-page">
         <div class="overview-tabs" role="tablist" aria-label="總覽分類">
-          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events">已登錄賽事 <span id="overviewEventCount"></span></button>
-          <button id="overviewSchoolsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="schools">已登錄隊伍 <span id="overviewSchoolCount"></span></button>
-          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics">已收錄辯題 <span id="overviewTopicCount"></span></button>
-          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" data-overview-tab="stats">統計</button>
+          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events"><span class="overview-tab-label-long">已登錄賽事</span><span class="overview-tab-label-short">賽事</span><span class="overview-tab-count" id="overviewEventCount"></span></button>
+          <button id="overviewPlayersTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="players"><span class="overview-tab-label-long">選手資料庫</span><span class="overview-tab-label-short">選手</span><span class="overview-tab-count" id="overviewPlayerCount"></span></button>
+          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics"><span class="overview-tab-label-long">已收錄辯題</span><span class="overview-tab-label-short">辯題</span><span class="overview-tab-count" id="overviewTopicCount"></span></button>
+          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" data-overview-tab="stats"><span class="overview-tab-label-long">統計</span><span class="overview-tab-label-short">統計</span></button>
         </div>
         <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
           <div class="event-browser">
@@ -212,18 +212,13 @@
             <div id="eventDetail"></div>
           </div>
         </section>
-        <section id="overviewSchoolsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewSchoolsTab">
+        <section id="overviewPlayersPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewPlayersTab">
           <div class="overview-toolbar">
-            <div><h2>隊伍紀錄</h2><p>學校與組隊分區呈現，預設依參賽場數由多到少排列。</p></div>
-            <div class="overview-team-controls">
-              <label class="overview-filter"><span>篩選隊伍</span><input id="overviewSchoolFilter" type="search" autocomplete="off" placeholder="輸入學校或隊伍名稱" /></label>
-              <label class="overview-filter overview-sort-filter"><span>排序項目</span><select id="overviewEntitySortBy"><option value="games">參賽場數</option><option value="wins">勝場</option><option value="honors">榮譽數</option><option value="events">參賽賽事</option><option value="name">名稱</option></select></label>
-              <label class="overview-filter overview-sort-filter"><span>排序方向</span><select id="overviewEntitySortDirection"><option value="desc">由多到少</option><option value="asc">由少到多</option></select></label>
-            </div>
+            <div><h2>選手資料庫</h2><p>依姓名查找已收錄的個人榮譽、隊伍名單與登場紀錄。</p></div>
+            <label class="overview-filter"><span>篩選選手</span><input id="overviewPlayerFilter" type="search" autocomplete="off" placeholder="輸入選手姓名" /></label>
           </div>
-          <p id="overviewSchoolMeta" class="overview-meta" aria-live="polite"></p>
-          <div id="overviewSchoolGrid" class="overview-entity-columns"></div>
-          <div id="overviewSchoolDetail"></div>
+          <p id="overviewPlayerMeta" class="overview-meta" aria-live="polite"></p>
+          <div id="overviewPlayerList" class="overview-player-list"></div>
         </section>
         <section id="overviewTopicsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTopicsTab">
           <div class="overview-toolbar">
@@ -392,13 +387,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="debate-records.html">辯論戰績與積分說明</a></span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20261003092506" data-public-data-script></script>
+  <script src="data/public-data.js?v=20261003094247" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20261003092506" data-versioned-asset></script>
-  <script src="js/core.js?v=20261003092506" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261003092506" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261003092506" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261003092506" data-versioned-asset></script>
-  <script src="app.js?v=20261003092506" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20261003094247" data-versioned-asset></script>
+  <script src="js/core.js?v=20261003094247" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261003094247" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261003094247" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261003094247" data-versioned-asset></script>
+  <script src="app.js?v=20261003094247" data-versioned-asset></script>
 </body>
 </html>

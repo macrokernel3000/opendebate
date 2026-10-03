@@ -213,9 +213,11 @@ button { color: inherit; }
 .overview-stats-note, .overview-stats-empty { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .overview-stats-empty { padding: 48px; text-align: center; }
 .overview-tab { min-height: 48px; border: 0; padding: 0 18px; background: var(--soft); cursor: pointer; font-weight: 900; }
-.overview-tab span { margin-left: 7px; color: var(--muted); font-size: 12px; }
+.overview-tab .overview-tab-count { margin-left: 7px; color: var(--muted); font-size: 12px; }
+.overview-tab-label-short { display: none; }
+.overview-tab .overview-tab-label-long, .overview-tab .overview-tab-label-short { margin: 0; color: inherit; font-size: inherit; }
 .overview-tab.is-active { background: var(--green); color: white; }
-.overview-tab.is-active span { color: #d6e5de; }
+.overview-tab.is-active .overview-tab-count { color: #d6e5de; }
 .overview-panel { min-height: 480px; }
 .overview-toolbar { display: flex; align-items: end; justify-content: space-between; gap: 22px; margin-bottom: 10px; }
 .overview-toolbar h2 { margin: 0; font-size: 25px; }
@@ -224,24 +226,11 @@ button { color: inherit; }
 .overview-filter input, .overview-filter select { min-height: 46px; width: 100%; border: 2px solid var(--ink); border-radius: 12px; padding: 0 12px; background: white; color: var(--ink); font: inherit; }
 .overview-team-controls { width: min(700px, 100%); display: grid; grid-template-columns: minmax(220px, 1.5fr) repeat(2, minmax(132px, .8fr)); gap: 10px; }
 .overview-meta { margin: 16px 0 10px; color: var(--muted); font-size: 12px; font-weight: 800; }
-.overview-entity-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: 16px; }
-.overview-entity-group { min-width: 0; border: 1px solid var(--line); border-radius: 18px; padding: 14px; }
-.overview-entity-group.school-group { border-color: #c9dfd4; background: #eff7f2; }
-.overview-entity-group.team-group { border-color: #ead99e; background: #fff8e2; }
-.overview-entity-group > h3 { display: flex; align-items: center; justify-content: space-between; margin: 0 0 10px; font-size: 16px; }
-.school-group > h3 { color: var(--green); }
-.team-group > h3 { color: #80620f; }
-.overview-entity-group > h3 span { display: grid; min-width: 28px; height: 28px; place-items: center; border-radius: 50%; background: rgba(255,255,255,.8); font-size: 12px; }
-.overview-entity-list { display: grid; gap: 7px; }
-.overview-school-card { display: grid; gap: 4px; width: 100%; min-width: 0; min-height: 82px; border: 1px solid rgba(29, 73, 60, .14); border-left: 4px solid var(--green); border-radius: 12px; padding: 10px 11px; background: rgba(255,255,255,.9); color: var(--ink); cursor: pointer; text-align: left; }
-.overview-school-card.team { border-left-color: #d5a92c; }
-.overview-school-card:hover, .overview-school-card.is-selected { border-color: var(--green); box-shadow: 2px 2px 0 rgba(24, 95, 72, .18); }
-.overview-school-card.team:hover, .overview-school-card.team.is-selected { border-color: #c69a20; box-shadow: 2px 2px 0 rgba(198, 154, 32, .2); }
-.overview-school-card strong { overflow-wrap: anywhere; font-size: 14px; line-height: 1.35; }
-.overview-school-card small, .overview-school-code { color: var(--muted); font-size: 11px; line-height: 1.45; }
-.overview-school-code { color: var(--coral); font-weight: 900; }
-.overview-empty-group { margin: 4px; color: var(--muted); font-size: 13px; }
-#overviewSchoolDetail .entity-detail { margin-top: 36px; }
+.overview-player-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 9px; margin-top: 12px; }
+.overview-player-card { display: grid; gap: 5px; min-width: 0; min-height: 74px; border: 1px solid #d6e4dc; border-left: 4px solid var(--green); border-radius: 12px; padding: 11px 13px; background: #fff; color: var(--ink); cursor: pointer; text-align: left; }
+.overview-player-card:hover, .overview-player-card:focus-visible { border-color: var(--green); background: #f3f8f4; box-shadow: 2px 2px 0 rgba(24, 95, 72, .14); }
+.overview-player-card strong { overflow-wrap: anywhere; font-size: 14px; line-height: 1.35; }
+.overview-player-card small { color: var(--muted); font-size: 11px; line-height: 1.45; }
 .overview-topic-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
 .overview-topic-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 18px; background: white; color: var(--ink); text-align: left; }
 .overview-topic-card:hover, .overview-topic-card:focus-visible { border-color: var(--green); background: var(--soft); box-shadow: 3px 3px 0 var(--yellow); }
@@ -601,7 +590,6 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .event-finder-results { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .overview-entity-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .entity-honor-list { grid-template-columns: 1fr; }
   .entity-trophy-list { grid-template-columns: 1fr; gap: 7px; }
   .entity-trophy-card { min-height: 46px; padding-block: 7px; }
@@ -613,7 +601,6 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 @media (max-width: 640px) {
   .event-roster-grid { grid-template-columns: minmax(0, 1fr); }
   .event-rosters { padding: 12px; }
-  .overview-stats-tab, #overviewStatsPanel { display: none !important; }
   /* Keep page movement vertical; horizontal movement belongs to the card rails. */
   html { overflow-x: hidden; }
   body { min-width: 0; overflow-x: clip; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
@@ -771,21 +758,30 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .entity-grid { grid-template-columns: 1fr; }
   .overview-toolbar { display: grid; align-items: start; }
   .overview-filter { width: 100%; }
+  .overview-stats-frame { padding: 14px; }
+  .overview-stats-toolbar { gap: 12px; }
+  .overview-stats-toolbar h2 { font-size: 22px; }
+  .overview-stats-summary { grid-template-columns: 1fr; gap: 8px; }
+  .overview-stats-card { padding: 11px 12px; }
+  .overview-stats-years { gap: 6px; margin-top: 14px; }
+  .overview-year-toggle { min-height: 34px; padding-inline: 10px; }
+  .overview-stats-meta { margin: 14px 0 9px; font-size: 12px; }
+  .overview-stats-chart { overflow-x: auto; padding: 10px 8px 3px; }
+  .overview-stats-svg { min-width: 600px; }
+  .overview-player-list { grid-template-columns: 1fr; gap: 7px; margin-top: 8px; }
+  .overview-player-card { min-height: 66px; padding: 9px 11px; }
   .overview-team-controls { width: 100%; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
   .overview-team-controls > .overview-filter:first-child { grid-column: 1 / -1; }
-  .overview-entity-columns, .overview-topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
-  .overview-entity-group { padding: 8px; border-radius: 14px; }
-  .overview-entity-group > h3 { margin-bottom: 7px; font-size: 14px; }
-  .overview-entity-list { gap: 6px; }
-  .overview-school-card { min-height: 76px; padding: 8px; }
-  .overview-school-card strong { font-size: 12px; line-height: 1.35; }
-  .overview-school-card small, .overview-school-code { font-size: 10px; line-height: 1.35; }
+  .overview-topic-list { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
   .overview-topic-list { gap: 8px; margin-top: 14px; }
   .overview-topic-card { border-left-width: 4px; padding: 10px; }
   .overview-topic-card strong { font-size: 13px; line-height: 1.4; }
   .overview-topic-card p { font-size: 12px; line-height: 1.4; }
-  .overview-tabs { gap: 6px; overflow-x: auto; border: 0; padding: 4px; border-radius: 18px; background: #edf3ee; scrollbar-width: none; }
-  .overview-tab { min-height: 42px; flex: 0 0 auto; border-radius: 999px; padding-inline: 14px; background: transparent; white-space: nowrap; }
+  .overview-tabs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; overflow: hidden; border: 0; padding: 4px; border-radius: 18px; background: #edf3ee; }
+  .overview-tab { display: grid; min-width: 0; min-height: 42px; place-items: center; border-radius: 999px; padding-inline: 3px; background: transparent; white-space: nowrap; }
+  .overview-tab-label-long { display: none !important; }
+  .overview-tab .overview-tab-label-short { display: inline; }
+  .overview-tab .overview-tab-count { display: none; }
   .overview-tab.is-active { border-radius: 999px; background: var(--green); box-shadow: 0 3px 9px rgba(15, 78, 60, .2); }
   .overview-filter input, .overview-filter select, .event-search-field input, .event-year-field select { border-radius: 14px; }
   .search-box { overflow: hidden; border: 1px solid rgba(23, 33, 29, .16); border-radius: 16px; box-shadow: 0 5px 16px rgba(8, 35, 28, .2); }
@@ -801,8 +797,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .page-intro > p:last-child { margin: 6px 0 0; font-size: 14px; line-height: 1.5; }
   .overview-page { padding-bottom: 36px; }
   .overview-tabs { gap: 3px; margin-bottom: 12px; }
-  .overview-tab { min-height: 38px; padding-inline: 9px; font-size: 13px; }
-  .overview-tab span { margin-left: 3px; font-size: 11px; }
+  .overview-tab { min-height: 38px; padding-inline: 2px; font-size: 13px; }
   .event-browser { padding-bottom: 18px; }
   #overviewView.is-event-open > .page-intro, #overviewView.is-event-open .overview-tabs { display: none; }
   #overviewView.is-event-open .overview-page { padding-top: 14px; }
@@ -874,7 +869,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .record-button-primary { border-color: var(--green); background: var(--green); color: #fff; }
   .record-button-secondary, .record-import { border-color: #cbded3; background: #f1f7f3; }
   .record-button-danger { border-radius: 14px; }
-  .record-card, .record-form, .record-summary, .entity-card, .event-result-card, .overview-school-card, .overview-topic-card { border-radius: 18px; }
+  .record-card, .record-form, .record-summary, .entity-card, .event-result-card, .overview-player-card, .overview-topic-card { border-radius: 18px; }
   .personal-record-scores { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .team-score-head, .team-score-row { grid-template-columns: 52px repeat(3, minmax(0, 1fr)); }
   .team-score-row input { padding-inline: 3px; font-size: 12px; }
@@ -916,8 +911,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .mobile-home-results .mobile-home-hint { display: none; }
   #eventFinderResults { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .overview-tabs { gap: 2px; }
-  .overview-tab { min-height: 40px; padding-inline: 4px; font-size: 11px; }
-  .overview-tab span { margin-left: 2px; font-size: 10px; }
+  .overview-tab { min-height: 40px; padding-inline: 1px; font-size: 11px; }
   .record-form-grid { grid-template-columns: 1fr; }
   .record-score-input { grid-template-columns: minmax(0, 1fr) auto 68px; }
   .archive-mode-button { grid-template-columns: 18px minmax(0, 1fr); gap: 5px; padding: 8px; }
@@ -934,7 +928,6 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .overview-page { padding-bottom: 34px; }
   .overview-panel { min-height: 0; }
   .event-finder-results { grid-template-columns: repeat(4, minmax(0, 1fr)); max-height: none; overflow: visible; padding-right: 0; }
-  .overview-entity-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .overview-topic-list { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .search-results { min-height: 0; padding-top: 34px; padding-bottom: 60px; }
   .archive-page { padding-bottom: 60px; }

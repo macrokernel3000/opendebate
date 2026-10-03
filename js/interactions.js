@@ -1,5 +1,5 @@
 (function () {
-  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewSchools, renderOverviewTopics, selectOverviewEntity, showOverviewTab }) {
+  function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewPlayers, renderOverviewTopics, selectOverviewPlayer, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
@@ -121,14 +121,12 @@
       if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
-    els.overviewSchoolFilter.addEventListener("input", renderOverviewSchools);
-    els.overviewEntitySortBy.addEventListener("change", renderOverviewSchools);
-    els.overviewEntitySortDirection.addEventListener("change", renderOverviewSchools);
+    els.overviewPlayerFilter.addEventListener("input", renderOverviewPlayers);
     els.overviewTopicFilter.addEventListener("input", renderOverviewTopics);
     els.overviewTopicList.addEventListener("click", openTopicEvent);
-    els.overviewSchoolGrid.addEventListener("click", (event) => {
-      const card = event.target.closest("[data-overview-entity-id]");
-      if (card) selectOverviewEntity(card.dataset.overviewEntityId);
+    els.overviewPlayerList.addEventListener("click", (event) => {
+      const card = event.target.closest("[data-overview-player-name]");
+      if (card) selectOverviewPlayer(card.dataset.overviewPlayerName);
     });
     els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
     els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
