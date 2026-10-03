@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T08:44:05",
+  "generatedAt": "2026-10-03T08:46:45",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -38419,13 +38419,13 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionName": "育南盃中文教育辯論賽",
       "matchDate": "2026-08-01",
       "honorName": "單場最佳辯士",
-      "recipient": "蔡奕呈",
+      "recipient": "葉亦呈",
       "team": "嘿走去康橋",
       "honorType": "player",
       "note": "第二時段：北市大同 vs 嘿走去康橋",
       "period": 2,
       "teamId": "s049",
-      "id": "honor-07932a7d4bf7"
+      "id": "honor-fc4b8dc19c97"
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
@@ -39719,7 +39719,7 @@ window.DEBATE_PUBLIC_DATA = {
         "leaders": [],
         "players": [
           "吳昕澤",
-          "葉奕呈",
+          "葉亦呈",
           "張為媃",
           "江亭宥",
           "王子寧"
