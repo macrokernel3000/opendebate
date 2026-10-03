@@ -510,7 +510,11 @@ function renderLeaderboards() {
   const mobileTotal = (row) => [...mobileHonorFilters].reduce((sum, category) => sum + categoryCount(row, category), 0);
   const mobileRows = allRows.filter((row) => mobileTotal(row) > 0).sort((a, b) => mobileTotal(b) - mobileTotal(a) || b.totalHonors - a.totalHonors || store.entityName(a.id, a.id).localeCompare(store.entityName(b.id, b.id), "zh-Hant")).slice(0, 10);
   const mobileAwardValue = (tone, label, count) => `<span class="mobile-award-value"><i class="trophy-medal ${tone}">${label}</i><b>${count}</b></span>`;
-  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileAwardValue("gold", "個", row.fullCourse) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
+  const mobileIndividualAwards = (row) => [
+    row.fullBest ? mobileAwardValue("gold", "佳", row.fullBest) : "",
+    row.fullExcellent ? mobileAwardValue("silver", "優", row.fullExcellent) : "",
+  ].join("");
+  const mobileCount = (row) => `${mobileHonorFilters.has("team") ? mobileAwardValue("gold", "團", teamAwardCount(row)) : ""}${mobileHonorFilters.has("individual") ? mobileIndividualAwards(row) : ""}${mobileHonorFilters.has("otherOnly") ? mobileAwardValue("white", "獎", row.other) : ""}<span class="mobile-total-value">${mobileTotal(row)}<small>項</small></span>`;
   if (els.mobileHonorRanking) els.mobileHonorRanking.innerHTML = mobileRows.map((row, index) => `<li><span class="mobile-honor-rank">${index + 1}</span><strong>${entityPageLink(row.id, store.entityName(row.id, row.id))}</strong><span class="mobile-honor-values">${mobileCount(row)}</span></li>`).join("") || '<li class="mobile-honor-empty">目前沒有符合選取類別的榮譽</li>';
   document.querySelectorAll("[data-honor-filter]").forEach((button) => {
     const filter = button.dataset.honorFilter;
