@@ -45,5 +45,13 @@ window.DEBATE_UPCOMING_EVENTS = [
     "location": "國立臺南第二高級中學仁愛樓",
     "topic": "於第一次領隊裁判會議投票決定",
     "organizer": "國立臺南第二高級中學思言社"
+  },
+  {
+    "id": "coconut-wind-13",
+    "name": "第十三屆椰風盃全國高中職辯論比賽",
+    "startDate": "2026-12-26",
+    "endDate": "2026-12-27",
+    "location": "國立臺南女子高級中學（臺南市中西區大埔街97號）",
+    "organizer": "臺南女中演說辯論社"
   }
 ];

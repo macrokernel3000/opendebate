@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T19:43:04",
+  "generatedAt": "2026-10-04T00:20:42",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -39573,6 +39573,16 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 16,
       "teamCount": 0
+    },
+    "第十三屆椰風盃全國高中職辯論比賽": {
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-27",
+      "organizer": "臺南女中演說辯論社",
+      "location": "國立臺南女子高級中學",
+      "note": "",
+      "awardSelectionCriteria": "",
+      "ageRestriction": true,
+      "brochureTeamLimit": 24
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,
