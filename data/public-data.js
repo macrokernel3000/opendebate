@@ -1,10 +1,11 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-03T09:13:09",
+  "generatedAt": "2026-10-03T19:43:04",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
     "public-data-2026司改盃全國高中職辯論比賽.csv",
+    "public-data-2026年氣候盃全國高中職辯論比賽.csv",
     "public-data-2026西灣盃全國高中職辯論賽.csv",
     "public-data-吊嘎盃全國高中職辯論比賽.csv",
     "public-data-火雞盃全國高中職辯論比賽.csv",
@@ -39222,6 +39223,11 @@ window.DEBATE_PUBLIC_DATA = {
       "explanation": ""
     },
     {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "topic": "我國應強制用電大戶設置一定裝置容量以上之再生能源自有發電設備",
+      "explanation": "辯題解釋資料指出，現行制度允許用電大戶以多種方式履行再生能源義務；本題聚焦是否應進一步要求其設置一定容量的再生能源自有發電設備，需衡量能源轉型與安全、產業成本及場地條件。詳細背景見主辦單位辯題解釋文件。"
+    },
+    {
       "competitionName": "2026西灣盃全國高中職辯論賽",
       "topic": "我國政府是否應在國際運動會上正名",
       "explanation": ""
@@ -39556,6 +39562,17 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 23
+    },
+    "2026年氣候盃全國高中職辯論比賽": {
+      "startDate": "2026-10-03",
+      "endDate": "2026-10-04",
+      "organizer": "財團法人綠色和平基金會",
+      "location": "雙北地區之大專院校或其他合適之地點（大會將另行公布）",
+      "note": "執行單位：中華辯論推廣協進會。賽制：新式奧瑞岡四四四制，反方先行結辯，全程單敗淘汰。參賽對象：全國高中職暨五專一至三年級在學學生。簡章載明隊數上限16隊（其中一般報名錄取15隊，另有場地方保障名額1隊），每校1隊、每隊至多6名選手；此為簡章名額，不代表實際參賽隊伍或已公布名單。團體獎：冠軍、亞軍、季軍2名；個人獎1名。比賽日期與辯題依主辦方《2026年氣候盃全國高中職辯論比賽簡章》。題解與簡章來源：https://drive.google.com/file/d/1TukyC1-3oK3Nm3lqTlje6zvsdLUKrjY8/view?usp=sharing；https://drive.google.com/file/d/1YV0wW2Ju2YHJlp4TJd4CTUQWCSG58-H2/view?usp=drive_link",
+      "awardSelectionCriteria": "簡章僅載個人獎取一名，未載明評選標準；不自行補充。",
+      "ageRestriction": true,
+      "brochureTeamLimit": 16,
+      "teamCount": 0
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,
