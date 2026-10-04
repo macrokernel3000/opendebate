@@ -3,8 +3,9 @@
 
 import csv
 import re
-import zipfile
-from xml.etree import ElementTree as ET
+from contextlib import closing
+
+import xlsx_reader as xlsx_reader_module
 
 
 SCHOOL_ENDINGS = ("高中", "高工", "高商", "高職", "中學", "國中", "國小", "女中", "女高", "一中", "二中", "壢中", "附中", "實中", "護專", "五專", "國中部")
@@ -33,7 +34,7 @@ def suggested_type(name):
     return "p"
 
 
-def read_registry(registry_path, legacy_xlsx_path, cell_column, warn):
+def read_registry(registry_path, legacy_xlsx_path, warn):
     entries = []
     source_name = registry_path.name
     # Keep the maintained CSV registry authoritative; XLSX is a fallback for
@@ -45,41 +46,11 @@ def read_registry(registry_path, legacy_xlsx_path, cell_column, warn):
                     entries.append({key: clean(row.get(key)) for key in ("code", "type", "name", "aliases")})
     elif legacy_xlsx_path.exists():
         source_name = legacy_xlsx_path.name
-        with zipfile.ZipFile(legacy_xlsx_path) as book:
-            shared_strings = []
-            if "xl/sharedStrings.xml" in book.namelist():
-                root = ET.fromstring(book.read("xl/sharedStrings.xml"))
-                shared_strings = ["".join(node.text or "" for node in item.iter() if node.tag.endswith("}t")) for item in root]
-            workbook_root = ET.fromstring(book.read("xl/workbook.xml"))
-            rels_root = ET.fromstring(book.read("xl/_rels/workbook.xml.rels"))
-            relationships = {item.attrib["Id"]: item.attrib["Target"] for item in rels_root}
-            relation_key = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
-            sheet = next((item for item in workbook_root.iter() if item.tag.endswith("}sheet")), None)
-            if sheet is None:
-                raise SystemExit("entity-registry.xlsx 找不到工作分頁")
-            target = relationships.get(sheet.attrib.get(relation_key, ""), "").lstrip("/")
-            sheet_path = target if target.startswith("xl/") else "xl/" + target
-            sheet_root = ET.fromstring(book.read(sheet_path))
-            matrix = []
-            for row_node in sheet_root.iter():
-                if not row_node.tag.endswith("}row"):
-                    continue
-                values = {}
-                for cell in row_node:
-                    if not cell.tag.endswith("}c"):
-                        continue
-                    column = cell_column(cell.attrib.get("r", ""))
-                    cell_type = cell.attrib.get("t", "")
-                    if cell_type == "inlineStr":
-                        value = "".join(node.text or "" for node in cell.iter() if node.tag.endswith("}t"))
-                    else:
-                        value_node = next((node for node in cell if node.tag.endswith("}v")), None)
-                        value = value_node.text if value_node is not None and value_node.text is not None else ""
-                        if cell_type == "s" and value:
-                            value = shared_strings[int(value)]
-                    values[column] = clean(value)
-                if values:
-                    matrix.append([values.get(index, "") for index in range(max(values) + 1)])
+        with closing(xlsx_reader_module.read_sheets(legacy_xlsx_path)) as sheets:
+            first_sheet = next(sheets, None)
+        if first_sheet is None:
+            raise SystemExit("entity-registry.xlsx 找不到工作分頁")
+        _, matrix, _ = first_sheet
         header_index = next((index for index, row in enumerate(matrix) if {"code", "type", "name", "aliases"}.issubset(set(row))), None)
         if header_index is None:
             raise SystemExit("entity-registry.xlsx 缺少 code、type、name、aliases 標題")
