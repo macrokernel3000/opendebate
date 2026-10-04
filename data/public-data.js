@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T16:40:46",
+  "generatedAt": "2026-10-04T16:43:47",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -37208,6 +37208,39 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "",
       "teamId": "s020",
       "id": "honor-2acd8adcb44b"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-30",
+      "honorName": "冠軍",
+      "recipient": "這裡沒有桃園人也沒有研究生",
+      "team": "這裡沒有桃園人也沒有研究生",
+      "honorType": "team",
+      "note": "依使用者補充的賽事結果；「天水圍的車與干」決賽棄賽，仍保留原參賽資料，未另列殿軍。",
+      "teamId": "p163",
+      "id": "honor-d4367b2bc607"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-30",
+      "honorName": "亞軍",
+      "recipient": "桃園高中二",
+      "team": "桃園高中二",
+      "honorType": "team",
+      "note": "依使用者補充的賽事結果；「天水圍的車與干」決賽棄賽，仍保留原參賽資料，未另列殿軍。",
+      "teamId": "p161",
+      "id": "honor-b1ad19b1df83"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-30",
+      "honorName": "季軍",
+      "recipient": "壽比南山",
+      "team": "壽比南山",
+      "honorType": "team",
+      "note": "依使用者補充的賽事結果；「天水圍的車與干」決賽棄賽，仍保留原參賽資料，未另列殿軍。",
+      "teamId": "p157",
+      "id": "honor-d4298cdbb89c"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
