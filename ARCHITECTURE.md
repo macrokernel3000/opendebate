@@ -36,7 +36,7 @@
 
 1. 掃描並合併所有 `public-data*.csv`。
 2. 對完全相同的資料去重，保留歷史來源。
-3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍與賽事 metadata。
+3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍與賽事 metadata。未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`，`build_data.py` 保留相容入口並傳入目前資料目錄與網站根目錄。
 4. 同步單位名冊與別名。
 5. 產生網站唯一讀取的 `data/public-data.js`。
 6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
