@@ -123,9 +123,19 @@ def split_topics(value):
     return [topic.strip() for topic in re.split(r"[|\n]+", clean(value)) if topic.strip()]
 
 
-def topic_entries(competition, topic_value, explanation_value=""):
+def topic_entries(competition, topic_value, explanation_value="", source_name="", line_number=None):
     topic_list = split_topics(topic_value)
     explanations = [part.strip() for part in clean(explanation_value).split("|")]
+    if len(explanations) > len(topic_list) and any(explanations[len(topic_list):]):
+        location = (
+            f"{source_name} 第 {line_number} 列"
+            if source_name and line_number is not None
+            else source_name or "資料來源"
+        )
+        warn(
+            f"題解核對提醒：{location} 有 {len(explanations)} 段題解、"
+            f"但只有 {len(topic_list)} 個辯題；多出的題解不會發布，請核對分隔符與原文。"
+        )
     return [{
         "competitionName": competition,
         "topic": topic,
@@ -151,7 +161,13 @@ def parse_rows(rows, source_name, default_competition=""):
             continue
         if data_type not in VALID_DATA_TYPES:
             raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列「資料類型」不在支援範圍：{data_type}。")
-        topics.extend(topic_entries(competition, row.get("辯題"), row.get("辯題解釋")))
+        topics.extend(topic_entries(
+            competition,
+            row.get("辯題"),
+            row.get("辯題解釋"),
+            source_name,
+            line_number,
+        ))
         if "戰績" in data_type:
             affirmative = clean(row.get("正方學校"))
             negative = clean(row.get("反方學校"))

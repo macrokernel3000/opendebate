@@ -172,6 +172,27 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual(result[1]["topic"], "題目二")
         self.assertEqual(result[1]["explanation"], "說明二")
 
+    def test_topic_entries_warn_when_explanation_has_no_matching_topic(self):
+        row = {column: "" for column in build_data.REQUIRED_COLUMNS | build_data.OPTIONAL_COLUMNS}
+        row.update({
+            "資料類型": "公開戰績",
+            "盃賽": "測試盃",
+            "正方學校": "甲校",
+            "反方學校": "乙校",
+            "辯題": "題目一",
+            "辯題解釋": "說明一|多出的說明",
+        })
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.parse_rows([row], "來源.csv")
+            self.assertEqual(len(build_data.WARNINGS), 1)
+            self.assertIn("來源.csv 第 2 列", build_data.WARNINGS[0])
+            self.assertIn("多出的題解不會發布", build_data.WARNINGS[0])
+
+    def test_topic_entries_allows_blank_explanation_slots(self):
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.topic_entries("測試盃", "題目一", "說明一|")
+            self.assertEqual(build_data.WARNINGS, [])
+
     def test_upcoming_event_validation_checks_dates_and_key_dates(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "upcoming-events.js"
