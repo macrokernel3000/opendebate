@@ -1,6 +1,25 @@
 (function () {
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
+    const calendarHelp = document.querySelector("#androidCalendarHelp");
+    document.querySelector("[data-calendar-subscribe]")?.addEventListener("click", (event) => {
+      if (/Android/i.test(navigator.userAgent) && calendarHelp?.showModal) {
+        event.preventDefault();
+        calendarHelp.showModal();
+      }
+    });
+    document.querySelector("#copyAndroidCalendarUrl")?.addEventListener("click", async () => {
+      const field = document.querySelector("#androidCalendarUrl");
+      const status = document.querySelector("#calendarCopyStatus");
+      try {
+        await navigator.clipboard.writeText(field.value);
+        status.textContent = "已複製。";
+      } catch {
+        field.focus();
+        field.select();
+        status.textContent = "已選取網址，請長按複製。";
+      }
+    });
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
       const menu = document.querySelector("#mobileQuickMenu");

@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005001500" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005003000" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -173,8 +173,21 @@
       </section>
       <div class="calendar-link-section">
         <a class="calendar-subscribe-button" data-calendar-subscribe href="webcal://macrokernel3000.github.io/opendebate/calendar.ics">行事曆｜測試版</a>
-        <p class="calendar-platform-note"><span>iOS：點擊即可訂閱</span><span>Android：Google 日曆需先在電腦新增網址；手機直訂閱需支援 WebCal 的 App</span></p>
+        <p class="calendar-platform-note"><span>iOS：點擊即可訂閱</span><span>Android：Google 日曆請在電腦新增；支援 WebCal 的 App 可直接訂閱</span></p>
       </div>
+      <dialog id="androidCalendarHelp" class="calendar-help-dialog" aria-labelledby="androidCalendarHelpTitle">
+        <form method="dialog" class="calendar-help-card">
+          <h2 id="androidCalendarHelpTitle">Android 行事曆設定</h2>
+          <p>Google 日曆手機 App 不支援直接訂閱網址。要自動同步，請在電腦版 Google 日曆選「新增日曆」→「透過網址新增」，貼上這個網址，再用同一個帳戶同步手機。</p>
+          <label for="androidCalendarUrl">行事曆訂閱網址</label>
+          <input id="androidCalendarUrl" readonly value="https://macrokernel3000.github.io/opendebate/calendar.ics" />
+          <div class="calendar-help-actions">
+            <button type="button" id="copyAndroidCalendarUrl">複製網址</button>
+            <button type="submit" class="calendar-help-close">關閉</button>
+          </div>
+          <span id="calendarCopyStatus" class="calendar-copy-status" aria-live="polite"></span>
+        </form>
+      </dialog>
     </section>
 
     <section id="eventPageView" class="view is-hidden" data-view-panel="event-page">
@@ -396,13 +409,13 @@
     <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。</span></div>
   </footer>
 
-  <script src="data/public-data.js?v=20261005001500" data-public-data-script></script>
+  <script src="data/public-data.js?v=20261005003000" data-public-data-script></script>
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20261005001500" data-versioned-asset></script>
-  <script src="js/core.js?v=20261005001500" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261005001500" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261005001500" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261005001500" data-versioned-asset></script>
-  <script src="app.js?v=20261005001500" data-versioned-asset></script>
+  <script src="js/site-config.js?v=20261005003000" data-versioned-asset></script>
+  <script src="js/core.js?v=20261005003000" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261005003000" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261005003000" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261005003000" data-versioned-asset></script>
+  <script src="app.js?v=20261005003000" data-versioned-asset></script>
 </body>
 </html>
