@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T16:50:47",
+  "generatedAt": "2026-10-04T16:53:13",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -912,13 +912,13 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p160",
       "type": "p",
       "name": "桃園高中一",
-      "aliases": ""
+      "aliases": "桃園高中A"
     },
     {
       "code": "p161",
       "type": "p",
       "name": "桃園高中二",
-      "aliases": ""
+      "aliases": "桃園高中B"
     },
     {
       "code": "p162",
