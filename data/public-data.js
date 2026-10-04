@@ -1,11 +1,12 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T15:20:40",
+  "generatedAt": "2026-10-04T15:53:55",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
     "public-data-2026司改盃全國高中職辯論比賽.csv",
     "public-data-2026年氣候盃全國高中職辯論比賽.csv",
+    "public-data-2026桃園青年盃華語辯論賽（學青組）.csv",
     "public-data-2026西灣盃全國高中職辯論賽.csv",
     "public-data-吊嘎盃全國高中職辯論比賽.csv",
     "public-data-火雞盃全國高中職辯論比賽.csv",
@@ -881,6 +882,54 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p155",
       "type": "p",
       "name": "高市三民B",
+      "aliases": ""
+    },
+    {
+      "code": "p156",
+      "type": "p",
+      "name": "中壢桃園一邊一國",
+      "aliases": ""
+    },
+    {
+      "code": "p157",
+      "type": "p",
+      "name": "壽比南山",
+      "aliases": ""
+    },
+    {
+      "code": "p158",
+      "type": "p",
+      "name": "天水圍的車與干",
+      "aliases": ""
+    },
+    {
+      "code": "p159",
+      "type": "p",
+      "name": "差點上台大還好忍到下台才大",
+      "aliases": ""
+    },
+    {
+      "code": "p160",
+      "type": "p",
+      "name": "桃園高中一",
+      "aliases": ""
+    },
+    {
+      "code": "p161",
+      "type": "p",
+      "name": "桃園高中二",
+      "aliases": ""
+    },
+    {
+      "code": "p162",
+      "type": "p",
+      "name": "菜菜捲捲",
+      "aliases": ""
+    },
+    {
+      "code": "p163",
+      "type": "p",
+      "name": "這裡沒有桃園人也沒有研究生",
       "aliases": ""
     },
     {
@@ -3915,6 +3964,276 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s049"
       },
       "id": "match-858708e4546c"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "桃園高中一",
+        "negative": "內壢高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "內壢高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "A 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p160",
+        "negative": "s013"
+      },
+      "id": "match-22ac26183bec"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "桃園高中二",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "桃園高中二",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "A 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p161",
+        "negative": "s057"
+      },
+      "id": "match-28f27df5fe8c"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "壽比南山"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "壽比南山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "A 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "p157"
+      },
+      "id": "match-256a8623335f"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "內壢高中",
+        "negative": "桃園高中二"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "桃園高中二",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "A 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "s013",
+        "negative": "p161"
+      },
+      "id": "match-8bee2ed8e2ee"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "壽比南山",
+        "negative": "桃園高中一"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "壽比南山",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "A 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p157",
+        "negative": "p160"
+      },
+      "id": "match-9f42cdfb4e66"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "這裡沒有桃園人也沒有研究生",
+        "negative": "菜菜捲捲"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "這裡沒有桃園人也沒有研究生",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "B 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p163",
+        "negative": "p162"
+      },
+      "id": "match-5fb1ff96118f"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 1,
+      "venue": "",
+      "teams": {
+        "affirmative": "差點上台大還好忍到下台才大",
+        "negative": "中壢桃園一邊一國"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中壢桃園一邊一國",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "B 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p159",
+        "negative": "p156"
+      },
+      "id": "match-f2418533135e"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "中壢桃園一邊一國",
+        "negative": "天水圍的車與干"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "天水圍的車與干",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "B 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p156",
+        "negative": "p158"
+      },
+      "id": "match-9caf4f0e83ae"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 2,
+      "venue": "",
+      "teams": {
+        "affirmative": "菜菜捲捲",
+        "negative": "差點上台大還好忍到下台才大"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "菜菜捲捲",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "B 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p162",
+        "negative": "p159"
+      },
+      "id": "match-db65cba74f67"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-29",
+      "period": 3,
+      "venue": "",
+      "teams": {
+        "affirmative": "天水圍的車與干",
+        "negative": "這裡沒有桃園人也沒有研究生"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "這裡沒有桃園人也沒有研究生",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "B 區",
+      "inferenceNote": "依照片所列DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
+      "teamIds": {
+        "affirmative": "p158",
+        "negative": "p163"
+      },
+      "id": "match-1e0740dc055f"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
@@ -41596,6 +41915,16 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 38
+    },
+    "2026桃園青年盃華語辯論賽（學青組）": {
+      "startDate": "2026-08-29",
+      "endDate": "2026-08-30",
+      "organizer": "桃園市政府青年事務局",
+      "location": "元智大學",
+      "note": "學青組賽期為8/29–8/30。本站已錄入的10場8/29循環賽來自使用者提供之現場戰績板照片，非主辦單位文字公告；照片未提供會場及後續淘汰賽結果。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "teamCount": 10
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,
