@@ -452,6 +452,21 @@ test("personal and team CSV exports use the shared local calendar date", () => {
   assert.doesNotMatch(personalSource + teamSource, /toISOString\(\)\.slice\(0, 10\)/);
 });
 
+test("team match results require enough decided ballots and preserve tie states", () => {
+  const window = loadFactory("js/team-records.js");
+  const resolve = window.DebateTeamRecords.resolveResult;
+  const pageSource = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const ballot = (affirmative, negative) => ({ side: "正", affP1Speech: affirmative, negP1Speech: negative });
+
+  assert.match(pageSource, /至少兩張可判定且勝票過半，才會判定整場勝負/);
+  assert.equal(resolve([ballot(10, 8), ballot(9, 7)]).status, "待補裁單");
+  assert.equal(resolve([ballot(10, 8), ballot(9, 9), ballot(8, 8)]).status, "裁判票不足以判定");
+  assert.equal(resolve([ballot(10, 8), ballot(10, 8), ballot(8, 10)]).status, "本場獲勝");
+  assert.equal(resolve([ballot(10, 8), ballot(8, 10), ballot(9, 9)]).status, "裁判票平手");
+  assert.equal(resolve([ballot(9, 9), ballot(8, 8), {}]).status, "尚無可判定裁單");
+  assert.equal(resolve([ballot(8, 10), ballot(8, 10), ballot(10, 8)]).status, "本場落敗");
+});
+
 test("personal record save feedback does not claim empty scores updated averages", () => {
   const source = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
   assert.match(source, /裁單已儲存；已填寫的分數會納入平均。/);

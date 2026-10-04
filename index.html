@@ -364,7 +364,7 @@
               <div class="record-summary-heading"><div><p class="kicker">TEAM RESULTS</p><h2 id="teamSummaryTitle">隊伍比賽紀錄</h2></div><strong id="teamRecordCount">0 張</strong></div>
               <div id="teamRecordStats" class="record-stats team-record-stats"></div>
               <article class="record-chart team-radar-card"><div class="record-chart-heading"><div><h3>隊伍平均雷達圖</h3><span>累積超過兩張裁單後，計算我方申論、質詢與答辯平均</span></div><button type="button" data-expand-chart aria-label="放大隊伍平均雷達圖" title="放大圖表">⛶</button></div><div id="teamRadarChart"></div></article>
-              <p class="team-record-explanation">每張裁單會依正反方已輸入的所有分數加總，自動算出該張勝負。同一盃賽、同一場次的裁單會放在一起；一般累積三張後，再依裁判票多數決定整場勝負。</p>
+              <p class="team-record-explanation">每張裁單會依正反方已輸入的所有分數加總，自動算出該張勝負。同一盃賽、同一場次的裁單會放在一起；累積三張後，至少兩張可判定且勝票過半，才會判定整場勝負。平票或有效票不足時會保留未決狀態。</p>
               <div class="record-data-actions"><button id="teamExportCsv" class="record-button record-button-primary" type="button">下載隊伍 CSV</button><label class="record-import">匯入隊伍 CSV<input id="teamImportCsv" type="file" accept=".csv,text/csv" /></label><button id="teamDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button></div>
               <div id="teamRecordList" class="personal-record-list"></div>
             </section>
@@ -445,7 +445,7 @@
   <script src="js/interactions.js?v=20261005-stats-keyboard1" data-versioned-asset></script>
   <script src="js/record-storage.js?v=20261005-csv-local-date1" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20261005-csv-local-date1" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261005-csv-local-date1" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261005-majority-guard1" data-versioned-asset></script>
   <script src="js/event-pages.js?v=20261005-entity-pages1" data-versioned-asset></script>
   <script src="js/entity-pages.js?v=20261005-overview-pages1" data-versioned-asset></script>
   <script src="js/overview-pages.js?v=20261005-stats-keyboard1" data-versioned-asset></script>
