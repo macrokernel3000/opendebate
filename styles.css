@@ -853,6 +853,9 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #eventFinderResults .event-result-card[data-timeline-side="left"]::after, #eventFinderResults .event-result-card[data-timeline-side="right"]::after { position: absolute; top: 18px; width: 11px; height: 11px; border: 2px solid white; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 1px var(--green); content: ""; }
   #eventFinderResults .event-result-card[data-timeline-side="left"]::after { right: -20px; }
   #eventFinderResults .event-result-card[data-timeline-side="right"]::after { left: -20px; }
+  #eventFinderResults .event-result-card[data-axis-label]::before { position: absolute; z-index: 2; top: 50%; border: 1px solid #d5e4d9; border-radius: 999px; padding: 4px 8px; background: var(--paper); color: var(--green-dark); content: attr(data-axis-label); font-size: 11px; font-weight: 900; letter-spacing: .01em; line-height: 1.2; white-space: nowrap; }
+  #eventFinderResults .event-result-card[data-timeline-side="left"][data-axis-label]::before { left: calc(100% + 12px); transform: translate(-50%, -50%); }
+  #eventFinderResults .event-result-card[data-timeline-side="right"][data-axis-label]::before { right: calc(100% + 12px); transform: translate(50%, -50%); }
   #eventFinderResults .event-result-year { color: var(--green-dark); font-size: 12px; font-variant-numeric: tabular-nums; font-weight: 900; }
   #eventFinderResults .event-result-card strong { display: -webkit-box; overflow: hidden; font-size: 13px; line-height: 1.4; -webkit-box-orient: vertical; -webkit-line-clamp: 3; }
   #eventFinderResults .event-result-card small { display: -webkit-box; overflow: hidden; font-size: 12px; line-height: 1.35; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }

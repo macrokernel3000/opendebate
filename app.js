@@ -713,14 +713,25 @@ function renderEventFinder() {
   });
   const visibleEvents = sortedEvents;
   els.eventFinderMeta.textContent = `找到 ${visibleEvents.length} 個賽事`;
-  let previousYear = null;
+  let previousAxisValue = null;
   const timelineCards = visibleEvents.map((event, index) => {
     const eventYear = event.latestDate?.slice(0, 4) || "年份未載明";
-    const yearMarker = isMobileTimeline && eventYear !== previousYear ? `<div class="event-year-divider"><span>${escapeHtml(eventYear)}${eventYear === "年份未載明" ? "" : " 年"}</span></div>` : "";
-    previousYear = eventYear;
+    const axisValue = sortBy === "teams" ? event.teamCount
+      : sortBy === "honors" ? event.honors.length
+        : eventYear;
+    const axisLabel = sortBy === "teams" ? `${axisValue} 隊`
+      : sortBy === "honors" ? `${axisValue} 項榮譽`
+        : `${axisValue}${axisValue === "年份未載明" ? "" : " 年"}`;
+    const axisMarker = isMobileTimeline && sortBy === "year" && axisValue !== previousAxisValue
+      ? `<div class="event-year-divider"><span>${escapeHtml(axisLabel)}</span></div>`
+      : "";
+    const axisLabelAttribute = isMobileTimeline && sortBy !== "year" && axisValue !== previousAxisValue
+      ? ` data-axis-label="${escapeHtml(axisLabel)}"`
+      : "";
+    previousAxisValue = axisValue;
     const dateLabel = isMobileTimeline ? (event.latestDate ? formatDate(event.latestDate) : "日期未載明") : eventYear;
     const side = index % 2 === 0 ? "left" : "right";
-    return `${yearMarker}<button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}" data-timeline-side="${side}">
+    return `${axisMarker}<button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}" data-timeline-side="${side}"${axisLabelAttribute}>
       <span class="event-result-year">${escapeHtml(dateLabel)}</span>
       <strong>${escapeHtml(event.name)}</strong>
       <small>${event.teamCount} 隊 · ${event.records.length} 場 · ${event.honors.length} 榮譽</small>
