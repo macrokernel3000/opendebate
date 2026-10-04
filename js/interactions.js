@@ -15,6 +15,10 @@
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, renderOverviewStats, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const preferredScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    els.overviewStatsChart?.addEventListener("focus", (event) => {
+      const chart = event.currentTarget;
+      if (chart.matches(":focus-visible")) chart.scrollIntoView({ behavior: preferredScrollBehavior(), block: "center" });
+    });
     const calendarHelp = document.querySelector("#androidCalendarHelp");
     document.querySelector("[data-calendar-subscribe]")?.addEventListener("click", (event) => {
       if (/Android/i.test(navigator.userAgent) && calendarHelp?.showModal) {

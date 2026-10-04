@@ -183,7 +183,11 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     querySelectorAll(selector) { return parseInputs(this.innerHTML, selector === "input:checked"); },
     querySelector() { return null; },
   };
-  const node = (value = "") => ({ value, innerHTML: "", textContent: "", classList: { toggle() {} }, setAttribute() {} });
+  const node = (value = "") => ({
+    value, innerHTML: "", textContent: "", attributes: {},
+    classList: { toggle() {} },
+    setAttribute(name, content) { this.attributes[name] = content; },
+  });
   const els = {
     eventSearch: node(""),
     eventYear: node(""),
@@ -241,10 +245,14 @@ test("overview separates schools and teams and redraws selected monthly metrics"
 
   pages.renderOverviewStats();
   assert.match(els.overviewStatsChart.innerHTML, /每月賽事數年度趨勢折線圖/);
+  assert.equal(els.overviewStatsChart.attributes.role, "region");
+  assert.equal(els.overviewStatsChart.attributes.tabindex, "0");
+  assert.match(els.overviewStatsChart.attributes["aria-label"], /可左右捲動查看月份/);
   assert.match(els.overviewStatsSummary.innerHTML, /不重複隊伍/);
   els.overviewStatsMetric.value = "teams";
   pages.renderOverviewStats();
   assert.match(els.overviewStatsChart.innerHTML, /每月參賽隊次年度趨勢折線圖/);
+  assert.match(els.overviewStatsChart.attributes["aria-label"], /參賽隊次年度趨勢折線圖/);
 });
 
 test("home pages render summaries, timeline and upcoming events, and keep leaderboard controls working", () => {

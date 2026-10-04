@@ -233,7 +233,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .overview-stats-year-value { display: grid; grid-template-columns: 18px 1fr auto; align-items: center; gap: 8px; color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
 .overview-stats-year-value strong { color: var(--green-dark); font-size: 18px; }
 .overview-stats-year-value strong small { margin-left: 3px; font-size: 11px; }
-.overview-stats-chart { min-width: 0; border: 1px solid #dce7df; border-radius: 14px; padding: 14px 14px 4px; background: #fff; }
+.overview-stats-chart { min-width: 0; scroll-margin-block: 18px 96px; border: 1px solid #dce7df; border-radius: 14px; padding: 14px 14px 4px; background: #fff; }
+.overview-stats-chart:focus-visible { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .overview-stats-svg { display: block; width: 100%; height: auto; overflow: visible; }
 .overview-chart-summer { fill: #fff7dd; }
 .overview-chart-summer-label { fill: #96752b; font-family: inherit; font-size: 11px; font-weight: 800; }
@@ -666,7 +667,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-roster-grid { grid-template-columns: minmax(0, 1fr); }
   .event-rosters { padding: 12px; }
   /* Keep page movement vertical; horizontal movement belongs to the card rails. */
-  html { overflow-x: hidden; }
+  html { overflow-x: hidden; scroll-padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
   body { min-width: 0; overflow-x: clip; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
   #homeView, #homeView > * { min-width: 0; }
 

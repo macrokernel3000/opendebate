@@ -130,6 +130,9 @@
       }).join("");
       const title = `${metricName}年度趨勢折線圖`;
       const desc = `顯示勾選年度的一月至十二月逐月資料；當年度未到月份留白，7、8 月以淡金底標示暑假。`;
+      els.overviewStatsChart.setAttribute("role", "region");
+      els.overviewStatsChart.setAttribute("tabindex", "0");
+      els.overviewStatsChart.setAttribute("aria-label", `${title}，可左右捲動查看月份`);
       els.overviewStatsChart.innerHTML = `<svg class="overview-stats-svg" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="overviewChartTitle overviewChartDesc"><title id="overviewChartTitle">${escapeHtml(title)}</title><desc id="overviewChartDesc">${escapeHtml(desc)}</desc>${summerBand}${grid}<line class="overview-chart-axis" x1="${plot.left}" y1="${plot.top + plotHeight}" x2="${width - plot.right}" y2="${plot.top + plotHeight}" />${lines}${xLabels}</svg>`;
     }
 
