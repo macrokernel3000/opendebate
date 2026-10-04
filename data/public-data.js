@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T23:07:51",
+  "generatedAt": "2026-10-04T23:17:39",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -4215,6 +4215,56 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s057"
       },
       "id": "match-931cb0849571"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-04",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "華僑高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "武陵高中",
+      "note": "準決賽賽果；來源：使用者回報（時段一評分單已上傳）。",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s132",
+        "negative": "s096"
+      },
+      "id": "match-41d9061082e0"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-04",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "延平中學",
+      "note": "準決賽賽果；來源：使用者回報（時段一評分單已上傳）。",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s050"
+      },
+      "id": "match-4d25e79fdf91"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
