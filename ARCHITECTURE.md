@@ -36,7 +36,7 @@
 
 1. 掃描並合併所有 `public-data*.csv`。
 2. 對完全相同的資料去重，保留歷史來源。
-3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍、賽事 metadata，以及題解段數是否超過對應辯題數。題解不匹配只提示來源位置，不自行裁切或改寫。資料一致性規則集中在 `tools/data_validation.py`；未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`；單位名冊的讀取、別名歸戶與穩定 ID 關聯集中在 `tools/entity_registry.py`；XLSX 工作表 XML 解析由 `tools/xlsx_reader.py` 共用於賽事匯入與舊版名冊讀取。`build_data.py` 保留相容入口。
+3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍、賽事 metadata，以及題解段數是否超過對應辯題數。題解不匹配只提示來源位置，不自行裁切或改寫。CSV／XLSX 來源檔讀取與表格列轉換集中在 `tools/source_reader.py`；資料一致性規則集中在 `tools/data_validation.py`；未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`；單位名冊的讀取、別名歸戶與穩定 ID 關聯集中在 `tools/entity_registry.py`；XLSX 工作表 XML 解析由 `tools/xlsx_reader.py` 共用於賽事匯入與舊版名冊讀取。`build_data.py` 保留相容入口。
 4. 同步單位名冊與別名。
 5. 產生網站唯一讀取的 `data/public-data.js`。
 6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
