@@ -54,18 +54,6 @@
     });
 
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
-    document.querySelector("#eventCalendar")?.addEventListener("click", (event) => {
-      const day = event.target.closest("[data-calendar-date]");
-      if (day) window.DebateCalendar?.selectDate(day.dataset.calendarDate);
-    });
-    document.querySelector("#calendarAgenda")?.addEventListener("click", (event) => {
-      const item = event.target.closest("[data-calendar-event]");
-      if (item) openCompetition(item.dataset.calendarEvent);
-    });
-    document.querySelector(".calendar-month-controls")?.addEventListener("click", (event) => {
-      const control = event.target.closest("[data-calendar-shift]");
-      if (control) window.DebateCalendar?.shiftMonth(Number(control.dataset.calendarShift));
-    });
     window.addEventListener("hashchange", () => {
       const target = location.hash.slice(1) || "home";
       showView(target);

@@ -10,8 +10,6 @@ let mobileHonorFilters = new Set(["team", "individual"]);
 const leaderboardSortDirections = { gold: -1, silver: -1, bronze: -1, white: -1, fullCourse: -1, other: -1, totalHonors: -1 };
 const leaderboardSortPriority = ["gold", "silver", "bronze", "white", "fullCourse", "other", "totalHonors"];
 let leaderboardSortKey = "totalHonors";
-let selectedCalendarMonth = (() => { const now = new Date(); return new Date(now.getFullYear(), now.getMonth(), 1); })();
-let selectedCalendarDate = "";
 
 const els = {
   homeBrand: document.querySelector("#homeBrand"),
@@ -447,88 +445,6 @@ function renderTimeline() {
       </button>`;
   }).join("");
 }
-
-function renderCalendar() {
-  const calendar = document.querySelector("#eventCalendar");
-  const agenda = document.querySelector("#calendarAgenda");
-  const monthLabel = document.querySelector("#calendarMonthLabel");
-  if (!calendar || !agenda || !monthLabel) return;
-  const monthStart = new Date(selectedCalendarMonth.getFullYear(), selectedCalendarMonth.getMonth(), 1);
-  const year = monthStart.getFullYear();
-  const month = monthStart.getMonth();
-  const monthKey = `${year}-${String(month + 1).padStart(2, "0")}`;
-  const today = new Date();
-  const todayKey = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
-  monthLabel.textContent = `${year} 年 ${month + 1} 月`;
-  if (!selectedCalendarDate.startsWith(monthKey)) selectedCalendarDate = todayKey.startsWith(monthKey) ? todayKey : `${monthKey}-01`;
-
-  const calendarEvents = [
-    ...events.map((event) => {
-      const hasMetadataRange = /^\d{4}-\d{2}-\d{2}$/.test(event.metadata?.startDate || "") && /^\d{4}-\d{2}-\d{2}$/.test(event.metadata?.endDate || "");
-      const dates = event.dates?.length ? event.dates : [event.latestDate].filter(Boolean);
-      return { ...event, startDate: hasMetadataRange ? event.metadata.startDate : dates[0], endDate: hasMetadataRange ? event.metadata.endDate : dates.at(-1), calendarDates: hasMetadataRange ? null : dates };
-    }),
-    ...(window.DEBATE_UPCOMING_EVENTS || []).map((event) => ({ ...event, calendarDates: null })),
-  ];
-  const eventsByDate = new Map();
-  const addEventDate = (date, event) => {
-    if (!/^\d{4}-\d{2}-\d{2}$/.test(date || "") || !date.startsWith(monthKey)) return;
-    const dayEvents = eventsByDate.get(date) || [];
-    if (!dayEvents.some((item) => item.name === event.name)) dayEvents.push(event);
-    eventsByDate.set(date, dayEvents);
-  };
-  calendarEvents.forEach((event) => {
-    const exactDates = event.calendarDates?.length ? event.calendarDates : null;
-    if (exactDates) {
-      exactDates.forEach((date) => addEventDate(date, event));
-      return;
-    }
-    const start = event.metadata?.startDate || event.startDate;
-    const end = event.metadata?.endDate || event.endDate || start;
-    if (!start) return;
-    const startDate = new Date(`${start}T12:00:00`);
-    const endDate = new Date(`${end}T12:00:00`);
-    if (Number.isNaN(startDate.getTime()) || Number.isNaN(endDate.getTime())) return;
-    for (const cursor = new Date(startDate); cursor <= endDate; cursor.setDate(cursor.getDate() + 1)) {
-      addEventDate(`${cursor.getFullYear()}-${String(cursor.getMonth() + 1).padStart(2, "0")}-${String(cursor.getDate()).padStart(2, "0")}`, event);
-    }
-  });
-
-  const firstWeekday = monthStart.getDay();
-  const daysInMonth = new Date(year, month + 1, 0).getDate();
-  const daysInPreviousMonth = new Date(year, month, 0).getDate();
-  const cells = ["日", "一", "二", "三", "四", "五", "六"].map((label) => `<div class="calendar-weekday" aria-hidden="true">${label}</div>`);
-  for (let index = 0; index < 42; index += 1) {
-    const dayNumber = index - firstWeekday + 1;
-    const isCurrentMonth = dayNumber > 0 && dayNumber <= daysInMonth;
-    const shownDay = dayNumber <= 0 ? daysInPreviousMonth + dayNumber : dayNumber > daysInMonth ? dayNumber - daysInMonth : dayNumber;
-    if (!isCurrentMonth) {
-      cells.push(`<div class="calendar-day is-outside" aria-hidden="true"><span class="calendar-day-number">${shownDay}</span></div>`);
-      continue;
-    }
-    const date = `${monthKey}-${String(dayNumber).padStart(2, "0")}`;
-    const dayEvents = eventsByDate.get(date) || [];
-    const classes = ["calendar-day", date === todayKey ? "is-today" : "", date === selectedCalendarDate ? "is-selected" : "", dayEvents.length ? "has-events" : ""].filter(Boolean).join(" ");
-    const indicators = dayEvents.length ? `<span class="calendar-day-indicator" aria-hidden="true">${dayEvents.length}</span>` : "";
-    const eventLabels = dayEvents.slice(0, 2).map((event) => `<span class="calendar-event-label">${escapeHtml(event.name)}</span>`).join("");
-    const moreLabel = dayEvents.length > 2 ? `<span class="calendar-event-more">+${dayEvents.length - 2} 場</span>` : "";
-    cells.push(`<button type="button" class="${classes}" data-calendar-date="${date}" aria-label="${year} 年 ${month + 1} 月 ${dayNumber} 日，${dayEvents.length ? `有 ${dayEvents.length} 場賽事` : "無賽事"}"><span class="calendar-day-number">${dayNumber}</span>${indicators}<span class="calendar-day-events">${eventLabels}${moreLabel}</span></button>`);
-  }
-  calendar.innerHTML = cells.join("");
-  const selectedParts = selectedCalendarDate.split("-").map(Number);
-  const agendaEvents = eventsByDate.get(selectedCalendarDate) || [];
-  agenda.innerHTML = `<div class="calendar-agenda-date"><span>選擇日期</span><strong>${selectedParts[1]} 月 ${selectedParts[2]} 日</strong></div>${agendaEvents.length ? `<div class="calendar-agenda-list">${agendaEvents.map((event) => `<button type="button" class="calendar-agenda-event" data-calendar-event="${escapeHtml(event.name)}"><span class="calendar-agenda-dot" aria-hidden="true"></span><span><strong>${escapeHtml(event.name)}</strong><small>${escapeHtml(event.location || event.metadata?.location || "賽事資料")}</small></span><b aria-hidden="true">→</b></button>`).join("")}</div>` : `<p class="calendar-empty">這一天目前沒有已收錄賽事。</p>`}`;
-}
-
-window.DebateCalendar = {
-  render: renderCalendar,
-  selectDate(date) { selectedCalendarDate = date; renderCalendar(); },
-  shiftMonth(amount) {
-    selectedCalendarMonth = new Date(selectedCalendarMonth.getFullYear(), selectedCalendarMonth.getMonth() + amount, 1);
-    selectedCalendarDate = `${selectedCalendarMonth.getFullYear()}-${String(selectedCalendarMonth.getMonth() + 1).padStart(2, "0")}-01`;
-    renderCalendar();
-  },
-};
 
 function renderLeaderboards() {
   const schoolIds = new Set(store.entities.filter((entity) => entity.type === "s").map((entity) => entity.code));
@@ -1212,7 +1128,6 @@ function renderAll() {
   renderSiteIntroduction();
   renderStats();
   renderTimeline();
-  renderCalendar();
   renderRecentEvents();
   renderMobileUpcomingEvents();
   renderLeaderboards();
