@@ -209,6 +209,7 @@
     const active = CHART_METRICS.map((metric) => ({ ...metric, value: averagePercent(metric) })).filter((metric) => metric.value !== null);
     if (active.length < 3) {
       els.radarChart.innerHTML = '<div class="record-chart-empty"><strong>需要申論、質詢、答辯三項分數</strong><p>三項都有資料後，這裡會形成三角能力雷達圖。</p></div>';
+      window.DebateInteractions.setChartExpansionAvailability(els.radarChart, false, "資料不足，需三項分數才能放大能力雷達圖");
       return;
     }
     const grid = [20, 40, 60, 80, 100].map((level) => `<polygon points="${active.map((_, index) => { const point = polarPoint(index, active.length, 110 * level / 100); return `${point.x},${point.y}`; }).join(" ")}" />`).join("");
@@ -220,6 +221,7 @@
     }).join("");
     const dataPoints = active.map((metric, index) => { const point = polarPoint(index, active.length, 110 * metric.value / 100); return `${point.x},${point.y}`; }).join(" ");
     els.radarChart.innerHTML = `<svg class="radar-svg" viewBox="0 0 340 340" role="img" aria-label="${active.length} 維能力雷達圖"><g class="radar-grid">${grid}${axes}</g><polygon class="radar-data" points="${dataPoints}" />${active.map((metric, index) => { const point = polarPoint(index, active.length, 110 * metric.value / 100); return `<circle cx="${point.x}" cy="${point.y}" r="4" />`; }).join("")}</svg>`;
+    window.DebateInteractions.setChartExpansionAvailability(els.radarChart, true, "");
   }
 
   function renderProgressChart() {
@@ -239,6 +241,13 @@
     }).filter((match) => match.matchDate).sort((a, b) => a.matchDate.localeCompare(b.matchDate) || String(a.createdAt).localeCompare(String(b.createdAt)));
     if (chronological.length < 2) {
       els.progressChart.innerHTML = '<div class="record-chart-empty"><strong>至少需要兩場紀錄</strong><p>累積下一場後，這裡會依日期顯示申論、質詢與答辯趨勢。</p></div>';
+      window.DebateInteractions.setChartExpansionAvailability(els.progressChart, false, "資料不足，需兩場紀錄才能放大進步折線圖");
+      return;
+    }
+    const hasTrend = CHART_METRICS.some((metric) => chronological.filter((match) => match.values[metric.key] !== null).length >= 2);
+    if (!hasTrend) {
+      els.progressChart.innerHTML = '<div class="record-chart-empty"><strong>至少需要兩場同項分數</strong><p>任一評分項目累積兩場資料後，這裡會顯示分數變化。</p></div>';
+      window.DebateInteractions.setChartExpansionAvailability(els.progressChart, false, "資料不足，需兩場同項分數才能放大進步折線圖");
       return;
     }
     const width = 720;
@@ -261,6 +270,7 @@
     const dateLabels = chronological.map((record, index) => `<text x="${xFor(index)}" y="${height - 18}" text-anchor="middle">${escapeHtml(record.matchDate.slice(5).replace("-", "/"))}</text>`).join("");
     const legend = CHART_METRICS.filter((metric) => chronological.some((match) => match.values[metric.key] !== null)).map((metric) => `<span><i style="background:${metric.color}"></i>${metric.label}</span>`).join("");
     els.progressChart.innerHTML = `<div class="progress-legend">${legend}</div><div class="progress-scroll"><svg class="progress-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="依日期排列的分數進步折線圖"><g class="progress-grid">${grid}</g><g class="progress-series">${series}</g><g class="progress-dates">${dateLabels}</g></svg></div>`;
+    window.DebateInteractions.setChartExpansionAvailability(els.progressChart, true, "");
   }
 
   function renderBallot(record, index) {
@@ -318,8 +328,10 @@
       const button = chart.querySelector("[data-expand-chart]");
       if (button) {
         button.textContent = "⛶";
-        button.setAttribute("aria-label", button.dataset.collapsedLabel || "放大圖表");
-        button.title = "放大圖表";
+        const available = button.dataset.chartAvailable !== "false";
+        button.disabled = !available;
+        button.setAttribute("aria-label", available ? button.dataset.collapsedLabel || "放大圖表" : button.dataset.unavailableLabel || "資料不足，無法放大圖表");
+        button.title = available ? "放大圖表" : button.dataset.unavailableLabel || "資料不足，無法放大圖表";
       }
     });
     document.body.classList.remove("chart-expanded");
@@ -330,7 +342,7 @@
 
   function toggleChartExpansion(button) {
     const chart = button.closest(".record-chart");
-    if (!chart) return;
+    if (!chart || button.disabled) return;
     const shouldExpand = !chart.classList.contains("is-expanded");
     closeExpandedCharts({ restoreFocus: !shouldExpand });
     if (!shouldExpand) return;

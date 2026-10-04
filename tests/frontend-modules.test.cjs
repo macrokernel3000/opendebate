@@ -446,3 +446,36 @@ test("router closes transient overlays before changing views", () => {
   assert.equal(closeCount, 1);
   assert.equal(context.location.hash, "#overview");
 });
+
+test("chart expansion controls explain and enforce data availability", () => {
+  const attributes = new Map([["aria-label", "放大能力雷達圖"]]);
+  const button = {
+    dataset: {},
+    disabled: false,
+    title: "放大圖表",
+    getAttribute(name) { return attributes.get(name) || null; },
+    setAttribute(name, value) { attributes.set(name, value); },
+  };
+  let expanded = false;
+  const chart = {
+    classList: { contains: (name) => name === "is-expanded" && expanded },
+    querySelector: (selector) => selector === "[data-expand-chart]" ? button : null,
+  };
+  const content = { closest: (selector) => selector === ".record-chart" ? chart : null };
+  const controls = loadFactory("js/interactions.js").DebateInteractions;
+
+  controls.setChartExpansionAvailability(content, false, "資料不足，需三項分數");
+  assert.equal(button.disabled, true);
+  assert.equal(attributes.get("aria-label"), "資料不足，需三項分數");
+  assert.equal(button.title, "資料不足，需三項分數");
+
+  controls.setChartExpansionAvailability(content, true, "");
+  assert.equal(button.disabled, false);
+  assert.equal(attributes.get("aria-label"), "放大能力雷達圖");
+  assert.equal(button.title, "放大圖表");
+
+  expanded = true;
+  controls.setChartExpansionAvailability(content, false, "資料不足，需三項分數");
+  assert.equal(button.disabled, false, "expanded chart must keep its close control usable");
+  assert.equal(button.dataset.chartAvailable, "false");
+});

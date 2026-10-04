@@ -555,7 +555,8 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .record-chart-heading h3 { margin: 0; font-size: 16px; }
 .record-chart-heading span { color: var(--muted); font-size: 10px; font-weight: 800; }
 .record-chart-heading button { width: 32px; height: 32px; flex: 0 0 auto; border: 1px solid var(--line); background: white; color: var(--green-dark); cursor: pointer; font-size: 18px; line-height: 1; }
-.record-chart-heading button:hover, .record-chart-heading button:focus-visible { border-color: var(--green); background: #e9f5ef; }
+.record-chart-heading button:not(:disabled):hover, .record-chart-heading button:not(:disabled):focus-visible { border-color: var(--green); background: #e9f5ef; }
+.record-chart-heading button:disabled { border-color: var(--line); background: var(--soft); color: var(--muted); cursor: not-allowed; }
 .record-chart-empty { min-height: 135px; display: grid; align-content: center; justify-items: center; color: var(--muted); text-align: center; }
 .record-chart-empty strong { color: var(--ink); }
 .record-chart-empty p { max-width: 330px; margin: 6px 0 0; font-size: 12px; line-height: 1.6; }

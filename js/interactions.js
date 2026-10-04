@@ -1,4 +1,17 @@
 (function () {
+  function setChartExpansionAvailability(chartContent, available, unavailableLabel) {
+    const chart = chartContent?.closest(".record-chart");
+    const button = chart?.querySelector("[data-expand-chart]");
+    if (!button) return;
+    button.dataset.collapsedLabel ||= button.getAttribute("aria-label") || "放大圖表";
+    button.dataset.unavailableLabel = unavailableLabel;
+    button.dataset.chartAvailable = String(Boolean(available));
+    if (chart.classList.contains("is-expanded")) return;
+    button.disabled = !available;
+    button.setAttribute("aria-label", available ? button.dataset.collapsedLabel : unavailableLabel);
+    button.title = available ? "放大圖表" : unavailableLabel;
+  }
+
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, renderOverviewStats, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const preferredScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
@@ -194,5 +207,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions };
+  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability };
 }());
