@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T17:02:09",
+  "generatedAt": "2026-10-04T17:46:25",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -43636,6 +43636,14 @@ window.DEBATE_PUBLIC_DATA = {
         ],
         "status": "公告名單",
         "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"
+      },
+      {
+        "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
+        "team": "和平高中",
+        "leaders": [],
+        "players": [],
+        "status": "賽果確認參賽",
+        "sourceNote": "2026-07-26 對大直高中之已登錄賽果證明參賽；主辦方公布名單未列本隊，未提供選手名單，故不補填姓名。"
       }
     ]
   }
