@@ -39,6 +39,8 @@
       if (playerLink) { showView(`player/${encodeURIComponent(playerLink.dataset.playerRoute)}`); return; }
       const eventLink = event.target.closest("[data-event-route]");
       if (eventLink) { openCompetition(eventLink.dataset.eventRoute); return; }
+      const topicLink = event.target.closest("[data-topic-route]");
+      if (topicLink) { showView(`topic/${encodeURIComponent(topicLink.dataset.topicRoute)}`); return; }
       if (event.target.closest("[data-detail-back]")) {
         if (history.state?.from) history.back();
         else showView("overview");

@@ -46,6 +46,7 @@ const els = {
   eventPageDetail: document.querySelector("#eventPageDetail"),
   schoolPageDetail: document.querySelector("#schoolPageDetail"),
   playerPageDetail: document.querySelector("#playerPageDetail"),
+  topicPageDetail: document.querySelector("#topicPageDetail"),
   overviewTabs: document.querySelectorAll("[data-overview-tab]"),
   overviewEventsPanel: document.querySelector("#overviewEventsPanel"),
   overviewView: document.querySelector("#overviewView"),
@@ -123,9 +124,11 @@ function showView(name) {
   const eventRoute = requested.match(/^event\/(.+)$/);
   const schoolRoute = requested.match(/^school\/(.+)$/);
   const playerRoute = requested.match(/^player\/(.+)$/);
+  const topicRoute = requested.match(/^topic\/(.+)$/);
   let eventName = "";
   let schoolId = "";
   let playerName = "";
+  let topicId = "";
   let upcomingEvent = null;
   if (eventRoute) {
     try { eventName = decodeURIComponent(eventRoute[1]); } catch { eventName = ""; }
@@ -140,7 +143,11 @@ function showView(name) {
     try { playerName = decodeURIComponent(playerRoute[1]); } catch { playerName = ""; }
     if (!knownPlayers().includes(playerName)) playerName = "";
   }
-  const target = eventName ? "event-page" : schoolId ? "school-page" : playerName ? "player-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
+  if (topicRoute) {
+    try { topicId = decodeURIComponent(topicRoute[1]); } catch { topicId = ""; }
+    if (!topics.some((item) => item.topicId === topicId)) topicId = "";
+  }
+  const target = eventName ? "event-page" : schoolId ? "school-page" : playerName ? "player-page" : topicId ? "topic-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
   els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
   els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
   els.overviewView.classList.remove("is-event-open");
@@ -151,8 +158,9 @@ function showView(name) {
   }
   if (schoolId) els.schoolPageDetail.innerHTML = renderEntityDetail(store.entityById.get(schoolId), "schoolPageEntityDetail", true);
   if (playerName) els.playerPageDetail.innerHTML = renderPlayerDetail(playerName);
+  if (topicId) renderTopic(topicId);
   if (target === "overview") els.eventDetail.innerHTML = "";
-  const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : `#${target}`;
+  const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
   if (location.hash !== routeHash) {
     if (!hasRenderedRoute) history.replaceState(null, "", routeHash);
     else history.pushState({ from: location.hash || "#home" }, "", routeHash);
@@ -800,7 +808,7 @@ function renderEvent(name, target = els.eventDetail) {
   const metadata = event.metadata || {};
   const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
   const awardCriteriaSection = metadata.awardSelectionCriteria ? `<details class="topic-explanation event-award-criteria"><summary>個人獎遴選標準</summary><p>${escapeHtml(metadata.awardSelectionCriteria)}</p></details>` : "";
-  const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}</article>`).join("")}</section>` : "";
+  const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h3 class="subheading">💡 比賽辯題</h3><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}</article>`).join("")}</section>` : "";
   const rosterSection = event.rosters.length ? `<details class="event-rosters"><summary><span>📋 隊伍名單</span><span>${event.rosters.length} 隊</span></summary><div class="event-roster-grid">${event.rosters.map((roster) => {
     const teamEntity = store.entityForName(roster.team);
     const team = teamEntity ? entityPageLink(teamEntity.code, roster.team) : escapeHtml(roster.team);
@@ -822,10 +830,24 @@ function renderEvent(name, target = els.eventDetail) {
     </div>`;
 }
 
+function renderTopic(topicId) {
+  const linkedEntries = topics.filter((item) => item.topicId === topicId);
+  if (!linkedEntries.length) return;
+  const title = linkedEntries[0].topic;
+  const pageEvents = unique(linkedEntries.map((item) => item.competitionName)).map((name) => ({
+    name,
+    entry: linkedEntries.find((item) => item.competitionName === name),
+  }));
+  els.topicPageDetail.innerHTML = `
+    <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
+    <div class="event-summary"><div><p class="kicker">辯題資料</p><h1>${escapeHtml(title)}</h1></div><div class="event-summary-count"><span class="count-chip">${pageEvents.length} 場賽事</span></div></div>
+    <section class="topic-linked-events"><h2 class="subheading">採用此辯題的賽事</h2>${pageEvents.map(({ name, entry }) => `<article class="topic-linked-event"><button class="topic-event-link" type="button" data-event-route="${escapeHtml(name)}">${escapeHtml(name)} →</button>${entry.explanation ? `<details class="topic-explanation" open><summary>此賽事題解</summary><p>${escapeHtml(entry.explanation)}</p></details>` : `<p class="topic-no-explanation">此賽事尚未收錄題解。</p>`}</article>`).join("")}</section>`;
+}
+
 function renderOverview() {
   els.overviewEventCount.textContent = events.length;
   els.overviewTeamCount.textContent = overviewTeams().length;
-  els.overviewTopicCount.textContent = topics.length;
+  els.overviewTopicCount.textContent = new Set(topics.map((item) => item.topicId)).size;
   renderOverviewTeams();
   renderOverviewTopics();
   renderOverviewStats();
@@ -894,11 +916,12 @@ function renderOverviewTeams() {
 
 function renderOverviewTopics() {
   const needle = normalize(els.overviewTopicFilter.value);
-  const filteredTopics = topics.filter((item) => !needle || normalize(`${item.topic} ${item.explanation} ${item.competitionName}`).includes(needle));
-  els.overviewTopicMeta.textContent = `目前顯示 ${filteredTopics.length} 筆辯題`;
+  const topicGroups = [...new Map(topics.map((item) => [item.topicId, { ...item, entries: topics.filter((candidate) => candidate.topicId === item.topicId) }])).values()];
+  const filteredTopics = topicGroups.filter((item) => !needle || normalize(`${item.topic} ${item.entries.map((entry) => `${entry.explanation} ${entry.competitionName}`).join(" ")}`).includes(needle));
+  els.overviewTopicMeta.textContent = `目前顯示 ${filteredTopics.length} 個辯題`;
   els.overviewTopicList.innerHTML = filteredTopics.length ? [...filteredTopics]
-    .sort((a, b) => a.competitionName.localeCompare(b.competitionName, "zh-Hant") || a.topic.localeCompare(b.topic, "zh-Hant"))
-    .map((item) => `<article class="overview-topic-card"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}<button class="topic-event-link" type="button" data-topic-event="${escapeHtml(item.competitionName)}">查看該屆比賽 →</button></article>`).join("")
+    .sort((a, b) => a.topic.localeCompare(b.topic, "zh-Hant"))
+    .map((item) => `<article class="overview-topic-card"><span>${item.entries.length} 場賽事</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.entries.map((entry) => `<button class="topic-event-link" type="button" data-event-route="${escapeHtml(entry.competitionName)}">${escapeHtml(entry.competitionName)} →</button>`).join("")}</article>`).join("")
     : '<div class="search-empty"><div><span aria-hidden="true">💬</span><strong>沒有符合的辯題</strong><p>請縮短關鍵字再試一次。</p></div></div>';
 }
 
@@ -969,7 +992,8 @@ function renderSearch(query) {
     }).join("")}
   </div></section>` : "";
 
-  const topicSection = matchedTopics.length ? `<section class="result-section"><h2>符合辯題</h2><div class="overview-topic-list search-topic-list">${matchedTopics.map((item) => `<article class="overview-topic-card"><span>${escapeHtml(item.competitionName)}</span><strong>${escapeHtml(item.topic)}</strong>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}<button class="topic-event-link" type="button" data-topic-event="${escapeHtml(item.competitionName)}">查看該屆比賽 →</button></article>`).join("")}</div></section>` : "";
+  const topicMatches = [...new Map(matchedTopics.map((item) => [item.topicId, { ...item, entries: matchedTopics.filter((candidate) => candidate.topicId === item.topicId) }])).values()];
+  const topicSection = topicMatches.length ? `<section class="result-section"><h2>符合辯題</h2><div class="overview-topic-list search-topic-list">${topicMatches.map((item) => `<article class="overview-topic-card"><span>${item.entries.length} 場賽事</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.entries.map((entry) => `<button class="topic-event-link" type="button" data-event-route="${escapeHtml(entry.competitionName)}">${escapeHtml(entry.competitionName)} →</button>`).join("")}</article>`).join("")}</div></section>` : "";
 
   const selectedEntity = store.entityById.get(selectedEntityId);
   const entityDetail = selectedEntity ? renderEntityDetail(selectedEntity) : "";
@@ -1105,7 +1129,7 @@ function renderAll() {
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
   const initialView = location.hash.slice(1);
-  showView(initialQuery ? "search" : (/^(?:event|school|player)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
+  showView(initialQuery ? "search" : (/^(?:event|school|player|topic)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
 }
 

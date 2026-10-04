@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T00:37:11",
+  "generatedAt": "2026-10-04T14:37:13",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -40,6 +40,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第十五屆風雩盃中學辯論錦標賽.csv",
     "public-data-第十八屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第十六屆明京盃全國高中職辯論比賽.csv",
+    "public-data-第十四屆風雩盃中學辯論錦標賽.csv",
     "public-data-第十屆雲啟盃辯論比賽.csv",
     "public-data-第四屆輔仁盃全國高中職辯論比賽.csv",
     "public-data-育南盃中文教育辯論賽.csv",
@@ -1827,6 +1828,18 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s182",
       "type": "s",
       "name": "中正預校",
+      "aliases": ""
+    },
+    {
+      "code": "s183",
+      "type": "s",
+      "name": "安樂高中",
+      "aliases": ""
+    },
+    {
+      "code": "s184",
+      "type": "s",
+      "name": "明道高中",
       "aliases": ""
     }
   ],
@@ -32517,6 +32530,731 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-7ed6bd650a11"
     },
     {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "北一女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "北一女中",
+      "note": "初賽第一時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s090",
+        "negative": "s017"
+      },
+      "id": "match-3f39de8d4d4f"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "平鎮高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "高雄中學",
+      "note": "初賽第一時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s048"
+      },
+      "id": "match-cdfbce2d94cc"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹科實中",
+      "note": "初賽第一時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s057"
+      },
+      "id": "match-7a3f6d3979b3"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "內湖高中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "初賽第一時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s014",
+        "negative": "s067"
+      },
+      "id": "match-669237df4f10"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "中和高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "武陵高中",
+      "note": "初賽第一時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s003",
+        "negative": "s096"
+      },
+      "id": "match-647554bc0a92"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "東山高中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "東山高中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s088",
+        "negative": "s080"
+      },
+      "id": "match-95deb6c10f53"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "平鎮高中",
+        "negative": "斗六高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "斗六高中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s048",
+        "negative": "s072"
+      },
+      "id": "match-e7e5fc460215"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "竹科實中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s113"
+      },
+      "id": "match-2a16e4209f3b"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "政大附中",
+        "negative": "興國高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "興國高中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s070",
+        "negative": "s130"
+      },
+      "id": "match-182c636a7bce"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "明道高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "明道高中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s184"
+      },
+      "id": "match-5ac5bf9c7eb2"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 2,
+      "venue": 6,
+      "teams": {
+        "affirmative": "中山女高",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺中女中",
+      "note": "初賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s122"
+      },
+      "id": "match-359afe84ec6d"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "竹北高中",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "松山高中",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s109",
+        "negative": "s090"
+      },
+      "id": "match-6a6d7322a1ab"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "竹東高中",
+        "negative": "東山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹東高中",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s112",
+        "negative": "s088"
+      },
+      "id": "match-97c30707179c"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "師大附中",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s047"
+      },
+      "id": "match-b816ae082d71"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "建國中學",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s054"
+      },
+      "id": "match-a4fa74423811"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 5,
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "政大附中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "延平中學",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s070"
+      },
+      "id": "match-5775760707fb"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 3,
+      "venue": 6,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "初賽第三時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s006"
+      },
+      "id": "match-2db7cfca952c"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 1,
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "竹北高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "北一女中",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s109"
+      },
+      "id": "match-f62312e7fb3f"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 2,
+      "teams": {
+        "affirmative": "明倫高中",
+        "negative": "竹東高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "竹東高中",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s080",
+        "negative": "s112"
+      },
+      "id": "match-c1a2ad39706c"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 3,
+      "teams": {
+        "affirmative": "斗六高中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄中學",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s072",
+        "negative": "s152"
+      },
+      "id": "match-e46ccf7ba440"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 4,
+      "teams": {
+        "affirmative": "興國高中",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "延平中學",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s130",
+        "negative": "s050"
+      },
+      "id": "match-9b2f5f0fe6d8"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 5,
+      "teams": {
+        "affirmative": "明道高中",
+        "negative": "中和高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "明道高中",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s184",
+        "negative": "s003"
+      },
+      "id": "match-2876f1566909"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-17",
+      "period": 4,
+      "venue": 6,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "內湖高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "建國中學",
+      "note": "初賽第四時段；公告八強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s014"
+      },
+      "id": "match-144edeee3a43"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 5,
+      "venue": 1,
+      "teams": {
+        "affirmative": "北一女中",
+        "negative": "高雄中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高雄中學",
+      "note": "複賽第一時段；公告四強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s017",
+        "negative": "s152"
+      },
+      "id": "match-4b08c0980fe4"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 5,
+      "venue": 2,
+      "teams": {
+        "affirmative": "竹科實中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "竹科實中",
+      "note": "複賽第一時段；公告四強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s113",
+        "negative": "s054"
+      },
+      "id": "match-b700c55a8c67"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 5,
+      "venue": 3,
+      "teams": {
+        "affirmative": "明道高中",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "延平中學",
+      "note": "複賽第一時段；公告四強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s184",
+        "negative": "s050"
+      },
+      "id": "match-6f606ae02ea2"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 5,
+      "venue": 4,
+      "teams": {
+        "affirmative": "臺中女中",
+        "negative": "竹東高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "臺中女中",
+      "note": "複賽第一時段；公告四強",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s122",
+        "negative": "s112"
+      },
+      "id": "match-11752ff05aa8"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 6,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "竹科實中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "高雄中學",
+      "note": "複賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s113"
+      },
+      "id": "match-ea4a32edc5b0"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "period": 6,
+      "venue": 2,
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中女中",
+      "note": "複賽第二時段",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s122"
+      },
+      "id": "match-44dad611ce7f"
+    },
+    {
       "competitionName": "第十屆雲啟盃辯論比賽",
       "matchDate": "2025-12-13",
       "period": 1,
@@ -38406,6 +39144,98 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-2220d8fc9d59"
     },
     {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "冠軍",
+      "recipient": "高雄中學",
+      "team": "高雄中學",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s152",
+      "id": "honor-2f0ba74255fa"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "亞軍",
+      "recipient": "臺中女中",
+      "team": "臺中女中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s122",
+      "id": "honor-b4631be5e298"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "季軍",
+      "recipient": "竹科實中",
+      "team": "竹科實中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s113",
+      "id": "honor-dffc092d376d"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "殿軍",
+      "recipient": "延平中學",
+      "team": "延平中學",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s050",
+      "id": "honor-d34476268313"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "最佳辯士",
+      "recipient": "陳秉銨",
+      "team": "高雄中學",
+      "honorType": "player",
+      "note": "",
+      "honorLevel": "全程最佳辯士",
+      "teamId": "s152",
+      "id": "honor-6e9f893d7c2f"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "最佳辯士",
+      "recipient": "鄭宇庭",
+      "team": "臺中女中",
+      "honorType": "player",
+      "note": "",
+      "honorLevel": "全程最佳辯士",
+      "teamId": "s122",
+      "id": "honor-4b9cf13a9155"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "最佳辯士",
+      "recipient": "林奕鋐",
+      "team": "竹科實中",
+      "honorType": "player",
+      "note": "",
+      "honorLevel": "全程最佳辯士",
+      "teamId": "s113",
+      "id": "honor-4bfbe2c1ac61"
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "matchDate": "2025-05-18",
+      "honorName": "最佳辯士",
+      "recipient": "蕭容琇",
+      "team": "臺中女中",
+      "honorType": "player",
+      "note": "",
+      "honorLevel": "全程最佳辯士",
+      "teamId": "s122",
+      "id": "honor-8f5b99c7b454"
+    },
+    {
       "competitionName": "第十屆雲啟盃辯論比賽",
       "matchDate": "",
       "honorName": "冠軍",
@@ -39210,236 +40040,289 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "competitionName": "2025「青聲說」全國高中職辯論賽",
       "topic": "加強管制／自律教育更有利於解決青少年手機成癮問題",
+      "topicId": "topic-e781bb463dc6",
       "explanation": ""
     },
     {
       "competitionName": "2025司改盃全國高中職辯論比賽",
       "topic": "網路實名制對臺灣社會利大於弊 / 網路實名制對臺灣社會弊大於利",
+      "topicId": "topic-3c381480eb22",
       "explanation": ""
     },
     {
       "competitionName": "2026司改盃全國高中職辯論比賽",
       "topic": "我國代理孕母應合法化",
+      "topicId": "topic-d65da8a2dd1d",
       "explanation": ""
     },
     {
       "competitionName": "2026年氣候盃全國高中職辯論比賽",
       "topic": "我國應強制用電大戶設置一定裝置容量以上之再生能源自有發電設備",
+      "topicId": "topic-63916e7014ab",
       "explanation": "辯題解釋資料指出，現行制度允許用電大戶以多種方式履行再生能源義務；本題聚焦是否應進一步要求其設置一定容量的再生能源自有發電設備，需衡量能源轉型與安全、產業成本及場地條件。詳細背景見主辦單位辯題解釋文件。"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
       "topic": "我國政府是否應在國際運動會上正名",
+      "topicId": "topic-bb88627d96b9",
       "explanation": ""
     },
     {
       "competitionName": "吊嘎盃全國高中職辯論比賽",
       "topic": "路見不平，應拔刀相助/明哲保身",
+      "topicId": "topic-66c24489398c",
       "explanation": ""
     },
     {
       "competitionName": "火雞盃全國高中職辯論比賽",
       "topic": "見過了霍格華茲的煙火要/不要坦然接受自己是個麻瓜",
+      "topicId": "topic-72aa73076401",
       "explanation": ""
     },
     {
       "competitionName": "火雞肉飯盃全國高中職辯論比賽",
       "topic": "我國應設立離婚冷靜期",
+      "topicId": "topic-2a17af3c3c7f",
       "explanation": ""
     },
     {
       "competitionName": "第一屆夢箋盃",
       "topic": "我國成年人性別變更登記應採自我決定模式 (self-determination model)",
+      "topicId": "topic-6b22a2ac20d1",
       "explanation": ""
     },
     {
       "competitionName": "第一屆明哲盃全國高中職辯論比賽",
       "topic": "我國刑法222條之法律效果應增設化學去勢",
+      "topicId": "topic-493742ecfa64",
       "explanation": ""
     },
     {
       "competitionName": "第一屆東岸盃全國高中職辯論比賽",
       "topic": "發揚原住民文化重在傳承/創新",
+      "topicId": "topic-c56ae78de879",
       "explanation": ""
     },
     {
       "competitionName": "第一屆陽明盃全國辯論公開賽",
       "topic": "我國應廢除重大暴力犯罪少年犯之前科塗銷制度",
+      "topicId": "topic-fb547f711dbd",
       "explanation": ""
     },
     {
       "competitionName": "第一屆青雲盃全國高中職辯論錦標賽",
       "topic": "幸福更歸屬於理性／感性",
+      "topicId": "topic-17addfd0ffef",
       "explanation": ""
     },
     {
       "competitionName": "第七屆惠蓀盃全國高中職辯論比賽",
       "topic": "我國電業應實施區域電價制",
+      "topicId": "topic-c16ee72ada0b",
       "explanation": ""
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "topic": "我國應廢除重大暴力犯罪少年犯之前科塗銷制度",
+      "topicId": "topic-fb547f711dbd",
       "explanation": ""
     },
     {
       "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
       "topic": "蘭因絮果/菀菀類卿的愛情更可悲",
+      "topicId": "topic-669f1789e1d8",
       "explanation": ""
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "topic": "我國高級中等學校體育競賽之選手參賽資格規範應廢除轉學、重考就讀時間限制",
+      "topicId": "topic-f6c4db38bd93",
       "explanation": ""
     },
     {
       "competitionName": "第三十五屆蘇州盃高中職辯論錦標賽",
       "topic": "邁爾斯-布里格斯性格分類法能不能讓我們更正確的認識自己",
+      "topicId": "topic-d151ffc11f67",
       "explanation": ""
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "topic": "我國應廢除民法第1085條父母對子女懲戒權之規定",
+      "topicId": "topic-1bcdfecf5119",
       "explanation": ""
     },
     {
       "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
       "topic": "在奮鬥路上遇到好對手/好夥伴更重要",
+      "topicId": "topic-91e62a1e1fcc",
       "explanation": ""
     },
     {
       "competitionName": "第三屆東岸盃全國高中職辯論比賽",
       "topic": "原住民族升學優待制度對於原住民族文化利大於弊/弊大於利",
+      "topicId": "topic-734ca398ffb7",
       "explanation": ""
     },
     {
       "competitionName": "第三屆輔仁盃全國高中職辯論比賽",
       "topic": "我國以付費方式觀賞或取得性犯罪內容應入罪化",
+      "topicId": "topic-2cc682be84d5",
       "explanation": "題稱性犯罪內容包含《兒童及少年性剝削防制條例》、《性侵害犯罪防治法》、《刑法》第十六章妨礙性自主罪及第二十八章之一妨害性隱私及不實性影像罪所列不法行為；入罪化立場主刑至少訂定拘役以上。"
     },
     {
       "competitionName": "第二十一屆辯革盃全國高中辯論比賽",
       "topic": "成為自己討厭的人，是/不是件壞事",
+      "topicId": "topic-3f224eb3ed88",
       "explanation": ""
     },
     {
       "competitionName": "第二十一屆齊揚盃",
       "topic": "憂鬱文學的興起對現代年輕族群是利大於弊/弊大於利",
+      "topicId": "topic-105d733c653d",
       "explanation": ""
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
       "topic": "我國電子煙應合法化",
+      "topicId": "topic-13828f8aa4ff",
       "explanation": ""
     },
     {
       "competitionName": "第二十七屆高中菁英盃",
       "topic": "世界糧食計劃署的糧食援助對受捐助國利大於弊／世界糧食計劃署的糧食援助對受捐助國弊大於利",
+      "topicId": "topic-c67b0c561a90",
       "explanation": ""
     },
     {
       "competitionName": "第二十三屆延平盃全國高中職辯論賽",
       "topic": "應支持以人工智慧實踐數位永生／不應支持以人工智慧實踐數位永生",
+      "topicId": "topic-ad93289bee66",
       "explanation": ""
     },
     {
       "competitionName": "第二十二屆延平盃全國高中職辯論賽",
       "topic": "世界糧食計劃署的糧食援助對受捐助國利大於弊／世界糧食計劃署的糧食援助對受捐助國弊大於利",
+      "topicId": "topic-c67b0c561a90",
       "explanation": ""
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
       "topic": "我國應禁止舉辦賽鴿賽事",
+      "topicId": "topic-410b30648659",
       "explanation": ""
     },
     {
       "competitionName": "第二十八屆高中菁英盃",
       "topic": "應支持以人工智慧實踐數位永生／不應支持以人工智慧實踐數位永生",
+      "topicId": "topic-ad93289bee66",
       "explanation": ""
     },
     {
       "competitionName": "第二十屆宮燈盃辯論公開賽青少年組",
       "topic": "如果你撿到一本死亡筆記本，你要使用它/銷毀它",
+      "topicId": "topic-9773d15711c2",
       "explanation": ""
     },
     {
       "competitionName": "第二十屆辯革盃全國高中職辯論比賽",
       "topic": "註定分開的愛情還要／不要開始",
+      "topicId": "topic-4f606a587e1c",
       "explanation": ""
     },
     {
       "competitionName": "第二十屆齊揚盃",
       "topic": "「我們終將成為自己討厭的人」是／不是一件壞事。",
+      "topicId": "topic-f5c7f657035f",
       "explanation": ""
     },
     {
       "competitionName": "第二屆夢箋盃",
       "topic": "我國應施行無條件基本收入",
+      "topicId": "topic-5853f54af8a1",
       "explanation": ""
     },
     {
       "competitionName": "第二屆東岸盃全國高中職辯論比賽",
       "topic": "原住民族觀光舞台化對於原住民族文化利大於弊/弊大於利",
+      "topicId": "topic-3f6b306b7df7",
       "explanation": ""
     },
     {
       "competitionName": "第二屆青雲盃全國高中職辯論錦標賽",
       "topic": "富有/貧窮更容易暴露人性之惡",
+      "topicId": "topic-6dc5100bd73f",
       "explanation": ""
     },
     {
       "competitionName": "第五屆輔仁盃全國高中職辯論比賽",
       "topic": "我國動產擔保制度應納入浮動擔保",
+      "topicId": "topic-bdcc2ce3d025",
       "explanation": ""
     },
     {
       "competitionName": "第十七屆明京盃全國高中職辯論比賽",
       "topic": "我國重大暴力犯罪判處十年以上有期徒刑者應得以禁止假釋",
+      "topicId": "topic-c22c1806d4c7",
       "explanation": "近期有參賽學校反映，對本屆辯題「我國重大暴力犯罪判處十年以上有期徒刑者應得以禁止假釋」中，「禁止假釋」之文字意涵、其與我國現行假釋制度間的關係，以及「得以禁止假釋」所指涉之制度方式與涵蓋範圍有所疑義。為協助各隊辨析題意，大會提供以下資訊供參。 依現行《刑法》第77條及《監獄行刑法》第115條至第118條規定，假釋制度係先判斷受刑人是否符合刑期門檻等法定要件，再依犯行情節、在監行狀、犯罪紀錄、教化矯治處遇成效、更生計畫及其他相關事項進行個案審查，最終由法務部作成許可假釋或不予許可假釋之處分。 此外，《刑法》第77條第2項明定，於該項所列特定情形，前項關於有期徒刑假釋之規定「不適用之」；《監獄行刑法》第115條第2項則規定，依《刑法》第77條第2項第3款接受強制身心治療或輔導教育之受刑人，如顯有再犯之虞，「不得報請假釋」。前述文字分別涉及假釋規定適用及報請程序之排除。 因此，從法律規範及程序觀察，「尚未符合假釋要件」、「經個案審查不予許可假釋」，以及「法律禁止或排除假釋」，可能具有不同意義及法律效果。選手得參酌前述資訊，自行判斷我國現況是否符合命題所稱之「禁止假釋」。 另就「得以禁止假釋」之意義而言，「得以」於一般語義上可以表示「可以」或「能夠」；惟其置於本辯題中，仍須結合題目主詞、整體句意及制度所涵蓋之對象加以理解，尚難僅由「得以」二字直接確定正方應採取之制度形式。本說明不預先排除各隊就制度適用範圍、分類標準及是否採取個案裁量等事項，提出不同之題意解釋與制度設計；至其是否符合命題要求，仍應透過場上論證加以判斷。 惟本說明僅供選手辨析題意，不構成大會對題目定義或制度方案的強制限定。各隊仍得提出合理的題意解釋及制度設計，並透過場上論證、質詢及資料交鋒，由裁判綜合判斷。"
     },
     {
       "competitionName": "第十九屆北區聯合新生盃辯論比賽",
       "topic": "我國普通刑法應廢除死刑",
+      "topicId": "topic-02dee37274cf",
       "explanation": ""
     },
     {
       "competitionName": "第十九屆宮燈盃辯論公開賽青少年組",
       "topic": "當代年輕人更應承擔責任／追求理想",
+      "topicId": "topic-2ef40ebc2bb2",
       "explanation": ""
     },
     {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "topic": "當代耽美文化有利於／不利於消除男性中心主義",
+      "topicId": "topic-71b94564f96c",
       "explanation": ""
     },
     {
       "competitionName": "第十八屆宮燈盃辯論公開賽青少年組",
       "topic": "當代年輕人更應承擔責任／追求理想",
+      "topicId": "topic-2ef40ebc2bb2",
       "explanation": ""
     },
     {
       "competitionName": "第十六屆明京盃全國高中職辯論比賽",
       "topic": "我國刑法222條之法律效果應增設化學去勢",
+      "topicId": "topic-493742ecfa64",
       "explanation": ""
+    },
+    {
+      "competitionName": "第十四屆風雩盃中學辯論錦標賽",
+      "topic": "學歷通膨現象是一件好事／壞事",
+      "topicId": "topic-edd60c424a56",
+      "explanation": "在知識經濟時代，高等教育的普及化已成為全球趨勢。隨著學士、碩博士入學率的持續攀升，學歷通膨現象日益明顯——曾經稀缺珍貴的大學學歷，如今已成為大多就業市場的基本門檻。這一現象引發了廣泛討論：學歷通膨究竟是社會進步的標誌，還是教育體系失衡的警訊？\n\n學歷通膨首先反映了教育機會的平等化和民主化。過去，高等教育主要是菁英階層的特權，而今天，來自不同社會背景的人都有機會踏入高等教育。這種變化打破了傳統的階級壁壘，提供了更多社會流動的可能。統計數據顯示，近幾十年來，全球範圍內的大學入學率顯著提高，第一代大學生比例不斷增加。這意味著更多原本可能被排除在高等教育之外的群體——低收入家庭子女、少數族群、農村地區學生——現在能夠通過教育改變自己的命運，有助於建立更加公平的社會結構。亦有認為，學歷通膨反映著社會整體的知識水準和素質的提升，高等教育不僅傳授專業知識，還培養批判性思維、溝通能力和終身學習的習慣。這些能力對於應對當今快速變化的世界至關重要。\n\n然而，學歷通膨也帶來了嚴重的教育資源浪費問題。當大學學歷成為就業的基本門檻時，許多人被迫投入更多時間和金錢獲取更高學歷，即使這些學歷對其實際工作能力的提升有限。這種「學歷競賽」不僅浪費了個人資源，也浪費了社會資源。從個人角度看，學生需要花費數年時間和大量金錢獲取學位，這些資源本可用於其他生產性活動或實際技能培訓。從社會角度看，政府和教育機構投入大量資金擴建大學和支持高等教育，但如果畢業生的知識和技能與就業市場需求不匹配，這些投資的回報率將大幅降低。此外，過度強調學歷的就業環境扭曲了教育的本質，不再是為了培養全面發展的人才和公民，而是淪為獲取就業「門票」的工具。這種功利主義的觀念長期來看可能削弱社會的創新活力和競爭力。\n\n究竟「學歷通膨是好事／壞事？」有待場上辯士為我們解答。"
     },
     {
       "competitionName": "第十屆雲啟盃辯論比賽",
       "topic": "我國應設立投票權行使之前提性公民素養標準",
+      "topicId": "topic-bbe8cb136201",
       "explanation": ""
     },
     {
       "competitionName": "第四屆輔仁盃全國高中職辯論比賽",
       "topic": "我國加價販售遊樂票券應合法化",
+      "topicId": "topic-4c10e45f1a68",
       "explanation": ""
     },
     {
       "competitionName": "育南盃中文教育辯論賽",
       "topic": "面對死亡，我們更需要學會記得/放下",
+      "topicId": "topic-612660cb4c13",
       "explanation": ""
     },
     {
       "competitionName": "蒙泉盃全國高中職辯論比賽",
       "topic": "現代社會中，標籤化（如MBTI、世代標籤）的盛行更有助於/有礙於人與人的溝通",
+      "topicId": "topic-019b415932eb",
       "explanation": ""
     }
   ],
@@ -39583,6 +40466,16 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 24
+    },
+    "第十四屆風雩盃中學辯論錦標賽": {
+      "startDate": "2025-05-17",
+      "endDate": "2025-05-18",
+      "organizer": "",
+      "location": "",
+      "note": "收錄初賽與複賽共29場比分及最終獎項；第三時段只有賽程，未提供比分。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "teamCount": 23
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,

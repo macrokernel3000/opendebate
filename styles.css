@@ -248,6 +248,8 @@ button { color: inherit; }
 .overview-topic-card:hover, .overview-topic-card:focus-visible { border-color: var(--green); background: var(--soft); box-shadow: 3px 3px 0 var(--yellow); }
 .overview-topic-card span { display: block; margin-bottom: 7px; color: var(--coral); font-size: 11px; font-weight: 900; }
 .overview-topic-card strong { line-height: 1.65; }
+.topic-title-link { display: block; width: 100%; border: 0; padding: 0; background: transparent; color: var(--ink); cursor: pointer; font: inherit; font-weight: 900; line-height: 1.65; text-align: left; }
+.topic-title-link:hover, .topic-title-link:focus-visible { color: var(--green); text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 3px; }
 .overview-topic-card p { margin: 9px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .topic-event-link { display: block; margin-top: 12px; padding: 0; border: 0; background: transparent; color: var(--green); cursor: pointer; font: inherit; font-size: 11px; font-weight: 900; text-align: left; }
 .topic-explanation { margin-top: 10px; color: var(--muted); font-size: 12px; line-height: 1.65; }
@@ -329,6 +331,8 @@ button { color: inherit; }
 .topic-card { display: grid; gap: 5px; margin-top: 14px; border-top: 1px solid #eadfbf; padding-top: 14px; }
 .topic-card > span { color: var(--coral); font-size: 11px; font-weight: 900; }
 .topic-card strong { font-size: 15px; line-height: 1.65; }
+.topic-linked-event { margin-top: 16px; border-top: 1px solid #eadfbf; padding-top: 12px; }
+.topic-no-explanation { color: var(--muted); font-size: 13px; }
 .event-content-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(280px, .75fr); gap: 34px; }
 .subheading { margin: 0 0 15px; font-size: 20px; }
 .match-day { margin-bottom: 26px; }

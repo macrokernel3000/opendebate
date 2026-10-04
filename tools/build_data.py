@@ -80,10 +80,11 @@ def split_topics(value):
 
 def topic_entries(competition, topic_value, explanation_value=""):
     topic_list = split_topics(topic_value)
-    explanations = split_topics(explanation_value)
+    explanations = [part.strip() for part in clean(explanation_value).split("|")]
     return [{
         "competitionName": competition,
         "topic": topic,
+        "topicId": stable_id("topic", topic),
         "explanation": explanations[index] if index < len(explanations) else "",
     } for index, topic in enumerate(topic_list) if competition]
 
@@ -587,7 +588,7 @@ def validate_best_debater_categories(records, honors):
     best_names = {"單場最佳辯士", "單場最佳", "最佳辯士", "單場優秀辯士", "單場優秀"}
     by_event = {}
     for honor in honors:
-        if honor["honorName"].strip() in best_names:
+        if honor.get("honorLevel") != "全程最佳辯士" and honor["honorName"].strip() in best_names:
             by_event.setdefault(honor["competitionName"], []).append(honor)
     for competition, event_honors in by_event.items():
         count = len(event_honors)
