@@ -48,3 +48,8 @@ test("report contact links keep a 24px tap target", () => {
     /\.report-contact-card a\s*\{[^}]*display:\s*flex[^}]*min-height:\s*24px[^}]*align-items:\s*center/,
   );
 });
+
+test("short mobile viewports compact the fixed navigation without shrinking targets below 44px", () => {
+  assert.match(css, /@media\s*\(max-width:\s*640px\)\s*and\s*\(max-height:\s*500px\)\s*\{[^}]*\.main-nav\s*\{[^}]*height:\s*56px/);
+  assert.match(css, /\.nav-button\s*\{[^}]*min-height:\s*44px/);
+});
