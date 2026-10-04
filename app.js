@@ -204,6 +204,7 @@ const { showView } = window.DebateRouter.createRouter({
   renderEntityDetail,
   renderPlayerDetail,
   renderTopic,
+  closeTransientUI: () => window.DebatePersonalRecords?.closeExpandedCharts(),
 });
 
 function matchResultForEntity(match, entityId) {

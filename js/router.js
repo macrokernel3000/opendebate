@@ -11,10 +11,12 @@
     renderEntityDetail,
     renderPlayerDetail,
     renderTopic,
+    closeTransientUI = () => {},
   }) {
     let hasRenderedRoute = false;
 
     function showView(name) {
+      closeTransientUI();
       const requested = name === "events" ? "overview" : name;
       const eventRoute = requested.match(/^event\/(.+)$/);
       const schoolRoute = requested.match(/^school\/(.+)$/);

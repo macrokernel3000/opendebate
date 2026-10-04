@@ -416,3 +416,33 @@ test("record storage reports write failures and honors native form validation", 
   assert.equal(checks, 2);
   assert.equal(window.DebateRecordStorage.isValid({}), true);
 });
+
+test("router closes transient overlays before changing views", () => {
+  let closeCount = 0;
+  const noopClassList = { remove() {}, toggle() {}, contains: () => false };
+  const window = { matchMedia: () => ({ matches: true }), scrollTo() {} };
+  const context = {
+    window,
+    document: {},
+    location: { hash: "#home" },
+    history: { replaceState(_state, _title, hash) { context.location.hash = hash; }, pushState(_state, _title, hash) { context.location.hash = hash; } },
+    requestAnimationFrame: (callback) => callback(),
+    Map,
+    Set,
+    console,
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(root, "js/router.js"), "utf8"), context);
+  const router = window.DebateRouter.createRouter({
+    els: {
+      views: [], navButtons: [], overviewView: { classList: noopClassList }, overviewEventsPanel: { classList: noopClassList },
+      eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail: {}, playerPageDetail: {}, topicPageDetail: {},
+      globalSearch: { focus() {} },
+    },
+    getEvents: () => [], getTopics: () => [], getUpcomingEvents: () => [], getKnownPlayers: () => [],
+    store: { entityById: new Map() }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail() {}, renderPlayerDetail() {}, renderTopic() {},
+    closeTransientUI: () => { closeCount += 1; },
+  });
+  router.showView("overview");
+  assert.equal(closeCount, 1);
+  assert.equal(context.location.hash, "#overview");
+});

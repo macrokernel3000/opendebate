@@ -14,6 +14,8 @@
   let eventNames = [];
   let eventDateByName = new Map();
   let editingId = "";
+  let expandedChartTrigger = null;
+  let activeCompetitionIndex = -1;
   let els = {};
 
   function escapeHtml(value) {
@@ -306,9 +308,13 @@
     els.message.classList.toggle("is-error", Boolean(isError));
   }
 
-  function closeExpandedCharts() {
+  function closeExpandedCharts({ restoreFocus = false } = {}) {
     document.querySelectorAll(".record-chart.is-expanded").forEach((chart) => {
       chart.classList.remove("is-expanded");
+      chart.removeAttribute("role");
+      chart.removeAttribute("aria-modal");
+      chart.removeAttribute("aria-label");
+      chart.removeAttribute("tabindex");
       const button = chart.querySelector("[data-expand-chart]");
       if (button) {
         button.textContent = "⛶";
@@ -317,27 +323,111 @@
       }
     });
     document.body.classList.remove("chart-expanded");
+    const trigger = expandedChartTrigger;
+    expandedChartTrigger = null;
+    if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
   }
 
   function toggleChartExpansion(button) {
     const chart = button.closest(".record-chart");
     if (!chart) return;
     const shouldExpand = !chart.classList.contains("is-expanded");
-    closeExpandedCharts();
+    closeExpandedCharts({ restoreFocus: !shouldExpand });
     if (!shouldExpand) return;
+    expandedChartTrigger = button;
     button.dataset.collapsedLabel ||= button.getAttribute("aria-label") || "放大圖表";
     chart.classList.add("is-expanded");
+    chart.setAttribute("role", "dialog");
+    chart.setAttribute("aria-modal", "true");
+    chart.setAttribute("aria-label", chart.querySelector("h3")?.textContent || "放大圖表");
+    chart.tabIndex = -1;
     document.body.classList.add("chart-expanded");
     button.textContent = "×";
     button.setAttribute("aria-label", "縮小圖表");
     button.title = "縮小圖表";
+    button.focus({ preventScroll: true });
+  }
+
+  function handleChartKeydown(event) {
+    const chart = document.querySelector(".record-chart.is-expanded");
+    if (!chart) return;
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeExpandedCharts({ restoreFocus: true });
+      return;
+    }
+    if (event.key !== "Tab") return;
+    const focusable = [...chart.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+      .filter((element) => element.getClientRects().length && element.getAttribute("aria-hidden") !== "true");
+    if (!focusable.length) {
+      event.preventDefault();
+      chart.focus({ preventScroll: true });
+      return;
+    }
+    const first = focusable[0];
+    const last = focusable.at(-1);
+    if (!chart.contains(document.activeElement)) {
+      event.preventDefault();
+      (event.shiftKey ? last : first).focus();
+    } else if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   }
 
   function renderCompetitionSuggestions() {
     const needle = els.competition.value.trim().toLocaleLowerCase("zh-Hant");
     const matches = needle ? eventNames.filter((name) => name.toLocaleLowerCase("zh-Hant").includes(needle)).slice(0, 8) : [];
-    els.competitionSuggestions.innerHTML = matches.map((name) => `<button type="button" role="option" data-competition-suggestion="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join("");
+    activeCompetitionIndex = matches.length ? Math.min(activeCompetitionIndex, matches.length - 1) : -1;
+    els.competitionSuggestions.innerHTML = matches.map((name, index) => `<button id="personalCompetitionOption${index}" type="button" role="option" aria-selected="${index === activeCompetitionIndex}" tabindex="-1" data-competition-suggestion="${escapeHtml(name)}">${escapeHtml(name)}</button>`).join("");
     els.competitionSuggestions.classList.toggle("is-hidden", !matches.length);
+    els.competition.setAttribute("aria-expanded", String(matches.length > 0));
+    if (activeCompetitionIndex >= 0) els.competition.setAttribute("aria-activedescendant", `personalCompetitionOption${activeCompetitionIndex}`);
+    else els.competition.removeAttribute("aria-activedescendant");
+  }
+
+  function selectCompetitionSuggestion(option) {
+    if (!option) return;
+    els.competition.value = option.dataset.competitionSuggestion;
+    els.matchDate.value = eventDateByName.get(els.competition.value) || defaultJulyDate();
+    activeCompetitionIndex = -1;
+    els.competitionSuggestions.classList.add("is-hidden");
+    els.competition.setAttribute("aria-expanded", "false");
+    els.competition.removeAttribute("aria-activedescendant");
+    els.name.focus();
+  }
+
+  function handleCompetitionKeydown(event) {
+    if (event.isComposing || event.keyCode === 229) return;
+    const options = [...els.competitionSuggestions.querySelectorAll('[role="option"]')];
+    if (event.key === "Escape" && !els.competitionSuggestions.classList.contains("is-hidden")) {
+      event.preventDefault();
+      activeCompetitionIndex = -1;
+      els.competitionSuggestions.classList.add("is-hidden");
+      els.competition.setAttribute("aria-expanded", "false");
+      els.competition.removeAttribute("aria-activedescendant");
+      return;
+    }
+    if (event.key === "ArrowDown" || event.key === "ArrowUp") {
+      if (!options.length) renderCompetitionSuggestions();
+      const currentOptions = [...els.competitionSuggestions.querySelectorAll('[role="option"]')];
+      if (!currentOptions.length) return;
+      event.preventDefault();
+      const direction = event.key === "ArrowDown" ? 1 : -1;
+      activeCompetitionIndex = activeCompetitionIndex < 0
+        ? (direction > 0 ? 0 : currentOptions.length - 1)
+        : (activeCompetitionIndex + direction + currentOptions.length) % currentOptions.length;
+      renderCompetitionSuggestions();
+      return;
+    }
+    if (event.key === "Enter" && options.length && !els.competitionSuggestions.classList.contains("is-hidden")) {
+      const index = activeCompetitionIndex < 0 ? 0 : activeCompetitionIndex;
+      event.preventDefault();
+      selectCompetitionSuggestion(options[index]);
+    }
   }
 
   function csvCell(value) {
@@ -497,18 +587,22 @@
     records = readRecords().map(normalizeRecord);
     els.matchDate.value = defaultJulyDate();
     els.competition.addEventListener("input", () => {
+      activeCompetitionIndex = -1;
       renderCompetitionSuggestions();
       els.matchDate.value = eventDateByName.get(els.competition.value.trim()) || defaultJulyDate();
     });
     els.competition.addEventListener("focus", renderCompetitionSuggestions);
-    els.competition.addEventListener("blur", () => window.setTimeout(() => els.competitionSuggestions.classList.add("is-hidden"), 120));
+    els.competition.addEventListener("keydown", handleCompetitionKeydown);
+    els.competition.addEventListener("blur", () => window.setTimeout(() => {
+      els.competitionSuggestions.classList.add("is-hidden");
+      els.competition.setAttribute("aria-expanded", "false");
+      els.competition.removeAttribute("aria-activedescendant");
+      activeCompetitionIndex = -1;
+    }, 120));
+    els.competitionSuggestions.addEventListener("mousedown", (event) => event.preventDefault());
     els.competitionSuggestions.addEventListener("click", (event) => {
       const option = event.target.closest("[data-competition-suggestion]");
-      if (!option) return;
-      els.competition.value = option.dataset.competitionSuggestion;
-      els.matchDate.value = eventDateByName.get(els.competition.value) || defaultJulyDate();
-      els.competitionSuggestions.classList.add("is-hidden");
-      els.name.focus();
+      selectCompetitionSuggestion(option);
     });
     els.nextButton.addEventListener("click", () => addDraft({ continueEntry: true }));
     els.cancelEdit.addEventListener("click", () => { exitEditMode({ clearForm: true }); showMessage("已取消修正。", false); });
@@ -523,7 +617,7 @@
     });
     els.importInput.addEventListener("change", () => importCsv(els.importInput.files?.[0]));
     document.querySelectorAll("[data-expand-chart]").forEach((button) => button.addEventListener("click", () => toggleChartExpansion(button)));
-    document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeExpandedCharts(); });
+    document.addEventListener("keydown", handleChartKeydown);
     els.list.addEventListener("click", (event) => {
       const editButton = event.target.closest("[data-edit-record]");
       if (editButton) { startEdit(editButton.dataset.editRecord); return; }
@@ -537,5 +631,5 @@
     render();
   }
 
-  window.DebatePersonalRecords = { init };
+  window.DebatePersonalRecords = { init, closeExpandedCharts };
 }());
