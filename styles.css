@@ -467,7 +467,8 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .report-copy-button:hover, .report-copy-button:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; background: var(--green-dark); }
 .report-copy-status { display: inline-block; margin-left: 10px; color: var(--green-dark); font-size: 13px; font-weight: 750; }
 .report-email { margin: 18px 0 0; color: var(--muted); }
-.report-email a { color: var(--green-dark); font-weight: 850; }
+.report-email a, .report-threads a { color: var(--green-dark); font-weight: 850; }
+.report-threads { margin: 8px 0 0; color: var(--muted); }
 
 .archive-intro { padding-bottom: 22px; }
 .archive-page { padding-bottom: 84px; }
