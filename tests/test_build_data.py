@@ -2,6 +2,8 @@ import os
 import sys
 import unittest
 import tempfile
+import zipfile
+from xml.sax.saxutils import escape
 from unittest.mock import patch
 from pathlib import Path
 
@@ -77,6 +79,61 @@ class BuildDataTests(unittest.TestCase):
         }
         with self.assertRaisesRegex(SystemExit, "勝方「丙校」不是正方隊伍"):
             build_data.validate_records([record], [])
+
+    def test_xlsx_errors_report_physical_worksheet_row(self):
+        def column_name(index):
+            result = ""
+            while index:
+                index, remainder = divmod(index - 1, 26)
+                result = chr(65 + remainder) + result
+            return result
+
+        def worksheet_row(row_number, values):
+            cells = []
+            for index, value in enumerate(values, start=1):
+                if value:
+                    cells.append(
+                        f'<c r="{column_name(index)}{row_number}" t="inlineStr">'
+                        f'<is><t>{escape(str(value))}</t></is></c>'
+                    )
+            return f'<row r="{row_number}">{"".join(cells)}</row>'
+
+        headers = sorted(build_data.REQUIRED_COLUMNS | build_data.OPTIONAL_COLUMNS)
+        row_values = {header: "" for header in headers}
+        row_values.update({
+            "資料類型": "公開戰績",
+            "盃賽": "測試盃",
+            "正方學校": "甲校",
+            "反方學校": "乙校",
+            "勝方": "丙校",
+        })
+        header_xml = worksheet_row(5, headers)
+        data_xml = worksheet_row(22, [row_values[header] for header in headers])
+        workbook_xml = (
+            '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
+            'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+            '<sheets><sheet name="測試賽事" sheetId="1" r:id="rId1"/></sheets></workbook>'
+        )
+        relationships_xml = (
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+            '<Relationship Id="rId1" Type="worksheet" Target="/xl/worksheets/sheet1.xml"/>'
+            '</Relationships>'
+        )
+        worksheet_xml = (
+            '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main">'
+            f'<sheetData>{header_xml}{data_xml}</sheetData></worksheet>'
+        )
+
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "source.xlsx"
+            with zipfile.ZipFile(path, "w") as book:
+                book.writestr("xl/workbook.xml", workbook_xml)
+                book.writestr("xl/_rels/workbook.xml.rels", relationships_xml)
+                book.writestr("xl/worksheets/sheet1.xml", worksheet_xml)
+            records, _, _, _ = build_data.load_xlsx(path)
+
+        with self.assertRaisesRegex(SystemExit, "第 22 列 的勝方「丙校」"):
+            build_data.validate_records(records, [])
 
     def test_validate_records_warns_for_repeated_scheduled_match(self):
         records = [

@@ -141,11 +141,12 @@ def stable_id(prefix, value):
 
 def parse_rows(rows, source_name, default_competition=""):
     records, honors, topics = [], [], []
-    for line_number, row in enumerate(rows, start=2):
+    for ordinal, row in enumerate(rows, start=2):
+        line_number = row.get("_source_row", ordinal)
         data_type = clean(row.get("資料類型"))
         competition = clean(row.get("盃賽")) or default_competition
         if not data_type:
-            if any(clean(value) for value in row.values()):
+            if any(clean(value) for key, value in row.items() if key != "_source_row"):
                 raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列有內容但缺少「資料類型」。")
             continue
         if data_type not in VALID_DATA_TYPES:
@@ -335,7 +336,7 @@ def load_xlsx(path):
             clean_target = target.lstrip("/")
             sheet_path = clean_target if clean_target.startswith("xl/") else "xl/" + clean_target
             sheet_root = ET.fromstring(book.read(sheet_path))
-            matrix = []
+            matrix, matrix_row_numbers = [], []
             for row_node in sheet_root.iter():
                 if not row_node.tag.endswith("}row"):
                     continue
@@ -355,6 +356,7 @@ def load_xlsx(path):
                     values[column] = value
                 if values:
                     matrix.append([values.get(index, "") for index in range(max(values) + 1)])
+                    matrix_row_numbers.append(int(row_node.attrib.get("r", len(matrix))))
             competition, header_index, headers, sheet_topic_rows = "", None, [], {}
             for index, row in enumerate(matrix):
                 trimmed = [clean(value) for value in row]
@@ -379,9 +381,11 @@ def load_xlsx(path):
                 continue
             validate_headers(headers, f"工作分頁「{label}」")
             sheet_rows = []
-            for row in matrix[header_index + 1:]:
+            for matrix_index, row in enumerate(matrix[header_index + 1:], start=header_index + 1):
                 if any(clean(value) for value in row):
-                    sheet_rows.append({header: clean(row[index]) if index < len(row) else "" for index, header in enumerate(headers)})
+                    sheet_row = {header: clean(row[index]) if index < len(row) else "" for index, header in enumerate(headers)}
+                    sheet_row["_source_row"] = matrix_row_numbers[matrix_index]
+                    sheet_rows.append(sheet_row)
             sheet_records, sheet_honors, row_topics = parse_rows(sheet_rows, f"工作分頁「{label}」", competition)
             records.extend(sheet_records)
             honors.extend(sheet_honors)
