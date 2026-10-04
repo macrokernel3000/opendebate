@@ -78,6 +78,35 @@ class BuildDataTests(unittest.TestCase):
         with self.assertRaisesRegex(SystemExit, "勝方「丙校」不是正方隊伍"):
             build_data.validate_records([record], [])
 
+    def test_validate_records_warns_for_repeated_scheduled_match(self):
+        records = [
+            {
+                "competitionName": "測試盃", "matchDate": "2026-10-01", "period": 1, "venue": 2,
+                "teams": {"affirmative": "台中女中", "negative": "甲校"},
+                "scores": {"affirmative": 2, "negative": 1}, "winner": "正方勝",
+                "_source": "來源.csv", "_row": row,
+            }
+            for row in (3, 4)
+        ]
+        records[1]["teams"]["affirmative"] = "臺中 女中"
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_records(records, [])
+            self.assertEqual(len(build_data.WARNINGS), 1)
+            self.assertIn("疑似重複場次", build_data.WARNINGS[0])
+
+    def test_duplicate_match_check_preserves_school_team_suffixes(self):
+        records = []
+        for row, team in ((3, "桃園高中A"), (4, "桃園高中B")):
+            records.append({
+                "competitionName": "測試盃", "matchDate": "2026-10-01", "period": 1, "venue": 2,
+                "teams": {"affirmative": team, "negative": "甲校"},
+                "scores": {"affirmative": 2, "negative": 1}, "winner": team,
+                "_source": "來源.csv", "_row": row,
+            })
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_records(records, [])
+            self.assertEqual(build_data.WARNINGS, [])
+
     def test_normalize_date_accepts_excel_serial_date(self):
         self.assertEqual(build_data.normalize_date("46023"), "2026-01-01")
 
@@ -85,6 +114,48 @@ class BuildDataTests(unittest.TestCase):
         result = build_data.topic_entries("測試盃", "題目一|題目二", "說明一|說明二")
         self.assertEqual(result[1]["topic"], "題目二")
         self.assertEqual(result[1]["explanation"], "說明二")
+
+    def test_upcoming_event_validation_checks_dates_and_key_dates(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "upcoming-events.js"
+            path.write_text(
+                'window.DEBATE_UPCOMING_EVENTS = [{"id":"test","name":"測試盃",'
+                '"startDate":"2026-11-01","endDate":"2026-10-31",'
+                '"keyDates":[{"label":"報名","date":"2026-10-20","time":"24:00"}]}];',
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(SystemExit, "結束日期早於開始日期"):
+                build_data.validate_upcoming_events(path)
+            path.write_text(
+                'window.DEBATE_UPCOMING_EVENTS = [{"id":"test","name":"測試盃",'
+                '"startDate":"2026-10-30","keyDates":[{"label":"報名",'
+                '"date":"2026-10-20","time":"24:00"}]}];',
+                encoding="utf-8",
+            )
+            with self.assertRaisesRegex(SystemExit, "時間格式錯誤"):
+                build_data.validate_upcoming_events(path)
+
+    def test_calendar_feed_escapes_and_folds_utf8_lines(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            data_dir = root / "data"
+            data_dir.mkdir()
+            path = data_dir / "upcoming-events.js"
+            path.write_text(
+                'window.DEBATE_UPCOMING_EVENTS = [{"id":"feed-test","name":"測試盃,甲隊",'
+                '"startDate":"2999-10-30","endDate":"2999-10-31",'
+                '"location":"臺北;會議室","organizer":"' + "主辦單位" * 20 + '"}];',
+                encoding="utf-8",
+            )
+            with patch.object(build_data, "DATA_DIR", data_dir), patch.object(build_data, "ROOT", root):
+                build_data.write_calendar_feed()
+            content = (root / "calendar.ics").read_bytes()
+            self.assertNotIn(b"\n", content.replace(b"\r\n", b""))
+            lines = content.split(b"\r\n")
+            self.assertTrue(all(len(line) <= 75 for line in lines))
+            self.assertIn("SUMMARY:測試盃\\,甲隊".encode(), content)
+            self.assertIn("LOCATION:臺北\\;會議室".encode(), content)
+            self.assertIn(b"END:VCALENDAR", content)
 
     def test_csv_is_default_source(self):
         old = os.environ.pop("PUBLIC_DATA_SOURCE", None)

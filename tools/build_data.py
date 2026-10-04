@@ -6,6 +6,7 @@ import math
 import os
 import re
 import sys
+import unicodedata
 import zipfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -422,6 +423,10 @@ def normalized_entity_name(value):
     return re.sub(r"\s+", "", clean(value)).lower()
 
 
+def normalized_match_team(value):
+    return re.sub(r"\s+", "", unicodedata.normalize("NFKC", clean(value)).replace("台", "臺")).lower()
+
+
 def validate_records(records, registry_entries):
     alias_lookup = {}
     for entry in registry_entries:
@@ -431,6 +436,7 @@ def validate_records(records, registry_entries):
             if normalized_entity_name(alias):
                 alias_lookup[normalized_entity_name(alias)] = canonical
 
+    seen_matchups = {}
     for record in records:
         source = record.get("_source", "資料來源")
         row = record.get("_row", "?")
@@ -441,6 +447,19 @@ def validate_records(records, registry_entries):
             side: alias_lookup.get(name, name)
             for side, name in team_names.items()
         }
+        match_date = clean(record.get("matchDate"))
+        period = record.get("period")
+        venue = record.get("venue")
+        matchup = sorted(normalized_match_team(name) for name in teams.values())
+        if match_date and period is not None and venue is not None and all(matchup):
+            schedule_key = (normalized_entity_name(record.get("competitionName")), match_date, period, venue, tuple(matchup))
+            if schedule_key in seen_matchups:
+                first_source, first_row = seen_matchups[schedule_key]
+                warn(
+                    f"疑似重複場次：{location} 與 {first_source} 第 {first_row} 列在同賽事、日期、時段、會場及隊伍配對重複；請核對來源，不會自動合併。"
+                )
+            else:
+                seen_matchups[schedule_key] = (source, row)
         winner = clean(record.get("winner"))
         winner_name = normalized_entity_name(winner)
         winner_side = None
@@ -758,10 +777,7 @@ def write_update_report(version, sources, events, records, honors, attendance, t
 
 
 def write_calendar_feed():
-    source_path = DATA_DIR / "upcoming-events.js"
-    source = source_path.read_text(encoding="utf-8")
-    payload = source.split("=", 1)[1].rsplit(";", 1)[0].strip()
-    upcoming = json.loads(payload)
+    upcoming = read_upcoming_events()
     today = datetime.now().date()
 
     def escape_ical(value):
@@ -820,6 +836,61 @@ def write_calendar_feed():
     output_path.write_bytes(("\r\n".join(fold_line(line) for line in lines) + "\r\n").encode("utf-8"))
 
 
+def read_upcoming_events(path=None):
+    source_path = path or DATA_DIR / "upcoming-events.js"
+    source = source_path.read_text(encoding="utf-8")
+    try:
+        payload = source.split("=", 1)[1].rsplit(";", 1)[0].strip()
+        events = json.loads(payload)
+    except (IndexError, json.JSONDecodeError) as error:
+        raise SystemExit(f"資料錯誤：{source_path.name} 不是有效的未來賽事資料。") from error
+    if not isinstance(events, list):
+        raise SystemExit(f"資料錯誤：{source_path.name} 最外層必須是賽事陣列。")
+    return events
+
+
+def validate_upcoming_events(path=None):
+    source_path = path or DATA_DIR / "upcoming-events.js"
+    events = read_upcoming_events(source_path)
+    seen_ids, seen_names = set(), set()
+
+    def parse_event_date(value, row, field):
+        if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {row} 筆「{field}」必須使用 YYYY-MM-DD。")
+        try:
+            return datetime.strptime(value, "%Y-%m-%d").date()
+        except ValueError as error:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {row} 筆「{field}」不是有效日期：{value}。") from error
+
+    for index, event in enumerate(events, start=1):
+        if not isinstance(event, dict):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆必須是物件。")
+        event_id, name = clean(event.get("id")), clean(event.get("name"))
+        if not event_id or not name:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少賽事 id 或名稱。")
+        if event_id in seen_ids:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆賽事 id 重複：{event_id}。")
+        if name in seen_names:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆賽事名稱重複：{name}。")
+        seen_ids.add(event_id)
+        seen_names.add(name)
+        start = parse_event_date(event.get("startDate"), index, "startDate")
+        end = parse_event_date(event.get("endDate") or event.get("startDate"), index, "endDate")
+        if end < start:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆結束日期早於開始日期：{name}。")
+        key_dates = event.get("keyDates", [])
+        if not isinstance(key_dates, list):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「keyDates」必須是陣列：{name}。")
+        for date_index, item in enumerate(key_dates, start=1):
+            if not isinstance(item, dict) or not clean(item.get("label")):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {date_index} 個重要時程缺少標籤。")
+            if clean(item.get("date")):
+                parse_event_date(item["date"], index, f"keyDates[{date_index}].date")
+            if clean(item.get("time")) and not re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", clean(item["time"])):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {date_index} 個重要時程時間格式錯誤：{item['time']}。")
+    return events
+
+
 def build(check_only=False, fail_on_warnings=False):
     WARNINGS.clear()
     paths = source_files()
@@ -834,6 +905,7 @@ def build(check_only=False, fail_on_warnings=False):
         topics.extend(source_topics)
         sources.append(source_name)
     validate_event_metadata_dates()
+    validate_upcoming_events()
     registry_entries = read_registry()
     validate_records(records, registry_entries)
     for record in records:
