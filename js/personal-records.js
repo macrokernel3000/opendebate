@@ -458,7 +458,7 @@
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
     const link = document.createElement("a");
     link.href = url;
-    link.download = `我的辯論成績-${new Date().toISOString().slice(0, 10)}.csv`;
+    link.download = `我的辯論成績-${window.DebateRecordStorage.localDateStamp()}.csv`;
     link.click();
     window.setTimeout(() => URL.revokeObjectURL(url), 0);
     showMessage(`已下載 ${records.length} 張裁單，請妥善保存這份 CSV。`, false);

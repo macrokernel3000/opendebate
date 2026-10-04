@@ -421,11 +421,35 @@ test("record storage reports write failures and honors native form validation", 
   assert.doesNotMatch(window.DebateRecordStorage.saveFailureMessage(0), /下載 CSV 備份/);
   assert.match(window.DebateRecordStorage.saveFailureMessage(1), /原有紀錄沒有變動.*下載 CSV 備份/);
 
+  const localDate = {
+    getFullYear: () => 2026,
+    getMonth: () => 9,
+    getDate: () => 5,
+  };
+  assert.equal(window.DebateRecordStorage.localDateStamp(localDate), "2026-10-05");
+
+  const previousTimezone = process.env.TZ;
+  process.env.TZ = "Asia/Taipei";
+  try {
+    assert.equal(window.DebateRecordStorage.localDateStamp(new Date("2026-10-04T23:32:00.000Z")), "2026-10-05");
+  } finally {
+    if (previousTimezone === undefined) delete process.env.TZ;
+    else process.env.TZ = previousTimezone;
+  }
+
   let checks = 0;
   assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return false; } }), false);
   assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return true; } }), true);
   assert.equal(checks, 2);
   assert.equal(window.DebateRecordStorage.isValid({}), true);
+});
+
+test("personal and team CSV exports use the shared local calendar date", () => {
+  const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+  assert.match(personalSource, /我的辯論成績-\$\{window\.DebateRecordStorage\.localDateStamp\(\)\}\.csv/);
+  assert.match(teamSource, /我的隊伍辯論裁單-\$\{window\.DebateRecordStorage\.localDateStamp\(\)\}\.csv/);
+  assert.doesNotMatch(personalSource + teamSource, /toISOString\(\)\.slice\(0, 10\)/);
 });
 
 test("personal record save feedback does not claim empty scores updated averages", () => {
