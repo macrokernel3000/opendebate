@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T16:57:11",
+  "generatedAt": "2026-10-04T17:02:09",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -873,18 +873,6 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
-      "code": "p154",
-      "type": "p",
-      "name": "高市三民A",
-      "aliases": ""
-    },
-    {
-      "code": "p155",
-      "type": "p",
-      "name": "高市三民B",
-      "aliases": ""
-    },
-    {
       "code": "p156",
       "type": "p",
       "name": "中壢桃園一邊一國",
@@ -1716,7 +1704,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s149",
       "type": "s",
       "name": "高市三民",
-      "aliases": ""
+      "aliases": "高市三民A|高市三民B"
     },
     {
       "code": "s150",
@@ -30394,10 +30382,10 @@ window.DEBATE_PUBLIC_DATA = {
       },
       "groupName": "安和橋",
       "teamIds": {
-        "affirmative": "p155",
+        "affirmative": "s149",
         "negative": "s041"
       },
-      "id": "match-08b007283038"
+      "id": "match-ae1e73d6e074"
     },
     {
       "competitionName": "第十五屆明京盃全國高中職辯論比賽",
@@ -30697,9 +30685,9 @@ window.DEBATE_PUBLIC_DATA = {
       "groupName": "安和橋",
       "teamIds": {
         "affirmative": "s041",
-        "negative": "p155"
+        "negative": "s149"
       },
-      "id": "match-178d92e2d8c1"
+      "id": "match-92ca95c413b9"
     },
     {
       "competitionName": "第十五屆明京盃全國高中職辯論比賽",
@@ -30922,10 +30910,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p154",
+        "affirmative": "s149",
         "negative": "s185"
       },
-      "id": "match-0e3a54a11d62"
+      "id": "match-0f21b3d8a407"
     },
     {
       "competitionName": "第十五屆明京盃全國高中職辯論比賽",
@@ -30997,10 +30985,10 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": []
       },
       "teamIds": {
-        "affirmative": "p155",
+        "affirmative": "s149",
         "negative": "s007"
       },
-      "id": "match-8819bccf6c49"
+      "id": "match-32040ed9dd06"
     },
     {
       "competitionName": "第十五屆明京盃全國高中職辯論比賽",
