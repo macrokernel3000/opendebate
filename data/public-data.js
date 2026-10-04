@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T14:37:13",
+  "generatedAt": "2026-10-04T15:20:40",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -37,6 +37,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第十七屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十九屆北區聯合新生盃辯論比賽.csv",
     "public-data-第十九屆宮燈盃辯論公開賽青少年組.csv",
+    "public-data-第十五屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十五屆風雩盃中學辯論錦標賽.csv",
     "public-data-第十八屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第十六屆明京盃全國高中職辯論比賽.csv",
@@ -868,6 +869,18 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "p153",
       "type": "p",
       "name": "霸道總裁小嬌7",
+      "aliases": ""
+    },
+    {
+      "code": "p154",
+      "type": "p",
+      "name": "高市三民A",
+      "aliases": ""
+    },
+    {
+      "code": "p155",
+      "type": "p",
+      "name": "高市三民B",
       "aliases": ""
     },
     {
@@ -1840,6 +1853,12 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s184",
       "type": "s",
       "name": "明道高中",
+      "aliases": ""
+    },
+    {
+      "code": "s185",
+      "type": "s",
+      "name": "港明中學",
       "aliases": ""
     }
   ],
@@ -29948,6 +29967,1042 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "match-6ca4bdf64948"
     },
     {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "嶺東中學",
+        "negative": "彰化女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "彰化女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s042",
+        "negative": "s055"
+      },
+      "id": "match-89a45e4b031a"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "瑞祥高中",
+        "negative": "建國中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "瑞祥高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s104",
+        "negative": "s054"
+      },
+      "id": "match-3f3b353569f5"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "嘉義女中",
+        "negative": "虎尾高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "嘉義女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s032",
+        "negative": "s138"
+      },
+      "id": "match-27ce9ae895b6"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "高雄女中",
+        "negative": "臺南護專"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺南護專",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s153",
+        "negative": "s128"
+      },
+      "id": "match-05b2c192a3a5"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "高市三民B",
+        "negative": "屏東女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "屏東女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "安和橋",
+      "teamIds": {
+        "affirmative": "p155",
+        "negative": "s041"
+      },
+      "id": "match-08b007283038"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "家齊高中",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s039",
+        "negative": "s007"
+      },
+      "id": "match-43bf0c38aec3"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "師大附中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "復旦高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s047",
+        "negative": "s057"
+      },
+      "id": "match-c2f22fa25a9e"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "忠明高中",
+        "negative": "道明中學"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "忠明高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "經濟艙",
+      "teamIds": {
+        "affirmative": "s063",
+        "negative": "s143"
+      },
+      "id": "match-41f53610cf1f"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "高師附中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s151",
+        "negative": "s006"
+      },
+      "id": "match-77aaf9b04d4d"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "港明中學",
+        "negative": "松山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "松山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s185",
+        "negative": "s090"
+      },
+      "id": "match-b1e4224e62f3"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-21",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "中崙高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s159"
+      },
+      "id": "match-eb3b70d40fcd"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "小港高中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "小港高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s040",
+        "negative": "s127"
+      },
+      "id": "match-ceea370bab37"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "彰化女中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s055",
+        "negative": "s023"
+      },
+      "id": "match-f6988ed3033d"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "建國中學",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "瑞祥高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s054",
+        "negative": "s104"
+      },
+      "id": "match-66ecc6928093"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "虎尾高中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s138",
+        "negative": "s067"
+      },
+      "id": "match-fc6ced37ab42"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 1,
+      "venue": 5,
+      "teams": {
+        "affirmative": "臺南護專",
+        "negative": "台南二中B"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "臺南護專",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s128",
+        "negative": "s027"
+      },
+      "id": "match-6df96b5c39dd"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "屏東女中",
+        "negative": "高市三民B"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高市三民B",
+      "note": "循環勝場數、獲勝評分單數及論點架構獲得張數相同；依辯士名次累計，高市三民B為52、屏東女中為61，故高市三民B晉級。",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "安和橋",
+      "teamIds": {
+        "affirmative": "s041",
+        "negative": "p155"
+      },
+      "id": "match-178d92e2d8c1"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "中山高中",
+        "negative": "鳳山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "中山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s007",
+        "negative": "s156"
+      },
+      "id": "match-71e7234e5802"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "嘉義高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s033"
+      },
+      "id": "match-efe7592755e1"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "鳳新高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "復旦高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s157"
+      },
+      "id": "match-9be130858b00"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-22",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "道明中學",
+        "negative": "忠明高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "道明中學",
+      "note": "循環勝場數、獲勝評分單數及論點架構獲得張數相同；依辯士名次累計，道明中學為47、忠明高中為58，故道明中學晉級。",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "groupName": "經濟艙",
+      "teamIds": {
+        "affirmative": "s143",
+        "negative": "s063"
+      },
+      "id": "match-409c2873feb2"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-23",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "高雄中學",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s152",
+        "negative": "s131"
+      },
+      "id": "match-d391350de494"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-23",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "鳳山高中",
+        "negative": "家齊高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "鳳山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s156",
+        "negative": "s039"
+      },
+      "id": "match-81f5b86772c4"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-23",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "嘉義高中",
+        "negative": "市立大同"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s033",
+        "negative": "s044"
+      },
+      "id": "match-084a12dd5e35"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-23",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "新化高中",
+        "negative": "高師附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "高師附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s074",
+        "negative": "s151"
+      },
+      "id": "match-6982502f76c3"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-23",
+      "period": 2,
+      "venue": 5,
+      "teams": {
+        "affirmative": "高市三民A",
+        "negative": "港明中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "港明中學",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p154",
+        "negative": "s185"
+      },
+      "id": "match-0e3a54a11d62"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "瑞祥高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s104"
+      },
+      "id": "match-b93113b0f741"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "成功高中",
+        "negative": "臺南護專"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "成功高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s067",
+        "negative": "s128"
+      },
+      "id": "match-c70f7fd1690a"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "高市三民B",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "中山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "p155",
+        "negative": "s007"
+      },
+      "id": "match-8819bccf6c49"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 1,
+      "venue": 4,
+      "teams": {
+        "affirmative": "市立大同",
+        "negative": "興國高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "市立大同",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s044",
+        "negative": "s130"
+      },
+      "id": "match-5fae383d08bb"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "大灣高中",
+        "negative": "中山女高"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "中山女高",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s036",
+        "negative": "s006"
+      },
+      "id": "match-bc64d6286ea4"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "松山高中",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s090",
+        "negative": "s131"
+      },
+      "id": "match-a5f34b8534d7"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "道明中學"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "復旦高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s143"
+      },
+      "id": "match-ed52c6af02bf"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "臺南女中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s127"
+      },
+      "id": "match-7c6956981749"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "鳳新高中",
+        "negative": "師大附中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "師大附中",
+      "note": "此場來自另一則賽果公告；原公告同列 2024-08-24 時段三會場一。",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "此場出自列有十六強名單的另一則公告；依公告相鄰資訊判讀為十六強賽。",
+      "teamIds": {
+        "affirmative": "s157",
+        "negative": "s047"
+      },
+      "id": "match-f8a24f784a3b"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "成功高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "同一公告列出八強隊伍名單及賽後四強名單；依對戰隊伍與晉級結果判讀為八強賽，來源未另標賽制階段。",
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s067"
+      },
+      "id": "match-d16632206d43"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "中山高中",
+        "negative": "市立大同"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "中山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "同一公告列出八強隊伍名單及賽後四強名單；依對戰隊伍與晉級結果判讀為八強賽，來源未另標賽制階段。",
+      "teamIds": {
+        "affirmative": "s007",
+        "negative": "s044"
+      },
+      "id": "match-297fd8dd8d13"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "中山女中",
+        "negative": "興大附中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "同一公告列出八強隊伍名單及賽後四強名單；依對戰隊伍與晉級結果判讀為八強賽，來源未另標賽制階段。",
+      "teamIds": {
+        "affirmative": "s006",
+        "negative": "s131"
+      },
+      "id": "match-3b5cdde36682"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-24",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "復旦高中",
+        "negative": "臺南女中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "復旦高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "同一公告列出八強隊伍名單及賽後四強名單；依對戰隊伍與晉級結果判讀為八強賽，來源未另標賽制階段。",
+      "teamIds": {
+        "affirmative": "s057",
+        "negative": "s127"
+      },
+      "id": "match-ae41b54a03e4"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "中山高中"
+      },
+      "scores": {
+        "affirmative": 3,
+        "negative": 0
+      },
+      "winner": "南山高中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "2024-08-24 公布四強為南山高中、中山高中、興大附中、復旦高中；2024-08-25 公告列出的兩場均為四強隊伍交手，階段依此判為準決賽。原文未提供時段及會場。",
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s007"
+      },
+      "id": "match-b4b58f740f79"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "2024-08-25",
+      "period": "",
+      "venue": "",
+      "teams": {
+        "affirmative": "興大附中",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "興大附中",
+      "note": "",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "inferenceNote": "2024-08-24 公布四強為南山高中、中山高中、興大附中、復旦高中；2024-08-25 公告列出的兩場均為四強隊伍交手，階段依此判為準決賽。原文未提供時段及會場。",
+      "teamIds": {
+        "affirmative": "s131",
+        "negative": "s057"
+      },
+      "id": "match-da5639654c09"
+    },
+    {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "period": 2,
@@ -38705,6 +39760,61 @@ window.DEBATE_PUBLIC_DATA = {
       "id": "honor-e8b6b4e388ff"
     },
     {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "冠軍",
+      "recipient": "南山高中",
+      "team": "南山高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s023",
+      "id": "honor-62d7ac52d17c"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "亞軍",
+      "recipient": "興大附中",
+      "team": "興大附中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s131",
+      "id": "honor-b363fa3b8d9e"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "復旦高中",
+      "team": "復旦高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s057",
+      "id": "honor-09acab0a7e64"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "季軍",
+      "recipient": "中山高中",
+      "team": "中山高中",
+      "honorType": "team",
+      "note": "",
+      "teamId": "s007",
+      "id": "honor-edb4ded414a6"
+    },
+    {
+      "competitionName": "第十五屆明京盃全國高中職辯論比賽",
+      "matchDate": "",
+      "honorName": "榮辱與共",
+      "recipient": "南山高中",
+      "team": "南山高中",
+      "honorType": "team",
+      "note": "特殊團體獎",
+      "teamId": "s023",
+      "id": "honor-2773007ee37d"
+    },
+    {
       "competitionName": "第十五屆風雩盃中學辯論錦標賽",
       "matchDate": "2026-05-24",
       "honorName": "冠軍",
@@ -40476,6 +41586,16 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "teamCount": 23
+    },
+    "第十五屆明京盃全國高中職辯論比賽": {
+      "startDate": "2024-08-21",
+      "endDate": "2024-08-25",
+      "organizer": "",
+      "location": "",
+      "note": "",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "teamCount": 38
     },
     "2025司改盃全國高中職辯論比賽": {
       "teamCount": 23,
