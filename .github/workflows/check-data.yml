@@ -11,6 +11,10 @@ on:
       - "tools/build_data.py"
       - "tools/prepare_sheet_update.py"
       - "tests/**"
+      - "app.js"
+      - "index.html"
+      - "styles.css"
+      - "js/**"
       - ".github/workflows/**"
   pull_request:
     paths:
@@ -21,6 +25,10 @@ on:
       - "tools/build_data.py"
       - "tools/prepare_sheet_update.py"
       - "tests/**"
+      - "app.js"
+      - "index.html"
+      - "styles.css"
+      - "js/**"
       - ".github/workflows/**"
   workflow_dispatch:
 
@@ -40,6 +48,15 @@ jobs:
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
         with:
           python-version: "3.12"
+
+      - name: Set up Node.js
+        # actions/setup-node v7.0.0, pinned to its official tag commit.
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: "24"
+
+      - name: Run frontend module tests
+        run: node --test tests/*.test.cjs
 
       - name: Run data build checks
         run: python tools/build_data.py --check --fail-on-warnings
