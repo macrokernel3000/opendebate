@@ -80,9 +80,9 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 這版已加入 GitHub Actions：`.github/workflows/update-data-from-google-sheet.yml`。資料來源在建置前會先通過預檢；`.github/workflows/check-data.yml` 也會在相關程式或資料變更時執行預檢與單元測試。
 
-上傳到 GitHub 後，可到 repository 的 **Actions → Update data from Google Sheet → Run workflow** 手動更新。流程會自動下載 Google 試算表、轉成 `data/public-data.js`、產生 `data/update-report.txt`，並提交回 GitHub。
+資料來源更新並推送到 GitHub 後，可到 repository 的 **Actions → Prepare Google Sheet data update → Run workflow** 手動執行。流程會下載 Google 試算表、先以目前的公開 CSV 規則進行檢查，再產生建置結果及差異摘要；有實質變更時會建立或更新待審查的 Pull Request，不會直接改動 `main`。請先檢查差異，再由有權限者合併；合併後網站才會依 GitHub Pages 流程更新。
 
-只有對 repository 有寫入權限的人通常才能按 `Run workflow`；一般訪客不能按。這個測試版使用 Google Sheet 公開匯出連結，因此知道試算表網址的人可能讀得到資料。若要讓試算表保持私密，之後可改成 GitHub Secrets + Google 服務帳號版本。
+只有對 repository 有寫入權限的人通常才能按 `Run workflow`；一般訪客不能按。匯入工作流程使用 Google Sheet 公開匯出連結下載資料，這不會以維護者的 Google 帳號編輯原始試算表；知道試算表網址且有匯出權限的人可能讀得到內容。若要讓試算表保持私密，需另行設計受控憑證與存取權限。
 
 名冊更新方式：用 Numbers、Excel 或試算表編輯 `entity-registry.csv`，匯出 UTF-8 CSV 後可直接拖到 `更新網站資料.command`；工具會先備份現有名冊，再更新正式讀取的 `data/entity-registry.csv`。此檔案是別名與固定代碼的唯一正式來源，Google 試算表更新及本機建置都會沿用其中的歸戶設定。
 
