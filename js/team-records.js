@@ -55,7 +55,7 @@
     } catch (_error) { return []; }
   }
 
-  function saveRecords(nextRecords) { if (!window.DebateRecordStorage.save(localStorage, STORAGE_KEY, nextRecords)) { showMessage("瀏覽器無法儲存，請先下載隊伍 CSV 備份。", true); return false; } records = nextRecords; return true; }
+  function saveRecords(nextRecords) { if (!window.DebateRecordStorage.save(localStorage, STORAGE_KEY, nextRecords)) { showMessage(window.DebateRecordStorage.saveFailureMessage(records.length), true); return false; } records = nextRecords; return true; }
   function sideTotal(record, side) { const values = [...SCORE_KEYS.filter((key) => key.startsWith(side)), `${side}Argument`, `${side}Closing`].map((key) => record[key]).filter((value) => value !== "" && Number.isFinite(Number(value))).map(Number); return values.length ? values.reduce((sum, value) => sum + value, 0) : null; }
   function ballotResult(record) { const aff = sideTotal(record, "aff"); const neg = sideTotal(record, "neg"); if (aff === null || neg === null) return { status: "分數未完整", win: null, aff, neg }; if (aff === neg) return { status: "同分", win: null, aff, neg }; const winningSide = aff > neg ? "正" : "反"; return { status: winningSide === record.side ? "判我方勝" : "判我方負", win: winningSide === record.side, aff, neg }; }
 

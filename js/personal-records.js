@@ -55,7 +55,7 @@
 
   function saveRecords(nextRecords) {
     if (!window.DebateRecordStorage.save(localStorage, STORAGE_KEY, nextRecords)) {
-      showMessage("瀏覽器無法儲存資料，請先下載 CSV，並確認未使用限制儲存的模式。", true);
+      showMessage(window.DebateRecordStorage.saveFailureMessage(records.length), true);
       return false;
     }
     records = nextRecords;

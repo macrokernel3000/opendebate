@@ -417,6 +417,9 @@ test("record storage reports write failures and honors native form validation", 
 
   const blockedStorage = { setItem() { throw new Error("quota exceeded"); } };
   assert.equal(window.DebateRecordStorage.save(blockedStorage, "records", [{ id: "2" }]), false);
+  assert.match(window.DebateRecordStorage.saveFailureMessage(0), /這次變更未生效；表單內容仍保留/);
+  assert.doesNotMatch(window.DebateRecordStorage.saveFailureMessage(0), /下載 CSV 備份/);
+  assert.match(window.DebateRecordStorage.saveFailureMessage(1), /原有紀錄沒有變動.*下載 CSV 備份/);
 
   let checks = 0;
   assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return false; } }), false);
