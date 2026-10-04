@@ -371,6 +371,10 @@ def validate_records(records, registry_entries):
     return data_validation_module.validate_records(records, registry_entries, warn)
 
 
+def validate_event_rosters(records, event_rosters, registry_entries):
+    return data_validation_module.validate_event_rosters(records, event_rosters, registry_entries, warn)
+
+
 def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
     return data_validation_module.validate_event_metadata_dates(path, checked_date)
 
@@ -510,17 +514,7 @@ def build(check_only=False, fail_on_warnings=False):
     event_rosters = load_event_rosters()
     if event_rosters:
         sources.append(EVENT_ROSTERS_PATH.name)
-    for competition, entries in event_rosters.items():
-        match_teams = {
-            clean(team)
-            for record in records if record["competitionName"] == competition
-            for team in record["teams"].values() if clean(team)
-        }
-        roster_teams = {entry["team"] for entry in entries}
-        if match_teams != roster_teams:
-            missing = sorted(match_teams - roster_teams)
-            additional = sorted(roster_teams - match_teams)
-            warn(f"名單核對提醒：{competition} 公布名單與已收錄賽事隊伍不同；未列於名單：{missing}；名單另列：{additional}")
+    validate_event_rosters(records, event_rosters, registry_entries)
 
     if check_only:
         events = event_names(records, honors, topics)

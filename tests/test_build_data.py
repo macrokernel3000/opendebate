@@ -284,6 +284,37 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual([record["teams"]["affirmative"] for record in records], ["測試高中A", "測試高中B"])
         self.assertEqual(sum(entry["name"] == "測試高中" for entry in entries), 1)
 
+    def test_roster_validation_matches_aliases_without_collapsing_school_teams(self):
+        records = [
+            {"competitionName": "測試盃", "teams": {"affirmative": "測試高中A", "negative": "甲校"}},
+            {"competitionName": "測試盃", "teams": {"affirmative": "測試高中B", "negative": "乙校"}},
+        ]
+        rosters = {"測試盃": [
+            {"team": "測試高中甲"}, {"team": "甲校"},
+            {"team": "測試高中乙"}, {"team": "乙校"},
+        ]}
+        registry = [{
+            "code": "s001", "type": "s", "name": "測試高中",
+            "aliases": "測試高中A|測試高中B|測試高中甲|測試高中乙",
+        }]
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_event_rosters(records, rosters, registry)
+            self.assertEqual(build_data.WARNINGS, [])
+
+    def test_roster_validation_warns_when_one_of_two_same_school_teams_is_missing(self):
+        records = [
+            {"competitionName": "測試盃", "teams": {"affirmative": "測試高中A", "negative": "甲校"}},
+            {"competitionName": "測試盃", "teams": {"affirmative": "測試高中B", "negative": "乙校"}},
+        ]
+        rosters = {"測試盃": [
+            {"team": "測試高中A"}, {"team": "甲校"}, {"team": "乙校"},
+        ]}
+        registry = [{"code": "s001", "type": "s", "name": "測試高中", "aliases": "測試高中A|測試高中B"}]
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_event_rosters(records, rosters, registry)
+            self.assertEqual(len(build_data.WARNINGS), 1)
+            self.assertIn("測試高中B", build_data.WARNINGS[0])
+
     def test_entity_registry_keeps_legacy_xlsx_fallback_and_csv_priority(self):
         workbook_xml = (
             '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '

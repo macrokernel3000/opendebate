@@ -4,6 +4,7 @@
 import csv
 import re
 import unicodedata
+from collections import Counter
 
 
 SIDE_WINNERS = {"正方勝", "反方勝"}
@@ -95,6 +96,42 @@ def validate_records(records, registry_entries, warn):
             warn(f"比分核對提醒：{location} 的勝方與比分高低不一致，請核對公告或備註。")
         elif not winner and score_side:
             warn(f"比分核對提醒：{location} 比分可分出高低，但勝方留白；請確認公告是否未列勝方。")
+
+
+def validate_event_rosters(records, event_rosters, registry_entries, warn):
+    alias_lookup = {}
+    for entry in registry_entries:
+        canonical = normalized_entity_name(entry["name"])
+        alias_lookup[canonical] = canonical
+    for entry in registry_entries:
+        canonical = normalized_entity_name(entry["name"])
+        for alias in entry.get("aliases", "").split("|"):
+            alias_name = normalized_entity_name(alias)
+            if alias_name:
+                alias_lookup.setdefault(alias_name, canonical)
+
+    for competition, entries in event_rosters.items():
+        match_teams = {
+            clean(team)
+            for record in records if record["competitionName"] == competition
+            for team in record["teams"].values() if clean(team)
+        }
+        roster_teams = {entry["team"] for entry in entries}
+
+        def identity(name):
+            normalized = normalized_entity_name(name)
+            return alias_lookup.get(normalized, normalized)
+
+        match_counts = Counter(identity(team) for team in match_teams)
+        roster_counts = Counter(identity(team) for team in roster_teams)
+        if match_counts != roster_counts:
+            missing = sorted(match_teams - roster_teams)
+            additional = sorted(roster_teams - match_teams)
+            warn(
+                f"名單核對提醒：{competition} 公布名單與已收錄賽事隊伍不同；"
+                f"未列於名單：{missing}；名單另列：{additional}。"
+                "已依單位別名比對；同校 A／B 隊仍分別計數。"
+            )
 
 
 def validate_event_metadata_dates(path, checked_date):
