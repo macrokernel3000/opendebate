@@ -70,7 +70,7 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 新增或編輯任一 `public-data*.csv` 後，Windows 可執行根目錄的 `更新網站資料.ps1`，macOS 可雙擊 `更新網站資料.command`。CSV 是正式資料來源；Excel 僅在透過 `PUBLIC_DATA_SOURCE` 明確指定時作為輔助匯入。
 
-程式檢查可在根目錄執行 `python -m unittest discover -s tests -v`。若要明確匯入 Excel，可在 PowerShell 先設定 ` $env:PUBLIC_DATA_SOURCE = "data\\檔案.xlsx" ` 再執行更新工具。
+程式檢查可在根目錄執行 `python -m unittest discover -s tests -v`。只讀預檢可執行 `python tools/build_data.py --check --fail-on-warnings`；只有確認預檢通過後才進行正式建置。若要明確匯入 Excel，可在 PowerShell 先設定 ` $env:PUBLIC_DATA_SOURCE = "data\\檔案.xlsx" ` 再執行更新工具。
 
 更新程式會逐一讀取所有 CSV、檢查欄位，再合併產生 `data/public-data.js`。看到「目前收錄盃賽」與「更新完成」後，按 Return 即會開啟網站。
 
@@ -78,7 +78,7 @@ Numbers、Excel 與 Google 試算表都能開啟 CSV。編輯後請匯出為 UTF
 
 ## 從 Google 試算表一鍵更新
 
-這版已加入 GitHub Actions：`.github/workflows/update-data-from-google-sheet.yml`。
+這版已加入 GitHub Actions：`.github/workflows/update-data-from-google-sheet.yml`。資料來源在建置前會先通過預檢；`.github/workflows/check-data.yml` 也會在相關程式或資料變更時執行預檢與單元測試。
 
 上傳到 GitHub 後，可到 repository 的 **Actions → Update data from Google Sheet → Run workflow** 手動更新。流程會自動下載 Google 試算表、轉成 `data/public-data.js`、產生 `data/update-report.txt`，並提交回 GitHub。
 

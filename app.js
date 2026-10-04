@@ -119,6 +119,9 @@ function matchScoreLabel(match) {
 
 
 let hasRenderedRoute = false;
+function preferredScrollBehavior() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+}
 function showView(name) {
   const requested = name === "events" ? "overview" : name;
   const eventRoute = requested.match(/^event\/(.+)$/);
@@ -165,9 +168,18 @@ function showView(name) {
     if (!hasRenderedRoute) history.replaceState(null, "", routeHash);
     else history.pushState({ from: location.hash || "#home" }, "", routeHash);
   }
+  const shouldMoveFocus = hasRenderedRoute;
   hasRenderedRoute = true;
-  window.scrollTo({ top: 0, behavior: "smooth" });
-  if (target === "search") requestAnimationFrame(() => els.globalSearch.focus());
+  window.scrollTo({ top: 0, behavior: preferredScrollBehavior() });
+  if (target === "search") requestAnimationFrame(() => els.globalSearch.focus({ preventScroll: true }));
+  else if (shouldMoveFocus) requestAnimationFrame(() => {
+    const panel = [...els.views].find((view) => view.dataset.viewPanel === target);
+    const heading = [...(panel?.querySelectorAll("h1, h2") || [])].find((item) => item.getClientRects().length);
+    if (!panel?.classList.contains("is-hidden") && heading) {
+      heading.tabIndex = -1;
+      heading.focus({ preventScroll: true });
+    }
+  });
 }
 
 function matchResultForEntity(match, entityId) {
@@ -948,6 +960,7 @@ function showOverviewTab(tabName) {
     const active = tab.dataset.overviewTab === target;
     tab.classList.toggle("is-active", active);
     tab.setAttribute("aria-selected", String(active));
+    tab.tabIndex = active ? 0 : -1;
   });
   els.overviewEventsPanel.classList.toggle("is-hidden", target !== "events");
   els.overviewTeamsPanel.classList.toggle("is-hidden", target !== "teams");

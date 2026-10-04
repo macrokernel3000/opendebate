@@ -60,7 +60,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005050000" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005-accessibility1" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -214,10 +214,10 @@
       </div>
       <div class="page-shell overview-page">
         <div class="overview-tabs" role="tablist" aria-label="總覽分類">
-          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" data-overview-tab="events"><span class="overview-tab-label-long">已登錄賽事</span><span class="overview-tab-label-short">賽事</span><span class="overview-tab-count" id="overviewEventCount"></span></button>
-          <button id="overviewTeamsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="teams"><span class="overview-tab-label-long">隊伍資料庫</span><span class="overview-tab-label-short">隊伍</span><span class="overview-tab-count" id="overviewTeamCount"></span></button>
-          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" data-overview-tab="topics"><span class="overview-tab-label-long">已收錄辯題</span><span class="overview-tab-label-short">辯題</span><span class="overview-tab-count" id="overviewTopicCount"></span></button>
-          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" data-overview-tab="stats"><span class="overview-tab-label-long">統計</span><span class="overview-tab-label-short">統計</span></button>
+          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="overviewEventsPanel" data-overview-tab="events"><span class="overview-tab-label-long">已登錄賽事</span><span class="overview-tab-label-short">賽事</span><span class="overview-tab-count" id="overviewEventCount"></span></button>
+          <button id="overviewTeamsTab" class="overview-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewTeamsPanel" tabindex="-1" data-overview-tab="teams"><span class="overview-tab-label-long">隊伍資料庫</span><span class="overview-tab-label-short">隊伍</span><span class="overview-tab-count" id="overviewTeamCount"></span></button>
+          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewTopicsPanel" tabindex="-1" data-overview-tab="topics"><span class="overview-tab-label-long">已收錄辯題</span><span class="overview-tab-label-short">辯題</span><span class="overview-tab-count" id="overviewTopicCount"></span></button>
+          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewStatsPanel" tabindex="-1" data-overview-tab="stats"><span class="overview-tab-label-long">統計</span><span class="overview-tab-label-short">統計</span></button>
         </div>
         <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
           <div class="event-browser">
@@ -281,7 +281,7 @@
       <div class="page-shell archive-page">
         <div class="archive-mode-picker" role="tablist" aria-label="選擇建檔方式">
           <button id="personalArchiveMode" class="archive-mode-button is-active" type="button" role="tab" aria-selected="true" aria-controls="personalArchivePanel" data-archive-mode="personal"><span aria-hidden="true">👤</span><strong>選手建檔</strong><small>記錄個人的分數</small></button>
-          <button id="teamArchiveMode" class="archive-mode-button" type="button" role="tab" aria-selected="false" aria-controls="teamArchivePanel" data-archive-mode="team"><span aria-hidden="true">🏫</span><strong>隊伍建檔</strong><small>記錄整場比賽的三張裁判單</small></button>
+          <button id="teamArchiveMode" class="archive-mode-button" type="button" role="tab" aria-selected="false" aria-controls="teamArchivePanel" tabindex="-1" data-archive-mode="team"><span aria-hidden="true">🏫</span><strong>隊伍建檔</strong><small>記錄整場比賽的三張裁判單</small></button>
         </div>
         <aside class="archive-warning" role="note" aria-label="測試階段提醒">
           <span aria-hidden="true">⚠️</span>
@@ -442,9 +442,9 @@
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/site-config.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/core.js?v=20261005003000" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261005050000" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261005003000" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261005003000" data-versioned-asset></script>
-  <script src="app.js?v=20261005050000" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261005-accessibility1" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261005-accessibility1" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261005-accessibility1" data-versioned-asset></script>
+  <script src="app.js?v=20261005-accessibility1" data-versioned-asset></script>
 </body>
 </html>

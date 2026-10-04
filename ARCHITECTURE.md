@@ -29,10 +29,13 @@
 
 1. 掃描並合併所有 `public-data*.csv`。
 2. 對完全相同的資料去重，保留歷史來源。
-3. 同步單位名冊與別名。
-4. 產生網站唯一讀取的 `data/public-data.js`。
-5. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
-6. 更新 `index.html` 的資源版本，避免瀏覽器讀到舊快取。
+3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍與賽事 metadata。
+4. 同步單位名冊與別名。
+5. 產生網站唯一讀取的 `data/public-data.js`。
+6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
+7. 更新 `index.html` 的資源版本，避免瀏覽器讀到舊快取。
+
+`.github/workflows/check-data.yml` 會在相關資料、程式或流程變更時執行唯讀預檢與 Python 單元測試；Google 試算表匯入流程也會先預檢，並提交行事曆生成檔。
 
 不要手動維護 `data/public-data.js` 中的大量資料；應修改試算表或 CSV，再執行更新工具。
 

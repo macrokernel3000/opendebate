@@ -36,6 +36,11 @@ jobs:
           print(f"已下載 Google Sheet：{path.stat().st_size:,} bytes")
           PY
 
+      - name: Validate source data before building
+        env:
+          PUBLIC_DATA_SOURCE: data/google-sheet-export.xlsx
+        run: python tools/build_data.py --check --fail-on-warnings
+
       - name: Build website data
         env:
           PUBLIC_DATA_SOURCE: data/google-sheet-export.xlsx
@@ -50,3 +55,4 @@ jobs:
             data/update-report.txt
             data/entity-registry.csv
             index.html
+            calendar.ics

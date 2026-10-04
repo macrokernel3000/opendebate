@@ -1,0 +1,44 @@
+name: Check public data
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/public-data*.csv"
+      - "data/entity-registry.csv"
+      - "data/event-metadata.csv"
+      - "data/event-rosters.csv"
+      - "tools/build_data.py"
+      - "tests/**"
+      - ".github/workflows/**"
+  pull_request:
+    paths:
+      - "data/public-data*.csv"
+      - "data/entity-registry.csv"
+      - "data/event-metadata.csv"
+      - "data/event-rosters.csv"
+      - "tools/build_data.py"
+      - "tests/**"
+      - ".github/workflows/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run data build checks
+        run: python tools/build_data.py --check --fail-on-warnings
+
+      - name: Run builder unit tests
+        run: python -m unittest discover -s tests -v

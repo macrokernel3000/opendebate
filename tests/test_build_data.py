@@ -27,6 +27,56 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual(build_data.number("12.0"), 12)
         self.assertEqual(build_data.number("3.5"), 3.5)
         self.assertEqual(build_data.number("不是數字"), "")
+        self.assertEqual(build_data.number("NaN"), "")
+        self.assertEqual(build_data.number("Infinity"), "")
+
+    def test_checked_number_reports_source_location(self):
+        with self.assertRaisesRegex(SystemExit, "來源.csv 第 4 列「正方比分」不是有效數字"):
+            build_data.checked_number("三分", "來源.csv", 4, "正方比分")
+
+    def test_checked_date_rejects_impossible_calendar_date(self):
+        with self.assertRaisesRegex(SystemExit, "來源.csv 第 5 列「日期」日期無法辨認"):
+            build_data.checked_date("2026-02-30", "來源.csv", 5, "日期")
+
+    def test_parse_rows_rejects_partial_scores_and_unknown_data_type(self):
+        row = {column: "" for column in build_data.REQUIRED_COLUMNS | build_data.OPTIONAL_COLUMNS}
+        row.update({"資料類型": "公開戰績", "盃賽": "測試盃", "正方學校": "甲校", "反方學校": "乙校", "正方比分": "2"})
+        with self.assertRaisesRegex(SystemExit, "只填了一方比分"):
+            build_data.parse_rows([row], "來源.csv")
+        row["資料類型"] = "公開賽果"
+        with self.assertRaisesRegex(SystemExit, "資料類型」不在支援範圍"):
+            build_data.parse_rows([row], "來源.csv")
+
+    def test_validate_records_accepts_team_and_side_winners_but_flags_score_conflicts(self):
+        record = {
+            "competitionName": "測試盃",
+            "teams": {"affirmative": "甲校", "negative": "乙校"},
+            "winner": "正方勝",
+            "scores": {"affirmative": 1, "negative": 2},
+            "_source": "來源.csv",
+            "_row": 6,
+        }
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_records([record], [])
+            self.assertEqual(len(build_data.WARNINGS), 1)
+            self.assertIn("來源.csv 第 6 列", build_data.WARNINGS[0])
+        record["winner"] = "乙校"
+        record["scores"] = {"affirmative": 2, "negative": 2}
+        with patch.object(build_data, "WARNINGS", []):
+            build_data.validate_records([record], [])
+            self.assertEqual(build_data.WARNINGS, [])
+
+    def test_validate_records_rejects_winner_not_in_match(self):
+        record = {
+            "competitionName": "測試盃",
+            "teams": {"affirmative": "甲校", "negative": "乙校"},
+            "winner": "丙校",
+            "scores": {"affirmative": None, "negative": None},
+            "_source": "來源.csv",
+            "_row": 7,
+        }
+        with self.assertRaisesRegex(SystemExit, "勝方「丙校」不是正方隊伍"):
+            build_data.validate_records([record], [])
 
     def test_normalize_date_accepts_excel_serial_date(self):
         self.assertEqual(build_data.normalize_date("46023"), "2026-01-01")

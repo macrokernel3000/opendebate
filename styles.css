@@ -402,6 +402,7 @@ button { color: inherit; }
 .search-box { display: grid; grid-template-columns: 34px 1fr 42px; align-items: center; max-width: 850px; margin-top: 27px; border: 3px solid var(--ink); background: white; box-shadow: 7px 7px 0 var(--coral); color: var(--ink); }
 .search-box > span { text-align: center; font-size: 25px; }
 .search-box input { width: 100%; min-width: 0; min-height: 58px; border: 0; outline: 0; background: transparent; font-size: 17px; }
+.search-box:focus-within { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .search-box button { width: 42px; height: 42px; border: 0; background: transparent; cursor: pointer; font-size: 25px; }
 .search-meta { margin: 18px 0 0; color: #d6e5de; font-size: 13px; }
 .search-results { min-height: 420px; padding-top: 40px; padding-bottom: 84px; }
@@ -536,6 +537,7 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .record-button:disabled { border-color: var(--line); background: var(--soft); color: var(--muted); box-shadow: none; cursor: not-allowed; }
 .record-import { position: relative; background: var(--green); color: white; overflow: hidden; }
 .record-import input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.record-import:focus-within { outline: 3px solid var(--yellow); outline-offset: 3px; }
 .record-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; }
 .team-record-explanation { margin: 16px 0 0; border-left: 5px solid var(--yellow); padding: 12px 14px; background: var(--soft); color: var(--muted); font-size: 12px; line-height: 1.7; }
 .team-radar-card { margin-top: 18px; }
@@ -1007,4 +1009,9 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .archive-page { padding-bottom: 60px; }
   .archive-layout { gap: 20px; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .record-form, .record-summary { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
 }

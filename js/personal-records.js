@@ -130,7 +130,7 @@
     els.cancelEdit.classList.remove("is-hidden");
     els.submitButton.textContent = "儲存修正";
     showMessage("正在修正這一場，儲存後會更新原紀錄。", false);
-    els.form.scrollIntoView({ behavior: "smooth", block: "start" });
+    els.form.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
 
   function resetForNextMatch() {
@@ -157,7 +157,7 @@
     const ballotWarning = sameMatchCount > 3 ? `提醒：這個盃賽第 ${current.matchNumber} 場已有 ${sameMatchCount} 張裁單；系統仍已保留本張資料。` : "";
     showMessage(ballotWarning || (continueEntry ? "這一張已暫存，所有欄位都已保留，可以直接調整下一張。" : "輸入完成，平均分數已更新。"), false);
     if (continueEntry) resetForNextMatch();
-    else document.querySelector("#recordSummaryTitle")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    else document.querySelector("#recordSummaryTitle")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
 
   function average(key) {

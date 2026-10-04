@@ -2,8 +2,10 @@
 import csv
 import hashlib
 import json
+import math
 import os
 import re
+import sys
 import zipfile
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,6 +33,8 @@ OPTIONAL_COLUMNS = {"正方登場選手", "反方登場選手"}
 SCHOOL_ENDINGS = ("高中", "高工", "高商", "高職", "中學", "國中", "國小", "女中", "女高", "一中", "二中", "壢中", "附中", "實中", "護專", "五專", "國中部")
 KNOWN_SCHOOL_SHORT_NAMES = {"市立大同", "市立復興", "市立東山", "新北三民", "桃園陽明", "私立東山", "高市三民", "高市中正"}
 WARNINGS = []
+VALID_DATA_TYPES = {"公開戰績", "公開榮譽", "辯題"}
+SIDE_WINNERS = {"正方勝", "反方勝"}
 
 
 def warn(message):
@@ -48,6 +52,8 @@ def number(value):
         return ""
     try:
         parsed = float(value)
+        if not math.isfinite(parsed):
+            return ""
         return int(parsed) if parsed.is_integer() else parsed
     except ValueError:
         return ""
@@ -56,8 +62,45 @@ def number(value):
 def normalize_date(value):
     value = clean(value)
     if re.fullmatch(r"\d+(?:\.0+)?", value) and float(value) > 20000:
-        return (datetime(1899, 12, 30) + timedelta(days=float(value))).strftime("%Y-%m-%d")
+        try:
+            return (datetime(1899, 12, 30) + timedelta(days=float(value))).strftime("%Y-%m-%d")
+        except (OverflowError, ValueError):
+            return value
     return value
+
+
+def checked_date(value, source_name, line_number, field_name):
+    raw = clean(value)
+    if not raw:
+        return ""
+    normalized = normalize_date(raw)
+    if re.fullmatch(r"\d{4}", normalized):
+        return normalized
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", normalized):
+        raise SystemExit(
+            f"資料錯誤：{source_name} 第 {line_number} 列「{field_name}」日期格式錯誤：{raw}；請使用 YYYY 或 YYYY-MM-DD。"
+        )
+    try:
+        datetime.strptime(normalized, "%Y-%m-%d")
+    except ValueError as error:
+        raise SystemExit(
+            f"資料錯誤：{source_name} 第 {line_number} 列「{field_name}」日期無法辨認：{raw}；請使用 YYYY 或 YYYY-MM-DD。"
+        ) from error
+    return normalized
+
+
+def checked_number(value, source_name, line_number, field_name, allow_empty=True, nonnegative=False):
+    raw = clean(value)
+    if not raw:
+        if allow_empty:
+            return ""
+        raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列缺少「{field_name}」。")
+    parsed = number(raw)
+    if parsed == "":
+        raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列「{field_name}」不是有效數字：{raw}。")
+    if nonnegative and parsed < 0:
+        raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列「{field_name}」不可為負數：{raw}。")
+    return parsed
 
 
 def normalize_honor_type(value, team):
@@ -100,24 +143,32 @@ def parse_rows(rows, source_name, default_competition=""):
     for line_number, row in enumerate(rows, start=2):
         data_type = clean(row.get("資料類型"))
         competition = clean(row.get("盃賽")) or default_competition
-        topics.extend(topic_entries(competition, row.get("辯題"), row.get("辯題解釋")))
-        if not data_type and not competition:
+        if not data_type:
+            if any(clean(value) for value in row.values()):
+                raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列有內容但缺少「資料類型」。")
             continue
+        if data_type not in VALID_DATA_TYPES:
+            raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列「資料類型」不在支援範圍：{data_type}。")
+        topics.extend(topic_entries(competition, row.get("辯題"), row.get("辯題解釋")))
         if "戰績" in data_type:
             affirmative = clean(row.get("正方學校"))
             negative = clean(row.get("反方學校"))
             if not competition or not affirmative or not negative:
                 warn(f"略過 {source_name} 第 {line_number} 列：戰績缺少盃賽或隊伍名稱")
                 continue
+            affirmative_score = checked_number(row.get("正方比分"), source_name, line_number, "正方比分", nonnegative=True)
+            negative_score = checked_number(row.get("反方比分"), source_name, line_number, "反方比分", nonnegative=True)
+            if bool(affirmative_score != "") != bool(negative_score != ""):
+                raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列只填了一方比分；請補齊另一方或清空兩邊比分。")
             record = {
                 "competitionName": competition,
-                "matchDate": normalize_date(row.get("日期")),
-                "period": number(row.get("時段")),
-                "venue": number(row.get("會場")),
+                "matchDate": checked_date(row.get("日期"), source_name, line_number, "日期"),
+                "period": checked_number(row.get("時段"), source_name, line_number, "時段", nonnegative=True),
+                "venue": checked_number(row.get("會場"), source_name, line_number, "會場", nonnegative=True),
                 "teams": {"affirmative": affirmative, "negative": negative},
                 "scores": {
-                    "affirmative": number(row.get("正方比分")) if clean(row.get("正方比分")) else None,
-                    "negative": number(row.get("反方比分")) if clean(row.get("反方比分")) else None,
+                    "affirmative": affirmative_score if affirmative_score != "" else None,
+                    "negative": negative_score if negative_score != "" else None,
                 },
                 "winner": clean(row.get("勝方")),
                 "note": clean(row.get("備註")),
@@ -132,6 +183,8 @@ def parse_rows(rows, source_name, default_competition=""):
                 record["groupName"] = group_name
             if inference_note:
                 record["inferenceNote"] = inference_note
+            record["_source"] = source_name
+            record["_row"] = line_number
             records.append(record)
         elif "榮譽" in data_type:
             honor_name = clean(row.get("榮譽名稱"))
@@ -140,9 +193,10 @@ def parse_rows(rows, source_name, default_competition=""):
                 warn(f"略過 {source_name} 第 {line_number} 列：榮譽缺少盃賽、名稱或獲獎者")
                 continue
             team = clean(row.get("所屬學校"))
+            honor_period = checked_number(row.get("時段"), source_name, line_number, "時段", nonnegative=True)
             honor = {
                 "competitionName": competition,
-                "matchDate": normalize_date(row.get("日期")),
+                "matchDate": checked_date(row.get("日期"), source_name, line_number, "日期"),
                 "honorName": honor_name,
                 "recipient": recipient,
                 "team": team,
@@ -152,9 +206,8 @@ def parse_rows(rows, source_name, default_competition=""):
             honor_level = clean(row.get("榮譽層級"))
             if honor_level:
                 honor["honorLevel"] = honor_level
-            period = number(row.get("時段"))
-            if period:
-                honor["period"] = period
+            if honor_period != "":
+                honor["period"] = honor_period
             honors.append(honor)
     return records, honors, topics
 
@@ -365,6 +418,87 @@ def deduplicate(items):
     return list(merged.values())
 
 
+def normalized_entity_name(value):
+    return re.sub(r"\s+", "", clean(value)).lower()
+
+
+def validate_records(records, registry_entries):
+    alias_lookup = {}
+    for entry in registry_entries:
+        canonical = normalized_entity_name(entry["name"])
+        alias_lookup[canonical] = canonical
+        for alias in entry.get("aliases", "").split("|"):
+            if normalized_entity_name(alias):
+                alias_lookup[normalized_entity_name(alias)] = canonical
+
+    for record in records:
+        source = record.get("_source", "資料來源")
+        row = record.get("_row", "?")
+        location = f"{source} 第 {row} 列"
+        teams = record["teams"]
+        team_names = {side: normalized_entity_name(name) for side, name in teams.items()}
+        team_entities = {
+            side: alias_lookup.get(name, name)
+            for side, name in team_names.items()
+        }
+        winner = clean(record.get("winner"))
+        winner_name = normalized_entity_name(winner)
+        winner_side = None
+
+        if winner in SIDE_WINNERS:
+            winner_side = "affirmative" if winner == "正方勝" else "negative"
+        elif winner:
+            if winner_name == team_names["affirmative"]:
+                winner_side = "affirmative"
+            elif winner_name == team_names["negative"]:
+                winner_side = "negative"
+            else:
+                winner_entity = alias_lookup.get(winner_name, winner_name)
+                matching_sides = [side for side, name in team_entities.items() if name == winner_entity]
+                if not matching_sides:
+                    raise SystemExit(
+                        f"資料錯誤：{location} 的勝方「{winner}」不是正方隊伍、反方隊伍或正／反方勝標記。"
+                    )
+                if len(matching_sides) == 1:
+                    winner_side = matching_sides[0]
+
+        scores = record["scores"]
+        affirmative_score = scores["affirmative"]
+        negative_score = scores["negative"]
+        if affirmative_score is None or negative_score is None:
+            continue
+
+        score_side = None
+        if affirmative_score > negative_score:
+            score_side = "affirmative"
+        elif negative_score > affirmative_score:
+            score_side = "negative"
+
+        if winner_side and score_side and winner_side != score_side:
+            warn(f"比分核對提醒：{location} 的勝方與比分高低不一致，請核對公告或備註。")
+        elif not winner and score_side:
+            warn(f"比分核對提醒：{location} 比分可分出高低，但勝方留白；請確認公告是否未列勝方。")
+
+
+def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
+    if not path.exists():
+        return
+    seen = set()
+    with path.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        for line_number, row in enumerate(reader, start=2):
+            event_name = clean(row.get("盃賽"))
+            if not event_name:
+                continue
+            if event_name in seen:
+                raise SystemExit(f"資料錯誤：{path.name} 第 {line_number} 列重複登錄賽事「{event_name}」。")
+            seen.add(event_name)
+            start = checked_date(row.get("開始日期"), path.name, line_number, "開始日期")
+            end = checked_date(row.get("結束日期"), path.name, line_number, "結束日期")
+            if start and end and len(start) == 10 and len(end) == 10 and end < start:
+                raise SystemExit(f"資料錯誤：{path.name} 第 {line_number} 列結束日期早於開始日期：{event_name}。")
+
+
 def entity_base_name(name):
     name = clean(name)
     name = re.sub(r"\s+(?:正|反)$", "", name)
@@ -469,7 +603,7 @@ def write_registry(entries):
         writer.writerows(entries)
 
 
-def build_entities(records, honors):
+def build_entities(records, honors, registry_entries=None):
     raw_names = set()
     for record in records:
         raw_names.update(record["teams"].values())
@@ -479,7 +613,7 @@ def build_entities(records, honors):
         elif honor["honorType"] == "team":
             raw_names.add(honor["recipient"])
 
-    entries = read_registry()
+    entries = [dict(entry) for entry in registry_entries] if registry_entries is not None else read_registry()
     alias_lookup = {entry["name"]: entry for entry in entries}
     for entry in entries:
         for alias in entry["aliases"].split("|"):
@@ -686,7 +820,8 @@ def write_calendar_feed():
     output_path.write_bytes(("\r\n".join(fold_line(line) for line in lines) + "\r\n").encode("utf-8"))
 
 
-def build():
+def build(check_only=False, fail_on_warnings=False):
+    WARNINGS.clear()
     paths = source_files()
     if not paths:
         raise SystemExit("找不到資料檔：請在 data 資料夾放入 public-data 開頭的 .xlsx 或 .csv")
@@ -698,12 +833,16 @@ def build():
         honors.extend(source_honors)
         topics.extend(source_topics)
         sources.append(source_name)
+    validate_event_metadata_dates()
+    registry_entries = read_registry()
+    validate_records(records, registry_entries)
+    for record in records:
+        record.pop("_source", None)
+        record.pop("_row", None)
     records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
     validate_best_debater_categories(records, honors)
-    entities, lookup = build_entities(records, honors)
-    attendance = attach_entities(records, honors, lookup)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
     event_rosters = load_event_rosters()
@@ -720,6 +859,22 @@ def build():
             missing = sorted(match_teams - roster_teams)
             additional = sorted(roster_teams - match_teams)
             warn(f"名單核對提醒：{competition} 公布名單與已收錄賽事隊伍不同；未列於名單：{missing}；名單另列：{additional}")
+
+    if check_only:
+        events = event_names(records, honors, topics)
+        print(f"預檢完成：{len(events)} 個賽事、{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(topics)} 筆辯題。")
+        if WARNINGS:
+            print(f"資料檢查提醒：{len(WARNINGS)} 則")
+            for message in WARNINGS:
+                print(f"- {message}")
+            if fail_on_warnings:
+                raise SystemExit("預檢未通過：請先處理所有提醒，再執行正式建置。")
+        else:
+            print("資料檢查提醒：沒有")
+        return
+
+    entities, lookup = build_entities(records, honors, registry_entries)
+    attendance = attach_entities(records, honors, lookup)
     for competition in event_names(records, honors, topics):
         metadata = event_metadata.setdefault(competition, {})
         participating_teams = {
@@ -762,4 +917,12 @@ def build():
 
 
 if __name__ == "__main__":
-    build()
+    import argparse
+
+    parser = argparse.ArgumentParser(description="建立網站資料，或只檢查來源資料。")
+    parser.add_argument("--check", action="store_true", help="只讀取並檢查來源，不寫入生成檔。")
+    parser.add_argument("--fail-on-warnings", action="store_true", help="搭配 --check 使用；有任何提醒時以失敗狀態結束。")
+    arguments = parser.parse_args()
+    if arguments.fail_on_warnings and not arguments.check:
+        parser.error("--fail-on-warnings 必須與 --check 一起使用。")
+    build(check_only=arguments.check, fail_on_warnings=arguments.fail_on_warnings)

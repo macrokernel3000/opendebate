@@ -1,6 +1,7 @@
 (function () {
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
+    const preferredScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
     const calendarHelp = document.querySelector("#androidCalendarHelp");
     document.querySelector("[data-calendar-subscribe]")?.addEventListener("click", (event) => {
       if (/Android/i.test(navigator.userAgent) && calendarHelp?.showModal) {
@@ -51,7 +52,7 @@
       const card = event.target.closest("[data-topic-event]");
       if (!card) return;
       openCompetition(card.dataset.topicEvent);
-      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" }));
     }
     els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
     const mobileMenuToggle = document.querySelector("#mobileMenuToggle");
@@ -160,9 +161,21 @@
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
       openCompetition(card.dataset.eventName);
-      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: "smooth", block: "start" }));
+      if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" }));
     });
     els.overviewTabs.forEach((tab) => tab.addEventListener("click", () => showOverviewTab(tab.dataset.overviewTab)));
+    document.querySelector(".overview-tabs")?.addEventListener("keydown", (event) => {
+      const current = event.target.closest("[data-overview-tab]");
+      if (!current || !["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+      const tabs = [...els.overviewTabs];
+      const index = tabs.indexOf(current);
+      const nextIndex = event.key === "Home" ? 0 : event.key === "End" ? tabs.length - 1
+        : (index + (event.key === "ArrowRight" ? 1 : -1) + tabs.length) % tabs.length;
+      event.preventDefault();
+      const next = tabs[nextIndex];
+      showOverviewTab(next.dataset.overviewTab);
+      next.focus();
+    });
     els.overviewTeamFilter.addEventListener("input", renderOverviewTeams);
     els.overviewTeamSortBy.addEventListener("change", renderOverviewTeams);
     els.overviewTeamSortDirection.addEventListener("change", renderOverviewTeams);
