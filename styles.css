@@ -53,10 +53,28 @@ button { color: inherit; }
 .timeline-band { margin-top: 0; padding: 64px 0 72px; overflow: hidden; background: var(--green-dark); color: white; }
 .timeline-band .kicker { color: var(--yellow); }
 .timeline-band .section-note { color: #d6e5de; }
-.calendar-link-section { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 46px 20px 48px; }
-.calendar-subscribe-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; border: 1px solid var(--green); border-radius: 999px; padding: 0 20px; background: var(--green); color: #fff; font-size: 14px; font-weight: 850; text-decoration: none; white-space: nowrap; }
+.upcoming-events-section { padding-block: 34px 44px; }
+.upcoming-section-heading { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-bottom: 18px; }
+.upcoming-section-heading > .section-heading { margin: 0; }
+.upcoming-section-heading .section-heading h2 { font-size: clamp(24px, 3vw, 34px); }
+.calendar-link-section { display: flex; align-items: center; justify-content: flex-end; gap: 12px; }
+.calendar-subscribe-button { display: inline-flex; min-height: 40px; align-items: center; justify-content: center; border: 1px solid var(--green); border-radius: 999px; padding: 0 16px; background: var(--green); color: #fff; font-size: 13px; font-weight: 850; text-decoration: none; white-space: nowrap; }
 .calendar-subscribe-button:hover, .calendar-subscribe-button:focus-visible { outline: 2px solid var(--green-dark); outline-offset: 2px; background: var(--green-dark); }
-.calendar-platform-note { display: grid; gap: 3px; max-width: 360px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
+.calendar-platform-note { display: grid; gap: 3px; max-width: 310px; margin: 0; color: var(--muted); font-size: 11px; line-height: 1.4; }
+.upcoming-events-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 10px; }
+.mobile-upcoming-card { display: flex; min-width: 0; min-height: 142px; flex-direction: column; align-items: flex-start; gap: 4px; border: 1px solid #e5d07e; border-radius: 13px; padding: 11px 12px; background: #fff6d5; color: #28352b; text-align: left; cursor: pointer; }
+.mobile-upcoming-card:nth-child(even) { background: #ffefb7; border-color: #ddc25e; }
+.mobile-upcoming-card:hover, .mobile-upcoming-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.mobile-upcoming-date { color: var(--green-dark); font-size: 12px; font-weight: 900; }
+.mobile-upcoming-card h3 { display: -webkit-box; margin: 1px 0 2px; overflow: hidden; font-size: 14px; line-height: 1.3; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.mobile-upcoming-meta { display: -webkit-box; width: 100%; overflow: hidden; color: #645c40; font-size: 11px; line-height: 1.25; -webkit-box-orient: vertical; -webkit-line-clamp: 1; }
+.mobile-upcoming-meta b { margin-right: 4px; color: var(--green-dark); }
+.upcoming-key-dates { margin: 18px 0 28px; border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 16px 18px; background: #fffaf0; }
+.upcoming-key-dates h3 { margin: 0 0 10px; font-size: 18px; }
+.upcoming-key-dates ul { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.upcoming-key-dates li { display: grid; grid-template-columns: minmax(118px, auto) 1fr; gap: 12px; align-items: start; font-size: 13px; }
+.upcoming-key-dates time { color: var(--green-dark); font-weight: 850; }
+.upcoming-key-dates li p { margin: 3px 0 0; color: var(--muted); }
 .calendar-help-dialog { width: min(460px, calc(100vw - 32px)); border: 0; border-radius: 18px; padding: 0; color: var(--ink); box-shadow: 0 18px 70px #10251e55; }
 .calendar-help-dialog::backdrop { background: #10251e88; }
 .calendar-help-card { display: grid; gap: 12px; padding: 22px; }
@@ -639,16 +657,21 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 
   /* Mobile home is a separate presentation; desktop content and order stay intact. */
   #homeView:not(.is-hidden) { display: flex; flex-direction: column; gap: 0; }
-  #homeView > .calendar-link-section { order: 2; }
-  #homeView > .calendar-link-section { gap: 10px; padding: 42px 14px 46px; }
-  .calendar-platform-note { max-width: 158px; font-size: 10px; line-height: 1.4; }
+  #homeView > .upcoming-events-section { order: 2; width: 100%; padding: 20px 14px 22px; }
+  .upcoming-section-heading { align-items: flex-start; flex-direction: column; gap: 9px; margin-bottom: 12px; }
+  .upcoming-section-heading .section-heading { margin: 0; }
+  .upcoming-section-heading .section-heading h2 { font-size: 21px; }
+  .upcoming-section-heading .kicker { margin-bottom: 3px; }
+  .calendar-link-section { width: 100%; justify-content: flex-start; gap: 9px; }
+  .calendar-subscribe-button { min-height: 36px; padding: 0 12px; font-size: 11px; }
+  .calendar-platform-note { max-width: 210px; font-size: 9px; line-height: 1.35; }
   #homeView.is-hidden { display: none; }
   #homeView > .mobile-home { order: 1; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 11px; padding-top: 12px; padding-bottom: 8px; }
   #homeView > .mobile-home > .mobile-home-search { display: none; }
   #homeView > .mobile-home > * { width: 100%; min-width: 0; }
   #homeView > .hero, #homeView > .stats-band,
   #homeView > .timeline-band, #homeView > .collected-events { display: none; }
-  #homeView > .leaderboard-band { order: 2; width: 100%; padding: 24px 0 calc(34px + env(safe-area-inset-bottom)); }
+  #homeView > .leaderboard-band { order: 3; width: 100%; padding: 24px 0 calc(34px + env(safe-area-inset-bottom)); }
   #homeView > .leaderboard-band .section-heading { display: none; }
   .mobile-home-section .section-heading { align-items: baseline; margin-bottom: 10px; }
   .mobile-home-section .section-heading { margin-bottom: 7px; }
@@ -656,7 +679,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #mobileRecentTitle { max-width: 74%; font-size: 15px !important; line-height: 1.35 !important; }
   #mobileRecentTitle span { color: var(--green); font-variant-numeric: tabular-nums; }
   .mobile-home-hint { color: var(--muted); font-size: 12px; }
-  .mobile-results-strip, .mobile-upcoming-strip { display: grid; width: 100%; min-width: 0; grid-auto-flow: column; grid-auto-columns: clamp(172px, 54vw, 214px); gap: 10px; margin-right: -12px; padding: 2px 12vw 7px 0; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--green) transparent; }
+  .mobile-results-strip { display: grid; width: 100%; min-width: 0; grid-auto-flow: column; grid-auto-columns: clamp(172px, 54vw, 214px); gap: 10px; margin-right: -12px; padding: 2px 12vw 7px 0; overflow-x: auto; overscroll-behavior-inline: contain; scroll-snap-type: x mandatory; scrollbar-width: thin; scrollbar-color: var(--green) transparent; }
   .mobile-results-strip .event-card { position: relative; z-index: 0; min-height: 172px; padding: 8px 10px; overflow: visible; border: 0; border-radius: 13px; background: #176b52; color: #fff; scroll-snap-align: start; }
   .mobile-results-strip .event-card:nth-child(even) { background: #287e62; }
   .mobile-results-strip .event-card::after { display: none; }
@@ -688,13 +711,10 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .mobile-home-search strong { font-size: 14px; }
   .mobile-home-search small { color: #64572b; font-size: 12px; }
   .mobile-home-search button>b { font-size: 18px; }
-  .mobile-upcoming-strip { scrollbar-color: #c5a53a transparent; }
-  .mobile-upcoming-card { display: flex; min-width: 0; min-height: 164px; flex-direction: column; align-items: flex-start; padding: 9px 10px; border: 1px solid #e5d07e; border-radius: 13px; background: #fff6d5; color: #28352b; scroll-snap-align: start; }
-  .mobile-upcoming-card:nth-child(even) { background: #ffefb7; border-color: #ddc25e; }
-  .mobile-upcoming-date { color: #806710; font-size: 16px; font-weight: 800; }
-  .mobile-upcoming-card h3 { display: -webkit-box; margin: 5px 0 4px; overflow: hidden; font-size: 13px; line-height: 1.35; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-  .mobile-upcoming-card p { margin: 0 0 3px; color: #645c40; font-size: 12px; }
-  .mobile-upcoming-card small { display: -webkit-box; margin-top: auto; overflow: hidden; color: #5e562f; font-size: 12px; line-height: 1.3; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+  #mobileUpcomingEvents.upcoming-events-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .mobile-upcoming-card { min-height: 120px; gap: 3px; padding: 8px; border-radius: 11px; }
+  .mobile-upcoming-card h3 { font-size: 12px; }
+  .mobile-upcoming-meta { font-size: 9px; }
   .mobile-rankings-title { display: block; width: min(100% - 24px, 1180px); margin: 0 auto 10px; }
   #homeView > .leaderboard-band .page-shell { width: 100%; }
   #homeView > .leaderboard-band .leaderboard-scroll { width: calc(100% - 24px); margin: 0 auto; grid-template-columns: minmax(0, 1fr); grid-auto-flow: row; grid-auto-columns: auto; gap: 12px; padding: 0 0 8px; overflow: visible; scroll-snap-type: none; }

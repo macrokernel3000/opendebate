@@ -234,12 +234,12 @@ function renderMobileUpcomingEvents() {
     return start === end ? start : `${start}–${end}`;
   };
   els.mobileUpcomingEvents.innerHTML = upcoming.map((event) => `
-    <article class="mobile-upcoming-card">
+    <button type="button" class="mobile-upcoming-card" data-event-name="${escapeHtml(event.name)}" aria-label="開啟${escapeHtml(event.name)}賽事頁面">
       <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event))}</span>
       <h3>${escapeHtml(event.name)}</h3>
-      <p>${escapeHtml(event.location || "地點未提供")}</p>
-      <small><b>辯題：</b>${escapeHtml(event.topic || "未提供")}</small>
-    </article>`).join("");
+      <span class="mobile-upcoming-meta"><b>主辦</b>${escapeHtml(event.organizer || "未提供")}</span>
+      <span class="mobile-upcoming-meta"><b>地點</b>${escapeHtml(event.location || "未提供")}</span>
+    </button>`).join("");
 }
 
 function honorSubject(honor) {
@@ -749,6 +749,8 @@ function renderUpcomingEvent(event, target = els.eventPageDetail) {
     event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : "",
     event.location ? `<div><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
   ].filter(Boolean).join("");
+  const keyDates = (event.keyDates || []).filter((item) => item && item.label && (item.date || item.note)).map((item) => `
+    <li>${item.date ? `<time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}${item.time ? ` ${escapeHtml(item.time)}` : ""}</time>` : ""}<div><strong>${escapeHtml(item.label)}</strong>${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}</div></li>`).join("");
   target.innerHTML = `
     <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
     <div class="event-summary">
@@ -757,6 +759,7 @@ function renderUpcomingEvent(event, target = els.eventPageDetail) {
     </div>
     ${metadata ? `<div class="event-metadata">${metadata}</div>` : ""}
     ${event.topic ? `<section class="event-topics"><h3>比賽辯題</h3><p>${escapeHtml(event.topic)}</p>${event.topicNote ? `<p>${escapeHtml(event.topicNote)}</p>` : ""}</section>` : ""}
+    ${keyDates ? `<section class="upcoming-key-dates"><h3>重要時程</h3><ul>${keyDates}</ul></section>` : ""}
     <p class="search-empty">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
 }
 

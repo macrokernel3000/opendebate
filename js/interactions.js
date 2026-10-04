@@ -87,6 +87,7 @@
     };
     els.recentEvents.addEventListener("click", openRecentEvent);
     els.mobileRecentEvents?.addEventListener("click", openRecentEvent);
+    els.mobileUpcomingEvents?.addEventListener("click", openRecentEvent);
 
     let suppressTimelineClick = false;
     let timelineDrag = null;

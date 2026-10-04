@@ -662,6 +662,11 @@ def write_calendar_feed():
             f"主辦單位：{event.get('organizer', '')}" if event.get("organizer") else "",
             f"辯題：{event.get('topic', '')}" if event.get("topic") else "",
             f"題目補充：{event.get('topicNote', '')}" if event.get("topicNote") else "",
+            *(
+                f"{item.get('label', '重要時程')}：{item.get('date', '')}{' ' + item['time'] if item.get('time') else ''}{'（' + item['note'] + '）' if item.get('note') else ''}"
+                for item in event.get('keyDates', [])
+                if item.get('label') and (item.get('date') or item.get('note'))
+            ),
         ]))
         detail_url = f"https://macrokernel3000.github.io/opendebate/#event/{quote(event['name'])}"
         lines.extend([

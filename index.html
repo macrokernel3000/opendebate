@@ -59,7 +59,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005003000" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005020000" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -96,10 +96,6 @@
         <section class="mobile-home-search" aria-label="戰績搜尋入口">
           <button type="button" data-go-search><span aria-hidden="true">⌕</span><span><strong>戰績搜尋</strong><small>選手・學校・隊伍・辯題</small></span><b aria-hidden="true">→</b></button>
         </section>
-        <section class="mobile-home-section mobile-home-upcoming" aria-labelledby="mobileUpcomingTitle">
-          <div class="section-heading"><h2 id="mobileUpcomingTitle">未來賽事</h2><span class="mobile-home-hint">公告資訊</span></div>
-          <div id="mobileUpcomingEvents" class="mobile-upcoming-strip" aria-label="未來賽事，可左右滑動"></div>
-        </section>
       </div>
       <section class="timeline-band" aria-labelledby="timelineTitle">
         <div class="page-shell">
@@ -119,6 +115,17 @@
           <button class="text-link" type="button" data-go-events>進入賽事資料庫 →</button>
         </div>
         <div id="recentEvents" class="event-grid"></div>
+      </section>
+
+      <section class="page-shell upcoming-events-section" aria-labelledby="upcomingEventsTitle">
+        <div class="upcoming-section-heading">
+          <div class="section-heading"><div><p class="kicker">即將舉行</p><h2 id="upcomingEventsTitle">未來賽事</h2></div></div>
+          <div class="calendar-link-section">
+            <a class="calendar-subscribe-button" data-calendar-subscribe href="webcal://macrokernel3000.github.io/opendebate/calendar.ics">行事曆｜測試版</a>
+            <p class="calendar-platform-note"><span>iOS：點擊即可訂閱</span><span>Android：依提示在 Google 日曆網頁版新增</span></p>
+          </div>
+        </div>
+        <div id="mobileUpcomingEvents" class="upcoming-events-grid" aria-label="未來賽事"></div>
       </section>
 
       <section class="leaderboard-band" data-range="recent">
@@ -171,10 +178,6 @@
           </div>
         </div>
       </section>
-      <div class="calendar-link-section">
-        <a class="calendar-subscribe-button" data-calendar-subscribe href="webcal://macrokernel3000.github.io/opendebate/calendar.ics">行事曆｜測試版</a>
-        <p class="calendar-platform-note"><span>iOS：點擊即可訂閱</span><span>Android：Google 日曆請在電腦新增；支援 WebCal 的 App 可直接訂閱</span></p>
-      </div>
       <dialog id="androidCalendarHelp" class="calendar-help-dialog" aria-labelledby="androidCalendarHelpTitle">
         <form method="dialog" class="calendar-help-card">
           <h2 id="androidCalendarHelpTitle">Android 行事曆設定</h2>
@@ -413,9 +416,9 @@
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/site-config.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/core.js?v=20261005003000" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261005003000" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261005020000" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/team-records.js?v=20261005003000" data-versioned-asset></script>
-  <script src="app.js?v=20261005003000" data-versioned-asset></script>
+  <script src="app.js?v=20261005020000" data-versioned-asset></script>
 </body>
 </html>
