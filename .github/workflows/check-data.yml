@@ -9,6 +9,7 @@ on:
       - "data/event-metadata.csv"
       - "data/event-rosters.csv"
       - "tools/build_data.py"
+      - "tools/prepare_sheet_update.py"
       - "tests/**"
       - ".github/workflows/**"
   pull_request:
@@ -18,6 +19,7 @@ on:
       - "data/event-metadata.csv"
       - "data/event-rosters.csv"
       - "tools/build_data.py"
+      - "tools/prepare_sheet_update.py"
       - "tests/**"
       - ".github/workflows/**"
   workflow_dispatch:
