@@ -10,13 +10,16 @@
 
 網站可直接開啟 `index.html`，也可由 GitHub Pages 提供服務。載入順序不可任意交換：
 
-1. `data/public-data.js`：宣告 `window.DEBATE_PUBLIC_DATA`。
-2. `js/site-config.js`：宣告表單等站點設定。
-3. `js/core.js`：資料正規化、查找與共用工具。
-4. `js/interactions.js`：頁面切換、點擊、搜尋等互動綁定。
-5. `js/personal-records.js`：選手成績建檔、瀏覽器暫存與 CSV 匯入／匯出。
-6. `js/team-records.js`：隊伍逐張裁判單、同場裁判票彙整、勝負判定與獨立 CSV。
-7. `app.js`：建立賽事摘要並渲染所有畫面。
+1. `js/home-snapshot.js`：從此瀏覽器最多 30 日的快取還原上次成功顯示的首頁，讓最新資料載入期間先有可見內容。
+2. `data/public-data.js`：宣告最新 `window.DEBATE_PUBLIC_DATA`。
+3. `js/site-config.js`：宣告表單等站點設定。
+4. `js/core.js`：資料正規化、查找與共用工具。
+5. `js/interactions.js`：頁面切換、點擊、搜尋等互動綁定。
+6. `js/personal-records.js`：選手成績建檔、瀏覽器暫存與 CSV 匯入／匯出。
+7. `js/team-records.js`：隊伍逐張裁判單、同場裁判票彙整、勝負判定與獨立 CSV。
+8. `app.js`：建立賽事摘要並渲染所有畫面，成功後更新此瀏覽器的首頁快取。
+
+首頁快取只包含已渲染的公開首頁 HTML，不保存個人建檔資料。讀取最新資料成功後，完整首頁會直接替換快取並重存；最新資料無法載入時保留上次內容並顯示提示。首次造訪或超過 30 日沒有快取時，仍需正常載入最新資料。
 
 `index.html` 是單頁入口；`#home`、`#overview`、`#search`、`#archive`、`#reports` 是五個主要導覽畫面，不是五份獨立 HTML。主要導覽順序固定為「首頁、總覽、搜尋、建檔、回報」。舊連結 `#events` 仍會相容導向總覽的賽事分頁。賽事、單位、選手及辯題另有可直接開啟的深連結：`#event/<賽事名稱>`、`#school/<單位代碼>`、`#player/<選手姓名>`、`#topic/<辯題代碼>`，仍由同一個單頁入口渲染。學校／隊伍頁列出可點入的參賽賽事；賽事頁的隊伍、學校、公開榮譽與個人獎得主可連到對應詳情；詳情頁都有返回按鈕並支援瀏覽器上一頁。
 

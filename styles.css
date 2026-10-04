@@ -446,9 +446,9 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .history-badge { padding: 6px 8px; background: var(--soft); font-size: 11px; font-weight: 900; }
 
 .report-intro { padding-bottom: 42px; }
-.report-page { padding-bottom: 90px; }
+.report-page { display: grid; gap: 18px; align-content: start; padding-bottom: 90px; }
 .report-card { position: relative; border: 1px solid var(--line); border-top: 7px solid var(--green); padding: 26px; background: white; box-shadow: var(--shadow); }
-.report-card-single { max-width: 820px; }
+.report-form-card, .report-ai-card, .report-contact-row, .report-note { width: min(100%, 820px); }
 .report-icons { display: flex; gap: 10px; }
 .report-card .kicker { margin-top: 16px; }
 .report-card h2 { margin: 0; font-size: 25px; }
@@ -459,16 +459,16 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .report-link.is-disabled { border-color: var(--line); background: var(--soft); color: var(--muted); box-shadow: none; cursor: not-allowed; }
 .report-note { margin-top: 20px; border-left: 5px solid var(--teal); padding: 18px 20px; background: #e9f2ed; }
 .report-note p { margin: 6px 0 0; color: var(--muted); line-height: 1.75; }
-.report-ai-guide { margin: 24px 0; border: 1px solid #d9e7df; border-radius: 14px; padding: 18px; background: #f0f6f1; }
-.report-ai-guide h3 { margin: 0 0 8px; color: var(--green-dark); font-size: 18px; }
-.report-ai-guide > p { margin: 0 0 12px; color: var(--muted); line-height: 1.65; }
-.report-ai-guide pre { max-height: 260px; overflow: auto; border: 1px solid #d7e1d9; border-radius: 10px; padding: 13px; background: #fff; color: var(--ink); font-family: inherit; font-size: 12px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; user-select: text; }
+.report-ai-card { border-top-color: var(--yellow); }
+.report-ai-card > p:not(.kicker) { margin: 8px 0 12px; color: var(--muted); line-height: 1.65; }
+.report-ai-card pre { max-height: 260px; overflow: auto; border: 1px solid #d7e1d9; border-radius: 10px; padding: 13px; background: #f8faf7; color: var(--ink); font-family: inherit; font-size: 12px; line-height: 1.65; white-space: pre-wrap; overflow-wrap: anywhere; user-select: text; }
 .report-copy-button { min-height: 44px; border: 1px solid var(--green-dark); border-radius: 999px; padding: 0 18px; background: var(--green); color: white; font-weight: 850; cursor: pointer; }
 .report-copy-button:hover, .report-copy-button:focus-visible { outline: 2px solid var(--yellow); outline-offset: 2px; background: var(--green-dark); }
 .report-copy-status { display: inline-block; margin-left: 10px; color: var(--green-dark); font-size: 13px; font-weight: 750; }
-.report-email { margin: 18px 0 0; color: var(--muted); }
-.report-email a, .report-threads a { color: var(--green-dark); font-weight: 850; }
-.report-threads { margin: 8px 0 0; color: var(--muted); }
+.report-contact-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.report-contact-card { margin: 0; border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: #f6f5ef; color: var(--muted); }
+.report-contact-card a { display: block; margin-top: 5px; color: var(--green-dark); font-weight: 850; overflow-wrap: anywhere; }
+.home-snapshot-status { margin: 0 auto 8px; width: min(100% - 32px, 1180px); color: var(--muted); font-size: 12px; }
 
 .archive-intro { padding-bottom: 22px; }
 .archive-page { padding-bottom: 84px; }
@@ -855,8 +855,10 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .overview-filter input, .overview-filter select, .event-search-field input, .event-year-field select { border-radius: 14px; }
   .search-box { overflow: hidden; border: 1px solid rgba(23, 33, 29, .16); border-radius: 16px; box-shadow: 0 5px 16px rgba(8, 35, 28, .2); }
   .search-box button { border-radius: 999px; }
-  .report-card, .report-note { border-radius: 18px; }
+  .report-card, .report-note, .report-contact-card { border-radius: 18px; }
   .report-card { padding: 20px; box-shadow: 0 5px 18px rgba(23, 33, 29, .08); }
+  .report-contact-row { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .report-contact-card { padding: 14px 16px; }
   .report-icon { border-radius: 12px; }
   .report-link { border-radius: 999px; box-shadow: 0 4px 12px rgba(128, 103, 16, .16); }
   .mobile-home-section .section-heading h2 { letter-spacing: -.02em; }

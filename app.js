@@ -1119,6 +1119,7 @@ document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEven
 
 function renderAll() {
   if (!records.length && !honors.length) {
+    if (window.DebateHomeSnapshot?.showUnavailable()) return;
     document.querySelector("main").innerHTML = `
       <section class="data-error page-shell">
         <span aria-hidden="true">📂</span>
@@ -1144,7 +1145,9 @@ function renderAll() {
   const initialView = location.hash.slice(1);
   showView(initialQuery ? "search" : (/^(?:event|school|player|topic)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
+  window.DebateHomeSnapshot?.save(window.DEBATE_PUBLIC_DATA?.generatedAt);
 }
 
 events = eventSummaries();
-renderAll();
+if (window.DebateHomeSnapshot?.restored) requestAnimationFrame(() => requestAnimationFrame(renderAll));
+else renderAll();
