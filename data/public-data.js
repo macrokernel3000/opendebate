@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T16:45:39",
+  "generatedAt": "2026-10-04T16:47:59",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -37241,6 +37241,18 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "依使用者補充之賽事最終名次；非主辦單位公告。",
       "teamId": "p157",
       "id": "honor-a2c44b375f46"
+    },
+    {
+      "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
+      "matchDate": "2026-08-30",
+      "honorName": "最佳辯士",
+      "recipient": "曹鈞智",
+      "team": "壽比南山",
+      "honorType": "player",
+      "note": "依使用者補充；非主辦單位公告。",
+      "honorLevel": "全程最佳辯士",
+      "teamId": "p157",
+      "id": "honor-2de4f08f5c62"
     },
     {
       "competitionName": "2026西灣盃全國高中職辯論賽",
