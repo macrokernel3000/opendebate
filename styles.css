@@ -627,6 +627,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
 
   /* Mobile home is a separate presentation; desktop content and order stay intact. */
   #homeView:not(.is-hidden) { display: flex; flex-direction: column; gap: 0; }
+  #homeView > .calendar-link-section { order: 2; }
   #homeView.is-hidden { display: none; }
   #homeView > .mobile-home { order: 1; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 11px; padding-top: 12px; padding-bottom: 8px; }
   #homeView > .mobile-home > .mobile-home-search { display: none; }
