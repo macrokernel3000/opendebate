@@ -20,6 +20,26 @@
         status.textContent = "已選取網址，請長按複製。";
       }
     });
+    document.querySelector("#copyEventIntakePrompt")?.addEventListener("click", async () => {
+      const prompt = document.querySelector("#eventIntakePrompt")?.textContent.trim() || "";
+      const status = document.querySelector("#reportPromptCopyStatus");
+      try {
+        if (!navigator.clipboard?.writeText) throw new Error("Clipboard API unavailable");
+        await navigator.clipboard.writeText(prompt);
+        status.textContent = "整理指令已複製，可以貼給 AI。";
+      } catch {
+        const field = document.createElement("textarea");
+        field.value = prompt;
+        field.setAttribute("readonly", "");
+        field.style.position = "fixed";
+        field.style.opacity = "0";
+        document.body.append(field);
+        field.select();
+        const copied = document.execCommand("copy");
+        field.remove();
+        status.textContent = copied ? "整理指令已複製，可以貼給 AI。" : "無法自動複製，請長按上方指令選取複製。";
+      }
+    });
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
       const menu = document.querySelector("#mobileQuickMenu");

@@ -60,7 +60,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005030000" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005040000" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -402,7 +402,27 @@
           <h2>公開資料回報</h2>
           <p>同一份表單可回報缺漏或需要修正的賽事資料，送出時再選擇回報項目。</p>
           <ul><li>賽事戰績與積分</li><li>選手上場紀錄</li><li>盃賽辯題與相關說明</li></ul>
+          <section class="report-ai-guide" aria-labelledby="reportAiTitle">
+            <h3 id="reportAiTitle">請 AI 協助整理賽事資料</h3>
+            <p>如可協助整理積分，請先將賽事比分複製貼給 AI，再將下方整理指令一併複製傳給 AI。完成後，請把整理結果回報給我們。</p>
+            <pre id="eventIntakePrompt">請根據我提供的賽事簡章、公告、比分或照片，整理一份繁體中文「賽事登錄資料」Markdown，交由網站管理者彙整。只整理與引用來源，不要自行發布或修改網站。
+
+請依序整理：
+一、賽事基本資料：正式賽名、年度、日期／時段、地點、主辦／指導／協辦／執行單位、賽事狀態。
+二、辯題與題解：正式題目、題目狀態、題解全文或連結，以及各自來源；不同賽事的題解分開。
+三、重要時程與簡章資訊：報名、第一次領隊會議、保險／保證金、選手名單期限、資格、隊數上限、賽制與獎項辦法。
+四、逐場賽程／比分表：日期、時段／階段、會場、分組、正方隊伍、反方隊伍、正方比分、反方比分、來源公布的勝方、備註、來源。
+五、榮譽：獎項原名、團體／個人／其他分類、名次／獎級、得獎者、所屬隊伍、來源。只列正式頒發或公告的獎項；晉級不算榮譽。
+六、選手名單（如有）：隊伍、選手、領隊、名單類型與來源；名單不等於實際上場紀錄。
+七、備註與其他內容：版本差異、更正、棄賽、裁決、晉級依據及待確認事項。
+八、來源清單：名稱、來源類型、網址／頁碼／日期及採用內容。
+
+請保留公告中的隊名、姓名、比分和原獎名；同校 A／B 或一／二隊在賽果中分開記錄。每項資料標示來源；來源明載與推論分開，推論附依據。未知或無法辨識的內容留白並列為待確認，不要猜測。日期使用 YYYY-MM-DD；沒有公開比分的場次只列賽程，不補猜結果。輸出可供主維護者核對的 Markdown 草稿，並標明尚待確認事項。</pre>
+            <button type="button" id="copyEventIntakePrompt" class="report-copy-button">複製整理指令</button>
+            <span id="reportPromptCopyStatus" class="report-copy-status" aria-live="polite"></span>
+          </section>
           <a id="reportFormLink" class="report-link" href="#" target="_blank" rel="noopener">開啟資料回報表單</a>
+          <p class="report-email">或寄送至 Email：<a href="mailto:macrokernel3000@gmail.com">macrokernel3000&amp;gmail.com</a></p>
         </article>
         <aside class="report-note"><strong>為什麼使用 Google 表單？</strong><p>本站是靜態網站，Google 表單能處理手機填寫、附件上傳與回覆彙整，也不會把管理權限或個人資料放進網站程式。表單連結可隨時替換。</p></aside>
       </div>
@@ -417,7 +437,7 @@
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/site-config.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/core.js?v=20261005003000" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261005020000" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261005040000" data-versioned-asset></script>
   <script src="js/personal-records.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/team-records.js?v=20261005003000" data-versioned-asset></script>
   <script src="app.js?v=20261005030000" data-versioned-asset></script>
