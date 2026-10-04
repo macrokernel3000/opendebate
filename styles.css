@@ -53,9 +53,10 @@ button { color: inherit; }
 .timeline-band { margin-top: 0; padding: 64px 0 72px; overflow: hidden; background: var(--green-dark); color: white; }
 .timeline-band .kicker { color: var(--yellow); }
 .timeline-band .section-note { color: #d6e5de; }
-.calendar-link-section { display: flex; justify-content: center; padding: 24px 20px 36px; }
+.calendar-link-section { display: flex; align-items: center; justify-content: center; gap: 18px; padding: 46px 20px 48px; }
 .calendar-subscribe-button { display: inline-flex; min-height: 44px; align-items: center; justify-content: center; border: 1px solid var(--green); border-radius: 999px; padding: 0 20px; background: var(--green); color: #fff; font-size: 14px; font-weight: 850; text-decoration: none; white-space: nowrap; }
 .calendar-subscribe-button:hover, .calendar-subscribe-button:focus-visible { outline: 2px solid var(--green-dark); outline-offset: 2px; background: var(--green-dark); }
+.calendar-platform-note { display: grid; gap: 3px; max-width: 360px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.45; }
 .event-timeline { position: relative; width: 100%; min-width: 0; display: grid; grid-auto-flow: column; grid-auto-columns: 168px; gap: 0; padding: 64px 24px 32px; overflow-x: auto; overflow-y: hidden; cursor: grab; user-select: none; scrollbar-width: auto; scrollbar-color: var(--coral) rgba(255, 255, 255, .16); overscroll-behavior-inline: contain; }
 .event-timeline::-webkit-scrollbar { height: 12px; }
 .event-timeline::-webkit-scrollbar-track { background: rgba(255, 255, 255, .16); }
@@ -628,6 +629,8 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   /* Mobile home is a separate presentation; desktop content and order stay intact. */
   #homeView:not(.is-hidden) { display: flex; flex-direction: column; gap: 0; }
   #homeView > .calendar-link-section { order: 2; }
+  #homeView > .calendar-link-section { gap: 10px; padding: 42px 14px 46px; }
+  .calendar-platform-note { max-width: 145px; font-size: 10px; line-height: 1.4; }
   #homeView.is-hidden { display: none; }
   #homeView > .mobile-home { order: 1; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 11px; padding-top: 12px; padding-bottom: 8px; }
   #homeView > .mobile-home > .mobile-home-search { display: none; }
