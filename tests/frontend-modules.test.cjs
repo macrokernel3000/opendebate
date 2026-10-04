@@ -425,6 +425,13 @@ test("record storage reports write failures and honors native form validation", 
   assert.equal(window.DebateRecordStorage.isValid({}), true);
 });
 
+test("personal record save feedback does not claim empty scores updated averages", () => {
+  const source = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  assert.match(source, /裁單已儲存；已填寫的分數會納入平均。/);
+  assert.match(source, /這一張已暫存；已填寫的分數會納入平均/);
+  assert.doesNotMatch(source, /平均分數已更新/);
+});
+
 test("router closes transient overlays before changing views", () => {
   let closeCount = 0;
   const noopClassList = { remove() {}, toggle() {}, contains: () => false };

@@ -157,7 +157,7 @@
     const current = draft;
     const sameMatchCount = current?.matchNumber === "" ? 1 : records.filter((record) => record.competition === current.competition && String(record.matchNumber) === String(current.matchNumber)).length;
     const ballotWarning = sameMatchCount > 3 ? `提醒：這個盃賽第 ${current.matchNumber} 場已有 ${sameMatchCount} 張裁單；系統仍已保留本張資料。` : "";
-    showMessage(ballotWarning || (continueEntry ? "這一張已暫存，所有欄位都已保留，可以直接調整下一張。" : "輸入完成，平均分數已更新。"), false);
+    showMessage(ballotWarning || (continueEntry ? "這一張已暫存；已填寫的分數會納入平均，可以繼續輸入下一張。" : "裁單已儲存；已填寫的分數會納入平均。"), false);
     if (continueEntry) resetForNextMatch();
     else document.querySelector("#recordSummaryTitle")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" });
   }
