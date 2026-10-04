@@ -335,3 +335,67 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   pages.sortLeaderboard("gold");
   pages.sortLeaderboard("invalid-key");
 });
+
+test("search pages cover empty, alias, player, topic and unmatched search states", () => {
+  const school = { code: "s1", name: "測試高中<甲>", type: "s", aliases: "測試別名|測試 A 隊" };
+  const rival = { code: "s2", name: "對手高中", type: "s", aliases: "" };
+  const searchStore = {
+    entities: [school, rival],
+    entityById: new Map([[school.code, school], [rival.code, rival]]),
+  };
+  const searchRecord = {
+    ...record,
+    teams: { affirmative: school.name, negative: rival.name },
+    teamIds: { affirmative: school.code, negative: rival.code },
+  };
+  const searchHonors = [
+    { ...fullCourseHonor, team: school.name, teamId: school.code },
+  ];
+  const searchEvent = { ...events[0], records: [searchRecord], honors: searchHonors };
+  const els = { searchMeta: { textContent: "" }, searchResults: { innerHTML: "" } };
+  const rosters = { "測試盃": [{ team: school.name, leaders: ["領隊"], players: ["隊員甲"] }] };
+  const window = loadFactory("js/search-pages.js");
+  const pages = window.DebateSearchPages.createSearchPages({
+    els,
+    getEvents: () => [searchEvent],
+    getRecords: () => [searchRecord],
+    getHonors: () => searchHonors,
+    getTopics: () => events[0].topics,
+    getRosters: () => rosters,
+    store: searchStore,
+    normalize: (value) => String(value ?? "").normalize("NFKC"),
+    escapeHtml,
+    unique,
+    formatDate,
+    matchScoreLabel: scoreLabel,
+    honorSubject: (honor) => honor.recipient || honor.team,
+    honorDateLabel: (honor) => honor.matchDate || "日期未載明",
+    playerRosterEntries: (name) => Object.entries(rosters).flatMap(([competitionName, entries]) => entries
+      .filter((roster) => [...(roster.leaders || []), ...(roster.players || [])].includes(name))
+      .map((roster) => ({ ...roster, competitionName }))),
+  });
+
+  pages.renderSearch("");
+  assert.match(els.searchResults.innerHTML, /從一個名字開始/);
+  assert.equal(els.searchMeta.textContent, "");
+
+  assert.deepEqual(pages.getKnownPlayers(), ["林選手", "領隊", "隊員甲"]);
+  pages.renderSearch("測試別名");
+  assert.match(els.searchMeta.textContent, /找到 1 個學校／隊伍/);
+  assert.match(els.searchResults.innerHTML, /測試高中&lt;甲&gt;/);
+  assert.match(els.searchResults.innerHTML, /3：0/);
+  assert.match(els.searchResults.innerHTML, /全程最佳辯士/);
+
+  pages.renderSearch("隊員甲");
+  assert.match(els.searchResults.innerHTML, /data-player-route="隊員甲"/);
+  assert.match(els.searchResults.innerHTML, /測試高中&lt;甲&gt;/);
+
+  pages.renderSearch("賽事專屬題解");
+  assert.match(els.searchMeta.textContent, /1 筆辯題/);
+  assert.match(els.searchResults.innerHTML, /data-topic-route="topic-test"/);
+  assert.match(els.searchResults.innerHTML, /data-event-route="測試盃"/);
+
+  pages.renderSearch("查無此資料");
+  assert.match(els.searchMeta.textContent, /沒有找到/);
+  assert.match(els.searchResults.innerHTML, /目前沒有相符資料/);
+});
