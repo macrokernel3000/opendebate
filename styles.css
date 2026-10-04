@@ -630,7 +630,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #homeView:not(.is-hidden) { display: flex; flex-direction: column; gap: 0; }
   #homeView > .calendar-link-section { order: 2; }
   #homeView > .calendar-link-section { gap: 10px; padding: 42px 14px 46px; }
-  .calendar-platform-note { max-width: 145px; font-size: 10px; line-height: 1.4; }
+  .calendar-platform-note { max-width: 158px; font-size: 10px; line-height: 1.4; }
   #homeView.is-hidden { display: none; }
   #homeView > .mobile-home { order: 1; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 11px; padding-top: 12px; padding-bottom: 8px; }
   #homeView > .mobile-home > .mobile-home-search { display: none; }

@@ -1,12 +1,6 @@
 (function () {
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
-    document.querySelector("[data-calendar-subscribe]")?.addEventListener("click", (event) => {
-      if (/Android/i.test(navigator.userAgent)) {
-        event.preventDefault();
-        window.location.assign("https://macrokernel3000.github.io/opendebate/calendar.ics");
-      }
-    });
     const closeMobileMenu = () => {
       const toggle = document.querySelector("#mobileMenuToggle");
       const menu = document.querySelector("#mobileQuickMenu");
