@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T17:46:25",
+  "generatedAt": "2026-10-04T23:07:51",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3940,6 +3940,281 @@ window.DEBATE_PUBLIC_DATA = {
         "negative": "s049"
       },
       "id": "match-858708e4546c"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 1,
+      "venue": 1,
+      "teams": {
+        "affirmative": "北商五專",
+        "negative": "和平高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "北商五專",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s018",
+        "negative": "s160"
+      },
+      "id": "match-058bd24b2458"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 1,
+      "venue": 2,
+      "teams": {
+        "affirmative": "海山高中",
+        "negative": "華僑高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "華僑高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s161",
+        "negative": "s132"
+      },
+      "id": "match-b5d5cbde76a5"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 1,
+      "venue": 3,
+      "teams": {
+        "affirmative": "臺東高中",
+        "negative": "武陵高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "武陵高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s129",
+        "negative": "s096"
+      },
+      "id": "match-7a8f5280bce6"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 2,
+      "venue": 1,
+      "teams": {
+        "affirmative": "永平高中",
+        "negative": "陽明高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "陽明高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s098",
+        "negative": "s147"
+      },
+      "id": "match-9eae45ac9fe2"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 2,
+      "venue": 2,
+      "teams": {
+        "affirmative": "安樂高中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中女中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s183",
+        "negative": "s122"
+      },
+      "id": "match-00d0f57c0752"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 2,
+      "venue": 3,
+      "teams": {
+        "affirmative": "大直高中",
+        "negative": "延平中學"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "延平中學",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s038",
+        "negative": "s050"
+      },
+      "id": "match-4e3ad95d9115"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 2,
+      "venue": 4,
+      "teams": {
+        "affirmative": "南山高中",
+        "negative": "明倫高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "南山高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s023",
+        "negative": "s080"
+      },
+      "id": "match-b8ef2e1d660c"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 3,
+      "venue": 1,
+      "teams": {
+        "affirmative": "北商五專",
+        "negative": "華僑高中"
+      },
+      "scores": {
+        "affirmative": 1,
+        "negative": 2
+      },
+      "winner": "華僑高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s018",
+        "negative": "s132"
+      },
+      "id": "match-e868f71e6fe6"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 3,
+      "venue": 2,
+      "teams": {
+        "affirmative": "武陵高中",
+        "negative": "南山高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "武陵高中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s096",
+        "negative": "s023"
+      },
+      "id": "match-6f1b29c175c8"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 3,
+      "venue": 3,
+      "teams": {
+        "affirmative": "陽明高中",
+        "negative": "臺中女中"
+      },
+      "scores": {
+        "affirmative": 0,
+        "negative": 3
+      },
+      "winner": "臺中女中",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s147",
+        "negative": "s122"
+      },
+      "id": "match-f124a486cb94"
+    },
+    {
+      "competitionName": "2026年氣候盃全國高中職辯論比賽",
+      "matchDate": "2026-10-03",
+      "period": 3,
+      "venue": 4,
+      "teams": {
+        "affirmative": "延平中學",
+        "negative": "復旦高中"
+      },
+      "scores": {
+        "affirmative": 2,
+        "negative": 1
+      },
+      "winner": "延平中學",
+      "note": "來源：主辦方公告（CDPA 2026-10-03 賽果貼文）。https://www.instagram.com/p/DeDeVwEE7NM/",
+      "players": {
+        "affirmative": [],
+        "negative": []
+      },
+      "teamIds": {
+        "affirmative": "s050",
+        "negative": "s057"
+      },
+      "id": "match-931cb0849571"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -41905,7 +42180,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "簡章僅載個人獎取一名，未載明評選標準；不自行補充。",
       "ageRestriction": true,
       "brochureTeamLimit": 16,
-      "teamCount": 0
+      "teamCount": 15
     },
     "第十三屆椰風盃全國高中職辯論比賽": {
       "startDate": "2026-12-26",
