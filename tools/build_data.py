@@ -221,6 +221,8 @@ def parse_rows(rows, source_name, default_competition=""):
                 "team": team,
                 "honorType": normalize_honor_type(row.get("榮譽類型"), team),
                 "note": clean(row.get("備註")),
+                "_source": source_name,
+                "_row": line_number,
             }
             honor_level = clean(row.get("榮譽層級"))
             if honor_level:
@@ -375,6 +377,10 @@ def validate_event_rosters(records, event_rosters, registry_entries):
     return data_validation_module.validate_event_rosters(records, event_rosters, registry_entries, warn)
 
 
+def validate_honor_teams(records, honors, event_rosters, registry_entries):
+    return data_validation_module.validate_honor_teams(records, honors, event_rosters, registry_entries, warn)
+
+
 def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
     return data_validation_module.validate_event_metadata_dates(path, checked_date)
 
@@ -502,19 +508,23 @@ def build(check_only=False, fail_on_warnings=False):
     validate_upcoming_events()
     registry_entries = read_registry()
     validate_records(records, registry_entries)
+    event_rosters = load_event_rosters()
+    if event_rosters:
+        sources.append(EVENT_ROSTERS_PATH.name)
+    validate_event_rosters(records, event_rosters, registry_entries)
+    validate_honor_teams(records, honors, event_rosters, registry_entries)
     for record in records:
         record.pop("_source", None)
         record.pop("_row", None)
+    for honor in honors:
+        honor.pop("_source", None)
+        honor.pop("_row", None)
     records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
-    event_rosters = load_event_rosters()
-    if event_rosters:
-        sources.append(EVENT_ROSTERS_PATH.name)
-    validate_event_rosters(records, event_rosters, registry_entries)
 
     if check_only:
         events = event_names(records, honors, topics)

@@ -23,6 +23,26 @@ def normalized_match_team(value):
     return re.sub(r"\s+", "", normalized).lower()
 
 
+def entity_alias_lookup(registry_entries):
+    """Build a comparison-only alias map without changing displayed team names."""
+    alias_lookup = {}
+    for entry in registry_entries:
+        canonical = normalized_match_team(entry["name"])
+        alias_lookup.setdefault(canonical, canonical)
+    for entry in registry_entries:
+        canonical = normalized_match_team(entry["name"])
+        for alias in entry.get("aliases", "").split("|"):
+            normalized_alias = normalized_match_team(alias)
+            if normalized_alias:
+                alias_lookup.setdefault(normalized_alias, canonical)
+    return alias_lookup
+
+
+def match_entity_identity(value, alias_lookup):
+    normalized = normalized_match_team(value)
+    return alias_lookup.get(normalized, normalized)
+
+
 def validate_records(records, registry_entries, warn):
     alias_lookup = {}
     for entry in registry_entries:
@@ -99,16 +119,7 @@ def validate_records(records, registry_entries, warn):
 
 
 def validate_event_rosters(records, event_rosters, registry_entries, warn):
-    alias_lookup = {}
-    for entry in registry_entries:
-        canonical = normalized_entity_name(entry["name"])
-        alias_lookup[canonical] = canonical
-    for entry in registry_entries:
-        canonical = normalized_entity_name(entry["name"])
-        for alias in entry.get("aliases", "").split("|"):
-            alias_name = normalized_entity_name(alias)
-            if alias_name:
-                alias_lookup.setdefault(alias_name, canonical)
+    alias_lookup = entity_alias_lookup(registry_entries)
 
     for competition, entries in event_rosters.items():
         match_teams = {
@@ -119,8 +130,7 @@ def validate_event_rosters(records, event_rosters, registry_entries, warn):
         roster_teams = {entry["team"] for entry in entries}
 
         def identity(name):
-            normalized = normalized_entity_name(name)
-            return alias_lookup.get(normalized, normalized)
+            return match_entity_identity(name, alias_lookup)
 
         match_counts = Counter(identity(team) for team in match_teams)
         roster_counts = Counter(identity(team) for team in roster_teams)
@@ -132,6 +142,54 @@ def validate_event_rosters(records, event_rosters, registry_entries, warn):
                 f"未列於名單：{missing}；名單另列：{additional}。"
                 "已依單位別名比對；同校 A／B 隊仍分別計數。"
             )
+
+
+def validate_honor_teams(records, honors, event_rosters, registry_entries, warn):
+    """Flag award affiliations that cannot be found in match or published roster data."""
+    alias_lookup = entity_alias_lookup(registry_entries)
+    event_team_names = {}
+    event_team_entities = {}
+    for record in records:
+        competition = record["competitionName"]
+        teams = [team for team in record["teams"].values() if clean(team)]
+        event_team_names.setdefault(competition, set()).update(normalized_match_team(team) for team in teams)
+        event_team_entities.setdefault(competition, set()).update(
+            match_entity_identity(team, alias_lookup) for team in teams
+        )
+    for competition, entries in event_rosters.items():
+        teams = [entry["team"] for entry in entries if clean(entry.get("team"))]
+        event_team_names.setdefault(competition, set()).update(normalized_match_team(team) for team in teams)
+        event_team_entities.setdefault(competition, set()).update(
+            match_entity_identity(team, alias_lookup) for team in teams
+        )
+
+    for honor in honors:
+        competition = honor["competitionName"]
+        known_team_names = event_team_names.get(competition)
+        # Award-only records can be legitimate when match results and rosters are not yet available.
+        if not known_team_names:
+            continue
+        team = clean(honor.get("team"))
+        if not team and honor.get("honorType") == "team":
+            team = clean(honor.get("recipient"))
+        if not team:
+            continue
+        team_key = normalized_match_team(team)
+        suffix_source = re.sub(r"\s+", "", unicodedata.normalize("NFKC", team))
+        has_team_suffix = re.search(r"[AB]$", suffix_source) is not None
+        exact_team_match = team_key in known_team_names
+        school_match = (
+            not has_team_suffix
+            and match_entity_identity(team, alias_lookup) in event_team_entities.get(competition, set())
+        )
+        if exact_team_match or school_match:
+            continue
+        source = honor.get("_source", "資料來源")
+        row = honor.get("_row", "?")
+        warn(
+            f"榮譽隊伍核對提醒：{source} 第 {row} 列，{competition} 的「{honor.get('honorName', '')}」"
+            f"所屬隊伍「{team}」未出現在已收錄對戰或公告名單中；請確認隊名、資料完整度與來源。"
+        )
 
 
 def validate_event_metadata_dates(path, checked_date):
