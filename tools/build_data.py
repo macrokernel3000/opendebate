@@ -5,8 +5,9 @@ import json
 import os
 import re
 import zipfile
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import quote
 from xml.etree import ElementTree as ET
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -622,6 +623,64 @@ def write_update_report(version, sources, events, records, honors, attendance, t
     REPORT_PATH.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
+def write_calendar_feed():
+    source_path = DATA_DIR / "upcoming-events.js"
+    source = source_path.read_text(encoding="utf-8")
+    payload = source.split("=", 1)[1].rsplit(";", 1)[0].strip()
+    upcoming = json.loads(payload)
+    today = datetime.now().date()
+
+    def escape_ical(value):
+        value = str(value or "").replace("\\", "\\\\").replace("\r\n", "\\n").replace("\n", "\\n")
+        return value.replace(",", "\\,").replace(";", "\\;")
+
+    def fold_line(line):
+        chunks, current, current_bytes = [], "", 0
+        for char in line:
+            char_bytes = len(char.encode("utf-8"))
+            if current_bytes + char_bytes > 73:
+                chunks.append(current)
+                current, current_bytes = " " + char, 1 + char_bytes
+            else:
+                current += char
+                current_bytes += char_bytes
+        chunks.append(current)
+        return "\r\n".join(chunks)
+
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    lines = [
+        "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Open Debate//TW Event Calendar//ZH-TW",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:台灣辯論賽事",
+        "X-WR-TIMEZONE:Asia/Taipei", "X-PUBLISHED-TTL:PT12H",
+    ]
+    for event in upcoming:
+        start = datetime.strptime(event["startDate"], "%Y-%m-%d").date()
+        end = datetime.strptime(event.get("endDate") or event["startDate"], "%Y-%m-%d").date()
+        if end < today:
+            continue
+        description = "\n".join(filter(None, [
+            f"主辦單位：{event.get('organizer', '')}" if event.get("organizer") else "",
+            f"辯題：{event.get('topic', '')}" if event.get("topic") else "",
+            f"題目補充：{event.get('topicNote', '')}" if event.get("topicNote") else "",
+        ]))
+        detail_url = f"https://macrokernel3000.github.io/opendebate/#event/{quote(event['name'])}"
+        lines.extend([
+            "BEGIN:VEVENT",
+            f"UID:{escape_ical(event.get('id') or event['name'])}@opendebate.macrokernel3000.github.io",
+            f"DTSTAMP:{stamp}",
+            f"DTSTART;VALUE=DATE:{start.strftime('%Y%m%d')}",
+            f"DTEND;VALUE=DATE:{(end + timedelta(days=1)).strftime('%Y%m%d')}",
+            f"SUMMARY:{escape_ical(event['name'])}",
+            f"LOCATION:{escape_ical(event.get('location', ''))}",
+            f"DESCRIPTION:{escape_ical(description)}",
+            f"URL:{detail_url}",
+            "STATUS:CONFIRMED", "TRANSP:TRANSPARENT", "END:VEVENT",
+        ])
+    lines.append("END:VCALENDAR")
+    output_path = ROOT / "calendar.ics"
+    output_path.write_bytes(("\r\n".join(fold_line(line) for line in lines) + "\r\n").encode("utf-8"))
+
+
 def build():
     paths = source_files()
     if not paths:
@@ -685,6 +744,7 @@ def build():
     update_seo_files(events, records, honors)
     registry_source = REGISTRY_PATH.name if REGISTRY_PATH.exists() else REGISTRY_XLSX_PATH.name
     write_update_report(version, sources, events, records, honors, attendance, topics, entities, registry_source, event_rosters)
+    write_calendar_feed()
     print("資料來源：" + "、".join(sources))
     print(f"目前收錄盃賽：{len(events)} 個")
     print(f"更新完成：{len(records)} 場戰績、{len(honors)} 筆榮譽、{len(attendance)} 筆登場紀錄、{len(topics)} 筆辯題")
