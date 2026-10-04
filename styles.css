@@ -473,7 +473,7 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .report-copy-status { display: inline-block; margin-left: 10px; color: var(--green-dark); font-size: 13px; font-weight: 750; }
 .report-contact-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .report-contact-card { margin: 0; border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: #f6f5ef; color: var(--muted); }
-.report-contact-card a { display: block; margin-top: 5px; color: var(--green-dark); font-weight: 850; overflow-wrap: anywhere; }
+.report-contact-card a { display: flex; min-height: 24px; align-items: center; margin-top: 5px; color: var(--green-dark); font-weight: 850; overflow-wrap: anywhere; }
 .home-snapshot-status { margin: 0 auto 8px; width: min(100% - 32px, 1180px); color: var(--muted); font-size: 12px; }
 
 .archive-intro { padding-bottom: 22px; }

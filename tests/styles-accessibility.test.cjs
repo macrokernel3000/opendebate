@@ -41,3 +41,10 @@ test("hero eyebrow keeps AA contrast on its dark green background", () => {
   assert.ok(contrastRatio(yellow, darkGreen) >= 4.5, "Hero eyebrow accent must reach 4.5:1");
   assert.match(css, /\.hero-content\s+\.eyebrow\s*\{[^}]*color:\s*var\(--yellow\)/);
 });
+
+test("report contact links keep a 24px tap target", () => {
+  assert.match(
+    css,
+    /\.report-contact-card a\s*\{[^}]*display:\s*flex[^}]*min-height:\s*24px[^}]*align-items:\s*center/,
+  );
+});
