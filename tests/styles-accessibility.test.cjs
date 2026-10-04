@@ -4,6 +4,7 @@ const path = require("node:path");
 const test = require("node:test");
 
 const css = fs.readFileSync(path.join(__dirname, "..", "styles.css"), "utf8");
+const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 
 function token(name) {
   const match = css.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, "i"));
@@ -52,4 +53,10 @@ test("report contact links keep a 24px tap target", () => {
 test("short mobile viewports compact the fixed navigation without shrinking targets below 44px", () => {
   assert.match(css, /@media\s*\(max-width:\s*640px\)\s*and\s*\(max-height:\s*500px\)\s*\{[^}]*\.main-nav\s*\{[^}]*height:\s*56px/);
   assert.match(css, /\.nav-button\s*\{[^}]*min-height:\s*44px/);
+});
+
+test("personal and team record forms require the event and record owner", () => {
+  for (const id of ["personalCompetition", "personalName", "teamCompetition", "teamName"]) {
+    assert.match(html, new RegExp(`<input\\b(?=[^>]*\\bid="${id}")(?=[^>]*\\brequired(?:\\s|>|=))[^>]*>`), `${id} should be required`);
+  }
 });

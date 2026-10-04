@@ -291,8 +291,8 @@
           <form id="personalRecordForm" class="record-form">
             <div class="record-form-heading"><div><p class="kicker">NEW BALLOT</p><h2>登錄一張裁單</h2></div><span id="personalDraftStatus">第 1 張</span></div>
             <div class="record-form-grid">
-              <label class="record-field record-field-wide record-competition-field"><span>盃賽（輸入關鍵字可選平台已登錄賽事）</span><input id="personalCompetition" type="text" autocomplete="off" placeholder="例如：輸入「育南」" aria-controls="personalCompetitionSuggestions" aria-autocomplete="list" /><div id="personalCompetitionSuggestions" class="record-suggestions is-hidden" role="listbox"></div></label>
-              <label class="record-field"><span>選手姓名</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入選手姓名" /></label>
+              <label class="record-field record-field-wide record-competition-field"><span>盃賽（必填；輸入關鍵字可選平台已登錄賽事）</span><input id="personalCompetition" type="text" autocomplete="off" placeholder="例如：輸入「育南」" aria-controls="personalCompetitionSuggestions" aria-autocomplete="list" required /><div id="personalCompetitionSuggestions" class="record-suggestions is-hidden" role="listbox"></div></label>
+              <label class="record-field"><span>選手姓名（必填）</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入選手姓名" required /></label>
               <label class="record-field"><span>裁判姓名</span><input id="personalJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
               <label class="record-field"><span>比賽日期</span><input id="personalMatchDate" type="date" /></label>
               <label class="record-field"><span>此盃第幾場</span><input id="personalMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
@@ -330,8 +330,8 @@
             <form id="teamRecordForm" class="record-form team-record-form">
               <div class="record-form-heading"><div><p class="kicker">TEAM BALLOT</p><h2>登錄一張隊伍裁單</h2></div><span id="teamDraftStatus">第 1 張</span></div>
               <div class="record-form-grid">
-                <label class="record-field record-field-wide"><span>盃賽</span><input id="teamCompetition" type="text" list="teamCompetitionList" autocomplete="off" placeholder="輸入盃賽名稱" /><datalist id="teamCompetitionList"></datalist></label>
-                <label class="record-field"><span>隊伍名稱</span><input id="teamName" type="text" autocomplete="organization" placeholder="輸入自己的隊伍" /></label>
+                <label class="record-field record-field-wide"><span>盃賽（必填）</span><input id="teamCompetition" type="text" list="teamCompetitionList" autocomplete="off" placeholder="輸入盃賽名稱" required /><datalist id="teamCompetitionList"></datalist></label>
+                <label class="record-field"><span>隊伍名稱（必填）</span><input id="teamName" type="text" autocomplete="organization" placeholder="輸入自己的隊伍" required /></label>
                 <label class="record-field"><span>裁判姓名</span><input id="teamJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
                 <label class="record-field"><span>比賽日期</span><input id="teamMatchDate" type="date" /></label>
                 <label class="record-field"><span>此盃第幾場</span><input id="teamMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
