@@ -970,9 +970,14 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-search-field { grid-column: 1 / -1; }
   .event-finder-results { max-height: 430px; }
   .event-summary-count { flex-wrap: wrap; }
+  .event-metadata { align-items: flex-start; gap: 8px 12px; font-size: 14px; line-height: 1.65; }
+  .event-metadata small { width: 100%; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+  .topic-explanation { font-size: 14px; line-height: 1.75; }
+  .topic-explanation p { margin-top: 10px; }
   .match-row { grid-template-columns: 46px minmax(0, 1fr) 52px minmax(0, 1fr); gap: 6px; padding-inline: 8px; }
-  .match-place { font-size: 10px; }
-  .team-name { font-size: 12px; overflow-wrap: anywhere; }
+  .match-place { font-size: 11px; line-height: 1.45; }
+  .team-name { font-size: 13px; overflow-wrap: anywhere; }
+  .match-note { font-size: 12px; line-height: 1.5; }
   .match-score { gap: 4px; font-size: 16px; }
   .history-item { grid-template-columns: 1fr auto; }
   .entity-detail-heading { display: grid; align-items: start; }
