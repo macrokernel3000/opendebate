@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T16:53:13",
+  "generatedAt": "2026-10-04T16:57:11",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -909,18 +909,6 @@ window.DEBATE_PUBLIC_DATA = {
       "aliases": ""
     },
     {
-      "code": "p160",
-      "type": "p",
-      "name": "桃園高中一",
-      "aliases": "桃園高中A"
-    },
-    {
-      "code": "p161",
-      "type": "p",
-      "name": "桃園高中二",
-      "aliases": "桃園高中B"
-    },
-    {
       "code": "p162",
       "type": "p",
       "name": "菜菜撈撈",
@@ -1434,7 +1422,7 @@ window.DEBATE_PUBLIC_DATA = {
       "code": "s093",
       "type": "s",
       "name": "桃園高中",
-      "aliases": ""
+      "aliases": "桃園高中A|桃園高中B|桃園高中一|桃園高中二"
     },
     {
       "code": "s094",
@@ -3987,10 +3975,10 @@ window.DEBATE_PUBLIC_DATA = {
       "groupName": "A 區",
       "inferenceNote": "來源：辯手回報；依回報提供之現場戰績板照片辨識DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
       "teamIds": {
-        "affirmative": "p160",
+        "affirmative": "s093",
         "negative": "s013"
       },
-      "id": "match-4e3c15facc69"
+      "id": "match-d30e2c0dc850"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -4014,10 +4002,10 @@ window.DEBATE_PUBLIC_DATA = {
       "groupName": "A 區",
       "inferenceNote": "來源：辯手回報；依回報提供之現場戰績板照片辨識DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
       "teamIds": {
-        "affirmative": "p161",
+        "affirmative": "s093",
         "negative": "s057"
       },
-      "id": "match-7192b7e5f933"
+      "id": "match-478b2cc8788b"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -4069,9 +4057,9 @@ window.DEBATE_PUBLIC_DATA = {
       "inferenceNote": "來源：辯手回報；依回報提供之現場戰績板照片辨識DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
       "teamIds": {
         "affirmative": "s013",
-        "negative": "p161"
+        "negative": "s093"
       },
-      "id": "match-aa52285436ba"
+      "id": "match-ffe7fbc0c687"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -4096,9 +4084,9 @@ window.DEBATE_PUBLIC_DATA = {
       "inferenceNote": "來源：辯手回報；依回報提供之現場戰績板照片辨識DAY1賽程時序配對：第1時段09:00–10:30、第2時段10:50–12:20、第3時段14:00–15:30；會場未能辨識。",
       "teamIds": {
         "affirmative": "p157",
-        "negative": "p160"
+        "negative": "s093"
       },
-      "id": "match-41fa4642fae5"
+      "id": "match-bc77b49f13d8"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -37228,8 +37216,8 @@ window.DEBATE_PUBLIC_DATA = {
       "team": "桃園高中二",
       "honorType": "team",
       "note": "來源：辯手回報。",
-      "teamId": "p161",
-      "id": "honor-45c0b7474ef8"
+      "teamId": "s093",
+      "id": "honor-e83dd31e874f"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
