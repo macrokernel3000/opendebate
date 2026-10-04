@@ -13,7 +13,10 @@ from pathlib import Path
 from xml.etree import ElementTree as ET
 
 import calendar_feed as calendar_feed_module
+import entity_registry as entity_registry_module
 
+SCHOOL_ENDINGS = entity_registry_module.SCHOOL_ENDINGS
+KNOWN_SCHOOL_SHORT_NAMES = entity_registry_module.KNOWN_SCHOOL_SHORT_NAMES
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
 JS_PATH = DATA_DIR / "public-data.js"
@@ -32,8 +35,6 @@ REQUIRED_COLUMNS = {
     "正方比分", "反方比分", "勝方", "榮譽名稱", "獲獎者", "所屬學校", "榮譽類型", "備註",
 }
 OPTIONAL_COLUMNS = {"正方登場選手", "反方登場選手"}
-SCHOOL_ENDINGS = ("高中", "高工", "高商", "高職", "中學", "國中", "國小", "女中", "女高", "一中", "二中", "壢中", "附中", "實中", "護專", "五專", "國中部")
-KNOWN_SCHOOL_SHORT_NAMES = {"市立大同", "市立復興", "市立東山", "新北三民", "桃園陽明", "私立東山", "高市三民", "高市中正"}
 WARNINGS = []
 VALID_DATA_TYPES = {"公開戰績", "公開榮譽", "辯題"}
 SIDE_WINNERS = {"正方勝", "反方勝"}
@@ -524,178 +525,28 @@ def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
 
 
 def entity_base_name(name):
-    name = clean(name)
-    name = re.sub(r"\s+(?:正|反)$", "", name)
-    suffix = re.search(r"(?:\(二\)|（二）|[AB]|\d+)$", name)
-    if suffix and name[:suffix.start()].endswith(SCHOOL_ENDINGS):
-        name = name[:suffix.start()]
-    return name.strip()
+    return entity_registry_module.entity_base_name(name)
 
 
 def suggested_type(name):
-    compact = re.sub(r"\s+", "", name)
-    if "大學" in compact or compact in {"臺大", "台大", "政大", "師大", "輔大", "東吳", "中山大", "中正大"}:
-        return "u"
-    if compact.endswith(SCHOOL_ENDINGS) or "國際學校" in compact or compact in KNOWN_SCHOOL_SHORT_NAMES:
-        return "s"
-    return "p"
+    return entity_registry_module.suggested_type(name)
 
 
 def read_registry():
-    entries = []
-    source_name = REGISTRY_PATH.name
-    # Keep the maintained CSV registry authoritative; XLSX is a fallback for
-    # legacy imports when the CSV registry is not present.
-    if REGISTRY_PATH.exists():
-        with REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
-            for row in csv.DictReader(source):
-                if clean(row.get("name")):
-                    entries.append({key: clean(row.get(key)) for key in ("code", "type", "name", "aliases")})
-    elif REGISTRY_XLSX_PATH.exists():
-        source_name = REGISTRY_XLSX_PATH.name
-        with zipfile.ZipFile(REGISTRY_XLSX_PATH) as book:
-            shared_strings = []
-            if "xl/sharedStrings.xml" in book.namelist():
-                root = ET.fromstring(book.read("xl/sharedStrings.xml"))
-                shared_strings = ["".join(node.text or "" for node in item.iter() if node.tag.endswith("}t")) for item in root]
-            workbook_root = ET.fromstring(book.read("xl/workbook.xml"))
-            rels_root = ET.fromstring(book.read("xl/_rels/workbook.xml.rels"))
-            relationships = {item.attrib["Id"]: item.attrib["Target"] for item in rels_root}
-            relation_key = "{http://schemas.openxmlformats.org/officeDocument/2006/relationships}id"
-            sheet = next((item for item in workbook_root.iter() if item.tag.endswith("}sheet")), None)
-            if sheet is None:
-                raise SystemExit("entity-registry.xlsx 找不到工作分頁")
-            target = relationships.get(sheet.attrib.get(relation_key, ""), "").lstrip("/")
-            sheet_path = target if target.startswith("xl/") else "xl/" + target
-            sheet_root = ET.fromstring(book.read(sheet_path))
-            matrix = []
-            for row_node in sheet_root.iter():
-                if not row_node.tag.endswith("}row"):
-                    continue
-                values = {}
-                for cell in row_node:
-                    if not cell.tag.endswith("}c"):
-                        continue
-                    column = cell_column(cell.attrib.get("r", ""))
-                    cell_type = cell.attrib.get("t", "")
-                    if cell_type == "inlineStr":
-                        value = "".join(node.text or "" for node in cell.iter() if node.tag.endswith("}t"))
-                    else:
-                        value_node = next((node for node in cell if node.tag.endswith("}v")), None)
-                        value = value_node.text if value_node is not None and value_node.text is not None else ""
-                        if cell_type == "s" and value:
-                            value = shared_strings[int(value)]
-                    values[column] = clean(value)
-                if values:
-                    matrix.append([values.get(index, "") for index in range(max(values) + 1)])
-        header_index = next((index for index, row in enumerate(matrix) if {"code", "type", "name", "aliases"}.issubset(set(row))), None)
-        if header_index is None:
-            raise SystemExit("entity-registry.xlsx 缺少 code、type、name、aliases 標題")
-        headers = matrix[header_index]
-        for row in matrix[header_index + 1:]:
-            item = {header: clean(row[index]) if index < len(row) else "" for index, header in enumerate(headers)}
-            if item.get("name"):
-                entries.append({key: clean(item.get(key)) for key in ("code", "type", "name", "aliases")})
-    seen_codes = set()
-    seen_names = {}
-    for line_number, entry in enumerate(entries, start=2):
-        entry["code"] = entry["code"].lower()
-        if not entry["code"] or not entry["name"]:
-            raise SystemExit(f"{source_name} 第 {line_number} 筆缺少 code 或 name")
-        if not re.fullmatch(r"[spu]\d{3}", entry["code"]):
-            raise SystemExit(f"{source_name} 的代碼格式錯誤：{entry['code']}")
-        if entry["code"] in seen_codes:
-            raise SystemExit(f"{source_name} 有重複代碼：{entry['code']}")
-        seen_codes.add(entry["code"])
-        entry["type"] = entry["code"][0]
-        for name in [entry["name"], *entry["aliases"].split("|")]:
-            name = clean(name)
-            if not name:
-                continue
-            normalized = re.sub(r"\s+", "", name).lower()
-            if normalized in seen_names and seen_names[normalized] != entry["code"]:
-                warn(f"提醒：{source_name} 的名稱或別名重複：{name}；正式名稱會優先，別名衝突時保留先出現的歸戶")
-            else:
-                seen_names[normalized] = entry["code"]
-    return entries
+    return entity_registry_module.read_registry(REGISTRY_PATH, REGISTRY_XLSX_PATH, cell_column, warn)
 
 
 def write_registry(entries):
-    with REGISTRY_PATH.open("w", encoding="utf-8-sig", newline="") as target:
-        writer = csv.DictWriter(target, fieldnames=["code", "type", "name", "aliases"])
-        writer.writeheader()
-        writer.writerows(entries)
+    return entity_registry_module.write_registry(entries, REGISTRY_PATH)
 
 
 def build_entities(records, honors, registry_entries=None):
-    raw_names = set()
-    for record in records:
-        raw_names.update(record["teams"].values())
-    for honor in honors:
-        if honor["team"]:
-            raw_names.add(honor["team"])
-        elif honor["honorType"] == "team":
-            raw_names.add(honor["recipient"])
-
     entries = [dict(entry) for entry in registry_entries] if registry_entries is not None else read_registry()
-    alias_lookup = {entry["name"]: entry for entry in entries}
-    for entry in entries:
-        for alias in entry["aliases"].split("|"):
-            if clean(alias):
-                alias_lookup.setdefault(clean(alias), entry)
-
-    grouped = {}
-    for name in sorted(raw_names):
-        if not name:
-            continue
-        if name in alias_lookup:
-            continue
-        base = entity_base_name(name)
-        grouped.setdefault(base, []).append(name)
-
-    used_codes = {entry["code"] for entry in entries}
-    counters = {prefix: max([int(code[1:]) for code in used_codes if re.fullmatch(prefix + r"\d{3}", code)] or [0]) for prefix in "spu"}
-    for base, names in grouped.items():
-        entity_type = suggested_type(base)
-        counters[entity_type] += 1
-        code = f"{entity_type}{counters[entity_type]:03d}"
-        entry = {"code": code, "type": entity_type, "name": base, "aliases": "|".join(name for name in names if name != base)}
-        entries.append(entry)
-        for name in names:
-            alias_lookup[name] = entry
-
-    entries.sort(key=lambda entry: entry["code"])
-    write_registry(entries)
-    lookup = {entry["name"]: entry["code"] for entry in entries}
-    for entry in entries:
-        for alias in entry["aliases"].split("|"):
-            if clean(alias):
-                lookup.setdefault(clean(alias), entry["code"])
-    return entries, lookup
+    return entity_registry_module.build_entities(records, honors, entries, REGISTRY_PATH)
 
 
 def attach_entities(records, honors, lookup):
-    attendance = []
-    for record in records:
-        record["teamIds"] = {side: lookup.get(name, "") for side, name in record["teams"].items()}
-        record["id"] = stable_id("match", record)
-        for side in ("affirmative", "negative"):
-            for player in record["players"][side]:
-                attendance.append({
-                    "id": stable_id("appearance", [record["id"], side, player]),
-                    "matchId": record["id"],
-                    "competitionName": record["competitionName"],
-                    "matchDate": record["matchDate"],
-                    "side": side,
-                    "player": player,
-                    "team": record["teams"][side],
-                    "teamId": record["teamIds"][side],
-                })
-    for honor in honors:
-        entity_name = honor["team"] if honor["honorType"] == "player" else honor["recipient"]
-        honor["teamId"] = lookup.get(entity_name, "")
-        honor["id"] = stable_id("honor", honor)
-    return attendance
+    return entity_registry_module.attach_entities(records, honors, lookup, stable_id)
 
 
 def update_asset_versions(version):

@@ -237,6 +237,69 @@ class BuildDataTests(unittest.TestCase):
             build_data.validate_best_debater_categories(records, honors)
             self.assertEqual(build_data.WARNINGS, [])
 
+    def test_school_team_aliases_share_one_entity_without_losing_match_names(self):
+        records = [
+            {
+                "competitionName": "測試盃",
+                "matchDate": "2026-01-01",
+                "teams": {"affirmative": "測試高中A", "negative": "對手高中"},
+                "players": {"affirmative": [], "negative": []},
+            },
+            {
+                "competitionName": "測試盃",
+                "matchDate": "2026-01-02",
+                "teams": {"affirmative": "測試高中B", "negative": "另一所高中"},
+                "players": {"affirmative": [], "negative": []},
+            },
+        ]
+        registry = [{"code": "s001", "type": "s", "name": "測試高中", "aliases": "測試高中A|測試高中B"}]
+        with tempfile.TemporaryDirectory() as folder, patch.object(build_data, "REGISTRY_PATH", Path(folder) / "entity-registry.csv"):
+            entries, lookup = build_data.build_entities(records, [], registry)
+            build_data.attach_entities(records, [], lookup)
+
+        self.assertEqual(lookup["測試高中A"], "s001")
+        self.assertEqual(lookup["測試高中B"], "s001")
+        self.assertEqual([record["teamIds"]["affirmative"] for record in records], ["s001", "s001"])
+        self.assertEqual([record["teams"]["affirmative"] for record in records], ["測試高中A", "測試高中B"])
+        self.assertEqual(sum(entry["name"] == "測試高中" for entry in entries), 1)
+
+    def test_entity_registry_keeps_legacy_xlsx_fallback_and_csv_priority(self):
+        workbook_xml = (
+            '<workbook xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main" '
+            'xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships">'
+            '<sheets><sheet name="名冊" sheetId="1" r:id="rId1"/></sheets></workbook>'
+        )
+        relationships_xml = (
+            '<Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships">'
+            '<Relationship Id="rId1" Type="worksheet" Target="worksheets/sheet1.xml"/>'
+            '</Relationships>'
+        )
+        worksheet_xml = (
+            '<worksheet xmlns="http://schemas.openxmlformats.org/spreadsheetml/2006/main"><sheetData>'
+            '<row r="1"><c r="A1" t="inlineStr"><is><t>code</t></is></c>'
+            '<c r="B1" t="inlineStr"><is><t>type</t></is></c>'
+            '<c r="C1" t="inlineStr"><is><t>name</t></is></c>'
+            '<c r="D1" t="inlineStr"><is><t>aliases</t></is></c></row>'
+            '<row r="2"><c r="A2" t="inlineStr"><is><t>s001</t></is></c>'
+            '<c r="B2" t="inlineStr"><is><t>s</t></is></c>'
+            '<c r="C2" t="inlineStr"><is><t>舊名冊學校</t></is></c>'
+            '<c r="D2" t="inlineStr"><is><t>舊別名</t></is></c></row>'
+            '</sheetData></worksheet>'
+        )
+        with tempfile.TemporaryDirectory() as folder:
+            registry_path = Path(folder) / "entity-registry.csv"
+            legacy_path = Path(folder) / "entity-registry.xlsx"
+            with zipfile.ZipFile(legacy_path, "w") as book:
+                book.writestr("xl/workbook.xml", workbook_xml)
+                book.writestr("xl/_rels/workbook.xml.rels", relationships_xml)
+                book.writestr("xl/worksheets/sheet1.xml", worksheet_xml)
+            with patch.object(build_data, "REGISTRY_PATH", registry_path), patch.object(build_data, "REGISTRY_XLSX_PATH", legacy_path):
+                legacy_entries = build_data.read_registry()
+                self.assertEqual(legacy_entries[0]["name"], "舊名冊學校")
+                registry_path.write_text("code,type,name,aliases\ns002,s,正式 CSV 學校,CSV 別名\n", encoding="utf-8")
+                csv_entries = build_data.read_registry()
+                self.assertEqual(csv_entries[0]["name"], "正式 CSV 學校")
+
 
 if __name__ == "__main__":
     unittest.main()
