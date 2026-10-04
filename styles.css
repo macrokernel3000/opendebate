@@ -445,7 +445,7 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .history-date { color: var(--muted); font-size: 12px; }
 .history-item strong { font-size: 14px; }
 .history-item p { margin: 4px 0 0; color: var(--muted); font-size: 12px; }
-.history-badge { padding: 6px 8px; background: var(--soft); font-size: 11px; font-weight: 900; }
+.history-badge { min-width: 0; padding: 6px 8px; background: var(--soft); font-size: 11px; font-weight: 900; overflow-wrap: anywhere; }
 
 .report-intro { padding-bottom: 42px; }
 .report-page { display: grid; gap: 18px; align-content: start; padding-bottom: 90px; }
@@ -979,11 +979,15 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .team-name { font-size: 13px; overflow-wrap: anywhere; }
   .match-note { font-size: 12px; line-height: 1.5; }
   .match-score { gap: 4px; font-size: 16px; }
-  .history-item { grid-template-columns: 1fr auto; }
+  .history-item { grid-template-columns: minmax(0, 1fr); gap: 6px; align-items: start; }
+  .history-item .history-date { grid-column: 1; }
+  .history-item > div { grid-column: 1; min-width: 0; }
+  .history-item .history-badge { grid-column: 1; grid-row: auto; }
+  .history-item strong { overflow-wrap: anywhere; line-height: 1.5; }
   .entity-detail-heading { display: grid; align-items: start; }
   .entity-match { grid-template-columns: 1fr auto; }
   .entity-match .history-date { grid-column: 1 / -1; }
-  .history-date { grid-column: 1 / -1; }
+  .entity-match .history-date { grid-column: 1 / -1; }
   footer .page-shell { display: grid; }
 }
 
