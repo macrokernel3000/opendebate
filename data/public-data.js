@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-04T15:53:55",
+  "generatedAt": "2026-10-04T16:40:46",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -923,7 +923,7 @@ window.DEBATE_PUBLIC_DATA = {
     {
       "code": "p162",
       "type": "p",
-      "name": "菜菜捲捲",
+      "name": "菜菜撈撈",
       "aliases": ""
     },
     {
@@ -4107,7 +4107,7 @@ window.DEBATE_PUBLIC_DATA = {
       "venue": "",
       "teams": {
         "affirmative": "這裡沒有桃園人也沒有研究生",
-        "negative": "菜菜捲捲"
+        "negative": "菜菜撈撈"
       },
       "scores": {
         "affirmative": 2,
@@ -4125,7 +4125,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p163",
         "negative": "p162"
       },
-      "id": "match-5fb1ff96118f"
+      "id": "match-f7f118f7323f"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
@@ -4187,14 +4187,14 @@ window.DEBATE_PUBLIC_DATA = {
       "period": 2,
       "venue": "",
       "teams": {
-        "affirmative": "菜菜捲捲",
+        "affirmative": "菜菜撈撈",
         "negative": "差點上台大還好忍到下台才大"
       },
       "scores": {
         "affirmative": 2,
         "negative": 1
       },
-      "winner": "菜菜捲捲",
+      "winner": "菜菜撈撈",
       "note": "",
       "players": {
         "affirmative": [],
@@ -4206,7 +4206,7 @@ window.DEBATE_PUBLIC_DATA = {
         "affirmative": "p162",
         "negative": "p159"
       },
-      "id": "match-db65cba74f67"
+      "id": "match-8702acdd9195"
     },
     {
       "competitionName": "2026桃園青年盃華語辯論賽（學青組）",
