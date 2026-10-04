@@ -237,8 +237,7 @@ function renderMobileUpcomingEvents() {
     <button type="button" class="mobile-upcoming-card" data-event-name="${escapeHtml(event.name)}" aria-label="開啟${escapeHtml(event.name)}賽事頁面">
       <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event))}</span>
       <h3>${escapeHtml(event.name)}</h3>
-      <span class="mobile-upcoming-meta"><b>主辦</b>${escapeHtml(event.organizer || "未提供")}</span>
-      <span class="mobile-upcoming-meta"><b>地點</b>${escapeHtml(event.location || "未提供")}</span>
+      <span class="mobile-upcoming-location"><b>地點</b>${escapeHtml(event.location || "未提供")}</span>
     </button>`).join("");
 }
 
