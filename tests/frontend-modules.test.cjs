@@ -399,3 +399,20 @@ test("search pages cover empty, alias, player, topic and unmatched search states
   assert.match(els.searchMeta.textContent, /沒有找到/);
   assert.match(els.searchResults.innerHTML, /目前沒有相符資料/);
 });
+
+test("record storage reports write failures and honors native form validation", () => {
+  const window = loadFactory("js/record-storage.js");
+  const saved = [];
+  const storage = { setItem: (key, value) => saved.push([key, value]) };
+  assert.equal(window.DebateRecordStorage.save(storage, "records", [{ id: "1" }]), true);
+  assert.deepEqual(saved, [["records", '[{"id":"1"}]']]);
+
+  const blockedStorage = { setItem() { throw new Error("quota exceeded"); } };
+  assert.equal(window.DebateRecordStorage.save(blockedStorage, "records", [{ id: "2" }]), false);
+
+  let checks = 0;
+  assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return false; } }), false);
+  assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return true; } }), true);
+  assert.equal(checks, 2);
+  assert.equal(window.DebateRecordStorage.isValid({}), true);
+});

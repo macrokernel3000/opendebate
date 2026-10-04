@@ -51,14 +51,13 @@
     }
   }
 
-  function saveRecords() {
-    try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(records));
-      return true;
-    } catch (_error) {
+  function saveRecords(nextRecords) {
+    if (!window.DebateRecordStorage.save(localStorage, STORAGE_KEY, nextRecords)) {
       showMessage("瀏覽器無法儲存資料，請先下載 CSV，並確認未使用限制儲存的模式。", true);
       return false;
     }
+    records = nextRecords;
+    return true;
   }
 
   function fieldNumber(element) {
@@ -138,21 +137,22 @@
   }
 
   function addDraft({ continueEntry = false } = {}) {
+    if (!window.DebateRecordStorage.isValid(els.form)) return;
     if (editingId) {
       const index = records.findIndex((record) => record.id === editingId);
       if (index < 0) return;
-      const previousRecord = records[index];
-      records[index] = getDraft(previousRecord);
-      if (!saveRecords()) records[index] = previousRecord;
+      const nextRecords = [...records];
+      nextRecords[index] = getDraft(records[index]);
+      if (!saveRecords(nextRecords)) return;
       exitEditMode({ clearForm: true });
       render();
       showMessage("修正已儲存，原紀錄已更新。", false);
       return;
     }
-    records.push(getDraft());
-    if (!saveRecords()) records.pop();
+    const draft = getDraft();
+    if (!saveRecords([...records, draft])) return;
     render();
-    const current = records.at(-1);
+    const current = draft;
     const sameMatchCount = current?.matchNumber === "" ? 1 : records.filter((record) => record.competition === current.competition && String(record.matchNumber) === String(current.matchNumber)).length;
     const ballotWarning = sameMatchCount > 3 ? `提醒：這個盃賽第 ${current.matchNumber} 場已有 ${sameMatchCount} 張裁單；系統仍已保留本張資料。` : "";
     showMessage(ballotWarning || (continueEntry ? "這一張已暫存，所有欄位都已保留，可以直接調整下一張。" : "輸入完成，平均分數已更新。"), false);
@@ -389,7 +389,25 @@
   function importedNumber(value) {
     if (String(value ?? "").trim() === "") return "";
     const number = Number(value);
-    return Number.isFinite(number) ? number : "";
+    if (!Number.isFinite(number)) throw new Error("invalid number");
+    return number;
+  }
+
+  function importedMaximum(value, fallback) {
+    if (String(value ?? "").trim() === "") return fallback;
+    const number = importedNumber(value);
+    if (number < 0.1 || Math.abs(number * 10 - Math.round(number * 10)) > 1e-7) throw new Error("invalid score maximum");
+    return number;
+  }
+
+  function validateImportedRecord(record) {
+    const validStep = (value, minimum, step, maximum = Number.POSITIVE_INFINITY) => value === "" || (Number.isFinite(Number(value))
+      && Number(value) >= minimum && Number(value) <= maximum
+      && Math.abs(Number(value) / step - Math.round(Number(value) / step)) < 1e-7);
+    if (!validStep(record.matchNumber, 1, 1) || !validStep(record.rank, 1, 1, 6)) throw new Error("invalid match number or rank");
+    METRICS.forEach((metric) => {
+      if (!validStep(record[metric.key], 0, 0.1) || !validStep(record[metric.maxKey], 0.1, 0.1)) throw new Error("invalid score");
+    });
   }
 
   async function importCsv(file) {
@@ -410,27 +428,27 @@
         name: get(row, "姓名", "選手姓名"),
         judge: get(row, "裁判姓名", "裁判"),
         argument: importedNumber(get(row, "論點分", "該場論點分")),
-        argumentMax: positiveNumber(get(row, "論點滿分"), 10),
+        argumentMax: importedMaximum(get(row, "論點滿分"), 10),
         speech: importedNumber(get(row, "申論")),
-        speechMax: positiveNumber(get(row, "申論滿分"), 20),
+        speechMax: importedMaximum(get(row, "申論滿分"), 20),
         question: importedNumber(get(row, "質詢")),
-        questionMax: positiveNumber(get(row, "質詢滿分"), 20),
+        questionMax: importedMaximum(get(row, "質詢滿分"), 20),
         defense: importedNumber(get(row, "答辯")),
-        defenseMax: positiveNumber(get(row, "答辯滿分"), 20),
+        defenseMax: importedMaximum(get(row, "答辯滿分"), 20),
         closing: importedNumber(get(row, "結辯")),
-        closingMax: positiveNumber(get(row, "結辯滿分"), 10),
+        closingMax: importedMaximum(get(row, "結辯滿分"), 10),
         rank: importedNumber(get(row, "排名", "排名為1", "排名為 1")),
         createdAt: get(row, "建立時間") || new Date().toISOString(),
       })).map(normalizeRecord);
+      imported.forEach(validateImportedRecord);
       const key = (record) => [record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.rank, record.createdAt].join("|");
       const existing = new Set(records.map(key));
       const additions = imported.filter((record) => !existing.has(key(record)));
-      records.push(...additions);
-      saveRecords();
+      if (!saveRecords([...records, ...additions])) return;
       render();
       showMessage(`已匯入 ${additions.length} 張裁單${imported.length !== additions.length ? "，重複資料已略過" : ""}。`, false);
     } catch (_error) {
-      showMessage("匯入失敗，請選擇由本頁下載的 CSV，或確認欄位包含「盃賽、姓名、申論」。", true);
+      showMessage("匯入失敗，請確認 CSV 欄位正確，場次、排名與分數符合欄位範圍。", true);
     } finally {
       els.importInput.value = "";
     }
@@ -498,8 +516,7 @@
     els.exportButton.addEventListener("click", exportCsv);
     els.deleteAllButton.addEventListener("click", () => {
       if (!records.length || !window.confirm(`確定要刪除全部 ${records.length} 張裁單嗎？這個動作無法復原。`)) return;
-      records = [];
-      saveRecords();
+      if (!saveRecords([])) return;
       exitEditMode({ clearForm: true });
       render();
       showMessage("所有個人成績已刪除。", false);
@@ -512,9 +529,10 @@
       if (editButton) { startEdit(editButton.dataset.editRecord); return; }
       const button = event.target.closest("[data-delete-record]");
       if (!button) return;
+      const nextRecords = records.filter((record) => record.id !== button.dataset.deleteRecord);
+      if (!saveRecords(nextRecords)) return;
       if (editingId === button.dataset.deleteRecord) exitEditMode({ clearForm: true });
-      records = records.filter((record) => record.id !== button.dataset.deleteRecord);
-      saveRecords(); render(); showMessage("該張裁單已刪除。", false);
+      render(); showMessage("該張裁單已刪除。", false);
     });
     render();
   }
