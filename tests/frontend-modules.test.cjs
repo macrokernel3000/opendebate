@@ -246,3 +246,92 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   pages.renderOverviewStats();
   assert.match(els.overviewStatsChart.innerHTML, /每月參賽隊次年度趨勢折線圖/);
 });
+
+test("home pages render summaries, timeline and upcoming events, and keep leaderboard controls working", () => {
+  const school = { code: "s1", name: "測試高中", type: "s" };
+  const rival = { code: "s2", name: "對手高中", type: "s" };
+  const homeStore = {
+    entities: [school, rival],
+    entityById: new Map([[school.code, school], [rival.code, rival]]),
+    entityForName(name) { return this.entities.find((entity) => entity.name === name); },
+    entityName(id, fallback = "") { return this.entityById.get(id)?.name || fallback; },
+  };
+  const homeRecord = {
+    ...record,
+    teams: { affirmative: school.name, negative: rival.name },
+    teamIds: { affirmative: school.code, negative: rival.code },
+    winner: school.code,
+  };
+  const homeHonors = [
+    { competitionName: "測試盃", honorType: "team", honorName: "冠軍", recipient: school.name, teamId: school.code, matchDate: "2026-01-01" },
+    { competitionName: "測試盃", honorType: "player", honorName: "全程優秀辯士", recipient: "林選手", team: school.name, teamId: school.code, matchDate: "2026-01-01" },
+    { competitionName: "測試盃", honorType: "team", honorName: "精神總錦標", recipient: school.name, teamId: school.code, matchDate: "2026-01-01" },
+  ];
+  const homeEvent = { ...events[0], records: [homeRecord], honors: homeHonors, latestDate: "2026-01-01" };
+  const fakeButton = (filter) => ({
+    dataset: { honorFilter: filter },
+    classList: { toggle() {} },
+    setAttribute() {},
+  });
+  const filters = [fakeButton("team"), fakeButton("individual"), fakeButton("otherOnly")];
+  const fakeDocument = { querySelectorAll(selector) { return selector === "[data-honor-filter]" ? filters : []; } };
+  const node = () => ({ innerHTML: "", textContent: "", dataset: {}, classList: { toggle() {} }, setAttribute() {} });
+  const els = {
+    statsBand: node(),
+    siteIntroductionTitle: node(),
+    eventTimeline: node(),
+    recentEvents: node(),
+    mobileRecentEvents: node(),
+    mobileEventCount: node(),
+    mobileMatchCount: node(),
+    mobileUpcomingEvents: node(),
+    schoolLeaderboard: node(),
+    mobileHonorRanking: node(),
+    gamesLeaderboard: node(),
+    winsLeaderboard: node(),
+    honorRangeToggle: node(),
+    honorLeaderboardTitle: node(),
+    gamesLeaderboardTitle: node(),
+    winsLeaderboardTitle: node(),
+    leaderboardBand: node(),
+    mobileHonorTitle: node(),
+  };
+  const upcoming = [{ name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" }];
+  const window = loadFactory("js/home-pages.js", { document: fakeDocument });
+  const pages = window.DebateHomePages.createHomePages({
+    els,
+    getEvents: () => [homeEvent],
+    getRecords: () => [homeRecord],
+    getHonors: () => homeHonors,
+    getUpcomingEvents: () => upcoming,
+    getSiteContent: () => ({ introTitle: "首頁測試標題" }),
+    store: homeStore,
+    escapeHtml,
+    formatDate,
+    unique,
+    honorSubject: (honor) => honor.recipient || honor.team,
+    entityPageLink: (id, label) => `<a>${escapeHtml(homeStore.entityName(id, label))}</a>`,
+    playerPageLink,
+    isSingleMatchBest: () => false,
+    isFullCourseBest: (honor) => honor.honorName === "全程最佳辯士",
+    isFullCourseExcellent: (honor) => honor.honorName === "全程優秀辯士",
+    isSingleMatchExcellent: () => false,
+  });
+
+  pages.renderHome();
+  assert.match(els.statsBand.innerHTML, /公開戰果.*1/);
+  assert.equal(els.siteIntroductionTitle.textContent, "首頁測試標題");
+  assert.match(els.eventTimeline.innerHTML, /未來盃/);
+  assert.match(els.eventTimeline.innerHTML, /測試盃/);
+  assert.match(els.recentEvents.innerHTML, /冠軍/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /測試會場/);
+  assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
+  assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");
+
+  pages.toggleHonorRange();
+  assert.equal(els.honorLeaderboardTitle.textContent, "全年度榮譽榜");
+  pages.toggleMobileHonorFilter("otherOnly");
+  assert.match(els.mobileHonorRanking.innerHTML, /精神總錦標|獎/);
+  pages.sortLeaderboard("gold");
+  pages.sortLeaderboard("invalid-key");
+});
