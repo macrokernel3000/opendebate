@@ -199,6 +199,7 @@ const { showView } = window.DebateRouter.createRouter({
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS,
   getKnownPlayers,
   store,
+  legacyEntityIds: { s126: "s027" },
   renderEvent,
   renderUpcomingEvent,
   renderEntityDetail,

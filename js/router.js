@@ -6,6 +6,7 @@
     getUpcomingEvents,
     getKnownPlayers,
     store,
+    legacyEntityIds = {},
     renderEvent,
     renderUpcomingEvent,
     renderEntityDetail,
@@ -45,7 +46,13 @@
       }
       if (schoolRoute) {
         try { schoolId = decodeURIComponent(schoolRoute[1]); } catch { schoolId = ""; }
+        const requestedSchoolId = schoolId;
+        const canonicalSchoolId = legacyEntityIds[schoolId];
+        if (canonicalSchoolId && store.entityById.has(canonicalSchoolId)) schoolId = canonicalSchoolId;
         if (!store.entityById.has(schoolId)) schoolId = "";
+        if (schoolId && requestedSchoolId !== schoolId) {
+          history.replaceState(null, "", `#school/${encodeURIComponent(schoolId)}`);
+        }
       }
       if (playerRoute) {
         try { playerName = decodeURIComponent(playerRoute[1]); } catch { playerName = ""; }
@@ -87,7 +94,8 @@
       if (target === "overview") els.eventDetail.innerHTML = "";
 
       const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
-      if (location.hash !== routeHash) {
+      const isLegacySchoolRoute = Boolean(schoolRoute && schoolId && decodeURIComponent(schoolRoute[1]) !== schoolId);
+      if (!isLegacySchoolRoute && location.hash !== routeHash) {
         if (!hasRenderedRoute) history.replaceState(null, "", routeHash);
         else history.pushState({ from: location.hash || "#home" }, "", routeHash);
       }
