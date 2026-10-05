@@ -194,6 +194,22 @@ test("long event notes collapse and render HTTPS sources as concise safe links",
   assert.doesNotMatch(target.innerHTML, /<a[^>]*>https:\/\/drive\.google\.com/);
 });
 
+test("long match notes collapse into a full-width disclosure with safe source links", () => {
+  const matchNote = "準決賽賽果；來源：https://example.com/results?id=1；由使用者依上傳評分單回報。";
+  const event = { ...events[0], records: [{ ...record, note: matchNote }] };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [event];
+  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderEvent(event.name, target);
+
+  assert.match(target.innerHTML, /<span class="match-note"><details class="match-note-disclosure"><summary>備註／來源<\/summary>/);
+  assert.match(target.innerHTML, /href="https:\/\/example\.com\/results\?id=1" target="_blank" rel="noopener noreferrer">來源連結 1<\/a>/);
+  assert.doesNotMatch(target.innerHTML, /<a[^>]*>https:\/\/example\.com/);
+  assert.match(fs.readFileSync(path.join(root, "styles.css"), "utf8"), /\.match-note \{ grid-column: 2 \/ -1;/);
+});
+
 test("entity pages keep event-specific topic explanations and player honors", () => {
   const target = { innerHTML: "" };
   const window = loadFactory("js/entity-pages.js", {

@@ -382,9 +382,13 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .match-day { margin-bottom: 26px; }
 .match-day-title { display: flex; align-items: center; gap: 10px; margin: 0 0 9px; color: var(--green); font-size: 14px; }
 .match-list { border: 1px solid var(--line); background: white; }
-.match-row { display: grid; grid-template-columns: 72px minmax(0, 1fr) 72px minmax(0, 1fr) 120px; align-items: center; gap: 10px; min-height: 58px; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+.match-row { display: grid; grid-template-columns: 72px minmax(0, 1fr) 72px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 58px; padding: 9px 12px; border-bottom: 1px solid var(--line); }
 .match-row:last-child { border-bottom: 0; }
 .match-place, .match-note { color: var(--muted); font-size: 12px; line-height: 1.5; }
+.match-note { grid-column: 2 / -1; overflow-wrap: anywhere; }
+.match-note-disclosure > summary { display: flex; align-items: center; min-height: 32px; color: var(--green); cursor: pointer; font-weight: 800; }
+.match-note-disclosure > span { display: block; padding: 2px 0 8px; }
+.match-note-disclosure a { color: var(--green); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; }
 .match-group-name { display: block; width: max-content; max-width: 100%; margin-top: 4px; border-radius: 999px; padding: 2px 5px; background: #f1f4eb; color: var(--green-dark); font-size: 9px; font-weight: 800; line-height: 1.2; overflow-wrap: anywhere; }
 .match-single-best { display: block; margin-top: 4px; color: var(--green-dark); font-size: 11px; font-weight: 750; }
 .match-single-best b { margin-right: 4px; color: var(--coral-text); }
@@ -677,7 +681,6 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .entity-trophy-card { min-height: 46px; padding-block: 7px; }
   .entity-trophy-heading { gap: 5px 8px; }
   .match-row { grid-template-columns: 58px minmax(0, 1fr) 62px minmax(0, 1fr); }
-  .match-note { grid-column: 2 / -1; }
 }
 
 @media (max-width: 640px) {
@@ -1010,6 +1013,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .match-place { font-size: 12px; line-height: 1.45; }
   .team-name { font-size: 13px; overflow-wrap: anywhere; }
   .match-note { font-size: 12px; line-height: 1.5; }
+  .match-note-disclosure > summary { min-height: 44px; }
   .match-score { gap: 4px; font-size: 16px; }
   .history-item { grid-template-columns: minmax(0, 1fr); gap: 6px; align-items: start; }
   .history-item .history-date { grid-column: 1; }

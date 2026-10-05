@@ -30,6 +30,12 @@
       return html + escapeHtml(text.slice(cursor));
     }
 
+    function renderMatchNote(note) {
+      const text = String(note || "公開賽果").trim();
+      if (text.length <= 28 && !/https:\/\//i.test(text)) return escapeHtml(text);
+      return `<details class="match-note-disclosure"><summary>備註／來源</summary><span>${renderMetadataNote(text)}</span></details>`;
+    }
+
     function renderUpcomingEvent(event, target = els.eventPageDetail) {
       if (!event) return;
       const titleLevel = target === els.eventPageDetail ? 1 : 2;
@@ -109,7 +115,7 @@
               <span class="team-name ${!hasScore && match.winner === match.teams?.affirmative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}${!hasScore && match.winner === match.teams?.affirmative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
               ${hasScore ? `<span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>` : '<span class="score-unreported" aria-label="比分未公告">未公告</span>'}
               <span class="team-name negative ${!hasScore && match.winner === match.teams?.negative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}${!hasScore && match.winner === match.teams?.negative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
-              <span class="match-note">${escapeHtml(match.note || "公開賽果")}${singleHonors.map((honor) => `<span class="match-single-best"><b>${honor.label}</b>${playerPageLink(honor.recipient)}</span>`).join("")}</span>
+              <span class="match-note">${renderMatchNote(match.note)}${singleHonors.map((honor) => `<span class="match-single-best"><b>${honor.label}</b>${playerPageLink(honor.recipient)}</span>`).join("")}</span>
             </div>`;
           }).join("")}</div>
         </section>`).join("");
