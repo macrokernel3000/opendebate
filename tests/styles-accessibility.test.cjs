@@ -73,3 +73,9 @@ test("personal and team record forms require the event and record owner", () => 
     assert.match(html, new RegExp(`<input\\b(?=[^>]*\\bid="${id}")(?=[^>]*\\brequired(?:\\s|>|=))[^>]*>`), `${id} should be required`);
   }
 });
+
+test("desktop and mobile home layouts each expose a primary heading", () => {
+  assert.match(html, /<h1 id="mobileRecentTitle">/);
+  assert.match(html, /<h1 id="timelineTitle">/);
+  assert.match(css, /\.mobile-home-section\s+\.section-heading\s+h1[^}]*font-size:\s*18px/);
+});

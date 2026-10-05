@@ -110,8 +110,9 @@ function entityPageDependencies(target) {
 
 test("event pages render upcoming details and recorded match results", () => {
   const window = loadFactory("js/event-pages.js");
-  const pages = window.DebateEventPages.createEventPages(eventPageDependencies());
-  const target = { innerHTML: "" };
+  const dependencies = eventPageDependencies();
+  const pages = window.DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
 
   pages.renderUpcomingEvent({
     name: "未來盃",
@@ -125,12 +126,17 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /比賽地點/);
   assert.match(target.innerHTML, /領隊會議/);
   assert.match(target.innerHTML, /2026-01-20 18:00/);
+  assert.match(target.innerHTML, /<h1>未來盃<\/h1>/);
 
   pages.renderEvent("測試盃", target);
   assert.match(target.innerHTML, /測試高中/);
   assert.match(target.innerHTML, /對手高中/);
   assert.match(target.innerHTML, /winner-score/);
   assert.match(target.innerHTML, /比賽結果/);
+  assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
+  const inlineTarget = { innerHTML: "" };
+  pages.renderEvent("測試盃", inlineTarget);
+  assert.match(inlineTarget.innerHTML, /<h2>測試盃<\/h2>/);
 });
 
 test("entity pages keep event-specific topic explanations and player honors", () => {
@@ -149,9 +155,11 @@ test("entity pages keep event-specific topic explanations and player honors", ()
   assert.match(playerHtml, /全程最佳辯士/);
   assert.match(playerHtml, /隊伍名單/);
   assert.match(playerHtml, /登場紀錄/);
+  assert.match(playerHtml, /<h1>林選手的辯論紀錄<\/h1>/);
 
   const schoolHtml = pages.renderEntityDetail(team, "schoolPageEntityDetail", true);
   assert.match(schoolHtml, /測試高中的完整紀錄/);
+  assert.match(schoolHtml, /<h1>測試高中的完整紀錄<\/h1>/);
   assert.doesNotMatch(schoolHtml, /<p class="kicker">s1<\/p>/);
   assert.match(schoolHtml, /冠軍/);
   assert.match(schoolHtml, /3：0/);

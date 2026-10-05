@@ -8,7 +8,7 @@
     if (!home) return false;
     try {
       const snapshot = JSON.parse(localStorage.getItem(storageKey) || "null");
-      if (snapshot?.version !== 1 || typeof snapshot.html !== "string") return false;
+      if (snapshot?.version !== 2 || typeof snapshot.html !== "string") return false;
       if (!Number.isFinite(snapshot.savedAt) || Date.now() - snapshot.savedAt > maxAge) {
         localStorage.removeItem(storageKey);
         return false;
@@ -28,7 +28,7 @@
     try {
       const html = home.innerHTML;
       if (!html || html.length > 1_500_000) return;
-      localStorage.setItem(storageKey, JSON.stringify({ version: 1, savedAt: Date.now(), generatedAt: generatedAt || "", html }));
+      localStorage.setItem(storageKey, JSON.stringify({ version: 2, savedAt: Date.now(), generatedAt: generatedAt || "", html }));
     } catch {
       // Storage can be unavailable or full; live rendering must continue normally.
     }

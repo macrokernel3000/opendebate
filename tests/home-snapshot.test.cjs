@@ -72,7 +72,7 @@ function setup({ snapshot, hash = "#home", search = "", now = 2_000_000_000_000,
 test("home snapshot restores valid content and hides it behind a deep link", () => {
   const savedAt = 1_999_000_000_000;
   const app = setup({
-    snapshot: { version: 1, savedAt, generatedAt: "2026-10-04", html: "<section>快照</section>" },
+    snapshot: { version: 2, savedAt, generatedAt: "2026-10-04", html: "<section>快照</section>" },
     hash: "#event/%E6%B8%AC%E8%A9%A6%E7%9B%83",
   });
 
@@ -84,13 +84,13 @@ test("home snapshot restores valid content and hides it behind a deep link", () 
 
 test("home snapshot rejects expired and unsupported entries", () => {
   const expired = setup({
-    snapshot: { version: 1, savedAt: 1_000, html: "過期" },
+    snapshot: { version: 2, savedAt: 1_000, html: "過期" },
   });
   assert.equal(expired.api.restored, false);
   assert.equal(expired.storage.has(storageKey), false);
 
   const unsupported = setup({
-    snapshot: { version: 2, savedAt: 1_999_000_000_000, html: "其他格式" },
+    snapshot: { version: 3, savedAt: 1_999_000_000_000, html: "其他格式" },
   });
   assert.equal(unsupported.api.restored, false);
   assert.equal(unsupported.home.innerHTML, "live homepage");
@@ -102,6 +102,7 @@ test("snapshot save refreshes live content but skips warning and oversized pages
   app.api.save("2026-10-05T10:00:00");
   const saved = JSON.parse(app.storage.get(storageKey));
   assert.equal(saved.html, "最新首頁");
+  assert.equal(saved.version, 2);
   assert.equal(saved.generatedAt, "2026-10-05T10:00:00");
 
   app.home.innerHTML = "<p data-snapshot-warning>保留快照</p>";
@@ -119,7 +120,7 @@ test("failed refresh warning appears once only when a snapshot was restored", ()
   assert.equal(fresh.warnings.length, 0);
 
   const restored = setup({
-    snapshot: { version: 1, savedAt: 1_999_000_000_000, html: "可讀首頁" },
+    snapshot: { version: 2, savedAt: 1_999_000_000_000, html: "可讀首頁" },
   });
   assert.equal(restored.api.showUnavailable(), true);
   assert.equal(restored.warnings.length, 1);
