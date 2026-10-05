@@ -12,18 +12,27 @@
     let row = [];
     let value = "";
     let quoted = false;
+    let quoteClosed = false;
     const source = String(text ?? "").replace(/^\uFEFF/, "");
     for (let index = 0; index < source.length; index += 1) {
       const character = source[index];
-      if (quoted && character === '"' && source[index + 1] === '"') { value += '"'; index += 1; }
-      else if (character === '"') quoted = !quoted;
-      else if (character === "," && !quoted) { row.push(value); value = ""; }
-      else if ((character === "\n" || character === "\r") && !quoted) {
+      if (quoted) {
+        if (character === '"' && source[index + 1] === '"') { value += '"'; index += 1; }
+        else if (character === '"') { quoted = false; quoteClosed = true; }
+        else value += character;
+      } else if (quoteClosed && character !== "," && character !== "\n" && character !== "\r") {
+        throw new Error("invalid csv quoting");
+      } else if (character === '"') {
+        if (value !== "") throw new Error("invalid csv quoting");
+        quoted = true;
+      } else if (character === ",") { row.push(value); value = ""; quoteClosed = false; }
+      else if (character === "\n" || character === "\r") {
         if (character === "\r" && source[index + 1] === "\n") index += 1;
-        row.push(value); rows.push(row); row = []; value = "";
+        row.push(value); rows.push(row); row = []; value = ""; quoteClosed = false;
       } else value += character;
     }
-    if (value || row.length) { row.push(value); rows.push(row); }
+    if (quoted) throw new Error("unterminated csv quote");
+    if (value || row.length || quoteClosed) { row.push(value); rows.push(row); }
     return rows.filter((item) => item.some((entry) => entry.trim() !== ""));
   }
 

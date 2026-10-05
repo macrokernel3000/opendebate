@@ -26,6 +26,12 @@ test("personal CSV round-trips BOM, CRLF, commas, quotes and multiline cells", (
   assert.deepEqual(Array.from(csv.parse(serialized), (row) => Array.from(row)), expected);
 });
 
+test("personal CSV rejects malformed quotation instead of silently shifting fields", () => {
+  assert.throws(() => csv.parse('標題,備註\n測試,"引號未結束'), /unterminated csv quote/);
+  assert.throws(() => csv.parse('標題,備註\n錯誤欄位,未"跳脫'), /invalid csv quoting/);
+  assert.throws(() => csv.parse('標題,備註\n"引號已結束"多餘文字,其他'), /invalid csv quoting/);
+});
+
 test("personal CSV number and maximum validation accepts blanks and decimal scoring", () => {
   assert.equal(csv.number(""), "");
   assert.equal(csv.number(" 2.5 "), 2.5);
