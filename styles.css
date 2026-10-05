@@ -682,7 +682,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .upcoming-section-heading .section-heading h2 { font-size: 21px; }
   .upcoming-section-heading .kicker { margin-bottom: 3px; }
   .calendar-link-section { width: 100%; justify-content: flex-start; gap: 9px; }
-  .calendar-subscribe-button { min-height: 36px; padding: 0 12px; font-size: 11px; }
+  .calendar-subscribe-button { min-height: 44px; padding: 0 12px; font-size: 11px; }
   .calendar-platform-note { max-width: 210px; font-size: 9px; line-height: 1.35; }
   #homeView.is-hidden { display: none; }
   #homeView > .mobile-home { order: 1; display: grid; grid-template-columns: minmax(0, 1fr); min-width: 0; gap: 11px; padding-top: 12px; padding-bottom: 8px; }
@@ -740,13 +740,13 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #homeView > .leaderboard-band .leaderboard-controls { width: calc(100% - 24px); margin: 0 auto 10px; font-size: 10px; }
   #homeView > .leaderboard-band .leaderboard-range-legend { gap: 4px; white-space: nowrap; }
   #homeView > .leaderboard-band[data-range="all"] { background: #fff1bf; }
-  #homeView > .leaderboard-band .honor-range-toggle { min-height: 34px; flex: 0 0 auto; padding: 0 10px; font-size: 10px; }
+  #homeView > .leaderboard-band .honor-range-toggle { min-height: 44px; flex: 0 0 auto; padding: 0 10px; font-size: 10px; }
   #homeView > .leaderboard-band .leaderboard-panel { min-width: 0; padding: 10px; border-top-width: 4px; border-radius: 13px; box-shadow: 0 3px 12px rgba(23,33,29,.07); }
   #homeView > .leaderboard-band .olympic-panel { margin: 0 12px 12px; padding: 12px; }
   #homeView > .leaderboard-band .olympic-panel h3 { margin-bottom: 9px; font-size: 16px; }
   #homeView > .leaderboard-band .olympic-filters { display: none; }
   #homeView > .leaderboard-band .mobile-olympic-filters { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; margin-bottom: 8px; }
-  #homeView > .leaderboard-band .olympic-filter { min-width: 0; min-height: 32px; justify-content: center; gap: 4px; padding: 3px 4px; font-size: 10px; white-space: nowrap; }
+  #homeView > .leaderboard-band .olympic-filter { min-width: 0; min-height: 44px; justify-content: center; gap: 4px; padding: 3px 4px; font-size: 10px; white-space: nowrap; }
   #homeView > .leaderboard-band .olympic-filter .trophy-medal { width: 19px; height: 19px; font-size: 9px; }
   #homeView > .leaderboard-band .medal-set { display: inline-flex; align-items: center; gap: 1px; }
   #homeView > .leaderboard-band .medal-set i { display: inline-grid; width: 15px; height: 18px; place-items: center; border-radius: 5px; font-size: 8px; font-style: normal; }
@@ -756,12 +756,12 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #homeView > .leaderboard-band .medal-set .white { background: #fff; box-shadow: 0 1px 2px #0003; }
   #homeView > .leaderboard-band .olympic-table-wrap { display: none; }
   #homeView > .leaderboard-band .mobile-honor-ranking { display: grid; width: 100%; min-height: 190px; grid-template-columns: minmax(0, 1fr); gap: 0; margin: 0; padding: 0; overflow: visible; list-style: none; }
-  #homeView > .leaderboard-band .mobile-honor-ranking li { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-height: 38px; border-bottom: 1px solid var(--line); }
+  #homeView > .leaderboard-band .mobile-honor-ranking li { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; align-items: center; gap: 8px; min-height: 44px; border-bottom: 1px solid var(--line); }
   #homeView > .leaderboard-band .mobile-honor-ranking li:last-child { border-bottom: 0; }
   #homeView > .leaderboard-band .mobile-honor-rank { display: grid; width: 22px; height: 22px; place-items: center; border-radius: 50%; background: var(--soft); font-size: 10px; font-weight: 850; }
   #homeView > .leaderboard-band .mobile-honor-ranking li:first-child .mobile-honor-rank { background: var(--yellow); }
   #homeView > .leaderboard-band .mobile-honor-ranking strong { overflow: hidden; font-size: 12px; line-height: 1.2; text-overflow: ellipsis; white-space: nowrap; }
-  #homeView > .leaderboard-band .mobile-honor-ranking strong .inline-entity-link { display: inline-flex; min-height: 24px; align-items: center; }
+  #homeView > .leaderboard-band .mobile-honor-ranking strong .inline-entity-link { display: inline-flex; min-height: 44px; align-items: center; }
   #homeView > .leaderboard-band .mobile-honor-values { display: flex; min-width: 0; align-items: center; justify-content: flex-end; flex-wrap: nowrap; gap: 3px; color: var(--green-dark); white-space: nowrap; }
   #homeView > .leaderboard-band .mobile-team-awards { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 3px; }
   #homeView > .leaderboard-band .mobile-award-value { display: inline-flex; flex: 0 0 auto; align-items: center; gap: 1px; font-size: 9px; font-weight: 850; white-space: nowrap; }

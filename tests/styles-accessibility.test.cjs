@@ -60,6 +60,14 @@ test("very narrow home layouts stack the honor range controls instead of overflo
   assert.match(css, /@media\s*\(max-width:\s*380px\)[\s\S]{0,350}\.leaderboard-range-legend\s*\{[^}]*white-space:\s*normal/);
 });
 
+test("mobile home calendar and honor controls keep 44px touch targets", () => {
+  assert.match(css, /\.calendar-subscribe-button\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /#homeView\s*>\s*\.leaderboard-band\s+\.honor-range-toggle\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /#homeView\s*>\s*\.leaderboard-band\s+\.olympic-filter\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /#homeView\s*>\s*\.leaderboard-band\s+\.mobile-honor-ranking\s+li\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /\.mobile-honor-ranking\s+strong\s+\.inline-entity-link\s*\{[^}]*min-height:\s*44px/);
+});
+
 test("personal and team record forms require the event and record owner", () => {
   for (const id of ["personalCompetition", "personalName", "teamCompetition", "teamName"]) {
     assert.match(html, new RegExp(`<input\\b(?=[^>]*\\bid="${id}")(?=[^>]*\\brequired(?:\\s|>|=))[^>]*>`), `${id} should be required`);
