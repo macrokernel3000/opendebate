@@ -44,6 +44,32 @@ def warn(message):
     print(message)
 
 
+def format_public_json(value, level=0):
+    """Keep generated data readable while placing each array record on one line."""
+    indent = "  " * level
+    if isinstance(value, dict):
+        if not value:
+            return "{}"
+        entries = [
+            f'{"  " * (level + 1)}{json.dumps(key, ensure_ascii=False)}: {format_public_json(item, level + 1)}'
+            for key, item in value.items()
+        ]
+        return "{\n" + ",\n".join(entries) + f"\n{indent}}}"
+    if isinstance(value, list):
+        if not value:
+            return "[]"
+        entries = []
+        for item in value:
+            prefix = "  " * (level + 1)
+            if isinstance(item, dict):
+                rendered = json.dumps(item, ensure_ascii=False, separators=(", ", ": "))
+            else:
+                rendered = format_public_json(item, level + 1)
+            entries.append(prefix + rendered)
+        return "[\n" + ",\n".join(entries) + f"\n{indent}]"
+    return json.dumps(value, ensure_ascii=False)
+
+
 def clean(value):
     return str(value or "").strip()
 
@@ -563,7 +589,7 @@ def build(check_only=False, fail_on_warnings=False):
         "eventMetadata": event_metadata,
         "eventRosters": event_rosters,
     }
-    JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + json.dumps(payload, ensure_ascii=False, indent=2) + ";\n", encoding="utf-8")
+    JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + format_public_json(payload) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
     events = event_names(records, honors, topics)

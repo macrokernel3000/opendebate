@@ -1,4 +1,5 @@
 import os
+import json
 import sys
 import unittest
 import tempfile
@@ -12,6 +13,19 @@ import build_data
 
 
 class BuildDataTests(unittest.TestCase):
+    def test_public_json_keeps_records_on_readable_compact_lines(self):
+        payload = {
+            "records": [
+                {"competitionName": "測試盃", "teams": {"affirmative": "甲校", "negative": "乙校"}},
+                {"competitionName": "另一盃", "teams": {"affirmative": "丙校", "negative": "丁校"}},
+            ],
+            "eventMetadata": {"測試盃": {"venue": "測試場地"}},
+        }
+        formatted = build_data.format_public_json(payload)
+        self.assertEqual(json.loads(formatted), payload)
+        self.assertIn('    {"competitionName": "測試盃", "teams": {"affirmative": "甲校", "negative": "乙校"}}', formatted)
+        self.assertLess(len(formatted), len(json.dumps(payload, ensure_ascii=False, indent=2)))
+
     def test_event_metadata_dates_are_optional(self):
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "event-metadata.csv"
