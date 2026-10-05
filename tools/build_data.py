@@ -297,6 +297,7 @@ def load_event_metadata():
                 "startDate": normalize_date(row.get("開始日期")),
                 "endDate": normalize_date(row.get("結束日期")),
                 "organizer": clean(row.get("主辦單位")),
+                "executionUnit": clean(row.get("執行單位")),
                 "location": clean(row.get("舉辦地點")),
                 "note": clean(row.get("備註")),
                 "awardSelectionCriteria": clean(row.get("個人獎遴選標準")),

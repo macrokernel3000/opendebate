@@ -44,8 +44,8 @@
         ? `${formatDate(event.startDate)}–${formatDate(event.endDate)}`
         : formatDate(event.startDate || event.endDate || "");
       const metadata = [
-        event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : "",
-        event.location ? `<div><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
+        event.organizer || event.executionUnit ? `<div class="event-meta-parties">${event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : ""}${event.executionUnit ? `<div><span>執行單位</span><strong>${escapeHtml(event.executionUnit)}</strong></div>` : ""}</div>` : "",
+        event.location ? `<div class="event-meta-place"><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
       ].filter(Boolean).join("");
       const keyDates = (event.keyDates || []).filter((item) => item && item.label && (item.date || item.note)).map((item) => `
         <li>${item.date ? `<time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}${item.time ? ` ${escapeHtml(item.time)}` : ""}</time>` : ""}<div><strong>${escapeHtml(item.label)}</strong>${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}</div></li>`).join("");
