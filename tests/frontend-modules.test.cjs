@@ -467,6 +467,20 @@ test("team match results require enough decided ballots and preserve tie states"
   assert.equal(resolve([ballot(8, 10), ballot(8, 10), ballot(10, 8)]).status, "本場落敗");
 });
 
+test("team CSV imports skip repeated backup rows without collapsing distinct ballots", () => {
+  const window = loadFactory("js/team-records.js");
+  const uniqueImports = window.DebateTeamRecords.uniqueImportedRecords;
+  const original = {
+    id: "original", competition: "測試盃", matchNumber: 1, matchDate: "2026-01-01", teamName: "測試隊",
+    side: "正", judge: "裁判甲", createdAt: "2026-01-01T01:00:00.000Z", affP1Speech: 10, negP1Speech: 8,
+  };
+  const sameCsvRow = { ...original, id: "new-import-id" };
+  const anotherBallot = { ...original, id: "another-id", judge: "裁判乙", createdAt: "2026-01-01T01:05:00.000Z" };
+
+  assert.deepEqual(Array.from(uniqueImports([original], [sameCsvRow, sameCsvRow, anotherBallot]), (item) => item.judge), ["裁判乙"]);
+  assert.deepEqual(Array.from(uniqueImports([], [original, sameCsvRow, anotherBallot]), (item) => item.judge), ["裁判甲", "裁判乙"]);
+});
+
 test("personal record save feedback does not claim empty scores updated averages", () => {
   const source = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
   assert.match(source, /裁單已儲存；已填寫的分數會納入平均。/);
