@@ -298,6 +298,26 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual([record["teams"]["affirmative"] for record in records], ["測試高中A", "測試高中B"])
         self.assertEqual(sum(entry["name"] == "測試高中" for entry in entries), 1)
 
+    def test_entity_building_reuses_unambiguous_normalized_aliases(self):
+        records = [{
+            "competitionName": "測試盃",
+            "teams": {"affirmative": "臺南二中A", "negative": "Ａ校"},
+            "players": {"affirmative": [], "negative": []},
+        }]
+        registry = [
+            {"code": "s001", "type": "s", "name": "台南二中", "aliases": "台南二中A"},
+            {"code": "s002", "type": "s", "name": "A校", "aliases": ""},
+        ]
+        with tempfile.TemporaryDirectory() as folder, patch.object(build_data, "REGISTRY_PATH", Path(folder) / "entity-registry.csv"):
+            entries, lookup = build_data.build_entities(records, [], registry)
+            build_data.attach_entities(records, [], lookup)
+
+        self.assertEqual(records[0]["teamIds"], {"affirmative": "s001", "negative": "s002"})
+        self.assertEqual(records[0]["teams"]["affirmative"], "臺南二中A")
+        self.assertEqual(records[0]["teams"]["negative"], "Ａ校")
+        self.assertIn("臺南二中A", next(item["aliases"] for item in entries if item["code"] == "s001"))
+        self.assertIn("Ａ校", next(item["aliases"] for item in entries if item["code"] == "s002"))
+
     def test_roster_validation_matches_aliases_without_collapsing_school_teams(self):
         records = [
             {"competitionName": "測試盃", "teams": {"affirmative": "測試高中A", "negative": "甲校"}},

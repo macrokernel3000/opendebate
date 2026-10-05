@@ -110,14 +110,35 @@ def build_entities(records, honors, registry_entries, registry_path):
 
     entries = [dict(entry) for entry in registry_entries]
     alias_lookup = {entry["name"]: entry for entry in entries}
+    normalized_alias_lookup = {}
+    ambiguous_aliases = set()
     for entry in entries:
-        for alias in entry["aliases"].split("|"):
-            if clean(alias):
-                alias_lookup.setdefault(clean(alias), entry)
+        for alias in (entry["name"], *entry["aliases"].split("|")):
+            alias = clean(alias)
+            if not alias:
+                continue
+            alias_lookup.setdefault(alias, entry)
+            normalized = normalize_entity_label(alias)
+            previous = normalized_alias_lookup.get(normalized)
+            if previous and previous["code"] != entry["code"]:
+                normalized_alias_lookup.pop(normalized, None)
+                ambiguous_aliases.add(normalized)
+            elif normalized not in ambiguous_aliases:
+                normalized_alias_lookup[normalized] = entry
 
     grouped = {}
     for name in sorted(raw_names):
         if not name or name in alias_lookup:
+            continue
+        normalized = normalize_entity_label(name)
+        matched_entry = None if normalized in ambiguous_aliases else normalized_alias_lookup.get(normalized)
+        if matched_entry:
+            aliases = [alias for alias in matched_entry["aliases"].split("|") if clean(alias)]
+            if name not in aliases and name != matched_entry["name"]:
+                aliases.append(name)
+                matched_entry["aliases"] = "|".join(aliases)
+            alias_lookup[name] = matched_entry
+            normalized_alias_lookup[normalized] = matched_entry
             continue
         grouped.setdefault(entity_base_name(name), []).append(name)
 
