@@ -296,6 +296,38 @@ test("entity pages keep event-specific topic explanations and player honors", ()
   assert.match(schoolHtml, /3：0/);
 });
 
+test("entity detail pages escape hostile route and public data names", () => {
+  const payload = '"><img src=x onerror=alert(1)>';
+  const target = { innerHTML: "" };
+  const dependencies = entityPageDependencies(target);
+  dependencies.records = [{
+    ...record,
+    competitionName: payload,
+    teams: { affirmative: payload, negative: "對手高中" },
+    players: { affirmative: [payload], negative: [] },
+  }];
+  dependencies.honors = [{ ...fullCourseHonor, competitionName: payload, honorName: payload, recipient: payload, team: payload }];
+  dependencies.topics = [{ topicId: "hostile-topic", topic: payload, explanation: payload, competitionName: payload }];
+  dependencies.getEvents = () => [{ ...events[0], name: payload, records: [], honors: [], topics: dependencies.topics }];
+  dependencies.playerRosterEntries = () => [{ team: payload, competitionName: payload, leaders: [payload], players: [payload] }];
+  dependencies.entityPageLink = (id, label) => `<button data-entity-route="${escapeHtml(id)}">${escapeHtml(label)}</button>`;
+  dependencies.playerPageLink = (name) => `<button data-player-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
+  const window = loadFactory("js/entity-pages.js", { DEBATE_PUBLIC_DATA: { eventRosters: {} } });
+  const pages = window.DebateEntityPages.createEntityPages(dependencies);
+
+  const playerHtml = pages.renderPlayerDetail(payload);
+  assert.doesNotMatch(playerHtml, /<img src=x/);
+  assert.match(playerHtml, /&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+
+  pages.renderTopic("hostile-topic");
+  assert.doesNotMatch(target.innerHTML, /<img src=x/);
+  assert.match(target.innerHTML, /data-event-route="&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;"/);
+
+  const schoolHtml = pages.renderEntityDetail({ ...team, name: payload }, "safeDetail", true);
+  assert.doesNotMatch(schoolHtml, /<img src=x/);
+  assert.match(schoolHtml, /&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+});
+
 test("overview separates schools and teams and redraws selected monthly metrics", () => {
   const school = { code: "s1", name: "測試高中", type: "s", aliases: "測試" };
   const club = { code: "t1", name: "測試辯論隊", type: "t", aliases: "測試隊" };
@@ -321,6 +353,7 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     dates: ["2026-02-01"],
     metadata: { startDate: "2026-02-01" },
   };
+  let overviewTopics = events[0].topics;
   const parseInputs = (html, checkedOnly = false) => [...html.matchAll(/<input type="checkbox" value="(\d+)"( checked)?/g)]
     .filter((match) => !checkedOnly || Boolean(match[2]))
     .map((match) => ({ value: match[1], focus() {} }));
@@ -352,6 +385,9 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     overviewTeamSortDirection: node("desc"),
     overviewTeamMeta: node(),
     overviewTeamList: node(),
+    overviewTopicFilter: node(""),
+    overviewTopicMeta: node(),
+    overviewTopicList: node(),
   };
   const entities = [school, club, rival, otherRival];
   const overviewStore = {
@@ -368,7 +404,7 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   const pages = window.DebateOverviewPages.createOverviewPages({
     els,
     getEvents: () => [overviewEvent],
-    getTopics: () => events[0].topics,
+    getTopics: () => overviewTopics,
     getRecords: () => [overviewRecord],
     getHonors: () => [],
     store: overviewStore,
@@ -407,6 +443,16 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   assert.match(els.overviewStatsChart.innerHTML, /每月參賽隊次年度趨勢折線圖/);
   assert.match(els.overviewStatsChart.attributes["aria-label"], /參賽隊次年度趨勢折線圖/);
   assert.match(els.overviewStatsChart.innerHTML, /2026 年 2 月：4 隊次/);
+
+  const payload = '"><img src=x onerror=alert(1)>';
+  school.name = payload;
+  pages.renderOverviewTeams();
+  assert.doesNotMatch(els.overviewTeamList.innerHTML, /<img src=x/);
+  assert.match(els.overviewTeamList.innerHTML, /&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+  overviewTopics = [{ topicId: payload, topic: payload, competitionName: payload, explanation: payload }];
+  pages.renderOverviewTopics();
+  assert.doesNotMatch(els.overviewTopicList.innerHTML, /<img src=x/);
+  assert.match(els.overviewTopicList.innerHTML, /data-topic-route="&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;"/);
 });
 
 test("personal score entry shares CSV maximum and rank validation", () => {
@@ -524,6 +570,20 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
   assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");
 
+  const payload = '"><img src=x onerror=alert(1)>';
+  homeEvent.name = payload;
+  homeEvent.topics = [{ topicId: "test", topic: payload }];
+  homeHonors[0].recipient = payload;
+  upcoming[0].name = payload;
+  upcoming[0].startDate = '2099-01-<img src=x onerror=alert(2)>';
+  upcoming[0].endDate = '2099-01-<img src=x onerror=alert(3)>';
+  upcoming[0].location = payload;
+  pages.renderHome();
+  for (const html of [els.recentEvents.innerHTML, els.mobileRecentEvents.innerHTML, els.mobileUpcomingEvents.innerHTML, els.eventTimeline.innerHTML]) {
+    assert.doesNotMatch(html, /<img src=x/);
+  }
+  assert.match(els.mobileUpcomingEvents.innerHTML, /&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+
   pages.toggleHonorRange();
   assert.equal(els.honorLeaderboardTitle.textContent, "全年度榮譽榜");
   pages.toggleMobileHonorFilter("otherOnly");
@@ -604,6 +664,13 @@ test("search pages cover empty, alias, player, topic and unmatched search states
   pages.renderSearch("查無此資料");
   assert.match(els.searchMeta.textContent, /沒有找到/);
   assert.match(els.searchResults.innerHTML, /目前沒有相符資料/);
+
+  const payload = '"><img src=x onerror=alert(1)>';
+  school.name = payload;
+  searchRecord.teams.affirmative = payload;
+  pages.renderSearch("測試別名");
+  assert.doesNotMatch(els.searchResults.innerHTML, /<img src=x/);
+  assert.match(els.searchResults.innerHTML, /data-entity-id="s1"><h3>🏫 &quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
 });
 
 test("record storage reports write failures and honors native form validation", () => {
