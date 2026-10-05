@@ -51,7 +51,7 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
         # actions/checkout v7.0.1, pinned to its official tag commit.
