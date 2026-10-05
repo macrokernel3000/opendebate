@@ -48,10 +48,15 @@ def normalize_output(path, content):
 
 
 def has_meaningful_changes(baseline, generated):
-    for path in GENERATED_FILES:
-        if normalize_output(path, baseline[path]) != normalize_output(path, generated[path]):
-            return True
-    return False
+    return bool(meaningful_change_paths(baseline, generated))
+
+
+def meaningful_change_paths(baseline, generated):
+    """Return generated files whose normalized output differs from the baseline."""
+    return [
+        path for path in GENERATED_FILES
+        if normalize_output(path, baseline[path]) != normalize_output(path, generated[path])
+    ]
 
 
 def _report_value(pattern, report):

@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - "data/public-data*.csv"
+      - "data/public-data.js"
+      - "data/update-report.txt"
       - "data/entity-registry.csv"
       - "data/event-metadata.csv"
       - "data/event-rosters.csv"
@@ -12,12 +14,16 @@ on:
       - "data/upcoming-events.js"
       - "tools/build_data.py"
       - "tools/calendar_feed.py"
+      - "tools/check_generated.py"
       - "tools/data_validation.py"
       - "tools/entity_registry.py"
       - "tools/prepare_sheet_update.py"
       - "tools/source_reader.py"
       - "tools/xlsx_reader.py"
       - "tests/**"
+      - "calendar.ics"
+      - "debate-records.html"
+      - "sitemap.xml"
       - "app.js"
       - "index.html"
       - "styles.css"
@@ -26,6 +32,8 @@ on:
   pull_request:
     paths:
       - "data/public-data*.csv"
+      - "data/public-data.js"
+      - "data/update-report.txt"
       - "data/entity-registry.csv"
       - "data/event-metadata.csv"
       - "data/event-rosters.csv"
@@ -33,12 +41,16 @@ on:
       - "data/upcoming-events.js"
       - "tools/build_data.py"
       - "tools/calendar_feed.py"
+      - "tools/check_generated.py"
       - "tools/data_validation.py"
       - "tools/entity_registry.py"
       - "tools/prepare_sheet_update.py"
       - "tools/source_reader.py"
       - "tools/xlsx_reader.py"
       - "tests/**"
+      - "calendar.ics"
+      - "debate-records.html"
+      - "sitemap.xml"
       - "app.js"
       - "index.html"
       - "styles.css"
@@ -74,6 +86,16 @@ jobs:
 
       - name: Run data build checks
         run: python tools/build_data.py --check --fail-on-warnings
+
+      - name: Rebuild generated website files
+        if: github.head_ref != 'automation/google-sheet-data-update'
+        run: python tools/build_data.py
+
+      - name: Check committed generated files are current
+        # Google Sheet PR outputs are built and validated from a downloaded XLSX
+        # in update-data-from-google-sheet.yml, not from the CSVs in this repo.
+        if: github.head_ref != 'automation/google-sheet-data-update'
+        run: python tools/check_generated.py --base-ref HEAD
 
       - name: Run builder unit tests
         run: python -m unittest discover -s tests -v

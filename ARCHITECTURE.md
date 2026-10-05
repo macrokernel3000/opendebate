@@ -43,7 +43,7 @@
 6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
 7. 更新 `index.html` 的資源版本，避免瀏覽器讀到舊快取。
 
-`.github/workflows/check-data.yml` 會在相關資料、程式或流程變更時執行唯讀預檢與 Python 單元測試；Google 試算表匯入流程也會先預檢，並提交行事曆生成檔。
+`.github/workflows/check-data.yml` 會在相關資料、程式或流程變更時先執行唯讀預檢，再於 CI 工作區重建網站產物，並比對已提交產物是否仍由 repo 內來源正確生成；比對會忽略建置時間、快取版本及行事曆時間戳。若有實質差異，檢查會指出檔名並要求一併提交更新後的生成檔。流程最後執行前端與 Python 單元測試。Google 試算表專用 PR 例外：生成資料來自即時下載的 XLSX，因此由試算表 workflow 自己完成 XLSX 預檢與重建，不能拿 repo 內 CSV 作錯誤的基準；該流程在生成變更後開啟待審查 PR。
 
 不要手動維護 `data/public-data.js` 中的大量資料；應修改試算表或 CSV，再執行更新工具。
 

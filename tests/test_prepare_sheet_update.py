@@ -1,7 +1,12 @@
 import json
 import unittest
 
-from tools.prepare_sheet_update import GENERATED_FILES, create_summary, has_meaningful_changes
+from tools.prepare_sheet_update import (
+    GENERATED_FILES,
+    create_summary,
+    has_meaningful_changes,
+    meaningful_change_paths,
+)
 
 
 def generated_files(public_data=None, report="report", index="index", calendar="calendar", sitemap="sitemap"):
@@ -44,6 +49,16 @@ class PrepareSheetUpdateTests(unittest.TestCase):
         after = generated_files()
         after["debate-records.html"] = "updated summary"
         self.assertTrue(has_meaningful_changes(before, after))
+
+    def test_reports_exact_stale_generated_files(self):
+        before = generated_files()
+        after = generated_files()
+        after["data/public-data.js"] = after["data/public-data.js"].replace('"score": 1', '"score": 2')
+        after["calendar.ics"] = "updated calendar"
+        self.assertEqual(
+            meaningful_change_paths(before, after),
+            ["data/public-data.js", "calendar.ics"],
+        )
 
     def test_summary_contains_before_and_after_counts_and_warnings(self):
         before = "目前收錄盃賽：4 個\n資料筆數：10 場\n公告隊伍名單：2 隊\n單位名冊：8 筆"
