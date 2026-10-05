@@ -12,6 +12,7 @@
   const CHART_METRICS = METRICS.filter((metric) => ["speech", "question", "defense"].includes(metric.key));
   let initialized = false;
   let records = [];
+  let storageReadFailed = false;
   let eventNames = [];
   let editingId = "";
   let expandedChartTrigger = null;
@@ -43,16 +44,20 @@
   }
 
   function readRecords() {
-    try {
-      const stored = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-      return Array.isArray(stored) ? stored.map(normalizeRecord) : [];
-    } catch (_error) {
+    const result = window.DebateRecordStorage.load(() => localStorage, STORAGE_KEY);
+    if (!result.ok) {
+      storageReadFailed = true;
       return [];
     }
+    return result.records.map(normalizeRecord);
   }
 
   function saveRecords(nextRecords) {
-    if (!window.DebateRecordStorage.save(localStorage, STORAGE_KEY, nextRecords)) {
+    if (storageReadFailed) {
+      showMessage(window.DebateRecordStorage.loadFailureMessage(), true);
+      return false;
+    }
+    if (!window.DebateRecordStorage.save(() => localStorage, STORAGE_KEY, nextRecords)) {
       showMessage(window.DebateRecordStorage.saveFailureMessage(records.length), true);
       return false;
     }
@@ -306,8 +311,8 @@
       <article class="record-stat"><span>累積賽事</span><strong>${new Set(records.filter((record) => record.matchNumber !== "" && record.matchNumber !== undefined).map((record) => `${record.competition}|${record.matchNumber}`)).size}</strong></article>`;
     renderRadarChart();
     renderProgressChart();
-    els.exportButton.disabled = !records.length;
-    els.deleteAllButton.disabled = !records.length;
+    els.exportButton.disabled = storageReadFailed || !records.length;
+    els.deleteAllButton.disabled = storageReadFailed || !records.length;
     els.list.innerHTML = renderRecordGroups();
   }
 
@@ -429,6 +434,10 @@
   }
 
   function exportCsv() {
+    if (storageReadFailed) {
+      showMessage(window.DebateRecordStorage.loadFailureMessage(), true);
+      return;
+    }
     if (!records.length) return;
     const rows = [CSV_HEADERS, ...records.map((record) => [
       record.competition, record.matchNumber, record.matchDate, record.name, record.judge,
@@ -503,6 +512,10 @@
     const eventEntries = events.map((event) => typeof event === "string" ? { name: event } : event).filter((event) => event.name);
     eventNames = eventEntries.map((event) => event.name).sort((a, b) => b.localeCompare(a, "zh-Hant"));
     records = readRecords().map(normalizeRecord);
+    if (storageReadFailed) {
+      [els.nextButton, els.submitButton, els.exportButton, els.deleteAllButton, els.importInput].forEach((control) => { control.disabled = true; });
+      showMessage(window.DebateRecordStorage.loadFailureMessage(), true);
+    }
     els.matchDate.value = "";
     els.competition.addEventListener("input", () => {
       activeCompetitionIndex = -1;
