@@ -18,6 +18,20 @@
     main.scrollIntoView({ behavior, block: "start" });
   }
 
+  function syncSearchQuery(searchField, currentLocation = location, currentHistory = history) {
+    if (!searchField || currentLocation.hash !== "#search") return false;
+    try {
+      const url = new URL(currentLocation.href);
+      const query = searchField.value.trim();
+      if (query) url.searchParams.set("q", query);
+      else url.searchParams.delete("q");
+      currentHistory.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+      return true;
+    } catch {
+      return false;
+    }
+  }
+
   function keepDialogTabFocus(dialog, event) {
     if (!dialog || event.key !== "Tab") return false;
     const focusable = [...dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
@@ -254,8 +268,11 @@
       const card = event.target.closest("[data-overview-team-id]");
       if (card) selectOverviewTeam(card.dataset.overviewTeamId);
     });
-    els.globalSearch.addEventListener("input", () => renderSearch(els.globalSearch.value.trim()));
-    els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); els.globalSearch.focus(); });
+    els.globalSearch.addEventListener("input", () => {
+      renderSearch(els.globalSearch.value.trim());
+      syncSearchQuery(els.globalSearch);
+    });
+    els.clearSearch.addEventListener("click", () => { els.globalSearch.value = ""; renderSearch(""); syncSearchQuery(els.globalSearch); els.globalSearch.focus(); });
     els.searchResults.addEventListener("click", (event) => {
       const card = event.target.closest("[data-entity-id]");
       if (card) selectEntity(card.dataset.entityId);
@@ -263,5 +280,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions, createSnapshotNavigator, setChartExpansionAvailability, keepDialogTabFocus, skipToMainContent };
+  window.DebateInteractions = { setupInteractions, createSnapshotNavigator, setChartExpansionAvailability, keepDialogTabFocus, skipToMainContent, syncSearchQuery };
 }());

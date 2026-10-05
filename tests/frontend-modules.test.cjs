@@ -57,7 +57,7 @@ const events = [{
 
 function loadFactory(filename, globalValues = {}) {
   const window = { ...globalValues };
-  const context = { window, document: globalValues.document || {}, Map, Set, Number, String, Object, Array, console };
+  const context = { window, document: globalValues.document || {}, Map, Set, Number, String, Object, Array, console, ...globalValues };
   vm.runInNewContext(fs.readFileSync(path.join(root, filename), "utf8"), context, { filename });
   return window;
 }
@@ -727,6 +727,56 @@ test("router closes overlays and updates route title and current navigation", ()
   assert.equal(navButtons[4].attributes.get("aria-current"), "page");
   assert.equal(menuButtons[4].attributes.get("aria-current"), "page");
   assert.equal(navButtons[1].attributes.has("aria-current"), false);
+});
+
+test("search query URLs survive route normalization and return to search", () => {
+  const noopClassList = { remove() {}, toggle() {}, contains: () => false };
+  const location = new URL("https://example.test/opendebate/?q=%E5%8D%97%E5%B1%B1%E9%AB%98%E4%B8%AD");
+  const updateLocation = (href) => { location.href = new URL(href, location.href).href; };
+  const window = { matchMedia: () => ({ matches: true }), scrollTo() {} };
+  const context = {
+    window,
+    document: { title: "", querySelectorAll: () => [] },
+    location,
+    history: { replaceState(_state, _title, href) { updateLocation(href); }, pushState(_state, _title, href) { updateLocation(href); } },
+    requestAnimationFrame: (callback) => callback(),
+    URL,
+    Map,
+    Set,
+    console,
+  };
+  vm.runInNewContext(fs.readFileSync(path.join(root, "js/router.js"), "utf8"), context);
+  const router = window.DebateRouter.createRouter({
+    els: {
+      views: [], navButtons: [], overviewView: { classList: noopClassList }, overviewEventsPanel: { classList: noopClassList },
+      eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail: {}, playerPageDetail: {}, topicPageDetail: {},
+      globalSearch: { value: "南山高中", focus() {} },
+    },
+    getEvents: () => [], getTopics: () => [], getUpcomingEvents: () => [], getKnownPlayers: () => [],
+    store: { entityById: new Map() }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail() {}, renderPlayerDetail() {}, renderTopic() {},
+  });
+
+  router.showView("search");
+  assert.equal(location.searchParams.get("q"), "南山高中");
+  assert.equal(location.hash, "#search");
+  router.showView("overview");
+  assert.equal(location.searchParams.has("q"), false, "leaving search should not leave a stale query in the URL");
+  router.showView("search");
+  assert.equal(location.searchParams.get("q"), "南山高中", "returning to search restores its current query in the URL");
+});
+
+test("search edits and clear action synchronize the shareable query URL", () => {
+  const location = new URL("https://example.test/opendebate/#search");
+  const history = { replaceState(_state, _title, href) { location.href = new URL(href, location.href).href; } };
+  const window = loadFactory("js/interactions.js", { URL, location, history });
+  const input = { value: "桃園 高中" };
+
+  assert.equal(window.DebateInteractions.syncSearchQuery(input), true);
+  assert.equal(location.searchParams.get("q"), "桃園 高中");
+  input.value = "";
+  assert.equal(window.DebateInteractions.syncSearchQuery(input), true);
+  assert.equal(location.searchParams.has("q"), false);
+  assert.equal(location.hash, "#search");
 });
 
 test("chart expansion controls explain and enforce data availability", () => {

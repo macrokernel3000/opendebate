@@ -94,10 +94,23 @@
       if (target === "overview") els.eventDetail.innerHTML = "";
 
       const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
+      let routeHref = routeHash;
+      if (target === "search" || /(?:^\?|&)q=/.test(location.search || "")) {
+        const routeUrl = new URL(location.href);
+        if (target === "search") {
+          const query = els.globalSearch.value.trim();
+          if (query) routeUrl.searchParams.set("q", query);
+          else routeUrl.searchParams.delete("q");
+        } else {
+          routeUrl.searchParams.delete("q");
+        }
+        routeUrl.hash = routeHash;
+        routeHref = `${routeUrl.pathname}${routeUrl.search}${routeUrl.hash}`;
+      }
       const isLegacySchoolRoute = Boolean(schoolRoute && schoolId && decodeURIComponent(schoolRoute[1]) !== schoolId);
       if (!isLegacySchoolRoute && location.hash !== routeHash) {
-        if (!hasRenderedRoute) history.replaceState(null, "", routeHash);
-        else history.pushState({ from: location.hash || "#home" }, "", routeHash);
+        if (!hasRenderedRoute) history.replaceState(null, "", routeHref);
+        else history.pushState({ from: location.hash || "#home" }, "", routeHref);
       }
       const shouldMoveFocus = hasRenderedRoute;
       hasRenderedRoute = true;
