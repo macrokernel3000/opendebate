@@ -1,4 +1,16 @@
 (function () {
+  function createSnapshotNavigator(showView, isOfflineSnapshot, showOfflineSnapshotNotice, resetOfflineRoute) {
+    return (name) => {
+      if (isOfflineSnapshot() && name !== "home") {
+        showOfflineSnapshotNotice();
+        resetOfflineRoute?.();
+        return false;
+      }
+      showView(name);
+      return true;
+    };
+  }
+
   function skipToMainContent(event, main, behavior = "auto") {
     event.preventDefault();
     if (!main) return;
@@ -41,7 +53,16 @@
   }
 
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, renderOverviewStats, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
-    const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
+    const isOfflineSnapshot = () => Boolean(window.DebateHomeSnapshot?.restored && !window.DEBATE_PUBLIC_DATA?.records?.length);
+    const showOfflineSnapshotNotice = () => {
+      const notice = document.querySelector("[data-snapshot-warning]");
+      if (notice) notice.textContent = "目前暫時離線，只能瀏覽上次載入的首頁；賽事、學校與選手詳情需連線後查看。";
+    };
+    const resetOfflineRoute = () => {
+      if (location.hash !== "#home") history.replaceState(null, "", "#home");
+    };
+    const navigate = createSnapshotNavigator(showView, isOfflineSnapshot, showOfflineSnapshotNotice, resetOfflineRoute);
+    const openCompetition = (name) => navigate(`event/${encodeURIComponent(name)}`);
     const preferredScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
     document.querySelector(".skip-link")?.addEventListener("click", (event) => {
       skipToMainContent(event, document.querySelector("#mainContent"), preferredScrollBehavior());
@@ -102,7 +123,7 @@
       openCompetition(card.dataset.topicEvent);
       if (!window.matchMedia("(max-width: 640px)").matches) requestAnimationFrame(() => els.eventDetail.scrollIntoView({ behavior: preferredScrollBehavior(), block: "start" }));
     }
-    els.navButtons.forEach((button) => button.addEventListener("click", () => showView(button.dataset.view)));
+    els.navButtons.forEach((button) => button.addEventListener("click", () => navigate(button.dataset.view)));
     const mobileMenuToggle = document.querySelector("#mobileMenuToggle");
     const mobileQuickMenu = document.querySelector("#mobileQuickMenu");
     mobileMenuToggle?.addEventListener("click", () => {
@@ -114,7 +135,7 @@
     mobileQuickMenu?.addEventListener("click", (event) => {
       const button = event.target.closest("[data-menu-view]");
       if (!button) return;
-      showView(button.dataset.menuView);
+      navigate(button.dataset.menuView);
       closeMobileMenu();
     });
     document.addEventListener("click", (event) => {
@@ -122,16 +143,16 @@
     });
     document.addEventListener("click", (event) => {
       const entityLink = event.target.closest("[data-entity-route]");
-      if (entityLink) { showView(`school/${encodeURIComponent(entityLink.dataset.entityRoute)}`); return; }
+      if (entityLink) { navigate(`school/${encodeURIComponent(entityLink.dataset.entityRoute)}`); return; }
       const playerLink = event.target.closest("[data-player-route]");
-      if (playerLink) { showView(`player/${encodeURIComponent(playerLink.dataset.playerRoute)}`); return; }
+      if (playerLink) { navigate(`player/${encodeURIComponent(playerLink.dataset.playerRoute)}`); return; }
       const eventLink = event.target.closest("[data-event-route]");
       if (eventLink) { openCompetition(eventLink.dataset.eventRoute); return; }
       const topicLink = event.target.closest("[data-topic-route]");
-      if (topicLink) { showView(`topic/${encodeURIComponent(topicLink.dataset.topicRoute)}`); return; }
+      if (topicLink) { navigate(`topic/${encodeURIComponent(topicLink.dataset.topicRoute)}`); return; }
       if (event.target.closest("[data-detail-back]")) {
         if (history.state?.from) history.back();
-        else showView("overview");
+        else navigate("overview");
       }
     });
     document.addEventListener("keydown", (event) => {
@@ -141,14 +162,14 @@
       }
     });
 
-    els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); showView("home"); });
+    els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); navigate("home"); });
     window.addEventListener("hashchange", () => {
       const target = location.hash.slice(1) || "home";
-      showView(target);
+      navigate(target);
       if (target === "events") showOverviewTab("events");
     });
-    document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => showView("search")));
-    document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => { showView("overview"); showOverviewTab("events"); }));
+    document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => navigate("search")));
+    document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => { navigate("overview"); if (!isOfflineSnapshot()) showOverviewTab("events"); }));
     const openRecentEvent = (event) => {
       const card = event.target.closest("[data-event-name]");
       if (!card) return;
@@ -242,5 +263,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability, keepDialogTabFocus, skipToMainContent };
+  window.DebateInteractions = { setupInteractions, createSnapshotNavigator, setChartExpansionAvailability, keepDialogTabFocus, skipToMainContent };
 }());

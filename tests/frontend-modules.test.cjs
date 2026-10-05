@@ -765,6 +765,34 @@ test("skip link focuses and scrolls to main content without changing route", () 
   assert.equal(scrollOptions.block, "start");
 });
 
+test("offline homepage snapshots keep navigation on the cached home and explain unavailable details", () => {
+  const calls = [];
+  let offline = true;
+  let resetCount = 0;
+  const controls = loadFactory("js/interactions.js").DebateInteractions;
+  const navigate = controls.createSnapshotNavigator(
+    (route) => calls.push(route),
+    () => offline,
+    () => calls.push("offline-notice"),
+    () => { resetCount += 1; },
+  );
+
+  assert.equal(navigate("event/測試盃"), false);
+  assert.deepEqual(calls, ["offline-notice"]);
+  assert.equal(resetCount, 1, "unsupported routes should restore the URL to the cached home");
+  assert.equal(navigate("overview"), false);
+  assert.deepEqual(calls, ["offline-notice", "offline-notice"]);
+  assert.equal(resetCount, 2);
+  assert.equal(navigate("home"), true, "users can always return to the cached homepage");
+  assert.equal(resetCount, 2, "home remains available without touching browser history");
+  assert.equal(calls.at(-1), "home");
+
+  offline = false;
+  assert.equal(navigate("event/測試盃"), true);
+  assert.equal(resetCount, 2, "online navigation does not rewrite browser history");
+  assert.equal(calls.at(-1), "event/測試盃");
+});
+
 test("chart data tables expose structured values and escape user content", () => {
   const window = loadFactory("js/chart-data-table.js");
   const markup = window.DebateChartDataTable.render({
