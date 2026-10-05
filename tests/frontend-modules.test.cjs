@@ -559,3 +559,31 @@ test("chart expansion controls explain and enforce data availability", () => {
   assert.equal(button.disabled, false, "expanded chart must keep its close control usable");
   assert.equal(button.dataset.chartAvailable, "false");
 });
+
+test("expanded chart makes outside content inert and restores previous states", () => {
+  const body = { children: [], inert: false };
+  const outsideHeader = { inert: false, isConnected: true };
+  const preExistingInert = { inert: true, isConnected: true };
+  const main = { children: [], parentElement: body, inert: false };
+  const outsidePage = { inert: false, isConnected: true };
+  const archive = { children: [], parentElement: main, inert: false };
+  const form = { inert: false, isConnected: true };
+  const chart = { parentElement: archive, inert: false, isConnected: true };
+  body.children = [outsideHeader, preExistingInert, main];
+  main.children = [outsidePage, archive];
+  archive.children = [form, chart];
+  const controls = loadFactory("js/interactions.js", { document: { body } }).DebateInteractions;
+
+  const isolated = controls.isolateDialogBackground(chart);
+  assert.equal(chart.inert, false, "the active chart must remain available");
+  assert.equal(outsideHeader.inert, true);
+  assert.equal(outsidePage.inert, true);
+  assert.equal(form.inert, true);
+  assert.equal(preExistingInert.inert, true);
+
+  controls.restoreDialogBackground(isolated);
+  assert.equal(outsideHeader.inert, false);
+  assert.equal(outsidePage.inert, false);
+  assert.equal(form.inert, false);
+  assert.equal(preExistingInert.inert, true, "pre-existing inert state must be preserved");
+});

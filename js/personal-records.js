@@ -15,6 +15,7 @@
   let eventDateByName = new Map();
   let editingId = "";
   let expandedChartTrigger = null;
+  let expandedChartBackground = [];
   let activeCompetitionIndex = -1;
   let els = {};
 
@@ -335,6 +336,8 @@
       }
     });
     document.body.classList.remove("chart-expanded");
+    window.DebateInteractions.restoreDialogBackground(expandedChartBackground);
+    expandedChartBackground = [];
     const trigger = expandedChartTrigger;
     expandedChartTrigger = null;
     if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
@@ -354,6 +357,7 @@
     chart.setAttribute("aria-label", chart.querySelector("h3")?.textContent || "放大圖表");
     chart.tabIndex = -1;
     document.body.classList.add("chart-expanded");
+    expandedChartBackground = window.DebateInteractions.isolateDialogBackground(chart);
     button.textContent = "×";
     button.setAttribute("aria-label", "縮小圖表");
     button.title = "縮小圖表";

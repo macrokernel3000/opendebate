@@ -1,4 +1,26 @@
 (function () {
+  function isolateDialogBackground(dialog) {
+    const isolated = [];
+    let branch = dialog;
+    while (branch && branch !== document.body) {
+      const parent = branch.parentElement;
+      if (!parent) break;
+      [...parent.children].forEach((sibling) => {
+        if (sibling === branch || !("inert" in sibling) || sibling.inert) return;
+        isolated.push({ element: sibling, inert: sibling.inert });
+        sibling.inert = true;
+      });
+      branch = parent;
+    }
+    return isolated;
+  }
+
+  function restoreDialogBackground(isolated = []) {
+    isolated.forEach(({ element, inert }) => {
+      if (element.isConnected !== false) element.inert = inert;
+    });
+  }
+
   function setChartExpansionAvailability(chartContent, available, unavailableLabel) {
     const chart = chartContent?.closest(".record-chart");
     const button = chart?.querySelector("[data-expand-chart]");
@@ -211,5 +233,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability };
+  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability, isolateDialogBackground, restoreDialogBackground };
 }());
