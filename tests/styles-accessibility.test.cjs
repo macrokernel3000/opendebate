@@ -98,6 +98,18 @@ test("report contact links keep a 44px touch target", () => {
   );
 });
 
+test("expanded event source links keep 44px touch targets", () => {
+  const rules = [
+    css.match(/\.event-metadata-note a\s*\{([^}]*)\}/)?.[1] || "",
+    css.match(/\.match-note-disclosure a\s*\{([^}]*)\}/)?.[1] || "",
+  ];
+  for (const rule of rules) {
+    assert.match(rule, /display:\s*inline-flex/);
+    assert.match(rule, /align-items:\s*center/);
+    assert.match(rule, /min-height:\s*44px/);
+  }
+});
+
 test("short mobile viewports compact the fixed navigation without shrinking targets below 44px", () => {
   assert.match(css, /@media\s*\(max-width:\s*640px\)\s*and\s*\(max-height:\s*500px\)\s*\{[^}]*\.main-nav\s*\{[^}]*height:\s*56px/);
   assert.match(css, /\.nav-button\s*\{[^}]*min-height:\s*44px/);
