@@ -139,6 +139,36 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(inlineTarget.innerHTML, /<h2>測試盃<\/h2>/);
 });
 
+test("event detail pages escape untrusted names, notes, topics, and roster text", () => {
+  const payload = '\"><img src=x onerror=alert(1)>';
+  const maliciousEvent = {
+    ...events[0],
+    name: payload,
+    records: [{ ...record, note: payload, groupName: payload }],
+    topics: [{ topicId: payload, topic: payload, explanation: payload }],
+    rosters: [{ team: payload, leaders: [payload], players: [payload] }],
+    metadata: { organizer: payload, location: payload, note: payload },
+  };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [maliciousEvent];
+  dependencies.entityPageLink = (id, label) => `<button data-entity-route="${escapeHtml(id)}">${escapeHtml(label)}</button>`;
+  dependencies.playerPageLink = (name) => `<button data-player-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
+  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderUpcomingEvent({
+    name: payload, startDate: "2026-02-01", organizer: payload, location: payload,
+    topic: payload, keyDates: [{ label: payload, date: "2026-01-01", note: payload }],
+  }, target);
+  assert.doesNotMatch(target.innerHTML, /<img src=x/);
+  assert.match(target.innerHTML, /&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+
+  pages.renderEvent(payload, target);
+  assert.doesNotMatch(target.innerHTML, /<img src=x/);
+  assert.match(target.innerHTML, /data-topic-route="&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;"/);
+  assert.match(target.innerHTML, /循環／分組：&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
+});
+
 test("entity pages keep event-specific topic explanations and player honors", () => {
   const target = { innerHTML: "" };
   const window = loadFactory("js/entity-pages.js", {
