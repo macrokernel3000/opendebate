@@ -885,12 +885,22 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   #overviewEventsPanel.is-event-open .event-finder { display: none; }
   #overviewEventsPanel.is-event-open .event-browser { padding-top: 0; }
   #overviewEventsPanel.is-event-open #eventDetail { padding-top: 0; }
-  .event-back-button { margin-bottom: 10px; }
+  .event-back-button { min-height: 44px; margin-bottom: 10px; }
+  .topic-title-link { display: flex; min-height: 44px; align-items: center; }
+  #eventDetail .inline-entity-link,
+  #eventDetail .entity-event-link { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; vertical-align: middle; }
   #overviewEventsPanel.is-event-open .event-summary { display: grid; gap: 9px; margin: 0 0 15px; }
   #overviewEventsPanel.is-event-open .event-summary h2 { font-size: 22px; }
   #overviewEventsPanel.is-event-open .event-content-grid { display: flex; flex-direction: column; gap: 18px; }
   #overviewEventsPanel.is-event-open .event-honors { order: -1; width: 100%; box-sizing: border-box; }
   .detail-page-shell { padding-top: 12px; padding-bottom: 96px; }
+  .detail-page-shell .event-back-button,
+  .detail-page-shell .topic-event-link,
+  .detail-page-shell summary { min-height: 44px; }
+  .detail-page-shell .topic-event-link { display: flex; width: 100%; align-items: center; margin-top: 4px; padding-inline: 6px; }
+  .detail-page-shell .inline-entity-link,
+  .detail-page-shell .entity-event-link { display: inline-flex; min-width: 44px; min-height: 44px; align-items: center; justify-content: center; vertical-align: middle; }
+  .detail-page-shell .entity-event-list .entity-event-link { min-height: 44px; }
   .event-summary { display: grid; gap: 9px; margin-bottom: 15px; }
   .event-summary h2 { font-size: 22px; }
   .event-content-grid { display: flex; flex-direction: column; gap: 18px; }

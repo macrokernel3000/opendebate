@@ -84,6 +84,16 @@ test("mobile forms and common navigation controls keep 44px touch targets", () =
   assert.match(css, /\.record-chart-heading button\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/);
 });
 
+test("standalone detail page controls keep 44px mobile touch targets", () => {
+  const detailControls = css.match(/\.detail-page-shell \.event-back-button,[\s\S]{0,260}\.detail-page-shell summary \{[^}]*min-height:\s*44px/);
+  const inlineDetailLinks = css.match(/\.detail-page-shell \.inline-entity-link,[\s\S]{0,220}\.detail-page-shell \.entity-event-link \{[^}]*min-width:\s*44px[^}]*min-height:\s*44px/);
+  assert.ok(detailControls, "Detail back, disclosure, and topic controls should be at least 44px high on mobile");
+  assert.ok(inlineDetailLinks, "Inline entity and event links should provide at least 44px touch boxes on mobile");
+  assert.match(css, /\.event-back-button\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /\.topic-title-link\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /#eventDetail \.inline-entity-link,[\s\S]{0,140}#eventDetail \.entity-event-link \{[^}]*min-width:\s*44px[^}]*min-height:\s*44px/);
+});
+
 test("personal and team record forms require the event and record owner", () => {
   for (const id of ["personalCompetition", "personalName", "teamCompetition", "teamName"]) {
     assert.match(html, new RegExp(`<input\\b(?=[^>]*\\bid="${id}")(?=[^>]*\\brequired(?:\\s|>|=))[^>]*>`), `${id} should be required`);
