@@ -560,30 +560,14 @@ test("chart expansion controls explain and enforce data availability", () => {
   assert.equal(button.dataset.chartAvailable, "false");
 });
 
-test("expanded chart makes outside content inert and restores previous states", () => {
-  const body = { children: [], inert: false };
-  const outsideHeader = { inert: false, isConnected: true };
-  const preExistingInert = { inert: true, isConnected: true };
-  const main = { children: [], parentElement: body, inert: false };
-  const outsidePage = { inert: false, isConnected: true };
-  const archive = { children: [], parentElement: main, inert: false };
-  const form = { inert: false, isConnected: true };
-  const chart = { parentElement: archive, inert: false, isConnected: true };
-  body.children = [outsideHeader, preExistingInert, main];
-  main.children = [outsidePage, archive];
-  archive.children = [form, chart];
-  const controls = loadFactory("js/interactions.js", { document: { body } }).DebateInteractions;
-
-  const isolated = controls.isolateDialogBackground(chart);
-  assert.equal(chart.inert, false, "the active chart must remain available");
-  assert.equal(outsideHeader.inert, true);
-  assert.equal(outsidePage.inert, true);
-  assert.equal(form.inert, true);
-  assert.equal(preExistingInert.inert, true);
-
-  controls.restoreDialogBackground(isolated);
-  assert.equal(outsideHeader.inert, false);
-  assert.equal(outsidePage.inert, false);
-  assert.equal(form.inert, false);
-  assert.equal(preExistingInert.inert, true, "pre-existing inert state must be preserved");
+test("chart expansion uses a labelled native modal dialog", () => {
+  const markup = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const source = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  assert.match(markup, /id="personalRadarChartTitle"/);
+  assert.match(markup, /id="personalProgressChartTitle"/);
+  assert.match(markup, /id="teamRadarChartTitle"/);
+  assert.match(source, /createElement\("dialog"\)/);
+  assert.match(source, /setAttribute\("aria-labelledby", title\.id\)/);
+  assert.match(source, /\.showModal\(\)/);
+  assert.match(source, /addEventListener\("cancel"/);
 });

@@ -15,7 +15,9 @@
   let eventDateByName = new Map();
   let editingId = "";
   let expandedChartTrigger = null;
-  let expandedChartBackground = [];
+  let expandedChartDialog = null;
+  let expandedChartPlaceholder = null;
+  let expandedChartParent = null;
   let activeCompetitionIndex = -1;
   let els = {};
 
@@ -320,12 +322,9 @@
   }
 
   function closeExpandedCharts({ restoreFocus = false } = {}) {
-    document.querySelectorAll(".record-chart.is-expanded").forEach((chart) => {
+    const chart = expandedChartDialog?.querySelector(".record-chart.is-expanded");
+    if (chart && expandedChartParent) {
       chart.classList.remove("is-expanded");
-      chart.removeAttribute("role");
-      chart.removeAttribute("aria-modal");
-      chart.removeAttribute("aria-label");
-      chart.removeAttribute("tabindex");
       const button = chart.querySelector("[data-expand-chart]");
       if (button) {
         button.textContent = "⛶";
@@ -334,10 +333,16 @@
         button.setAttribute("aria-label", available ? button.dataset.collapsedLabel || "放大圖表" : button.dataset.unavailableLabel || "資料不足，無法放大圖表");
         button.title = available ? "放大圖表" : button.dataset.unavailableLabel || "資料不足，無法放大圖表";
       }
-    });
+      if (expandedChartPlaceholder?.parentNode) expandedChartPlaceholder.parentNode.replaceChild(chart, expandedChartPlaceholder);
+      else expandedChartParent.append(chart);
+    }
+    const dialog = expandedChartDialog;
+    expandedChartDialog = null;
+    expandedChartParent = null;
+    expandedChartPlaceholder = null;
+    if (dialog?.open) dialog.close();
+    dialog?.remove();
     document.body.classList.remove("chart-expanded");
-    window.DebateInteractions.restoreDialogBackground(expandedChartBackground);
-    expandedChartBackground = [];
     const trigger = expandedChartTrigger;
     expandedChartTrigger = null;
     if (restoreFocus && trigger?.isConnected) trigger.focus({ preventScroll: true });
@@ -351,47 +356,27 @@
     if (!shouldExpand) return;
     expandedChartTrigger = button;
     button.dataset.collapsedLabel ||= button.getAttribute("aria-label") || "放大圖表";
+    const title = chart.querySelector("h3");
+    if (!title?.id) return;
+    expandedChartParent = chart.parentNode;
+    expandedChartPlaceholder = document.createComment("圖表原位置");
+    expandedChartParent.insertBefore(expandedChartPlaceholder, chart);
+    expandedChartDialog = document.createElement("dialog");
+    expandedChartDialog.className = "record-chart-dialog";
+    expandedChartDialog.setAttribute("aria-labelledby", title.id);
+    expandedChartDialog.addEventListener("cancel", (event) => {
+      event.preventDefault();
+      closeExpandedCharts({ restoreFocus: true });
+    });
+    expandedChartDialog.append(chart);
+    document.body.append(expandedChartDialog);
     chart.classList.add("is-expanded");
-    chart.setAttribute("role", "dialog");
-    chart.setAttribute("aria-modal", "true");
-    chart.setAttribute("aria-label", chart.querySelector("h3")?.textContent || "放大圖表");
-    chart.tabIndex = -1;
+    expandedChartDialog.showModal();
     document.body.classList.add("chart-expanded");
-    expandedChartBackground = window.DebateInteractions.isolateDialogBackground(chart);
     button.textContent = "×";
     button.setAttribute("aria-label", "縮小圖表");
     button.title = "縮小圖表";
     button.focus({ preventScroll: true });
-  }
-
-  function handleChartKeydown(event) {
-    const chart = document.querySelector(".record-chart.is-expanded");
-    if (!chart) return;
-    if (event.key === "Escape") {
-      event.preventDefault();
-      closeExpandedCharts({ restoreFocus: true });
-      return;
-    }
-    if (event.key !== "Tab") return;
-    const focusable = [...chart.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
-      .filter((element) => element.getClientRects().length && element.getAttribute("aria-hidden") !== "true");
-    if (!focusable.length) {
-      event.preventDefault();
-      chart.focus({ preventScroll: true });
-      return;
-    }
-    const first = focusable[0];
-    const last = focusable.at(-1);
-    if (!chart.contains(document.activeElement)) {
-      event.preventDefault();
-      (event.shiftKey ? last : first).focus();
-    } else if (event.shiftKey && document.activeElement === first) {
-      event.preventDefault();
-      last.focus();
-    } else if (!event.shiftKey && document.activeElement === last) {
-      event.preventDefault();
-      first.focus();
-    }
   }
 
   function renderCompetitionSuggestions() {
@@ -633,7 +618,6 @@
     });
     els.importInput.addEventListener("change", () => importCsv(els.importInput.files?.[0]));
     document.querySelectorAll("[data-expand-chart]").forEach((button) => button.addEventListener("click", () => toggleChartExpansion(button)));
-    document.addEventListener("keydown", handleChartKeydown);
     els.list.addEventListener("click", (event) => {
       const editButton = event.target.closest("[data-edit-record]");
       if (editButton) { startEdit(editButton.dataset.editRecord); return; }

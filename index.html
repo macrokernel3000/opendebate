@@ -60,7 +60,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005-narrow-controls1" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005-native-chart-dialog1" data-versioned-asset />
 </head>
 <body>
   <header class="site-header">
@@ -314,8 +314,8 @@
             <div class="record-summary-heading"><div><p class="kicker">MY RESULTS</p><h2 id="recordSummaryTitle">我的成績</h2></div><strong id="personalRecordCount">0 場</strong></div>
             <div id="personalRecordStats" class="record-stats"></div>
             <div class="record-visualizations">
-              <article class="record-chart"><div class="record-chart-heading"><div><h3>能力雷達圖</h3><span>依各欄滿分換算</span></div><button type="button" data-expand-chart aria-label="放大能力雷達圖" title="放大圖表">⛶</button></div><div id="personalRadarChart"></div></article>
-              <article class="record-chart"><div class="record-chart-heading"><div><h3>進步折線圖</h3><span>依比賽日期排序</span></div><button type="button" data-expand-chart aria-label="放大進步折線圖" title="放大圖表">⛶</button></div><div id="personalProgressChart"></div></article>
+              <article class="record-chart"><div class="record-chart-heading"><div><h3 id="personalRadarChartTitle">能力雷達圖</h3><span>依各欄滿分換算</span></div><button type="button" data-expand-chart aria-label="放大能力雷達圖" title="放大圖表">⛶</button></div><div id="personalRadarChart"></div></article>
+              <article class="record-chart"><div class="record-chart-heading"><div><h3 id="personalProgressChartTitle">進步折線圖</h3><span>依比賽日期排序</span></div><button type="button" data-expand-chart aria-label="放大進步折線圖" title="放大圖表">⛶</button></div><div id="personalProgressChart"></div></article>
             </div>
             <div class="record-data-actions">
               <button id="personalExportCsv" class="record-button record-button-primary" type="button">下載 CSV</button>
@@ -363,7 +363,7 @@
             <section class="record-summary" aria-labelledby="teamSummaryTitle">
               <div class="record-summary-heading"><div><p class="kicker">TEAM RESULTS</p><h2 id="teamSummaryTitle">隊伍比賽紀錄</h2></div><strong id="teamRecordCount">0 張</strong></div>
               <div id="teamRecordStats" class="record-stats team-record-stats"></div>
-              <article class="record-chart team-radar-card"><div class="record-chart-heading"><div><h3>隊伍平均雷達圖</h3><span>累積超過兩張裁單後，計算我方申論、質詢與答辯平均</span></div><button type="button" data-expand-chart aria-label="放大隊伍平均雷達圖" title="放大圖表">⛶</button></div><div id="teamRadarChart"></div></article>
+              <article class="record-chart team-radar-card"><div class="record-chart-heading"><div><h3 id="teamRadarChartTitle">隊伍平均雷達圖</h3><span>累積超過兩張裁單後，計算我方申論、質詢與答辯平均</span></div><button type="button" data-expand-chart aria-label="放大隊伍平均雷達圖" title="放大圖表">⛶</button></div><div id="teamRadarChart"></div></article>
               <p class="team-record-explanation">每張裁單會依正反方已輸入的所有分數加總，自動算出該張勝負。同一盃賽、同一場次的裁單會放在一起；累積三張後，至少兩張可判定且勝票過半，才會判定整場勝負。平票或有效票不足時會保留未決狀態。</p>
               <div class="record-data-actions"><button id="teamExportCsv" class="record-button record-button-primary" type="button">下載隊伍 CSV</button><label class="record-import">匯入隊伍 CSV<input id="teamImportCsv" type="file" accept=".csv,text/csv" /></label><button id="teamDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button></div>
               <div id="teamRecordList" class="personal-record-list"></div>
@@ -442,9 +442,9 @@
   <script src="data/upcoming-events.js?v=20260928-mobile-public1" data-versioned-asset></script>
   <script src="js/site-config.js?v=20261005003000" data-versioned-asset></script>
   <script src="js/core.js?v=20261005003000" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261005-chart-dialog-isolation1" data-versioned-asset></script>
+  <script src="js/interactions.js?v=20261005-native-chart-dialog1" data-versioned-asset></script>
   <script src="js/record-storage.js?v=20261005-csv-local-date1" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261005-chart-dialog-isolation1" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261005-native-chart-dialog1" data-versioned-asset></script>
   <script src="js/team-records.js?v=20261005-team-save-reset1" data-versioned-asset></script>
   <script src="js/event-pages.js?v=20261005-entity-pages1" data-versioned-asset></script>
   <script src="js/entity-pages.js?v=20261005-entity-heading1" data-versioned-asset></script>
