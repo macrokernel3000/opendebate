@@ -421,10 +421,20 @@ test("search pages cover empty, alias, player, topic and unmatched search states
 
 test("record storage reports write failures and honors native form validation", () => {
   const window = loadFactory("js/record-storage.js");
-  const saved = [];
-  const storage = { setItem: (key, value) => saved.push([key, value]) };
+  const saved = new Map();
+  const storage = { getItem: (key) => saved.get(key) ?? null, setItem: (key, value) => saved.set(key, value) };
+  assert.equal(JSON.stringify(window.DebateRecordStorage.load(storage, "records")), JSON.stringify({ ok: true, records: [] }));
   assert.equal(window.DebateRecordStorage.save(storage, "records", [{ id: "1" }]), true);
-  assert.deepEqual(saved, [["records", '[{"id":"1"}]']]);
+  assert.equal(saved.get("records"), '[{"id":"1"}]');
+  assert.deepEqual(JSON.stringify(window.DebateRecordStorage.load(storage, "records")), JSON.stringify({ ok: true, records: [{ id: "1" }] }));
+
+  for (const value of ["{broken", "{}", "[null]", "[[1]]"]) {
+    assert.equal(window.DebateRecordStorage.load({ getItem: () => value }, "records").ok, false);
+  }
+  assert.equal(window.DebateRecordStorage.load({ getItem() { throw new Error("storage blocked"); } }, "records").ok, false);
+  assert.equal(window.DebateRecordStorage.load(() => { throw new Error("storage unavailable"); }, "records").ok, false);
+  assert.equal(window.DebateRecordStorage.save(() => { throw new Error("storage unavailable"); }, "records", []), false);
+  assert.match(window.DebateRecordStorage.loadFailureMessage(), /為避免覆蓋原有紀錄.*請先不要清除瀏覽器網站資料/);
 
   const blockedStorage = { setItem() { throw new Error("quota exceeded"); } };
   assert.equal(window.DebateRecordStorage.save(blockedStorage, "records", [{ id: "2" }]), false);
@@ -453,6 +463,14 @@ test("record storage reports write failures and honors native form validation", 
   assert.equal(window.DebateRecordStorage.isValid({ reportValidity: () => { checks += 1; return true; } }), true);
   assert.equal(checks, 2);
   assert.equal(window.DebateRecordStorage.isValid({}), true);
+});
+
+test("record CSV preserves commas, quotes, line breaks, and Unicode through export and import", () => {
+  const window = loadFactory("js/record-csv.js");
+  const rows = [["姓名", "備註"], ["林,同學", "說\"明\"\n第二行｜辯手回報"]];
+  const serialized = window.DebateRecordCsv.serialize(rows);
+  assert.match(serialized, /^\uFEFF/);
+  assert.equal(JSON.stringify(window.DebateRecordCsv.parse(serialized)), JSON.stringify(rows));
 });
 
 test("personal and team CSV exports use the shared local calendar date", () => {
