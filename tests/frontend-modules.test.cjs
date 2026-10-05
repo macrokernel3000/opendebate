@@ -571,6 +571,58 @@ test("chart expansion controls explain and enforce data availability", () => {
   assert.equal(button.dataset.chartAvailable, "false");
 });
 
+test("modal chart dialog keeps Tab and Shift+Tab within its focusable controls", () => {
+  let activeElement;
+  const first = {
+    tabIndex: 0,
+    disabled: false,
+    getClientRects: () => [1],
+    getAttribute: () => null,
+    focus: () => { activeElement = first; },
+  };
+  const last = {
+    tabIndex: 0,
+    disabled: false,
+    getClientRects: () => [1],
+    getAttribute: () => null,
+    focus: () => { activeElement = last; },
+  };
+  const dialog = {
+    querySelectorAll: () => [first, last],
+    contains: (element) => element === first || element === last,
+  };
+  const document = { get activeElement() { return activeElement; } };
+  const controls = loadFactory("js/interactions.js", { document }).DebateInteractions;
+  const keyEvent = (key, shiftKey = false) => ({ key, shiftKey, prevented: false, preventDefault() { this.prevented = true; } });
+
+  activeElement = last;
+  const tab = keyEvent("Tab");
+  assert.equal(controls.keepDialogTabFocus(dialog, tab), true);
+  assert.equal(tab.prevented, true);
+  assert.equal(activeElement, first);
+
+  activeElement = first;
+  const shiftTab = keyEvent("Tab", true);
+  assert.equal(controls.keepDialogTabFocus(dialog, shiftTab), true);
+  assert.equal(shiftTab.prevented, true);
+  assert.equal(activeElement, last);
+
+  const singleControlDialog = { querySelectorAll: () => [first], contains: (element) => element === first };
+  activeElement = first;
+  const singleControlTab = keyEvent("Tab");
+  assert.equal(controls.keepDialogTabFocus(singleControlDialog, singleControlTab), true);
+  assert.equal(activeElement, first, "a dialog with one control must keep focus on that control");
+
+  const otherKey = keyEvent("Enter");
+  assert.equal(controls.keepDialogTabFocus(dialog, otherKey), false);
+  assert.equal(otherKey.prevented, false);
+
+  activeElement = {};
+  const outsideFocus = keyEvent("Tab");
+  assert.equal(controls.keepDialogTabFocus(dialog, outsideFocus), false, "dialog handler should not intercept a key event dispatched outside it");
+  assert.equal(outsideFocus.prevented, false);
+});
+
 test("chart expansion uses a labelled native modal dialog", () => {
   const markup = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const source = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
@@ -580,5 +632,6 @@ test("chart expansion uses a labelled native modal dialog", () => {
   assert.match(source, /createElement\("dialog"\)/);
   assert.match(source, /setAttribute\("aria-labelledby", title\.id\)/);
   assert.match(source, /\.showModal\(\)/);
+  assert.match(source, /keepDialogTabFocus\(expandedChartDialog, event\)/);
   assert.match(source, /addEventListener\("cancel"/);
 });

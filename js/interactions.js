@@ -1,4 +1,25 @@
 (function () {
+  function keepDialogTabFocus(dialog, event) {
+    if (!dialog || event.key !== "Tab") return false;
+    const focusable = [...dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
+      .filter((element) => element.tabIndex >= 0 && element.getClientRects().length > 0 && element.getAttribute("aria-hidden") !== "true");
+    if (!focusable.length) return false;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    const active = document.activeElement;
+    if (event.shiftKey && active === first) {
+      event.preventDefault();
+      last.focus({ preventScroll: true });
+      return true;
+    }
+    if (!event.shiftKey && active === last) {
+      event.preventDefault();
+      first.focus({ preventScroll: true });
+      return true;
+    }
+    return false;
+  }
+
   function setChartExpansionAvailability(chartContent, available, unavailableLabel) {
     const chart = chartContent?.closest(".record-chart");
     const button = chart?.querySelector("[data-expand-chart]");
@@ -211,5 +232,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability };
+  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability, keepDialogTabFocus };
 }());

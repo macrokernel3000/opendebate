@@ -359,6 +359,9 @@
     expandedChartDialog = document.createElement("dialog");
     expandedChartDialog.className = "record-chart-dialog";
     expandedChartDialog.setAttribute("aria-labelledby", title.id);
+    expandedChartDialog.addEventListener("keydown", (event) => {
+      window.DebateInteractions.keepDialogTabFocus(expandedChartDialog, event);
+    });
     expandedChartDialog.addEventListener("cancel", (event) => {
       event.preventDefault();
       closeExpandedCharts({ restoreFocus: true });
