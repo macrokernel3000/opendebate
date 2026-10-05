@@ -7,7 +7,7 @@ const vm = require("node:vm");
 const root = path.resolve(__dirname, "..");
 const scriptPath = path.join(root, "js/site-update-check.js");
 
-function setup({ currentVersion = "old", latestVersion = "old", visibilityState = "visible", online = true, fetchImpl } = {}) {
+function setup({ currentVersion = "old", latestVersion = "old", visibilityState = "visible", online = true, fetchImpl, sessionStorage } = {}) {
   const timers = [];
   const windowListeners = new Map();
   const documentListeners = new Map();
@@ -16,7 +16,7 @@ function setup({ currentVersion = "old", latestVersion = "old", visibilityState 
   const listener = () => {};
   const currentDataScript = { getAttribute: () => `data/public-data.js?v=${currentVersion}` };
   const latestDataScript = { getAttribute: () => `data/public-data.js?v=${latestVersion}` };
-  const notice = { hidden: true };
+  const notice = { hidden: true, dataset: {} };
   const reloadButton = { addEventListener: (name, handler) => { reloadButton[name] = handler; } };
   const dismissButton = { addEventListener: (name, handler) => { dismissButton[name] = handler; } };
   const document = {
@@ -37,6 +37,7 @@ function setup({ currentVersion = "old", latestVersion = "old", visibilityState 
   }
   const window = {
     location: { reload() { reloadCount += 1; } },
+    sessionStorage,
     addEventListener(name, handler) { windowListeners.set(name, handler); },
     setTimeout(handler, delay) { timers.push({ handler, delay, repeat: false }); },
     setInterval(handler, delay) { timers.push({ handler, delay, repeat: true }); },
@@ -109,6 +110,37 @@ test("offline, hidden, and failed checks do not affect browsing", async () => {
 test("dismissing an update notice keeps it hidden", async () => {
   const app = setup({ latestVersion: "new" });
   await runInitialCheck(app);
+  app.dismissButton.click();
+  assert.equal(app.notice.hidden, true);
+});
+
+test("dismissing stays hidden when the same page is reopened in the same tab", async () => {
+  const values = new Map();
+  const sessionStorage = {
+    getItem(key) { return values.get(key) ?? null; },
+    setItem(key, value) { values.set(key, value); },
+  };
+  const firstPage = setup({ latestVersion: "v2", sessionStorage });
+  await runInitialCheck(firstPage);
+  firstPage.dismissButton.click();
+
+  const reopenedPage = setup({ latestVersion: "v2", sessionStorage });
+  await runInitialCheck(reopenedPage);
+  assert.equal(reopenedPage.notice.hidden, true);
+
+  const newerUpdate = setup({ latestVersion: "v3", sessionStorage });
+  await runInitialCheck(newerUpdate);
+  assert.equal(newerUpdate.notice.hidden, false);
+});
+
+test("storage failures do not prevent using or dismissing the notice", async () => {
+  const sessionStorage = {
+    getItem() { throw new Error("storage unavailable"); },
+    setItem() { throw new Error("storage unavailable"); },
+  };
+  const app = setup({ latestVersion: "new", sessionStorage });
+  await runInitialCheck(app);
+  assert.equal(app.notice.hidden, false);
   app.dismissButton.click();
   assert.equal(app.notice.hidden, true);
 });
