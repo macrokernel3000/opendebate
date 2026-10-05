@@ -526,9 +526,8 @@
     if (!file) return;
     try {
       const imported = RecordCsv.parsePersonalRecords(await file.text()).map(normalizeRecord);
-      const key = (record) => [record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.rank, record.createdAt].join("|");
-      const existing = new Set(records.map(key));
-      const additions = imported.filter((record) => !existing.has(key(record)));
+      const key = (record) => JSON.stringify([record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.rank, record.createdAt]);
+      const additions = RecordCsv.uniqueImportedRecords(records, imported, key);
       if (!saveRecords([...records, ...additions])) return;
       render();
       showMessage(`已匯入 ${additions.length} 張裁單${imported.length !== additions.length ? "，重複資料已略過" : ""}。`, false);

@@ -42,15 +42,7 @@
   }
 
   function uniqueImportedRecords(existing, imported) {
-    const seen = new Set(existing.map(recordKey));
-    const additions = [];
-    imported.forEach((record) => {
-      const key = recordKey(record);
-      if (seen.has(key)) return;
-      seen.add(key);
-      additions.push(record);
-    });
-    return additions;
+    return RecordCsv.uniqueImportedRecords(existing, imported, recordKey);
   }
 
   function migrateLegacy(record) {
@@ -135,6 +127,7 @@
   function parseTeamRecords(text, { createId = () => `${Date.now()}-${Math.random().toString(16).slice(2)}`, now = () => new Date().toISOString() } = {}) {
     const rows = RecordCsv.parse(text);
     const headers = rows.shift()?.map((item) => item.trim()) || [];
+    const fallbackCreatedAt = now();
     const value = (row, name) => RecordCsv.restoreSpreadsheetSafeValue(row[headers.indexOf(name)] ?? "");
     if (!headers.includes("隊伍名稱") || !headers.includes("正1申論")) throw new Error("unsupported csv");
     const label = { Speech: "申論", Question: "質詢", Defense: "答辯" };
@@ -145,7 +138,7 @@
         matchDate: value(row, "比賽日期"), teamName: value(row, "隊伍名稱"), side: value(row, "我方持方"),
         judge: value(row, "裁判姓名"), affArgument: value(row, "正方架構論點"), affClosing: value(row, "正方結辯"),
         negArgument: value(row, "反方架構論點"), negClosing: value(row, "反方結辯"),
-        createdAt: value(row, "建立時間") || now(),
+        createdAt: value(row, "建立時間") || fallbackCreatedAt,
       };
       SIDES.forEach((side) => [1, 2, 3].forEach((position) => METRICS.forEach((metric) => {
         record[`${side}P${position}${metric}`] = value(row, `${side === "aff" ? "正" : "反"}${position}${label[metric]}`);

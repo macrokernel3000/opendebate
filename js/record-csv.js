@@ -82,6 +82,18 @@
     });
   }
 
+  function uniqueImportedRecords(existing, imported, recordKey) {
+    const seen = new Set(existing.map(recordKey));
+    const additions = [];
+    imported.forEach((record) => {
+      const key = recordKey(record);
+      if (seen.has(key)) return;
+      seen.add(key);
+      additions.push(record);
+    });
+    return additions;
+  }
+
   const METRICS = [
     { key: "argument", maxKey: "argumentMax", defaultMax: 10 },
     { key: "speech", maxKey: "speechMax", defaultMax: 20 },
@@ -93,6 +105,7 @@
   function parsePersonalRecords(text, { createId = () => `${Date.now()}-${Math.random().toString(16).slice(2)}`, now = () => new Date().toISOString() } = {}) {
     const rows = parse(text);
     const headers = rows.shift()?.map((header) => header.trim()) || [];
+    const fallbackCreatedAt = now();
     const get = (row, ...names) => {
       const index = names.map((name) => headers.indexOf(name)).find((candidate) => candidate >= 0);
       return index === undefined ? "" : restoreSpreadsheetSafeValue(row[index]);
@@ -116,11 +129,11 @@
       closing: number(get(row, "結辯")),
       closingMax: maximum(get(row, "結辯滿分"), 10),
       rank: number(get(row, "排名", "排名為1", "排名為 1")),
-      createdAt: get(row, "建立時間") || now(),
+      createdAt: get(row, "建立時間") || fallbackCreatedAt,
     }));
     imported.forEach((record) => validateRecord(record, METRICS));
     return imported;
   }
 
-  window.DebateRecordCsv = { serialize, parse, parsePersonalRecords, number, maximum, validateRecord, restoreSpreadsheetSafeValue };
+  window.DebateRecordCsv = { serialize, parse, parsePersonalRecords, number, maximum, validateRecord, restoreSpreadsheetSafeValue, uniqueImportedRecords };
 }());

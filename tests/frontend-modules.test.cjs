@@ -404,6 +404,15 @@ test("personal score entry shares CSV maximum and rank validation", () => {
   assert.equal(validateDraft({ ...draft, argumentMax: 10.05 }).fieldKey, "argumentMax");
 });
 
+test("personal and team CSV imports use the shared within-file deduplication rule", () => {
+  const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+
+  assert.match(personalSource, /RecordCsv\.uniqueImportedRecords\(records, imported, key\)/);
+  assert.match(personalSource, /JSON\.stringify\(\[record\.competition, record\.matchNumber/);
+  assert.match(teamSource, /RecordCsv\.uniqueImportedRecords\(existing, imported, recordKey\)/);
+});
+
 test("home pages render summaries, timeline and upcoming events, and keep leaderboard controls working", () => {
   const school = { code: "s1", name: "測試高中", type: "s" };
   const rival = { code: "s2", name: "對手高中", type: "s" };
@@ -712,7 +721,8 @@ test("team final save clears the draft while next-ballot save preserves judge fo
 });
 
 test("team CSV imports skip repeated backup rows without collapsing distinct ballots", () => {
-  const window = loadFactory("js/team-records.js");
+  const csvWindow = loadFactory("js/record-csv.js");
+  const window = loadFactory("js/team-records.js", { DebateRecordCsv: csvWindow.DebateRecordCsv });
   const uniqueImports = window.DebateTeamRecords.uniqueImportedRecords;
   const original = {
     id: "original", competition: "測試盃", matchNumber: 1, matchDate: "2026-01-01", teamName: "測試隊",
@@ -723,6 +733,26 @@ test("team CSV imports skip repeated backup rows without collapsing distinct bal
 
   assert.deepEqual(Array.from(uniqueImports([original], [sameCsvRow, sameCsvRow, anotherBallot]), (item) => item.judge), ["裁判乙"]);
   assert.deepEqual(Array.from(uniqueImports([], [original, sameCsvRow, anotherBallot]), (item) => item.judge), ["裁判甲", "裁判乙"]);
+});
+
+test("team CSV rows without creation timestamps receive one batch timestamp", () => {
+  const csvWindow = loadFactory("js/record-csv.js");
+  const window = loadFactory("js/team-records.js", { DebateRecordCsv: csvWindow.DebateRecordCsv });
+  const headers = ["盃賽", "此盃第幾場", "比賽日期", "隊伍名稱", "我方持方", "裁判姓名",
+    ...["正", "反"].flatMap((side) => [1, 2, 3].flatMap((position) => ["申論", "質詢", "答辯"].map((metric) => `${side}${position}${metric}`))),
+    "正方架構論點", "正方結辯", "反方架構論點", "反方結辯"];
+  const row = ["舊格式隊伍盃", "1", "2026-10-04", "測試隊", "正", "裁判甲", ...Array(18).fill(""), "", "", "", ""];
+  const text = csvWindow.DebateRecordCsv.serialize([headers, row, row]);
+  let id = 0;
+  let clock = 0;
+  const imported = window.DebateTeamRecords.parseTeamRecords(text, {
+    createId: () => `team-${++id}`,
+    now: () => `batch-${++clock}`,
+  });
+
+  assert.equal(clock, 1);
+  assert.equal(imported[0].createdAt, imported[1].createdAt);
+  assert.equal(window.DebateTeamRecords.uniqueImportedRecords([], imported).length, 1);
 });
 
 test("personal record save feedback does not claim empty scores updated averages", () => {

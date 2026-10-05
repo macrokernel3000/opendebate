@@ -26,6 +26,37 @@ test("personal CSV round-trips BOM, CRLF, commas, quotes and multiline cells", (
   assert.deepEqual(Array.from(csv.parse(serialized), (row) => Array.from(row)), expected);
 });
 
+test("CSV import removes duplicates within one file and against saved records", () => {
+  const existing = [{ name: "already saved", id: "saved" }];
+  const imported = [
+    { name: "new", id: "first" },
+    { name: "new", id: "second" },
+    { name: "different tuple", part: "left|right", id: "third" },
+    { name: "different", part: "tuple", id: "fourth" },
+    { name: "already saved", id: "duplicate of saved" },
+  ];
+  const key = (record) => JSON.stringify([record.name, record.part || ""]);
+  const additions = csv.uniqueImportedRecords(existing, imported, key);
+
+  assert.deepEqual(Array.from(additions, (record) => record.id), ["first", "third", "fourth"]);
+});
+
+test("personal CSV rows without creation timestamps receive one batch timestamp", () => {
+  const headers = ["盃賽", "此盃第幾場", "姓名", "裁判姓名", "申論"];
+  const row = ["舊格式盃", "1", "林選手", "裁判甲", "18"];
+  let id = 0;
+  let clock = 0;
+  const imported = csv.parsePersonalRecords(csv.serialize([headers, row, row]), {
+    createId: () => `row-${++id}`,
+    now: () => `batch-${++clock}`,
+  });
+  const key = (record) => JSON.stringify([record.competition, record.matchNumber, record.matchDate, record.name, record.judge, record.argument, record.argumentMax, record.speech, record.speechMax, record.question, record.questionMax, record.defense, record.defenseMax, record.closing, record.closingMax, record.rank, record.createdAt]);
+
+  assert.equal(clock, 1);
+  assert.equal(imported[0].createdAt, imported[1].createdAt);
+  assert.equal(csv.uniqueImportedRecords([], imported, key).length, 1);
+});
+
 test("spreadsheet-safe CSV neutralizes formula prefixes and restores exported values", () => {
   const values = ["=1+2", "+SUM(A1:A2)", "-1+2", "@SUM(A1)", "＝1+2", "\t=1+2", "\n=1+2", "一般文字"];
   const serialized = csv.serialize([values], { spreadsheetSafe: true });
