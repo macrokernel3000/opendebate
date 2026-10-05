@@ -61,7 +61,7 @@
           const games = records.filter((item) => item.teamIds?.affirmative === entity.code || item.teamIds?.negative === entity.code).length;
           const awards = honors.filter((item) => item.teamId === entity.code).length;
           const aliases = (entity.aliases || "").split("|").filter(Boolean);
-          return `<button class="entity-card" type="button" data-entity-id="${escapeHtml(entity.code)}"><h3>🏫 ${escapeHtml(entity.name)}</h3><p>${games} 場公開賽果 · ${awards} 筆相關榮譽</p><small>${escapeHtml(entity.code)}${aliases.length ? ` · 別名：${aliases.map(escapeHtml).join("、")}` : ""}</small></button>`;
+          return `<button class="entity-card" type="button" data-entity-id="${escapeHtml(entity.code)}"><h3>🏫 ${escapeHtml(entity.name)}</h3><p>${games} 場公開賽果 · ${awards} 筆相關榮譽</p>${aliases.length ? `<small>別名：${aliases.map(escapeHtml).join("、")}</small>` : ""}</button>`;
         }).join("")}
         ${matchedPlayers.map((name) => {
           const personHonors = honors.filter((item) => item.honorType === "player" && item.recipient === name);

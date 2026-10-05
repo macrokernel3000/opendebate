@@ -392,6 +392,8 @@ test("search pages cover empty, alias, player, topic and unmatched search states
   pages.renderSearch("測試別名");
   assert.match(els.searchMeta.textContent, /找到 1 個學校／隊伍/);
   assert.match(els.searchResults.innerHTML, /測試高中&lt;甲&gt;/);
+  assert.doesNotMatch(els.searchResults.innerHTML, /<small>s1/);
+  assert.match(els.searchResults.innerHTML, /別名：測試別名、測試 A 隊/);
   assert.match(els.searchResults.innerHTML, /3：0/);
   assert.match(els.searchResults.innerHTML, /全程最佳辯士/);
 
