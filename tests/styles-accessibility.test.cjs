@@ -43,10 +43,10 @@ test("hero eyebrow keeps AA contrast on its dark green background", () => {
   assert.match(css, /\.hero-content\s+\.eyebrow\s*\{[^}]*color:\s*var\(--yellow\)/);
 });
 
-test("report contact links keep a 24px tap target", () => {
+test("report contact links keep a 44px touch target", () => {
   assert.match(
     css,
-    /\.report-contact-card a\s*\{[^}]*display:\s*flex[^}]*min-height:\s*24px[^}]*align-items:\s*center/,
+    /\.report-contact-card a\s*\{[^}]*display:\s*flex[^}]*min-height:\s*44px[^}]*align-items:\s*center/,
   );
 });
 
@@ -66,6 +66,22 @@ test("mobile home calendar and honor controls keep 44px touch targets", () => {
   assert.match(css, /#homeView\s*>\s*\.leaderboard-band\s+\.olympic-filter\s*\{[^}]*min-height:\s*44px/);
   assert.match(css, /#homeView\s*>\s*\.leaderboard-band\s+\.mobile-honor-ranking\s+li\s*\{[^}]*min-height:\s*44px/);
   assert.match(css, /\.mobile-honor-ranking\s+strong\s+\.inline-entity-link\s*\{[^}]*min-height:\s*44px/);
+});
+
+test("overview tabs keep 44px touch targets at compact mobile widths", () => {
+  assert.match(css, /\.overview-tab\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /@media\s*\(max-width:\s*360px\)[\s\S]*?\.overview-tab\s*\{[^}]*min-height:\s*44px/);
+  assert.doesNotMatch(css, /\.overview-tab\s*\{[^}]*min-height:\s*(?:38|40)px/);
+});
+
+test("mobile forms and common navigation controls keep 44px touch targets", () => {
+  assert.match(css, /\.brand\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /\.mobile-menu-toggle\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/);
+  assert.match(css, /\.search-box button\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/);
+  assert.match(css, /\.report-contact-card a\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /@media\s*\(max-width:\s*640px\)[\s\S]*?\.record-field input, \.record-field select, \.record-field textarea, \.search-field input\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /@media\s*\(max-width:\s*640px\)[\s\S]*?\.record-button, \.record-import\s*\{[^}]*min-height:\s*44px/);
+  assert.match(css, /\.record-chart-heading button\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/);
 });
 
 test("personal and team record forms require the event and record owner", () => {
