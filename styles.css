@@ -25,6 +25,13 @@ button { color: inherit; }
 .skip-link:focus { transform: translateY(0); outline: 3px solid var(--yellow); outline-offset: 2px; }
 
 .site-header { position: sticky; z-index: 50; top: 0; min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 max(20px, calc((100vw - 1180px) / 2)); border-bottom: 1px solid rgba(23, 33, 29, .12); background: var(--paper); }
+.site-update-notice { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px 14px; border-bottom: 1px solid #c5ddd0; padding: 10px 20px; background: #e9f5ee; color: var(--green-dark); text-align: center; }
+.site-update-notice[hidden] { display: none; }
+.site-update-notice p { margin: 0; font-size: 14px; font-weight: 750; }
+.site-update-notice button { min-height: 44px; border: 1px solid var(--green); border-radius: 999px; padding: 0 16px; background: var(--green); color: #fff; font-weight: 800; cursor: pointer; }
+.site-update-notice button:hover, .site-update-notice button:focus-visible { outline: 2px solid var(--green-dark); outline-offset: 2px; background: var(--green-dark); }
+.site-update-notice .site-update-dismiss { border-color: transparent; background: transparent; color: var(--green-dark); text-decoration: underline; text-underline-offset: 3px; }
+.site-update-notice .site-update-dismiss:hover, .site-update-notice .site-update-dismiss:focus-visible { background: #d8eadf; }
 .brand { display: flex; min-height: 44px; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 900; cursor: pointer; }
 .brand:hover .brand-mark, .brand:focus-visible .brand-mark { transform: rotate(3deg) scale(1.05); }
 .brand-mark { display: grid; width: 38px; height: 38px; place-items: center; transform: rotate(-3deg); }

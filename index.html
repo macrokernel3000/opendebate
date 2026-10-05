@@ -60,7 +60,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261005-source-link-target1" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261005-stale-tab-check1" data-versioned-asset />
 </head>
 <body>
   <a class="skip-link" href="#mainContent">跳到主要內容</a>
@@ -87,6 +87,12 @@
       <button type="button" data-menu-view="reports"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M7 17 18 6M8 6h10v10M5 5v14h14"/></svg></span>問題回報</button>
     </nav>
   </header>
+
+  <aside id="siteUpdateNotice" class="site-update-notice" role="status" aria-live="polite" hidden>
+    <p>網站資料有新版本，重新載入即可查看最新內容。</p>
+    <button type="button" data-site-update-reload>重新載入</button>
+    <button type="button" class="site-update-dismiss" data-site-update-dismiss>稍後</button>
+  </aside>
 
   <main id="mainContent" tabindex="-1">
     <section id="homeView" class="view" data-view-panel="home">
@@ -458,5 +464,6 @@
   <script src="js/search-pages.js?v=20261005145518" data-versioned-asset></script>
   <script src="js/router.js?v=20261005145518" data-versioned-asset></script>
   <script src="app.js?v=20261005145518" data-versioned-asset></script>
+  <script src="js/site-update-check.js?v=20261005-stale-tab-check1" data-versioned-asset></script>
 </body>
 </html>
