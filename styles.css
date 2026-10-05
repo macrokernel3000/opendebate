@@ -1015,6 +1015,10 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .archive-mode-button { grid-template-columns: 18px minmax(0, 1fr); gap: 5px; padding: 8px; }
   .archive-mode-button small { display: none; }
 }
+@media (max-width: 380px) {
+  #homeView > .leaderboard-band .leaderboard-controls { align-items: flex-start; flex-direction: column; gap: 6px; }
+  #homeView > .leaderboard-band .leaderboard-range-legend { white-space: normal; flex-wrap: wrap; }
+}
 /* On wider screens, overview content follows the page instead of living in a nested card or scroller. */
 @media (min-width: 601px) {
   #eventFinderResults { max-height: none; overflow: visible; padding-right: 0; }

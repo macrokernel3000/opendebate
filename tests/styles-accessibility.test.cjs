@@ -55,6 +55,11 @@ test("short mobile viewports compact the fixed navigation without shrinking targ
   assert.match(css, /\.nav-button\s*\{[^}]*min-height:\s*44px/);
 });
 
+test("very narrow home layouts stack the honor range controls instead of overflowing", () => {
+  assert.match(css, /@media\s*\(max-width:\s*380px\)[\s\S]{0,250}\.leaderboard-controls\s*\{[^}]*flex-direction:\s*column/);
+  assert.match(css, /@media\s*\(max-width:\s*380px\)[\s\S]{0,350}\.leaderboard-range-legend\s*\{[^}]*white-space:\s*normal/);
+});
+
 test("personal and team record forms require the event and record owner", () => {
   for (const id of ["personalCompetition", "personalName", "teamCompetition", "teamName"]) {
     assert.match(html, new RegExp(`<input\\b(?=[^>]*\\bid="${id}")(?=[^>]*\\brequired(?:\\s|>|=))[^>]*>`), `${id} should be required`);
