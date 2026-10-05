@@ -50,6 +50,34 @@ test("keyboard users can skip the shared navigation to the main content", () => 
   assert.match(css, /\.skip-link:focus\s*\{[^}]*outline:/);
 });
 
+test("static page has unique IDs, valid in-page links, and existing local scripts", () => {
+  const ids = [...html.matchAll(/\bid=["']([^"']+)["']/g)].map((match) => match[1]);
+  const seen = new Set();
+  for (const id of ids) {
+    assert.ok(!seen.has(id), `Duplicate HTML id: ${id}`);
+    seen.add(id);
+  }
+
+  const routeHashes = new Set(["home", "overview", "search", "archive", "reports", "events"]);
+  const dynamicHashLinks = new Set(["reportFormLink"]);
+  const hashLinks = [...html.matchAll(/\bhref=["']#([^"']*)["']/g)].map((match) => match[1]);
+  for (const hash of hashLinks) {
+    if (!hash) {
+      assert.ok(dynamicHashLinks.has("reportFormLink") && /id="reportFormLink"/.test(html) && /els\.reportFormLink\.href\s*=\s*config\.formUrl/.test(fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8")), "Placeholder form link must be wired during startup");
+      continue;
+    }
+    if (routeHashes.has(hash) || /^(event|school|player|topic)\//.test(hash)) continue;
+    assert.ok(seen.has(decodeURIComponent(hash)), `Missing in-page target for #${hash}`);
+  }
+
+  const localScripts = [...html.matchAll(/<script\b[^>]*\bsrc=["']([^"']+)["']/gi)]
+    .map((match) => match[1].split("?", 1)[0])
+    .filter((src) => !/^[a-z][a-z\d+.-]*:/i.test(src));
+  for (const src of localScripts) {
+    assert.ok(fs.existsSync(path.join(__dirname, "..", src)), `Missing local script: ${src}`);
+  }
+});
+
 test("personal event suggestions expose a named combobox and listbox", () => {
   assert.match(html, /id="personalCompetition"[^>]*role="combobox"[^>]*aria-controls="personalCompetitionSuggestions"[^>]*aria-autocomplete="list"[^>]*aria-expanded="false"/);
   assert.match(html, /id="personalCompetitionSuggestions"[^>]*role="listbox"[^>]*aria-label="已登錄賽事建議"/);
