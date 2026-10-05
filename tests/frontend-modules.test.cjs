@@ -702,6 +702,12 @@ test("router closes overlays and updates route title and current navigation", ()
   router.showView("topic/topic-1");
   assert.equal(context.document.title, "測試題目｜公開辯論資訊網");
 
+  router.showView("event/%E0%A4%A");
+  assert.equal(context.location.hash, "#home", "malformed encoded detail routes should recover to the home page");
+  assert.equal(context.document.title, "首頁｜公開辯論資訊網");
+  router.showView("topic/topic-not-found");
+  assert.equal(context.location.hash, "#home", "unknown detail routes should recover to the home page");
+
   router.showView("reports");
   assert.equal(context.document.title, "資料回報｜公開辯論資訊網");
   assert.equal(navButtons[4].attributes.get("aria-current"), "page");
