@@ -30,7 +30,7 @@
       && Number(value) >= minimum && Math.abs(Number(value) / step - Math.round(Number(value) / step)) < 1e-7);
     if (!validStep(record.matchNumber, 1, 1)) throw new Error("invalid match number");
     [...SCORE_KEYS, ...EXTRA_KEYS].forEach((key) => {
-      if (!validStep(record[key], 0, 0.1)) throw new Error("invalid score");
+      if (!validStep(record[key], 0, 0.1)) throw new Error(`invalid score: ${key}`);
     });
   }
 
@@ -126,8 +126,44 @@
   function startEdit(id) { const record = records.find((item) => item.id === id); if (!record) return; editingId = id; [[els.competition, record.competition], [els.teamName, record.teamName], [els.judge, record.judge], [els.matchDate, record.matchDate], [els.matchNumber, record.matchNumber], [els.side, record.side]].forEach(([element, value]) => setValue(element, value)); [...SCORE_KEYS, ...EXTRA_KEYS].forEach((key) => setValue(els[key], record[key])); updateLiveTotals(); els.nextButton.disabled = true; els.cancelEdit.classList.remove("is-hidden"); els.submitButton.textContent = "儲存修正"; showMessage("正在修正這張隊伍裁單。", false); els.form.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); }
   function addRecord(continueEntry = false) { if (!window.DebateRecordStorage.isValid(els.form)) return; if (editingId) { const index = records.findIndex((record) => record.id === editingId); if (index < 0) return; const nextRecords = [...records]; nextRecords[index] = getDraft(records[index]); if (!saveRecords(nextRecords)) return; exitEdit(true); render(); showMessage("隊伍裁單修正已儲存。", false); return; } const draft = getDraft(); if (!saveRecords([...records, draft])) return; render(); const group = groups().find((item) => item.ballots.some((record) => record.id === draft.id)); const ballot = ballotResult(draft); const message = group?.ballots.length > 3 ? `提醒：這場已有 ${group.ballots.length} 張裁單，仍會依全部可判定裁判票計算。` : group?.ballots.length === 3 ? `已湊齊三張：${resultFor(group).status}。本張為${ballot.status}（正 ${display(ballot.aff)}：${display(ballot.neg)} 反）。` : `已暫存第 ${group?.ballots.length || 1} 張，本張為${ballot.status}。`; showMessage(message, false); if (continueEntry) els.judge.focus(); else { clearForm(); document.querySelector("#teamSummaryTitle")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); } }
 
-  function exportCsv() { if (storageReadFailed) { showMessage(window.DebateRecordStorage.loadFailureMessage(), true); return; } const rows = [CSV_HEADERS, ...records.map((record) => [record.competition, record.matchNumber, record.matchDate, record.teamName, record.side, record.judge, ...SIDES.flatMap((side) => [1, 2, 3].flatMap((position) => METRICS.map((metric) => record[`${side}P${position}${metric}`]))), record.affArgument, record.affClosing, record.negArgument, record.negClosing, sideTotal(record, "aff") ?? "", sideTotal(record, "neg") ?? "", ballotResult(record).status, record.createdAt])]; const csv = RecordCsv.serialize(rows); const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" })); const link = document.createElement("a"); link.href = url; link.download = `我的隊伍辯論裁單-${window.DebateRecordStorage.localDateStamp()}.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 0); }
-  async function importCsv(file) { try { const rows = RecordCsv.parse(await file.text()); const headers = rows.shift()?.map((item) => item.trim()) || []; const value = (row, name) => row[headers.indexOf(name)] ?? ""; if (!headers.includes("隊伍名稱") || !headers.includes("正1申論")) throw new Error("unsupported"); const label = { Speech: "申論", Question: "質詢", Defense: "答辯" }; const imported = rows.map((row) => { const record = { id: `${Date.now()}-${Math.random().toString(16).slice(2)}`, competition: value(row, "盃賽"), matchNumber: value(row, "此盃第幾場") === "" ? "" : Number(value(row, "此盃第幾場")), matchDate: value(row, "比賽日期"), teamName: value(row, "隊伍名稱"), side: value(row, "我方持方"), judge: value(row, "裁判姓名"), affArgument: value(row, "正方架構論點"), affClosing: value(row, "正方結辯"), negArgument: value(row, "反方架構論點"), negClosing: value(row, "反方結辯"), createdAt: value(row, "建立時間") || new Date().toISOString() }; SIDES.forEach((side) => [1, 2, 3].forEach((position) => METRICS.forEach((metric) => { record[`${side}P${position}${metric}`] = value(row, `${side === "aff" ? "正" : "反"}${position}${label[metric]}`); }))); validateImportedRecord(record); return normalize(record); }); const additions = uniqueImportedRecords(records, imported); if (!saveRecords([...records, ...additions])) return; render(); const skipped = imported.length - additions.length; showMessage(`已匯入 ${additions.length} 張隊伍裁單${skipped ? `，重複資料已略過 ${skipped} 張` : ""}。`, false); } catch (_error) { showMessage("匯入失敗，請確認 CSV 欄位正確，場次與分數符合欄位範圍。", true); } finally { els.importInput.value = ""; } }
+  function exportCsv() { if (storageReadFailed) { showMessage(window.DebateRecordStorage.loadFailureMessage(), true); return; } const rows = [CSV_HEADERS, ...records.map((record) => [record.competition, record.matchNumber, record.matchDate, record.teamName, record.side, record.judge, ...SIDES.flatMap((side) => [1, 2, 3].flatMap((position) => METRICS.map((metric) => record[`${side}P${position}${metric}`]))), record.affArgument, record.affClosing, record.negArgument, record.negClosing, sideTotal(record, "aff") ?? "", sideTotal(record, "neg") ?? "", ballotResult(record).status, record.createdAt])]; const csv = RecordCsv.serialize(rows); const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" })); const link = document.createElement("a"); link.href = url; link.download = `我的隊伍辯論裁單-${window.DebateRecordStorage.localDateStamp()}.csv`; link.click(); setTimeout(() => URL.revokeObjectURL(url), 0); showMessage(`已下載 ${records.length} 張隊伍裁單，請妥善保存這份 CSV。`, false); }
+  function parseTeamRecords(text, { createId = () => `${Date.now()}-${Math.random().toString(16).slice(2)}`, now = () => new Date().toISOString() } = {}) {
+    const rows = RecordCsv.parse(text);
+    const headers = rows.shift()?.map((item) => item.trim()) || [];
+    const value = (row, name) => row[headers.indexOf(name)] ?? "";
+    if (!headers.includes("隊伍名稱") || !headers.includes("正1申論")) throw new Error("unsupported csv");
+    const label = { Speech: "申論", Question: "質詢", Defense: "答辯" };
+    return rows.map((row) => {
+      const record = {
+        id: createId(), competition: value(row, "盃賽"),
+        matchNumber: value(row, "此盃第幾場") === "" ? "" : Number(value(row, "此盃第幾場")),
+        matchDate: value(row, "比賽日期"), teamName: value(row, "隊伍名稱"), side: value(row, "我方持方"),
+        judge: value(row, "裁判姓名"), affArgument: value(row, "正方架構論點"), affClosing: value(row, "正方結辯"),
+        negArgument: value(row, "反方架構論點"), negClosing: value(row, "反方結辯"),
+        createdAt: value(row, "建立時間") || now(),
+      };
+      SIDES.forEach((side) => [1, 2, 3].forEach((position) => METRICS.forEach((metric) => {
+        record[`${side}P${position}${metric}`] = value(row, `${side === "aff" ? "正" : "反"}${position}${label[metric]}`);
+      })));
+      validateImportedRecord(record);
+      return normalize(record);
+    });
+  }
+
+  async function importCsv(file) {
+    try {
+      const imported = parseTeamRecords(await file.text());
+      const additions = uniqueImportedRecords(records, imported);
+      if (!saveRecords([...records, ...additions])) return;
+      render();
+      const skipped = imported.length - additions.length;
+      showMessage(`已匯入 ${additions.length} 張隊伍裁單${skipped ? `，重複資料已略過 ${skipped} 張` : ""}。`, false);
+    } catch (_error) {
+      showMessage("匯入失敗，請確認 CSV 欄位正確，場次與分數符合欄位範圍。", true);
+    } finally {
+      els.importInput.value = "";
+    }
+  }
 
   function initModePicker() {
     const tabs = [...document.querySelectorAll("[data-archive-mode]")];
@@ -162,5 +198,5 @@
     if (storageReadFailed) { [els.nextButton, els.submitButton, els.exportButton, els.deleteAllButton, els.importInput].forEach((control) => { control.disabled = true; }); showStorageReadFailure(); }
     els.side.addEventListener("change", updateLiveTotals); [...SCORE_KEYS, ...EXTRA_KEYS].forEach((key) => els[key].addEventListener("input", updateLiveTotals)); els.nextButton.addEventListener("click", () => addRecord(true)); els.cancelEdit.addEventListener("click", () => { exitEdit(true); showMessage("已取消修正。", false); }); els.form.addEventListener("submit", (event) => { event.preventDefault(); addRecord(false); }); els.exportButton.addEventListener("click", exportCsv); els.importInput.addEventListener("change", () => importCsv(els.importInput.files?.[0])); els.deleteAllButton.addEventListener("click", () => { if (!records.length || !confirm(`確定刪除全部 ${records.length} 張隊伍裁單嗎？`)) return; if (!saveRecords([])) return; exitEdit(true); render(); showMessage("隊伍裁單已全部刪除。", false); }); els.list.addEventListener("click", (event) => { const edit = event.target.closest("[data-team-edit]"); if (edit) return startEdit(edit.dataset.teamEdit); const remove = event.target.closest("[data-team-delete]"); if (!remove) return; if (!saveRecords(records.filter((record) => record.id !== remove.dataset.teamDelete))) return; if (editingId === remove.dataset.teamDelete) exitEdit(true); render(); showMessage("這張隊伍裁單已刪除。", false); }); render();
   }
-  window.DebateTeamRecords = { init, resolveResult, uniqueImportedRecords };
+  window.DebateTeamRecords = { init, resolveResult, uniqueImportedRecords, parseTeamRecords };
 }());

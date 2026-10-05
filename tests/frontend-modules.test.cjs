@@ -476,7 +476,8 @@ test("record CSV preserves commas, quotes, line breaks, and Unicode through expo
 test("shared record CSV parser rejects malformed quotes for both ballot formats", () => {
   const csvSource = fs.readFileSync(path.join(root, "js/record-csv.js"), "utf8");
   const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
-  assert.match(teamSource, /RecordCsv\.parse\(await file\.text\(\)\)/);
+  assert.match(teamSource, /parseTeamRecords\(await file\.text\(\)\)/);
+  assert.match(teamSource, /RecordCsv\.parse\(text\)/);
   assert.match(teamSource, /RecordCsv\.serialize\(rows\)/);
   assert.doesNotMatch(teamSource, /function parseCsv\(/);
   assert.doesNotMatch(teamSource, /function csvCell\(/);
@@ -485,12 +486,32 @@ test("shared record CSV parser rejects malformed quotes for both ballot formats"
   assert.match(csvSource, /invalid csv quoting/);
 });
 
+test("team CSV import preserves quoted multiline values and rejects malformed files", () => {
+  const csvWindow = loadFactory("js/record-csv.js");
+  const window = loadFactory("js/team-records.js", { DebateRecordCsv: csvWindow.DebateRecordCsv });
+  const headers = ["盃賽", "此盃第幾場", "比賽日期", "隊伍名稱", "我方持方", "裁判姓名",
+    ...["正", "反"].flatMap((side) => [1, 2, 3].flatMap((position) => ["申論", "質詢", "答辯"].map((metric) => `${side}${position}${metric}`))),
+    "正方架構論點", "正方結辯", "反方架構論點", "反方結辯", "正方總分", "反方總分", "該單結果", "建立時間"];
+  const fields = ["驗收盃,甲", "2", "2026-10-04", "隊伍「A」", "正", "裁判\n「一」",
+    ...Array(18).fill(""), "8.5", "7", "8", "7.5", "", "", "", "2026-10-05T00:00:00.000Z"];
+  const csv = csvWindow.DebateRecordCsv.serialize([headers, fields]);
+  const [record] = window.DebateTeamRecords.parseTeamRecords(csv, { createId: () => "qa-id" });
+  assert.equal(record.competition, "驗收盃,甲");
+  assert.equal(record.teamName, "隊伍「A」");
+  assert.equal(record.judge, "裁判\n「一」");
+  assert.equal(record.affArgument, 8.5);
+  assert.equal(record.createdAt, "2026-10-05T00:00:00.000Z");
+  assert.throws(() => window.DebateTeamRecords.parseTeamRecords('"盃賽","隊伍名稱","正1申論\n驗收盃,"破損,0'), /invalid csv quoting|unterminated csv quote/);
+});
+
 test("personal and team CSV exports use the shared local calendar date", () => {
   const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
   const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
   assert.match(personalSource, /我的辯論成績-\$\{window\.DebateRecordStorage\.localDateStamp\(\)\}\.csv/);
   assert.match(teamSource, /我的隊伍辯論裁單-\$\{window\.DebateRecordStorage\.localDateStamp\(\)\}\.csv/);
   assert.doesNotMatch(personalSource + teamSource, /toISOString\(\)\.slice\(0, 10\)/);
+  assert.match(personalSource, /已下載 \$\{records\.length\} 張裁單，請妥善保存這份 CSV/);
+  assert.match(teamSource, /已下載 \$\{records\.length\} 張隊伍裁單，請妥善保存這份 CSV/);
 });
 
 test("personal and team records do not invent dates for undated matches", () => {
@@ -521,7 +542,8 @@ test("team match results require enough decided ballots and preserve tie states"
 
 test("team final save clears the draft while next-ballot save preserves judge focus", () => {
   const source = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
-  const addRecord = source.slice(source.indexOf("function addRecord("), source.indexOf("function csvCell("));
+  const start = source.indexOf("function addRecord(");
+  const addRecord = source.slice(start, source.indexOf("function exportCsv(", start));
   assert.match(addRecord, /if \(continueEntry\) els\.judge\.focus\(\); else \{ clearForm\(\);[\s\S]*?teamSummaryTitle/);
 });
 
