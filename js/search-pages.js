@@ -17,21 +17,31 @@
     playerRosterEntries,
   }) {
     function getKnownPlayers() {
-      const rosterPeople = Object.values(getRosters() || {}).flatMap((entries) =>
-        entries.flatMap((roster) => [...(roster.leaders || []), ...(roster.players || [])])
+      const rosterPlayers = Object.values(getRosters() || {}).flatMap((entries) =>
+        entries.flatMap((roster) => roster.players || [])
       );
       return unique([
         ...getHonors().filter((item) => item.honorType === "player").map((item) => item.recipient),
         ...getRecords().flatMap((record) => Object.values(record.players || {}).flat()),
-        ...rosterPeople,
+        ...rosterPlayers,
       ].filter(Boolean));
+    }
+
+    function getKnownLeaders() {
+      return unique(Object.values(getRosters() || {}).flatMap((entries) =>
+        entries.flatMap((roster) => roster.leaders || [])
+      ).filter(Boolean));
+    }
+
+    function getKnownPeople() {
+      return unique([...getKnownPlayers(), ...getKnownLeaders()]);
     }
 
     function renderSearch(query) {
       const needle = normalize(query);
       if (!needle) {
         els.searchMeta.textContent = "";
-        els.searchResults.innerHTML = '<div class="search-empty"><div><span aria-hidden="true">🗂️</span><strong>從一個名字開始</strong><p>學校、隊伍或選手姓名都可以搜尋。</p></div></div>';
+        els.searchResults.innerHTML = '<div class="search-empty"><div><span aria-hidden="true">🗂️</span><strong>從一個名字開始</strong><p>學校、隊伍、選手或領隊姓名都可以搜尋。</p></div></div>';
         return;
       }
 
@@ -39,21 +49,27 @@
       const honors = getHonors();
       const topics = getTopics();
       const events = getEvents();
-      const allPlayers = getKnownPlayers();
+      const allPeople = getKnownPeople();
+      const knownPlayers = new Set(getKnownPlayers());
+      const knownLeaders = new Set(getKnownLeaders());
       const matchedEntities = store.entities.filter((entity) => [entity.code, entity.name, ...(entity.aliases || "").split("|")]
         .some((name) => normalize(name).includes(needle)));
-      const matchedPlayers = allPlayers.filter((name) => normalize(name).includes(needle));
+      const matchedPeople = allPeople.filter((name) => normalize(name).includes(needle));
       const matchedTopics = topics.filter((item) => normalize(`${item.topic} ${item.explanation} ${item.competitionName}`).includes(needle));
+      const topicMatches = [...new Map(matchedTopics.map((item) => [item.topicId, {
+        ...item,
+        entries: matchedTopics.filter((candidate) => candidate.topicId === item.topicId),
+      }])).values()];
       const entityIdSet = new Set(matchedEntities.map((entity) => entity.code));
-      const playerSet = new Set(matchedPlayers);
+      const personSet = new Set(matchedPeople);
       const matchedRecords = records.filter((item) => entityIdSet.has(item.teamIds?.affirmative) || entityIdSet.has(item.teamIds?.negative))
         .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
-      const matchedHonors = honors.filter((item) => entityIdSet.has(item.teamId) || playerSet.has(item.recipient))
+      const matchedHonors = honors.filter((item) => entityIdSet.has(item.teamId) || personSet.has(item.recipient))
         .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
-      const entityResultCount = matchedEntities.length + matchedPlayers.length;
-      const resultCount = entityResultCount + matchedTopics.length;
+      const entityResultCount = matchedEntities.length + matchedPeople.length;
+      const resultCount = entityResultCount + topicMatches.length;
       els.searchMeta.textContent = resultCount
-        ? `找到 ${matchedEntities.length} 個學校／隊伍、${matchedPlayers.length} 位選手、${matchedTopics.length} 筆辯題`
+        ? `找到 ${matchedEntities.length} 個學校／隊伍、${matchedPeople.length} 位人物、${topicMatches.length} 個辯題`
         : `沒有找到「${query}」`;
 
       const entitySection = entityResultCount ? `<section class="result-section"><h2>符合名稱</h2><div class="entity-grid">
@@ -63,18 +79,15 @@
           const aliases = (entity.aliases || "").split("|").filter(Boolean);
           return `<button class="entity-card" type="button" data-entity-id="${escapeHtml(entity.code)}"><h3>🏫 ${escapeHtml(entity.name)}</h3><p>${games} 場公開賽果 · ${awards} 筆相關榮譽</p>${aliases.length ? `<small>別名：${aliases.map(escapeHtml).join("、")}</small>` : ""}</button>`;
         }).join("")}
-        ${matchedPlayers.map((name) => {
+        ${matchedPeople.map((name) => {
           const personHonors = honors.filter((item) => item.honorType === "player" && item.recipient === name);
           const personRosters = playerRosterEntries(name);
           const teams = unique([...personHonors.map((item) => item.team), ...personRosters.map((roster) => roster.team)].filter(Boolean));
-          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="player-icon" aria-hidden="true">🎤</span>${escapeHtml(name)}</h3><p>${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆榮譽${personRosters.length ? ` · ${personRosters.length} 筆隊伍名單` : ""}</p></button>`;
+          const roles = [knownPlayers.has(name) ? "選手" : "", knownLeaders.has(name) ? "領隊" : ""].filter(Boolean).join("／");
+          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="person-icon" aria-hidden="true">👤</span>${escapeHtml(name)}</h3><p>${escapeHtml(roles)} · ${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆個人榮譽${personRosters.length ? ` · ${personRosters.length} 筆隊伍名單` : ""}</p></button>`;
         }).join("")}
       </div></section>` : "";
 
-      const topicMatches = [...new Map(matchedTopics.map((item) => [item.topicId, {
-        ...item,
-        entries: matchedTopics.filter((candidate) => candidate.topicId === item.topicId),
-      }])).values()];
       const topicSection = topicMatches.length ? `<section class="result-section"><h2>符合辯題</h2><div class="overview-topic-list search-topic-list">${topicMatches.map((item) => `<article class="overview-topic-card"><span>${item.entries.length} 場賽事</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.entries.map((entry) => `<button class="topic-event-link" type="button" data-event-route="${escapeHtml(entry.competitionName)}">${escapeHtml(entry.competitionName)} →</button>`).join("")}</article>`).join("")}</div></section>` : "";
 
       const histories = [
@@ -98,7 +111,7 @@
       els.searchResults.innerHTML = content || '<div class="search-empty"><div><span aria-hidden="true">🤔</span><strong>目前沒有相符資料</strong><p>可以縮短關鍵字再試一次。</p></div></div>';
     }
 
-    return { renderSearch, getKnownPlayers };
+    return { renderSearch, getKnownPeople };
   }
 
   window.DebateSearchPages = { createSearchPages };

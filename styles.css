@@ -145,8 +145,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-card-topic { display: -webkit-box; margin: 0; overflow: hidden; color: var(--muted); font-size: 11px; font-weight: 700; line-height: 1.5; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
 .event-card-topic span { color: var(--green); font-weight: 900; }
 .event-card-meta { display: flex; gap: 12px; color: var(--muted); font-size: 12px; font-weight: 750; }
-.player-icon, .leaderboard-mic { display: inline-grid; width: 30px; height: 30px; place-items: center; margin-right: 7px; border-radius: 50%; background: var(--yellow); font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif; font-size: 19px; line-height: 1; vertical-align: middle; }
-.entity-card h3 .player-icon { display: inline-grid; font-size: 19px; }
+.person-icon, .player-icon, .leaderboard-mic { display: inline-grid; width: 30px; height: 30px; place-items: center; margin-right: 7px; border-radius: 50%; background: var(--yellow); font-family: "Apple Color Emoji", "Segoe UI Emoji", sans-serif; font-size: 19px; line-height: 1; vertical-align: middle; }
+.entity-card h3 .person-icon, .entity-card h3 .player-icon { display: inline-grid; font-size: 19px; }
 
 .leaderboard-band { --rank-bg: #e4f0e9; --rank-border: #bfd6c8; --rank-panel: #fff; padding: 68px 0 82px; background: var(--rank-bg); border-top: 1px solid var(--rank-border); transition: background-color .25s ease, border-color .25s ease; }
 .leaderboard-band[data-range="all"] { --rank-bg: #fff2c9; --rank-border: #e2c866; --rank-panel: #fffdf6; }
@@ -404,6 +404,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .team-name.negative { text-align: right; }
 .match-score { display: flex; justify-content: center; align-items: center; gap: 8px; font-weight: 950; font-size: 18px; }
 .match-score .winner-score { color: var(--coral-text); }
+.team-name.is-match-winner { color: var(--coral-text); font-weight: 900; }
+.match-winner-marker { display: inline-block; margin-inline-start: 5px; border-radius: 999px; padding: 2px 6px; background: #fff1e8; color: var(--coral-text); font-size: 10px; font-weight: 900; line-height: 1.4; white-space: nowrap; }
 .score-unreported { color: var(--muted); font-size: 12px; font-weight: 800; text-align: center; }
 .unscored-match-winner .team-name-link { color: var(--coral-text); font-weight: 900; }
 .unscored-match-winner small { display: block; color: var(--coral-text); font-size: 10px; font-weight: 800; margin-top: 2px; }
@@ -436,7 +438,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .entity-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
 .entity-card { display: block; width: 100%; border: 1px solid var(--line); border-left: 5px solid var(--teal); padding: 16px; background: white; color: var(--ink); cursor: pointer; font: inherit; text-align: left; }
 button.entity-card:hover, button.entity-card.is-selected { border-color: var(--green); background: var(--soft); transform: translateY(-2px); box-shadow: 4px 4px 0 var(--yellow); }
-.entity-card.player { border-left-color: var(--coral); cursor: default; }
+.entity-card.player { border-left-color: var(--coral); cursor: pointer; }
 .entity-card h3 { margin: 0; font-size: 17px; }
 .entity-card p { margin: 7px 0 0; color: var(--muted); font-size: 12px; line-height: 1.6; }
 .entity-card small { display: block; margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }

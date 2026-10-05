@@ -4,7 +4,7 @@
     getEvents,
     getTopics,
     getUpcomingEvents,
-    getKnownPlayers,
+    getKnownPeople,
     store,
     legacyEntityIds = {},
     renderEvent,
@@ -56,7 +56,7 @@
       }
       if (playerRoute) {
         try { playerName = decodeURIComponent(playerRoute[1]); } catch { playerName = ""; }
-        if (!getKnownPlayers().includes(playerName)) playerName = "";
+        if (!getKnownPeople().includes(playerName)) playerName = "";
       }
       if (topicRoute) {
         try { topicId = decodeURIComponent(topicRoute[1]); } catch { topicId = ""; }

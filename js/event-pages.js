@@ -107,14 +107,15 @@
           <h${itemLevel} class="match-day-title"><span aria-hidden="true">📅</span>${escapeHtml(formatDate(date))}</h${itemLevel}>
           <div class="match-list">${matches.map((match) => {
             const a = Number(match.scores?.affirmative) || 0;
-            const n = Number(match.scores?.negative) || 0;
-            const hasScore = matchScoreLabel(match) !== "比分未公告";
-            const singleHonors = singleHonorsFor(match);
-            return `<div class="match-row">
-              <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}${match.groupName ? `<small class="match-group-name" aria-label="循環／分組：${escapeHtml(match.groupName)}">↻ ${escapeHtml(match.groupName)}</small>` : ""}</span>
-              <span class="team-name ${!hasScore && match.winner === match.teams?.affirmative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}${!hasScore && match.winner === match.teams?.affirmative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
+          const n = Number(match.scores?.negative) || 0;
+          const hasScore = matchScoreLabel(match) !== "比分未公告";
+          const winnerSide = window.DebateCore.matchWinnerSide(match, store);
+          const singleHonors = singleHonorsFor(match);
+          return `<div class="match-row">
+            <span class="match-place">時段 ${escapeHtml(match.period || "-")}<br>會場 ${escapeHtml(match.venue || "-")}${match.groupName ? `<small class="match-group-name" aria-label="循環／分組：${escapeHtml(match.groupName)}">↻ ${escapeHtml(match.groupName)}</small>` : ""}</span>
+              <span class="team-name ${winnerSide === "affirmative" ? "is-match-winner" : ""} ${!hasScore && winnerSide === "affirmative" ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.affirmative, match.teams?.affirmative, "team-name-link")}${winnerSide === "affirmative" ? `<small class="match-winner-marker">勝方</small>` : ""}${!hasScore && winnerSide === "affirmative" ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
               ${hasScore ? `<span class="match-score"><span class="${a > n ? "winner-score" : ""}">${a}</span><span>:</span><span class="${n > a ? "winner-score" : ""}">${n}</span></span>` : '<span class="score-unreported" aria-label="比分未公告">未公告</span>'}
-              <span class="team-name negative ${!hasScore && match.winner === match.teams?.negative ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}${!hasScore && match.winner === match.teams?.negative ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
+              <span class="team-name negative ${winnerSide === "negative" ? "is-match-winner" : ""} ${!hasScore && winnerSide === "negative" ? "unscored-match-winner" : ""}">${entityPageLink(match.teamIds?.negative, match.teams?.negative, "team-name-link")}${winnerSide === "negative" ? `<small class="match-winner-marker">勝方</small>` : ""}${!hasScore && winnerSide === "negative" ? `<small>${match.inferenceNote ? "推定勝方" : "文件列明勝方"}</small>` : ""}</span>
               <span class="match-note">${renderMatchNote(match.note)}${singleHonors.map((honor) => `<span class="match-single-best"><b>${honor.label}</b>${playerPageLink(honor.recipient)}</span>`).join("")}</span>
             </div>`;
           }).join("")}</div>

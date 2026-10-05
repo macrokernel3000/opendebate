@@ -27,7 +27,7 @@ function contrastRatio(first, second) {
 
 test("small coral text keeps AA contrast on common light surfaces", () => {
   const coralText = token("coral-text");
-  const lightSurfaces = ["#fffdf8", "#ffffff", "#f4f1e8", "#fffaf0", "#f7fbf8", "#fff6d5", "#ffefb7"];
+  const lightSurfaces = ["#fffdf8", "#ffffff", "#f4f1e8", "#fffaf0", "#f7fbf8", "#fff6d5", "#ffefb7", "#fff1e8"];
   for (const surface of lightSurfaces) {
     assert.ok(
       contrastRatio(coralText, surface) >= 4.5,
@@ -89,6 +89,13 @@ test("upcoming event cards do not visually clip event names or locations", () =>
   for (const rule of [titleRule, locationRule]) {
     assert.doesNotMatch(rule, /line-clamp|overflow:\s*hidden/);
   }
+});
+
+test("search names people roles and result pages label the declared winning team", () => {
+  assert.match(html, /搜尋學校、隊伍、人物或辯題/);
+  assert.match(css, /\.entity-card\.player\s*\{[^}]*cursor:\s*pointer/);
+  assert.match(css, /\.match-winner-marker\s*\{[^}]*color:\s*var\(--coral-text\)/);
+  assert.match(css, /\.match-winner-marker\s*\{[^}]*background:\s*#fff1e8/);
 });
 
 test("report contact links keep a 44px touch target", () => {

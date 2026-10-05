@@ -62,6 +62,20 @@ function loadFactory(filename, globalValues = {}) {
   return window;
 }
 
+function loadEventPages() {
+  return loadFactory("js/event-pages.js", { DebateCore: loadFactory("js/core.js").DebateCore });
+}
+
+test("match winner resolution honors declared teams and affirmative or negative side markers", () => {
+  const core = loadFactory("js/core.js").DebateCore;
+  const winnerStore = { entityForName: (name) => name === "甲校別名" ? { code: "s1" } : undefined };
+  assert.equal(core.matchWinnerSide({ winner: "正方勝" }, winnerStore), "affirmative");
+  assert.equal(core.matchWinnerSide({ winner: "反方勝" }, winnerStore), "negative");
+  assert.equal(core.matchWinnerSide({ winner: "甲校", teams: { affirmative: "甲校", negative: "乙校" } }, winnerStore), "affirmative");
+  assert.equal(core.matchWinnerSide({ winner: "甲校別名", teamIds: { affirmative: "s1", negative: "s2" } }, winnerStore), "affirmative");
+  assert.equal(core.matchWinnerSide({ winner: "來源未明" }, winnerStore), "");
+});
+
 function eventPageDependencies() {
   return {
     els: { eventPageDetail: { innerHTML: "" }, eventDetail: { innerHTML: "" } },
@@ -109,7 +123,7 @@ function entityPageDependencies(target) {
 }
 
 test("event pages render upcoming details and recorded match results", () => {
-  const window = loadFactory("js/event-pages.js");
+  const window = loadEventPages();
   const dependencies = eventPageDependencies();
   const pages = window.DebateEventPages.createEventPages(dependencies);
   const target = dependencies.els.eventPageDetail;
@@ -134,8 +148,17 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /測試高中/);
   assert.match(target.innerHTML, /對手高中/);
   assert.match(target.innerHTML, /winner-score/);
+  assert.match(target.innerHTML, /class="team-name is-match-winner/);
+  assert.match(target.innerHTML, /class="match-winner-marker">勝方<\/small>/);
   assert.match(target.innerHTML, /比賽結果/);
   assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
+  const tiedRecord = { ...record, scores: { affirmative: 1, negative: 1 }, winner: "正方勝" };
+  const originalRecords = events[0].records;
+  events[0] = { ...events[0], records: [tiedRecord] };
+  pages.renderEvent("測試盃", target);
+  assert.match(target.innerHTML, /class="team-name is-match-winner/);
+  assert.equal((target.innerHTML.match(/class="match-winner-marker">勝方<\/small>/g) || []).length, 1);
+  events[0] = { ...events[0], records: originalRecords };
   const inlineTarget = { innerHTML: "" };
   pages.renderEvent("測試盃", inlineTarget);
   assert.match(inlineTarget.innerHTML, /<h2>測試盃<\/h2>/);
@@ -155,7 +178,7 @@ test("event detail pages escape untrusted names, notes, topics, and roster text"
   dependencies.getEvents = () => [maliciousEvent];
   dependencies.entityPageLink = (id, label) => `<button data-entity-route="${escapeHtml(id)}">${escapeHtml(label)}</button>`;
   dependencies.playerPageLink = (name) => `<button data-player-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
-  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
   const target = dependencies.els.eventPageDetail;
 
   pages.renderUpcomingEvent({
@@ -182,7 +205,7 @@ test("long event notes collapse and render HTTPS sources as concise safe links",
   };
   const dependencies = eventPageDependencies();
   dependencies.getEvents = () => [event];
-  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
   const target = dependencies.els.eventPageDetail;
 
   pages.renderEvent(event.name, target);
@@ -201,7 +224,7 @@ test("long match notes collapse into a full-width disclosure with safe source li
   const event = { ...events[0], records: [{ ...record, note: matchNote }] };
   const dependencies = eventPageDependencies();
   dependencies.getEvents = () => [event];
-  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
   const target = dependencies.els.eventPageDetail;
 
   pages.renderEvent(event.name, target);
@@ -229,6 +252,11 @@ test("entity pages keep event-specific topic explanations and player honors", ()
   assert.match(playerHtml, /隊伍名單/);
   assert.match(playerHtml, /登場紀錄/);
   assert.match(playerHtml, /<h1>林選手的辯論紀錄<\/h1>/);
+
+  const leaderHtml = pages.renderPlayerDetail("領隊");
+  assert.match(leaderHtml, /<p class="kicker">領隊<\/p>/);
+  assert.match(leaderHtml, /<strong>0<\/strong> 項個人榮譽/);
+  assert.match(leaderHtml, /公布隊伍名單不代表實際上場/);
 
   const schoolHtml = pages.renderEntityDetail(team, "schoolPageEntityDetail", true);
   assert.match(schoolHtml, /測試高中的完整紀錄/);
@@ -481,6 +509,7 @@ test("search pages cover empty, alias, player, topic and unmatched search states
     { ...fullCourseHonor, team: school.name, teamId: school.code },
   ];
   const searchEvent = { ...events[0], records: [searchRecord], honors: searchHonors };
+  const searchTopics = [events[0].topics[0], { ...events[0].topics[0], competitionName: "第二場測試盃" }];
   const els = { searchMeta: { textContent: "" }, searchResults: { innerHTML: "" } };
   const rosters = { "測試盃": [{ team: school.name, leaders: ["領隊"], players: ["隊員甲"] }] };
   const window = loadFactory("js/search-pages.js");
@@ -489,7 +518,7 @@ test("search pages cover empty, alias, player, topic and unmatched search states
     getEvents: () => [searchEvent],
     getRecords: () => [searchRecord],
     getHonors: () => searchHonors,
-    getTopics: () => events[0].topics,
+    getTopics: () => searchTopics,
     getRosters: () => rosters,
     store: searchStore,
     normalize: (value) => String(value ?? "").normalize("NFKC"),
@@ -508,7 +537,7 @@ test("search pages cover empty, alias, player, topic and unmatched search states
   assert.match(els.searchResults.innerHTML, /從一個名字開始/);
   assert.equal(els.searchMeta.textContent, "");
 
-  assert.deepEqual(pages.getKnownPlayers(), ["林選手", "領隊", "隊員甲"]);
+  assert.deepEqual(pages.getKnownPeople(), ["林選手", "隊員甲", "領隊"]);
   pages.renderSearch("測試別名");
   assert.match(els.searchMeta.textContent, /找到 1 個學校／隊伍/);
   assert.match(els.searchResults.innerHTML, /測試高中&lt;甲&gt;/);
@@ -521,8 +550,15 @@ test("search pages cover empty, alias, player, topic and unmatched search states
   assert.match(els.searchResults.innerHTML, /data-player-route="隊員甲"/);
   assert.match(els.searchResults.innerHTML, /測試高中&lt;甲&gt;/);
 
+  pages.renderSearch("領隊");
+  assert.match(els.searchMeta.textContent, /1 位人物/);
+  assert.match(els.searchResults.innerHTML, /領隊 · 測試高中&lt;甲&gt;/);
+  assert.match(els.searchResults.innerHTML, /data-player-route="領隊"/);
+  assert.doesNotMatch(els.searchResults.innerHTML, /選手 · 測試高中/);
+
   pages.renderSearch("賽事專屬題解");
-  assert.match(els.searchMeta.textContent, /1 筆辯題/);
+  assert.match(els.searchMeta.textContent, /1 個辯題/);
+  assert.match(els.searchResults.innerHTML, /2 場賽事/);
   assert.match(els.searchResults.innerHTML, /data-topic-route="topic-test"/);
   assert.match(els.searchResults.innerHTML, /data-event-route="測試盃"/);
 
@@ -730,7 +766,7 @@ test("router closes overlays and updates route title and current navigation", ()
       eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail, playerPageDetail: {}, topicPageDetail: {},
       globalSearch: { focus() {} },
     },
-    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getKnownPlayers: () => ["林選手"],
+    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getKnownPeople: () => ["林選手"],
     store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
     closeTransientUI: () => { closeCount += 1; },
   });
@@ -793,7 +829,7 @@ test("search query URLs survive route normalization and return to search", () =>
       eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail: {}, playerPageDetail: {}, topicPageDetail: {},
       globalSearch: { value: "南山高中", focus() {} },
     },
-    getEvents: () => [], getTopics: () => [], getUpcomingEvents: () => [], getKnownPlayers: () => [],
+    getEvents: () => [], getTopics: () => [], getUpcomingEvents: () => [], getKnownPeople: () => [],
     store: { entityById: new Map() }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail() {}, renderPlayerDetail() {}, renderTopic() {},
   });
 

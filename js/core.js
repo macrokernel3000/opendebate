@@ -21,6 +21,20 @@
 
   function unique(values) { return [...new Set(values.filter(Boolean))]; }
   function normalize(value) { return String(value || "").toLocaleLowerCase("zh-Hant").replace(/\s+/g, ""); }
+  function matchWinnerSide(match, store) {
+    const winner = String(match?.winner ?? "").trim();
+    if (!winner) return "";
+    if (winner === "正方勝") return "affirmative";
+    if (winner === "反方勝") return "negative";
+    for (const side of ["affirmative", "negative"]) {
+      const teamName = match.teams?.[side];
+      const teamId = match.teamIds?.[side];
+      if (winner === teamName || winner === teamId) return side;
+      const winningEntity = store?.entityForName?.(winner);
+      if (winningEntity && teamId && winningEntity.code === teamId) return side;
+    }
+    return "";
+  }
   function groupByDate(items) {
     return items.reduce((groups, item) => {
       const key = item.matchDate || "日期未載明";
@@ -54,5 +68,5 @@
     };
   }
 
-  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, createStore };
+  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, matchWinnerSide, createStore };
 }());

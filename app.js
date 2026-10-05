@@ -154,7 +154,7 @@ const { renderEventOptions, renderEventFinder, renderOverview, renderOverviewSta
   matchResultForEntity,
 });
 
-const { renderSearch, getKnownPlayers } = window.DebateSearchPages.createSearchPages({
+const { renderSearch, getKnownPeople } = window.DebateSearchPages.createSearchPages({
   els,
   getEvents: () => events,
   getRecords: () => records,
@@ -197,7 +197,7 @@ const { showView } = window.DebateRouter.createRouter({
   getEvents: () => events,
   getTopics: () => topics,
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS,
-  getKnownPlayers,
+  getKnownPeople,
   store,
   legacyEntityIds: { s126: "s027" },
   renderEvent,
@@ -211,8 +211,8 @@ const { showView } = window.DebateRouter.createRouter({
 function matchResultForEntity(match, entityId) {
   const side = match.teamIds?.affirmative === entityId ? "affirmative" : "negative";
   const other = side === "affirmative" ? "negative" : "affirmative";
-  const winnerId = store.entityForName(match.winner)?.code;
-  if (winnerId) return winnerId === entityId ? "勝" : "敗";
+  const winnerSide = window.DebateCore.matchWinnerSide(match, store);
+  if (winnerSide) return match.teamIds?.[winnerSide] === entityId ? "勝" : "敗";
   const ownScore = Number(match.scores?.[side]) || 0;
   const otherScore = Number(match.scores?.[other]) || 0;
   return ownScore > otherScore ? "勝" : ownScore < otherScore ? "敗" : "平";
