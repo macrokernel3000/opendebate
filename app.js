@@ -372,8 +372,8 @@ function renderAll() {
   renderHome();
   renderEventOptions();
   renderOverview();
-  window.DebatePersonalRecords?.init({ events: events.map((event) => ({ name: event.name, date: event.latestDate })) });
-  window.DebateTeamRecords?.init({ events: events.map((event) => ({ name: event.name, date: event.latestDate })) });
+  window.DebatePersonalRecords?.init({ events: events.map((event) => ({ name: event.name })) });
+  window.DebateTeamRecords?.init({ events: events.map((event) => ({ name: event.name })) });
   setupReportLinks();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";
   els.globalSearch.value = initialQuery;

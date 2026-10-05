@@ -1,5 +1,6 @@
 (function () {
   const STORAGE_KEY = "opendebate.personal-records.v1";
+  const RecordCsv = window.DebateRecordCsv;
   const CSV_HEADERS = ["盃賽", "此盃第幾場", "比賽日期", "姓名", "裁判姓名", "論點分", "論點滿分", "申論", "申論滿分", "質詢", "質詢滿分", "答辯", "答辯滿分", "結辯", "結辯滿分", "排名", "建立時間"];
   const METRICS = [
     { key: "argument", label: "論點", maxKey: "argumentMax", defaultMax: 10, color: "#ef654f" },
@@ -12,7 +13,6 @@
   let initialized = false;
   let records = [];
   let eventNames = [];
-  let eventDateByName = new Map();
   let editingId = "";
   let expandedChartTrigger = null;
   let expandedChartDialog = null;
@@ -30,20 +30,15 @@
       .replaceAll("'", "&#039;");
   }
 
-  function defaultJulyDate(year = new Date().getFullYear()) {
-    return `${year}-07-01`;
-  }
-
   function positiveNumber(value, fallback) {
     const number = Number(value);
     return Number.isFinite(number) && number > 0 ? number : fallback;
   }
 
   function normalizeRecord(record) {
-    const createdYear = String(record.createdAt || "").slice(0, 4);
     const normalized = { ...record };
     METRICS.forEach((metric) => { normalized[metric.maxKey] = positiveNumber(record[metric.maxKey], metric.defaultMax); });
-    normalized.matchDate = record.matchDate || eventDateByName.get(record.competition) || defaultJulyDate(/^\d{4}$/.test(createdYear) ? createdYear : undefined);
+    normalized.matchDate = record.matchDate || "";
     return normalized;
   }
 
@@ -76,7 +71,7 @@
       id: existingRecord?.id || `${Date.now()}-${Math.random().toString(16).slice(2)}`,
       competition: els.competition.value.trim(),
       matchNumber: fieldNumber(els.matchNumber),
-      matchDate: els.matchDate.value || defaultJulyDate(),
+      matchDate: els.matchDate.value || "",
       name: els.name.value.trim(),
       judge: els.judge.value.trim(),
       argument: fieldNumber(els.argument),
@@ -105,7 +100,7 @@
     els.submitButton.textContent = "輸入完成";
     if (!clearForm) return;
     [els.competition, els.matchNumber, els.name, els.judge, els.argument, els.speech, els.question, els.defense, els.closing].forEach((input) => { input.value = ""; });
-    els.matchDate.value = defaultJulyDate();
+    els.matchDate.value = "";
     METRICS.forEach((metric) => { els[metric.maxKey].value = String(metric.defaultMax); });
     els.rank.value = "";
   }
@@ -393,7 +388,6 @@
   function selectCompetitionSuggestion(option) {
     if (!option) return;
     els.competition.value = option.dataset.competitionSuggestion;
-    els.matchDate.value = eventDateByName.get(els.competition.value) || defaultJulyDate();
     activeCompetitionIndex = -1;
     els.competitionSuggestions.classList.add("is-hidden");
     els.competition.setAttribute("aria-expanded", "false");
@@ -431,10 +425,6 @@
     }
   }
 
-  function csvCell(value) {
-    return `"${String(value ?? "").replaceAll('"', '""')}"`;
-  }
-
   function exportCsv() {
     if (!records.length) return;
     const rows = [CSV_HEADERS, ...records.map((record) => [
@@ -443,7 +433,7 @@
       record.defense, record.defenseMax, record.closing, record.closingMax,
       record.rank ?? "", record.createdAt,
     ])];
-    const csv = `\uFEFF${rows.map((row) => row.map(csvCell).join(",")).join("\n")}`;
+    const csv = RecordCsv.serialize(rows);
     const url = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
     const link = document.createElement("a");
     link.href = url;
@@ -453,85 +443,10 @@
     showMessage(`已下載 ${records.length} 張裁單，請妥善保存這份 CSV。`, false);
   }
 
-  function parseCsv(text) {
-    const rows = [];
-    let row = [];
-    let cell = "";
-    let quoted = false;
-    const source = text.replace(/^\uFEFF/, "");
-    for (let index = 0; index < source.length; index += 1) {
-      const character = source[index];
-      if (quoted && character === '"' && source[index + 1] === '"') { cell += '"'; index += 1; }
-      else if (character === '"') quoted = !quoted;
-      else if (character === "," && !quoted) { row.push(cell); cell = ""; }
-      else if ((character === "\n" || character === "\r") && !quoted) {
-        if (character === "\r" && source[index + 1] === "\n") index += 1;
-        row.push(cell); rows.push(row); row = []; cell = "";
-      } else cell += character;
-    }
-    if (cell || row.length) { row.push(cell); rows.push(row); }
-    return rows.filter((item) => item.some((value) => value.trim() !== ""));
-  }
-
-  function parseBoolean(value) {
-    return ["是", "true", "1", "勝", "yes"].includes(String(value || "").trim().toLowerCase());
-  }
-
-  function importedNumber(value) {
-    if (String(value ?? "").trim() === "") return "";
-    const number = Number(value);
-    if (!Number.isFinite(number)) throw new Error("invalid number");
-    return number;
-  }
-
-  function importedMaximum(value, fallback) {
-    if (String(value ?? "").trim() === "") return fallback;
-    const number = importedNumber(value);
-    if (number < 0.1 || Math.abs(number * 10 - Math.round(number * 10)) > 1e-7) throw new Error("invalid score maximum");
-    return number;
-  }
-
-  function validateImportedRecord(record) {
-    const validStep = (value, minimum, step, maximum = Number.POSITIVE_INFINITY) => value === "" || (Number.isFinite(Number(value))
-      && Number(value) >= minimum && Number(value) <= maximum
-      && Math.abs(Number(value) / step - Math.round(Number(value) / step)) < 1e-7);
-    if (!validStep(record.matchNumber, 1, 1) || !validStep(record.rank, 1, 1, 6)) throw new Error("invalid match number or rank");
-    METRICS.forEach((metric) => {
-      if (!validStep(record[metric.key], 0, 0.1) || !validStep(record[metric.maxKey], 0.1, 0.1)) throw new Error("invalid score");
-    });
-  }
-
   async function importCsv(file) {
     if (!file) return;
     try {
-      const rows = parseCsv(await file.text());
-      const headers = rows.shift()?.map((header) => header.trim()) || [];
-      const get = (row, ...names) => {
-        const index = names.map((name) => headers.indexOf(name)).find((candidate) => candidate >= 0);
-        return index === undefined ? "" : row[index];
-      };
-      if (!headers.includes("申論") && !headers.includes("盃賽")) throw new Error("unsupported csv");
-      const imported = rows.map((row) => ({
-        id: `${Date.now()}-${Math.random().toString(16).slice(2)}`,
-        competition: get(row, "盃賽", "盃賽名稱"),
-        matchNumber: importedNumber(get(row, "此盃第幾場", "場次")),
-        matchDate: get(row, "比賽日期", "日期"),
-        name: get(row, "姓名", "選手姓名"),
-        judge: get(row, "裁判姓名", "裁判"),
-        argument: importedNumber(get(row, "論點分", "該場論點分")),
-        argumentMax: importedMaximum(get(row, "論點滿分"), 10),
-        speech: importedNumber(get(row, "申論")),
-        speechMax: importedMaximum(get(row, "申論滿分"), 20),
-        question: importedNumber(get(row, "質詢")),
-        questionMax: importedMaximum(get(row, "質詢滿分"), 20),
-        defense: importedNumber(get(row, "答辯")),
-        defenseMax: importedMaximum(get(row, "答辯滿分"), 20),
-        closing: importedNumber(get(row, "結辯")),
-        closingMax: importedMaximum(get(row, "結辯滿分"), 10),
-        rank: importedNumber(get(row, "排名", "排名為1", "排名為 1")),
-        createdAt: get(row, "建立時間") || new Date().toISOString(),
-      })).map(normalizeRecord);
-      imported.forEach(validateImportedRecord);
+      const imported = RecordCsv.parsePersonalRecords(await file.text()).map(normalizeRecord);
       const key = (record) => [record.competition, record.matchNumber, record.matchDate, record.name, record.judge, ...METRICS.flatMap((metric) => [record[metric.key], record[metric.maxKey]]), record.rank, record.createdAt].join("|");
       const existing = new Set(records.map(key));
       const additions = imported.filter((record) => !existing.has(key(record)));
@@ -582,15 +497,13 @@
       list: document.querySelector("#personalRecordList"),
     };
     if (!els.form) return;
-    const eventEntries = events.map((event) => typeof event === "string" ? { name: event, date: "" } : event).filter((event) => event.name);
+    const eventEntries = events.map((event) => typeof event === "string" ? { name: event } : event).filter((event) => event.name);
     eventNames = eventEntries.map((event) => event.name).sort((a, b) => b.localeCompare(a, "zh-Hant"));
-    eventDateByName = new Map(eventEntries.map((event) => [event.name, event.date || ""]));
     records = readRecords().map(normalizeRecord);
-    els.matchDate.value = defaultJulyDate();
+    els.matchDate.value = "";
     els.competition.addEventListener("input", () => {
       activeCompetitionIndex = -1;
       renderCompetitionSuggestions();
-      els.matchDate.value = eventDateByName.get(els.competition.value.trim()) || defaultJulyDate();
     });
     els.competition.addEventListener("focus", renderCompetitionSuggestions);
     els.competition.addEventListener("keydown", handleCompetitionKeydown);

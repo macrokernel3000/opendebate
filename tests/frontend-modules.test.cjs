@@ -455,6 +455,17 @@ test("personal and team CSV exports use the shared local calendar date", () => {
   assert.doesNotMatch(personalSource + teamSource, /toISOString\(\)\.slice\(0, 10\)/);
 });
 
+test("personal and team records do not invent dates for undated matches", () => {
+  const markup = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+
+  assert.ok(markup.indexOf("js/record-csv.js") < markup.indexOf("js/personal-records.js"));
+  assert.match(personalSource, /matchDate: els\.matchDate\.value \|\| ""/);
+  assert.match(teamSource, /matchDate: els\.matchDate\.value \|\| ""/);
+  assert.doesNotMatch(personalSource + teamSource, /-07-01|eventDateByName/);
+});
+
 test("team match results require enough decided ballots and preserve tie states", () => {
   const window = loadFactory("js/team-records.js");
   const resolve = window.DebateTeamRecords.resolveResult;
