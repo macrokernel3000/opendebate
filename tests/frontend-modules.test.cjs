@@ -568,13 +568,25 @@ test("personal record save feedback does not claim empty scores updated averages
   assert.doesNotMatch(source, /平均分數已更新/);
 });
 
-test("router closes transient overlays before changing views", () => {
+test("router closes overlays and updates route title and current navigation", () => {
   let closeCount = 0;
   const noopClassList = { remove() {}, toggle() {}, contains: () => false };
   const window = { matchMedia: () => ({ matches: true }), scrollTo() {} };
+  const makeNavigationButton = (view) => ({
+    dataset: { view }, attributes: new Map(), classList: { toggle() {} },
+    setAttribute(name, value) { this.attributes.set(name, value); },
+    removeAttribute(name) { this.attributes.delete(name); },
+  });
+  const makeMenuButton = (view) => ({
+    dataset: { menuView: view }, attributes: new Map(),
+    setAttribute(name, value) { this.attributes.set(name, value); },
+    removeAttribute(name) { this.attributes.delete(name); },
+  });
+  const navButtons = ["home", "overview", "search", "archive", "reports"].map(makeNavigationButton);
+  const menuButtons = ["home", "overview", "search", "archive", "reports"].map(makeMenuButton);
   const context = {
     window,
-    document: {},
+    document: { title: "", querySelectorAll: () => menuButtons },
     location: { hash: "#home" },
     history: { replaceState(_state, _title, hash) { context.location.hash = hash; }, pushState(_state, _title, hash) { context.location.hash = hash; } },
     requestAnimationFrame: (callback) => callback(),
@@ -585,17 +597,38 @@ test("router closes transient overlays before changing views", () => {
   vm.runInNewContext(fs.readFileSync(path.join(root, "js/router.js"), "utf8"), context);
   const router = window.DebateRouter.createRouter({
     els: {
-      views: [], navButtons: [], overviewView: { classList: noopClassList }, overviewEventsPanel: { classList: noopClassList },
+      views: [], navButtons, overviewView: { classList: noopClassList }, overviewEventsPanel: { classList: noopClassList },
       eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail: {}, playerPageDetail: {}, topicPageDetail: {},
       globalSearch: { focus() {} },
     },
-    getEvents: () => [], getTopics: () => [], getUpcomingEvents: () => [], getKnownPlayers: () => [],
-    store: { entityById: new Map() }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail() {}, renderPlayerDetail() {}, renderTopic() {},
+    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getKnownPlayers: () => ["林選手"],
+    store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail() {}, renderPlayerDetail() {}, renderTopic() {},
     closeTransientUI: () => { closeCount += 1; },
   });
   router.showView("overview");
   assert.equal(closeCount, 1);
   assert.equal(context.location.hash, "#overview");
+  assert.equal(context.document.title, "總覽｜公開辯論資訊網");
+  assert.equal(navButtons[1].attributes.get("aria-current"), "page");
+  assert.equal(menuButtons[1].attributes.get("aria-current"), "page");
+  assert.equal(navButtons[0].attributes.has("aria-current"), false);
+
+  router.showView("event/測試盃");
+  assert.equal(context.document.title, "測試盃｜公開辯論資訊網");
+  assert.equal(navButtons.some((button) => button.attributes.has("aria-current")), false, "detail pages should not mark a different main page current");
+
+  router.showView("school/s1");
+  assert.equal(context.document.title, "測試高中｜公開辯論資訊網");
+  router.showView("player/林選手");
+  assert.equal(context.document.title, "林選手｜公開辯論資訊網");
+  router.showView("topic/topic-1");
+  assert.equal(context.document.title, "測試題目｜公開辯論資訊網");
+
+  router.showView("reports");
+  assert.equal(context.document.title, "資料回報｜公開辯論資訊網");
+  assert.equal(navButtons[4].attributes.get("aria-current"), "page");
+  assert.equal(menuButtons[4].attributes.get("aria-current"), "page");
+  assert.equal(navButtons[1].attributes.has("aria-current"), false);
 });
 
 test("chart expansion controls explain and enforce data availability", () => {

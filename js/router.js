@@ -14,6 +14,14 @@
     closeTransientUI = () => {},
   }) {
     let hasRenderedRoute = false;
+    const pageLabels = {
+      home: "首頁",
+      overview: "總覽",
+      search: "搜尋",
+      archive: "辯論建檔",
+      reports: "資料回報",
+    };
+    const siteTitle = "公開辯論資訊網";
 
     function showView(name) {
       closeTransientUI();
@@ -50,7 +58,22 @@
 
       const target = eventName ? "event-page" : schoolId ? "school-page" : playerName ? "player-page" : topicId ? "topic-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
       els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
-      els.navButtons.forEach((button) => button.classList.toggle("is-active", button.dataset.view === target));
+      const currentNav = ["home", "overview", "search", "archive", "reports"].includes(target) ? target : "";
+      els.navButtons.forEach((button) => {
+        const isCurrent = button.dataset.view === currentNav;
+        button.classList.toggle("is-active", isCurrent);
+        if (isCurrent) button.setAttribute("aria-current", "page");
+        else button.removeAttribute("aria-current");
+      });
+      document.querySelectorAll("[data-menu-view]").forEach((button) => {
+        if (button.dataset.menuView === currentNav) button.setAttribute("aria-current", "page");
+        else button.removeAttribute("aria-current");
+      });
+
+      const entityName = schoolId ? store.entityById.get(schoolId)?.name : "";
+      const topicName = topicId ? topics.find((item) => item.topicId === topicId)?.topic : "";
+      const pageName = eventName || entityName || playerName || topicName || pageLabels[target] || "";
+      document.title = pageName ? `${pageName}｜${siteTitle}` : `${siteTitle}｜台灣高中辯論戰績資料庫`;
       els.overviewView.classList.remove("is-event-open");
       els.overviewEventsPanel.classList.remove("is-event-open");
 

@@ -50,6 +50,11 @@ test("keyboard users can skip the shared navigation to the main content", () => 
   assert.match(css, /\.skip-link:focus\s*\{[^}]*outline:/);
 });
 
+test("personal event suggestions expose a named combobox and listbox", () => {
+  assert.match(html, /id="personalCompetition"[^>]*role="combobox"[^>]*aria-controls="personalCompetitionSuggestions"[^>]*aria-autocomplete="list"[^>]*aria-expanded="false"/);
+  assert.match(html, /id="personalCompetitionSuggestions"[^>]*role="listbox"[^>]*aria-label="已登錄賽事建議"/);
+});
+
 test("upcoming event cards do not visually clip event names or locations", () => {
   const titleRule = css.match(/\.mobile-upcoming-card h3\s*\{([^}]*)\}/)?.[1] || "";
   const locationRule = css.match(/\.mobile-upcoming-location\s*\{([^}]*)\}/)?.[1] || "";
