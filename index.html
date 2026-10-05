@@ -290,6 +290,7 @@
         <div id="personalArchivePanel" role="tabpanel" aria-labelledby="personalArchiveMode" class="archive-mode-panel"><div class="archive-layout">
           <form id="personalRecordForm" class="record-form">
             <div class="record-form-heading"><div><p class="kicker">NEW BALLOT</p><h2>登錄一張裁單</h2></div><span id="personalDraftStatus">第 1 張</span></div>
+            <p id="personalStorageError" class="record-message is-error is-hidden" role="alert"></p>
             <div class="record-form-grid">
               <label class="record-field record-field-wide record-competition-field"><span>盃賽（必填；輸入關鍵字可選平台已登錄賽事）</span><input id="personalCompetition" type="text" autocomplete="off" placeholder="例如：輸入「育南」" aria-controls="personalCompetitionSuggestions" aria-autocomplete="list" required /><div id="personalCompetitionSuggestions" class="record-suggestions is-hidden" role="listbox"></div></label>
               <label class="record-field"><span>選手姓名（必填）</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入選手姓名" required /></label>
@@ -329,6 +330,7 @@
           <div class="archive-layout team-archive-layout">
             <form id="teamRecordForm" class="record-form team-record-form">
               <div class="record-form-heading"><div><p class="kicker">TEAM BALLOT</p><h2>登錄一張隊伍裁單</h2></div><span id="teamDraftStatus">第 1 張</span></div>
+              <p id="teamStorageError" class="record-message is-error is-hidden" role="alert"></p>
               <div class="record-form-grid">
                 <label class="record-field record-field-wide"><span>盃賽（必填）</span><input id="teamCompetition" type="text" list="teamCompetitionList" autocomplete="off" placeholder="輸入盃賽名稱" required /><datalist id="teamCompetitionList"></datalist></label>
                 <label class="record-field"><span>隊伍名稱（必填）</span><input id="teamName" type="text" autocomplete="organization" placeholder="輸入自己的隊伍" required /></label>
@@ -445,8 +447,8 @@
   <script src="js/interactions.js?v=20261005-dialog-focus-loop1" data-versioned-asset></script>
   <script src="js/record-storage.js?v=20261005-storage-read-guard1" data-versioned-asset></script>
   <script src="js/record-csv.js?v=20261005-record-data3" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261005-storage-read-guard1" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261005-storage-read-guard1" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261005-storage-read-guard2" data-versioned-asset></script>
+  <script src="js/team-records.js?v=20261005-storage-read-guard2" data-versioned-asset></script>
   <script src="js/event-pages.js?v=20261005-page-heading1" data-versioned-asset></script>
   <script src="js/entity-pages.js?v=20261005-page-heading1" data-versioned-asset></script>
   <script src="js/overview-pages.js?v=20261005100323" data-versioned-asset></script>

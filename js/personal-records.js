@@ -52,9 +52,16 @@
     return result.records.map(normalizeRecord);
   }
 
+  function showStorageReadFailure() {
+    if (els.storageError) {
+      els.storageError.textContent = window.DebateRecordStorage.loadFailureMessage();
+      els.storageError.classList.remove("is-hidden");
+    }
+  }
+
   function saveRecords(nextRecords) {
     if (storageReadFailed) {
-      showMessage(window.DebateRecordStorage.loadFailureMessage(), true);
+      showStorageReadFailure();
       return false;
     }
     if (!window.DebateRecordStorage.save(() => localStorage, STORAGE_KEY, nextRecords)) {
@@ -498,6 +505,7 @@
       cancelEdit: document.querySelector("#personalCancelEdit"),
       submitButton: document.querySelector("#personalSubmitRecord"),
       message: document.querySelector("#personalRecordMessage"),
+      storageError: document.querySelector("#personalStorageError"),
       draftStatus: document.querySelector("#personalDraftStatus"),
       count: document.querySelector("#personalRecordCount"),
       stats: document.querySelector("#personalRecordStats"),
@@ -514,7 +522,7 @@
     records = readRecords().map(normalizeRecord);
     if (storageReadFailed) {
       [els.nextButton, els.submitButton, els.exportButton, els.deleteAllButton, els.importInput].forEach((control) => { control.disabled = true; });
-      showMessage(window.DebateRecordStorage.loadFailureMessage(), true);
+      showStorageReadFailure();
     }
     els.matchDate.value = "";
     els.competition.addEventListener("input", () => {
