@@ -631,6 +631,37 @@ test("chart expansion controls explain and enforce data availability", () => {
   assert.equal(button.dataset.chartAvailable, "false");
 });
 
+test("chart data tables expose structured values and escape user content", () => {
+  const window = loadFactory("js/chart-data-table.js");
+  const markup = window.DebateChartDataTable.render({
+    caption: "分數 <摘要>",
+    headers: ["比賽日期", "申論"],
+    rows: [["2026-10-05", "80.0%"], ["<script>", "—"]],
+  });
+
+  assert.match(markup, /<details class="chart-data">/);
+  assert.match(markup, /<summary>以表格檢視圖表數據<\/summary>/);
+  assert.match(markup, /<caption>分數 &lt;摘要&gt;<\/caption>/);
+  assert.match(markup, /<th scope="col">比賽日期<\/th>/);
+  assert.match(markup, /<th scope="row">2026-10-05<\/th>/);
+  assert.match(markup, /&lt;script&gt;/);
+  assert.doesNotMatch(markup, /<script>/);
+  assert.equal(window.DebateChartDataTable.render({ headers: "bad", rows: [] }), "");
+});
+
+test("personal and team charts provide table views for plotted values", () => {
+  const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
+  const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+  const markup = fs.readFileSync(path.join(root, "index.html"), "utf8");
+
+  assert.match(markup, /js\/chart-data-table\.js\?v=20261005-chart-data-table1/);
+  assert.match(personalSource, /caption: "能力雷達圖各項目平均分數比例"/);
+  assert.match(personalSource, /caption: "依比賽日期排列的各項分數比例"/);
+  assert.match(personalSource, /chronological\.map\(\(match\) => \[match\.matchDate/);
+  assert.match(teamSource, /caption: "隊伍各項能力平均分數（滿分 20 分）"/);
+  assert.match(teamSource, /window\.DebateChartDataTable\.render/);
+});
+
 test("modal chart dialog keeps Tab and Shift+Tab within its focusable controls", () => {
   let activeElement;
   const first = {

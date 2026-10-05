@@ -584,6 +584,14 @@ body.chart-expanded { overflow: hidden; }
 .progress-legend { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; color: var(--muted); font-size: 10px; font-weight: 800; }
 .progress-legend span { display: inline-flex; align-items: center; gap: 4px; }
 .progress-legend i { width: 9px; height: 9px; border-radius: 50%; }
+.chart-data { margin-top: 10px; border-top: 1px solid var(--line); }
+.chart-data summary { width: fit-content; min-height: 44px; display: flex; align-items: center; padding: 0 4px; color: var(--green-dark); font-size: 12px; font-weight: 800; cursor: pointer; }
+.chart-data summary:focus-visible { outline: 3px solid var(--coral); outline-offset: 2px; }
+.chart-data-scroll { max-width: 100%; overflow-x: auto; overscroll-behavior-inline: contain; }
+.chart-data table { width: 100%; border-collapse: collapse; font-size: 12px; text-align: left; }
+.chart-data caption { padding: 5px 0; color: var(--muted); font-size: 11px; text-align: left; }
+.chart-data th, .chart-data td { padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.chart-data th { color: var(--green-dark); }
 .personal-record-list { display: grid; gap: 10px; margin-top: 24px; }
 .ballot-group { border: 2px solid var(--ink); background: white; }
 .ballot-group-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; background: var(--green-dark); color: white; }

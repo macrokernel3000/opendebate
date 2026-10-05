@@ -230,7 +230,12 @@
       return `<line x1="170" y1="170" x2="${point.x}" y2="${point.y}" /><text x="${label.x}" y="${label.y}" text-anchor="${anchor}">${escapeHtml(metric.label)} ${formatPercent(metric.value)}</text>`;
     }).join("");
     const dataPoints = active.map((metric, index) => { const point = polarPoint(index, active.length, 110 * metric.value / 100); return `${point.x},${point.y}`; }).join(" ");
-    els.radarChart.innerHTML = `<svg class="radar-svg" viewBox="0 0 340 340" role="img" aria-label="${active.length} 維能力雷達圖"><g class="radar-grid">${grid}${axes}</g><polygon class="radar-data" points="${dataPoints}" />${active.map((metric, index) => { const point = polarPoint(index, active.length, 110 * metric.value / 100); return `<circle cx="${point.x}" cy="${point.y}" r="4" />`; }).join("")}</svg>`;
+    const dataTable = window.DebateChartDataTable.render({
+      caption: "能力雷達圖各項目平均分數比例",
+      headers: ["評分項目", "平均比例"],
+      rows: active.map((metric) => [metric.label, formatPercent(metric.value)]),
+    });
+    els.radarChart.innerHTML = `<svg class="radar-svg" viewBox="0 0 340 340" role="img" aria-label="${active.length} 維能力雷達圖"><g class="radar-grid">${grid}${axes}</g><polygon class="radar-data" points="${dataPoints}" />${active.map((metric, index) => { const point = polarPoint(index, active.length, 110 * metric.value / 100); return `<circle cx="${point.x}" cy="${point.y}" r="4" />`; }).join("")}</svg>${dataTable}`;
     window.DebateInteractions.setChartExpansionAvailability(els.radarChart, true, "");
   }
 
@@ -279,7 +284,12 @@
     }).join("");
     const dateLabels = chronological.map((record, index) => `<text x="${xFor(index)}" y="${height - 18}" text-anchor="middle">${escapeHtml(record.matchDate.slice(5).replace("-", "/"))}</text>`).join("");
     const legend = CHART_METRICS.filter((metric) => chronological.some((match) => match.values[metric.key] !== null)).map((metric) => `<span><i style="background:${metric.color}"></i>${metric.label}</span>`).join("");
-    els.progressChart.innerHTML = `<div class="progress-legend">${legend}</div><div class="progress-scroll"><svg class="progress-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="依日期排列的分數進步折線圖"><g class="progress-grid">${grid}</g><g class="progress-series">${series}</g><g class="progress-dates">${dateLabels}</g></svg></div>`;
+    const dataTable = window.DebateChartDataTable.render({
+      caption: "依比賽日期排列的各項分數比例",
+      headers: ["比賽日期", ...CHART_METRICS.map((metric) => metric.label)],
+      rows: chronological.map((match) => [match.matchDate, ...CHART_METRICS.map((metric) => formatPercent(match.values[metric.key]))]),
+    });
+    els.progressChart.innerHTML = `<div class="progress-legend">${legend}</div><div class="progress-scroll"><svg class="progress-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="依日期排列的分數進步折線圖"><g class="progress-grid">${grid}</g><g class="progress-series">${series}</g><g class="progress-dates">${dateLabels}</g></svg></div>${dataTable}`;
     window.DebateInteractions.setChartExpansionAvailability(els.progressChart, true, "");
   }
 
