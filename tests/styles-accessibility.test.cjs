@@ -43,6 +43,21 @@ test("hero eyebrow keeps AA contrast on its dark green background", () => {
   assert.match(css, /\.hero-content\s+\.eyebrow\s*\{[^}]*color:\s*var\(--yellow\)/);
 });
 
+test("keyboard users can skip the shared navigation to the main content", () => {
+  assert.match(html, /<a class="skip-link" href="#mainContent">跳到主要內容<\/a>/);
+  assert.match(html, /<main id="mainContent" tabindex="-1">/);
+  assert.match(css, /\.skip-link\s*\{[^}]*position:\s*fixed/);
+  assert.match(css, /\.skip-link:focus\s*\{[^}]*outline:/);
+});
+
+test("upcoming event cards do not visually clip event names or locations", () => {
+  const titleRule = css.match(/\.mobile-upcoming-card h3\s*\{([^}]*)\}/)?.[1] || "";
+  const locationRule = css.match(/\.mobile-upcoming-location\s*\{([^}]*)\}/)?.[1] || "";
+  for (const rule of [titleRule, locationRule]) {
+    assert.doesNotMatch(rule, /line-clamp|overflow:\s*hidden/);
+  }
+});
+
 test("report contact links keep a 44px touch target", () => {
   assert.match(
     css,

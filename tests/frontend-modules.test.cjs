@@ -631,6 +631,23 @@ test("chart expansion controls explain and enforce data availability", () => {
   assert.equal(button.dataset.chartAvailable, "false");
 });
 
+test("skip link focuses and scrolls to main content without changing route", () => {
+  let focusOptions;
+  let scrollOptions;
+  const main = {
+    focus(options) { focusOptions = options; },
+    scrollIntoView(options) { scrollOptions = options; },
+  };
+  const event = { prevented: false, preventDefault() { this.prevented = true; } };
+  const controls = loadFactory("js/interactions.js").DebateInteractions;
+
+  controls.skipToMainContent(event, main, "auto");
+  assert.equal(event.prevented, true, "skip link should not create an unknown router hash");
+  assert.equal(focusOptions.preventScroll, true);
+  assert.equal(scrollOptions.behavior, "auto");
+  assert.equal(scrollOptions.block, "start");
+});
+
 test("chart data tables expose structured values and escape user content", () => {
   const window = loadFactory("js/chart-data-table.js");
   const markup = window.DebateChartDataTable.render({

@@ -1,4 +1,11 @@
 (function () {
+  function skipToMainContent(event, main, behavior = "auto") {
+    event.preventDefault();
+    if (!main) return;
+    main.focus({ preventScroll: true });
+    main.scrollIntoView({ behavior, block: "start" });
+  }
+
   function keepDialogTabFocus(dialog, event) {
     if (!dialog || event.key !== "Tab") return false;
     const focusable = [...dialog.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])')]
@@ -36,6 +43,9 @@
   function setupInteractions({ els, showView, renderEvent, renderSearch, renderEventFinder, renderOverviewStats, selectEntity, renderOverviewTeams, renderOverviewTopics, selectOverviewTeam, showOverviewTab }) {
     const openCompetition = (name) => showView(`event/${encodeURIComponent(name)}`);
     const preferredScrollBehavior = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    document.querySelector(".skip-link")?.addEventListener("click", (event) => {
+      skipToMainContent(event, document.querySelector("#mainContent"), preferredScrollBehavior());
+    });
     els.overviewStatsChart?.addEventListener("focus", (event) => {
       const chart = event.currentTarget;
       if (chart.matches(":focus-visible")) chart.scrollIntoView({ behavior: preferredScrollBehavior(), block: "center" });
@@ -232,5 +242,5 @@
     });
   }
 
-  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability, keepDialogTabFocus };
+  window.DebateInteractions = { setupInteractions, setChartExpansionAvailability, keepDialogTabFocus, skipToMainContent };
 }());

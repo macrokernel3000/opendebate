@@ -21,6 +21,8 @@ button, input, select { font: inherit; }
 button { color: inherit; }
 .is-hidden { display: none !important; }
 .page-shell { width: min(1180px, calc(100% - 40px)); margin-inline: auto; }
+.skip-link { position: fixed; z-index: 200; top: 8px; left: 8px; transform: translateY(calc(-100% - 16px)); border: 2px solid var(--green-dark); border-radius: 8px; padding: 10px 14px; background: var(--paper); color: var(--green-dark); font-weight: 850; text-decoration: none; box-shadow: 0 4px 16px rgba(23, 33, 29, .2); }
+.skip-link:focus { transform: translateY(0); outline: 3px solid var(--yellow); outline-offset: 2px; }
 
 .site-header { position: sticky; z-index: 50; top: 0; min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 max(20px, calc((100vw - 1180px) / 2)); border-bottom: 1px solid rgba(23, 33, 29, .12); background: var(--paper); }
 .brand { display: flex; min-height: 44px; align-items: center; gap: 10px; color: var(--ink); text-decoration: none; font-weight: 900; cursor: pointer; }
@@ -69,8 +71,8 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .mobile-upcoming-card:nth-child(even) { background: #ffefb7; border-color: #ddc25e; }
 .mobile-upcoming-card:hover, .mobile-upcoming-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
 .mobile-upcoming-date { color: var(--green-dark); font-size: 12px; font-weight: 900; }
-.mobile-upcoming-card h3 { display: -webkit-box; margin: 1px 0 2px; overflow: hidden; font-size: 14px; line-height: 1.3; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
-.mobile-upcoming-location { display: -webkit-box; width: 100%; overflow: hidden; color: #645c40; font-size: 11px; line-height: 1.3; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.mobile-upcoming-card h3 { margin: 1px 0 2px; overflow-wrap: anywhere; font-size: 14px; line-height: 1.3; }
+.mobile-upcoming-location { width: 100%; overflow-wrap: anywhere; color: #645c40; font-size: 12px; line-height: 1.35; }
 .mobile-upcoming-location b { margin-right: 4px; color: var(--green-dark); }
 .upcoming-key-dates { margin: 18px 0 28px; border: 1px solid var(--line); border-left: 6px solid var(--yellow); padding: 16px 18px; background: #fffaf0; }
 .upcoming-key-dates h3 { margin: 0 0 10px; font-size: 18px; }
