@@ -169,6 +169,31 @@ test("event detail pages escape untrusted names, notes, topics, and roster text"
   assert.match(target.innerHTML, /循環／分組：&quot;&gt;&lt;img src=x onerror=alert\(1\)&gt;/);
 });
 
+test("long event notes collapse and render HTTPS sources as concise safe links", () => {
+  const event = {
+    ...events[0],
+    metadata: {
+      organizer: "主辦單位",
+      location: "比賽地點",
+      note: `簡章補充。${"參賽資格與賽制說明。".repeat(12)} https://drive.google.com/file/d/abc?usp=sharing；javascript:alert(1)`,
+    },
+  };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [event];
+  const pages = loadFactory("js/event-pages.js").DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderEvent(event.name, target);
+
+  assert.match(target.innerHTML, /主辦單位：主辦單位/);
+  assert.match(target.innerHTML, /舉辦地點：比賽地點/);
+  assert.match(target.innerHTML, /<details class="event-metadata-note"><summary>賽事補充資訊與來源<\/summary>/);
+  assert.match(target.innerHTML, /href="https:\/\/drive\.google\.com\/file\/d\/abc\?usp=sharing" target="_blank" rel="noopener noreferrer">來源連結 1<\/a>/);
+  assert.match(target.innerHTML, /javascript:alert\(1\)/);
+  assert.doesNotMatch(target.innerHTML, /href="javascript:/);
+  assert.doesNotMatch(target.innerHTML, /<a[^>]*>https:\/\/drive\.google\.com/);
+});
+
 test("entity pages keep event-specific topic explanations and player honors", () => {
   const target = { innerHTML: "" };
   const window = loadFactory("js/entity-pages.js", {

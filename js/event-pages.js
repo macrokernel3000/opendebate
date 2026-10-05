@@ -14,6 +14,22 @@
     playerPageLink,
     renderEventHonors,
   }) {
+    function renderMetadataNote(note) {
+      const text = String(note || "");
+      const sourcePattern = /https:\/\/[^\s<>「」『』【】〈〉，,。；;、]+/gi;
+      let sourceIndex = 0;
+      let cursor = 0;
+      let html = "";
+      let match;
+      while ((match = sourcePattern.exec(text))) {
+        html += escapeHtml(text.slice(cursor, match.index));
+        sourceIndex += 1;
+        html += `<a href="${escapeHtml(match[0])}" target="_blank" rel="noopener noreferrer">來源連結 ${sourceIndex}</a>`;
+        cursor = match.index + match[0].length;
+      }
+      return html + escapeHtml(text.slice(cursor));
+    }
+
     function renderUpcomingEvent(event, target = els.eventPageDetail) {
       if (!event) return;
       const titleLevel = target === els.eventPageDetail ? 1 : 2;
@@ -99,7 +115,12 @@
         </section>`).join("");
       const eventHonors = [...event.honors].sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
       const metadata = event.metadata || {};
-      const metadataSection = metadata.organizer || metadata.location || metadata.note ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadata.note ? `<small>${escapeHtml(metadata.note)}</small>` : ""}</div>` : "";
+      const metadataNote = String(metadata.note || "").trim();
+      const metadataNoteHasSources = /https:\/\//i.test(metadataNote);
+      const metadataNoteContent = metadataNote.length > 180 || metadataNoteHasSources
+        ? `<details class="event-metadata-note"><summary>${metadataNoteHasSources ? "賽事補充資訊與來源" : "賽事補充資訊"}</summary><p>${renderMetadataNote(metadataNote)}</p></details>`
+        : metadataNote ? `<small>${renderMetadataNote(metadataNote)}</small>` : "";
+      const metadataSection = metadata.organizer || metadata.location || metadataNote ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadataNote.length <= 180 && !metadataNoteHasSources ? metadataNoteContent : ""}</div>${metadataNote.length > 180 || metadataNoteHasSources ? metadataNoteContent : ""}` : "";
       const awardCriteriaSection = metadata.awardSelectionCriteria ? `<details class="topic-explanation event-award-criteria"><summary>個人獎遴選標準</summary><p>${escapeHtml(metadata.awardSelectionCriteria)}</p></details>` : "";
       const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h${sectionLevel} class="subheading">💡 比賽辯題</h${sectionLevel}><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}</article>`).join("")}</section>` : "";
       const rosterSection = event.rosters.length ? `<details class="event-rosters"><summary><span>📋 隊伍名單</span><span>${event.rosters.length} 隊</span></summary><div class="event-roster-grid">${event.rosters.map((roster) => {

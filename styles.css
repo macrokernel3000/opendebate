@@ -343,6 +343,10 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-metadata span { color: var(--coral-text); font-weight: 900; }
 .event-metadata strong { color: var(--ink); }
 .event-metadata small { width: 100%; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+.event-metadata-note { margin: -6px 0 20px; border-left: 5px solid var(--yellow); padding: 0 14px; background: var(--soft); color: var(--muted); font-size: 14px; line-height: 1.7; }
+.event-metadata-note > summary { display: flex; align-items: center; min-height: 44px; color: var(--green); cursor: pointer; font-weight: 800; }
+.event-metadata-note > p { margin: 0; padding: 0 0 14px; white-space: pre-line; overflow-wrap: anywhere; }
+.event-metadata-note a { color: var(--green); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; }
 .event-topics { margin: 0 0 32px; border: 1px solid var(--line); border-left: 7px solid var(--yellow); padding: 20px; background: #fffaf0; }
 .event-rosters { margin: 0 0 28px; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 16px 18px; background: #f7fbf8; }
 .event-rosters > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green-dark); font-size: 17px; font-weight: 900; cursor: pointer; list-style: none; }
@@ -999,6 +1003,7 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-summary-count { flex-wrap: wrap; }
   .event-metadata { align-items: flex-start; gap: 8px 12px; font-size: 14px; line-height: 1.65; }
   .event-metadata small { width: 100%; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
+  .event-metadata-note { margin-bottom: 18px; font-size: 14px; line-height: 1.75; }
   .topic-explanation { font-size: 14px; line-height: 1.75; }
   .topic-explanation p { margin-top: 10px; }
   .match-row { grid-template-columns: 46px minmax(0, 1fr) 52px minmax(0, 1fr); gap: 6px; padding-inline: 8px; }
