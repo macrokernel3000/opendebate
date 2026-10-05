@@ -13,6 +13,25 @@ import build_data
 
 
 class BuildDataTests(unittest.TestCase):
+    def test_upcoming_event_script_gets_a_fresh_asset_version(self):
+        with tempfile.TemporaryDirectory() as folder:
+            index_path = Path(folder) / "index.html"
+            index_path.write_text(
+                '<script src="data/public-data.js?v=old" data-public-data-script></script>'
+                '<script src="data/upcoming-events.js?v=old" data-versioned-asset></script>'
+                '<script src="js/core.js?v=old" data-versioned-asset></script>'
+                '<link rel="stylesheet" href="styles.css?v=old" data-versioned-asset>',
+                encoding="utf-8",
+            )
+            with patch.object(build_data, "INDEX_PATH", index_path):
+                build_data.update_asset_versions("fresh-version")
+
+            html = index_path.read_text(encoding="utf-8")
+            self.assertIn('src="data/public-data.js?v=fresh-version"', html)
+            self.assertIn('src="data/upcoming-events.js?v=fresh-version"', html)
+            self.assertIn('src="js/core.js?v=fresh-version"', html)
+            self.assertIn('href="styles.css?v=fresh-version"', html)
+
     def test_public_json_keeps_records_on_readable_compact_lines(self):
         payload = {
             "records": [

@@ -1,4 +1,4 @@
-// Sources verified in docs/近期賽事來源核對.md; no source links are displayed in the website.
+// Source traceability status is maintained in docs/近期賽事來源核對.md; source links are not displayed on the website.
 window.DEBATE_UPCOMING_EVENTS = [
   {
     "id": "north-rookie-20",
@@ -16,7 +16,7 @@ window.DEBATE_UPCOMING_EVENTS = [
     "endDate": "2026-11-08",
     "location": "國立成功大學",
     "topic": "我國應廢除非核家園能源政策。",
-    "organizer": "國民黨文傳會"
+    "organizer": "國民黨文傳會、國立成功大學滔滔社、台灣 AI 城市發展協會"
   },
   {
     "id": "ruide-18",

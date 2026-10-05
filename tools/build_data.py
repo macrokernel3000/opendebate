@@ -441,7 +441,7 @@ def update_asset_versions(version):
     patterns = [
         (r'(src="data/public-data\.js)(?:\?v=[^"]*)?(" data-public-data-script)', rf'\1?v={version}\2'),
         (r'(href="styles\.css)(?:\?v=[^"]*)?(" data-versioned-asset)', rf'\1?v={version}\2'),
-        (r'(src="(?:js/[^"?]+|app\.js))(?:\?v=[^"]*)?(" data-versioned-asset)', rf'\1?v={version}\2'),
+        (r'(src="(?:js/[^"?]+|data/upcoming-events\.js|app\.js))(?:\?v=[^"]*)?(" data-versioned-asset)', rf'\1?v={version}\2'),
     ]
     for pattern, replacement in patterns:
         index_html = re.sub(pattern, replacement, index_html)
