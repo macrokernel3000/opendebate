@@ -31,9 +31,10 @@ test("spreadsheet-safe CSV neutralizes formula prefixes and restores exported va
   const serialized = csv.serialize([values], { spreadsheetSafe: true });
   const [parsed] = csv.parse(serialized);
 
-  assert.deepEqual(Array.from(parsed), values.map((value) => `\t${value}`).map((guarded, index) =>
+  assert.deepEqual(Array.from(parsed), values.map((value) => `\t\t${value}`).map((guarded, index) =>
     index === values.length - 1 ? values[index] : guarded));
   assert.deepEqual(Array.from(parsed, (value) => csv.restoreSpreadsheetSafeValue(value)), values);
+  assert.equal(csv.restoreSpreadsheetSafeValue("\t=1+2"), "\t=1+2");
   assert.equal(csv.serialize([["=1+2"]]), '\uFEFF"=1+2"');
 });
 
