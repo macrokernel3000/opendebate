@@ -467,6 +467,12 @@ test("team match results require enough decided ballots and preserve tie states"
   assert.equal(resolve([ballot(8, 10), ballot(8, 10), ballot(10, 8)]).status, "本場落敗");
 });
 
+test("team final save clears the draft while next-ballot save preserves judge focus", () => {
+  const source = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+  const addRecord = source.slice(source.indexOf("function addRecord("), source.indexOf("function csvCell("));
+  assert.match(addRecord, /if \(continueEntry\) els\.judge\.focus\(\); else \{ clearForm\(\);[\s\S]*?teamSummaryTitle/);
+});
+
 test("team CSV imports skip repeated backup rows without collapsing distinct ballots", () => {
   const window = loadFactory("js/team-records.js");
   const uniqueImports = window.DebateTeamRecords.uniqueImportedRecords;
