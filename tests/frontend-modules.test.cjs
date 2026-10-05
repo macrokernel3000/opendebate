@@ -473,6 +473,18 @@ test("record CSV preserves commas, quotes, line breaks, and Unicode through expo
   assert.equal(JSON.stringify(window.DebateRecordCsv.parse(serialized)), JSON.stringify(rows));
 });
 
+test("shared record CSV parser rejects malformed quotes for both ballot formats", () => {
+  const csvSource = fs.readFileSync(path.join(root, "js/record-csv.js"), "utf8");
+  const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
+  assert.match(teamSource, /RecordCsv\.parse\(await file\.text\(\)\)/);
+  assert.match(teamSource, /RecordCsv\.serialize\(rows\)/);
+  assert.doesNotMatch(teamSource, /function parseCsv\(/);
+  assert.doesNotMatch(teamSource, /function csvCell\(/);
+  const window = loadFactory("js/record-csv.js");
+  assert.throws(() => window.DebateRecordCsv.parse('"欄位一","欄位二\n資料一,資料二'), /unterminated csv quote/);
+  assert.match(csvSource, /invalid csv quoting/);
+});
+
 test("personal and team CSV exports use the shared local calendar date", () => {
   const personalSource = fs.readFileSync(path.join(root, "js/personal-records.js"), "utf8");
   const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
