@@ -3,6 +3,7 @@
 
 import csv
 import re
+import unicodedata
 from contextlib import closing
 
 import xlsx_reader as xlsx_reader_module
@@ -14,6 +15,13 @@ KNOWN_SCHOOL_SHORT_NAMES = {"市立大同", "市立復興", "市立東山", "新
 
 def clean(value):
     return str(value or "").strip()
+
+
+def normalize_entity_label(value):
+    """Normalize formatting and common Taiwan character variants for collision checks."""
+    normalized = unicodedata.normalize("NFKC", clean(value))
+    normalized = re.sub(r"\s+", "", normalized).lower()
+    return normalized.replace("台", "臺")
 
 
 def entity_base_name(name):
@@ -75,7 +83,7 @@ def read_registry(registry_path, legacy_xlsx_path, warn):
             name = clean(name)
             if not name:
                 continue
-            normalized = re.sub(r"\s+", "", name).lower()
+            normalized = normalize_entity_label(name)
             if normalized in seen_names and seen_names[normalized] != entry["code"]:
                 warn(f"提醒：{source_name} 的名稱或別名重複：{name}；正式名稱會優先，別名衝突時保留先出現的歸戶")
             else:

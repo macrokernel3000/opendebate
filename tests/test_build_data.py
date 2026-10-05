@@ -366,6 +366,25 @@ class BuildDataTests(unittest.TestCase):
                 csv_entries = build_data.read_registry()
                 self.assertEqual(csv_entries[0]["name"], "正式 CSV 學校")
 
+    def test_entity_registry_warns_on_unicode_and_tai_character_collisions(self):
+        with tempfile.TemporaryDirectory() as folder:
+            registry_path = Path(folder) / "entity-registry.csv"
+            legacy_path = Path(folder) / "missing.xlsx"
+            registry_path.write_text(
+                "code,type,name,aliases\n"
+                "s001,s,台南二中,Ａ校\n"
+                "s002,s,臺南二中,A校\n",
+                encoding="utf-8",
+            )
+            with patch.object(build_data, "REGISTRY_PATH", registry_path), \
+                    patch.object(build_data, "REGISTRY_XLSX_PATH", legacy_path), \
+                    patch.object(build_data, "WARNINGS", []):
+                entries = build_data.read_registry()
+                self.assertEqual(len(entries), 2)
+                self.assertEqual(len(build_data.WARNINGS), 2)
+                self.assertIn("重複：臺南二中", build_data.WARNINGS[0])
+                self.assertIn("重複：A校", build_data.WARNINGS[1])
+
 
 if __name__ == "__main__":
     unittest.main()
