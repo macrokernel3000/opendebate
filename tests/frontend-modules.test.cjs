@@ -152,6 +152,7 @@ test("entity pages keep event-specific topic explanations and player honors", ()
 
   const schoolHtml = pages.renderEntityDetail(team, "schoolPageEntityDetail", true);
   assert.match(schoolHtml, /測試高中的完整紀錄/);
+  assert.doesNotMatch(schoolHtml, /<p class="kicker">s1<\/p>/);
   assert.match(schoolHtml, /冠軍/);
   assert.match(schoolHtml, /3：0/);
 });
