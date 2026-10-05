@@ -304,11 +304,11 @@
               <label class="record-field"><span>裁判姓名</span><input id="personalJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
               <label class="record-field"><span>比賽日期</span><input id="personalMatchDate" type="date" /></label>
               <label class="record-field"><span>此盃第幾場</span><input id="personalMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
-              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
-              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
-              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
-              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
-              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" step="0.1" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
+              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
+              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
+              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
+              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" max="10" step="0.1" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
+              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" max="10" step="0.1" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
               <label class="record-field"><span>排名（選填，1 最高、6 最低）</span><input id="personalRank" type="number" inputmode="numeric" min="1" max="6" step="1" /></label>
             </div>
             <p id="personalRecordMessage" class="record-message" role="status" aria-live="polite"></p>
@@ -453,9 +453,9 @@
   <script src="js/core.js?v=20261005145518" data-versioned-asset></script>
   <script src="js/interactions.js?v=20261005-search-query-routing1" data-versioned-asset></script>
   <script src="js/record-storage.js?v=20261005145518" data-versioned-asset></script>
-  <script src="js/record-csv.js?v=20261005145518" data-versioned-asset></script>
+  <script src="js/record-csv.js?v=20261005-score-limit-validation1" data-versioned-asset></script>
   <script src="js/chart-data-table.js?v=20261005145518" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261005145518" data-versioned-asset></script>
+  <script src="js/personal-records.js?v=20261005-score-limit-validation1" data-versioned-asset></script>
   <script src="js/team-records.js?v=20261005145518" data-versioned-asset></script>
   <script src="js/event-pages.js?v=20261005-upcoming-status1" data-versioned-asset></script>
   <script src="js/entity-pages.js?v=20261005145518" data-versioned-asset></script>

@@ -101,6 +101,42 @@
     };
   }
 
+  function syncMetricConstraint(metric) {
+    const maximum = positiveNumber(els[metric.maxKey].value, metric.defaultMax);
+    const scoreInput = els[metric.key];
+    scoreInput.max = String(maximum);
+    const score = fieldNumber(scoreInput);
+    scoreInput.setCustomValidity(score !== "" && score > maximum ? `${metric.label}分數不可超過滿分 ${maximum} 分。` : "");
+  }
+
+  function syncMetricConstraints() {
+    METRICS.forEach(syncMetricConstraint);
+  }
+
+  function validateDraft(draft) {
+    try {
+      RecordCsv.validateRecord(draft, METRICS);
+      return null;
+    } catch (error) {
+      return error;
+    }
+  }
+
+  function reportDraftValidationError(error, draft) {
+    const metric = METRICS.find((item) => item.key === error.fieldKey || item.maxKey === error.fieldKey);
+    const message = metric
+      ? error.fieldKey === metric.maxKey
+        ? `${metric.label}滿分需大於 0，並以 0.1 分為單位。`
+        : `${metric.label}需介於 0 至滿分 ${draft[metric.maxKey]}，並以 0.1 分為單位。`
+      : error.fieldKey === "matchNumber" ? "場次需為大於 0 的整數。"
+        : error.fieldKey === "rank" ? "排名需為 1 至 6 的整數。"
+          : "場次、排名或分數格式不符合欄位範圍。";
+    const input = error.fieldKey ? els[error.fieldKey] : null;
+    input?.setCustomValidity?.(message);
+    input?.reportValidity?.();
+    showMessage(message, true);
+  }
+
   function setInputValue(element, value) {
     element.value = value === "" || value === null || value === undefined ? "" : String(value);
   }
@@ -114,6 +150,7 @@
     [els.competition, els.matchNumber, els.name, els.judge, els.argument, els.speech, els.question, els.defense, els.closing].forEach((input) => { input.value = ""; });
     els.matchDate.value = "";
     METRICS.forEach((metric) => { els[metric.maxKey].value = String(metric.defaultMax); });
+    syncMetricConstraints();
     els.rank.value = "";
   }
 
@@ -137,6 +174,7 @@
     setInputValue(els.closing, record.closing);
     setInputValue(els.closingMax, record.closingMax);
     setInputValue(els.rank, record.rank);
+    syncMetricConstraints();
     els.nextButton.disabled = true;
     els.cancelEdit.classList.remove("is-hidden");
     els.submitButton.textContent = "儲存修正";
@@ -149,12 +187,19 @@
   }
 
   function addDraft({ continueEntry = false } = {}) {
+    syncMetricConstraints();
     if (!window.DebateRecordStorage.isValid(els.form)) return;
     if (editingId) {
       const index = records.findIndex((record) => record.id === editingId);
       if (index < 0) return;
       const nextRecords = [...records];
-      nextRecords[index] = getDraft(records[index]);
+      const draft = getDraft(records[index]);
+      const validationError = validateDraft(draft);
+      if (validationError) {
+        reportDraftValidationError(validationError, draft);
+        return;
+      }
+      nextRecords[index] = draft;
       if (!saveRecords(nextRecords)) return;
       exitEditMode({ clearForm: true });
       render();
@@ -162,6 +207,11 @@
       return;
     }
     const draft = getDraft();
+    const validationError = validateDraft(draft);
+    if (validationError) {
+      reportDraftValidationError(validationError, draft);
+      return;
+    }
     if (!saveRecords([...records, draft])) return;
     render();
     const current = draft;
@@ -535,6 +585,7 @@
       showStorageReadFailure();
     }
     els.matchDate.value = "";
+    syncMetricConstraints();
     els.competition.addEventListener("input", () => {
       activeCompetitionIndex = -1;
       renderCompetitionSuggestions();
@@ -551,6 +602,10 @@
     els.competitionSuggestions.addEventListener("click", (event) => {
       const option = event.target.closest("[data-competition-suggestion]");
       selectCompetitionSuggestion(option);
+    });
+    METRICS.forEach((metric) => {
+      els[metric.key].addEventListener("input", () => syncMetricConstraint(metric));
+      els[metric.maxKey].addEventListener("input", () => syncMetricConstraint(metric));
     });
     els.nextButton.addEventListener("click", () => addDraft({ continueEntry: true }));
     els.cancelEdit.addEventListener("click", () => { exitEditMode({ clearForm: true }); showMessage("已取消修正。", false); });
@@ -578,5 +633,5 @@
     render();
   }
 
-  window.DebatePersonalRecords = { init, closeExpandedCharts };
+  window.DebatePersonalRecords = { init, closeExpandedCharts, validateDraft };
 }());

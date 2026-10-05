@@ -351,6 +351,31 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   assert.match(els.overviewStatsChart.innerHTML, /2026 年 2 月：4 隊次/);
 });
 
+test("personal score entry shares CSV maximum and rank validation", () => {
+  const csvWindow = loadFactory("js/record-csv.js");
+  const personalWindow = loadFactory("js/personal-records.js", { DebateRecordCsv: csvWindow.DebateRecordCsv });
+  const validateDraft = personalWindow.DebatePersonalRecords.validateDraft;
+  const draft = {
+    matchNumber: 1,
+    rank: "",
+    argument: "",
+    argumentMax: 10,
+    speech: 20,
+    speechMax: 20,
+    question: 19,
+    questionMax: 20,
+    defense: 18,
+    defenseMax: 20,
+    closing: 10,
+    closingMax: 10,
+  };
+
+  assert.equal(validateDraft(draft), null);
+  assert.equal(validateDraft({ ...draft, speech: 20.1 }).fieldKey, "speech");
+  assert.equal(validateDraft({ ...draft, rank: 7 }).fieldKey, "rank");
+  assert.equal(validateDraft({ ...draft, argumentMax: 10.05 }).fieldKey, "argumentMax");
+});
+
 test("home pages render summaries, timeline and upcoming events, and keep leaderboard controls working", () => {
   const school = { code: "s1", name: "測試高中", type: "s" };
   const rival = { code: "s2", name: "對手高中", type: "s" };

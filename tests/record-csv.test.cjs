@@ -45,9 +45,10 @@ test("personal CSV number and maximum validation accepts blanks and decimal scor
 test("personal CSV records reject invalid ranks and scores above their declared maximum", () => {
   const record = { matchNumber: 1, rank: 3, speech: 18, speechMax: 20, question: 16, questionMax: 20, defense: 15, defenseMax: 20 };
   assert.doesNotThrow(() => csv.validateRecord(record, metrics));
-  assert.throws(() => csv.validateRecord({ ...record, rank: 7 }, metrics), /invalid match number or rank/);
-  assert.throws(() => csv.validateRecord({ ...record, speech: 20.1 }, metrics), /invalid score/);
-  assert.throws(() => csv.validateRecord({ ...record, question: 21, questionMax: 20 }, metrics), /invalid score/);
+  assert.throws(() => csv.validateRecord({ ...record, rank: 7 }, metrics), (error) => error.message === "invalid rank" && error.fieldKey === "rank");
+  assert.throws(() => csv.validateRecord({ ...record, speech: 20.1 }, metrics), (error) => error.message === "invalid score" && error.fieldKey === "speech");
+  assert.throws(() => csv.validateRecord({ ...record, question: 21, questionMax: 20 }, metrics), (error) => error.message === "invalid score" && error.fieldKey === "question");
+  assert.throws(() => csv.validateRecord({ ...record, speechMax: 20.05 }, metrics), (error) => error.message === "invalid score maximum" && error.fieldKey === "speechMax");
 });
 
 test("personal CSV import maps exported columns without inventing dates", () => {

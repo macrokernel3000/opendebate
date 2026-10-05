@@ -50,13 +50,21 @@
     return parsed;
   }
 
+  function validationError(message, fieldKey) {
+    const error = new Error(message);
+    error.fieldKey = fieldKey;
+    return error;
+  }
+
   function validateRecord(record, metrics) {
     const validStep = (value, minimum, step, maximumValue = Number.POSITIVE_INFINITY) => value === "" || (Number.isFinite(Number(value))
       && Number(value) >= minimum && Number(value) <= maximumValue
       && Math.abs(Number(value) / step - Math.round(Number(value) / step)) < 1e-7);
-    if (!validStep(record.matchNumber, 1, 1) || !validStep(record.rank, 1, 1, 6)) throw new Error("invalid match number or rank");
+    if (!validStep(record.matchNumber, 1, 1)) throw validationError("invalid match number", "matchNumber");
+    if (!validStep(record.rank, 1, 1, 6)) throw validationError("invalid rank", "rank");
     metrics.forEach((metric) => {
-      if (!validStep(record[metric.key], 0, 0.1, Number(record[metric.maxKey])) || !validStep(record[metric.maxKey], 0.1, 0.1)) throw new Error("invalid score");
+      if (!validStep(record[metric.maxKey], 0.1, 0.1)) throw validationError("invalid score maximum", metric.maxKey);
+      if (!validStep(record[metric.key], 0, 0.1, Number(record[metric.maxKey]))) throw validationError("invalid score", metric.key);
     });
   }
 
