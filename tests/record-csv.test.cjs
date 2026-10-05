@@ -26,6 +26,28 @@ test("personal CSV round-trips BOM, CRLF, commas, quotes and multiline cells", (
   assert.deepEqual(Array.from(csv.parse(serialized), (row) => Array.from(row)), expected);
 });
 
+test("spreadsheet-safe CSV neutralizes formula prefixes and restores exported values", () => {
+  const values = ["=1+2", "+SUM(A1:A2)", "-1+2", "@SUM(A1)", "＝1+2", "\t=1+2", "\n=1+2", "一般文字"];
+  const serialized = csv.serialize([values], { spreadsheetSafe: true });
+  const [parsed] = csv.parse(serialized);
+
+  assert.deepEqual(Array.from(parsed), values.map((value) => `\t${value}`).map((guarded, index) =>
+    index === values.length - 1 ? values[index] : guarded));
+  assert.deepEqual(Array.from(parsed, (value) => csv.restoreSpreadsheetSafeValue(value)), values);
+  assert.equal(csv.serialize([["=1+2"]]), '\uFEFF"=1+2"');
+});
+
+test("personal CSV import restores the protective tab from safe exports", () => {
+  const headers = ["盃賽", "此盃第幾場", "姓名", "裁判姓名", "申論", "質詢", "答辯"];
+  const row = ["=SUM(A1)", "1", "@選手", "=裁判", "18", "19", "20"];
+  const exported = csv.serialize([headers, row], { spreadsheetSafe: true });
+  const [record] = csv.parsePersonalRecords(exported, { createId: () => "safe-export" });
+
+  assert.equal(record.competition, row[0]);
+  assert.equal(record.name, row[2]);
+  assert.equal(record.judge, row[3]);
+});
+
 test("personal CSV rejects malformed quotation instead of silently shifting fields", () => {
   assert.throws(() => csv.parse('標題,備註\n測試,"引號未結束'), /unterminated csv quote/);
   assert.throws(() => csv.parse('標題,備註\n錯誤欄位,未"跳脫'), /invalid csv quoting/);

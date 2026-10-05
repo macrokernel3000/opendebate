@@ -590,7 +590,7 @@ test("shared record CSV parser rejects malformed quotes for both ballot formats"
   const teamSource = fs.readFileSync(path.join(root, "js/team-records.js"), "utf8");
   assert.match(teamSource, /parseTeamRecords\(await file\.text\(\)\)/);
   assert.match(teamSource, /RecordCsv\.parse\(text\)/);
-  assert.match(teamSource, /RecordCsv\.serialize\(rows\)/);
+  assert.match(teamSource, /RecordCsv\.serialize\(rows, \{ spreadsheetSafe: true \}\)/);
   assert.doesNotMatch(teamSource, /function parseCsv\(/);
   assert.doesNotMatch(teamSource, /function csvCell\(/);
   const window = loadFactory("js/record-csv.js");
@@ -614,6 +614,22 @@ test("team CSV import preserves quoted multiline values and rejects malformed fi
   assert.equal(record.affArgument, 8.5);
   assert.equal(record.createdAt, "2026-10-05T00:00:00.000Z");
   assert.throws(() => window.DebateTeamRecords.parseTeamRecords('"盃賽","隊伍名稱","正1申論\n驗收盃,"破損,0'), /invalid csv quoting|unterminated csv quote/);
+});
+
+test("team CSV import restores spreadsheet-safe formula-like text", () => {
+  const csvWindow = loadFactory("js/record-csv.js");
+  const window = loadFactory("js/team-records.js", { DebateRecordCsv: csvWindow.DebateRecordCsv });
+  const headers = ["盃賽", "此盃第幾場", "比賽日期", "隊伍名稱", "我方持方", "裁判姓名",
+    ...["正", "反"].flatMap((side) => [1, 2, 3].flatMap((position) => ["申論", "質詢", "答辯"].map((metric) => `${side}${position}${metric}`))),
+    "正方架構論點", "正方結辯", "反方架構論點", "反方結辯", "正方總分", "反方總分", "該單結果", "建立時間"];
+  const fields = ["=測試盃", "1", "2026-10-04", "@測試隊", "正", "\t=測試裁判",
+    ...Array(18).fill(""), "8.5", "7", "8", "7.5", "", "", "", "2026-10-05T00:00:00.000Z"];
+  const text = csvWindow.DebateRecordCsv.serialize([headers, fields], { spreadsheetSafe: true });
+  const [record] = window.DebateTeamRecords.parseTeamRecords(text, { createId: () => "qa-safe" });
+
+  assert.equal(record.competition, "=測試盃");
+  assert.equal(record.teamName, "@測試隊");
+  assert.equal(record.judge, "\t=測試裁判");
 });
 
 test("personal and team CSV exports use the shared local calendar date", () => {

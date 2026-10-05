@@ -1,10 +1,24 @@
 (function () {
-  function cell(value) {
-    return `"${String(value ?? "").replaceAll('"', '""')}"`;
+  const SPREADSHEET_FORMULA_PREFIX = /^[\u0000-\u0020\uFEFF]*[=+\-@＝＋－＠]/u;
+
+  function isSpreadsheetHazard(value) {
+    return SPREADSHEET_FORMULA_PREFIX.test(value) || /^[\t\r\n]/u.test(value);
   }
 
-  function serialize(rows) {
-    return `\uFEFF${rows.map((row) => row.map(cell).join(",")).join("\n")}`;
+  function cell(value, spreadsheetSafe) {
+    let text = String(value ?? "");
+    if (spreadsheetSafe && isSpreadsheetHazard(text)) text = `\t${text}`;
+    return `"${text.replaceAll('"', '""')}"`;
+  }
+
+  function serialize(rows, { spreadsheetSafe = false } = {}) {
+    return `\uFEFF${rows.map((row) => row.map((value) => cell(value, spreadsheetSafe)).join(",")).join("\n")}`;
+  }
+
+  function restoreSpreadsheetSafeValue(value) {
+    const text = String(value ?? "");
+    if (text.startsWith("\t") && isSpreadsheetHazard(text.slice(1))) return text.slice(1);
+    return text;
   }
 
   function parse(text) {
@@ -81,7 +95,7 @@
     const headers = rows.shift()?.map((header) => header.trim()) || [];
     const get = (row, ...names) => {
       const index = names.map((name) => headers.indexOf(name)).find((candidate) => candidate >= 0);
-      return index === undefined ? "" : row[index];
+      return index === undefined ? "" : restoreSpreadsheetSafeValue(row[index]);
     };
     if (!headers.includes("申論") && !headers.includes("盃賽")) throw new Error("unsupported csv");
     const imported = rows.map((row) => ({
@@ -108,5 +122,5 @@
     return imported;
   }
 
-  window.DebateRecordCsv = { serialize, parse, parsePersonalRecords, number, maximum, validateRecord };
+  window.DebateRecordCsv = { serialize, parse, parsePersonalRecords, number, maximum, validateRecord, restoreSpreadsheetSafeValue };
 }());
