@@ -1,5 +1,7 @@
 const { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, createStore } = window.DebateCore;
-const store = createStore(window.DEBATE_PUBLIC_DATA);
+const hasPublicData = window.DebateCore.isPublicDataAvailable(window.DEBATE_PUBLIC_DATA);
+const publicData = hasPublicData ? window.DEBATE_PUBLIC_DATA : {};
+const store = createStore(publicData);
 let records = store.records;
 let honors = store.honors;
 let topics = store.topics;
@@ -71,8 +73,8 @@ const els = {
 };
 
 function eventSummaries() {
-  const metadata = window.DEBATE_PUBLIC_DATA?.eventMetadata || {};
-  const rosters = window.DEBATE_PUBLIC_DATA?.eventRosters || {};
+  const metadata = publicData.eventMetadata || {};
+  const rosters = publicData.eventRosters || {};
   const names = unique([...Object.keys(rosters), ...records.map((item) => item.competitionName), ...honors.map((item) => item.competitionName), ...topics.map((item) => item.competitionName)]);
   return names.map((name) => {
     const eventRecords = records.filter((item) => item.competitionName === name);
@@ -86,7 +88,7 @@ function eventSummaries() {
 }
 
 function playerRosterEntries(playerName) {
-  return Object.entries(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flatMap(([competitionName, entries]) =>
+  return Object.entries(publicData.eventRosters || {}).flatMap(([competitionName, entries]) =>
     entries.filter((roster) => [...(roster.leaders || []), ...(roster.players || [])].includes(playerName))
       .map((roster) => ({ ...roster, competitionName }))
   );
@@ -160,7 +162,7 @@ const { renderSearch, getKnownPeople } = window.DebateSearchPages.createSearchPa
   getRecords: () => records,
   getHonors: () => honors,
   getTopics: () => topics,
-  getRosters: () => window.DEBATE_PUBLIC_DATA?.eventRosters || {},
+  getRosters: () => publicData.eventRosters || {},
   store,
   normalize,
   escapeHtml,
@@ -178,7 +180,7 @@ const { renderHome, renderLeaderboards, toggleHonorRange, toggleMobileHonorFilte
   getRecords: () => records,
   getHonors: () => honors,
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS || [],
-  getSiteContent: () => window.DEBATE_PUBLIC_DATA?.siteContent || {},
+  getSiteContent: () => publicData.siteContent || {},
   store,
   escapeHtml,
   formatDate,
@@ -360,7 +362,7 @@ document.querySelectorAll("[data-rank-sort]").forEach((button) => button.addEven
 
 
 function renderAll() {
-  if (!records.length && !honors.length) {
+  if (!hasPublicData) {
     if (window.DebateHomeSnapshot?.showUnavailable()) return;
     document.querySelector("main").innerHTML = `
       <section class="data-error page-shell">
@@ -382,7 +384,7 @@ function renderAll() {
   const initialView = location.hash.slice(1);
   showView(initialQuery ? "search" : (/^(?:event|school|player|topic)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
-  window.DebateHomeSnapshot?.save(window.DEBATE_PUBLIC_DATA?.generatedAt);
+  window.DebateHomeSnapshot?.save(publicData.generatedAt);
 }
 
 events = eventSummaries();

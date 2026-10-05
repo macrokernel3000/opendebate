@@ -43,9 +43,21 @@
     }, {});
   }
 
+  function isPublicDataAvailable(data) {
+    const isObject = (value) => Boolean(value && typeof value === "object" && !Array.isArray(value));
+    return Boolean(data && Number.isInteger(data.schemaVersion)
+      && Array.isArray(data.entities)
+      && Array.isArray(data.records)
+      && Array.isArray(data.honors)
+      && Array.isArray(data.attendance)
+      && Array.isArray(data.topics)
+      && isObject(data.eventMetadata)
+      && isObject(data.eventRosters));
+  }
+
   function createStore(source) {
-    const data = source || {};
-    const entities = data.entities || [];
+    const data = source && typeof source === "object" ? source : {};
+    const entities = Array.isArray(data.entities) ? data.entities : [];
     const entityById = new Map(entities.map((entity) => [entity.code, entity]));
     const entityByName = new Map();
     entities.forEach((entity) => entityByName.set(normalize(entity.name), entity));
@@ -56,10 +68,10 @@
       });
     });
     return {
-      records: data.records || [],
-      honors: data.honors || [],
-      attendance: data.attendance || [],
-      topics: data.topics || [],
+      records: Array.isArray(data.records) ? data.records : [],
+      honors: Array.isArray(data.honors) ? data.honors : [],
+      attendance: Array.isArray(data.attendance) ? data.attendance : [],
+      topics: Array.isArray(data.topics) ? data.topics : [],
       entities,
       entityById,
       entityByName,
@@ -68,5 +80,5 @@
     };
   }
 
-  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, matchWinnerSide, createStore };
+  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, isPublicDataAvailable, matchWinnerSide, createStore };
 }());

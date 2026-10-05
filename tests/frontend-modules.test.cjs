@@ -76,6 +76,36 @@ test("match winner resolution honors declared teams and affirmative or negative 
   assert.equal(core.matchWinnerSide({ winner: "來源未明" }, winnerStore), "");
 });
 
+test("public data availability accepts a complete empty bundle and rejects missing or partial data", () => {
+  const core = loadFactory("js/core.js").DebateCore;
+  const appSource = fs.readFileSync(path.join(root, "app.js"), "utf8");
+  const emptyBundle = {
+    schemaVersion: 5,
+    entities: [],
+    records: [],
+    honors: [],
+    attendance: [],
+    topics: [],
+    eventMetadata: {},
+    eventRosters: {},
+  };
+
+  assert.equal(core.isPublicDataAvailable(emptyBundle), true);
+  assert.equal(core.isPublicDataAvailable(undefined), false);
+  assert.equal(core.isPublicDataAvailable({ ...emptyBundle, topics: undefined }), false);
+  assert.equal(core.isPublicDataAvailable({ ...emptyBundle, eventRosters: [] }), false);
+  assert.equal(core.isPublicDataAvailable({ ...emptyBundle, schemaVersion: "5" }), false);
+  assert.match(appSource, /const hasPublicData = window\.DebateCore\.isPublicDataAvailable\(window\.DEBATE_PUBLIC_DATA\)/);
+  assert.match(appSource, /const publicData = hasPublicData \? window\.DEBATE_PUBLIC_DATA : \{\}/);
+  assert.match(appSource, /if \(!hasPublicData\)/);
+
+  const malformedStore = core.createStore({ entities: {}, records: {}, honors: null, topics: 5 });
+  assert.equal(malformedStore.entities.length, 0);
+  assert.equal(malformedStore.records.length, 0);
+  assert.equal(malformedStore.honors.length, 0);
+  assert.equal(malformedStore.topics.length, 0);
+});
+
 function eventPageDependencies() {
   return {
     els: { eventPageDetail: { innerHTML: "" }, eventDetail: { innerHTML: "" } },
