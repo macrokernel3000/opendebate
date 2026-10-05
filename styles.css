@@ -347,6 +347,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-metadata-note > summary { display: flex; align-items: center; min-height: 44px; color: var(--green); cursor: pointer; font-weight: 800; }
 .event-metadata-note > p { margin: 0; padding: 0 0 14px; white-space: pre-line; overflow-wrap: anywhere; }
 .event-metadata-note a { color: var(--green); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; }
+.upcoming-event-status { margin: 18px 0; border-left: 4px solid var(--teal); padding: 12px 16px; background: #e9f2ed; color: var(--muted); line-height: 1.7; }
 .event-topics { margin: 0 0 32px; border: 1px solid var(--line); border-left: 7px solid var(--yellow); padding: 20px; background: #fffaf0; }
 .event-rosters { margin: 0 0 28px; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 16px 18px; background: #f7fbf8; }
 .event-rosters > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green-dark); font-size: 17px; font-weight: 900; cursor: pointer; list-style: none; }

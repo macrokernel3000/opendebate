@@ -58,7 +58,7 @@
         ${metadata ? `<div class="event-metadata">${metadata}</div>` : ""}
         ${event.topic ? `<section class="event-topics"><h${sectionLevel}>比賽辯題</h${sectionLevel}><p>${escapeHtml(event.topic)}</p>${event.topicNote ? `<p>${escapeHtml(event.topicNote)}</p>` : ""}</section>` : ""}
         ${keyDates ? `<section class="upcoming-key-dates"><h${sectionLevel}>重要時程</h${sectionLevel}><ul>${keyDates}</ul></section>` : ""}
-        <p class="search-empty">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
+        <p class="upcoming-event-status">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
     }
   
     function renderEvent(name, target = els.eventDetail) {

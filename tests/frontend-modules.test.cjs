@@ -126,6 +126,8 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /比賽地點/);
   assert.match(target.innerHTML, /領隊會議/);
   assert.match(target.innerHTML, /2026-01-20 18:00/);
+  assert.match(target.innerHTML, /class="upcoming-event-status"/);
+  assert.doesNotMatch(target.innerHTML, /class="search-empty">目前顯示賽事公告資訊/);
   assert.match(target.innerHTML, /<h1>未來盃<\/h1>/);
 
   pages.renderEvent("測試盃", target);
