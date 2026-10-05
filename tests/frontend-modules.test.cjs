@@ -194,6 +194,30 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(inlineTarget.innerHTML, /<h2>測試盃<\/h2>/);
 });
 
+test("event summaries do not show unknown teams or matches as zero and avoid repeated single-day dates", () => {
+  const event = {
+    ...events[0],
+    records: [],
+    honors: [fullCourseHonor],
+    dates: ["2026-01-01"],
+    teamCount: 0,
+    metadata: { startDate: "2026-01-01", endDate: "2026-01-01" },
+  };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [event];
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderEvent(event.name, target);
+
+  assert.match(target.innerHTML, /<p>2026-01-01<\/p>/);
+  assert.doesNotMatch(target.innerHTML, /2026-01-01–2026-01-01/);
+  assert.doesNotMatch(target.innerHTML, /<span class="count-chip">0 隊<\/span>/);
+  assert.doesNotMatch(target.innerHTML, /<span class="count-chip">0 場<\/span>/);
+  assert.match(target.innerHTML, /<span class="count-chip">1 榮譽<\/span>/);
+  assert.match(target.innerHTML, /尚無公開戰果/);
+});
+
 test("event detail pages escape untrusted names, notes, topics, and roster text", () => {
   const payload = '\"><img src=x onerror=alert(1)>';
   const maliciousEvent = {
@@ -353,6 +377,16 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     dates: ["2026-02-01"],
     metadata: { startDate: "2026-02-01" },
   };
+  const awardOnlyOverviewEvent = {
+    ...overviewEvent,
+    name: "僅收錄榮譽的賽事",
+    records: [],
+    honors: [{ ...fullCourseHonor, competitionName: "僅收錄榮譽的賽事" }],
+    teamCount: 0,
+    latestDate: "2026-01-15",
+    dates: ["2026-01-15"],
+    metadata: { startDate: "2026-01-15", endDate: "2026-01-15" },
+  };
   let overviewTopics = events[0].topics;
   const parseInputs = (html, checkedOnly = false) => [...html.matchAll(/<input type="checkbox" value="(\d+)"( checked)?/g)]
     .filter((match) => !checkedOnly || Boolean(match[2]))
@@ -403,7 +437,7 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   });
   const pages = window.DebateOverviewPages.createOverviewPages({
     els,
-    getEvents: () => [overviewEvent],
+    getEvents: () => [overviewEvent, awardOnlyOverviewEvent],
     getTopics: () => overviewTopics,
     getRecords: () => [overviewRecord],
     getHonors: () => [],
@@ -424,7 +458,17 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   pages.renderEventOptions();
   assert.match(els.eventYear.innerHTML, /2026 年/);
   assert.match(els.eventFinderResults.innerHTML, /測試盃/);
-  assert.match(els.eventFinderMeta.textContent, /找到 1 個賽事/);
+  assert.match(els.eventFinderResults.innerHTML, /逐場賽果未收錄/);
+  assert.doesNotMatch(els.eventFinderResults.innerHTML, /0 隊 · 0 場/);
+  assert.match(els.eventFinderMeta.textContent, /找到 2 個賽事/);
+  els.eventSortBy.value = "teams";
+  els.eventSortDirection.value = "desc";
+  pages.renderEventOptions();
+  assert.match(els.eventFinderResults.innerHTML, /data-axis-label="隊數未收錄"/);
+  assert.ok(els.eventFinderResults.innerHTML.indexOf('data-event-name="測試盃"') < els.eventFinderResults.innerHTML.indexOf('data-event-name="僅收錄榮譽的賽事"'));
+  els.eventSortDirection.value = "asc";
+  pages.renderEventOptions();
+  assert.ok(els.eventFinderResults.innerHTML.indexOf('data-event-name="測試盃"') < els.eventFinderResults.innerHTML.indexOf('data-event-name="僅收錄榮譽的賽事"'));
 
   pages.renderOverviewStats();
   assert.match(els.overviewStatsChart.innerHTML, /每月賽事數年度趨勢折線圖/);
@@ -510,6 +554,13 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     { competitionName: "測試盃", honorType: "team", honorName: "精神總錦標", recipient: school.name, teamId: school.code, matchDate: "2026-01-01" },
   ];
   const homeEvent = { ...events[0], records: [homeRecord], honors: homeHonors, latestDate: "2026-01-01" };
+  const awardOnlyHomeEvent = {
+    ...homeEvent,
+    name: "僅收錄榮譽的賽事",
+    records: [],
+    honors: homeHonors.map((honor) => ({ ...honor, competitionName: "僅收錄榮譽的賽事" })),
+    teamCount: 0,
+  };
   const fakeButton = (filter) => ({
     dataset: { honorFilter: filter },
     classList: { toggle() {} },
@@ -542,7 +593,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   const window = loadFactory("js/home-pages.js", { document: fakeDocument });
   const pages = window.DebateHomePages.createHomePages({
     els,
-    getEvents: () => [homeEvent],
+    getEvents: () => [homeEvent, awardOnlyHomeEvent],
     getRecords: () => [homeRecord],
     getHonors: () => homeHonors,
     getUpcomingEvents: () => upcoming,
@@ -566,6 +617,8 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   assert.match(els.eventTimeline.innerHTML, /未來盃/);
   assert.match(els.eventTimeline.innerHTML, /測試盃/);
   assert.match(els.recentEvents.innerHTML, /冠軍/);
+  assert.match(els.recentEvents.innerHTML, /逐場賽果未收錄/);
+  assert.doesNotMatch(els.recentEvents.innerHTML, /0 隊|0 場/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /測試會場/);
   assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
   assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");

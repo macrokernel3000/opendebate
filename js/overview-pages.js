@@ -161,6 +161,9 @@
       const sortBy = els.eventSortBy?.value || "year";
       const sortDirection = els.eventSortDirection?.value === "asc" ? 1 : -1;
       const sortedEvents = [...filtered].sort((a, b) => {
+        if (sortBy === "teams" && Boolean(a.records.length) !== Boolean(b.records.length)) {
+          return a.records.length ? -1 : 1;
+        }
         const comparison = sortBy === "teams" ? a.teamCount - b.teamCount
           : sortBy === "honors" ? a.honors.length - b.honors.length
             : (a.latestDate || "").localeCompare(b.latestDate || "");
@@ -171,10 +174,10 @@
       let previousAxisValue = null;
       const timelineCards = visibleEvents.map((event, index) => {
         const eventYear = event.latestDate?.slice(0, 4) || "年份未載明";
-        const axisValue = sortBy === "teams" ? event.teamCount
+        const axisValue = sortBy === "teams" ? (event.records.length ? event.teamCount : "未收錄")
           : sortBy === "honors" ? event.honors.length
             : eventYear;
-        const axisLabel = sortBy === "teams" ? `${axisValue} 隊`
+        const axisLabel = sortBy === "teams" ? (axisValue === "未收錄" ? "隊數未收錄" : `${axisValue} 隊`)
           : sortBy === "honors" ? `${axisValue} 項榮譽`
             : `${axisValue}${axisValue === "年份未載明" ? "" : " 年"}`;
         const axisMarker = isMobileTimeline && sortBy === "year" && axisValue !== previousAxisValue
@@ -186,10 +189,13 @@
         previousAxisValue = axisValue;
         const dateLabel = isMobileTimeline ? (event.latestDate ? formatDate(event.latestDate) : "日期未載明") : eventYear;
         const side = index % 2 === 0 ? "left" : "right";
+        const resultSummary = event.records.length
+          ? `${event.teamCount} 隊 · ${event.records.length} 場`
+          : "逐場賽果未收錄";
         return `${axisMarker}<button class="event-result-card" type="button" data-event-name="${escapeHtml(event.name)}" data-timeline-side="${side}"${axisLabelAttribute}>
           <span class="event-result-year">${escapeHtml(dateLabel)}</span>
           <strong>${escapeHtml(event.name)}</strong>
-          <small>${event.teamCount} 隊 · ${event.records.length} 場 · ${event.honors.length} 榮譽</small>
+          <small>${resultSummary} · ${event.honors.length} 榮譽</small>
         </button>`;
       }).join("");
       els.eventFinderResults.innerHTML = timelineCards || '<div class="event-finder-empty">沒有符合的賽事，請縮短關鍵字或切換年份。</div>';

@@ -36,13 +36,21 @@
       return `<details class="match-note-disclosure"><summary>備註／來源</summary><span>${renderMetadataNote(text)}</span></details>`;
     }
 
+    function formatEventDateRange(startDate, endDate, fallbackDates = []) {
+      if (startDate && endDate) {
+        return startDate === endDate
+          ? formatDate(startDate)
+          : `${formatDate(startDate)}–${formatDate(endDate)}`;
+      }
+      const singleDate = startDate || endDate;
+      return singleDate ? formatDate(singleDate) : fallbackDates.map(formatDate).join("、");
+    }
+
     function renderUpcomingEvent(event, target = els.eventPageDetail) {
       if (!event) return;
       const titleLevel = target === els.eventPageDetail ? 1 : 2;
       const sectionLevel = titleLevel + 1;
-      const dateLabel = event.startDate && event.endDate
-        ? `${formatDate(event.startDate)}–${formatDate(event.endDate)}`
-        : formatDate(event.startDate || event.endDate || "");
+      const dateLabel = formatEventDateRange(event.startDate, event.endDate);
       const metadata = [
         event.organizer || event.executionUnit ? `<div class="event-meta-parties">${event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : ""}${event.executionUnit ? `<div><span>執行單位</span><strong>${escapeHtml(event.executionUnit)}</strong></div>` : ""}</div>` : "",
         event.location ? `<div class="event-meta-place"><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
@@ -127,7 +135,7 @@
       const metadataNoteContent = metadataNote.length > 180 || metadataNoteHasSources
         ? `<details class="event-metadata-note"><summary>${metadataNoteHasSources ? "賽事補充資訊與來源" : "賽事補充資訊"}</summary><p>${renderMetadataNote(metadataNote)}</p></details>`
         : metadataNote ? `<small>${renderMetadataNote(metadataNote)}</small>` : "";
-      const metadataSection = metadata.organizer || metadata.location || metadataNote ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.location ? `<strong>舉辦地點：${escapeHtml(metadata.location)}</strong>` : ""}${metadataNote.length <= 180 && !metadataNoteHasSources ? metadataNoteContent : ""}</div>${metadataNote.length > 180 || metadataNoteHasSources ? metadataNoteContent : ""}` : "";
+      const metadataSection = metadata.organizer || metadata.executionUnit || metadata.location || metadataNote ? `<div class="event-metadata"><span>賽事資訊</span>${metadata.organizer || metadata.executionUnit ? `<div class="event-meta-parties">${metadata.organizer ? `<strong>主辦單位：${escapeHtml(metadata.organizer)}</strong>` : ""}${metadata.executionUnit ? `<strong>執行單位：${escapeHtml(metadata.executionUnit)}</strong>` : ""}</div>` : ""}${metadata.location ? `<small class="event-meta-place">舉辦地點：${escapeHtml(metadata.location)}</small>` : ""}${metadataNote.length <= 180 && !metadataNoteHasSources ? metadataNoteContent : ""}</div>${metadataNote.length > 180 || metadataNoteHasSources ? metadataNoteContent : ""}` : "";
       const awardCriteriaSection = metadata.awardSelectionCriteria ? `<details class="topic-explanation event-award-criteria"><summary>個人獎遴選標準</summary><p>${escapeHtml(metadata.awardSelectionCriteria)}</p></details>` : "";
       const topicSection = event.topics.length ? `<section class="event-topics"><div class="subheading-row"><h${sectionLevel} class="subheading">💡 比賽辯題</h${sectionLevel}><span>${event.topics.length} 題</span></div>${event.topics.map((item, index) => `<article class="topic-card"><span>辯題 ${index + 1}</span><button class="topic-title-link" type="button" data-topic-route="${escapeHtml(item.topicId)}">${escapeHtml(item.topic)}</button>${item.explanation ? `<details class="topic-explanation"><summary>大會辯題補充</summary><p>${escapeHtml(item.explanation)}</p></details>` : ""}</article>`).join("")}</section>` : "";
       const rosterSection = event.rosters.length ? `<details class="event-rosters"><summary><span>📋 隊伍名單</span><span>${event.rosters.length} 隊</span></summary><div class="event-roster-grid">${event.rosters.map((roster) => {
@@ -135,11 +143,16 @@
         const team = teamEntity ? entityPageLink(teamEntity.code, roster.team) : escapeHtml(roster.team);
         return `<article class="event-roster-card"><h${itemLevel + 1}>${team}</h${itemLevel + 1}>${roster.leaders?.length ? `<p><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></p>` : ""}${roster.players?.length ? `<p><strong>選手</strong><span>${roster.players.map(escapeHtml).join("、")}</span></p>` : ""}</article>`;
       }).join("")}</div></details>` : "";
+      const eventSummaryCounts = [
+        event.records.length && event.teamCount ? `<span class="count-chip">${event.teamCount} 隊</span>` : "",
+        event.records.length ? `<span class="count-chip">${event.records.length} 場</span>` : "",
+        event.honors.length ? `<span class="count-chip">${event.honors.length} 榮譽</span>` : "",
+      ].filter(Boolean).join("");
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
-          <div><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${event.metadata.startDate && event.metadata.endDate ? `${formatDate(event.metadata.startDate)}–${formatDate(event.metadata.endDate)}` : event.dates.map(formatDate).join("、")}</p></div>
-          <div class="event-summary-count"><span class="count-chip">${event.teamCount} 隊</span><span class="count-chip">${event.records.length} 場</span><span class="count-chip">${event.honors.length} 榮譽</span></div>
+          <div><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${escapeHtml(formatEventDateRange(event.metadata.startDate, event.metadata.endDate, event.dates))}</p></div>
+          ${eventSummaryCounts ? `<div class="event-summary-count">${eventSummaryCounts}</div>` : ""}
         </div>
         ${topicSection}
         ${metadataSection}

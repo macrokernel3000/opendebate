@@ -56,6 +56,10 @@
       const records = getRecords();
       const renderCard = (event, compact = false) => {
         const topicPreview = event.topics.slice(0, 2).map((item) => `<p class="event-card-topic"><span>辯題：</span>${escapeHtml(item.topic)}</p>`).join("");
+        const resultCounts = event.records.length
+          ? `<span>${event.teamCount} 隊</span><span>${event.records.length} 場</span>`
+          : `<span>逐場賽果未收錄</span>`;
+        const honorCount = event.honors.length ? `<span>${event.honors.length} 榮譽</span>` : "";
         return `
           <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
             ${compact ? `<span class="event-card-time"><i class="event-time-point" aria-hidden="true"></i><span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span></span>` : `<span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>`}
@@ -64,7 +68,7 @@
               ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
             </div>
             ${renderEventPodium(event)}
-            <span class="event-card-meta"><span>${event.teamCount} 隊</span><span>${event.records.length} 場</span><span>${event.honors.length} 榮譽</span></span>
+            <span class="event-card-meta">${resultCounts}${honorCount}</span>
           </button>`;
       };
       els.recentEvents.innerHTML = events.map(renderCard).join("");
