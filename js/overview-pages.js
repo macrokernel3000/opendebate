@@ -10,7 +10,8 @@
       const eventCounts = new Map();
       const teamEntriesByMonth = new Map();
       const eventMonthByName = new Map();
-      const teamsByEvent = new Map();
+      const unitsByEvent = new Map();
+      const teamEntriesByEvent = new Map();
       events.forEach((event) => {
         const eventMonth = monthKeyFromDate(event.metadata?.startDate)
           || event.dates.map(monthKeyFromDate).find(Boolean)
@@ -20,13 +21,16 @@
           eventCounts.set(eventMonth, (eventCounts.get(eventMonth) || 0) + 1);
         }
         const eventTeams = new Set();
+        const eventUnits = new Set();
         event.records.forEach((record) => {
           Object.entries(record.teams || {}).forEach(([side, teamName]) => {
             if (!teamName) return;
-            eventTeams.add(record.teamIds?.[side] || normalize(teamName));
+            eventTeams.add(normalize(teamName));
+            eventUnits.add(record.teamIds?.[side] || normalize(teamName));
           });
         });
-        teamsByEvent.set(event.name, eventTeams);
+        teamEntriesByEvent.set(event.name, eventTeams);
+        unitsByEvent.set(event.name, eventUnits);
         if (eventMonth && eventTeams.size) teamEntriesByMonth.set(eventMonth, (teamEntriesByMonth.get(eventMonth) || 0) + eventTeams.size);
       });
       const current = new Date();
@@ -46,16 +50,17 @@
       if (focusedYear !== null) els.overviewStatsYears.querySelector(`input[value="${focusedYear}"]`)?.focus({ preventScroll: true });
       const allEventTotals = new Map();
       const allTeamEntryTotals = new Map();
-      const allUniqueTeamsByYear = new Map();
+      const allUniqueUnitsByYear = new Map();
       eventMonthByName.forEach((month, eventName) => {
         const year = Number(month.slice(0, 4));
         const monthNumber = Number(month.slice(5, 7));
         if (year === currentYear && monthNumber > currentMonthNumber) return;
         allEventTotals.set(year, (allEventTotals.get(year) || 0) + 1);
-        const teams = teamsByEvent.get(eventName) || new Set();
-        allTeamEntryTotals.set(year, (allTeamEntryTotals.get(year) || 0) + teams.size);
-        if (!allUniqueTeamsByYear.has(year)) allUniqueTeamsByYear.set(year, new Set());
-        teams.forEach((teamKey) => allUniqueTeamsByYear.get(year).add(teamKey));
+        const teamEntries = teamEntriesByEvent.get(eventName) || new Set();
+        const units = unitsByEvent.get(eventName) || new Set();
+        allTeamEntryTotals.set(year, (allTeamEntryTotals.get(year) || 0) + teamEntries.size);
+        if (!allUniqueUnitsByYear.has(year)) allUniqueUnitsByYear.set(year, new Set());
+        units.forEach((unitKey) => allUniqueUnitsByYear.get(year).add(unitKey));
       });
       const metric = els.overviewStatsMetric.value;
       const isTeamMetric = metric === "teams";
@@ -69,7 +74,7 @@
       const summaryItems = [
         ["賽事數", "場", allEventTotals],
         ["參賽隊次", "次", allTeamEntryTotals],
-        ["不重複隊伍", "隊", allUniqueTeamsByYear],
+        ["不重複單位", "個", allUniqueUnitsByYear],
       ];
       els.overviewStatsSummary.innerHTML = selectedYears.length ? summaryItems.map(([label, unit, totals]) => {
         const values = selectedYears.map((year) => {
@@ -129,7 +134,7 @@
         return `${line}${circles}`;
       }).join("");
       const title = `${metricName}年度趨勢折線圖`;
-      const desc = `顯示勾選年度的一月至十二月逐月資料；當年度未到月份留白，7、8 月以淡金底標示暑假。`;
+      const desc = `顯示勾選年度的一月至十二月逐月資料；當年度未到月份留白，7、8 月以淡金底標示暑假。參賽隊次按賽事中的隊伍原名去重，同校 A、B 隊分開計；不重複單位則按學校／隊伍資料庫歸戶後跨賽事去重。`;
       els.overviewStatsChart.setAttribute("role", "region");
       els.overviewStatsChart.setAttribute("tabindex", "0");
       els.overviewStatsChart.setAttribute("aria-label", `${title}，可左右捲動查看月份`);

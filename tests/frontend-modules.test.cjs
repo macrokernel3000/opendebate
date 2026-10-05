@@ -242,16 +242,23 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   const school = { code: "s1", name: "測試高中", type: "s", aliases: "測試" };
   const club = { code: "t1", name: "測試辯論隊", type: "t", aliases: "測試隊" };
   const rival = { code: "s2", name: "對手高中", type: "s", aliases: "" };
+  const otherRival = { code: "s3", name: "另一所高中", type: "s", aliases: "" };
   const overviewRecord = {
     ...record,
     competitionName: "測試盃",
-    teams: { affirmative: school.name, negative: rival.name },
+    teams: { affirmative: `${school.name}A`, negative: rival.name },
     teamIds: { affirmative: school.code, negative: rival.code },
     winner: school.code,
   };
+  const secondOverviewRecord = {
+    ...overviewRecord,
+    teams: { affirmative: `${school.name}B`, negative: otherRival.name },
+    teamIds: { affirmative: school.code, negative: otherRival.code },
+    winner: otherRival.code,
+  };
   const overviewEvent = {
     ...events[0],
-    records: [overviewRecord],
+    records: [overviewRecord, secondOverviewRecord],
     latestDate: "2026-02-01",
     dates: ["2026-02-01"],
     metadata: { startDate: "2026-02-01" },
@@ -288,7 +295,7 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     overviewTeamMeta: node(),
     overviewTeamList: node(),
   };
-  const entities = [school, club, rival];
+  const entities = [school, club, rival, otherRival];
   const overviewStore = {
     entities,
     entityById: new Map(entities.map((item) => [item.code, item])),
@@ -330,11 +337,18 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   assert.equal(els.overviewStatsChart.attributes.role, "region");
   assert.equal(els.overviewStatsChart.attributes.tabindex, "0");
   assert.match(els.overviewStatsChart.attributes["aria-label"], /可左右捲動查看月份/);
-  assert.match(els.overviewStatsSummary.innerHTML, /不重複隊伍/);
+  assert.match(els.overviewStatsSummary.innerHTML, /<span>參賽隊次<\/span>/);
+  assert.match(els.overviewStatsSummary.innerHTML, /<strong>4<small>次<\/small><\/strong>/);
+  assert.match(els.overviewStatsSummary.innerHTML, /<span>不重複單位<\/span>/);
+  assert.match(els.overviewStatsSummary.innerHTML, /<strong>3<small>個<\/small><\/strong>/);
+  const indexHtml = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  assert.match(indexHtml, /參賽隊次依賽事中出現的隊伍原名去重，同校 A、B 隊分開計/);
+  assert.match(indexHtml, /不重複單位則按學校／隊伍資料庫歸戶後跨賽事去重/);
   els.overviewStatsMetric.value = "teams";
   pages.renderOverviewStats();
   assert.match(els.overviewStatsChart.innerHTML, /每月參賽隊次年度趨勢折線圖/);
   assert.match(els.overviewStatsChart.attributes["aria-label"], /參賽隊次年度趨勢折線圖/);
+  assert.match(els.overviewStatsChart.innerHTML, /2026 年 2 月：4 隊次/);
 });
 
 test("home pages render summaries, timeline and upcoming events, and keep leaderboard controls working", () => {
