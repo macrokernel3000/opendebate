@@ -499,6 +499,16 @@ button.entity-card:hover, button.entity-card.is-selected { border-color: var(--g
 .report-contact-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
 .report-contact-card { margin: 0; border: 1px solid var(--line); border-radius: 12px; padding: 16px; background: #f6f5ef; color: var(--muted); }
 .report-contact-card a { display: flex; min-height: 44px; align-items: center; margin-top: 5px; color: var(--green-dark); font-weight: 850; overflow-wrap: anywhere; }
+.member-entry-page { min-height: 100vh; background: radial-gradient(circle at 10% 0%, #e5f2ec 0, transparent 34rem), var(--paper); }
+.member-entry-shell { width: min(760px, calc(100% - 32px)); margin: 0 auto; padding: clamp(28px, 8vw, 76px) 0; }
+.member-entry-brand { display: inline-flex; align-items: center; gap: 10px; color: var(--ink); font-weight: 900; text-decoration: none; }
+.member-entry-brand img { width: 46px; height: 46px; }
+.member-entry-card { margin-top: 28px; border: 2px solid var(--ink); border-radius: 24px; padding: clamp(24px, 6vw, 44px); background: white; box-shadow: 9px 9px 0 var(--yellow); }
+.member-entry-card h1 { margin: 6px 0 14px; font-size: clamp(2rem, 7vw, 3.4rem); line-height: 1.08; letter-spacing: -.045em; }
+.member-entry-card > p:not(.kicker) { color: var(--muted); line-height: 1.75; }
+.member-entry-card ul { margin: 24px 0; padding-left: 22px; color: var(--ink); line-height: 1.9; }
+.member-entry-card .report-link.is-disabled { pointer-events: none; }
+.member-entry-note { margin: 20px 0 0; font-size: 13px; }
 .home-snapshot-status { margin: 0 auto 8px; width: min(100% - 32px, 1180px); color: var(--muted); font-size: 12px; }
 
 .archive-intro { padding-bottom: 22px; }
