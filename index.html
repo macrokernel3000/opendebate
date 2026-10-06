@@ -60,7 +60,7 @@
     ]
   }
   </script>
-  <link rel="stylesheet" href="styles.css?v=20261007012428" data-versioned-asset />
+  <link rel="stylesheet" href="styles.css?v=20261007030000" data-versioned-asset />
 </head>
 <body>
   <a class="skip-link" href="#mainContent">跳到主要內容</a>
@@ -283,9 +283,13 @@
       <div class="page-intro page-shell archive-intro">
         <p class="kicker">DEBATE RECORDS</p>
         <h1>辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
-        <p>提供紀錄且能視覺化整理裁判單。本網站無後台，不會收錄您的成績。請自行下載 CSV 留存。</p>
+        <p>使用原本的表格記錄並視覺化整理裁判單；資料目前保存在這台裝置，請自行下載 CSV 留存。</p>
       </div>
       <div class="page-shell archive-page">
+        <article class="member-inline-card" aria-labelledby="archiveMemberTitle">
+          <div><p class="kicker">MEMBER LOGIN</p><h2 id="archiveMemberTitle">會員登入</h2><p><strong>私人建檔只有會員本人可以查看。</strong>管理後台只會看到您主動送出的資料回報，不會顯示私人分數或建檔內容。下方仍使用原本的建檔表格。</p></div>
+          <a class="report-link" href="member.html" data-member-portal-link>未登入｜登入會員</a>
+        </article>
         <div class="archive-mode-picker" role="tablist" aria-label="選擇建檔方式">
           <button id="personalArchiveMode" class="archive-mode-button is-active" type="button" role="tab" aria-selected="true" aria-controls="personalArchivePanel" data-archive-mode="personal"><span aria-hidden="true">👤</span><strong>選手建檔</strong><small>記錄個人的分數</small></button>
           <button id="teamArchiveMode" class="archive-mode-button" type="button" role="tab" aria-selected="false" aria-controls="teamArchivePanel" tabindex="-1" data-archive-mode="team"><span aria-hidden="true">🏫</span><strong>隊伍建檔</strong><small>記錄整場比賽的三張裁判單</small></button>
@@ -405,6 +409,10 @@
         <p>協助補齊公開賽果與選手登場紀錄。送出後會由管理者校對，再納入網站資料。</p>
       </div>
       <div class="page-shell report-page">
+        <article class="member-inline-card" aria-labelledby="reportMemberTitle">
+          <div><p class="kicker">MEMBER LOGIN</p><h2 id="reportMemberTitle">登入並查看自己的回報進度</h2><p>會員可在登入後送出資料並查看處理狀態。不登入也能使用下方 Google 表單、Email 或 Threads 回報。</p></div>
+          <a class="report-link" href="member.html" data-member-portal-link>未登入｜登入會員</a>
+        </article>
         <article class="report-card report-form-card">
           <div class="report-icons" aria-hidden="true"><span class="report-icon">⚔️</span><span class="report-icon">🎤</span><span class="report-icon">💬</span></div>
           <p class="kicker">COMMUNITY REPORT</p>
@@ -466,5 +474,7 @@
   <script src="js/router.js?v=20261007012428" data-versioned-asset></script>
   <script src="app.js?v=20261007012428" data-versioned-asset></script>
   <script src="js/site-update-check.js?v=20261007012428" data-versioned-asset></script>
+  <script src="js/member-config.js"></script>
+  <script src="js/member-portal.js"></script>
 </body>
 </html>
