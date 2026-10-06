@@ -29,6 +29,10 @@
     return;
   }
 
+  navLinks.forEach((navLink) => {
+    navLink.hidden = false;
+  });
+
   if (status && link) {
     status.textContent = "會員後台正在私人環境驗證。正式 LINE 登入完成安全驗收前不會開放。";
     link.removeAttribute("href");
