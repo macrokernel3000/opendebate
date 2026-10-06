@@ -518,6 +518,10 @@ def validate_upcoming_events(path=None):
     return calendar_feed_module.validate_upcoming_events(path=path, data_dir=DATA_DIR)
 
 
+def validate_calendar_activities():
+    return calendar_feed_module.read_calendar_activities(data_dir=DATA_DIR)
+
+
 def build(check_only=False, fail_on_warnings=False):
     WARNINGS.clear()
     paths = source_files()
@@ -533,6 +537,7 @@ def build(check_only=False, fail_on_warnings=False):
         sources.append(source_name)
     validate_event_metadata_dates()
     validate_upcoming_events()
+    validate_calendar_activities()
     registry_entries = read_registry()
     validate_records(records, registry_entries)
     event_rosters = load_event_rosters()

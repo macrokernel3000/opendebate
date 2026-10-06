@@ -3,7 +3,7 @@
 
 import json
 import re
-from datetime import datetime, timedelta, timezone
+from datetime import datetime, time, timedelta, timezone
 from pathlib import Path
 from urllib.parse import quote
 
@@ -70,9 +70,48 @@ def validate_upcoming_events(path=None, data_dir=None):
     return events
 
 
+def read_calendar_activities(path=None, data_dir=None):
+    source_path = Path(path) if path else Path(data_dir or PROJECT_ROOT / "data") / "calendar-activities.js"
+    source = source_path.read_text(encoding="utf-8")
+    try:
+        payload = source.split("=", 1)[1].rsplit(";", 1)[0].strip()
+        activities = json.loads(payload)
+    except (IndexError, json.JSONDecodeError) as error:
+        raise SystemExit(f"資料錯誤：{source_path.name} 不是有效的行事曆活動資料。") from error
+    if not isinstance(activities, list):
+        raise SystemExit(f"資料錯誤：{source_path.name} 最外層必須是活動陣列。")
+    seen_ids = set()
+    for index, activity in enumerate(activities, start=1):
+        if not isinstance(activity, dict):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆必須是物件。")
+        activity_id = clean(activity.get("id"))
+        if not activity_id or activity_id in seen_ids:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少或重複活動 id。")
+        seen_ids.add(activity_id)
+        for field in ("name", "location", "sourceUrl"):
+            if not clean(activity.get(field)):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少「{field}」。")
+        try:
+            datetime.strptime(clean(activity.get("startDate")), "%Y-%m-%d")
+        except ValueError as error:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「startDate」須為 YYYY-MM-DD。") from error
+        for field in ("startTime", "endTime"):
+            value = clean(activity.get(field))
+            if value and not re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", value):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「{field}」格式錯誤：{value}。")
+        if clean(activity.get("startTime")) and clean(activity.get("endTime")) and activity["endTime"] <= activity["startTime"]:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆結束時間必須晚於開始時間。")
+        for field in ("sourceUrl", "registrationUrl"):
+            value = clean(activity.get(field))
+            if value and not re.match(r"^https?://", value, re.IGNORECASE):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「{field}」必須是 http(s) 網址。")
+    return activities
+
+
 def write_calendar_feed(root=None, data_dir=None):
     project_root = Path(root or PROJECT_ROOT)
     upcoming = read_upcoming_events(data_dir=data_dir)
+    activities = read_calendar_activities(data_dir=data_dir)
     today = datetime.now().date()
 
     def escape_ical(value):
@@ -95,7 +134,7 @@ def write_calendar_feed(root=None, data_dir=None):
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     lines = [
         "BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Open Debate//TW Event Calendar//ZH-TW",
-        "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:台灣辯論賽事",
+        "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:台灣辯論與思辨活動",
         "X-WR-TIMEZONE:Asia/Taipei", "X-PUBLISHED-TTL:PT12H",
     ]
     for event in upcoming:
@@ -126,5 +165,37 @@ def write_calendar_feed(root=None, data_dir=None):
             f"URL:{detail_url}",
             "STATUS:CONFIRMED", "TRANSP:TRANSPARENT", "END:VEVENT",
         ])
+    for activity in activities:
+        start = datetime.strptime(activity["startDate"], "%Y-%m-%d").date()
+        if start < today:
+            continue
+        start_time = clean(activity.get("startTime"))
+        end_time = clean(activity.get("endTime"))
+        description = "\n".join(filter(None, [
+            activity.get("note", ""),
+            f"報名連結：{activity['registrationUrl']}" if activity.get("registrationUrl") else "公告未列報名連結。",
+        ]))
+        activity_lines = [
+            "BEGIN:VEVENT",
+            f"UID:{escape_ical(activity['id'])}@opendebate.macrokernel3000.github.io",
+            f"DTSTAMP:{stamp}",
+            f"SUMMARY:{escape_ical(activity['name'])}",
+            f"LOCATION:{escape_ical(activity['location'])}",
+            f"DESCRIPTION:{escape_ical(description)}",
+            f"URL:{activity.get('registrationUrl') or activity['sourceUrl']}",
+            "STATUS:CONFIRMED", "TRANSP:TRANSPARENT",
+        ]
+        if start_time:
+            taipei = timezone(timedelta(hours=8))
+            start_at = datetime.combine(start, time.fromisoformat(start_time), tzinfo=taipei).astimezone(timezone.utc)
+            activity_lines.insert(3, f"DTSTART:{start_at.strftime('%Y%m%dT%H%M%SZ')}")
+            if end_time:
+                end_at = datetime.combine(start, time.fromisoformat(end_time), tzinfo=taipei).astimezone(timezone.utc)
+                activity_lines.insert(4, f"DTEND:{end_at.strftime('%Y%m%dT%H%M%SZ')}")
+        else:
+            activity_lines.insert(3, f"DTSTART;VALUE=DATE:{start.strftime('%Y%m%d')}")
+            activity_lines.insert(4, f"DTEND;VALUE=DATE:{(start + timedelta(days=1)).strftime('%Y%m%d')}")
+        activity_lines.append("END:VEVENT")
+        lines.extend(activity_lines)
     lines.append("END:VCALENDAR")
     (project_root / "calendar.ics").write_bytes(("\r\n".join(fold_line(line) for line in lines) + "\r\n").encode("utf-8"))
