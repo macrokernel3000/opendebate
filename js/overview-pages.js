@@ -299,6 +299,9 @@
       els.overviewTeamsPanel.classList.toggle("is-hidden", target !== "teams");
       els.overviewTopicsPanel.classList.toggle("is-hidden", target !== "topics");
       els.overviewStatsPanel.classList.toggle("is-hidden", target !== "stats");
+      if (target === "events") renderEventFinder();
+      if (target === "teams") renderOverviewTeams();
+      if (target === "topics") renderOverviewTopics();
       if (target === "stats") renderOverviewStats();
     }
 

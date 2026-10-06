@@ -422,6 +422,14 @@ test("overview separates schools and teams and redraws selected monthly metrics"
     overviewTopicFilter: node(""),
     overviewTopicMeta: node(),
     overviewTopicList: node(),
+    overviewTabs: ["events", "teams", "topics", "stats"].map((tabName) => ({
+      dataset: { overviewTab: tabName }, classList: { toggle() {} },
+      setAttribute() {}, tabIndex: -1,
+    })),
+    overviewEventsPanel: { classList: { toggle() {} } },
+    overviewTeamsPanel: { classList: { toggle() {} } },
+    overviewTopicsPanel: { classList: { toggle() {} } },
+    overviewStatsPanel: { classList: { toggle() {} } },
   };
   const entities = [school, club, rival, otherRival];
   const overviewStore = {
@@ -452,6 +460,12 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   pages.renderOverviewTeams();
   assert.match(els.overviewTeamList.innerHTML, /學校 <span>2<\/span>/);
   assert.match(els.overviewTeamList.innerHTML, /隊伍 <span>1<\/span>/);
+  assert.match(els.overviewTeamList.innerHTML, /測試辯論隊/);
+  assert.match(els.overviewTeamMeta.textContent, /2 所學校、1 支隊伍/);
+
+  els.overviewTeamList.innerHTML = "";
+  els.overviewTeamMeta.textContent = "";
+  pages.showOverviewTab("teams");
   assert.match(els.overviewTeamList.innerHTML, /測試辯論隊/);
   assert.match(els.overviewTeamMeta.textContent, /2 所學校、1 支隊伍/);
 
