@@ -122,6 +122,12 @@ test("short mobile viewports compact the fixed navigation without shrinking targ
   assert.match(css, /\.nav-button\s*\{[^}]*min-height:\s*44px/);
 });
 
+test("mobile scroll clearance keeps the footer above the fixed navigation", () => {
+  const mobileRules = css.match(/@media\s*\(max-width:\s*640px\)\s*\{([\s\S]*?)\n\}/)?.[1] || "";
+  assert.match(mobileRules, /html\s*\{[^}]*scroll-padding-bottom:\s*calc\(120px\s*\+\s*env\(safe-area-inset-bottom\)\)/);
+  assert.match(mobileRules, /body\s*\{[^}]*padding-bottom:\s*calc\(120px\s*\+\s*env\(safe-area-inset-bottom\)\)/);
+});
+
 test("very narrow home layouts stack the honor range controls instead of overflowing", () => {
   assert.match(css, /@media\s*\(max-width:\s*380px\)[\s\S]{0,250}\.leaderboard-controls\s*\{[^}]*flex-direction:\s*column/);
   assert.match(css, /@media\s*\(max-width:\s*380px\)[\s\S]{0,350}\.leaderboard-range-legend\s*\{[^}]*white-space:\s*normal/);

@@ -700,8 +700,8 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-roster-grid { grid-template-columns: minmax(0, 1fr); }
   .event-rosters { padding: 12px; }
   /* Keep page movement vertical; horizontal movement belongs to the card rails. */
-  html { overflow-x: hidden; scroll-padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
-  body { min-width: 0; overflow-x: clip; padding-bottom: calc(90px + env(safe-area-inset-bottom)); }
+  html { overflow-x: hidden; scroll-padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
+  body { min-width: 0; overflow-x: clip; padding-bottom: calc(120px + env(safe-area-inset-bottom)); }
   #homeView, #homeView > * { min-width: 0; }
 
   /* Mobile home is a separate presentation; desktop content and order stay intact. */
