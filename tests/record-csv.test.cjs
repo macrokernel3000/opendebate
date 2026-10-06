@@ -58,18 +58,21 @@ test("personal CSV rows without creation timestamps receive one batch timestamp"
 });
 
 test("spreadsheet-safe CSV neutralizes formula prefixes and restores exported values", () => {
-  const values = ["=1+2", "+SUM(A1:A2)", "-1+2", "@SUM(A1)", "＝1+2", "\t=1+2", "\n=1+2", "一般文字"];
+  const values = ["=1+2", "+SUM(A1:A2)", "-1+2", "@SUM(A1)", "＝1+2", "\t=1+2", "\n=1+2", "'=1+2", "一般文字"];
   const serialized = csv.serialize([values], { spreadsheetSafe: true });
   const [parsed] = csv.parse(serialized);
 
-  assert.deepEqual(Array.from(parsed), values.map((value) => `\t\t${value}`).map((guarded, index) =>
-    index === values.length - 1 ? values[index] : guarded));
+  assert.deepEqual(Array.from(parsed), values.map((value, index) =>
+    index === values.length - 1 ? value : `'${value}`));
   assert.deepEqual(Array.from(parsed, (value) => csv.restoreSpreadsheetSafeValue(value)), values);
   assert.equal(csv.restoreSpreadsheetSafeValue("\t=1+2"), "\t=1+2");
+  assert.equal(csv.restoreSpreadsheetSafeValue("\t\t=1+2"), "=1+2");
+  assert.equal(csv.restoreSpreadsheetSafeValue("'=1+2"), "=1+2");
+  assert.equal(csv.restoreSpreadsheetSafeValue("''=1+2"), "'=1+2");
   assert.equal(csv.serialize([["=1+2"]]), '\uFEFF"=1+2"');
 });
 
-test("personal CSV import restores the protective tab from safe exports", () => {
+test("personal CSV import restores protective prefixes from safe exports", () => {
   const headers = ["盃賽", "此盃第幾場", "姓名", "裁判姓名", "申論", "質詢", "答辯"];
   const row = ["=SUM(A1)", "1", "@選手", "=裁判", "18", "19", "20"];
   const exported = csv.serialize([headers, row], { spreadsheetSafe: true });

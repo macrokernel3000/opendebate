@@ -7,7 +7,7 @@
 
   function cell(value, spreadsheetSafe) {
     let text = String(value ?? "");
-    if (spreadsheetSafe && isSpreadsheetHazard(text)) text = `\t\t${text}`;
+    if (spreadsheetSafe && (isSpreadsheetHazard(text) || (text.startsWith("'") && isSpreadsheetHazard(text.slice(1))))) text = `'${text}`;
     return `"${text.replaceAll('"', '""')}"`;
   }
 
@@ -17,6 +17,8 @@
 
   function restoreSpreadsheetSafeValue(value) {
     const text = String(value ?? "");
+    if (text.startsWith("''") && isSpreadsheetHazard(text.slice(2))) return text.slice(1);
+    if (text.startsWith("'") && isSpreadsheetHazard(text.slice(1))) return text.slice(1);
     if (text.startsWith("\t\t") && isSpreadsheetHazard(text.slice(2))) return text.slice(2);
     return text;
   }
