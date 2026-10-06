@@ -72,6 +72,8 @@ def validate_upcoming_events(path=None, data_dir=None):
 
 def read_calendar_activities(path=None, data_dir=None):
     source_path = Path(path) if path else Path(data_dir or PROJECT_ROOT / "data") / "calendar-activities.js"
+    if not source_path.exists():
+        return []
     source = source_path.read_text(encoding="utf-8")
     try:
         payload = source.split("=", 1)[1].rsplit(";", 1)[0].strip()
