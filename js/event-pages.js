@@ -68,6 +68,33 @@
         ${keyDates ? `<section class="upcoming-key-dates"><h${sectionLevel}>重要時程</h${sectionLevel}><ul>${keyDates}</ul></section>` : ""}
         <p class="upcoming-event-status">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
     }
+
+    function renderActivity(activity, target = els.eventPageDetail) {
+      if (!activity || !target) return;
+      const titleLevel = target === els.eventPageDetail ? 1 : 2;
+      const sectionLevel = titleLevel + 1;
+      const dateLabel = `${formatDate(activity.startDate)}${activity.startTime ? ` ${activity.startTime}` : ""}${activity.endTime ? `–${activity.endTime}` : ""}`;
+      const safeLink = (url, label) => /^https?:\/\//i.test(String(url || ""))
+        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+        : "";
+      const links = [
+        safeLink(activity.registrationUrl, "報名連結"),
+        safeLink(activity.sourceUrl, "主辦方公告"),
+        safeLink(activity.relatedUrl, "相關資訊"),
+      ].filter(Boolean);
+      target.innerHTML = `
+        <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
+        <div class="event-summary">
+          <div><p class="kicker">活動資訊</p><h${titleLevel}>${escapeHtml(activity.name)}</h${titleLevel}><p>${escapeHtml(dateLabel)}</p></div>
+          <div class="event-summary-count"><span class="count-chip">活動</span></div>
+        </div>
+        <div class="event-metadata">
+          ${activity.organizer ? `<div class="event-meta-parties"><div><span>主辦單位</span><strong>${escapeHtml(activity.organizer)}</strong></div></div>` : ""}
+          ${activity.location ? `<div class="event-meta-place"><span>地點</span><strong>${escapeHtml(activity.location)}</strong></div>` : ""}
+        </div>
+        ${activity.note ? `<section class="event-topics"><h${sectionLevel}>活動資訊</h${sectionLevel}><p>${escapeHtml(activity.note)}</p></section>` : ""}
+        <section class="event-topics"><h${sectionLevel}>相關連結</h${sectionLevel}>${links.length ? `<p class="activity-source-links">${links.join("　")}</p>` : "<p>目前沒有提供相關連結。</p>"}${activity.registrationUrl ? "" : "<p>公告未提供報名連結。</p>"}</section>`;
+    }
   
     function renderEvent(name, target = els.eventDetail) {
       const event = getEvents().find((item) => item.name === name);
@@ -163,7 +190,7 @@
           <aside class="event-honors"><h${sectionLevel} class="subheading">🏆 公開榮譽</h${sectionLevel}>${eventHonors.length ? renderEventHonors(event) : "<p>尚無公開榮譽。</p>"}</aside>
         </div>`;
     }
-    return { renderUpcomingEvent, renderEvent };
+    return { renderUpcomingEvent, renderActivity, renderEvent };
   }
 
   window.DebateEventPages = { createEventPages };

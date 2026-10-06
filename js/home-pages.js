@@ -5,6 +5,7 @@
     getRecords,
     getHonors,
     getUpcomingEvents,
+    getCalendarActivities = () => [],
     getSiteContent,
     store,
     escapeHtml,
@@ -79,18 +80,26 @@
 
     function renderMobileUpcomingEvents() {
       if (!els.mobileUpcomingEvents) return;
-      const upcoming = [...getUpcomingEvents()].sort((a, b) => a.startDate.localeCompare(b.startDate));
+      const upcoming = [
+        ...getUpcomingEvents().map((event) => ({ ...event, itemType: "tournament" })),
+        ...getCalendarActivities().map((activity) => ({ ...activity, itemType: "activity" })),
+      ].sort((a, b) => a.startDate.localeCompare(b.startDate));
       const dateLabel = (event) => {
         const start = event.startDate.slice(5).replace("-", "/");
-        const end = event.endDate.slice(5).replace("-", "/");
+        const end = (event.endDate || event.startDate).slice(5).replace("-", "/");
         return start === end ? start : `${start}–${end}`;
       };
-      els.mobileUpcomingEvents.innerHTML = upcoming.map((event) => `
-        <button type="button" class="mobile-upcoming-card" data-event-name="${escapeHtml(event.name)}" aria-label="開啟${escapeHtml(event.name)}賽事頁面">
-          <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event))}</span>
+      els.mobileUpcomingEvents.innerHTML = upcoming.map((event) => {
+        const isActivity = event.itemType === "activity";
+        const timeLabel = isActivity && event.startTime ? ` ${event.startTime}${event.endTime ? `–${event.endTime}` : ""}` : "";
+        return `
+        <button type="button" class="mobile-upcoming-card${isActivity ? " mobile-upcoming-card--activity" : ""}" ${isActivity ? `data-activity-id="${escapeHtml(event.id)}" aria-label="開啟活動：${escapeHtml(event.name)}"` : `data-event-name="${escapeHtml(event.name)}" aria-label="開啟${escapeHtml(event.name)}賽事頁面"`}>
+          ${isActivity ? '<span class="mobile-upcoming-kind">活動</span>' : ""}
+          <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event) + timeLabel)}</span>
           <h3>${escapeHtml(event.name)}</h3>
           <span class="mobile-upcoming-location"><b>地點</b>${escapeHtml(event.location || "未提供")}</span>
-        </button>`).join("");
+        </button>`;
+      }).join("");
     }
 
     function eventChampion(event) {

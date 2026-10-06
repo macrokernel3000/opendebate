@@ -76,7 +76,9 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .upcoming-events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); grid-auto-flow: row; gap: 10px; margin-right: 0; padding: 2px 2px 12px; overflow: visible; }
 .mobile-upcoming-card { display: flex; min-width: 0; min-height: 142px; flex-direction: column; align-items: flex-start; gap: 4px; border: 1px solid #e5d07e; border-radius: 13px; padding: 11px 12px; background: #fff6d5; color: #28352b; text-align: left; cursor: pointer; scroll-snap-align: start; }
 .mobile-upcoming-card:nth-child(even) { background: #ffefb7; border-color: #ddc25e; }
+.mobile-upcoming-card--activity, .mobile-upcoming-card--activity:nth-child(even) { border-color: #bfd9d5; background: #eaf4f2; }
 .mobile-upcoming-card:hover, .mobile-upcoming-card:focus-visible { outline: 2px solid var(--green); outline-offset: 2px; }
+.mobile-upcoming-kind { color: #28766d; font-size: 10px; font-weight: 900; letter-spacing: .04em; }
 .mobile-upcoming-date { color: var(--green-dark); font-size: 12px; font-weight: 900; }
 .mobile-upcoming-card h3 { margin: 1px 0 2px; overflow-wrap: anywhere; font-size: 14px; line-height: 1.3; }
 .mobile-upcoming-location { width: 100%; overflow-wrap: anywhere; color: #645c40; font-size: 12px; line-height: 1.35; }

@@ -19,6 +19,7 @@ class BuildDataTests(unittest.TestCase):
             index_path.write_text(
                 '<script src="data/public-data.js?v=old" data-public-data-script></script>'
                 '<script src="data/upcoming-events.js?v=old" data-versioned-asset></script>'
+                '<script src="data/calendar-activities.js?v=old" data-versioned-asset></script>'
                 '<script src="js/core.js?v=old" data-versioned-asset></script>'
                 '<link rel="stylesheet" href="styles.css?v=old" data-versioned-asset>',
                 encoding="utf-8",
@@ -29,6 +30,7 @@ class BuildDataTests(unittest.TestCase):
             html = index_path.read_text(encoding="utf-8")
             self.assertIn('src="data/public-data.js?v=fresh-version"', html)
             self.assertIn('src="data/upcoming-events.js?v=fresh-version"', html)
+            self.assertIn('src="data/calendar-activities.js?v=fresh-version"', html)
             self.assertIn('src="js/core.js?v=fresh-version"', html)
             self.assertIn('href="styles.css?v=fresh-version"', html)
 

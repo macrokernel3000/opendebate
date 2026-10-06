@@ -191,7 +191,11 @@
     };
     els.recentEvents.addEventListener("click", openRecentEvent);
     els.mobileRecentEvents?.addEventListener("click", openRecentEvent);
-    els.mobileUpcomingEvents?.addEventListener("click", openRecentEvent);
+    els.mobileUpcomingEvents?.addEventListener("click", (event) => {
+      const activityCard = event.target.closest("[data-activity-id]");
+      if (activityCard) { navigate(`activity/${encodeURIComponent(activityCard.dataset.activityId)}`); return; }
+      openRecentEvent(event);
+    });
 
     let suppressTimelineClick = false;
     let timelineDrag = null;

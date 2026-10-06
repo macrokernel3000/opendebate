@@ -127,6 +127,29 @@ function eventPageDependencies() {
   };
 }
 
+test("activity detail renders its date, place, note, and safe source links", () => {
+  const dependencies = eventPageDependencies();
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
+  const activity = {
+    id: "activity-1", name: "CDPA 活動", startDate: "2026-10-17", startTime: "13:30",
+    organizer: "中華辯論推廣協進會（CDPA）", location: "北科集思會議中心", note: "免費入場，座位有限。",
+    sourceUrl: "https://example.test/source", relatedUrl: "https://example.test/related",
+  };
+
+  pages.renderActivity(activity);
+
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /CDPA 活動/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /2026-10-17 13:30/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /中華辯論推廣協進會（CDPA）/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /北科集思會議中心/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /免費入場，座位有限。/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /主辦方公告/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /相關資訊/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /公告未提供報名連結/);
+  pages.renderActivity({ ...activity, sourceUrl: "javascript:alert(1)", relatedUrl: "" });
+  assert.doesNotMatch(dependencies.els.eventPageDetail.innerHTML, /javascript:/);
+});
+
 function entityPageDependencies(target) {
   return {
     els: { topicPageDetail: target },
@@ -610,6 +633,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     mobileHonorTitle: node(),
   };
   const upcoming = [{ name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" }];
+  const activities = [{ id: "activity-1", name: "CDPA 活動", startDate: "2098-10-17", startTime: "13:30", location: "活動會場" }];
   const window = loadFactory("js/home-pages.js", { document: fakeDocument });
   const pages = window.DebateHomePages.createHomePages({
     els,
@@ -617,6 +641,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     getRecords: () => [homeRecord],
     getHonors: () => homeHonors,
     getUpcomingEvents: () => upcoming,
+    getCalendarActivities: () => activities,
     getSiteContent: () => ({ introTitle: "首頁測試標題" }),
     store: homeStore,
     escapeHtml,
@@ -640,6 +665,10 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   assert.match(els.recentEvents.innerHTML, /逐場賽果未收錄/);
   assert.doesNotMatch(els.recentEvents.innerHTML, /0 隊|0 場/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /測試會場/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /mobile-upcoming-card--activity/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /data-activity-id="activity-1"/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /活動會場/);
+  assert.doesNotMatch(els.mobileUpcomingEvents.innerHTML, /data-event-name="CDPA 活動"/);
   assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
   assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");
 
@@ -950,6 +979,8 @@ test("router closes overlays and updates route title and current navigation", ()
   const navButtons = ["home", "overview", "search", "archive", "reports"].map(makeNavigationButton);
   const menuButtons = ["home", "overview", "search", "archive", "reports"].map(makeMenuButton);
   const schoolPageDetail = {};
+  const activityRenders = [];
+  const activity = { id: "activity-1", name: "CDPA 活動" };
   const context = {
     window,
     document: { title: "", querySelectorAll: () => menuButtons },
@@ -967,8 +998,8 @@ test("router closes overlays and updates route title and current navigation", ()
       eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail, playerPageDetail: {}, topicPageDetail: {},
       globalSearch: { focus() {} },
     },
-    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getKnownPeople: () => ["林選手"],
-    store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
+    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getCalendarActivities: () => [activity], getKnownPeople: () => ["林選手"],
+    store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent() {}, renderUpcomingEvent() {}, renderActivity: (item) => activityRenders.push(item), renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
     closeTransientUI: () => { closeCount += 1; },
     onViewChange: (view) => viewChanges.push(view),
   });
@@ -984,6 +1015,11 @@ test("router closes overlays and updates route title and current navigation", ()
   router.showView("event/測試盃");
   assert.equal(context.document.title, "測試盃｜公開辯論資訊網");
   assert.equal(navButtons.some((button) => button.attributes.has("aria-current")), false, "detail pages should not mark a different main page current");
+
+  router.showView("activity/activity-1");
+  assert.equal(context.location.hash, "#activity/activity-1");
+  assert.equal(context.document.title, "CDPA 活動｜公開辯論資訊網");
+  assert.deepEqual(activityRenders, [activity]);
 
   router.showView("school/s1");
   assert.equal(context.document.title, "測試高中｜公開辯論資訊網");

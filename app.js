@@ -103,7 +103,7 @@ function matchScoreLabel(match) {
 
 
 
-const { renderEvent, renderUpcomingEvent } = window.DebateEventPages.createEventPages({
+const { renderEvent, renderUpcomingEvent, renderActivity } = window.DebateEventPages.createEventPages({
   els,
   getEvents: () => events,
   store,
@@ -180,6 +180,7 @@ const { renderHome, renderLeaderboards, toggleHonorRange, toggleMobileHonorFilte
   getRecords: () => records,
   getHonors: () => honors,
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS || [],
+  getCalendarActivities: () => window.DEBATE_CALENDAR_ACTIVITIES || [],
   getSiteContent: () => publicData.siteContent || {},
   store,
   escapeHtml,
@@ -199,11 +200,13 @@ const { showView } = window.DebateRouter.createRouter({
   getEvents: () => events,
   getTopics: () => topics,
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS,
+  getCalendarActivities: () => window.DEBATE_CALENDAR_ACTIVITIES || [],
   getKnownPeople,
   store,
   legacyEntityIds: { s126: "s027" },
   renderEvent,
   renderUpcomingEvent,
+  renderActivity,
   renderEntityDetail,
   renderPlayerDetail,
   renderTopic,
@@ -387,7 +390,7 @@ function renderAll() {
   els.globalSearch.value = initialQuery;
   renderSearch(initialQuery);
   const initialView = location.hash.slice(1);
-  showView(initialQuery ? "search" : (/^(?:event|school|player|topic)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
+  showView(initialQuery ? "search" : (/^(?:event|activity|school|player|topic)\/.+/.test(initialView) || ["events", "overview", "search", "archive", "reports"].includes(initialView) ? initialView : "home"));
   if (initialView === "events") showOverviewTab("events");
   window.DebateHomeSnapshot?.save(publicData.generatedAt);
 }

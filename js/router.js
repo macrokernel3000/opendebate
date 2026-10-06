@@ -4,11 +4,13 @@
     getEvents,
     getTopics,
     getUpcomingEvents,
+    getCalendarActivities = () => [],
     getKnownPeople,
     store,
     legacyEntityIds = {},
     renderEvent,
     renderUpcomingEvent,
+    renderActivity = () => {},
     renderEntityDetail,
     renderPlayerDetail,
     renderTopic,
@@ -29,6 +31,7 @@
       closeTransientUI();
       const requested = name === "events" ? "overview" : name;
       const eventRoute = requested.match(/^event\/(.+)$/);
+      const activityRoute = requested.match(/^activity\/(.+)$/);
       const schoolRoute = requested.match(/^school\/(.+)$/);
       const playerRoute = requested.match(/^player\/(.+)$/);
       const topicRoute = requested.match(/^topic\/(.+)$/);
@@ -39,6 +42,13 @@
       let playerName = "";
       let topicId = "";
       let upcomingEvent = null;
+      let activity = null;
+
+      if (activityRoute) {
+        let activityId = "";
+        try { activityId = decodeURIComponent(activityRoute[1]); } catch { activityId = ""; }
+        activity = getCalendarActivities()?.find((item) => item.id === activityId) || null;
+      }
 
       if (eventRoute) {
         try { eventName = decodeURIComponent(eventRoute[1]); } catch { eventName = ""; }
@@ -64,7 +74,7 @@
         if (!topics.some((item) => item.topicId === topicId)) topicId = "";
       }
 
-      const target = eventName ? "event-page" : schoolId ? "school-page" : playerName ? "player-page" : topicId ? "topic-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
+      const target = activity ? "event-page" : eventName ? "event-page" : schoolId ? "school-page" : playerName ? "player-page" : topicId ? "topic-page" : (["home", "overview", "search", "archive", "reports"].includes(requested) ? requested : "home");
       els.views.forEach((view) => view.classList.toggle("is-hidden", view.dataset.viewPanel !== target));
       const currentNav = ["home", "overview", "search", "archive", "reports"].includes(target) ? target : "";
       els.navButtons.forEach((button) => {
@@ -80,7 +90,7 @@
 
       const entityName = schoolId ? store.entityById.get(schoolId)?.name : "";
       const topicName = topicId ? topics.find((item) => item.topicId === topicId)?.topic : "";
-      const pageName = eventName || entityName || playerName || topicName || pageLabels[target] || "";
+      const pageName = activity?.name || eventName || entityName || playerName || topicName || pageLabels[target] || "";
       document.title = pageName ? `${pageName}｜${siteTitle}` : `${siteTitle}｜台灣高中辯論戰績資料庫`;
       els.overviewView.classList.remove("is-event-open");
       els.overviewEventsPanel.classList.remove("is-event-open");
@@ -89,13 +99,14 @@
         if (events.some((event) => event.name === eventName)) renderEvent(eventName, els.eventPageDetail);
         else renderUpcomingEvent(upcomingEvent, els.eventPageDetail);
       }
+      if (activity) renderActivity(activity, els.eventPageDetail);
       if (schoolId) els.schoolPageDetail.innerHTML = renderEntityDetail(store.entityById.get(schoolId), "schoolPageEntityDetail", true);
       if (playerName) els.playerPageDetail.innerHTML = renderPlayerDetail(playerName);
       if (topicId) renderTopic(topicId);
       if (target === "overview") els.eventDetail.innerHTML = "";
       onViewChange(target);
 
-      const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
+      const routeHash = activity ? `#activity/${encodeURIComponent(activity.id)}` : eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
       let routeHref = routeHash;
       if (target === "search" || /(?:^\?|&)q=/.test(location.search || "")) {
         const routeUrl = new URL(location.href);
