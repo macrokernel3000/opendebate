@@ -469,6 +469,12 @@ test("overview separates schools and teams and redraws selected monthly metrics"
   assert.match(els.overviewTeamList.innerHTML, /測試辯論隊/);
   assert.match(els.overviewTeamMeta.textContent, /2 所學校、1 支隊伍/);
 
+  els.eventFinderResults.innerHTML = "";
+  els.eventFinderMeta.textContent = "";
+  pages.showOverviewTab("events");
+  assert.match(els.eventFinderResults.innerHTML, /測試盃/);
+  assert.match(els.eventFinderMeta.textContent, /找到 2 個賽事/);
+
   pages.renderEventOptions();
   assert.match(els.eventYear.innerHTML, /2026 年/);
   assert.match(els.eventFinderResults.innerHTML, /測試盃/);
