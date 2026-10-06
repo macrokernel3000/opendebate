@@ -207,6 +207,11 @@ const { showView } = window.DebateRouter.createRouter({
   renderEntityDetail,
   renderPlayerDetail,
   renderTopic,
+  onViewChange: (target) => {
+    if (target !== "overview") return;
+    const selectedTab = [...els.overviewTabs].find((tab) => tab.getAttribute("aria-selected") === "true");
+    showOverviewTab(selectedTab?.dataset.overviewTab || "events");
+  },
   closeTransientUI: () => window.DebatePersonalRecords?.closeExpandedCharts(),
 });
 

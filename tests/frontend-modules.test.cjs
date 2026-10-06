@@ -934,6 +934,7 @@ test("personal record save feedback does not claim empty scores updated averages
 
 test("router closes overlays and updates route title and current navigation", () => {
   let closeCount = 0;
+  const viewChanges = [];
   const noopClassList = { remove() {}, toggle() {}, contains: () => false };
   const window = { matchMedia: () => ({ matches: true }), scrollTo() {} };
   const makeNavigationButton = (view) => ({
@@ -969,6 +970,7 @@ test("router closes overlays and updates route title and current navigation", ()
     getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getKnownPeople: () => ["林選手"],
     store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent() {}, renderUpcomingEvent() {}, renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
     closeTransientUI: () => { closeCount += 1; },
+    onViewChange: (view) => viewChanges.push(view),
   });
   router.showView("overview");
   assert.equal(closeCount, 1);
@@ -977,6 +979,7 @@ test("router closes overlays and updates route title and current navigation", ()
   assert.equal(navButtons[1].attributes.get("aria-current"), "page");
   assert.equal(menuButtons[1].attributes.get("aria-current"), "page");
   assert.equal(navButtons[0].attributes.has("aria-current"), false);
+  assert.deepEqual(viewChanges, ["overview"], "entering the overview route should notify the overview panel renderer");
 
   router.showView("event/測試盃");
   assert.equal(context.document.title, "測試盃｜公開辯論資訊網");

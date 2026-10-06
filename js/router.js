@@ -12,6 +12,7 @@
     renderEntityDetail,
     renderPlayerDetail,
     renderTopic,
+    onViewChange = () => {},
     closeTransientUI = () => {},
   }) {
     let hasRenderedRoute = false;
@@ -92,6 +93,7 @@
       if (playerName) els.playerPageDetail.innerHTML = renderPlayerDetail(playerName);
       if (topicId) renderTopic(topicId);
       if (target === "overview") els.eventDetail.innerHTML = "";
+      onViewChange(target);
 
       const routeHash = eventName ? `#event/${encodeURIComponent(eventName)}` : schoolId ? `#school/${encodeURIComponent(schoolId)}` : playerName ? `#player/${encodeURIComponent(playerName)}` : topicId ? `#topic/${encodeURIComponent(topicId)}` : `#${target}`;
       let routeHref = routeHash;
