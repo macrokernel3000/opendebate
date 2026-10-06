@@ -39,6 +39,8 @@ button { color: inherit; }
 .main-nav { display: flex; align-self: stretch; }
 .nav-button { min-width: 72px; border: 0; border-bottom: 3px solid transparent; background: transparent; cursor: pointer; font-weight: 800; }
 .nav-button:hover, .nav-button.is-active { color: var(--green); border-bottom-color: var(--coral); }
+.member-nav-link { display: inline-flex; align-items: center; justify-content: center; color: var(--ink); text-decoration: none; }
+.mobile-member-link { display: none; }
 
 .hero { position: relative; height: clamp(390px, 57vh, 570px); min-height: 390px; overflow: hidden; background: var(--green); }
 .hero img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -832,6 +834,10 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .mobile-quick-menu button:hover, .mobile-quick-menu button:focus-visible { outline: 0; background: #e7f1eb; color: var(--green-dark); }
   .mobile-quick-menu button span { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; background: #edf3ee; font-size: 17px; }
   .mobile-quick-menu button span .nav-icon { display: block; width: 19px; height: 19px; flex: 0 0 19px; }
+  .main-nav .member-nav-link { display: none; }
+  .mobile-quick-menu .mobile-member-link { display: flex; align-items: center; gap: 12px; min-height: 46px; border-radius: 12px; padding: 0 12px; color: var(--ink); font-weight: 750; text-decoration: none; }
+  .mobile-quick-menu .mobile-member-link:hover, .mobile-quick-menu .mobile-member-link:focus-visible { outline: 0; background: #e7f1eb; color: var(--green-dark); }
+  .mobile-quick-menu .mobile-member-link span { display: grid; width: 26px; height: 26px; place-items: center; border-radius: 9px; background: #edf3ee; }
   .main-nav { position: fixed; z-index: 100; right: 12px; bottom: calc(10px + env(safe-area-inset-bottom)); left: 12px; display: flex; height: 66px; gap: 4px; align-items: stretch; min-width: 0; overflow: visible; border: 1px solid rgba(23, 33, 29, .12); border-radius: 999px; padding: 5px; background: var(--paper); box-shadow: 0 8px 28px rgba(23, 33, 29, .2); }
   .nav-button { position: relative; display: flex; flex: 1 1 0; flex-direction: column; align-items: center; justify-content: center; gap: 3px; min-width: 0; min-height: 44px; border: 0; border-radius: 999px; padding: 3px 2px; background: transparent; font-size: 11px; font-weight: 800; line-height: 1.2; white-space: nowrap; }
   .nav-icon { display: block; width: 19px; height: 19px; flex: 0 0 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
