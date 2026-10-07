@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-07T15:36:08",
+  "generatedAt": "2026-10-07T20:01:08",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -358,7 +358,8 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s182", "type": "s", "name": "中正預校", "aliases": ""},
     {"code": "s183", "type": "s", "name": "安樂高中", "aliases": ""},
     {"code": "s184", "type": "s", "name": "明道高中", "aliases": ""},
-    {"code": "s185", "type": "s", "name": "港明中學", "aliases": ""}
+    {"code": "s185", "type": "s", "name": "港明中學", "aliases": ""},
+    {"code": "s186", "type": "s", "name": "清水高中", "aliases": "台中清水高中|臺中清水高中|臺中市立清水高中"}
   ],
   "records": [
     {"competitionName": "2025「青聲說」全國高中職辯論賽", "matchDate": "", "period": "", "venue": "", "teams": {"affirmative": "三民高中A", "negative": "華僑高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "華僑高中", "note": "A", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s001", "negative": "s132"}, "id": "match-6d2f8f15cc10"},
