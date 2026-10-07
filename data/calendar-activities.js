@@ -9,6 +9,7 @@ window.DEBATE_CALENDAR_ACTIVITIES = [
     "organizer": "中華辯論推廣協進會（CDPA）",
     "location": "北科集思會議中心 3F 感恩廳",
     "note": "免費入場，座位有限。",
+    "registrationUrl": "https://forms.gle/6vvNnvftVocSmaV59",
     "sourceUrl": "https://www.instagram.com/cdpa.tw/p/DdgiXWMiIsi/",
     "relatedUrl": "https://www.instagram.com/p/Dd5bRo5DA1U/?stkn=Y3pubnBnZTZ4M2Jl"
   }

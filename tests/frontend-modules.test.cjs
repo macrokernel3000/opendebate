@@ -133,7 +133,7 @@ test("activity detail renders its date, place, note, and safe source links", () 
   const activity = {
     id: "activity-1", name: "CDPA 活動", startDate: "2026-10-17", startTime: "13:30",
     organizer: "中華辯論推廣協進會（CDPA）", location: "北科集思會議中心", note: "免費入場，座位有限。",
-    sourceUrl: "https://example.test/source", relatedUrl: "https://example.test/related",
+    registrationUrl: "https://forms.gle/test-registration", sourceUrl: "https://example.test/source", relatedUrl: "https://example.test/related",
   };
 
   pages.renderActivity(activity);
@@ -145,6 +145,10 @@ test("activity detail renders its date, place, note, and safe source links", () 
   assert.match(dependencies.els.eventPageDetail.innerHTML, /免費入場，座位有限。/);
   assert.match(dependencies.els.eventPageDetail.innerHTML, /主辦方公告/);
   assert.match(dependencies.els.eventPageDetail.innerHTML, /相關資訊/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /報名連結/);
+  assert.match(dependencies.els.eventPageDetail.innerHTML, /https:\/\/forms\.gle\/test-registration/);
+  assert.doesNotMatch(dependencies.els.eventPageDetail.innerHTML, /公告未提供報名連結/);
+  pages.renderActivity({ ...activity, registrationUrl: "" });
   assert.match(dependencies.els.eventPageDetail.innerHTML, /公告未提供報名連結/);
   pages.renderActivity({ ...activity, sourceUrl: "javascript:alert(1)", relatedUrl: "" });
   assert.doesNotMatch(dependencies.els.eventPageDetail.innerHTML, /javascript:/);
