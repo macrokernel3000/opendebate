@@ -84,7 +84,7 @@
           const personRosters = playerRosterEntries(name);
           const teams = unique([...personHonors.map((item) => item.team), ...personRosters.map((roster) => roster.team)].filter(Boolean));
           const roles = [knownPlayers.has(name) ? "選手" : "", knownLeaders.has(name) ? "領隊" : ""].filter(Boolean).join("／");
-          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="person-icon" aria-hidden="true">👤</span>${escapeHtml(name)}</h3><p>${escapeHtml(roles)} · ${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆個人榮譽${personRosters.length ? ` · ${personRosters.length} 筆隊伍名單` : ""}</p></button>`;
+          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="person-icon" aria-hidden="true">👤</span>${escapeHtml(name)}</h3><p>${escapeHtml(roles)} · ${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆個人榮譽${personRosters.length ? ` · ${personRosters.length} 筆名單／身分` : ""}</p></button>`;
         }).join("")}
       </div></section>` : "";
 

@@ -370,6 +370,7 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-roster-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
 .event-roster-card { min-width: 0; border: 1px solid var(--line); padding: 12px; background: white; }
 .event-roster-card h4 { margin: 0 0 8px; color: var(--green-dark); font-size: 14px; line-height: 1.5; }
+.roster-source-status { display:inline-block; margin-left:8px; padding:2px 7px; border-radius:999px; background:var(--yellow); color:var(--ink); font-size:11px; font-weight:800; vertical-align:middle; }
 .event-roster-card p { display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 7px; margin: 5px 0 0; color: var(--muted); font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
 .event-roster-card p strong { color: var(--coral-text); }
 .entity-roster-disclosure { margin: 22px 0; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 14px 16px; background: #f7fbf8; }

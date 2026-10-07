@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-07T20:01:08",
+  "generatedAt": "2026-10-08T01:01:18",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2673,6 +2673,24 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "team": "中山女高", "leaders": [], "players": ["許芯睿", "劉芷甯", "藍季姍"], "status": "公告名單", "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"},
       {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "team": "臺中二中", "leaders": [], "players": ["吳易叡", "張善喆", "杜品嫻", "賴奕侖", "黃子芸"], "status": "公告名單", "sourceNote": "主辦方公布的《蘇州37選手名單.pdf》（https://drive.google.com/file/d/1Z19Fr4_-hWIff7VwYp3VaX8IbzwGSaSP/view）；PDF未列領隊。PDF隊名「慧燈高中」沿用賽果公告名稱「慧燈中學」，其餘隊名依資料庫既有正式名稱統一。"},
       {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "team": "和平高中", "leaders": [], "players": [], "status": "賽果確認參賽", "sourceNote": "2026-07-26 對大直高中之已登錄賽果證明參賽；主辦方公布名單未列本隊，未提供選手名單，故不補填姓名。"}
+    ],
+    "第三十五屆蘇州盃高中職辯論錦標賽": [
+      {"competitionName": "第三十五屆蘇州盃高中職辯論錦標賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "第二十七屆高中菁英盃": [
+      {"competitionName": "第二十七屆高中菁英盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "第二十八屆高中菁英盃": [
+      {"competitionName": "第二十八屆高中菁英盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "第三屆夢參盃": [
+      {"competitionName": "第三屆夢參盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "吊嘎盃全國高中職辯論比賽": [
+      {"competitionName": "吊嘎盃全國高中職辯論比賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "2026司改盃全國高中職辯論比賽": [
+      {"competitionName": "2026司改盃全國高中職辯論比賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
     ]
   }
 };

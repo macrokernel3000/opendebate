@@ -122,6 +122,14 @@ def validate_event_rosters(records, event_rosters, registry_entries, warn):
     alias_lookup = entity_alias_lookup(registry_entries)
 
     for competition, entries in event_rosters.items():
+        # A single member-confirmed participation is useful public evidence, but it is
+        # not a complete organizer roster. Only compare team-set completeness when
+        # this event actually includes an organizer registration or roster source.
+        has_complete_roster_source = any(
+            entry.get("status") in {"公告名單", "報名名單"} for entry in entries
+        )
+        if not has_complete_roster_source:
+            continue
         match_teams = {
             clean(team)
             for record in records if record["competitionName"] == competition
