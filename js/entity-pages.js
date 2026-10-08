@@ -14,7 +14,6 @@
     playerRosterEntries,
     entityPageLink,
     playerPageLink,
-    playerDisplayName = (name) => name,
     honorSubject,
     honorDateLabel,
     isFullCourseBest,
@@ -34,7 +33,7 @@
       const playerRosters = playerRosterEntries(playerName);
       const affiliations = unique([...playerHonors.map((honor) => honor.team), ...playerRosters.map((roster) => roster.team)].filter(Boolean));
       const rosterRows = playerRosters.map((roster) => {
-        const roles = [roster.players?.includes(playerName) ? "選手" : "", roster.leaders?.includes(playerName) ? "領隊" : "", roster.coaches?.includes(playerName) ? "教練" : "", roster.assistants?.includes(playerName) ? "協助" : ""].filter(Boolean).join("／");
+        const roles = [roster.players?.includes(playerName) ? "選手" : "", roster.leaders?.includes(playerName) ? "領隊" : ""].filter(Boolean).join("／");
         const sourceStatus = roster.status && roster.status !== "公告名單" ? roster.status : "名單";
         return `<article class="entity-match"><span class="history-date">${escapeHtml(sourceStatus)}</span><div><strong>${entityPageLink(store.entityForName(roster.team)?.code, roster.team)}</strong><p>${eventRouteLink(roster.competitionName)} · ${roles}</p></div></article>`;
       }).join("");
@@ -61,8 +60,8 @@
         return `<article class="entity-trophy-card"><div class="entity-trophy-title"><strong>${eventRouteLink(group.name)}</strong></div><div class="entity-trophy-honors">${awards}</div></article>`;
       }).join("");
       const matchRows = playerMatches.map((record) => `<article class="entity-match"><span class="history-date">${escapeHtml(formatDate(record.matchDate))}</span><div><strong>${entityPageLink(record.teamIds?.affirmative, record.teams?.affirmative)} ${escapeHtml(matchScoreLabel(record))} ${entityPageLink(record.teamIds?.negative, record.teams?.negative)}</strong><p>${eventRouteLink(record.competitionName)} · 時段 ${escapeHtml(record.period || "-")} · 會場 ${escapeHtml(record.venue || "-")}</p></div></article>`).join("");
-      const roles = [playerHonors.length || playerMatches.length || playerRosters.some((roster) => roster.players?.includes(playerName)) ? "選手" : "", playerRosters.some((roster) => roster.leaders?.includes(playerName)) ? "領隊" : "", playerRosters.some((roster) => roster.coaches?.includes(playerName)) ? "教練" : "", playerRosters.some((roster) => roster.assistants?.includes(playerName)) ? "協助" : ""].filter(Boolean).join("／") || "人物資料";
-      return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">${roles}</p><h1>${escapeHtml(playerDisplayName(playerName))}的辯論紀錄</h1></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄${playerRosters.length ? ` · <strong>${playerRosters.length}</strong> 筆名單／身分` : ""}</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p>${playerRosters.length ? `<h2>名單與參賽身分</h2><div class="history-list">${rosterRows}</div>` : ""}<h2>公開榮譽</h2><div class="entity-trophy-list player-trophy-list">${honorCards || "<p>目前沒有個人公開榮譽。</p>"}</div><h2>選手登場紀錄</h2><div class="history-list">${matchRows || "<p>目前沒有逐場登錄的選手名單；公布隊伍名單或本人確認身分不代表實際上場。</p>"}</div></section>`;
+      const roles = [playerHonors.length || playerMatches.length || playerRosters.some((roster) => roster.players?.includes(playerName)) ? "選手" : "", playerRosters.some((roster) => roster.leaders?.includes(playerName)) ? "領隊" : ""].filter(Boolean).join("／") || "人物資料";
+      return `<section class="result-section entity-detail"><button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button><div class="entity-detail-heading"><div><p class="kicker">${roles}</p><h1>${escapeHtml(playerName)}的辯論紀錄</h1></div><div><strong>${playerHonors.length}</strong> 項個人榮譽 · <strong>${playerMatches.length}</strong> 場登場紀錄${playerRosters.length ? ` · <strong>${playerRosters.length}</strong> 筆名單／身分` : ""}</div></div><p class="player-affiliations">${affiliations.length ? affiliations.map((team) => entityPageLink(store.entityForName(team)?.code, team)).join("、") : "部分原始榮譽未載明所屬隊伍"}</p>${playerRosters.length ? `<h2>名單與參賽身分</h2><div class="history-list">${rosterRows}</div>` : ""}<h2>公開榮譽</h2><div class="entity-trophy-list player-trophy-list">${honorCards || "<p>目前沒有個人公開榮譽。</p>"}</div><h2>選手登場紀錄</h2><div class="history-list">${matchRows || "<p>目前沒有逐場登錄的選手名單；公布隊伍名單或本人確認身分不代表實際上場。</p>"}</div></section>`;
     }
 
     function renderTopic(topicId) {
@@ -146,7 +145,7 @@
         const roster = rosterByEvent.get(name);
         if (!roster) return "";
         const players = roster.players || [];
-        return `<details class="entity-event-roster"><summary><span>📋 名單與參賽身分</span><span>${players.length} 位選手</span></summary>${roster.leaders?.length ? `<div><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></div>` : ""}${roster.coaches?.length ? `<div><strong>教練</strong><span>${roster.coaches.map(escapeHtml).join("、")}</span></div>` : ""}${roster.assistants?.length ? `<div><strong>協助</strong><span>${roster.assistants.map(escapeHtml).join("、")}</span></div>` : ""}${players.length ? `<div><strong>選手</strong><span>${players.map(escapeHtml).join("、")}</span></div>` : ""}</details>`;
+        return `<details class="entity-event-roster"><summary><span>📋 選手名單</span><span>${players.length} 位</span></summary>${roster.leaders?.length ? `<div><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></div>` : ""}${players.length ? `<div><strong>選手</strong><span>${players.map(escapeHtml).join("、")}</span></div>` : ""}</details>`;
       };
       const participatedRows = [...eventsByYear.entries()].sort(([a], [b]) => b.localeCompare(a)).map(([year, names]) => `<section class="entity-event-year"><h4>${escapeHtml(year)}</h4><div class="entity-event-list">${names.map((name) => `<article class="entity-event-entry">${eventLink(name)}${rosterInEventRecord(name)}</article>`).join("")}</div></section>`).join("");
       const titleTag = standalone ? "h1" : "h2";

@@ -21,11 +21,6 @@
 
   function unique(values) { return [...new Set(values.filter(Boolean))]; }
   function normalize(value) { return String(value || "").toLocaleLowerCase("zh-Hant").replace(/\s+/g, ""); }
-  const playerPublicAliases = { "黃靖俊": "綿羊" };
-  function playerDisplayName(name) {
-    const alias = playerPublicAliases[name];
-    return alias ? `${name}（${alias}）` : name;
-  }
   function matchWinnerSide(match, store) {
     const winner = String(match?.winner ?? "").trim();
     if (!winner) return "";
@@ -85,5 +80,5 @@
     };
   }
 
-  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, playerDisplayName, groupByDate, isPublicDataAvailable, matchWinnerSide, createStore };
+  window.DebateCore = { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, isPublicDataAvailable, matchWinnerSide, createStore };
 }());

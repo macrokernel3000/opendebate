@@ -342,12 +342,6 @@ def load_event_rosters():
                 "status": clean(row.get("名單狀態")) or "公告名單",
                 "sourceNote": clean(row.get("來源說明")),
             }
-            coaches = split_players(row.get("教練"))
-            assistants = split_players(row.get("協助"))
-            if coaches:
-                item["coaches"] = coaches
-            if assistants:
-                item["assistants"] = assistants
             rosters.setdefault(competition, []).append(item)
         for competition, entries in rosters.items():
             seen = set()
