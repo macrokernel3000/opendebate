@@ -83,7 +83,7 @@ function eventSummaries() {
     const dates = unique([eventMetadata.startDate, eventMetadata.endDate, ...eventRecords.map((item) => item.matchDate), ...eventHonors.map((item) => item.matchDate)]).sort();
     const eventTopics = topics.filter((item) => item.competitionName === name);
     const teamCount = unique(eventRecords.flatMap((item) => Object.values(item.teams || {})).filter(Boolean)).length;
-    return { name, records: eventRecords, honors: eventHonors, topics: eventTopics, rosters: rosters[name] || [], dates, latestDate: dates.at(-1) || "", teamCount, metadata: metadata[name] || {} };
+    return { name, competitionCode: metadata[name]?.competitionCode || "", records: eventRecords, honors: eventHonors, topics: eventTopics, rosters: rosters[name] || [], dates, latestDate: dates.at(-1) || "", teamCount, metadata: metadata[name] || {} };
   }).sort((a, b) => b.latestDate.localeCompare(a.latestDate) || a.name.localeCompare(b.name, "zh-Hant"));
 }
 

@@ -1,0 +1,55 @@
+﻿code,name,year,registrationSequence,registeredAt,registrationSource,registrationBasis,legacyIds,status
+C2401,第一屆東岸盃全國高中職辯論比賽,2024,1,2026-07-24,data/public-data-第一屆東岸盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2402,第一屆青雲盃全國高中職辯論錦標賽,2024,2,2026-07-24,data/public-data-第一屆青雲盃全國高中職辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2403,第三屆輔仁盃全國高中職辯論比賽,2024,3,2026-09-29,data/public-data-第三屆輔仁盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2404,第十八屆宮燈盃辯論公開賽青少年組,2024,4,2026-09-30,data/public-data-第十八屆宮燈盃辯論公開賽青少年組.csv,existing CSV first-added commit,,results-recorded
+C2405,第十五屆明京盃全國高中職辯論比賽,2024,5,2026-10-04,data/public-data-第十五屆明京盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2406,第六屆台北市政願景盃辯論比賽,2024,6,2026-10-08,data/public-data-第六屆台北市政願景盃辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2407,第三十五屆蘇州盃高中職辯論錦標賽,2024,7,2026-10-09,data/public-data-第三十五屆蘇州盃高中職辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2501,2025司改盃全國高中職辯論比賽,2025,1,2026-07-24,data/public-data-2025司改盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2502,第一屆夢箋盃,2025,2,2026-07-24,data/public-data-第一屆夢箋盃.csv,existing CSV first-added commit,,results-recorded
+C2503,第七屆惠蓀盃全國高中職辯論比賽,2025,3,2026-07-24,data/public-data-第七屆惠蓀盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2504,第二十七屆高中菁英盃,2025,4,2026-07-24,data/public-data-第二十七屆高中菁英盃.csv,existing CSV first-added commit,,results-recorded
+C2505,第二十屆辯革盃全國高中職辯論比賽,2025,5,2026-07-24,data/public-data-第二十屆辯革盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2506,第二屆東岸盃全國高中職辯論比賽,2025,6,2026-07-24,data/public-data-第二屆東岸盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2507,第十九屆北區聯合新生盃辯論比賽,2025,7,2026-07-24,data/public-data-第十九屆北區聯合新生盃辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2508,第十六屆明京盃全國高中職辯論比賽,2025,8,2026-07-24,data/public-data-第十六屆明京盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2509,第十屆雲啟盃辯論比賽,2025,9,2026-07-24,data/public-data-第十屆雲啟盃辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2510,第四屆輔仁盃全國高中職辯論比賽,2025,10,2026-07-24,data/public-data-第四屆輔仁盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2511,2025「青聲說」全國高中職辯論賽,2025,11,2026-08-26,data/public-data-2025「青聲說」全國高中職辯論賽.csv,event metadata first registration,,results-recorded
+C2512,第二十二屆延平盃全國高中職辯論賽,2025,12,2026-09-29,data/public-data-第二十二屆延平盃全國高中職辯論賽.csv,existing CSV first-added commit,,results-recorded
+C2513,第二十屆齊揚盃,2025,13,2026-09-29,data/public-data-第二十屆齊揚盃.csv,existing CSV first-added commit,,results-recorded
+C2514,第十九屆宮燈盃辯論公開賽青少年組,2025,14,2026-09-30,data/public-data-第十九屆宮燈盃辯論公開賽青少年組.csv,existing CSV first-added commit,,results-recorded
+C2515,第十四屆風雩盃中學辯論錦標賽,2025,15,2026-10-04,data/public-data-第十四屆風雩盃中學辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2516,第三十六屆蘇州盃高中職辯論錦標賽,2025,16,2026-10-09,data/public-data-第三十六屆蘇州盃高中職辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2601,吊嘎盃全國高中職辯論比賽,2026,1,2026-07-24,data/public-data-吊嘎盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2602,火雞盃全國高中職辯論比賽,2026,2,2026-07-24,data/public-data-火雞盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2603,火雞肉飯盃全國高中職辯論比賽,2026,3,2026-07-24,data/public-data-火雞肉飯盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2604,第一屆明哲盃全國高中職辯論比賽,2026,4,2026-07-24,data/public-data-第一屆明哲盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2605,第一屆陽明盃全國辯論公開賽,2026,5,2026-07-24,data/public-data-第一屆陽明盃全國辯論公開賽.csv,existing CSV first-added commit,,results-recorded
+C2606,第三屆東岸盃全國高中職辯論比賽,2026,6,2026-07-24,data/public-data-第三屆東岸盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2607,第二十一屆齊揚盃,2026,7,2026-07-24,data/public-data-第二十一屆齊揚盃.csv,existing CSV first-added commit,,results-recorded
+C2608,第二十八屆高中菁英盃,2026,8,2026-07-24,data/public-data-第二十八屆高中菁英盃.csv,existing CSV first-added commit,,results-recorded
+C2609,第二屆夢箋盃,2026,9,2026-07-24,data/public-data-第二屆夢箋盃.csv,existing CSV first-added commit,,results-recorded
+C2610,第二屆青雲盃全國高中職辯論錦標賽,2026,10,2026-07-24,data/public-data-第二屆青雲盃全國高中職辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2611,第五屆輔仁盃全國高中職辯論比賽,2026,11,2026-07-24,data/public-data-第五屆輔仁盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2612,第十五屆風雩盃中學辯論錦標賽,2026,12,2026-07-24,data/public-data-第十五屆風雩盃中學辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+C2613,蒙泉盃全國高中職辯論比賽,2026,13,2026-07-24,data/public-data-蒙泉盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2614,育南盃中文教育辯論賽,2026,14,2026-08-04,data/public-data-育南盃中文教育辯論賽.csv,existing CSV first-added commit,,results-recorded
+C2615,第二十一屆辯革盃全國高中辯論比賽,2026,15,2026-08-16,data/public-data-第二十一屆辯革盃全國高中辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2616,2026司改盃全國高中職辯論比賽,2026,16,2026-08-25,data/public-data-2026司改盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2617,第十三屆椰風盃全國高中職辯論比賽,2026,17,2026-08-26,data/event-metadata.csv,event metadata first registration,,upcoming
+C2618,2026西灣盃全國高中職辯論賽,2026,18,2026-09-17,data/public-data-2026西灣盃全國高中職辯論賽.csv,existing CSV first-added commit,,results-recorded
+C2619,第二十屆宮燈盃辯論公開賽青少年組,2026,19,2026-09-28,data/public-data-第二十屆宮燈盃辯論公開賽青少年組.csv,existing CSV first-added commit,,results-recorded
+C2620,2026核能公投盃全國高中職辯論比賽,2026,20,2026-09-28,data/upcoming-events.js,first present in upcoming schedule,,upcoming
+C2621,第二十九屆鳳凰盃全國高中職辯論比賽,2026,21,2026-09-28,data/upcoming-events.js,first present in upcoming schedule,,upcoming
+C2622,第二十屆北區聯合新生盃辯論比賽,2026,22,2026-09-28,data/upcoming-events.js,first present in upcoming schedule,,upcoming
+C2623,第八屆惠蓀盃全國高中職辯論比賽,2026,23,2026-09-28,data/upcoming-events.js,first present in upcoming schedule,,upcoming
+C2624,第十八屆叡德盃全國高中職辯論比賽,2026,24,2026-09-28,data/upcoming-events.js,first present in upcoming schedule,,upcoming
+C2625,第二十三屆延平盃全國高中職辯論賽,2026,25,2026-09-29,data/public-data-第二十三屆延平盃全國高中職辯論賽.csv,existing CSV first-added commit,,results-recorded
+C2626,第十七屆明京盃全國高中職辯論比賽,2026,26,2026-10-02,data/public-data-第十七屆明京盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2627,2026年氣候盃全國高中職辯論比賽,2026,27,2026-10-03,data/public-data-2026年氣候盃全國高中職辯論比賽.csv,existing CSV first-added commit,,results-recorded
+C2628,2026桃園青年盃華語辯論賽（學青組）,2026,28,2026-10-04,data/public-data-2026桃園青年盃華語辯論賽（學青組）.csv,existing CSV first-added commit,,results-recorded
+C2629,2026法可夢學院線上奧瑞岡式辯論賽（高中組）,2026,29,2026-10-06,data/public-data-2026年法可夢學院線上奧瑞岡式辯論賽高中組.csv,existing CSV first-added commit,,results-recorded
+C2630,第三十七屆蘇州盃高中職辯論錦標賽,2026,30,2026-10-09,data/public-data-第三十七屆蘇州盃高中職辯論錦標賽.csv,existing CSV first-added commit,,results-recorded
+,第三屆夢參盃,,,2026-10-08,data/event-rosters.csv,隊伍名單僅記本人確認日期，未證明賽事年度；先列待核、不發碼,,year-unverified

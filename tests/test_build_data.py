@@ -13,6 +13,29 @@ import build_data
 
 
 class BuildDataTests(unittest.TestCase):
+    def test_competition_registry_requires_unique_codes_and_contiguous_sequences(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "competition-registry.csv"
+            with patch.object(build_data, "COMPETITION_REGISTRY_PATH", path):
+                path.write_text(
+                    "code,name,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
+                    "C2601,測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
+                    "C2602,測試盃二,2026,2,2026-01-02,data2.csv,首次登錄,results-recorded\n"
+                    ",待核賽,,,,rosters.csv,年度未確認,year-unverified\n",
+                    encoding="utf-8",
+                )
+                loaded = build_data.load_competition_registry()
+                self.assertEqual(loaded["測試盃"]["code"], "C2601")
+                self.assertEqual(loaded["待核賽"]["status"], "year-unverified")
+                path.write_text(
+                    "code,name,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
+                    "C2601,測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
+                    "C2603,測試盃二,2026,3,2026-01-02,data2.csv,首次登錄,results-recorded\n",
+                    encoding="utf-8",
+                )
+                with self.assertRaisesRegex(SystemExit, "序號必須連續"):
+                    build_data.load_competition_registry()
+
     def test_upcoming_event_script_gets_a_fresh_asset_version(self):
         with tempfile.TemporaryDirectory() as folder:
             index_path = Path(folder) / "index.html"

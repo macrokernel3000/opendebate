@@ -29,6 +29,7 @@ EVENT_METADATA_PATH = DATA_DIR / "event-metadata.csv"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 SEO_PAGE_PATH = ROOT / "debate-records.html"
 EVENT_ROSTERS_PATH = DATA_DIR / "event-rosters.csv"
+COMPETITION_REGISTRY_PATH = DATA_DIR / "competition-registry.csv"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -283,6 +284,39 @@ def load_site_content():
             for row in reader
             if clean(row.get("key"))
         }
+
+
+def load_competition_registry():
+    with COMPETITION_REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        required = {"code", "name", "year", "registrationSequence", "registeredAt", "registrationSource", "registrationBasis", "status"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise SystemExit(f"{COMPETITION_REGISTRY_PATH.name} 欄位不完整：需要 {', '.join(sorted(required))}")
+        rows = list(reader)
+    by_name, by_code = {}, {}
+    for row in rows:
+        code, name, year = clean(row.get("code")), clean(row.get("name")), clean(row.get("year"))
+        if row.get("status") == "year-unverified":
+            if not name or code or year or clean(row.get("registrationSequence")) or name in by_name:
+                raise SystemExit(f"年份待查賽事必須只填名稱與來源，不可先發代號：{row}")
+            by_name[name] = row
+            continue
+        if not re.fullmatch(r"C\d{4}", code) or not re.fullmatch(r"20\d{2}", year) or not name:
+            raise SystemExit(f"賽事代號名冊有無效列：{row}")
+        if code[1:3] != year[-2:]:
+            raise SystemExit(f"賽事代號年份與欄位不符：{code} / {year} / {name}")
+        if name in by_name or code in by_code:
+            raise SystemExit(f"賽事代號或名稱重複：{code} / {name}")
+        sequence = int(row["registrationSequence"])
+        if code[-2:] != f"{sequence:02d}":
+            raise SystemExit(f"賽事代號序號與登錄序號不符：{code} / {sequence}")
+        by_name[name] = row
+        by_code[code] = row
+    for year in sorted({row["year"] for row in rows if row["year"]}):
+        sequences = sorted(int(row["registrationSequence"]) for row in rows if row["year"] == year)
+        if sequences != list(range(1, len(sequences) + 1)):
+            raise SystemExit(f"{year} 年賽事代號序號必須連續且不可重複。")
+    return by_name
 
 
 def load_event_metadata():
@@ -561,6 +595,21 @@ def build(check_only=False, fail_on_warnings=False):
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    competition_registry = load_competition_registry()
+    registry_names = set(competition_registry)
+    all_names = set(event_names(records, honors, topics)) | set(event_metadata)
+    upcoming_events = read_upcoming_events()
+    all_names.update(event.get("name", "") for event in upcoming_events if event.get("name"))
+    missing_codes = sorted(all_names - registry_names)
+    if missing_codes:
+        raise SystemExit("賽事代號名冊缺少賽事：" + "、".join(missing_codes))
+    for collection in (records, honors, topics):
+        for item in collection:
+            item["competitionCode"] = competition_registry[item["competitionName"]]["code"]
+    for name in all_names:
+        event_metadata.setdefault(name, {})["competitionCode"] = competition_registry[name]["code"]
+    for event in upcoming_events:
+        event["competitionCode"] = competition_registry[event["name"]]["code"]
 
     if check_only:
         events = event_names(records, honors, topics)
@@ -598,6 +647,10 @@ def build(check_only=False, fail_on_warnings=False):
         "siteContent": site_content,
         "eventMetadata": event_metadata,
         "eventRosters": event_rosters,
+        "competitionRegistry": [
+            {"code": row["code"], "name": row["name"], "year": row["year"], "status": row["status"]}
+            for row in competition_registry.values()
+        ],
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + format_public_json(payload) + ";\n", encoding="utf-8")
     version = datetime.now().strftime("%Y%m%d%H%M%S")

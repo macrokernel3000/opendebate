@@ -45,6 +45,7 @@ const fullCourseHonor = {
 };
 const events = [{
   name: "測試盃",
+  competitionCode: "C2601",
   records: [record],
   honors: [fullCourseHonor],
   topics: [{ topicId: "topic-test", topic: "測試題目", explanation: "賽事專屬題解", competitionName: "測試盃" }],
@@ -188,6 +189,7 @@ test("event pages render upcoming details and recorded match results", () => {
 
   pages.renderUpcomingEvent({
     name: "未來盃",
+    competitionCode: "C2602",
     startDate: "2026-02-01",
     endDate: "2026-02-02",
     organizer: "主辦單位",
@@ -195,6 +197,7 @@ test("event pages render upcoming details and recorded match results", () => {
     keyDates: [{ label: "領隊會議", date: "2026-01-20", time: "18:00" }],
   }, target);
   assert.match(target.innerHTML, /主辦單位/);
+  assert.match(target.innerHTML, /賽事代號 C2602/);
   assert.match(target.innerHTML, /比賽地點/);
   assert.match(target.innerHTML, /領隊會議/);
   assert.match(target.innerHTML, /2026-01-20 18:00/);
@@ -209,6 +212,7 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /class="team-name is-match-winner/);
   assert.match(target.innerHTML, /class="match-winner-marker">勝方<\/small>/);
   assert.match(target.innerHTML, /比賽結果/);
+  assert.match(target.innerHTML, /賽事代號 C2601/);
   assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
   const tiedRecord = { ...record, scores: { affirmative: 1, negative: 1 }, winner: "正方勝" };
   const originalRecords = events[0].records;
