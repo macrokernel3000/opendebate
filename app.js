@@ -1,4 +1,4 @@
-const { escapeHtml, formatDate, countBy, unique, normalize, playerDisplayName, groupByDate, createStore } = window.DebateCore;
+const { escapeHtml, formatDate, countBy, unique, normalize, groupByDate, createStore } = window.DebateCore;
 const hasPublicData = window.DebateCore.isPublicDataAvailable(window.DEBATE_PUBLIC_DATA);
 const publicData = hasPublicData ? window.DEBATE_PUBLIC_DATA : {};
 const store = createStore(publicData);
@@ -89,7 +89,7 @@ function eventSummaries() {
 
 function playerRosterEntries(playerName) {
   return Object.entries(publicData.eventRosters || {}).flatMap(([competitionName, entries]) =>
-    entries.filter((roster) => [...(roster.leaders || []), ...(roster.players || []), ...(roster.coaches || []), ...(roster.assistants || [])].includes(playerName))
+    entries.filter((roster) => [...(roster.leaders || []), ...(roster.players || [])].includes(playerName))
       .map((roster) => ({ ...roster, competitionName }))
   );
 }
@@ -134,7 +134,6 @@ const { renderEntityDetail, renderPlayerDetail, renderTopic } = window.DebateEnt
   playerRosterEntries,
   entityPageLink,
   playerPageLink,
-  playerDisplayName,
   honorSubject,
   honorDateLabel,
   isFullCourseBest,
@@ -173,7 +172,6 @@ const { renderSearch, getKnownPeople } = window.DebateSearchPages.createSearchPa
   honorSubject,
   honorDateLabel,
   playerRosterEntries,
-  playerDisplayName,
 });
 
 const { renderHome, renderLeaderboards, toggleHonorRange, toggleMobileHonorFilter, sortLeaderboard } = window.DebateHomePages.createHomePages({
@@ -261,7 +259,7 @@ function entityPageLink(entityId, label, className = "") {
 
 function playerPageLink(name, className = "") {
   if (!name) return "";
-  return `<button type="button" class="inline-entity-link ${className}" data-player-route="${escapeHtml(name)}">${escapeHtml(playerDisplayName(name))}</button>`;
+  return `<button type="button" class="inline-entity-link ${className}" data-player-route="${escapeHtml(name)}">${escapeHtml(name)}</button>`;
 }
 
 function eventDateContext(event) {
