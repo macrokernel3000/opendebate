@@ -303,7 +303,7 @@ class BuildDataTests(unittest.TestCase):
 
     def test_best_debater_count_warns_when_label_may_be_full_course(self):
         with patch.object(build_data, "WARNINGS", []):
-            records = [{"competitionName": "測試盃"} for _ in range(12)]
+            records = [{"competitionName": "測試盃", "matchDate": "2026-10-01"} for _ in range(12)]
             honors = [{"competitionName": "測試盃", "honorName": "單場最佳辯士"}]
             build_data.validate_best_debater_categories(records, honors)
             self.assertEqual(len(build_data.WARNINGS), 1)
@@ -311,7 +311,7 @@ class BuildDataTests(unittest.TestCase):
 
     def test_best_debater_count_does_not_warn_for_many_awards(self):
         with patch.object(build_data, "WARNINGS", []):
-            records = [{"competitionName": "測試盃"} for _ in range(12)]
+            records = [{"competitionName": "測試盃", "matchDate": "2026-10-01"} for _ in range(12)]
             honors = [{"competitionName": "測試盃", "honorName": "單場最佳辯士"} for _ in range(5)]
             build_data.validate_best_debater_categories(records, honors)
             self.assertEqual(build_data.WARNINGS, [])
