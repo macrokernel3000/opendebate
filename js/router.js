@@ -58,7 +58,7 @@
       if (schoolRoute) {
         try { schoolId = decodeURIComponent(schoolRoute[1]); } catch { schoolId = ""; }
         const requestedSchoolId = schoolId;
-        const canonicalSchoolId = legacyEntityIds[schoolId];
+        const canonicalSchoolId = legacyEntityIds[schoolId] || (schoolId === "s147" ? "s092" : "");
         if (canonicalSchoolId && store.entityById.has(canonicalSchoolId)) schoolId = canonicalSchoolId;
         if (!store.entityById.has(schoolId)) schoolId = "";
         if (schoolId && requestedSchoolId !== schoolId) {
