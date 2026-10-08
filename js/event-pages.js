@@ -92,6 +92,7 @@
           ${activity.organizer ? `<div class="event-meta-parties"><div><span>主辦單位</span><strong>${escapeHtml(activity.organizer)}</strong></div></div>` : ""}
           ${activity.location ? `<div class="event-meta-place"><span>地點</span><strong>${escapeHtml(activity.location)}</strong></div>` : ""}
         </div>
+        ${activity.topic ? `<section class="event-topics"><h${sectionLevel}>辯題</h${sectionLevel}><p>${escapeHtml(activity.topic)}</p></section>` : ""}
         ${activity.note ? `<section class="event-topics"><h${sectionLevel}>活動資訊</h${sectionLevel}><p>${escapeHtml(activity.note)}</p></section>` : ""}
         <section class="event-topics"><h${sectionLevel}>相關連結</h${sectionLevel}>${links.length ? `<p class="activity-source-links">${links.join("　")}</p>` : "<p>目前沒有提供相關連結。</p>"}${activity.registrationUrl ? "" : "<p>公告未提供報名連結。</p>"}</section>`;
     }

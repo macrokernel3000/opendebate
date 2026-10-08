@@ -90,7 +90,7 @@ def read_calendar_activities(path=None, data_dir=None):
         if not activity_id or activity_id in seen_ids:
             raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少或重複活動 id。")
         seen_ids.add(activity_id)
-        for field in ("name", "location", "sourceUrl"):
+        for field in ("name", "location"):
             if not clean(activity.get(field)):
                 raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少「{field}」。")
         try:
@@ -175,8 +175,10 @@ def write_calendar_feed(root=None, data_dir=None):
         end_time = clean(activity.get("endTime"))
         description = "\n".join(filter(None, [
             activity.get("note", ""),
+            f"辯題：{activity['topic']}" if activity.get("topic") else "",
             f"報名連結：{activity['registrationUrl']}" if activity.get("registrationUrl") else "公告未列報名連結。",
         ]))
+        detail_url = f"https://macrokernel3000.github.io/opendebate/#activity/{quote(activity['id'])}"
         activity_lines = [
             "BEGIN:VEVENT",
             f"UID:{escape_ical(activity['id'])}@opendebate.macrokernel3000.github.io",
@@ -184,7 +186,7 @@ def write_calendar_feed(root=None, data_dir=None):
             f"SUMMARY:{escape_ical(activity['name'])}",
             f"LOCATION:{escape_ical(activity['location'])}",
             f"DESCRIPTION:{escape_ical(description)}",
-            f"URL:{activity.get('registrationUrl') or activity['sourceUrl']}",
+            f"URL:{activity.get('registrationUrl') or activity.get('sourceUrl') or detail_url}",
             "STATUS:CONFIRMED", "TRANSP:TRANSPARENT",
         ]
         if start_time:

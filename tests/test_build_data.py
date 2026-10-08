@@ -275,6 +275,24 @@ class BuildDataTests(unittest.TestCase):
             self.assertIn("LOCATION:臺北\\;會議室".encode(), content)
             self.assertIn(b"END:VCALENDAR", content)
 
+    def test_calendar_activity_without_source_url_links_to_its_detail_page(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            data_dir = root / "data"
+            data_dir.mkdir()
+            (data_dir / "upcoming-events.js").write_text("window.DEBATE_UPCOMING_EVENTS = [];", encoding="utf-8")
+            (data_dir / "calendar-activities.js").write_text(
+                'window.DEBATE_CALENDAR_ACTIVITIES = [{"id":"activity-no-source",'
+                '"name":"測試活動","startDate":"2999-10-30","location":"測試地點",'
+                '"note":"依更新公告整理"}];',
+                encoding="utf-8",
+            )
+            with patch.object(build_data, "DATA_DIR", data_dir), patch.object(build_data, "ROOT", root):
+                build_data.write_calendar_feed()
+            content = (root / "calendar.ics").read_text(encoding="utf-8")
+            unfolded = content.replace("\r\n ", "").replace("\n ", "")
+            self.assertIn("URL:https://macrokernel3000.github.io/opendebate/#activity/activity-no-source", unfolded)
+
     def test_csv_is_default_source(self):
         old = os.environ.pop("PUBLIC_DATA_SOURCE", None)
         try:

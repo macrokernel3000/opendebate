@@ -8,7 +8,7 @@ X-WR-TIMEZONE:Asia/Taipei
 X-PUBLISHED-TTL:PT12H
 BEGIN:VEVENT
 UID:north-rookie-20@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261031
 DTEND;VALUE=DATE:20261102
 SUMMARY:第二十屆北區聯合新生盃辯論比賽
@@ -24,7 +24,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:nuclear-referendum-2026@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261107
 DTEND;VALUE=DATE:20261109
 SUMMARY:2026核能公投盃全國高中職辯論比賽
@@ -40,7 +40,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ruide-18@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261116
 SUMMARY:第十八屆叡德盃全國高中職辯論比賽
@@ -59,7 +59,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:huisun-8@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261207
 SUMMARY:第八屆惠蓀盃全國高中職辯論比賽
@@ -74,7 +74,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:phoenix-29@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261228
 SUMMARY:第二十九屆鳳凰盃全國高中職辯論比賽
@@ -89,7 +89,7 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:coconut-wind-13@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART;VALUE=DATE:20261226
 DTEND;VALUE=DATE:20261228
 SUMMARY:第十三屆椰風盃全國高中職辯論比賽
@@ -104,13 +104,63 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cdpa-jiaofeng-2026-10-17@opendebate.macrokernel3000.github.io
-DTSTAMP:20261008T142142Z
+DTSTAMP:20261008T143310Z
 DTSTART:20261017T053000Z
 SUMMARY:交鋒：專業對話與公民思辨－政黨違憲解散議題
 LOCATION:北科集思會議中心 3F 感恩廳
 DESCRIPTION:免費入場，座位有限。\n報名連結：https://forms.
  gle/6vvNnvftVocSmaV59
 URL:https://forms.gle/6vvNnvftVocSmaV59
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:gongdeng-solo-2026-11-01@opendebate.macrokernel3000.github.io
+DTSTAMP:20261008T143310Z
+DTSTART;VALUE=DATE:20261101
+DTEND;VALUE=DATE:20261102
+SUMMARY:第二屆宮燈盃單挑賽（黑白辯士）
+LOCATION:犇亞商務暨會議中心
+DESCRIPTION:第一、二日賽程：11/1（日）、11/7（六）。本
+ 日賽程維持不變。選手請於比賽開始前十分鐘抵達；遲
+ 到者將酌扣保證金。資料依更新賽程公告整理；原始公
+ 告連結未提供。\n辯題：如果有得選，要當痛苦的蘇格
+ 拉底／快樂的豬\n公告未列報名連結。
+URL:https://macrokernel3000.github.io/opendebate/#activity/gongdeng-solo-
+ 2026-11-01
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:gongdeng-solo-2026-11-07@opendebate.macrokernel3000.github.io
+DTSTAMP:20261008T143310Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20261108
+SUMMARY:第二屆宮燈盃單挑賽（黑白辯士）
+LOCATION:犇亞商務暨會議中心
+DESCRIPTION:第一、二日賽程：11/1（日）、11/7（六）。選
+ 手請於比賽開始前十分鐘抵達；遲到者將酌扣保證金。
+ 資料依更新賽程公告整理；原始公告連結未提供。\n辯
+ 題：如果有得選，要當痛苦的蘇格拉底／快樂的豬\n公
+ 告未列報名連結。
+URL:https://macrokernel3000.github.io/opendebate/#activity/gongdeng-solo-
+ 2026-11-07
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:gongdeng-solo-2026-11-08@opendebate.macrokernel3000.github.io
+DTSTAMP:20261008T143310Z
+DTSTART;VALUE=DATE:20261108
+DTEND;VALUE=DATE:20261109
+SUMMARY:第二屆宮燈盃單挑賽（黑白辯士）
+LOCATION:臺灣當代文化實驗場（C-LAB）共享吧
+DESCRIPTION:第三日賽程。選手請於比賽開始前十分鐘抵達
+ ；遲到者將酌扣保證金。資料依更新賽程公告整理；原
+ 始公告連結未提供。\n辯題：若「心之壁」消失，是人
+ 類的福音還是喪鐘？\n公告未列報名連結。
+URL:https://macrokernel3000.github.io/opendebate/#activity/gongdeng-solo-
+ 2026-11-08
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
