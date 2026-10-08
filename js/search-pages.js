@@ -15,6 +15,7 @@
     honorSubject,
     honorDateLabel,
     playerRosterEntries,
+    playerDisplayName,
   }) {
     function getKnownPlayers() {
       const rosterPlayers = Object.values(getRosters() || {}).flatMap((entries) =>
@@ -33,8 +34,14 @@
       ).filter(Boolean));
     }
 
+    function getKnownStaff(role) {
+      return unique(Object.values(getRosters() || {}).flatMap((entries) =>
+        entries.flatMap((roster) => roster[role] || [])
+      ).filter(Boolean));
+    }
+
     function getKnownPeople() {
-      return unique([...getKnownPlayers(), ...getKnownLeaders()]);
+      return unique([...getKnownPlayers(), ...getKnownLeaders(), ...getKnownStaff("coaches"), ...getKnownStaff("assistants")]);
     }
 
     function renderSearch(query) {
@@ -52,9 +59,11 @@
       const allPeople = getKnownPeople();
       const knownPlayers = new Set(getKnownPlayers());
       const knownLeaders = new Set(getKnownLeaders());
+      const knownCoaches = new Set(getKnownStaff("coaches"));
+      const knownAssistants = new Set(getKnownStaff("assistants"));
       const matchedEntities = store.entities.filter((entity) => [entity.code, entity.name, ...(entity.aliases || "").split("|")]
         .some((name) => normalize(name).includes(needle)));
-      const matchedPeople = allPeople.filter((name) => normalize(name).includes(needle));
+      const matchedPeople = allPeople.filter((name) => normalize(playerDisplayName(name)).includes(needle));
       const matchedTopics = topics.filter((item) => normalize(`${item.topic} ${item.explanation} ${item.competitionName}`).includes(needle));
       const topicMatches = [...new Map(matchedTopics.map((item) => [item.topicId, {
         ...item,
@@ -83,8 +92,8 @@
           const personHonors = honors.filter((item) => item.honorType === "player" && item.recipient === name);
           const personRosters = playerRosterEntries(name);
           const teams = unique([...personHonors.map((item) => item.team), ...personRosters.map((roster) => roster.team)].filter(Boolean));
-          const roles = [knownPlayers.has(name) ? "選手" : "", knownLeaders.has(name) ? "領隊" : ""].filter(Boolean).join("／");
-          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="person-icon" aria-hidden="true">👤</span>${escapeHtml(name)}</h3><p>${escapeHtml(roles)} · ${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆個人榮譽${personRosters.length ? ` · ${personRosters.length} 筆名單／身分` : ""}</p></button>`;
+          const roles = [knownPlayers.has(name) ? "選手" : "", knownLeaders.has(name) ? "領隊" : "", knownCoaches.has(name) ? "教練" : "", knownAssistants.has(name) ? "協助" : ""].filter(Boolean).join("／");
+          return `<button type="button" class="entity-card player" data-player-route="${escapeHtml(name)}"><h3><span class="person-icon" aria-hidden="true">👤</span>${escapeHtml(playerDisplayName(name))}</h3><p>${escapeHtml(roles)} · ${escapeHtml(teams.join("、") || "所屬學校未載明")} · ${personHonors.length} 筆個人榮譽${personRosters.length ? ` · ${personRosters.length} 筆名單／身分` : ""}</p></button>`;
         }).join("")}
       </div></section>` : "";
 

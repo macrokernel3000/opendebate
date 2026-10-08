@@ -125,17 +125,17 @@ def validate_event_rosters(records, event_rosters, registry_entries, warn):
         # A single member-confirmed participation is useful public evidence, but it is
         # not a complete organizer roster. Only compare team-set completeness when
         # this event actually includes an organizer registration or roster source.
-        has_complete_roster_source = any(
-            entry.get("status") in {"公告名單", "報名名單"} for entry in entries
-        )
-        if not has_complete_roster_source:
+        complete_entries = [
+            entry for entry in entries if entry.get("status") in {"公告名單", "報名名單", "賽果確認參賽"}
+        ]
+        if not complete_entries:
             continue
         match_teams = {
             clean(team)
             for record in records if record["competitionName"] == competition
             for team in record["teams"].values() if clean(team)
         }
-        roster_teams = {entry["team"] for entry in entries}
+        roster_teams = {entry["team"] for entry in complete_entries}
 
         def identity(name):
             return match_entity_identity(name, alias_lookup)
@@ -222,6 +222,10 @@ def validate_event_metadata_dates(path, checked_date):
 def validate_best_debater_categories(records, honors, warn):
     match_counts = {}
     for record in records:
+        # Undated member reports do not establish which match-day awards are
+        # missing; compare award counts only with dated match results.
+        if not record.get("matchDate"):
+            continue
         match_counts[record["competitionName"]] = match_counts.get(record["competitionName"], 0) + 1
     best_names = {"單場最佳辯士", "單場最佳", "最佳辯士", "單場優秀辯士", "單場優秀"}
     by_event = {}

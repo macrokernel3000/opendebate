@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T01:56:16",
+  "generatedAt": "2026-10-09T01:57:03",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -197,6 +197,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "p167", "type": "p", "name": "第1隊（法可夢高中組）", "aliases": ""},
     {"code": "p168", "type": "p", "name": "第2隊（法可夢高中組）", "aliases": ""},
     {"code": "p169", "type": "p", "name": "第5隊（法可夢高中組）", "aliases": ""},
+    {"code": "p300", "type": "p", "name": "方凱佾我老大十五點五清", "aliases": ""},
     {"code": "s001", "type": "s", "name": "三民高中（縣市待確認）", "aliases": "三民高中|三民高中A|三民高中B"},
     {"code": "s002", "type": "s", "name": "中信高中", "aliases": "中信國際高中|中信國際"},
     {"code": "s003", "type": "s", "name": "中和高中", "aliases": ""},
@@ -1522,6 +1523,8 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第十九屆北區聯合新生盃辯論比賽", "matchDate": "2025-11-16", "period": 3, "venue": 1, "teams": {"affirmative": "成功高中", "negative": "大直高中"}, "scores": {"affirmative": 0, "negative": 0}, "winner": "成功高中", "note": "未公告比分，依最終名次判定勝方", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s067", "negative": "s038"}, "id": "match-cd1a58e238b3"},
     {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "2025-08-09", "period": "", "venue": 3, "teams": {"affirmative": "延平中學", "negative": "我打宮燈？真的假的？"}, "scores": {"affirmative": 7, "negative": 2}, "winner": "延平中學", "note": "第二天（D2）小宮燈十九賽果", "players": {"affirmative": [], "negative": []}, "groupName": "大成功", "teamIds": {"affirmative": "s050", "negative": "p144"}, "id": "match-76913e61203e"},
     {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "2025-08-09", "period": "", "venue": 4, "teams": {"affirmative": "輸了許詠雋買恐龍氣球給你", "negative": "小貓喵喵隊"}, "scores": {"affirmative": 0, "negative": 9}, "winner": "小貓喵喵隊", "note": "第二天（D2）小宮燈十九賽果", "players": {"affirmative": [], "negative": []}, "groupName": "小宮燈", "teamIds": {"affirmative": "p152", "negative": "p139"}, "id": "match-6ca4bdf64948"},
+    {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "", "period": 3, "venue": 6, "teams": {"affirmative": "方凱佾我老大十五點五清", "negative": "美國聯隊"}, "scores": {"affirmative": 6, "negative": 3}, "winner": "方凱佾我老大十五點五清", "note": "經會員回報並由管理員查閱；未提供比賽日期及分組；非主辦方公告賽果。", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p300", "negative": "p074"}, "id": "match-2463459ac35d"},
+    {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "", "period": 2, "venue": 6, "teams": {"affirmative": "延平中學", "negative": "方凱佾我老大十五點五清"}, "scores": {"affirmative": 9, "negative": 0}, "winner": "延平中學", "note": "經會員回報並由管理員查閱；未提供比賽日期及分組；非主辦方公告賽果。", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s050", "negative": "p300"}, "id": "match-9e1e09ecde82"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "2024-08-21", "period": 1, "venue": 1, "teams": {"affirmative": "嶺東中學", "negative": "彰化女中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "彰化女中", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s042", "negative": "s055"}, "id": "match-89a45e4b031a"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "2024-08-21", "period": 1, "venue": 2, "teams": {"affirmative": "瑞祥高中", "negative": "建國中學"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "瑞祥高中", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s104", "negative": "s054"}, "id": "match-3f3b353569f5"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "2024-08-21", "period": 1, "venue": 3, "teams": {"affirmative": "嘉義女中", "negative": "虎尾高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "嘉義女中", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s032", "negative": "s138"}, "id": "match-27ce9ae895b6"},
@@ -2372,7 +2375,7 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "賽期為2025-08-08至2025-08-09；目前提供的兩場小宮燈十九賽果皆為第二天（2025-08-09），逐場時段未載明。",
       "awardSelectionCriteria": "",
       "ageRestriction": null,
-      "teamCount": 4
+      "teamCount": 6
     },
     "第十八屆宮燈盃辯論公開賽青少年組": {
       "startDate": "2024-08-17",
@@ -2639,7 +2642,8 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "育南盃中文教育辯論賽", "team": "台美聯隊", "leaders": [], "players": ["蘇雨霏 Su Abigail", "蔡惟昕 Tsay Weishin", "蔡惟昱 Tsay Weiyu"], "status": "公告名單", "sourceNote": "使用者提供的育南盃正式賽名單圖片及多次人工核對；姓名依使用者最新確認校正；公布名單不代表實際上場"},
       {"competitionName": "育南盃中文教育辯論賽", "team": "嘿走去康橋", "leaders": [], "players": ["吳昕澤", "葉亦呈", "張為媃", "江亭宥", "王子寧"], "status": "公告名單", "sourceNote": "使用者提供的育南盃正式賽名單圖片及多次人工核對；姓名依使用者最新確認校正；公布名單不代表實際上場"},
       {"competitionName": "育南盃中文教育辯論賽", "team": "嘿跑去康橋", "leaders": [], "players": ["鄭詠云", "蘇昀飛", "方宗涵", "梁右潔", "陳則叡"], "status": "公告名單", "sourceNote": "使用者提供的育南盃正式賽名單圖片及多次人工核對；姓名依使用者最新確認校正；公布名單不代表實際上場"},
-      {"competitionName": "育南盃中文教育辯論賽", "team": "台灣國中小思辨聯隊", "leaders": [], "players": ["林立承", "楊燿誠", "吳濬祐", "常致源"], "status": "公告名單", "sourceNote": "使用者提供的育南盃正式賽名單圖片及多次人工核對；姓名依使用者最新確認校正；公布名單不代表實際上場"}
+      {"competitionName": "育南盃中文教育辯論賽", "team": "台灣國中小思辨聯隊", "leaders": [], "players": ["林立承", "楊燿誠", "吳濬祐", "常致源"], "status": "公告名單", "sourceNote": "使用者提供的育南盃正式賽名單圖片及多次人工核對；姓名依使用者最新確認校正；公布名單不代表實際上場"},
+      {"competitionName": "育南盃中文教育辯論賽", "team": "百齡高中", "leaders": [], "players": [], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認曾代表百齡高中擔任教練與協助；非主辦方公告名單。", "coaches": ["陳垣愷"], "assistants": ["陳垣愷"]}
     ],
     "2026桃園青年盃華語辯論賽（學青組）": [
       {"competitionName": "2026桃園青年盃華語辯論賽（學青組）", "team": "這裡沒有桃園人也沒有研究生", "leaders": [], "players": ["鄭承昊", "廖哲霈", "梁玉", "黃鈺云", "郭又銓"], "status": "經回報", "sourceNote": "2026-10-08 經回報補充隊伍選手名單；未提供領隊；本列為隊伍名單，不代表逐場實際上場"}
@@ -2725,7 +2729,8 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "team": "和平高中", "leaders": [], "players": [], "status": "賽果確認參賽", "sourceNote": "2026-07-26 對大直高中之已登錄賽果證明參賽；主辦方公布名單未列本隊，未提供選手名單，故不補填姓名。"}
     ],
     "第三十五屆蘇州盃高中職辯論錦標賽": [
-      {"competitionName": "第三十五屆蘇州盃高中職辯論錦標賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+      {"competitionName": "第三十五屆蘇州盃高中職辯論錦標賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"},
+      {"competitionName": "第三十五屆蘇州盃高中職辯論錦標賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；原填賽名為第三十五屆蘇州盃辯論錦標賽；非主辦方公告完整名單。"}
     ],
     "第二十七屆高中菁英盃": [
       {"competitionName": "第二十七屆高中菁英盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
@@ -2741,6 +2746,46 @@ window.DEBATE_PUBLIC_DATA = {
     ],
     "2026司改盃全國高中職辯論比賽": [
       {"competitionName": "2026司改盃全國高中職辯論比賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
+    ],
+    "第十七屆北區聯校新生盃高中職辯論賽": [
+      {"competitionName": "第十七屆北區聯校新生盃高中職辯論賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"}
+    ],
+    "第二屆鳶飛盃全國高中職辯論比賽": [
+      {"competitionName": "第二屆鳶飛盃全國高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"}
+    ],
+    "第二十六屆菁英盃全國高中職辯論比賽": [
+      {"competitionName": "第二十六屆菁英盃全國高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"}
+    ],
+    "第一屆東岸盃全國高中職辯論比賽": [
+      {"competitionName": "第一屆東岸盃全國高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；原填賽名為第一屆東岸盃高中職辯論比賽；非主辦方公告完整名單。"}
+    ],
+    "第十八屆宮燈盃辯論公開賽青少年組": [
+      {"competitionName": "第十八屆宮燈盃辯論公開賽青少年組", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"},
+      {"competitionName": "第十八屆宮燈盃辯論公開賽青少年組", "team": "正方反方都不隊", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認以此隊名參賽；公開姓名採已核對本名黃靖俊；非主辦方公告完整名單。"}
+    ],
+    "第一屆性別人權盃高中職辯論比賽": [
+      {"competitionName": "第一屆性別人權盃高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"}
+    ],
+    "2024「青聲說」高中職辯論比賽": [
+      {"competitionName": "2024「青聲說」高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；非主辦方公告完整名單。"}
+    ],
+    "第六屆台北市政願景盃辯論比賽": [
+      {"competitionName": "第六屆台北市政願景盃辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；原填賽名為第六屆臺北市政願景盃辯論比賽；非主辦方公告完整名單。"}
+    ],
+    "第二十八屆高菁盃全國高中職辯論比賽": [
+      {"competitionName": "第二十八屆高菁盃全國高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；未逕行併入同屆高中菁英盃；非主辦方公告完整名單。"}
+    ],
+    "第二十三屆延平盃全國高中職辯論賽": [
+      {"competitionName": "第二十三屆延平盃全國高中職辯論賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；原填賽名為第二十三屆延平盃高中職辯論賽；非主辦方公告完整名單。"}
+    ],
+    "第三屆東岸盃全國高中職辯論比賽": [
+      {"competitionName": "第三屆東岸盃全國高中職辯論比賽", "team": "百齡高中", "leaders": [], "players": ["陳垣愷"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表百齡高中參賽；原填賽名為第三屆東岸盃高中職辯論比賽；非主辦方公告完整名單。"}
+    ],
+    "第二屆夢箋盃": [
+      {"competitionName": "第二屆夢箋盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-09 經會員本人確認代表中和高中參賽；與既有第三屆夢參盃分開保存；非主辦方公告完整名單。"}
+    ],
+    "第十九屆宮燈盃辯論公開賽青少年組": [
+      {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "team": "方凱佾我老大十五點五清", "leaders": [], "players": ["鄭承昊", "李子杰", "方凱佾", "洪士凱", "蔡佩璇", "蘇歆蕾", "吳博翰"], "status": "經回報", "sourceNote": "2026-10-09 經會員回報該隊七人名單；尚未取得主辦方完整名單；不代表逐場實際上場。", "coaches": ["鄭承昊"]}
     ]
   }
 };

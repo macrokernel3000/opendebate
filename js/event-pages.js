@@ -170,7 +170,7 @@
         const teamEntity = store.entityForName(roster.team);
         const team = teamEntity ? entityPageLink(teamEntity.code, roster.team) : escapeHtml(roster.team);
         const status = roster.status && roster.status !== "公告名單" ? `<small class="roster-source-status">${escapeHtml(roster.status)}</small>` : "";
-        return `<article class="event-roster-card"><h${itemLevel + 1}>${team}${status}</h${itemLevel + 1}>${roster.leaders?.length ? `<p><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></p>` : ""}${roster.players?.length ? `<p><strong>選手</strong><span>${roster.players.map(escapeHtml).join("、")}</span></p>` : ""}</article>`;
+        return `<article class="event-roster-card"><h${itemLevel + 1}>${team}${status}</h${itemLevel + 1}>${roster.leaders?.length ? `<p><strong>領隊</strong><span>${roster.leaders.map(escapeHtml).join("、")}</span></p>` : ""}${roster.coaches?.length ? `<p><strong>教練</strong><span>${roster.coaches.map(escapeHtml).join("、")}</span></p>` : ""}${roster.assistants?.length ? `<p><strong>協助</strong><span>${roster.assistants.map(escapeHtml).join("、")}</span></p>` : ""}${roster.players?.length ? `<p><strong>選手</strong><span>${roster.players.map(escapeHtml).join("、")}</span></p>` : ""}</article>`;
       }).join("")}</div></details>` : "";
       const eventSummaryCounts = [
         event.records.length && event.teamCount ? `<span class="count-chip">${event.teamCount} 隊</span>` : "",
