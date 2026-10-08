@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-08T19:56:21",
+  "generatedAt": "2026-10-08T22:21:42",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -501,7 +501,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 2, "venue": 2, "teams": {"affirmative": "內湖高中", "negative": "我這個最可愛的小寶貝"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "我這個最可愛的小寶貝", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s014", "negative": "p053"}, "id": "match-9ac779f7dd5a"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 2, "venue": 3, "teams": {"affirmative": "絕世天才", "negative": "不知道要取什麼"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "不知道要取什麼", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p073", "negative": "p007"}, "id": "match-c3fc5583d21f"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 2, "venue": 4, "teams": {"affirmative": "打比賽嗎各位", "negative": "南湖高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "南湖高中", "note": "循環賽比序後由打比賽嗎各位晉級四強", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p054", "negative": "s024"}, "id": "match-7d1f2a478d90"},
-    {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 3, "venue": 1, "teams": {"affirmative": "了不起的公關們", "negative": "中和高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "了不起的公關們", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p010", "negative": "s003"}, "id": "match-7a78989ebbea"},
+    {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 3, "venue": 1, "teams": {"affirmative": "了不起的公關們", "negative": "中和高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "中和高中", "note": "辯手回報", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p010", "negative": "s003"}, "id": "match-37d8dd33b6ca"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 3, "venue": 2, "teams": {"affirmative": "永平高中", "negative": "內湖高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "永平高中", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s098", "negative": "s014"}, "id": "match-c973b5e0dcc0"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 3, "venue": 3, "teams": {"affirmative": "不知道要取什麼", "negative": "絕世天才"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "不知道要取什麼", "note": "", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "p007", "negative": "p073"}, "id": "match-09b81bb27534"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-18", "period": 3, "venue": 4, "teams": {"affirmative": "南湖高中", "negative": "打比賽嗎各位"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "打比賽嗎各位", "note": "循環賽比序：勝場1:1、評分單3:3、論點分3:3，個人名次加總52:56", "players": {"affirmative": [], "negative": []}, "teamIds": {"affirmative": "s024", "negative": "p054"}, "id": "match-5a85eaaac611"},
