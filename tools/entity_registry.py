@@ -143,11 +143,19 @@ def build_entities(records, honors, registry_entries, registry_path):
         grouped.setdefault(entity_base_name(name), []).append(name)
 
     used_codes = {entry["code"] for entry in entries}
-    counters = {prefix: max([int(code[1:]) for code in used_codes if re.fullmatch(prefix + r"\d{3}", code)] or [0]) for prefix in "spu"}
+    # 500-999 is reserved for member-site approvals. Public auto-numbering
+    # must not enter that range, even if approved codes are imported later.
+    counters = {prefix: max([int(code[1:]) for code in used_codes if re.fullmatch(prefix + r"\d{3}", code) and int(code[1:]) < 500] or [0]) for prefix in "spu"}
     for base, names in grouped.items():
         entity_type = suggested_type(base)
-        counters[entity_type] += 1
-        code = f"{entity_type}{counters[entity_type]:03d}"
+        while True:
+            counters[entity_type] += 1
+            if counters[entity_type] >= 500:
+                raise SystemExit(f"{entity_type} 公開自動代碼區已用完；500–999 保留給會員站核准代碼")
+            code = f"{entity_type}{counters[entity_type]:03d}"
+            if code not in used_codes:
+                break
+        used_codes.add(code)
         entry = {"code": code, "type": entity_type, "name": base, "aliases": "|".join(name for name in names if name != base)}
         entries.append(entry)
         for name in names:
