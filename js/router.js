@@ -62,7 +62,7 @@
         if (canonicalSchoolId && store.entityById.has(canonicalSchoolId)) schoolId = canonicalSchoolId;
         if (!store.entityById.has(schoolId)) schoolId = "";
         if (schoolId && requestedSchoolId !== schoolId) {
-          history.replaceState(null, "", `#school/${encodeURIComponent(schoolId)}`);
+          history.replaceState(history.state, "", `#school/${encodeURIComponent(schoolId)}`);
         }
       }
       if (playerRoute) {

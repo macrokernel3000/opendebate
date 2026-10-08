@@ -25,7 +25,7 @@
       const query = searchField.value.trim();
       if (query) url.searchParams.set("q", query);
       else url.searchParams.delete("q");
-      currentHistory.replaceState(null, "", `${url.pathname}${url.search}${url.hash}`);
+      currentHistory.replaceState(currentHistory.state, "", `${url.pathname}${url.search}${url.hash}`);
       return true;
     } catch {
       return false;
@@ -177,11 +177,13 @@
     });
 
     els.homeBrand.addEventListener("click", (event) => { event.preventDefault(); navigate("home"); });
-    window.addEventListener("hashchange", () => {
+    const restoreBrowserRoute = () => {
       const target = location.hash.slice(1) || "home";
       navigate(target);
       if (target === "events") showOverviewTab("events");
-    });
+    };
+    window.addEventListener("hashchange", restoreBrowserRoute);
+    window.addEventListener("popstate", restoreBrowserRoute);
     document.querySelectorAll("[data-go-search]").forEach((button) => button.addEventListener("click", () => navigate("search")));
     document.querySelectorAll("[data-go-events]").forEach((button) => button.addEventListener("click", () => { navigate("overview"); if (!isOfflineSnapshot()) showOverviewTab("events"); }));
     const openRecentEvent = (event) => {
