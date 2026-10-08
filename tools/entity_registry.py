@@ -88,6 +88,13 @@ def read_registry(registry_path, legacy_xlsx_path, warn):
                 warn(f"提醒：{source_name} 的名稱或別名重複：{name}；正式名稱會優先，別名衝突時保留先出現的歸戶")
             else:
                 seen_names[normalized] = entry["code"]
+        if entry["type"] == "s":
+            school_names = [entry["name"], *entry["aliases"].split("|")]
+            school_name_set = {clean(name) for name in school_names if clean(name)}
+            for name in school_name_set:
+                alternate = name.replace("台", "臺") if "台" in name else name.replace("臺", "台")
+                if ("台" in name or "臺" in name) and alternate not in school_name_set:
+                    warn(f"提醒：{source_name} 的學校名稱缺少台／臺別名：{entry['code']} {name} → {alternate}")
     return entries
 
 
@@ -160,6 +167,26 @@ def build_entities(records, honors, registry_entries, registry_path):
         entries.append(entry)
         for name in names:
             alias_lookup[name] = entry
+
+    # Store both 台／臺 spellings, including aliases discovered from source
+    # records above. Preserve the first occurrence and keep the CSV stable.
+    for entry in entries:
+        aliases = []
+        seen_aliases = {entry["name"]}
+        for alias in entry["aliases"].split("|"):
+            alias = clean(alias)
+            if alias and alias not in seen_aliases:
+                aliases.append(alias)
+                seen_aliases.add(alias)
+        if entry["type"] == "s":
+            for name in [entry["name"], *aliases]:
+                if "台" not in name and "臺" not in name:
+                    continue
+                alternate = name.replace("台", "臺") if "台" in name else name.replace("臺", "台")
+                if alternate not in seen_aliases:
+                    aliases.append(alternate)
+                    seen_aliases.add(alternate)
+        entry["aliases"] = "|".join(aliases)
 
     entries.sort(key=lambda entry: entry["code"])
     write_registry(entries, registry_path)
