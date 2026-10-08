@@ -14,7 +14,7 @@
     playerRosterEntries,
     entityPageLink,
     playerPageLink,
-    playerDisplayName,
+    playerDisplayName = (name) => name,
     honorSubject,
     honorDateLabel,
     isFullCourseBest,

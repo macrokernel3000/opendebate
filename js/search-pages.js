@@ -15,7 +15,7 @@
     honorSubject,
     honorDateLabel,
     playerRosterEntries,
-    playerDisplayName,
+    playerDisplayName = (name) => name,
   }) {
     function getKnownPlayers() {
       const rosterPlayers = Object.values(getRosters() || {}).flatMap((entries) =>
