@@ -362,7 +362,9 @@ class BuildDataTests(unittest.TestCase):
             {"competitionName": "測試盃", "teams": {"affirmative": "測試高中B", "negative": "乙校"}},
         ]
         rosters = {"測試盃": [
-            {"team": "測試高中A"}, {"team": "甲校"}, {"team": "乙校"},
+            {"team": "測試高中A", "status": "公告名單"},
+            {"team": "甲校", "status": "公告名單"},
+            {"team": "乙校", "status": "公告名單"},
         ]}
         registry = [{"code": "s001", "type": "s", "name": "測試高中", "aliases": "測試高中A|測試高中B"}]
         with patch.object(build_data, "WARNINGS", []):
