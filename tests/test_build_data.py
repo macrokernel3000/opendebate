@@ -451,8 +451,8 @@ class BuildDataTests(unittest.TestCase):
                 tai_variant_warnings = [warning for warning in build_data.WARNINGS if "缺少台／臺別名" in warning]
                 self.assertEqual(len(duplicate_warnings), 2)
                 self.assertEqual(len(tai_variant_warnings), 2)
-                self.assertIn("重複：臺南二中", build_data.WARNINGS[0])
-                self.assertIn("重複：A校", build_data.WARNINGS[1])
+                self.assertIn("重複：臺南二中", duplicate_warnings[0])
+                self.assertIn("重複：A校", duplicate_warnings[1])
 
 
 if __name__ == "__main__":
