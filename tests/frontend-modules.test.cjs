@@ -330,14 +330,14 @@ test("entity pages keep event-specific topic explanations and player honors", ()
 
   const playerHtml = pages.renderPlayerDetail("林選手");
   assert.match(playerHtml, /全程最佳辯士/);
-  assert.match(playerHtml, /隊伍名單/);
+  assert.match(playerHtml, /名單與參賽身分/);
   assert.match(playerHtml, /登場紀錄/);
   assert.match(playerHtml, /<h1>林選手的辯論紀錄<\/h1>/);
 
   const leaderHtml = pages.renderPlayerDetail("領隊");
   assert.match(leaderHtml, /<p class="kicker">領隊<\/p>/);
   assert.match(leaderHtml, /<strong>0<\/strong> 項個人榮譽/);
-  assert.match(leaderHtml, /公布隊伍名單不代表實際上場/);
+  assert.match(leaderHtml, /公布隊伍名單或本人確認身分不代表實際上場/);
 
   const schoolHtml = pages.renderEntityDetail(team, "schoolPageEntityDetail", true);
   assert.match(schoolHtml, /測試高中的完整紀錄/);
