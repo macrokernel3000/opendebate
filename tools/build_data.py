@@ -147,7 +147,11 @@ def split_players(value):
 
 
 def split_topics(value):
-    return [topic.strip() for topic in re.split(r"[|\n]+", clean(value)) if topic.strip()]
+    return [
+        re.sub(r"\s*/\s*", "／", topic.strip())
+        for topic in re.split(r"[|\n]+", clean(value))
+        if topic.strip()
+    ]
 
 
 def topic_entries(competition, topic_value, explanation_value="", source_name="", line_number=None):

@@ -207,6 +207,11 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual(result[1]["topic"], "題目二")
         self.assertEqual(result[1]["explanation"], "說明二")
 
+    def test_topic_entries_normalize_halfwidth_slashes(self):
+        result = build_data.topic_entries("測試盃", "支持 A / 反對 B")
+        self.assertEqual(result[0]["topic"], "支持 A／反對 B")
+        self.assertEqual(result[0]["topicId"], build_data.stable_id("topic", "支持 A／反對 B"))
+
     def test_topic_entries_warn_when_explanation_has_no_matching_topic(self):
         row = {column: "" for column in build_data.REQUIRED_COLUMNS | build_data.OPTIONAL_COLUMNS}
         row.update({
