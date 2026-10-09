@@ -647,7 +647,7 @@ def build(check_only=False, fail_on_warnings=False):
     for collection in (records, honors, topics):
         for item in collection:
             item["competitionCode"] = competition_registry[item["competitionName"]]["code"]
-    for name in all_names:
+    for name in sorted(all_names, key=str.lower):
         event_metadata.setdefault(name, {})["competitionCode"] = competition_registry[name]["code"]
     for event in upcoming_events:
         event["competitionCode"] = competition_registry[event["name"]]["code"]

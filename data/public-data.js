@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T08:37:31",
+  "generatedAt": "2026-10-09T08:46:00",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2553,8 +2553,8 @@ window.DEBATE_PUBLIC_DATA = {
       "endDate": "2025-05-18",
       "organizer": "",
       "executionUnit": "",
-      "location": "",
-      "note": "依公告及第十四屆風雩盃秩序冊補入官方隊伍名單（23隊）與完整題解。收錄初賽與複賽共29場比分及最終獎項；第三時段只有賽程，未提供比分。秩序冊未列本屆主辦單位及比賽場地；比賽日期 2025-05-17 至 2025-05-18 依賽果公告。歷屆獎項另依秩序冊第18–20頁補錄。來源：https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view",
+      "location": "國立政治大學",
+      "note": "依第二次領隊會議簡報所列大會保險活動處所補入場地；官方簡報地址為臺北市文山區指南路二段64號。秩序冊及簡報未確認主辦單位。另有秩序冊23隊名單、完整題解、29場比分與最終獎項；第三時段只有賽程，未提供比分。來源：https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；https://drive.google.com/file/d/116SqwecPzahX4BimWJBNfUkkpNcAlnH0/view",
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2515",
@@ -2741,8 +2741,53 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2408",
       "teamCount": 0
     },
-    "第二十屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2622"
+    "2025司改盃全國高中職辯論比賽": {
+      "competitionCode": "C2501",
+      "teamCount": 23,
+      "ageRestriction": null
+    },
+    "2026核能公投盃全國高中職辯論比賽": {
+      "competitionCode": "C2620"
+    },
+    "吊嘎盃全國高中職辯論比賽": {
+      "competitionCode": "C2601",
+      "teamCount": 10,
+      "ageRestriction": null
+    },
+    "火雞盃全國高中職辯論比賽": {
+      "competitionCode": "C2602",
+      "teamCount": 20,
+      "ageRestriction": null
+    },
+    "火雞肉飯盃全國高中職辯論比賽": {
+      "competitionCode": "C2603",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第一屆夢箋盃": {
+      "competitionCode": "C2502",
+      "teamCount": 12,
+      "ageRestriction": null
+    },
+    "第一屆明哲盃全國高中職辯論比賽": {
+      "competitionCode": "C2604",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第一屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2401",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第一屆青雲盃全國高中職辯論錦標賽": {
+      "competitionCode": "C2402",
+      "teamCount": 12,
+      "ageRestriction": null
+    },
+    "第七屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2503",
+      "teamCount": 25,
+      "ageRestriction": null
     },
     "第三十七屆蘇州盃高中職辯論錦標賽": {
       "competitionCode": "C2630",
@@ -2754,95 +2799,9 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 45,
       "ageRestriction": null
     },
-    "第二十一屆齊揚盃": {
-      "competitionCode": "C2607",
-      "teamCount": 24,
-      "ageRestriction": null
-    },
-    "第四屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2510",
-      "teamCount": 22,
-      "ageRestriction": null
-    },
-    "2025司改盃全國高中職辯論比賽": {
-      "competitionCode": "C2501",
-      "teamCount": 23,
-      "ageRestriction": null
-    },
-    "第十屆雲啟盃辯論比賽": {
-      "competitionCode": "C2509",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第二屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2506",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第十六屆明京盃全國高中職辯論比賽": {
-      "competitionCode": "C2508",
-      "teamCount": 42,
-      "ageRestriction": null
-    },
-    "第十八屆叡德盃全國高中職辯論比賽": {
-      "competitionCode": "C2624"
-    },
-    "吊嘎盃全國高中職辯論比賽": {
-      "competitionCode": "C2601",
-      "teamCount": 10,
-      "ageRestriction": null
-    },
-    "第一屆青雲盃全國高中職辯論錦標賽": {
-      "competitionCode": "C2402",
-      "teamCount": 12,
-      "ageRestriction": null
-    },
-    "第一屆夢箋盃": {
-      "competitionCode": "C2502",
-      "teamCount": 12,
-      "ageRestriction": null
-    },
-    "育南盃中文教育辯論賽": {
-      "competitionCode": "C2614",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第一屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2401",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "2026核能公投盃全國高中職辯論比賽": {
-      "competitionCode": "C2620"
-    },
-    "第七屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2503",
-      "teamCount": 25,
-      "ageRestriction": null
-    },
-    "第二屆夢箋盃": {
-      "competitionCode": "C2609",
-      "teamCount": 11,
-      "ageRestriction": null
-    },
-    "第五屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2611",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第十九屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2507",
-      "teamCount": 32,
-      "ageRestriction": null
-    },
-    "火雞盃全國高中職辯論比賽": {
-      "competitionCode": "C2602",
-      "teamCount": 20,
-      "ageRestriction": null
-    },
-    "第二屆青雲盃全國高中職辯論錦標賽": {
-      "competitionCode": "C2610",
-      "teamCount": 14,
+    "第三十六屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2516",
+      "teamCount": 31,
       "ageRestriction": null
     },
     "第三屆東岸盃全國高中職辯論比賽": {
@@ -2850,37 +2809,14 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 22,
       "ageRestriction": null
     },
-    "第八屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2623"
-    },
-    "火雞肉飯盃全國高中職辯論比賽": {
-      "competitionCode": "C2603",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第二十屆辯革盃全國高中職辯論比賽": {
-      "competitionCode": "C2505",
-      "teamCount": 22,
-      "ageRestriction": null
-    },
-    "第一屆明哲盃全國高中職辯論比賽": {
-      "competitionCode": "C2604",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第二十八屆鳳凰盃全國高中職辯論比賽": {
-      "competitionCode": "C2517",
-      "teamCount": 0,
-      "ageRestriction": null
-    },
-    "第十五屆風雩盃中學辯論錦標賽": {
-      "competitionCode": "C2612",
-      "teamCount": 20,
-      "ageRestriction": null
-    },
     "第二十一屆辯革盃全國高中辯論比賽": {
       "competitionCode": "C2615",
       "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第二十一屆齊揚盃": {
+      "competitionCode": "C2607",
+      "teamCount": 24,
       "ageRestriction": null
     },
     "第二十七屆高中菁英盃": {
@@ -2888,22 +2824,86 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 82,
       "ageRestriction": null
     },
-    "蒙泉盃全國高中職辯論比賽": {
-      "competitionCode": "C2613",
-      "teamCount": 19,
-      "ageRestriction": null
-    },
     "第二十九屆鳳凰盃全國高中職辯論比賽": {
       "competitionCode": "C2621"
-    },
-    "第三十六屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2516",
-      "teamCount": 31,
-      "ageRestriction": null
     },
     "第二十八屆高中菁英盃": {
       "competitionCode": "C2608",
       "teamCount": 92,
+      "ageRestriction": null
+    },
+    "第二十八屆鳳凰盃全國高中職辯論比賽": {
+      "competitionCode": "C2517",
+      "teamCount": 0,
+      "ageRestriction": null
+    },
+    "第二十屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2622"
+    },
+    "第二十屆辯革盃全國高中職辯論比賽": {
+      "competitionCode": "C2505",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第二屆夢箋盃": {
+      "competitionCode": "C2609",
+      "teamCount": 11,
+      "ageRestriction": null
+    },
+    "第二屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2506",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第二屆青雲盃全國高中職辯論錦標賽": {
+      "competitionCode": "C2610",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第五屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2611",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第八屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2623"
+    },
+    "第十九屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2507",
+      "teamCount": 32,
+      "ageRestriction": null
+    },
+    "第十五屆風雩盃中學辯論錦標賽": {
+      "competitionCode": "C2612",
+      "teamCount": 20,
+      "ageRestriction": null
+    },
+    "第十八屆叡德盃全國高中職辯論比賽": {
+      "competitionCode": "C2624"
+    },
+    "第十六屆明京盃全國高中職辯論比賽": {
+      "competitionCode": "C2508",
+      "teamCount": 42,
+      "ageRestriction": null
+    },
+    "第十屆雲啟盃辯論比賽": {
+      "competitionCode": "C2509",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第四屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2510",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "育南盃中文教育辯論賽": {
+      "competitionCode": "C2614",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "蒙泉盃全國高中職辯論比賽": {
+      "competitionCode": "C2613",
+      "teamCount": 19,
       "ageRestriction": null
     }
   },
