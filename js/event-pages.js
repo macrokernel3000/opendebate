@@ -57,6 +57,22 @@
       ].filter(Boolean).join("");
       const keyDates = (event.keyDates || []).filter((item) => item && item.label && (item.date || item.note)).map((item) => `
         <li>${item.date ? `<time datetime="${escapeHtml(item.date)}">${escapeHtml(formatDate(item.date))}${item.time ? ` ${escapeHtml(item.time)}` : ""}</time>` : ""}<div><strong>${escapeHtml(item.label)}</strong>${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}</div></li>`).join("");
+      const safeExternalLink = (url, label) => /^https?:\/\//i.test(String(url || ""))
+        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
+        : "";
+      const relatedLinks = [
+        safeExternalLink(event.sourceUrl, "公告來源"),
+        ...(event.links || []).map((item) => item && safeExternalLink(item.url, item.label)).filter(Boolean),
+      ].filter(Boolean);
+      const scheduleImage = event.scheduleImage || {};
+      const scheduleImageSrc = /^(?:assets\/|https?:\/\/)/i.test(String(scheduleImage.src || "")) ? String(scheduleImage.src) : "";
+      const scheduleImageSection = scheduleImageSrc ? `
+        <section class="upcoming-schedule-image">
+          <h${sectionLevel}>賽程循環圖</h${sectionLevel}>
+          <a href="${escapeHtml(scheduleImageSrc)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(scheduleImageSrc)}" alt="${escapeHtml(scheduleImage.alt || `${event.name}賽程圖`)}"${scheduleImage.width ? ` width="${escapeHtml(scheduleImage.width)}"` : ""}${scheduleImage.height ? ` height="${escapeHtml(scheduleImage.height)}"` : ""} loading="lazy"></a>
+          <p>點選圖片可查看完整尺寸。賽程時間以本次領隊會議會後公告的更正內容為準。</p>
+          ${safeExternalLink(scheduleImage.sourceUrl, "Facebook 原始圖片")}
+        </section>` : "";
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
@@ -66,6 +82,8 @@
         ${metadata ? `<div class="event-metadata">${metadata}</div>` : ""}
         ${event.topic ? `<section class="event-topics"><h${sectionLevel}>比賽辯題</h${sectionLevel}><p>${escapeHtml(event.topic)}</p>${event.topicNote ? `<p>${escapeHtml(event.topicNote)}</p>` : ""}</section>` : ""}
         ${keyDates ? `<section class="upcoming-key-dates"><h${sectionLevel}>重要時程</h${sectionLevel}><ul>${keyDates}</ul></section>` : ""}
+        ${scheduleImageSection}
+        ${relatedLinks.length ? `<section class="event-topics upcoming-related-links"><h${sectionLevel}>公告與表單</h${sectionLevel}><p>${relatedLinks.join("　")}</p></section>` : ""}
         <p class="upcoming-event-status">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
     }
 

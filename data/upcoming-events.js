@@ -5,9 +5,31 @@ window.DEBATE_UPCOMING_EVENTS = [
     "name": "第二十屆北區聯合新生盃辯論比賽",
     "startDate": "2026-10-31",
     "endDate": "2026-11-01",
-    "location": "臺北市立景美女子高級中學",
-    "topic": "我國普通刑法應廢除死刑",
-    "organizer": "中崙高中演說辯論社、成淵高中演講辯論社、景美女中演說辯論社、羅東高中辯論社",
+    "keyDates": [
+      { "label": "第一次領隊會議", "date": "2026-10-07", "note": "已結束；本次會後公告更新賽程時間。" },
+      { "label": "選手資料與入校人員登記截止", "date": "2026-10-23" },
+      { "label": "個人旅平險資料表單截止", "date": "2026-10-29", "time": "19:30", "note": "公告註明須於第二次領隊會議前完成。" },
+      { "label": "第二次領隊會議", "date": "2026-10-29", "time": "19:30" },
+      { "label": "第一天第一時段", "date": "2026-10-31", "time": "09:00", "note": "至 11:00。" },
+      { "label": "第一天第二時段", "date": "2026-10-31", "time": "12:30", "note": "至 14:30；原訂 13:00–15:00，依會後公告更正。" },
+      { "label": "第一天第三時段", "date": "2026-10-31", "time": "15:00", "note": "至 17:00。" },
+      { "label": "第二天複賽", "date": "2026-11-01", "time": "09:00", "note": "至 11:00。" },
+      { "label": "第二天決賽", "date": "2026-11-01", "time": "12:30", "note": "至 17:00。" }
+    ],
+    "scheduleImage": {
+      "src": "assets/events/north-rookie-20-cycle.jpg",
+      "alt": "第二十屆北區聯合新生盃辯論比賽循環圖，列出八個三隊循環與循環名稱",
+      "width": 1321,
+      "height": 747,
+      "sourceUrl": "https://www.facebook.com/photo/?fbid=122120020149416393&set=a.122114843121416393"
+    },
+    "sourceUrl": "https://www.facebook.com/share/p/1CsNS2Ji8T/?mibextid=wwXIfr",
+    "links": [
+      { "label": "第一次領隊會議簡報", "url": "https://canva.link/f64djc30th25byd" },
+      { "label": "選手資料表單", "url": "https://docs.google.com/forms/d/e/1FAIpQLSdvEOXJY-if3cvr9pOFQ_5cpjIi3TpdK4gBvHVFM8MdYTvpOQ/viewform" },
+      { "label": "入校人員登記表單", "url": "https://forms.gle/ZxeZLDv8h1t3qz3c7" },
+      { "label": "個人旅平險資料表單", "url": "https://forms.gle/EDchcuiJBzmVTK1U7" }
+    ],
     "competitionCode": "C2622"
   },
   {

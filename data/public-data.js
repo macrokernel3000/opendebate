@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T09:41:08",
+  "generatedAt": "2026-10-09T12:09:39",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2740,6 +2740,17 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2408",
       "teamCount": 0
     },
+    "第二十屆北區聯合新生盃辯論比賽": {
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-01",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "2026 北區聯合新生盃第一次領隊會議會後公告確認賽期與更新時段；第二時段由原 13:00–15:00 更正為 12:30–14:30。公告未明載辯題、主辦單位或舉辦地點，故留白。來源：https://www.facebook.com/share/p/1CsNS2Ji8T/?mibextid=wwXIfr",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C2622"
+    },
     "2025司改盃全國高中職辯論比賽": {
       "competitionCode": "C2501",
       "teamCount": 23,
@@ -2835,9 +2846,6 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2517",
       "teamCount": 0,
       "ageRestriction": null
-    },
-    "第二十屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2622"
     },
     "第二十屆辯革盃全國高中職辯論比賽": {
       "competitionCode": "C2505",

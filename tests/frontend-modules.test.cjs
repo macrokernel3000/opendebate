@@ -195,12 +195,26 @@ test("event pages render upcoming details and recorded match results", () => {
     organizer: "主辦單位",
     location: "比賽地點",
     keyDates: [{ label: "領隊會議", date: "2026-01-20", time: "18:00" }],
+    scheduleImage: {
+      src: "assets/events/test-schedule.jpg",
+      alt: "測試賽程圖",
+      width: 1200,
+      height: 800,
+      sourceUrl: "https://example.com/source-image",
+    },
+    sourceUrl: "https://example.com/announcement",
+    links: [{ label: "報名表單", url: "https://example.com/form" }],
   }, target);
   assert.match(target.innerHTML, /主辦單位/);
   assert.match(target.innerHTML, /賽事代號 C2602/);
   assert.match(target.innerHTML, /比賽地點/);
   assert.match(target.innerHTML, /領隊會議/);
   assert.match(target.innerHTML, /2026-01-20 18:00/);
+  assert.match(target.innerHTML, /賽程循環圖/);
+  assert.match(target.innerHTML, /assets\/events\/test-schedule.jpg/);
+  assert.match(target.innerHTML, /Facebook 原始圖片/);
+  assert.match(target.innerHTML, /公告來源/);
+  assert.match(target.innerHTML, /報名表單/);
   assert.match(target.innerHTML, /class="upcoming-event-status"/);
   assert.doesNotMatch(target.innerHTML, /class="search-empty">目前顯示賽事公告資訊/);
   assert.match(target.innerHTML, /<h1>未來盃<\/h1>/);
