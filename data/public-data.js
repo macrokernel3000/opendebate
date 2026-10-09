@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T09:01:35",
+  "generatedAt": "2026-10-09T09:04:58",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3110,7 +3110,7 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "明道高中", "leaders": [], "players": ["林軒嘉", "賴鈺茜", "張又心", "陳沂萱", "方莉雅", "蔡汶桓"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊原列「明道中學」，為與同屆賽果名稱對齊以「明道高中」作隊伍鍵"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "中和高中", "leaders": [], "players": ["李鍇麟", "陳韋琳", "陳俐穎", "賴思穎", "葉宇勛"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "師大附中", "leaders": [], "players": ["張宸睿", "詹亞承", "陳咸鋐", "盧知嫺", "洪子惞", "游鎧謙"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
-      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "東山高中", "leaders": [], "players": ["王銘澤", "鐘民棋", "粘又勻", "蔡秉譯", "高瑀芊"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；隊伍原名「市立東山」依賽果隊名「東山高中」對應，身份依秩序冊明確校名歸臺中市立東山高級中學"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "東山高中", "leaders": [], "players": ["王銘澤", "鐘民棋", "粘又勻", "蔡秉譯", "高瑀芊"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；隊伍原名「市立東山」依賽果隊名「東山高中」對應，身份依秩序冊明確校名歸臺中市立東山高級中學", "teamId": "s046"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "平鎮高中", "leaders": [], "players": ["林若妤", "謝晉璿", "羅欣宜", "廖睿宇", "葉芷庭", "鍾元喬", "李鎮吉", "陳天宇", "張宸熏"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "明倫高中", "leaders": [], "players": ["張雨崴", "劉品妤", "林湘婕", "王薇婷", "李浩玄", "陳柏均", "駱建勳", "吳宜恩", "陳崧右", "柯祐鈴"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "斗六高中", "leaders": [], "players": ["章耀予", "許玉蕙", "呂珈綾", "温恒毅", "李婕暄", "陳禹彤", "何佩靜"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},

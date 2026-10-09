@@ -387,7 +387,7 @@ def load_event_rosters():
         return rosters
 
 
-def apply_event_entity_assignments(records, registry_entries):
+def apply_event_entity_assignments(records, event_rosters, registry_entries):
     """Apply source-backed school identity decisions by competition and original team label."""
     if not EVENT_ENTITY_ASSIGNMENTS_PATH.exists():
         return
@@ -419,6 +419,13 @@ def apply_event_entity_assignments(records, registry_entries):
                 matched_assignments.add(key)
         if explicit:
             record["_teamEntityCodes"] = explicit
+    for roster_entries in event_rosters.values():
+        for roster in roster_entries:
+            key = (roster["competitionName"], roster["team"])
+            assignment = assignments.get(key)
+            if assignment:
+                roster["teamId"] = assignment["schoolCode"]
+                matched_assignments.add(key)
     unused = sorted(set(assignments) - matched_assignments)
     if unused:
         raise SystemExit("賽事學校歸戶表有找不到對戰紀錄的項目：" + "、".join(f"{event}／{team}" for event, team in unused))
@@ -630,7 +637,7 @@ def build(check_only=False, fail_on_warnings=False):
     records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
-    apply_event_entity_assignments(records, registry_entries)
+    apply_event_entity_assignments(records, event_rosters, registry_entries)
     if EVENT_ENTITY_ASSIGNMENTS_PATH.exists():
         sources.append(EVENT_ENTITY_ASSIGNMENTS_PATH.name)
     validate_best_debater_categories(records, honors)

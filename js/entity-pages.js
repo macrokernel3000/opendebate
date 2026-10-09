@@ -35,7 +35,7 @@
       const rosterRows = playerRosters.map((roster) => {
         const roles = [roster.players?.includes(playerName) ? "選手" : "", roster.leaders?.includes(playerName) ? "領隊" : ""].filter(Boolean).join("／");
         const sourceStatus = roster.status && roster.status !== "公告名單" ? roster.status : "名單";
-        return `<article class="entity-match"><span class="history-date">${escapeHtml(sourceStatus)}</span><div><strong>${entityPageLink(store.entityForName(roster.team)?.code, roster.team)}</strong><p>${eventRouteLink(roster.competitionName)} · ${roles}</p></div></article>`;
+        return `<article class="entity-match"><span class="history-date">${escapeHtml(sourceStatus)}</span><div><strong>${entityPageLink(roster.teamId || store.entityForName(roster.team)?.code, roster.team)}</strong><p>${eventRouteLink(roster.competitionName)} · ${roles}</p></div></article>`;
       }).join("");
       const playerHonorsByEvent = new Map();
       playerHonors.forEach((honor) => {
@@ -84,7 +84,7 @@
         .sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || "") || Number(b.period) - Number(a.period));
       const entityHonors = honors.filter((item) => item.teamId === entity.code).sort((a, b) => (b.matchDate || "").localeCompare(a.matchDate || ""));
       const entityRosters = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat()
-        .filter((roster) => store.entityForName(roster.team)?.code === entity.code);
+        .filter((roster) => (roster.teamId || store.entityForName(roster.team)?.code) === entity.code);
       const wins = entityRecords.filter((match) => matchResultForEntity(match, entity.code) === "勝").length;
       const participatedEvents = unique([...entityRecords.map((item) => item.competitionName), ...entityHonors.map((item) => item.competitionName), ...entityRosters.map((item) => item.competitionName)]);
       const entityLink = entityPageLink;

@@ -239,7 +239,7 @@
       });
       const rosterEntries = Object.values(window.DEBATE_PUBLIC_DATA?.eventRosters || {}).flat();
       rosterEntries.forEach((roster) => {
-        const row = ensure(roster.team);
+        const row = ensure(roster.team, roster.teamId);
         if (row) row.events.add(roster.competitionName);
       });
       return [...rows.values()];
