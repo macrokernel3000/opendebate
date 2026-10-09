@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T08:12:56",
+  "generatedAt": "2026-10-09T08:17:44",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -29,6 +29,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十三屆延平盃全國高中職辯論賽.csv",
     "public-data-第二十二屆延平盃全國高中職辯論賽.csv",
     "public-data-第二十八屆高中菁英盃.csv",
+    "public-data-第二十八屆鳳凰盃全國高中職辯論比賽.csv",
     "public-data-第二十屆宮燈盃辯論公開賽青少年組.csv",
     "public-data-第二十屆辯革盃全國高中職辯論比賽.csv",
     "public-data-第二十屆齊揚盃.csv",
@@ -1399,7 +1400,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 2, "venue": 2, "teams": {"affirmative": "瑞祥高中", "negative": "建國中學"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "建國中學", "note": "四強", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s104", "negative": "s054"}, "id": "match-bfff10c0cad8"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 1, "venue": 1, "teams": {"affirmative": "南山高中", "negative": "麗山高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "南山高中", "note": "複賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s023", "negative": "s158"}, "id": "match-d59cae2b4ee7"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 1, "venue": 2, "teams": {"affirmative": "延平高中", "negative": "馬公高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "馬公高中", "note": "複賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s050", "negative": "s162"}, "id": "match-3416408c23a1"},
-    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 1, "venue": 3, "teams": {"affirmative": "東山高中", "negative": "瑞祥高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "瑞祥高中", "note": "複賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s088", "negative": "s104"}, "id": "match-9ec91e11db86"},
+    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 1, "venue": 3, "teams": {"affirmative": "東山高中", "negative": "瑞祥高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "瑞祥高中", "note": "複賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s046", "negative": "s104"}, "id": "match-e54bf9fb9628"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "period": 1, "venue": 4, "teams": {"affirmative": "建國中學", "negative": "師大附中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "建國中學", "note": "複賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s054", "negative": "s047"}, "id": "match-42c075bcb5e5"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 3, "venue": 1, "teams": {"affirmative": "復旦高中", "negative": "南山高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "復旦高中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s057", "negative": "s023"}, "id": "match-2d1ea2209594"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 3, "venue": 2, "teams": {"affirmative": "景美女中", "negative": "麗山高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "景美女中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s083", "negative": "s158"}, "id": "match-fbf06c474851"},
@@ -1409,10 +1410,10 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 2, "venue": 2, "teams": {"affirmative": "南山高中", "negative": "復旦高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "南山高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s023", "negative": "s057"}, "id": "match-8e34cbf87d97"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 2, "venue": 3, "teams": {"affirmative": "師大附中", "negative": "永春高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "永春高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s047", "negative": "s099"}, "id": "match-d67fb299cb3b"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 2, "venue": 4, "teams": {"affirmative": "板橋高中", "negative": "建國中學"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "建國中學", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s091", "negative": "s054"}, "id": "match-a77063c0496c"},
-    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 2, "venue": 5, "teams": {"affirmative": "華江高中", "negative": "東山高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "東山高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s133", "negative": "s088"}, "id": "match-b0ecd805ac8b"},
+    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 2, "venue": 5, "teams": {"affirmative": "華江高中", "negative": "東山高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "東山高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s133", "negative": "s046"}, "id": "match-0e8c3c50b629"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 1, "venue": 1, "teams": {"affirmative": "建國中學", "negative": "板橋高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "建國中學", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s054", "negative": "s091"}, "id": "match-731718550828"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 1, "venue": 2, "teams": {"affirmative": "內湖高中", "negative": "瑞祥高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "瑞祥高中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s014", "negative": "s104"}, "id": "match-6af7b37e35d5"},
-    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 1, "venue": 3, "teams": {"affirmative": "東山高中", "negative": "華江高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "華江高中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s088", "negative": "s133"}, "id": "match-a7f49a18e204"},
+    {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-16", "period": 1, "venue": 3, "teams": {"affirmative": "東山高中", "negative": "華江高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "華江高中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2611", "teamIds": {"affirmative": "s046", "negative": "s133"}, "id": "match-98969475b11f"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-14", "period": 1, "venue": 1, "teams": {"affirmative": "內湖高中", "negative": "薇閣中學"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "薇閣中學", "note": "來源：台北願景盃辯論賽官方公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0VF233eBsLy3MDfrQ4dAbjMXdYTR3HwamqBFhrnhpuniZ4E1uJ4QnKCLJsHPjr6k5l&id=100064790646409", "players": {"affirmative": [], "negative": []}, "inferenceNote": "公告列隊順序：左列正方、右列反方；勝方依公告票數或最終名次。", "competitionCode": "C2406", "teamIds": {"affirmative": "s014", "negative": "s135"}, "id": "match-98184f9fe862"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-14", "period": 1, "venue": 2, "teams": {"affirmative": "成功高中", "negative": "臺北市立中正高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "成功高中", "note": "來源：台北願景盃辯論賽官方公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0VF233eBsLy3MDfrQ4dAbjMXdYTR3HwamqBFhrnhpuniZ4E1uJ4QnKCLJsHPjr6k5l&id=100064790646409", "players": {"affirmative": [], "negative": []}, "inferenceNote": "公告列隊順序：左列正方、右列反方；勝方依公告票數或最終名次。", "competitionCode": "C2406", "teamIds": {"affirmative": "s067", "negative": "s187"}, "id": "match-3ed3015de538"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-14", "period": 1, "venue": 3, "teams": {"affirmative": "大直高中", "negative": "百齡高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "百齡高中", "note": "來源：台北願景盃辯論賽官方公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0VF233eBsLy3MDfrQ4dAbjMXdYTR3HwamqBFhrnhpuniZ4E1uJ4QnKCLJsHPjr6k5l&id=100064790646409", "players": {"affirmative": [], "negative": []}, "inferenceNote": "願景盃循環圖：百齡高中於左下循環，該場列為反方；比分依賽果公告。", "competitionCode": "C2406", "teamIds": {"affirmative": "s038", "negative": "s105"}, "id": "match-27cd365925bf"},
@@ -1716,13 +1717,13 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第十屆雲啟盃辯論比賽", "matchDate": "2025-12-14", "period": 2, "venue": 3, "teams": {"affirmative": "武陵高中", "negative": "中山女高"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "中山女高", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2509", "teamIds": {"affirmative": "s096", "negative": "s006"}, "id": "match-3e0f976daf23"},
     {"competitionName": "第十屆雲啟盃辯論比賽", "matchDate": "2025-12-14", "period": 1, "venue": 1, "teams": {"affirmative": "中山女高", "negative": "臺南一中"}, "scores": {"affirmative": 0, "negative": 0}, "winner": "臺南一中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2509", "teamIds": {"affirmative": "s006", "negative": "s026"}, "id": "match-a90e413e43ea"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 1, "teams": {"affirmative": "板橋高中", "negative": "內湖高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "內湖高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s091", "negative": "s014"}, "id": "match-744ec5f421d7"},
-    {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 2, "teams": {"affirmative": "臺南一中", "negative": "東山高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "東山高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s026", "negative": "s088"}, "id": "match-fd658166abf4"},
+    {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 2, "teams": {"affirmative": "臺南一中", "negative": "東山高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "東山高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s026", "negative": "s046"}, "id": "match-d0040ee39b6c"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 3, "teams": {"affirmative": "和平高中", "negative": "永春高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "和平高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s160", "negative": "s099"}, "id": "match-01d29c679e48"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 4, "teams": {"affirmative": "南大附中", "negative": "屏東女中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "南大附中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s020", "negative": "s041"}, "id": "match-2237f5d56bbe"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 5, "teams": {"affirmative": "薇閣高中", "negative": "復興高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "薇閣高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s135", "negative": "s059"}, "id": "match-77b2c32de28d"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 1, "venue": 6, "teams": {"affirmative": "臺中二中", "negative": "文華高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "臺中二中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s121", "negative": "s071"}, "id": "match-d6a8d3347972"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 1, "teams": {"affirmative": "內湖高中", "negative": "內壢高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "內壢高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s014", "negative": "s013"}, "id": "match-3d5dcab0fd4c"},
-    {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 2, "teams": {"affirmative": "東山高中", "negative": "延平中學"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "延平中學", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s088", "negative": "s050"}, "id": "match-12aab2d4cf4b"},
+    {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 2, "teams": {"affirmative": "東山高中", "negative": "延平中學"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "延平中學", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s046", "negative": "s050"}, "id": "match-617946c53e74"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 3, "teams": {"affirmative": "永春高中", "negative": "曙光女中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "曙光女中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s099", "negative": "s086"}, "id": "match-3b378c3a8bdf"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 4, "teams": {"affirmative": "屏東女中", "negative": "馬公高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "屏東女中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s041", "negative": "s162"}, "id": "match-309f406a095e"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-24", "period": 2, "venue": 5, "teams": {"affirmative": "復興高中", "negative": "瑞祥高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "瑞祥高中", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2510", "teamIds": {"affirmative": "s059", "negative": "s104"}, "id": "match-b81234a71f42"},
@@ -1988,6 +1989,8 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-30", "honorName": "全程最佳辯士", "recipient": "張陳樂", "team": "成功高中", "honorType": "player", "note": "", "competitionCode": "C2608", "teamId": "s067", "id": "honor-1ba2491f3263"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-30", "honorName": "全程最佳辯士", "recipient": "鄭宇庭", "team": "臺中女中", "honorType": "player", "note": "", "competitionCode": "C2608", "teamId": "s122", "id": "honor-e9180879805d"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-30", "honorName": "全程最佳辯士", "recipient": "武煒皓", "team": "建國中學", "honorType": "player", "note": "", "competitionCode": "C2608", "teamId": "s054", "id": "honor-bf2b50eaae1d"},
+    {"competitionName": "第二十八屆鳳凰盃全國高中職辯論比賽", "matchDate": "", "honorName": "亞軍", "recipient": "市立東山", "team": "", "honorType": "team", "note": "經回報（2026-10-09）", "competitionCode": "C2517", "teamId": "s046", "id": "honor-8e11d1256eb4"},
+    {"competitionName": "第二十八屆鳳凰盃全國高中職辯論比賽", "matchDate": "", "honorName": "全程最佳辯士", "recipient": "詹易翔", "team": "市立東山", "honorType": "player", "note": "經回報（2026-10-09）", "competitionCode": "C2517", "teamId": "s046", "id": "honor-94cdae6f49b3"},
     {"competitionName": "第二十屆宮燈盃辯論公開賽青少年組", "matchDate": "2026-09-25", "honorName": "單場最佳辯士", "recipient": "高偉承", "team": "白烏鴉辯論隊", "honorType": "player", "note": "D1-1", "period": 1, "competitionCode": "C2619", "teamId": "p127", "id": "honor-88bd81a263fe"},
     {"competitionName": "第二十屆宮燈盃辯論公開賽青少年組", "matchDate": "2026-09-25", "honorName": "單場最佳辯士", "recipient": "黃忻恩", "team": "最佳英鎊辯論隊", "honorType": "player", "note": "D1-1", "period": 1, "competitionCode": "C2619", "teamId": "p128", "id": "honor-b60a058e693f"},
     {"competitionName": "第二十屆宮燈盃辯論公開賽青少年組", "matchDate": "2026-09-25", "honorName": "單場最佳辯士", "recipient": "潘彥成", "team": "成淵高中", "honorType": "player", "note": "D1-1", "period": 1, "competitionCode": "C2619", "teamId": "s068", "id": "honor-f89896bfa5ed"},
@@ -2505,12 +2508,121 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2406",
       "teamCount": 13
     },
-    "第二十屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2622"
+    "第一屆明哲盃全國高中職辯論比賽": {
+      "competitionCode": "C2604",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "火雞肉飯盃全國高中職辯論比賽": {
+      "competitionCode": "C2603",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第三十六屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2516",
+      "teamCount": 31,
+      "ageRestriction": null
+    },
+    "第八屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2623"
+    },
+    "第十八屆叡德盃全國高中職辯論比賽": {
+      "competitionCode": "C2624"
+    },
+    "第二十九屆鳳凰盃全國高中職辯論比賽": {
+      "competitionCode": "C2621"
+    },
+    "第十五屆風雩盃中學辯論錦標賽": {
+      "competitionCode": "C2612",
+      "teamCount": 20,
+      "ageRestriction": null
+    },
+    "蒙泉盃全國高中職辯論比賽": {
+      "competitionCode": "C2613",
+      "teamCount": 19,
+      "ageRestriction": null
+    },
+    "吊嘎盃全國高中職辯論比賽": {
+      "competitionCode": "C2601",
+      "teamCount": 10,
+      "ageRestriction": null
+    },
+    "第二十八屆鳳凰盃全國高中職辯論比賽": {
+      "competitionCode": "C2517",
+      "teamCount": 0,
+      "ageRestriction": null
+    },
+    "第七屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2503",
+      "teamCount": 25,
+      "ageRestriction": null
+    },
+    "第一屆夢箋盃": {
+      "competitionCode": "C2502",
+      "teamCount": 12,
+      "ageRestriction": null
     },
     "第一屆青雲盃全國高中職辯論錦標賽": {
       "competitionCode": "C2402",
       "teamCount": 12,
+      "ageRestriction": null
+    },
+    "第一屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2401",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第二屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2506",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第二十一屆齊揚盃": {
+      "competitionCode": "C2607",
+      "teamCount": 24,
+      "ageRestriction": null
+    },
+    "第四屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2510",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "2026核能公投盃全國高中職辯論比賽": {
+      "competitionCode": "C2620"
+    },
+    "第十六屆明京盃全國高中職辯論比賽": {
+      "competitionCode": "C2508",
+      "teamCount": 42,
+      "ageRestriction": null
+    },
+    "第二屆青雲盃全國高中職辯論錦標賽": {
+      "competitionCode": "C2610",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第二十八屆高中菁英盃": {
+      "competitionCode": "C2608",
+      "teamCount": 92,
+      "ageRestriction": null
+    },
+    "第十屆雲啟盃辯論比賽": {
+      "competitionCode": "C2509",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第十九屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2507",
+      "teamCount": 32,
+      "ageRestriction": null
+    },
+    "第三十五屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2407",
+      "teamCount": 45,
+      "ageRestriction": null
+    },
+    "2025司改盃全國高中職辯論比賽": {
+      "competitionCode": "C2501",
+      "teamCount": 23,
       "ageRestriction": null
     },
     "火雞盃全國高中職辯論比賽": {
@@ -2523,54 +2635,9 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 82,
       "ageRestriction": null
     },
-    "第二屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2506",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第十屆雲啟盃辯論比賽": {
-      "competitionCode": "C2509",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第二十一屆辯革盃全國高中辯論比賽": {
-      "competitionCode": "C2615",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第二十屆辯革盃全國高中職辯論比賽": {
-      "competitionCode": "C2505",
+    "第三屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2606",
       "teamCount": 22,
-      "ageRestriction": null
-    },
-    "吊嘎盃全國高中職辯論比賽": {
-      "competitionCode": "C2601",
-      "teamCount": 10,
-      "ageRestriction": null
-    },
-    "第二十一屆齊揚盃": {
-      "competitionCode": "C2607",
-      "teamCount": 24,
-      "ageRestriction": null
-    },
-    "第二十八屆高中菁英盃": {
-      "competitionCode": "C2608",
-      "teamCount": 92,
-      "ageRestriction": null
-    },
-    "第五屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2611",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第四屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2510",
-      "teamCount": 22,
-      "ageRestriction": null
-    },
-    "2025司改盃全國高中職辯論比賽": {
-      "competitionCode": "C2501",
-      "teamCount": 23,
       "ageRestriction": null
     },
     "第二屆夢箋盃": {
@@ -2578,43 +2645,17 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 11,
       "ageRestriction": null
     },
-    "第十八屆叡德盃全國高中職辯論比賽": {
-      "competitionCode": "C2624"
-    },
-    "第一屆明哲盃全國高中職辯論比賽": {
-      "competitionCode": "C2604",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第二屆青雲盃全國高中職辯論錦標賽": {
-      "competitionCode": "C2610",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第十九屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2507",
-      "teamCount": 32,
-      "ageRestriction": null
-    },
-    "第八屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2623"
-    },
-    "第二十九屆鳳凰盃全國高中職辯論比賽": {
-      "competitionCode": "C2621"
+    "第二十屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2622"
     },
     "第三十七屆蘇州盃高中職辯論錦標賽": {
       "competitionCode": "C2630",
       "teamCount": 41,
       "ageRestriction": null
     },
-    "第一屆夢箋盃": {
-      "competitionCode": "C2502",
-      "teamCount": 12,
-      "ageRestriction": null
-    },
-    "第十六屆明京盃全國高中職辯論比賽": {
-      "competitionCode": "C2508",
-      "teamCount": 42,
+    "第五屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2611",
+      "teamCount": 14,
       "ageRestriction": null
     },
     "育南盃中文教育辯論賽": {
@@ -2622,47 +2663,14 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 16,
       "ageRestriction": null
     },
-    "2026核能公投盃全國高中職辯論比賽": {
-      "competitionCode": "C2620"
-    },
-    "第十五屆風雩盃中學辯論錦標賽": {
-      "competitionCode": "C2612",
-      "teamCount": 20,
-      "ageRestriction": null
-    },
-    "第一屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2401",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第七屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2503",
-      "teamCount": 25,
-      "ageRestriction": null
-    },
-    "第三十五屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2407",
-      "teamCount": 45,
-      "ageRestriction": null
-    },
-    "第三屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2606",
+    "第二十屆辯革盃全國高中職辯論比賽": {
+      "competitionCode": "C2505",
       "teamCount": 22,
       "ageRestriction": null
     },
-    "蒙泉盃全國高中職辯論比賽": {
-      "competitionCode": "C2613",
-      "teamCount": 19,
-      "ageRestriction": null
-    },
-    "火雞肉飯盃全國高中職辯論比賽": {
-      "competitionCode": "C2603",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第三十六屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2516",
-      "teamCount": 31,
+    "第二十一屆辯革盃全國高中辯論比賽": {
+      "competitionCode": "C2615",
+      "teamCount": 14,
       "ageRestriction": null
     }
   },
@@ -2856,6 +2864,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "C2514", "name": "第十九屆宮燈盃辯論公開賽青少年組", "year": "2025", "status": "results-recorded"},
     {"code": "C2515", "name": "第十四屆風雩盃中學辯論錦標賽", "year": "2025", "status": "results-recorded"},
     {"code": "C2516", "name": "第三十六屆蘇州盃高中職辯論錦標賽", "year": "2025", "status": "results-recorded"},
+    {"code": "C2517", "name": "第二十八屆鳳凰盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
     {"code": "C2601", "name": "吊嘎盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
     {"code": "C2602", "name": "火雞盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
     {"code": "C2603", "name": "火雞肉飯盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
