@@ -200,8 +200,15 @@ def build_entities(records, honors, registry_entries, registry_path):
 
 def attach_entities(records, honors, lookup, stable_id):
     attendance = []
+    valid_codes = set(lookup.values())
     for record in records:
-        record["teamIds"] = {side: lookup.get(name, "") for side, name in record["teams"].items()}
+        explicit_codes = record.pop("_teamEntityCodes", {})
+        record["teamIds"] = {}
+        for side, name in record["teams"].items():
+            code = clean(explicit_codes.get(side)) or lookup.get(name, "")
+            if code and code not in valid_codes:
+                raise SystemExit(f"{record['competitionName']}：隊伍「{name}」指定了不存在的學校代碼「{code}」")
+            record["teamIds"][side] = code
         record["id"] = stable_id("match", record)
         for side in ("affirmative", "negative"):
             for player in record["players"][side]:

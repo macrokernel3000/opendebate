@@ -33,7 +33,7 @@
 
 ## 3. 資料流
 
-主要人工編輯來源是 `data/public-data*.csv` 與 `data/entity-registry.csv`。正式慣例是一個賽事一個 CSV；舊 Excel 已移至 `data/backups`，只供復原。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
+主要人工編輯來源是 `data/public-data*.csv`、`data/entity-registry.csv` 與 `data/event-entity-assignments.csv`。正式慣例是一個賽事一個 CSV；舊 Excel 已移至 `data/backups`，只供復原。`event-entity-assignments.csv` 僅用於同一短校名在不同賽事被確認為不同縣市實體時，依「賽事名稱＋隊伍原名」指定固定學校代碼；它不會改寫公開隊伍原名，代碼需存在於學校名冊，並附判定依據。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
 
 1. 掃描並合併所有 `public-data*.csv`。
 2. 對完全相同的資料去重，保留歷史來源。
