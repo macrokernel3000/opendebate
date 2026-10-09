@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T08:17:44",
+  "generatedAt": "2026-10-09T08:23:04",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -57,7 +57,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "p001", "type": "p", "name": "0", "aliases": ""},
     {"code": "p002", "type": "p", "name": "一百齡五度的你", "aliases": ""},
     {"code": "p003", "type": "p", "name": "三塊厝高中吳律寬請飲料", "aliases": ""},
-    {"code": "p004", "type": "p", "name": "上峰小汽車誰撞誰休克", "aliases": ""},
+    {"code": "p004", "type": "p", "name": "上峰小汽車誰撞誰休克", "aliases": "上鋒小汽車撞誰誰休克"},
     {"code": "p005", "type": "p", "name": "不怕魔法", "aliases": ""},
     {"code": "p006", "type": "p", "name": "不知道", "aliases": ""},
     {"code": "p007", "type": "p", "name": "不知道要取什麼", "aliases": ""},
@@ -71,7 +71,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "p016", "type": "p", "name": "別被三清", "aliases": ""},
     {"code": "p017", "type": "p", "name": "北部菜蟲一起串聯", "aliases": ""},
     {"code": "p018", "type": "p", "name": "北陽軍閥", "aliases": ""},
-    {"code": "p019", "type": "p", "name": "南北中正一起串連", "aliases": ""},
+    {"code": "p019", "type": "p", "name": "南北中正一起串連", "aliases": "南北中正一起串聯"},
     {"code": "p020", "type": "p", "name": "南北菜蟲一起串聯", "aliases": ""},
     {"code": "p021", "type": "p", "name": "危雞百科", "aliases": ""},
     {"code": "p022", "type": "p", "name": "吟遊辯士皮陀故事集", "aliases": ""},
@@ -124,7 +124,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "p073", "type": "p", "name": "絕世天才", "aliases": ""},
     {"code": "p074", "type": "p", "name": "美國聯隊", "aliases": ""},
     {"code": "p075", "type": "p", "name": "胡教練的小朋友", "aliases": ""},
-    {"code": "p076", "type": "p", "name": "莉莉說的都對", "aliases": ""},
+    {"code": "p076", "type": "p", "name": "莉莉說的都對", "aliases": "莉莉說的都隊"},
     {"code": "p077", "type": "p", "name": "萬芳華江家齊聯隊", "aliases": ""},
     {"code": "p080", "type": "p", "name": "被愛情辜負但我仍純愛", "aliases": ""},
     {"code": "p081", "type": "p", "name": "觸電的那種感覺", "aliases": ""},
@@ -510,7 +510,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-19", "period": 1, "venue": 2, "teams": {"affirmative": "不知道要取什麼", "negative": "打比賽嗎各位"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "不知道要取什麼", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2601", "teamIds": {"affirmative": "p007", "negative": "p054"}, "id": "match-60891e644aa2"},
     {"competitionName": "吊嘎盃全國高中職辯論比賽", "matchDate": "2026-04-19", "period": 2, "venue": 1, "teams": {"affirmative": "永平高中", "negative": "不知道要取什麼"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "永平高中", "note": "決賽", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2601", "teamIds": {"affirmative": "s098", "negative": "p007"}, "id": "match-83b83ff8c229"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 1, "venue": 1, "teams": {"affirmative": "霍金活祭皇家火雞", "negative": "謝謝辯論讓我+365"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "謝謝辯論讓我+365", "note": "八進四第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p093", "negative": "p083"}, "id": "match-507347749e72"},
-    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 1, "venue": 2, "teams": {"affirmative": "不知道", "negative": "小丑們要特選跟分科"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "小丑們要特選和分科", "note": "八進四第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p006", "negative": "p035"}, "id": "match-a90c215b6676"},
+    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 1, "venue": 2, "teams": {"affirmative": "不知道", "negative": "小丑們要特選和分科"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "小丑們要特選和分科", "note": "八進四第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p006", "negative": "p035"}, "id": "match-f06507f56607"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 1, "venue": 3, "teams": {"affirmative": "小籠包", "negative": "燒焦了"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "燒焦了", "note": "八進四第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p037", "negative": "p068"}, "id": "match-a7bff969d04a"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 1, "venue": 4, "teams": {"affirmative": "我們都喜歡女生", "negative": "南北中正一起串連"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "我們都喜歡女生", "note": "八進四第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p048", "negative": "p019"}, "id": "match-ea8841740ccb"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-26", "period": 4, "venue": 1, "teams": {"affirmative": "謝謝辯論讓我+365", "negative": "小丑們要特選和分科"}, "scores": {"affirmative": 5, "negative": 0}, "winner": "謝謝辯論讓我+365", "note": "四強分流第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p083", "negative": "p035"}, "id": "match-55bf4e400bbf"},
@@ -524,7 +524,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 1, "teams": {"affirmative": "吳律寬", "negative": "危雞百科"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "吳律寬", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p023", "negative": "p021"}, "id": "match-bb7028015b69"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 2, "teams": {"affirmative": "上峰小汽車誰撞誰休克", "negative": "小籠包"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "小籠包", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p004", "negative": "p037"}, "id": "match-fd79408a8fcd"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 3, "teams": {"affirmative": "雞逼雞逼甲巴甲巴", "negative": "別被三清"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "雞逼雞逼甲巴甲巴", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p092", "negative": "p016"}, "id": "match-e35a1ca034e8"},
-    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 4, "teams": {"affirmative": "小丑們要特選跟分科", "negative": "我們有笨蛋小狗"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "小丑們要特選跟分科", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p035", "negative": "p045"}, "id": "match-ff9cbbe54f3b"},
+    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 4, "teams": {"affirmative": "小丑們要特選和分科", "negative": "我們有笨蛋小狗"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "小丑們要特選和分科", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p035", "negative": "p045"}, "id": "match-b66609eb4ddf"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 2, "venue": 5, "teams": {"affirmative": "曉明女中", "negative": "燒焦了"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "燒焦了", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "s085", "negative": "p068"}, "id": "match-bfee427eb425"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 3, "venue": 1, "teams": {"affirmative": "小籠包", "negative": "上峰小汽車誰撞誰休克"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "小籠包", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p037", "negative": "p004"}, "id": "match-1469bf731a68"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 3, "venue": 2, "teams": {"affirmative": "謝謝辯論讓我+365", "negative": "世界第一大美女何亮諼"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "謝謝辯論讓我+365", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p083", "negative": "p008"}, "id": "match-e748453f67c0"},
@@ -533,7 +533,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 3, "venue": 5, "teams": {"affirmative": "我要吃火雞", "negative": "我們都喜歡女生"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "我們都喜歡女生", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p051", "negative": "p048"}, "id": "match-dea263d06559"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 4, "venue": 1, "teams": {"affirmative": "霍金活祭皇家火雞", "negative": "吳律寬"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "霍金活祭皇家火雞", "note": "初賽第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p093", "negative": "p023"}, "id": "match-07fd27c6caa6"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 4, "venue": 2, "teams": {"affirmative": "哲何新臺幣鱷十億沅", "negative": "謝謝辯論讓我+365"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "謝謝辯論讓我+365", "note": "初賽第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p025", "negative": "p083"}, "id": "match-c86ccb62835a"},
-    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 4, "venue": 4, "teams": {"affirmative": "人右吉吉愛烤雞", "negative": "小丑們要特選跟分科"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "小丑們要特選和分科", "note": "初賽第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p011", "negative": "p035"}, "id": "match-008eca319fc5"},
+    {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 4, "venue": 4, "teams": {"affirmative": "人右吉吉愛烤雞", "negative": "小丑們要特選和分科"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "小丑們要特選和分科", "note": "初賽第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p011", "negative": "p035"}, "id": "match-9aaf09a8f0f5"},
     {"competitionName": "火雞盃全國高中職辯論比賽", "matchDate": "2026-04-25", "period": 4, "venue": 5, "teams": {"affirmative": "莉莉說的都對", "negative": "我要吃火雞"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "我要吃火雞", "note": "初賽第四時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2602", "teamIds": {"affirmative": "p076", "negative": "p051"}, "id": "match-d48e1acad358"},
     {"competitionName": "火雞肉飯盃全國高中職辯論比賽", "matchDate": "2026-05-23", "period": 1, "venue": 1, "teams": {"affirmative": "北一女中", "negative": "曙光女中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "北一女中", "note": "🦃 5/23 時段一", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2603", "teamIds": {"affirmative": "s017", "negative": "s086"}, "id": "match-e335027f049b"},
     {"competitionName": "火雞肉飯盃全國高中職辯論比賽", "matchDate": "2026-05-23", "period": 1, "venue": 2, "teams": {"affirmative": "衛道中學", "negative": "康橋國際學校(秀岡校區)"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "康橋國際學校(秀岡校區)", "note": "🦃 5/23 時段一", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2603", "teamIds": {"affirmative": "s139", "negative": "s049"}, "id": "match-6a3e471042ca"},
@@ -2508,8 +2508,106 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2406",
       "teamCount": 13
     },
-    "第一屆明哲盃全國高中職辯論比賽": {
-      "competitionCode": "C2604",
+    "第三屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2606",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第十六屆明京盃全國高中職辯論比賽": {
+      "competitionCode": "C2508",
+      "teamCount": 42,
+      "ageRestriction": null
+    },
+    "第七屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2503",
+      "teamCount": 25,
+      "ageRestriction": null
+    },
+    "第二十七屆高中菁英盃": {
+      "competitionCode": "C2504",
+      "teamCount": 82,
+      "ageRestriction": null
+    },
+    "第二屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2506",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第二屆夢箋盃": {
+      "competitionCode": "C2609",
+      "teamCount": 11,
+      "ageRestriction": null
+    },
+    "第二十屆辯革盃全國高中職辯論比賽": {
+      "competitionCode": "C2505",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第二十八屆高中菁英盃": {
+      "competitionCode": "C2608",
+      "teamCount": 92,
+      "ageRestriction": null
+    },
+    "第二十一屆齊揚盃": {
+      "competitionCode": "C2607",
+      "teamCount": 24,
+      "ageRestriction": null
+    },
+    "吊嘎盃全國高中職辯論比賽": {
+      "competitionCode": "C2601",
+      "teamCount": 10,
+      "ageRestriction": null
+    },
+    "第十五屆風雩盃中學辯論錦標賽": {
+      "competitionCode": "C2612",
+      "teamCount": 20,
+      "ageRestriction": null
+    },
+    "2025司改盃全國高中職辯論比賽": {
+      "competitionCode": "C2501",
+      "teamCount": 23,
+      "ageRestriction": null
+    },
+    "第三十五屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2407",
+      "teamCount": 45,
+      "ageRestriction": null
+    },
+    "第二十屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2622"
+    },
+    "蒙泉盃全國高中職辯論比賽": {
+      "competitionCode": "C2613",
+      "teamCount": 19,
+      "ageRestriction": null
+    },
+    "第四屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2510",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第三十六屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2516",
+      "teamCount": 31,
+      "ageRestriction": null
+    },
+    "第二十一屆辯革盃全國高中辯論比賽": {
+      "competitionCode": "C2615",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第三十七屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2630",
+      "teamCount": 41,
+      "ageRestriction": null
+    },
+    "第十九屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2507",
+      "teamCount": 32,
+      "ageRestriction": null
+    },
+    "第十屆雲啟盃辯論比賽": {
+      "competitionCode": "C2509",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2518,48 +2616,12 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 16,
       "ageRestriction": null
     },
-    "第三十六屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2516",
-      "teamCount": 31,
-      "ageRestriction": null
-    },
-    "第八屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2623"
-    },
-    "第十八屆叡德盃全國高中職辯論比賽": {
-      "competitionCode": "C2624"
-    },
     "第二十九屆鳳凰盃全國高中職辯論比賽": {
       "competitionCode": "C2621"
     },
-    "第十五屆風雩盃中學辯論錦標賽": {
-      "competitionCode": "C2612",
-      "teamCount": 20,
-      "ageRestriction": null
-    },
-    "蒙泉盃全國高中職辯論比賽": {
-      "competitionCode": "C2613",
-      "teamCount": 19,
-      "ageRestriction": null
-    },
-    "吊嘎盃全國高中職辯論比賽": {
-      "competitionCode": "C2601",
-      "teamCount": 10,
-      "ageRestriction": null
-    },
-    "第二十八屆鳳凰盃全國高中職辯論比賽": {
-      "competitionCode": "C2517",
-      "teamCount": 0,
-      "ageRestriction": null
-    },
-    "第七屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2503",
-      "teamCount": 25,
-      "ageRestriction": null
-    },
-    "第一屆夢箋盃": {
-      "competitionCode": "C2502",
-      "teamCount": 12,
+    "第一屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2401",
+      "teamCount": 14,
       "ageRestriction": null
     },
     "第一屆青雲盃全國高中職辯論錦標賽": {
@@ -2567,94 +2629,29 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 12,
       "ageRestriction": null
     },
-    "第一屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2401",
+    "第五屆輔仁盃全國高中職辯論比賽": {
+      "competitionCode": "C2611",
       "teamCount": 14,
       "ageRestriction": null
     },
-    "第二屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2506",
-      "teamCount": 16,
-      "ageRestriction": null
-    },
-    "第二十一屆齊揚盃": {
-      "competitionCode": "C2607",
-      "teamCount": 24,
-      "ageRestriction": null
-    },
-    "第四屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2510",
-      "teamCount": 22,
-      "ageRestriction": null
-    },
-    "2026核能公投盃全國高中職辯論比賽": {
-      "competitionCode": "C2620"
-    },
-    "第十六屆明京盃全國高中職辯論比賽": {
-      "competitionCode": "C2508",
-      "teamCount": 42,
-      "ageRestriction": null
+    "第十八屆叡德盃全國高中職辯論比賽": {
+      "competitionCode": "C2624"
     },
     "第二屆青雲盃全國高中職辯論錦標賽": {
       "competitionCode": "C2610",
       "teamCount": 14,
       "ageRestriction": null
     },
-    "第二十八屆高中菁英盃": {
-      "competitionCode": "C2608",
-      "teamCount": 92,
+    "第二十八屆鳳凰盃全國高中職辯論比賽": {
+      "competitionCode": "C2517",
+      "teamCount": 0,
       "ageRestriction": null
     },
-    "第十屆雲啟盃辯論比賽": {
-      "competitionCode": "C2509",
-      "teamCount": 14,
-      "ageRestriction": null
+    "第八屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2623"
     },
-    "第十九屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2507",
-      "teamCount": 32,
-      "ageRestriction": null
-    },
-    "第三十五屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2407",
-      "teamCount": 45,
-      "ageRestriction": null
-    },
-    "2025司改盃全國高中職辯論比賽": {
-      "competitionCode": "C2501",
-      "teamCount": 23,
-      "ageRestriction": null
-    },
-    "火雞盃全國高中職辯論比賽": {
-      "competitionCode": "C2602",
-      "teamCount": 21,
-      "ageRestriction": null
-    },
-    "第二十七屆高中菁英盃": {
-      "competitionCode": "C2504",
-      "teamCount": 82,
-      "ageRestriction": null
-    },
-    "第三屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2606",
-      "teamCount": 22,
-      "ageRestriction": null
-    },
-    "第二屆夢箋盃": {
-      "competitionCode": "C2609",
-      "teamCount": 11,
-      "ageRestriction": null
-    },
-    "第二十屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2622"
-    },
-    "第三十七屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2630",
-      "teamCount": 41,
-      "ageRestriction": null
-    },
-    "第五屆輔仁盃全國高中職辯論比賽": {
-      "competitionCode": "C2611",
+    "第一屆明哲盃全國高中職辯論比賽": {
+      "competitionCode": "C2604",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2663,14 +2660,17 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 16,
       "ageRestriction": null
     },
-    "第二十屆辯革盃全國高中職辯論比賽": {
-      "competitionCode": "C2505",
-      "teamCount": 22,
+    "2026核能公投盃全國高中職辯論比賽": {
+      "competitionCode": "C2620"
+    },
+    "第一屆夢箋盃": {
+      "competitionCode": "C2502",
+      "teamCount": 12,
       "ageRestriction": null
     },
-    "第二十一屆辯革盃全國高中辯論比賽": {
-      "competitionCode": "C2615",
-      "teamCount": 14,
+    "火雞盃全國高中職辯論比賽": {
+      "competitionCode": "C2602",
+      "teamCount": 20,
       "ageRestriction": null
     }
   },
@@ -2838,6 +2838,28 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "2026核能公投盃全國高中職辯論比賽", "team": "陽交附中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "主辦方 Facebook「最終隊伍公告」；公告稱共24隊。原文隊名照錄，名單未提供領隊及選手。https://www.facebook.com/permalink.php?story_fbid=pfbid0xzff5EWJGLcZqTPNTohqy1reJLaGKjE3pv55NNgxXu6waLAZh1RRdd15U9i24dXEl&id=61594456802075"},
       {"competitionName": "2026核能公投盃全國高中職辯論比賽", "team": "新竹高中B", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "主辦方 Facebook「最終隊伍公告」；公告稱共24隊。原文隊名照錄，名單未提供領隊及選手。https://www.facebook.com/permalink.php?story_fbid=pfbid0xzff5EWJGLcZqTPNTohqy1reJLaGKjE3pv55NNgxXu6waLAZh1RRdd15U9i24dXEl&id=61594456802075"},
       {"competitionName": "2026核能公投盃全國高中職辯論比賽", "team": "精城高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "主辦方 Facebook「最終隊伍公告」；公告稱共24隊。原文隊名照錄，名單未提供領隊及選手。https://www.facebook.com/permalink.php?story_fbid=pfbid0xzff5EWJGLcZqTPNTohqy1reJLaGKjE3pv55NNgxXu6waLAZh1RRdd15U9i24dXEl&id=61594456802075"}
+    ],
+    "火雞盃全國高中職辯論比賽": [
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "吳律寬", "leaders": ["徐鶴銘", "胡仲亨"], "players": ["徐鶴銘", "林子右", "胡仲亨", "羅立奇", "姚鴻誼", "曾治嘉"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "小丑們要特選跟分科", "leaders": ["林宥辰", "邱愷睿"], "players": ["林宥辰", "邱愷睿"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "危雞百科", "leaders": ["邱詠晴", "林華慈"], "players": ["劉乙澤", "林雯甯"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "別被三清", "leaders": ["彭宥閎", "楊廷昀"], "players": ["彭宥閎", "楊廷昀", "沈佳蓉"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "小籠包", "leaders": ["鄭中允", "許玉蕙"], "players": ["鄭中允", "許玉蕙", "王玉涵", "李昱翰"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "霍金活祭皇家火雞", "leaders": ["張藝耀", "周思寬"], "players": ["張藝耀", "周思寬", "陳孟劭", "林宜蓁"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "燒焦了", "leaders": ["黃忻恩", "張育棋"], "players": ["黃忻恩", "張育棋"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "我們有笨蛋小狗", "leaders": ["羅世澄", "張容榕"], "players": ["羅世澄", "許雅淳", "吳芷妍"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "世界第一大美女何亮諼", "leaders": ["柳智丰", "何亮諼"], "players": ["柳智丰", "何亮諼"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "南北中正一起串聯", "leaders": ["陳彥和", "廖彥喆"], "players": ["陳彥和", "廖彥喆"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "我們都喜歡女生", "leaders": ["陳佳苓", "吳易叡"], "players": ["吳易叡", "陳佳苓"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "哲何新臺幣鱷十億沅", "leaders": ["陳沅妤", "張哲瑎"], "players": ["張哲瑎", "何元皓", "洪睿妤", "陳沅妤"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "謝謝辯論讓我+365", "leaders": ["高偉承", "洪于粧"], "players": ["鄭馨宇", "洪于粧", "李盈盈", "洪子茵", "楊閔媗", "高偉承"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "我要吃火雞", "leaders": ["袁歡", "許丞佐"], "players": ["許丞佑", "許丞佐"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "雞逼雞逼甲巴甲巴", "leaders": ["林孟瑋", "張詠宣"], "players": ["蘇文華", "李子宏", "詹茹澐", "楊歆俞", "李靖芬", "林家伊"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "曉明女中", "leaders": ["徐稜雅", "黃詩甯"], "players": ["張蓓予", "史可歆", "林曖", "黃念慈"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "上鋒小汽車撞誰誰休克", "leaders": ["鐘民棋", "蔡秉譯"], "players": ["詹易翔", "田上敬祐", "鐘靖恩", "周永凌", "林忻潼"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "人右吉吉愛烤雞", "leaders": ["陳宇揚", "王佑喆"], "players": ["陳宇揚", "王佑喆", "魏志融", "方正毅"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "莉莉說的都隊", "leaders": ["朱佳莉", "高慈靜"], "players": ["朱佳莉", "高慈靜", "王奕閎", "鄭玉萱"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
+      {"competitionName": "火雞盃全國高中職辯論比賽", "team": "不知道", "leaders": ["莊承翰", "李韋岑"], "players": ["莊承翰", "賴奕侖", "黃子芸"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"}
     ]
   },
   "competitionRegistry": [
