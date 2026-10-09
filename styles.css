@@ -425,6 +425,12 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-honor:last-child { border-bottom: 0; }
 .event-honor span, .event-honor strong { display: block; }
 .event-honor span { color: var(--coral-text); font-size: 11px; font-weight: 900; }
+.event-honor.mingjing-star-gold, .event-honor.mingjing-star-silver { padding-left: 12px; border-left: 3px solid; }
+.event-honor.mingjing-star-gold { border-left-color: #bb8b12; }
+.event-honor.mingjing-star-silver { border-left-color: #87939b; }
+.event-honor.mingjing-star-gold > span, .event-honor.mingjing-star-silver > span { display: inline-block; border: 1px solid; border-radius: 999px; padding: 3px 9px; line-height: 1.4; }
+.event-honor.mingjing-star-gold > span { border-color: #d3ac42; background: #fff0bd; color: #674b08; }
+.event-honor.mingjing-star-silver > span { border-color: #b5c0c6; background: #e9eef0; color: #3f515b; }
 .event-honor strong { margin-top: 3px; }
 .event-honor small { display: block; margin-top: 3px; color: var(--muted); }
 .event-honor small.honor-date { color: var(--muted); font-size: 11px; }

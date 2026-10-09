@@ -278,6 +278,9 @@ function honorDateLabel(honor, event) {
 }
 
 function renderEventHonors(event) {
+  const mingjingStarClass = (honor) => event.name === "第十七屆明京盃全國高中職辯論比賽"
+    ? honor.honorName === "京日之星" ? " mingjing-star-gold" : honor.honorName === "明京之星" ? " mingjing-star-silver" : ""
+    : "";
   const singleBestGroups = new Map();
   const singleExcellentGroups = new Map();
   const podiumHonors = [];
@@ -335,8 +338,8 @@ function renderEventHonors(event) {
       ${group.team ? `<small>${entityPageLink(group.teamId, group.team)}</small>` : ""}
       <small class="honor-date">${escapeHtml([...group.dateLabels].join("、"))}</small>
     </div>`).join("");
-  const fullCourseRows = fullCourseBestHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
-  const fullCourseExcellentRows = fullCourseExcellentHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
+  const fullCourseRows = fullCourseBestHonors.map((honor) => `<div class="event-honor${mingjingStarClass(honor)}"><span>${escapeHtml(honor.honorName)}</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
+  const fullCourseExcellentRows = fullCourseExcellentHonors.map((honor) => `<div class="event-honor${mingjingStarClass(honor)}"><span>${escapeHtml(honor.honorName)}</span><strong>${playerPageLink(honor.recipient)}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
   const singleExcellentRows = [...singleExcellentGroups.values()].map((group) => `<div class="event-honor"><span>單場優秀辯士</span><strong>${playerPageLink(group.recipient)}${group.count > 1 ? `<span class="honor-count-badge" aria-label="獲獎 ${group.count} 次">*${group.count}</span>` : ""}</strong>${group.team ? `<small>${entityPageLink(group.teamId, group.team)}</small>` : ""}<small class="honor-date">${escapeHtml([...group.dateLabels].join("、"))}</small></div>`).join("");
   const otherRows = otherHonors.map((honor) => `<div class="event-honor"><span>${escapeHtml(honor.honorName)}</span><strong>${honor.honorType === "player" ? playerPageLink(honor.recipient) : entityPageLink(honor.teamId, honorSubject(honor))}</strong>${honor.team ? `<small>${entityPageLink(honor.teamId, honor.team)}</small>` : ""}<small class="honor-date">${escapeHtml(honorDateLabel(honor, event))}</small></div>`).join("");
   return `${podiumRows ? `<h4 class="event-honor-section-title">賽事名次</h4>${podiumRows}` : ""}${fullCourseRows ? `<h4 class="event-honor-section-title">全程最佳辯士</h4>${fullCourseRows}` : ""}${fullCourseExcellentRows ? `<h4 class="event-honor-section-title">全程優秀辯士</h4>${fullCourseExcellentRows}` : ""}${bestRows ? `<h4 class="event-honor-section-title">單場最佳辯士</h4>${bestRows}` : ""}${singleExcellentRows ? `<h4 class="event-honor-section-title">單場優秀辯士</h4>${singleExcellentRows}` : ""}${otherRows ? `<h4 class="event-honor-section-title">其他公開榮譽</h4>${otherRows}` : ""}`;
