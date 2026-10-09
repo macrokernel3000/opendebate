@@ -143,7 +143,7 @@
 
     function renderEventOptions() {
       const events = getEvents();
-      const years = unique(events.map((event) => event.latestDate.slice(0, 4))).sort((a, b) => b.localeCompare(a));
+      const years = unique(events.map((event) => event.latestDate.slice(0, 4) || String(event.metadata?.year || "")).filter(Boolean)).sort((a, b) => b.localeCompare(a));
       els.eventYear.innerHTML = '<option value="">全部年份</option>' + years.map((year) => `<option value="${year}">${year} 年</option>`).join("");
       renderEventFinder();
     }
@@ -153,7 +153,8 @@
       const needle = normalize(els.eventSearch.value);
       const year = els.eventYear.value;
       const filtered = events.filter((event) => {
-        const matchesYear = !year || event.latestDate.startsWith(year);
+        const eventYear = event.latestDate.slice(0, 4) || String(event.metadata?.year || "");
+        const matchesYear = !year || eventYear === year;
         const topicText = event.topics.flatMap((item) => [item.topic, item.explanation]).join(" ");
         return matchesYear && (!needle || normalize(`${event.name} ${topicText}`).includes(needle));
       });
@@ -166,14 +167,14 @@
         }
         const comparison = sortBy === "teams" ? a.teamCount - b.teamCount
           : sortBy === "honors" ? a.honors.length - b.honors.length
-            : (a.latestDate || "").localeCompare(b.latestDate || "");
-        return comparison * sortDirection || (b.latestDate || "").localeCompare(a.latestDate || "") || a.name.localeCompare(b.name, "zh-Hant");
+            : ((a.latestDate || String(a.metadata?.year || "")).localeCompare(b.latestDate || String(b.metadata?.year || "")));
+        return comparison * sortDirection || (b.latestDate || String(b.metadata?.year || "")).localeCompare(a.latestDate || String(a.metadata?.year || "")) || a.name.localeCompare(b.name, "zh-Hant");
       });
       const visibleEvents = sortedEvents;
       els.eventFinderMeta.textContent = `找到 ${visibleEvents.length} 個賽事`;
       let previousAxisValue = null;
       const timelineCards = visibleEvents.map((event, index) => {
-        const eventYear = event.latestDate?.slice(0, 4) || "年份未載明";
+        const eventYear = event.latestDate?.slice(0, 4) || String(event.metadata?.year || "年份未載明");
         const axisValue = sortBy === "teams" ? (event.records.length ? event.teamCount : "未收錄")
           : sortBy === "honors" ? event.honors.length
             : eventYear;
@@ -187,7 +188,7 @@
           ? ` data-axis-label="${escapeHtml(axisLabel)}"`
           : "";
         previousAxisValue = axisValue;
-        const dateLabel = isMobileTimeline ? (event.latestDate ? formatDate(event.latestDate) : "日期未載明") : eventYear;
+        const dateLabel = isMobileTimeline ? (event.latestDate ? formatDate(event.latestDate) : eventYear === "年份未載明" ? "日期未載明" : `${eventYear} 年`) : eventYear;
         const side = index % 2 === 0 ? "left" : "right";
         const resultSummary = event.records.length
           ? `${event.teamCount} 隊 · ${event.records.length} 場`

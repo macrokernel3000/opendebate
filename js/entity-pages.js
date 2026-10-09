@@ -137,7 +137,7 @@
       const eventsByYear = new Map();
       participatedEvents.forEach((name) => {
         const event = getEvents().find((item) => item.name === name);
-        const year = (event?.latestDate || "").slice(0, 4) || "年份未載明";
+        const year = (event?.latestDate || "").slice(0, 4) || String(event?.metadata?.year || "年份未載明");
         eventsByYear.set(year, [...(eventsByYear.get(year) || []), name]);
       });
       const rosterByEvent = new Map(entityRosters.map((roster) => [roster.competitionName, roster]));
