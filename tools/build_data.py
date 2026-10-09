@@ -29,6 +29,7 @@ EVENT_METADATA_PATH = DATA_DIR / "event-metadata.csv"
 SITEMAP_PATH = ROOT / "sitemap.xml"
 SEO_PAGE_PATH = ROOT / "debate-records.html"
 EVENT_ROSTERS_PATH = DATA_DIR / "event-rosters.csv"
+EVENT_ENTITY_ASSIGNMENTS_PATH = DATA_DIR / "event-entity-assignments.csv"
 COMPETITION_REGISTRY_PATH = DATA_DIR / "competition-registry.csv"
 
 REQUIRED_COLUMNS = {
@@ -386,6 +387,43 @@ def load_event_rosters():
         return rosters
 
 
+def apply_event_entity_assignments(records, registry_entries):
+    """Apply source-backed school identity decisions by competition and original team label."""
+    if not EVENT_ENTITY_ASSIGNMENTS_PATH.exists():
+        return
+    with EVENT_ENTITY_ASSIGNMENTS_PATH.open("r", encoding="utf-8-sig", newline="") as source:
+        reader = csv.DictReader(source)
+        required = {"盃賽", "隊伍原名", "學校代碼", "判定依據"}
+        if not reader.fieldnames or not required.issubset(reader.fieldnames):
+            raise SystemExit(f"{EVENT_ENTITY_ASSIGNMENTS_PATH.name} 欄位不完整：需要 " + "、".join(sorted(required)))
+        assignments = {}
+        valid_codes = {entry["code"] for entry in registry_entries if entry.get("type") == "s"}
+        for line_number, row in enumerate(reader, start=2):
+            competition, team, code = clean(row.get("盃賽")), clean(row.get("隊伍原名")), clean(row.get("學校代碼"))
+            if not competition and not team and not code:
+                continue
+            if not competition or not team or code not in valid_codes or not clean(row.get("判定依據")):
+                raise SystemExit(f"{EVENT_ENTITY_ASSIGNMENTS_PATH.name} 第 {line_number} 列缺欄位或使用無效學校代碼")
+            key = (competition, team)
+            if key in assignments and assignments[key]["schoolCode"] != code:
+                raise SystemExit(f"{EVENT_ENTITY_ASSIGNMENTS_PATH.name} 第 {line_number} 列與先前歸戶衝突：{competition}／{team}")
+            assignments[key] = {"schoolCode": code, "basis": clean(row.get("判定依據"))}
+    matched_assignments = set()
+    for record in records:
+        explicit = {}
+        for side, team in record["teams"].items():
+            key = (record["competitionName"], team)
+            assignment = assignments.get(key)
+            if assignment:
+                explicit[side] = assignment["schoolCode"]
+                matched_assignments.add(key)
+        if explicit:
+            record["_teamEntityCodes"] = explicit
+    unused = sorted(set(assignments) - matched_assignments)
+    if unused:
+        raise SystemExit("賽事學校歸戶表有找不到對戰紀錄的項目：" + "、".join(f"{event}／{team}" for event, team in unused))
+
+
 def cell_column(reference):
     return xlsx_reader_module.cell_column(reference)
 
@@ -592,6 +630,9 @@ def build(check_only=False, fail_on_warnings=False):
     records, honors, topics = deduplicate(records), deduplicate(honors), deduplicate(topics)
     if not records and not honors:
         raise SystemExit("資料檔沒有可用的公開戰績或榮譽資料。")
+    apply_event_entity_assignments(records, registry_entries)
+    if EVENT_ENTITY_ASSIGNMENTS_PATH.exists():
+        sources.append(EVENT_ENTITY_ASSIGNMENTS_PATH.name)
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
