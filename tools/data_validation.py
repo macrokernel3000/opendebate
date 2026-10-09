@@ -135,6 +135,10 @@ def validate_event_rosters(records, event_rosters, registry_entries, warn):
             for record in records if record["competitionName"] == competition
             for team in record["teams"].values() if clean(team)
         }
+        # An organizer's roster can be published before the first match result.
+        # It is not a mismatch until there are actual match teams to compare.
+        if not match_teams:
+            continue
         roster_teams = {entry["team"] for entry in entries}
 
         def identity(name):
