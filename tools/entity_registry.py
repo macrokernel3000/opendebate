@@ -108,7 +108,13 @@ def write_registry(entries, registry_path):
 def build_entities(records, honors, registry_entries, registry_path):
     raw_names = set()
     for record in records:
-        raw_names.update(record["teams"].values())
+        explicit_codes = record.get("_teamEntityCodes", {})
+        for side, name in record["teams"].items():
+            # A name that is deliberately scoped by event can refer to more
+            # than one school across the archive. Keep the original match
+            # label, but do not turn it into a new global entity or alias.
+            if not clean(explicit_codes.get(side)):
+                raw_names.add(name)
     for honor in honors:
         if honor["team"]:
             raw_names.add(honor["team"])

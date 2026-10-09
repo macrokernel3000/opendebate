@@ -204,7 +204,7 @@ const { showView } = window.DebateRouter.createRouter({
   getCalendarActivities: () => window.DEBATE_CALENDAR_ACTIVITIES || [],
   getKnownPeople,
   store,
-  legacyEntityIds: { s126: "s027" },
+  legacyEntityIds: { s088: "s046", s126: "s027", s147: "s092" },
   renderEvent,
   renderUpcomingEvent,
   renderActivity,

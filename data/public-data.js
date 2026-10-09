@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T09:31:00",
+  "generatedAt": "2026-10-09T09:41:08",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -287,11 +287,10 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s085", "type": "s", "name": "曉明女中", "aliases": "私立曉明女中"},
     {"code": "s086", "type": "s", "name": "曙光女中", "aliases": "私立曙光女中"},
     {"code": "s087", "type": "s", "name": "曙光高中", "aliases": ""},
-    {"code": "s088", "type": "s", "name": "東山高中", "aliases": ""},
     {"code": "s089", "type": "s", "name": "東港高中", "aliases": "縣立東港高中"},
     {"code": "s090", "type": "s", "name": "松山高中", "aliases": "市立松山高中"},
     {"code": "s091", "type": "s", "name": "板橋高中", "aliases": "板橋|板中|市立板橋高中"},
-    {"code": "s092", "type": "s", "name": "桃園市立陽明高級中等學校", "aliases": "桃園陽明|桃園陽明高中|陽明高中|桃園市立陽明高中"},
+    {"code": "s092", "type": "s", "name": "桃市陽明", "aliases": "桃園市立陽明高級中等學校|桃園陽明|桃園陽明高中|陽明高中|桃園市立陽明高中"},
     {"code": "s093", "type": "s", "name": "桃園高中", "aliases": "桃園高中A|桃園高中B|桃園高中一|桃園高中二|桃高|市立桃園高中"},
     {"code": "s094", "type": "s", "name": "檳城鍾靈獨立中學", "aliases": ""},
     {"code": "s095", "type": "s", "name": "正道中學", "aliases": ""},
@@ -372,7 +371,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s185", "type": "s", "name": "港明中學", "aliases": ""},
     {"code": "s186", "type": "s", "name": "臺中市立清水高級中等學校", "aliases": "清水高中|台中清水高中|臺中清水高中|臺中市立清水高中|台中市立清水高中|台中市立清水高級中等學校"},
     {"code": "s187", "type": "s", "name": "臺北市立中正高級中學", "aliases": "臺北市立中正高中|北市中正高中|北市中正|臺北中正高中|台北中正高中|台北市立中正高中|台北市立中正高級中學"},
-    {"code": "s188", "type": "s", "name": "臺北市立陽明高級中學", "aliases": "臺北陽明高中|臺北市陽明高中|臺北市立陽明高中|北市陽明|陽明高中種子隊B|台北市立陽明高中|台北市立陽明高級中學|台北市陽明高中|台北陽明高中"},
+    {"code": "s188", "type": "s", "name": "北市陽明", "aliases": "臺北市立陽明高級中學|臺北陽明高中|臺北市陽明高中|臺北市立陽明高中|陽明高中種子隊B|台北市立陽明高中|台北市立陽明高級中學|台北市陽明高中|台北陽明高中"},
     {"code": "s189", "type": "s", "name": "國立臺南高級工業職業學校", "aliases": "台南高工|臺南高工|國立台南高工|國立台南高級工業職業學校|國立臺南高工"},
     {"code": "s190", "type": "s", "name": "竹林高中", "aliases": ""},
     {"code": "s191", "type": "s", "name": "苗栗高中", "aliases": ""}
