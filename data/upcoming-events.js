@@ -5,6 +5,7 @@ window.DEBATE_UPCOMING_EVENTS = [
     "name": "第二十屆北區聯合新生盃辯論比賽",
     "startDate": "2026-10-31",
     "endDate": "2026-11-01",
+    "location": "臺北市立景美女子高級中學",
     "keyDates": [
       { "label": "第一次領隊會議", "date": "2026-10-07", "note": "已結束；本次會後公告更新賽程時間。" },
       { "label": "選手資料與入校人員登記截止", "date": "2026-10-23" },
@@ -25,6 +26,7 @@ window.DEBATE_UPCOMING_EVENTS = [
     },
     "sourceUrl": "https://www.facebook.com/share/p/1CsNS2Ji8T/?mibextid=wwXIfr",
     "links": [
+      { "label": "參賽隊伍名單與比賽地點公告", "url": "https://www.facebook.com/share/p/19Yxffdo7T/?mibextid=wwXIfr" },
       { "label": "第一次領隊會議簡報", "url": "https://canva.link/f64djc30th25byd" },
       { "label": "選手資料表單", "url": "https://docs.google.com/forms/d/e/1FAIpQLSdvEOXJY-if3cvr9pOFQ_5cpjIi3TpdK4gBvHVFM8MdYTvpOQ/viewform" },
       { "label": "入校人員登記表單", "url": "https://forms.gle/ZxeZLDv8h1t3qz3c7" },
