@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T08:50:14",
+  "generatedAt": "2026-10-09T09:01:35",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -1143,7 +1143,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 4, "teams": {"affirmative": "臺東高中", "negative": "建功高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "反方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s129", "negative": "s052"}, "id": "match-ef9339588fe8"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 5, "teams": {"affirmative": "桃園高中", "negative": "曙光高中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "正方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s093", "negative": "s087"}, "id": "match-0dd50833e032"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 6, "teams": {"affirmative": "嘉科實中", "negative": "板橋高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "反方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s031", "negative": "s091"}, "id": "match-22dac1e348ef"},
-    {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 7, "teams": {"affirmative": "海山高中", "negative": "私立東山"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "正方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s161", "negative": "s107"}, "id": "match-abf627b67e0f"},
+    {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 7, "teams": {"affirmative": "海山高中", "negative": "市立東山"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "正方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s161", "negative": "s046"}, "id": "match-9bf6b866bae8"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 8, "teams": {"affirmative": "新竹高商", "negative": "市立東山"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "反方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s079", "negative": "s046"}, "id": "match-f606cd58cd6d"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 9, "teams": {"affirmative": "臺南二中", "negative": "嘉華中學"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "正方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s027", "negative": "s034"}, "id": "match-8da2b0c470b8"},
     {"competitionName": "第二十八屆高中菁英盃", "matchDate": "2026-01-26", "period": 1, "venue": 10, "teams": {"affirmative": "虎尾高中", "negative": "德光高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "反方勝", "note": "", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2608", "teamIds": {"affirmative": "s138", "negative": "s061"}, "id": "match-9507b98d0db7"},
@@ -2829,7 +2829,7 @@ window.DEBATE_PUBLIC_DATA = {
     },
     "第二十八屆高中菁英盃": {
       "competitionCode": "C2608",
-      "teamCount": 92,
+      "teamCount": 91,
       "ageRestriction": null
     },
     "第二十八屆鳳凰盃全國高中職辯論比賽": {
