@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T08:23:04",
+  "generatedAt": "2026-10-09T08:37:31",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -17,12 +17,15 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第一屆東岸盃全國高中職辯論比賽.csv",
     "public-data-第一屆陽明盃全國辯論公開賽.csv",
     "public-data-第一屆青雲盃全國高中職辯論錦標賽.csv",
+    "public-data-第一屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第七屆惠蓀盃全國高中職辯論比賽.csv",
+    "public-data-第七屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第三十七屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三十五屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三十六屆蘇州盃高中職辯論錦標賽.csv",
     "public-data-第三屆東岸盃全國高中職辯論比賽.csv",
     "public-data-第三屆輔仁盃全國高中職辯論比賽.csv",
+    "public-data-第三屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第二十一屆辯革盃全國高中辯論比賽.csv",
     "public-data-第二十一屆齊揚盃.csv",
     "public-data-第二十七屆高中菁英盃.csv",
@@ -36,11 +39,18 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二屆夢箋盃.csv",
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
+    "public-data-第二屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第五屆輔仁盃全國高中職辯論比賽.csv",
+    "public-data-第五屆風雩盃全國高中職辯論錦標賽.csv",
+    "public-data-第八屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第六屆台北市政願景盃辯論比賽.csv",
+    "public-data-第六屆風雩盃全國高中職辯論錦標賽.csv",
+    "public-data-第十一屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第十七屆明京盃全國高中職辯論比賽.csv",
+    "public-data-第十三屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第十九屆北區聯合新生盃辯論比賽.csv",
     "public-data-第十九屆宮燈盃辯論公開賽青少年組.csv",
+    "public-data-第十二屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第十五屆明京盃全國高中職辯論比賽.csv",
     "public-data-第十五屆風雩盃中學辯論錦標賽.csv",
     "public-data-第十八屆宮燈盃辯論公開賽青少年組.csv",
@@ -48,6 +58,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第十四屆風雩盃中學辯論錦標賽.csv",
     "public-data-第十屆雲啟盃辯論比賽.csv",
     "public-data-第四屆輔仁盃全國高中職辯論比賽.csv",
+    "public-data-第四屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-育南盃中文教育辯論賽.csv",
     "public-data-蒙泉盃全國高中職辯論比賽.csv",
     "event-rosters.csv",
@@ -362,7 +373,9 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s186", "type": "s", "name": "臺中市立清水高級中等學校", "aliases": "清水高中|台中清水高中|臺中清水高中|臺中市立清水高中|台中市立清水高中|台中市立清水高級中等學校"},
     {"code": "s187", "type": "s", "name": "臺北市立中正高級中學", "aliases": "臺北市立中正高中|北市中正高中|北市中正|臺北中正高中|台北中正高中|台北市立中正高中|台北市立中正高級中學"},
     {"code": "s188", "type": "s", "name": "臺北市立陽明高級中學", "aliases": "臺北陽明高中|臺北市陽明高中|臺北市立陽明高中|北市陽明|陽明高中種子隊B|台北市立陽明高中|台北市立陽明高級中學|台北市陽明高中|台北陽明高中"},
-    {"code": "s189", "type": "s", "name": "國立臺南高級工業職業學校", "aliases": "台南高工|臺南高工|國立台南高工|國立台南高級工業職業學校|國立臺南高工"}
+    {"code": "s189", "type": "s", "name": "國立臺南高級工業職業學校", "aliases": "台南高工|臺南高工|國立台南高工|國立台南高級工業職業學校|國立臺南高工"},
+    {"code": "s190", "type": "s", "name": "竹林高中", "aliases": ""},
+    {"code": "s191", "type": "s", "name": "苗栗高中", "aliases": ""}
   ],
   "records": [
     {"competitionName": "2025「青聲說」全國高中職辯論賽", "matchDate": "", "period": "", "venue": "", "teams": {"affirmative": "三民高中A", "negative": "華僑高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "華僑高中", "note": "A", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2511", "teamIds": {"affirmative": "s149", "negative": "s132"}, "id": "match-96f0858696cd"},
@@ -1672,14 +1685,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 1, "venue": 3, "teams": {"affirmative": "竹科實中", "negative": "復旦高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "竹科實中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s113", "negative": "s057"}, "id": "match-8b460226ef4a"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 1, "venue": 4, "teams": {"affirmative": "內湖高中", "negative": "成功高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "成功高中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s014", "negative": "s067"}, "id": "match-8fc6d36f6011"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 1, "venue": 5, "teams": {"affirmative": "中和高中", "negative": "武陵高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "武陵高中", "note": "初賽第一時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s003", "negative": "s096"}, "id": "match-0f38ff8676dd"},
-    {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 1, "teams": {"affirmative": "東山高中", "negative": "明倫高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "東山高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s088", "negative": "s080"}, "id": "match-f696fa44f4e4"},
+    {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 1, "teams": {"affirmative": "東山高中", "negative": "明倫高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "東山高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s046", "negative": "s080"}, "id": "match-55bfcc9e8740"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 2, "teams": {"affirmative": "平鎮高中", "negative": "斗六高中"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "斗六高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s048", "negative": "s072"}, "id": "match-3b0b2c3440d5"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 3, "teams": {"affirmative": "師大附中", "negative": "竹科實中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "竹科實中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s047", "negative": "s113"}, "id": "match-d7d8d42bd1b0"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 4, "teams": {"affirmative": "政大附中", "negative": "興國高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "興國高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s070", "negative": "s130"}, "id": "match-988f78d97ddf"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 5, "teams": {"affirmative": "武陵高中", "negative": "明道高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "明道高中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s096", "negative": "s184"}, "id": "match-2af9531788bb"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 2, "venue": 6, "teams": {"affirmative": "中山女高", "negative": "臺中女中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "臺中女中", "note": "初賽第二時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s006", "negative": "s122"}, "id": "match-81b1e97b04dc"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 1, "teams": {"affirmative": "竹北高中", "negative": "松山高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "松山高中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s109", "negative": "s090"}, "id": "match-4fc0e12950b3"},
-    {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 2, "teams": {"affirmative": "竹東高中", "negative": "東山高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "竹東高中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s112", "negative": "s088"}, "id": "match-f11a37db02f9"},
+    {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 2, "teams": {"affirmative": "竹東高中", "negative": "東山高中"}, "scores": {"affirmative": 2, "negative": 1}, "winner": "竹東高中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s112", "negative": "s046"}, "id": "match-e985fa1c3df7"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 3, "teams": {"affirmative": "復旦高中", "negative": "師大附中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "師大附中", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s057", "negative": "s047"}, "id": "match-1d31815863fb"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 4, "teams": {"affirmative": "成功高中", "negative": "建國中學"}, "scores": {"affirmative": 0, "negative": 3}, "winner": "建國中學", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s067", "negative": "s054"}, "id": "match-bd8a771b862e"},
     {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "matchDate": "2025-05-17", "period": 3, "venue": 5, "teams": {"affirmative": "延平中學", "negative": "政大附中"}, "scores": {"affirmative": 3, "negative": 0}, "winner": "延平中學", "note": "初賽第三時段", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2515", "teamIds": {"affirmative": "s050", "negative": "s070"}, "id": "match-e88b48b17c22"},
@@ -1886,6 +1899,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第一屆青雲盃全國高中職辯論錦標賽", "matchDate": "2024-05-26", "honorName": "全程優秀辯士", "recipient": "李馨", "team": "中山女高", "honorType": "player", "note": "", "competitionCode": "C2402", "teamId": "s006", "id": "honor-b1be64bad929"},
     {"competitionName": "第一屆青雲盃全國高中職辯論錦標賽", "matchDate": "2024-05-26", "honorName": "全程優秀辯士", "recipient": "蔡佩璇", "team": "興國高中A", "honorType": "player", "note": "", "competitionCode": "C2402", "teamId": "s130", "id": "honor-2b03ff1fb276"},
     {"competitionName": "第一屆青雲盃全國高中職辯論錦標賽", "matchDate": "2024-05-26", "honorName": "全程優秀辯士", "recipient": "翁征承", "team": "興國高中B", "honorType": "player", "note": "", "competitionCode": "C2402", "teamId": "s130", "id": "honor-ace052cdd17b"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "北一女中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1201", "teamId": "s017", "id": "honor-dfc280d25c0a"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "羅東高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1201", "teamId": "s116", "id": "honor-f55760ceb0c1"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "景美女中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1201", "teamId": "s083", "id": "honor-744d0790647c"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "羅東高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1201", "teamId": "s116", "id": "honor-bdbbde74ea62"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "葉瑞綺", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1201", "teamId": "", "id": "honor-0fe471b6468a"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "陳郁諠", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1201", "teamId": "", "id": "honor-a7f2bb9bfa3e"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "王俊顏", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1201", "teamId": "", "id": "honor-be3540864e51"},
+    {"competitionName": "第一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "徐瑞芳", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1201", "teamId": "", "id": "honor-98b82479bad3"},
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "冠軍", "recipient": "竹科實中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2503", "teamId": "s113", "id": "honor-1187e147fc16"},
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "亞軍", "recipient": "南山高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2503", "teamId": "s023", "id": "honor-0506a1a7953b"},
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "季軍", "recipient": "建國中學", "team": "", "honorType": "team", "note": "", "competitionCode": "C2503", "teamId": "s054", "id": "honor-a3476cd83efb"},
@@ -1894,6 +1915,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "全程最佳辯士", "recipient": "蕭甫叡", "team": "南山高中", "honorType": "player", "note": "", "competitionCode": "C2503", "teamId": "s023", "id": "honor-99a66f7fba66"},
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "全程最佳辯士", "recipient": "蔡育瑞", "team": "建國中學", "honorType": "player", "note": "", "competitionCode": "C2503", "teamId": "s054", "id": "honor-443ff9df9fc3"},
     {"competitionName": "第七屆惠蓀盃全國高中職辯論比賽", "matchDate": "2025-12-07", "honorName": "全程最佳辯士", "recipient": "徐瑄毅", "team": "師大附中", "honorType": "player", "note": "", "competitionCode": "C2503", "teamId": "s047", "id": "honor-8f203cae2955"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "建國中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1801", "teamId": "s054", "id": "honor-868f11e0927e"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1801", "teamId": "s047", "id": "honor-785b640cdfed"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "中山女高", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1801", "teamId": "s006", "id": "honor-7ab83331e890"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "羅東高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1801", "teamId": "s116", "id": "honor-f07af4d4e5c1"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "林亮廷", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1801", "teamId": "", "id": "honor-4bfc0f52a37c"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "張景翔", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1801", "teamId": "", "id": "honor-521ee83d02f0"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "周泰寧", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1801", "teamId": "", "id": "honor-6196a78f9ee7"},
+    {"competitionName": "第七屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "鍾宜莊", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1801", "teamId": "", "id": "honor-34af46b5de1c"},
     {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "高雄中學", "team": "高雄中學", "honorType": "team", "note": "", "competitionCode": "C2630", "teamId": "s152", "id": "honor-7affbd15ddb7"},
     {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "和平高中A", "team": "和平高中A", "honorType": "team", "note": "", "competitionCode": "C2630", "teamId": "s160", "id": "honor-9eb88a4991d9"},
     {"competitionName": "第三十七屆蘇州盃高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "永豐高中", "team": "永豐高中", "honorType": "team", "note": "", "competitionCode": "C2630", "teamId": "s100", "id": "honor-077aa96d7114"},
@@ -1943,6 +1972,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第三屆輔仁盃全國高中職辯論比賽", "matchDate": "2024-06-03", "honorName": "全程最佳辯士", "recipient": "彭筱涵", "team": "南山高中", "honorType": "player", "note": "", "competitionCode": "C2403", "teamId": "s023", "id": "honor-939d610fb3ff"},
     {"competitionName": "第三屆輔仁盃全國高中職辯論比賽", "matchDate": "2024-06-03", "honorName": "全程最佳辯士", "recipient": "金承陽", "team": "永平高中", "honorType": "player", "note": "", "competitionCode": "C2403", "teamId": "s098", "id": "honor-134f038f63e6"},
     {"competitionName": "第三屆輔仁盃全國高中職辯論比賽", "matchDate": "2024-06-03", "honorName": "全程最佳辯士", "recipient": "詹舒涵", "team": "南山高中", "honorType": "player", "note": "", "competitionCode": "C2403", "teamId": "s023", "id": "honor-2847db613357"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "延平中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1401", "teamId": "s050", "id": "honor-72a8d7647abc"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "政大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1401", "teamId": "s070", "id": "honor-bb3d1efd2921"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "松山高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1401", "teamId": "s090", "id": "honor-b40ca4b33b18"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1401", "teamId": "s047", "id": "honor-86b075aaca20"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "林彥廷", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1401", "teamId": "", "id": "honor-a1924943131b"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "黃耕鴻", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1401", "teamId": "", "id": "honor-dc479bca1adc"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "史惟中", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1401", "teamId": "", "id": "honor-b2b974e7875e"},
+    {"competitionName": "第三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "賴予亭", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1401", "teamId": "", "id": "honor-6424a578404f"},
     {"competitionName": "第二十一屆辯革盃全國高中辯論比賽", "matchDate": "2026-08-15", "honorName": "冠軍", "recipient": "南山高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2615", "teamId": "s023", "id": "honor-90b11c086b1d"},
     {"competitionName": "第二十一屆辯革盃全國高中辯論比賽", "matchDate": "2026-08-15", "honorName": "亞軍", "recipient": "世宣67", "team": "", "honorType": "team", "note": "", "competitionCode": "C2615", "teamId": "p119", "id": "honor-8faec80ea7f5"},
     {"competitionName": "第二十一屆辯革盃全國高中辯論比賽", "matchDate": "2026-08-15", "honorName": "季軍", "recipient": "成功高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2615", "teamId": "s067", "id": "honor-267676c84a62"},
@@ -2059,6 +2096,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第二屆青雲盃全國高中職辯論錦標賽", "matchDate": "2026-05-31", "honorName": "季軍", "recipient": "學抒情文的拉完了", "team": "", "honorType": "team", "note": "最終", "competitionCode": "C2610", "teamId": "p029", "id": "honor-dde14aec4061"},
     {"competitionName": "第二屆青雲盃全國高中職辯論錦標賽", "matchDate": "2026-05-31", "honorName": "亞軍", "recipient": "學測再加365", "team": "", "honorType": "team", "note": "最終", "competitionCode": "C2610", "teamId": "p031", "id": "honor-b7183f60f0b5"},
     {"competitionName": "第二屆青雲盃全國高中職辯論錦標賽", "matchDate": "2026-05-31", "honorName": "冠軍", "recipient": "鐘米糕小蛋糕我吃吃吃吃吃吃", "team": "", "honorType": "team", "note": "最終", "competitionCode": "C2610", "teamId": "p090", "id": "honor-73e7d601f625"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "延平中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1301", "teamId": "s050", "id": "honor-ef74fc6358e6"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "中崙高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1301", "teamId": "s159", "id": "honor-6f695cb744e7"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1301", "teamId": "s047", "id": "honor-eefa85ba63f3"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "麗山高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1301", "teamId": "s158", "id": "honor-2b08b1d6993b"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "林聖偉", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1301", "teamId": "", "id": "honor-32916d2fc798"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "高鉦詠", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1301", "teamId": "", "id": "honor-705ee4344482"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "胡省珮", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1301", "teamId": "", "id": "honor-b50631eaa2ce"},
+    {"competitionName": "第二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "董元琪", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1301", "teamId": "", "id": "honor-104ff3d356a6"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "冠軍", "recipient": "南山高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2611", "teamId": "s023", "id": "honor-497e370957c5"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "亞軍", "recipient": "建國中學", "team": "", "honorType": "team", "note": "", "competitionCode": "C2611", "teamId": "s054", "id": "honor-73a952368824"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "季軍", "recipient": "瑞祥高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2611", "teamId": "s104", "id": "honor-5b201a23f260"},
@@ -2067,6 +2112,22 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "全程最佳辯士", "recipient": "蔡子竣", "team": "南山高中", "honorType": "player", "note": "", "competitionCode": "C2611", "teamId": "s023", "id": "honor-f4d4f2621387"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "全程最佳辯士", "recipient": "賴研晰", "team": "瑞祥高中", "honorType": "player", "note": "", "competitionCode": "C2611", "teamId": "s104", "id": "honor-1f7a453699c3"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "matchDate": "2026-05-17", "honorName": "全程最佳辯士", "recipient": "蔡育瑞", "team": "建國中學", "honorType": "player", "note": "", "competitionCode": "C2611", "teamId": "s054", "id": "honor-57b0b1ac87f0"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "武陵高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1601", "teamId": "s096", "id": "honor-cadf8d4ab43c"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "麗山高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1601", "teamId": "s158", "id": "honor-3e49f94ff57e"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1601", "teamId": "s047", "id": "honor-942219104aca"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "延平中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1601", "teamId": "s050", "id": "honor-8a72d07747d6"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "黃脩閔", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1601", "teamId": "", "id": "honor-ec89576a5942"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "秦偉翔", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1601", "teamId": "", "id": "honor-ae9f5d4c7fc1"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "黃家綸", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1601", "teamId": "", "id": "honor-dbba44d03861"},
+    {"competitionName": "第五屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "湯于萱", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1601", "teamId": "", "id": "honor-934059c5ddf0"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "政大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1901", "teamId": "s070", "id": "honor-00941d1a3c77"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "苗栗高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1901", "teamId": "s191", "id": "honor-2847e311d05a"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "延平中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1901", "teamId": "s050", "id": "honor-a02fcbba5fa3"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "竹林高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1901", "teamId": "s190", "id": "honor-25df6343d698"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "彭嘉瑜", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1901", "teamId": "", "id": "honor-6ea059524db3"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "胡均霖", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1901", "teamId": "", "id": "honor-ad1716f158fa"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "謝秉諭", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1901", "teamId": "", "id": "honor-72ae3c519c91"},
+    {"competitionName": "第八屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "蘇言文", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1901", "teamId": "", "id": "honor-311a5b3a78a3"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "冠軍", "recipient": "成功高中A", "team": "", "honorType": "team", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "competitionCode": "C2406", "teamId": "s067", "id": "honor-55ef10220a6c"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "亞軍", "recipient": "百齡高中", "team": "", "honorType": "team", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "competitionCode": "C2406", "teamId": "s105", "id": "honor-a6b1b0649668"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "季軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "competitionCode": "C2406", "teamId": "s047", "id": "honor-26bd6a983034"},
@@ -2076,6 +2137,22 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "最佳辯士", "recipient": "陳垣愷", "team": "百齡高中", "honorType": "player", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "honorLevel": "全程最佳辯士", "competitionCode": "C2406", "teamId": "s105", "id": "honor-0c0ec699d358"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "最佳辯士", "recipient": "曾沛庭", "team": "師大附中", "honorType": "player", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "honorLevel": "全程最佳辯士", "competitionCode": "C2406", "teamId": "s047", "id": "honor-bd5b43faf674"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "matchDate": "2024-12-15", "honorName": "影片最佳人氣獎", "recipient": "百齡高中", "team": "", "honorType": "team", "note": "來源：台北願景盃辯論賽官方賽果公告。https://www.facebook.com/permalink.php?story_fbid=pfbid0XcQScbeMEjJ9dtECoRSch63tFM6g1wzP6i8yCu6v9eBgk4qtDm8LweaQnNSauBwQl&id=100064790646409", "competitionCode": "C2406", "teamId": "s105", "id": "honor-eb160b6ea393"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "武陵高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1701", "teamId": "s096", "id": "honor-fda660e25ccf"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "臺中一中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1701", "teamId": "s120", "id": "honor-7bf8a77050bd"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "延平中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1701", "teamId": "s050", "id": "honor-ff7d91f82884"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "北一女中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1701", "teamId": "s017", "id": "honor-d999dda0249b"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "黃脩閔", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1701", "teamId": "", "id": "honor-f1688669ed68"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "鄭吉祥", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1701", "teamId": "", "id": "honor-9d24a7ed934f"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "翁芊智", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1701", "teamId": "", "id": "honor-24077cbedec0"},
+    {"competitionName": "第六屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "莊文琪", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1701", "teamId": "", "id": "honor-7ee44af6e437"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "武陵高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2201", "teamId": "s096", "id": "honor-e1c8e3f1f492"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "前鎮高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2201", "teamId": "s015", "id": "honor-952b6bf65216"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "建國中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2201", "teamId": "s054", "id": "honor-eaff982c04eb"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "臺南一中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2201", "teamId": "s026", "id": "honor-a509b56f4c90"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "吳禹岑", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2201", "teamId": "", "id": "honor-8ae1ec84b3de"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "郭建廷", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2201", "teamId": "", "id": "honor-43d41a7a3d03"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "金哲安", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2201", "teamId": "", "id": "honor-31cbd98d7def"},
+    {"competitionName": "第十一屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "林祐誠", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2201", "teamId": "", "id": "honor-a1cbacc5cd59"},
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "冠軍", "recipient": "臺中女中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2626", "teamId": "s122", "id": "honor-2b14939bebe6"},
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "亞軍", "recipient": "市立大同", "team": "", "honorType": "team", "note": "", "competitionCode": "C2626", "teamId": "s044", "id": "honor-4e3c3315933e"},
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "季軍", "recipient": "臺南女中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2626", "teamId": "s127", "id": "honor-d47b131ad268"},
@@ -2086,6 +2163,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "明京之星", "recipient": "胡仲亨", "team": "高雄中學", "honorType": "player", "note": "", "honorLevel": "全程最佳辯士", "competitionCode": "C2626", "teamId": "s152", "id": "honor-06f64023e60b"},
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "明京之星", "recipient": "張嘉晏", "team": "臺中女中", "honorType": "player", "note": "", "honorLevel": "全程最佳辯士", "competitionCode": "C2626", "teamId": "s122", "id": "honor-8c88c46e04e5"},
     {"competitionName": "第十七屆明京盃全國高中職辯論比賽", "matchDate": "2026-08-30", "honorName": "明京之星", "recipient": "徐惟熙", "team": "臺中女中", "honorType": "player", "note": "", "honorLevel": "全程最佳辯士", "competitionCode": "C2626", "teamId": "s122", "id": "honor-7d4fedff56c9"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "新竹女中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2408", "teamId": "s077", "id": "honor-584704b5a6cb"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "師大附中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2408", "teamId": "s047", "id": "honor-dfde06dffbd5"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "武陵高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2408", "teamId": "s096", "id": "honor-d9225ccbdc19"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "臺中二中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2408", "teamId": "s121", "id": "honor-68409b9d7228"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "范勻瑄", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2408", "teamId": "", "id": "honor-c809155f6fcc"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "林毓宸", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2408", "teamId": "", "id": "honor-b1c4dc0e5bd3"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "陳咸鋐", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2408", "teamId": "", "id": "honor-db7ab4113451"},
+    {"competitionName": "第十三屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "顏羽婕", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2408", "teamId": "", "id": "honor-459a961c5942"},
     {"competitionName": "第十九屆北區聯合新生盃辯論比賽", "matchDate": "2025-11-16", "honorName": "冠軍", "recipient": "成功高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2507", "teamId": "s067", "id": "honor-bcb5d0c473dd"},
     {"competitionName": "第十九屆北區聯合新生盃辯論比賽", "matchDate": "2025-11-16", "honorName": "亞軍", "recipient": "大直高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2507", "teamId": "s038", "id": "honor-d0313fbc2920"},
     {"competitionName": "第十九屆北區聯合新生盃辯論比賽", "matchDate": "2025-11-16", "honorName": "季軍", "recipient": "明倫高中A", "team": "", "honorType": "team", "note": "", "competitionCode": "C2507", "teamId": "s080", "id": "honor-5e00d644f8c7"},
@@ -2093,6 +2178,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第十九屆北區聯合新生盃辯論比賽", "matchDate": "2025-11-16", "honorName": "全程最佳辯士", "recipient": "曾丞浩", "team": "成功高中", "honorType": "player", "note": "", "competitionCode": "C2507", "teamId": "s067", "id": "honor-aaa1dbec6b9a"},
     {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "2025-08-09", "honorName": "單場最佳辯士", "recipient": "黃耕鴻", "team": "延平中學", "honorType": "player", "note": "第二天（D2）；正方四辯；延平中學 vs 我打宮燈？真的假的？", "competitionCode": "C2514", "teamId": "s050", "id": "honor-c0659cebae32"},
     {"competitionName": "第十九屆宮燈盃辯論公開賽青少年組", "matchDate": "2025-08-09", "honorName": "單場最佳辯士", "recipient": "劉冠廷", "team": "小貓喵喵隊", "honorType": "player", "note": "第二天（D2）；反方四辯；輸了許詠雋買恐龍氣球給你 vs 小貓喵喵隊", "competitionCode": "C2514", "teamId": "p139", "id": "honor-4085629c064b"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "南山高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2301", "teamId": "s023", "id": "honor-214799e75736"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "竹北高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2301", "teamId": "s109", "id": "honor-b7c2eff8b7a5"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "板橋高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2301", "teamId": "s091", "id": "honor-ff126c630c68"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "建國中學", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C2301", "teamId": "s054", "id": "honor-40542c6164e0"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "呂芊穎", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2301", "teamId": "", "id": "honor-db5e584eb912"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "董家勳", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2301", "teamId": "", "id": "honor-6ed11a1dd4fa"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "范新玉", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2301", "teamId": "", "id": "honor-a0fe77b943d2"},
+    {"competitionName": "第十二屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "葉冠廷", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C2301", "teamId": "", "id": "honor-e11e1f6751b7"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "", "honorName": "冠軍", "recipient": "南山高中", "team": "南山高中", "honorType": "team", "note": "", "competitionCode": "C2405", "teamId": "s023", "id": "honor-8ef3932e9fd0"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "", "honorName": "亞軍", "recipient": "興大附中", "team": "興大附中", "honorType": "team", "note": "", "competitionCode": "C2405", "teamId": "s131", "id": "honor-3e116937591a"},
     {"competitionName": "第十五屆明京盃全國高中職辯論比賽", "matchDate": "", "honorName": "季軍", "recipient": "復旦高中", "team": "復旦高中", "honorType": "team", "note": "", "competitionCode": "C2405", "teamId": "s057", "id": "honor-abc62e4b13c2"},
@@ -2160,6 +2253,14 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-25", "honorName": "全程最佳辯士", "recipient": "張宸紳", "team": "延平中學", "honorType": "player", "note": "", "competitionCode": "C2510", "teamId": "s050", "id": "honor-6e46956bb7e1"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-25", "honorName": "全程最佳辯士", "recipient": "李祐慈", "team": "屏東女中", "honorType": "player", "note": "", "competitionCode": "C2510", "teamId": "s041", "id": "honor-feb4be9b33e5"},
     {"competitionName": "第四屆輔仁盃全國高中職辯論比賽", "matchDate": "2025-05-25", "honorName": "全程最佳辯士", "recipient": "陳愉絜", "team": "臺中二中", "honorType": "player", "note": "", "competitionCode": "C2510", "teamId": "s121", "id": "honor-f7a2bb99ac49"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "冠軍", "recipient": "臺中一中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1501", "teamId": "s120", "id": "honor-5e536b91eb9f"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "亞軍", "recipient": "中山女高", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1501", "teamId": "s006", "id": "honor-0e5b83f42d2a"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "季軍", "recipient": "北一女中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1501", "teamId": "s017", "id": "honor-91d758eb13eb"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "殿軍", "recipient": "松山高中", "team": "", "honorType": "team", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view", "competitionCode": "C1501", "teamId": "s090", "id": "honor-19f809eca795"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "蔡壹安", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1501", "teamId": "", "id": "honor-805065456318"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "陳建勳", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1501", "teamId": "", "id": "honor-a8393cf5392e"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "李元琦", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1501", "teamId": "", "id": "honor-83618ea27d79"},
+    {"competitionName": "第四屆風雩盃全國高中職辯論錦標賽", "matchDate": "", "honorName": "最佳辯士", "recipient": "顏千筑", "team": "", "honorType": "player", "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊未列獲獎者所屬學校。", "honorLevel": "全程最佳辯士", "competitionCode": "C1501", "teamId": "", "id": "honor-5be8af0325ff"},
     {"competitionName": "育南盃中文教育辯論賽", "matchDate": "2026-08-02", "honorName": "冠軍", "recipient": "台美聯隊", "team": "", "honorType": "team", "note": "", "competitionCode": "C2614", "teamId": "p108", "id": "honor-9afed2db16ff"},
     {"competitionName": "育南盃中文教育辯論賽", "matchDate": "2026-08-02", "honorName": "亞軍", "recipient": "內湖高中", "team": "", "honorType": "team", "note": "", "competitionCode": "C2614", "teamId": "s014", "id": "honor-afa962e8b90c"},
     {"competitionName": "育南盃中文教育辯論賽", "matchDate": "2026-08-02", "honorName": "季軍", "recipient": "我有點想哭", "team": "", "honorType": "team", "note": "", "competitionCode": "C2614", "teamId": "s105", "id": "honor-4a902b42128d"},
@@ -2453,7 +2554,7 @@ window.DEBATE_PUBLIC_DATA = {
       "organizer": "",
       "executionUnit": "",
       "location": "",
-      "note": "收錄初賽與複賽共29場比分及最終獎項；第三時段只有賽程，未提供比分。",
+      "note": "依公告及第十四屆風雩盃秩序冊補入官方隊伍名單（23隊）與完整題解。收錄初賽與複賽共29場比分及最終獎項；第三時段只有賽程，未提供比分。秩序冊未列本屆主辦單位及比賽場地；比賽日期 2025-05-17 至 2025-05-18 依賽果公告。歷屆獎項另依秩序冊第18–20頁補錄。來源：https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view",
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2515",
@@ -2508,64 +2609,144 @@ window.DEBATE_PUBLIC_DATA = {
       "competitionCode": "C2406",
       "teamCount": 13
     },
-    "第三屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2606",
-      "teamCount": 22,
-      "ageRestriction": null
+    "第一屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1201",
+      "teamCount": 0
     },
-    "第十六屆明京盃全國高中職辯論比賽": {
-      "competitionCode": "C2508",
-      "teamCount": 42,
-      "ageRestriction": null
+    "第二屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1301",
+      "teamCount": 0
     },
-    "第七屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2503",
-      "teamCount": 25,
-      "ageRestriction": null
+    "第三屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1401",
+      "teamCount": 0
     },
-    "第二十七屆高中菁英盃": {
-      "competitionCode": "C2504",
-      "teamCount": 82,
-      "ageRestriction": null
+    "第四屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1501",
+      "teamCount": 0
     },
-    "第二屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2506",
-      "teamCount": 16,
-      "ageRestriction": null
+    "第五屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1601",
+      "teamCount": 0
     },
-    "第二屆夢箋盃": {
-      "competitionCode": "C2609",
-      "teamCount": 11,
-      "ageRestriction": null
+    "第六屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1701",
+      "teamCount": 0
     },
-    "第二十屆辯革盃全國高中職辯論比賽": {
-      "competitionCode": "C2505",
-      "teamCount": 22,
-      "ageRestriction": null
+    "第七屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1801",
+      "teamCount": 0
     },
-    "第二十八屆高中菁英盃": {
-      "competitionCode": "C2608",
-      "teamCount": 92,
-      "ageRestriction": null
+    "第八屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C1901",
+      "teamCount": 0
     },
-    "第二十一屆齊揚盃": {
-      "competitionCode": "C2607",
-      "teamCount": 24,
-      "ageRestriction": null
+    "第十一屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C2201",
+      "teamCount": 0
     },
-    "吊嘎盃全國高中職辯論比賽": {
-      "competitionCode": "C2601",
-      "teamCount": 10,
-      "ageRestriction": null
+    "第十二屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C2301",
+      "teamCount": 0
     },
-    "第十五屆風雩盃中學辯論錦標賽": {
-      "competitionCode": "C2612",
-      "teamCount": 20,
-      "ageRestriction": null
+    "第十三屆風雩盃全國高中職辯論錦標賽": {
+      "startDate": "",
+      "endDate": "",
+      "organizer": "",
+      "executionUnit": "",
+      "location": "",
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄（https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view）；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "competitionCode": "C2408",
+      "teamCount": 0
     },
-    "2025司改盃全國高中職辯論比賽": {
-      "competitionCode": "C2501",
-      "teamCount": 23,
+    "第二十屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2622"
+    },
+    "第三十七屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2630",
+      "teamCount": 41,
       "ageRestriction": null
     },
     "第三十五屆蘇州盃高中職辯論錦標賽": {
@@ -2573,12 +2754,9 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 45,
       "ageRestriction": null
     },
-    "第二十屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2622"
-    },
-    "蒙泉盃全國高中職辯論比賽": {
-      "competitionCode": "C2613",
-      "teamCount": 19,
+    "第二十一屆齊揚盃": {
+      "competitionCode": "C2607",
+      "teamCount": 24,
       "ageRestriction": null
     },
     "第四屆輔仁盃全國高中職辯論比賽": {
@@ -2586,24 +2764,9 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 22,
       "ageRestriction": null
     },
-    "第三十六屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2516",
-      "teamCount": 31,
-      "ageRestriction": null
-    },
-    "第二十一屆辯革盃全國高中辯論比賽": {
-      "competitionCode": "C2615",
-      "teamCount": 14,
-      "ageRestriction": null
-    },
-    "第三十七屆蘇州盃高中職辯論錦標賽": {
-      "competitionCode": "C2630",
-      "teamCount": 41,
-      "ageRestriction": null
-    },
-    "第十九屆北區聯合新生盃辯論比賽": {
-      "competitionCode": "C2507",
-      "teamCount": 32,
+    "2025司改盃全國高中職辯論比賽": {
+      "competitionCode": "C2501",
+      "teamCount": 23,
       "ageRestriction": null
     },
     "第十屆雲啟盃辯論比賽": {
@@ -2611,17 +2774,22 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 14,
       "ageRestriction": null
     },
-    "火雞肉飯盃全國高中職辯論比賽": {
-      "competitionCode": "C2603",
+    "第二屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2506",
       "teamCount": 16,
       "ageRestriction": null
     },
-    "第二十九屆鳳凰盃全國高中職辯論比賽": {
-      "competitionCode": "C2621"
+    "第十六屆明京盃全國高中職辯論比賽": {
+      "competitionCode": "C2508",
+      "teamCount": 42,
+      "ageRestriction": null
     },
-    "第一屆東岸盃全國高中職辯論比賽": {
-      "competitionCode": "C2401",
-      "teamCount": 14,
+    "第十八屆叡德盃全國高中職辯論比賽": {
+      "competitionCode": "C2624"
+    },
+    "吊嘎盃全國高中職辯論比賽": {
+      "competitionCode": "C2601",
+      "teamCount": 10,
       "ageRestriction": null
     },
     "第一屆青雲盃全國高中職辯論錦標賽": {
@@ -2629,16 +2797,74 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 12,
       "ageRestriction": null
     },
+    "第一屆夢箋盃": {
+      "competitionCode": "C2502",
+      "teamCount": 12,
+      "ageRestriction": null
+    },
+    "育南盃中文教育辯論賽": {
+      "competitionCode": "C2614",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第一屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2401",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "2026核能公投盃全國高中職辯論比賽": {
+      "competitionCode": "C2620"
+    },
+    "第七屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2503",
+      "teamCount": 25,
+      "ageRestriction": null
+    },
+    "第二屆夢箋盃": {
+      "competitionCode": "C2609",
+      "teamCount": 11,
+      "ageRestriction": null
+    },
     "第五屆輔仁盃全國高中職辯論比賽": {
       "competitionCode": "C2611",
       "teamCount": 14,
       "ageRestriction": null
     },
-    "第十八屆叡德盃全國高中職辯論比賽": {
-      "competitionCode": "C2624"
+    "第十九屆北區聯合新生盃辯論比賽": {
+      "competitionCode": "C2507",
+      "teamCount": 32,
+      "ageRestriction": null
+    },
+    "火雞盃全國高中職辯論比賽": {
+      "competitionCode": "C2602",
+      "teamCount": 20,
+      "ageRestriction": null
     },
     "第二屆青雲盃全國高中職辯論錦標賽": {
       "competitionCode": "C2610",
+      "teamCount": 14,
+      "ageRestriction": null
+    },
+    "第三屆東岸盃全國高中職辯論比賽": {
+      "competitionCode": "C2606",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第八屆惠蓀盃全國高中職辯論比賽": {
+      "competitionCode": "C2623"
+    },
+    "火雞肉飯盃全國高中職辯論比賽": {
+      "competitionCode": "C2603",
+      "teamCount": 16,
+      "ageRestriction": null
+    },
+    "第二十屆辯革盃全國高中職辯論比賽": {
+      "competitionCode": "C2505",
+      "teamCount": 22,
+      "ageRestriction": null
+    },
+    "第一屆明哲盃全國高中職辯論比賽": {
+      "competitionCode": "C2604",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2647,30 +2873,37 @@ window.DEBATE_PUBLIC_DATA = {
       "teamCount": 0,
       "ageRestriction": null
     },
-    "第八屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2623"
+    "第十五屆風雩盃中學辯論錦標賽": {
+      "competitionCode": "C2612",
+      "teamCount": 20,
+      "ageRestriction": null
     },
-    "第一屆明哲盃全國高中職辯論比賽": {
-      "competitionCode": "C2604",
+    "第二十一屆辯革盃全國高中辯論比賽": {
+      "competitionCode": "C2615",
       "teamCount": 14,
       "ageRestriction": null
     },
-    "育南盃中文教育辯論賽": {
-      "competitionCode": "C2614",
-      "teamCount": 16,
+    "第二十七屆高中菁英盃": {
+      "competitionCode": "C2504",
+      "teamCount": 82,
       "ageRestriction": null
     },
-    "2026核能公投盃全國高中職辯論比賽": {
-      "competitionCode": "C2620"
-    },
-    "第一屆夢箋盃": {
-      "competitionCode": "C2502",
-      "teamCount": 12,
+    "蒙泉盃全國高中職辯論比賽": {
+      "competitionCode": "C2613",
+      "teamCount": 19,
       "ageRestriction": null
     },
-    "火雞盃全國高中職辯論比賽": {
-      "competitionCode": "C2602",
-      "teamCount": 20,
+    "第二十九屆鳳凰盃全國高中職辯論比賽": {
+      "competitionCode": "C2621"
+    },
+    "第三十六屆蘇州盃高中職辯論錦標賽": {
+      "competitionCode": "C2516",
+      "teamCount": 31,
+      "ageRestriction": null
+    },
+    "第二十八屆高中菁英盃": {
+      "competitionCode": "C2608",
+      "teamCount": 92,
       "ageRestriction": null
     }
   },
@@ -2860,6 +3093,31 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "火雞盃全國高中職辯論比賽", "team": "人右吉吉愛烤雞", "leaders": ["陳宇揚", "王佑喆"], "players": ["陳宇揚", "王佑喆", "魏志融", "方正毅"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
       {"competitionName": "火雞盃全國高中職辯論比賽", "team": "莉莉說的都隊", "leaders": ["朱佳莉", "高慈靜"], "players": ["朱佳莉", "高慈靜", "王奕閎", "鄭玉萱"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"},
       {"competitionName": "火雞盃全國高中職辯論比賽", "team": "不知道", "leaders": ["莊承翰", "李韋岑"], "players": ["莊承翰", "賴奕侖", "黃子芸"], "status": "報名名單", "sourceNote": "Google 試算表《第一屆火雞盃選手表單》工作表1；隊伍與報名選手依表單逐列登錄；報名名單不代表逐場實際上場紀錄。原表隊名用字差異以單位別名連結；來源：https://docs.google.com/spreadsheets/d/1fsOftooSSBVWoDgD6KXFrrDuwSJ09lYzFTG-404OpLo/edit?gid=0#gid=0"}
+    ],
+    "第十四屆風雩盃中學辯論錦標賽": [
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "松山高中", "leaders": [], "players": ["陳奐尊", "董怡岑", "林郁家", "魏子家", "潘瑞妍"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "建國中學", "leaders": [], "players": ["武煒皓", "陸奕安", "廖致遠", "程冠中", "謝元睿", "林劭謙", "何元皓", "張哲瑎", "錢宥澤", "林彥勳", "陳柏鈞"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "高雄中學", "leaders": [], "players": ["何宇軒", "徐柏勛", "陳恩澤", "黃冠穎", "邱詠威", "李丞賀", "陳秉銨"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "北一女中", "leaders": [], "players": ["張祐寧", "王宥芹", "朱桂瑩", "丁宥云", "黃若琦", "游斯涵"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "武陵高中", "leaders": [], "players": ["陳筳皓", "李云溱", "駱禹安", "陳昆益"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "竹北高中", "leaders": [], "players": ["孫大祐", "江沅其", "徐秉暘", "曾宸潔", "劉佑庭", "李沂蒨", "洪沂萱", "蔣牧辰"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "政大附中", "leaders": [], "players": ["張維庭", "蔡佳辰", "陳亮妤", "許銓祐", "郭以任", "丁誼庭", "陳姸宇", "高子媛", "黃元凱", "祁長泓", "簡碩德", "蘇于皓"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "興國高中", "leaders": [], "players": ["蔡沛霖", "張卉妤", "吳博翰", "蘇歆蕾", "顏榆禎", "陳雅鈞", "陳佳妤"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "竹東高中", "leaders": [], "players": ["羅世澄", "何昕", "施景棠", "李元睿", "許知樂"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "成功高中", "leaders": [], "players": ["黃宇晟", "林豪佑", "鄢昱凱", "林鴻"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "臺中女中", "leaders": [], "players": ["林彧謙", "李姵穎", "唐楷涵", "鄭宇庭", "蕭容琇"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "內湖高中", "leaders": [], "players": ["張有風", "林昕潔", "江安捷", "游皓然", "王綵喬", "王舜禾", "葉玨麟", "蔡沂霖", "王郁茗", "陳庭妮", "林芓云", "張若新"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "明道高中", "leaders": [], "players": ["林軒嘉", "賴鈺茜", "張又心", "陳沂萱", "方莉雅", "蔡汶桓"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；秩序冊原列「明道中學」，為與同屆賽果名稱對齊以「明道高中」作隊伍鍵"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "中和高中", "leaders": [], "players": ["李鍇麟", "陳韋琳", "陳俐穎", "賴思穎", "葉宇勛"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "師大附中", "leaders": [], "players": ["張宸睿", "詹亞承", "陳咸鋐", "盧知嫺", "洪子惞", "游鎧謙"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "東山高中", "leaders": [], "players": ["王銘澤", "鐘民棋", "粘又勻", "蔡秉譯", "高瑀芊"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view；隊伍原名「市立東山」依賽果隊名「東山高中」對應，身份依秩序冊明確校名歸臺中市立東山高級中學"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "平鎮高中", "leaders": [], "players": ["林若妤", "謝晉璿", "羅欣宜", "廖睿宇", "葉芷庭", "鍾元喬", "李鎮吉", "陳天宇", "張宸熏"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "明倫高中", "leaders": [], "players": ["張雨崴", "劉品妤", "林湘婕", "王薇婷", "李浩玄", "陳柏均", "駱建勳", "吳宜恩", "陳崧右", "柯祐鈴"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "斗六高中", "leaders": [], "players": ["章耀予", "許玉蕙", "呂珈綾", "温恒毅", "李婕暄", "陳禹彤", "何佩靜"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "延平中學", "leaders": [], "players": ["廖竑廷", "吳家歆", "陳鈺婷", "劉耘嘉", "潘璿宇"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "中山女高", "leaders": [], "players": ["李昕蓉", "李睿芯", "王依倫", "陳芊彤", "林宜萱", "鄭淑禎", "曾毓淳", "洪睿妤"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "復旦高中", "leaders": [], "players": ["鄭鈞銘", "邱秉澤", "鄞閩萱", "楊秉真", "陳家稚", "蔡佩岑", "洪可芸"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
+      {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "竹科實中", "leaders": [], "players": ["林延芹", "許芷綦", "郭宜姍", "范恭哲", "林奕鋐"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"}
     ]
   },
   "competitionRegistry": [
@@ -2917,6 +3175,17 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "C2628", "name": "2026桃園青年盃華語辯論賽（學青組）", "year": "2026", "status": "results-recorded"},
     {"code": "C2629", "name": "2026法可夢學院線上奧瑞岡式辯論賽（高中組）", "year": "2026", "status": "results-recorded"},
     {"code": "C2630", "name": "第三十七屆蘇州盃高中職辯論錦標賽", "year": "2026", "status": "results-recorded"},
-    {"code": "", "name": "第三屆夢參盃", "year": "", "status": "year-unverified"}
+    {"code": "", "name": "第三屆夢參盃", "year": "", "status": "year-unverified"},
+    {"code": "C1201", "name": "第一屆風雩盃全國高中職辯論錦標賽", "year": "2012", "status": "results-recorded"},
+    {"code": "C1301", "name": "第二屆風雩盃全國高中職辯論錦標賽", "year": "2013", "status": "results-recorded"},
+    {"code": "C1401", "name": "第三屆風雩盃全國高中職辯論錦標賽", "year": "2014", "status": "results-recorded"},
+    {"code": "C1501", "name": "第四屆風雩盃全國高中職辯論錦標賽", "year": "2015", "status": "results-recorded"},
+    {"code": "C1601", "name": "第五屆風雩盃全國高中職辯論錦標賽", "year": "2016", "status": "results-recorded"},
+    {"code": "C1701", "name": "第六屆風雩盃全國高中職辯論錦標賽", "year": "2017", "status": "results-recorded"},
+    {"code": "C1801", "name": "第七屆風雩盃全國高中職辯論錦標賽", "year": "2018", "status": "results-recorded"},
+    {"code": "C1901", "name": "第八屆風雩盃全國高中職辯論錦標賽", "year": "2019", "status": "results-recorded"},
+    {"code": "C2201", "name": "第十一屆風雩盃全國高中職辯論錦標賽", "year": "2022", "status": "results-recorded"},
+    {"code": "C2301", "name": "第十二屆風雩盃全國高中職辯論錦標賽", "year": "2023", "status": "results-recorded"},
+    {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"}
   ]
 };
