@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T09:17:58",
+  "generatedAt": "2026-10-09T09:31:00",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3037,9 +3037,6 @@ window.DEBATE_PUBLIC_DATA = {
     "第二十八屆高中菁英盃": [
       {"competitionName": "第二十八屆高中菁英盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
     ],
-    "第三屆夢參盃": [
-      {"competitionName": "第三屆夢參盃", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
-    ],
     "吊嘎盃全國高中職辯論比賽": [
       {"competitionName": "吊嘎盃全國高中職辯論比賽", "team": "中和高中", "leaders": [], "players": ["黃靖俊"], "status": "本人確認", "sourceNote": "2026-10-08 經本人確認曾代表中和高中參賽；尚未取得完整隊伍名單，本列僅收錄已確認姓名。"}
     ],
@@ -3175,7 +3172,6 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "C2628", "name": "2026桃園青年盃華語辯論賽（學青組）", "year": "2026", "status": "results-recorded"},
     {"code": "C2629", "name": "2026法可夢學院線上奧瑞岡式辯論賽（高中組）", "year": "2026", "status": "results-recorded"},
     {"code": "C2630", "name": "第三十七屆蘇州盃高中職辯論錦標賽", "year": "2026", "status": "results-recorded"},
-    {"code": "", "name": "第三屆夢參盃", "year": "", "status": "year-unverified"},
     {"code": "C1201", "name": "第一屆風雩盃全國高中職辯論錦標賽", "year": "2012", "status": "results-recorded"},
     {"code": "C1301", "name": "第二屆風雩盃全國高中職辯論錦標賽", "year": "2013", "status": "results-recorded"},
     {"code": "C1401", "name": "第三屆風雩盃全國高中職辯論錦標賽", "year": "2014", "status": "results-recorded"},
