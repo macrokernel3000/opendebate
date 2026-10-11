@@ -16,6 +16,13 @@
 
 部署版本須維持明確分流：GitHub Pages 公開版不含會員制度；Sites 版包含會員制度，且目前尚未與 GitHub 版合併。修改前先確認目標版本，不可因同步一般賽事資料或修正公開版而把會員功能併入 GitHub；也不可把 GitHub 版狀態誤當成 Sites 版已更新。
 
+### 三產品硬邊界
+
+- 本 repository `opendebate/` 是公開 GitHub Pages 與公開資料的唯一來源；不得保存會員帳號、登入流程、私人紀錄、管理後台資料或 Sites D1 匯出。
+- 會員版在相鄰 `opendebate-member-site/`，只能透過明確同步腳本讀取本 repository 已建置的公開快照；同步必須記錄本 repository 的固定 SHA，不能反向改寫公開來源。
+- 原生手機 App 在相鄰 `opendebate-ios-app/`。App 內建種子只能由本 repository 已驗證的 `data/public-data.js` 產生；App 線上讀取會員 Sites 的公開端點不代表可讀取會員私人資料。
+- `.sites-opendebate-mobile-preview/` 是網站預覽，不是原生 App。跨產品完成須分別核對來源 SHA、各自測試與各自發布讀回；任何一邊成功都不能代替另外兩邊。
+
 每次新增或修正賽事資料前，先依下列規則檢核來源與欄位：
 
 - 跨 AI／Dot 協作的賽事初稿統一使用 [`templates/賽事登錄模板.md`](templates/賽事登錄模板.md)，完成後交回主維護者彙整；初稿是待核資料，不代表已寫入公開資料或已發布。保留來源、明確區分公告事實與推論，未知欄位留白。
