@@ -696,8 +696,15 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     leaderboardBand: node(),
     mobileHonorTitle: node(),
   };
-  const upcoming = [{ name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" }];
-  const activities = [{ id: "activity-1", name: "CDPA 活動", startDate: "2098-10-17", endDate: "2098-12-19", startTime: "13:30", location: "活動會場" }];
+  const upcoming = [
+    { name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" },
+    { name: "已過期盃賽", startDate: "2000-11-01", endDate: "2000-11-02", location: "舊會場" },
+  ];
+  const activities = [
+    { id: "activity-1", name: "CDPA 活動", startDate: "2098-10-17", endDate: "2098-12-19", startTime: "13:30", location: "活動會場" },
+    { id: "expired-activity", name: "已過期活動", startDate: "2000-11-02", location: "舊活動會場" },
+    { id: "multi-day-activity", name: "仍在期間內的多日活動", startDate: "2000-10-01", days: [{ date: "2000-10-01" }, { date: "2098-11-02" }], location: "多日會場" },
+  ];
   const window = loadFactory("js/home-pages.js", { document: fakeDocument });
   const pages = window.DebateHomePages.createHomePages({
     els,
@@ -733,6 +740,8 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   assert.match(els.mobileUpcomingEvents.innerHTML, /data-activity-id="activity-1"/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /活動會場/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /10\/17–12\/19/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /仍在期間內的多日活動/);
+  assert.doesNotMatch(els.mobileUpcomingEvents.innerHTML, /已過期盃賽|已過期活動|舊會場|舊活動會場/);
   assert.doesNotMatch(els.mobileUpcomingEvents.innerHTML, /data-event-name="CDPA 活動"/);
   assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
   assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");

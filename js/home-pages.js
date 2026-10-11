@@ -80,10 +80,19 @@
 
     function renderMobileUpcomingEvents() {
       if (!els.mobileUpcomingEvents) return;
+      const now = new Date();
+      const today = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+      const effectiveEndDate = (event) => {
+        if (event.endDate) return event.endDate;
+        const lastScheduledDay = (Array.isArray(event.days) ? event.days : [])
+          .reduce((latest, day) => day?.date && day.date > latest ? day.date : latest, "");
+        return lastScheduledDay || event.startDate;
+      };
       const upcoming = [
         ...getUpcomingEvents().map((event) => ({ ...event, itemType: "tournament" })),
         ...getCalendarActivities().map((activity) => ({ ...activity, itemType: "activity" })),
-      ].sort((a, b) => a.startDate.localeCompare(b.startDate));
+      ].filter((event) => effectiveEndDate(event) >= today)
+        .sort((a, b) => a.startDate.localeCompare(b.startDate));
       const dateLabel = (event) => {
         const start = event.startDate.slice(5).replace("-", "/");
         const end = (event.endDate || event.startDate).slice(5).replace("-", "/");
