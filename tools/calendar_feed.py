@@ -83,6 +83,17 @@ def read_calendar_activities(path=None, data_dir=None):
     if not isinstance(activities, list):
         raise SystemExit(f"資料錯誤：{source_path.name} 最外層必須是活動陣列。")
     seen_ids = set()
+
+    def parse_date(value, index, field):
+        try:
+            return datetime.strptime(clean(value), "%Y-%m-%d").date()
+        except ValueError as error:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「{field}」須為 YYYY-MM-DD。") from error
+
+    def validate_time(value, index, field):
+        if not re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", clean(value)):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「{field}」格式錯誤：{value}。")
+
     for index, activity in enumerate(activities, start=1):
         if not isinstance(activity, dict):
             raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆必須是物件。")
@@ -93,16 +104,37 @@ def read_calendar_activities(path=None, data_dir=None):
         for field in ("name", "location"):
             if not clean(activity.get(field)):
                 raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆缺少「{field}」。")
-        try:
-            datetime.strptime(clean(activity.get("startDate")), "%Y-%m-%d")
-        except ValueError as error:
-            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「startDate」須為 YYYY-MM-DD。") from error
+        start_date = parse_date(activity.get("startDate"), index, "startDate")
+        end_date = parse_date(activity.get("endDate") or activity.get("startDate"), index, "endDate")
+        if end_date < start_date:
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆結束日期早於開始日期。")
         for field in ("startTime", "endTime"):
             value = clean(activity.get(field))
-            if value and not re.fullmatch(r"(?:[01]\d|2[0-3]):[0-5]\d", value):
-                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「{field}」格式錯誤：{value}。")
+            if value:
+                validate_time(value, index, field)
         if clean(activity.get("startTime")) and clean(activity.get("endTime")) and activity["endTime"] <= activity["startTime"]:
             raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆結束時間必須晚於開始時間。")
+        days = activity.get("days", [])
+        if not isinstance(days, list):
+            raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆「days」必須是陣列。")
+        seen_days = set()
+        for day_index, day in enumerate(days, start=1):
+            if not isinstance(day, dict):
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {day_index} 個上課日必須是物件。")
+            day_date = parse_date(day.get("date"), index, f"days[{day_index}].date")
+            if day_date < start_date or day_date > end_date or day_date in seen_days:
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {day_index} 個上課日超出活動日期或重複。")
+            seen_days.add(day_date)
+            sessions = day.get("sessions", [])
+            if not isinstance(sessions, list) or not sessions:
+                raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {day_index} 個上課日缺少課程。")
+            for session_index, session in enumerate(sessions, start=1):
+                if not isinstance(session, dict) or not clean(session.get("title")) or not clean(session.get("speaker")):
+                    raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {day_index} 日第 {session_index} 堂缺少講師或主題。")
+                validate_time(session.get("startTime"), index, f"days[{day_index}].sessions[{session_index}].startTime")
+                validate_time(session.get("endTime"), index, f"days[{day_index}].sessions[{session_index}].endTime")
+                if session["endTime"] <= session["startTime"]:
+                    raise SystemExit(f"資料錯誤：{source_path.name} 第 {index} 筆第 {day_index} 日第 {session_index} 堂結束時間必須晚於開始時間。")
         for field in ("sourceUrl", "registrationUrl"):
             value = clean(activity.get(field))
             if value and not re.match(r"^https?://", value, re.IGNORECASE):
@@ -167,26 +199,31 @@ def write_calendar_feed(root=None, data_dir=None):
             f"URL:{detail_url}",
             "STATUS:CONFIRMED", "TRANSP:TRANSPARENT", "END:VEVENT",
         ])
-    for activity in activities:
-        start = datetime.strptime(activity["startDate"], "%Y-%m-%d").date()
+    def append_activity_event(activity, start, start_time="", end_time="", sessions=None, uid_suffix=""):
         if start < today:
-            continue
-        start_time = clean(activity.get("startTime"))
-        end_time = clean(activity.get("endTime"))
+            return
+        sessions = sessions or []
+        session_lines = [
+            f"{session['startTime']}–{session['endTime']} {session['title']}（{session['speaker']}）"
+            for session in sessions
+        ]
         description = "\n".join(filter(None, [
             activity.get("note", ""),
+            *session_lines,
             f"辯題：{activity['topic']}" if activity.get("topic") else "",
             f"報名連結：{activity['registrationUrl']}" if activity.get("registrationUrl") else "公告未列報名連結。",
+            f"公告來源：{activity['sourceUrl']}" if activity.get("sourceUrl") else "",
         ]))
         detail_url = f"https://macrokernel3000.github.io/opendebate/#activity/{quote(activity['id'])}"
+        summary = activity["name"] if not sessions else f"{activity['name']}｜{start.strftime('%m/%d')}"
         activity_lines = [
             "BEGIN:VEVENT",
-            f"UID:{escape_ical(activity['id'])}@opendebate.macrokernel3000.github.io",
+            f"UID:{escape_ical(activity['id'] + uid_suffix)}@opendebate.macrokernel3000.github.io",
             f"DTSTAMP:{stamp}",
-            f"SUMMARY:{escape_ical(activity['name'])}",
+            f"SUMMARY:{escape_ical(summary)}",
             f"LOCATION:{escape_ical(activity['location'])}",
             f"DESCRIPTION:{escape_ical(description)}",
-            f"URL:{activity.get('registrationUrl') or activity.get('sourceUrl') or detail_url}",
+            f"URL:{detail_url if sessions else (activity.get('registrationUrl') or activity.get('sourceUrl') or detail_url)}",
             "STATUS:CONFIRMED", "TRANSP:TRANSPARENT",
         ]
         if start_time:
@@ -201,5 +238,26 @@ def write_calendar_feed(root=None, data_dir=None):
             activity_lines.insert(4, f"DTEND;VALUE=DATE:{(start + timedelta(days=1)).strftime('%Y%m%d')}")
         activity_lines.append("END:VEVENT")
         lines.extend(activity_lines)
+
+    for activity in activities:
+        days = activity.get("days") or []
+        if days:
+            for day in days:
+                sessions = day["sessions"]
+                append_activity_event(
+                    activity,
+                    datetime.strptime(day["date"], "%Y-%m-%d").date(),
+                    sessions[0]["startTime"],
+                    sessions[-1]["endTime"],
+                    sessions,
+                    f"-{day['date']}",
+                )
+        else:
+            append_activity_event(
+                activity,
+                datetime.strptime(activity["startDate"], "%Y-%m-%d").date(),
+                clean(activity.get("startTime")),
+                clean(activity.get("endTime")),
+            )
     lines.append("END:VCALENDAR")
     (project_root / "calendar.ics").write_bytes(("\r\n".join(fold_line(line) for line in lines) + "\r\n").encode("utf-8"))

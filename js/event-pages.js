@@ -104,15 +104,44 @@
       if (!activity || !target) return;
       const titleLevel = target === els.eventPageDetail ? 1 : 2;
       const sectionLevel = titleLevel + 1;
-      const dateLabel = `${formatDate(activity.startDate)}${activity.startTime ? ` ${activity.startTime}` : ""}${activity.endTime ? `–${activity.endTime}` : ""}`;
+      const dateLabel = activity.endDate && activity.endDate !== activity.startDate
+        ? `${formatDate(activity.startDate)}–${formatDate(activity.endDate)}`
+        : `${formatDate(activity.startDate)}${activity.startTime ? ` ${activity.startTime}` : ""}${activity.endTime ? `–${activity.endTime}` : ""}`;
       const safeLink = (url, label) => /^https?:\/\//i.test(String(url || ""))
-        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${label}</a>`
+        ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(label)}</a>`
         : "";
       const links = [
         safeLink(activity.registrationUrl, "報名連結"),
         safeLink(activity.sourceUrl, "主辦方公告"),
         safeLink(activity.relatedUrl, "相關資訊"),
       ].filter(Boolean);
+      const weekdayLabel = (date) => {
+        const parsed = new Date(`${date}T00:00:00Z`);
+        return Number.isNaN(parsed.getTime()) ? "" : `（${["日", "一", "二", "三", "四", "五", "六"][parsed.getUTCDay()]}）`;
+      };
+      const schedule = Array.isArray(activity.days) && activity.days.length ? `
+        <section class="activity-schedule">
+          <h${sectionLevel}>四個上課日</h${sectionLevel}>
+          <div class="activity-day-grid">${activity.days.map((day, dayIndex) => `
+            <article class="activity-day-card">
+              <header><span>第 ${dayIndex + 1} 日</span><h${sectionLevel + 1}>${escapeHtml(formatDate(day.date) + weekdayLabel(day.date))}</h${sectionLevel + 1}></header>
+              <div class="activity-session-list">${(Array.isArray(day.sessions) ? day.sessions : []).map((session) => `
+                <section class="activity-session">
+                  <p class="activity-session-time"><time datetime="${escapeHtml(`${day.date}T${session.startTime}`)}">${escapeHtml(session.startTime)}–${escapeHtml(session.endTime)}</time></p>
+                  <h${sectionLevel + 2}>${escapeHtml(session.title)}</h${sectionLevel + 2}>
+                  <p class="activity-session-speaker">講師｜${escapeHtml(session.speaker)}</p>
+                  ${Array.isArray(session.points) && session.points.length ? `<ul>${session.points.map((point) => `<li>${escapeHtml(point)}</li>`).join("")}</ul>` : ""}
+                </section>`).join("")}</div>
+            </article>`).join("")}</div>
+        </section>` : "";
+      const pricing = Array.isArray(activity.pricing) && activity.pricing.length ? `
+        <section class="activity-pricing event-topics">
+          <h${sectionLevel}>參與方式與費用</h${sectionLevel}>
+          <div class="activity-pricing-grid">${activity.pricing.map((plan) => `
+            <article><h${sectionLevel + 1}>${escapeHtml(plan.audience)}</h${sectionLevel + 1}><p><strong>單堂：</strong>${escapeHtml(plan.single)}</p><p><strong>全套：</strong>${escapeHtml(plan.package)}</p>${plan.note ? `<small>${escapeHtml(plan.note)}</small>` : ""}</article>`).join("")}</div>
+        </section>` : "";
+      const registrationNotes = Array.isArray(activity.registrationNotes) && activity.registrationNotes.length ? `
+        <details class="activity-registration-notes"><summary>報名、繳費與退費重點</summary><ul>${activity.registrationNotes.map((note) => `<li>${escapeHtml(note)}</li>`).join("")}</ul></details>` : "";
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
@@ -125,6 +154,9 @@
         </div>
         ${activity.topic ? `<section class="event-topics"><h${sectionLevel}>辯題</h${sectionLevel}><p>${escapeHtml(activity.topic)}</p></section>` : ""}
         ${activity.note ? `<section class="event-topics"><h${sectionLevel}>活動資訊</h${sectionLevel}><p>${escapeHtml(activity.note)}</p></section>` : ""}
+        ${schedule}
+        ${pricing}
+        ${registrationNotes}
         <section class="event-topics"><h${sectionLevel}>相關連結</h${sectionLevel}>${links.length ? `<p class="activity-source-links">${links.join("　")}</p>` : "<p>目前沒有提供相關連結。</p>"}${activity.registrationUrl ? "" : "<p>公告未提供報名連結。</p>"}</section>`;
     }
   

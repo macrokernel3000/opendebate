@@ -316,6 +316,36 @@ class BuildDataTests(unittest.TestCase):
             unfolded = content.replace("\r\n ", "").replace("\n ", "")
             self.assertIn("URL:https://macrokernel3000.github.io/opendebate/#activity/activity-no-source", unfolded)
 
+    def test_multi_day_calendar_activity_generates_one_event_per_day(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            data_dir = root / "data"
+            data_dir.mkdir()
+            (data_dir / "upcoming-events.js").write_text("window.DEBATE_UPCOMING_EVENTS = [];", encoding="utf-8")
+            (data_dir / "calendar-activities.js").write_text(
+                'window.DEBATE_CALENDAR_ACTIVITIES = [{"id":"course","name":"四日講堂",'
+                '"startDate":"2999-10-26","endDate":"2999-12-19","location":"測試校區",'
+                '"days":[{"date":"2999-10-26","sessions":[{"startTime":"13:00","endTime":"15:00",'
+                '"speaker":"甲","title":"第一堂"}]},{"date":"2999-11-29","sessions":'
+                '[{"startTime":"13:00","endTime":"16:00","speaker":"乙","title":"裁判學"},'
+                '{"startTime":"16:00","endTime":"18:00","speaker":"丙","title":"比賽準備"}]},'
+                '{"date":"2999-12-06","sessions":[{"startTime":"13:00","endTime":"17:00",'
+                '"speaker":"丁","title":"第三日"}]},{"date":"2999-12-19","sessions":'
+                '[{"startTime":"13:00","endTime":"17:00","speaker":"戊","title":"第四日"}]}]}];',
+                encoding="utf-8",
+            )
+            activities = build_data.calendar_feed_module.read_calendar_activities(data_dir=data_dir)
+            self.assertEqual(len(activities[0]["days"]), 4)
+            with patch.object(build_data, "DATA_DIR", data_dir), patch.object(build_data, "ROOT", root):
+                build_data.write_calendar_feed()
+            content = (root / "calendar.ics").read_text(encoding="utf-8")
+            unfolded = content.replace("\r\n ", "").replace("\n ", "")
+            self.assertEqual(unfolded.count("BEGIN:VEVENT"), 4)
+            self.assertIn("UID:course-2999-11-29@opendebate.macrokernel3000.github.io", unfolded)
+            self.assertIn("DTSTART:29991129T050000Z", unfolded)
+            self.assertIn("DTEND:29991129T100000Z", unfolded)
+            self.assertIn("URL:https://macrokernel3000.github.io/opendebate/#activity/course", unfolded)
+
     def test_csv_is_default_source(self):
         old = os.environ.pop("PUBLIC_DATA_SOURCE", None)
         try:

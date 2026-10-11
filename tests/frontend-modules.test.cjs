@@ -170,6 +170,31 @@ test("activity detail renders its date, place, note, and safe source links", () 
   assert.doesNotMatch(dependencies.els.eventPageDetail.innerHTML, /javascript:/);
 });
 
+test("multi-day activity renders one detail with four schedule cards and pricing", () => {
+  const dependencies = eventPageDependencies();
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
+  const activity = {
+    id: "course-1", name: "思辨講堂", startDate: "2026-10-26", endDate: "2026-12-19", location: "測試校區",
+    days: ["2026-10-26", "2026-11-22", "2026-11-29", "2026-12-19"].map((date, index) => ({
+      date,
+      sessions: [{ startTime: "13:00", endTime: "15:00", speaker: `講師${index + 1}`, title: `課程${index + 1}`, points: ["重點"] }],
+    })),
+    pricing: [{ audience: "學生", single: "100 元", package: "600 元", note: "可線上參與" }],
+    registrationNotes: ["五日前繳費"],
+  };
+
+  pages.renderActivity(activity);
+
+  const html = dependencies.els.eventPageDetail.innerHTML;
+  assert.equal((html.match(/class="activity-day-card"/g) || []).length, 4);
+  assert.match(html, /2026-10-26（一）/);
+  assert.match(html, /2026-11-29（日）/);
+  assert.match(html, /課程4/);
+  assert.match(html, /講師4/);
+  assert.match(html, /參與方式與費用/);
+  assert.match(html, /五日前繳費/);
+});
+
 function entityPageDependencies(target) {
   return {
     els: { topicPageDetail: target },
@@ -672,7 +697,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     mobileHonorTitle: node(),
   };
   const upcoming = [{ name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" }];
-  const activities = [{ id: "activity-1", name: "CDPA 活動", startDate: "2098-10-17", startTime: "13:30", location: "活動會場" }];
+  const activities = [{ id: "activity-1", name: "CDPA 活動", startDate: "2098-10-17", endDate: "2098-12-19", startTime: "13:30", location: "活動會場" }];
   const window = loadFactory("js/home-pages.js", { document: fakeDocument });
   const pages = window.DebateHomePages.createHomePages({
     els,
@@ -707,6 +732,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   assert.match(els.mobileUpcomingEvents.innerHTML, /mobile-upcoming-card--activity/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /data-activity-id="activity-1"/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /活動會場/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /10\/17–12\/19/);
   assert.doesNotMatch(els.mobileUpcomingEvents.innerHTML, /data-event-name="CDPA 活動"/);
   assert.match(els.mobileHonorRanking.innerHTML, /全程優秀辯士|優/);
   assert.equal(els.honorLeaderboardTitle.textContent, "近年度榮譽榜");

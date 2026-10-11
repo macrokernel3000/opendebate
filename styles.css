@@ -366,6 +366,28 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-metadata-note a { display: inline-flex; align-items: center; min-height: 44px; color: var(--green); font-weight: 800; text-decoration: underline; text-underline-offset: 2px; }
 .upcoming-event-status { margin: 18px 0; border-left: 4px solid var(--teal); padding: 12px 16px; background: #e9f2ed; color: var(--muted); line-height: 1.7; }
 .event-topics { margin: 0 0 32px; border: 1px solid var(--line); border-left: 7px solid var(--yellow); padding: 20px; background: #fffaf0; }
+.activity-schedule { margin: 0 0 32px; }
+.activity-schedule > h2, .activity-schedule > h3 { margin: 0 0 14px; }
+.activity-day-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.activity-day-card { min-width: 0; overflow: hidden; border: 1px solid #bfd9d5; border-radius: 18px; background: #f4faf8; box-shadow: 0 8px 22px rgba(23, 77, 63, .08); }
+.activity-day-card > header { display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 14px 16px; background: #dfeee9; }
+.activity-day-card > header span { color: var(--green); font-size: 13px; font-weight: 900; }
+.activity-day-card > header h3, .activity-day-card > header h4 { margin: 0; font-size: 18px; }
+.activity-session-list { display: grid; }
+.activity-session { min-width: 0; padding: 16px; }
+.activity-session + .activity-session { border-top: 1px dashed #a9c9c1; }
+.activity-session-time { margin: 0 0 5px; color: var(--coral-text); font-size: 13px; font-weight: 900; }
+.activity-session h4, .activity-session h5 { margin: 0; overflow-wrap: anywhere; font-size: 17px; line-height: 1.4; }
+.activity-session-speaker { margin: 6px 0 8px; color: var(--green); font-weight: 800; }
+.activity-session ul { margin: 0; padding-left: 1.25em; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.activity-pricing-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.activity-pricing-grid article { min-width: 0; border-radius: 12px; padding: 14px; background: #fff; }
+.activity-pricing-grid h3, .activity-pricing-grid h4 { margin: 0 0 8px; color: var(--green); font-size: 16px; }
+.activity-pricing-grid p { margin: 5px 0; overflow-wrap: anywhere; font-size: 14px; line-height: 1.55; }
+.activity-pricing-grid small { display: block; margin-top: 8px; color: var(--muted); line-height: 1.55; }
+.activity-registration-notes { margin: -16px 0 32px; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.activity-registration-notes summary { display: flex; align-items: center; min-height: 48px; padding: 0 16px; color: var(--green); cursor: pointer; font-weight: 900; }
+.activity-registration-notes ul { margin: 0; padding: 0 34px 16px; color: var(--muted); line-height: 1.7; }
 .event-rosters { margin: 0 0 28px; border: 1px solid var(--line); border-top: 5px solid var(--teal); padding: 16px 18px; background: #f7fbf8; }
 .event-rosters > summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: var(--green-dark); font-size: 17px; font-weight: 900; cursor: pointer; list-style: none; }
 .event-rosters > summary::-webkit-details-marker { display: none; }
@@ -1034,6 +1056,11 @@ footer a { margin-left: 12px; color: var(--yellow); font-weight: 800; }
   .event-metadata { align-items: flex-start; gap: 8px 12px; font-size: 14px; line-height: 1.65; }
   .event-metadata small { width: 100%; font-size: 13px; line-height: 1.7; overflow-wrap: anywhere; }
   .event-metadata-note { margin-bottom: 18px; font-size: 14px; line-height: 1.75; }
+  .activity-day-grid, .activity-pricing-grid { grid-template-columns: minmax(0, 1fr); }
+  .activity-day-card > header { padding: 12px 14px; }
+  .activity-session { padding: 14px; }
+  .activity-session h4, .activity-session h5 { font-size: 16px; }
+  .activity-pricing { padding: 14px; }
   .topic-explanation { font-size: 14px; line-height: 1.75; }
   .topic-explanation p { margin-top: 10px; }
   .match-row { grid-template-columns: 46px minmax(0, 1fr) 52px minmax(0, 1fr); gap: 6px; padding-inline: 8px; }
