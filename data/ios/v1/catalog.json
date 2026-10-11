@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "c1163009b66d0dbf0dd896e0fda9bdea284ec5a6ebd41ab6f362a61df03127b7",
-  "generatedAt": "2026-10-12T02:00:47",
+  "datasetVersion": "8a0b4aa315141870330e5c9d5b3e6715a13ed1cadd5c4a80c58591a4daa37013",
+  "generatedAt": "2026-10-12T07:22:46",
   "events": [
     {
       "id": "C1201",
@@ -672,7 +672,7 @@
       "location": "國立新竹科學園區實驗高級中等學校",
       "recordCount": 0,
       "honorCount": 0,
-      "teamCount": 0
+      "teamCount": 16
     }
   ],
   "matches": [

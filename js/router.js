@@ -96,8 +96,12 @@
       els.overviewEventsPanel.classList.remove("is-event-open");
 
       if (eventName) {
-        if (events.some((event) => event.name === eventName)) renderEvent(eventName, els.eventPageDetail);
-        else renderUpcomingEvent(upcomingEvent, els.eventPageDetail);
+        const today = window.DebateEventClassification?.localDateIso?.() || new Date().toISOString().slice(0, 10);
+        if (upcomingEvent && (upcomingEvent.endDate || upcomingEvent.startDate || "") >= today) {
+          renderUpcomingEvent(upcomingEvent, els.eventPageDetail);
+        } else {
+          renderEvent(eventName, els.eventPageDetail);
+        }
       }
       if (activity) renderActivity(activity, els.eventPageDetail);
       if (schoolId) els.schoolPageDetail.innerHTML = renderEntityDetail(store.entityById.get(schoolId), "schoolPageEntityDetail", true);

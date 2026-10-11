@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-12T02:00:47",
+  "generatedAt": "2026-10-12T07:22:46",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -38,7 +38,6 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十屆齊揚盃.csv",
     "public-data-第二屆夢箋盃.csv",
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
-    "public-data-第二屆論衡盃全國高中職辯論比賽.csv",
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
     "public-data-第二屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第五屆輔仁盃全國高中職辯論比賽.csv",
@@ -2355,7 +2354,6 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第二十屆齊揚盃", "topic": "「我們終將成為自己討厭的人」是／不是一件壞事。", "topicId": "topic-f5c7f657035f", "explanation": "", "competitionCode": "C2513"},
     {"competitionName": "第二屆夢箋盃", "topic": "我國應施行無條件基本收入", "topicId": "topic-5853f54af8a1", "explanation": "", "competitionCode": "C2609"},
     {"competitionName": "第二屆東岸盃全國高中職辯論比賽", "topic": "原住民族觀光舞台化對於原住民族文化利大於弊／弊大於利", "topicId": "topic-b359ba1aba2e", "explanation": "", "competitionCode": "C2506"},
-    {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "topic": "我國普通刑法應廢除死刑", "topicId": "topic-02dee37274cf", "explanation": "", "competitionCode": "C2631"},
     {"competitionName": "第二屆青雲盃全國高中職辯論錦標賽", "topic": "富有／貧窮更容易暴露人性之惡", "topicId": "topic-3747457da2fb", "explanation": "", "competitionCode": "C2610"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "topic": "我國動產擔保制度應納入浮動擔保", "topicId": "topic-bdcc2ce3d025", "explanation": "", "competitionCode": "C2611"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "topic": "我國普通刑法應廢除死刑", "topicId": "topic-02dee37274cf", "explanation": "關於死刑存廢的討論從未止息。近期，多名死刑犯共同聲請釋憲；憲法法庭歷經近五個月審理，作成113年憲判字第8號判決，認定死刑部分合憲。\n\n死刑是我國刑事政策的一環，一般認為具有社會隔離、維持社會秩序等作用；其所援引的理由包括威嚇與應報。國家利用人類求生畏死的心理，以明文規定對犯下特定重大犯罪者處以死刑，藉此嚇阻一般人犯罪，維持社會秩序。\n\n長久以來，死刑是否應廢除一直爭論不休。支持死刑的一方認為，極其惡劣、兇惡的犯罪不會絕跡，對罪責重大者判處死刑不可避免。立法委員吳宗憲曾表示，對被害人家屬而言，司法天秤完全傾向加害人，這對社會並不公平；廢死方想方設法讓死刑犯免於死刑，卻對被害人及其家屬的人權隻字未提。\n\n另一方面，廢死方認為，以英國、法國為例，兩國廢除死刑後，支持廢死的民意才超越支持死刑的民意。沒有死刑這項刑罰後，政府需要積極與社會對話，討論監獄改革、社會安全等議題，讓民眾理解死刑未必能帶來社會安全。因此，關鍵在於持續進行社會對話與人權教育。廢死方也認為，死刑不應只由多數民意決定，因為人權保障也關乎少數群體的權益，需要更深入思考。\n\n此外，死刑誤判一旦發生，便難以彌補，會嚴重侵害人權與司法正義。對於死刑是否具有威懾效果，有些研究認為死刑對預防重大犯罪具有一定威懾作用；另有研究指出，其威懾效果並不明顯，或未能有效降低重大犯罪率。廢死方也指出，死刑犯多為弱勢，凸顯社會不平等；唯有消弭不平等、促進社會正義，才能減少犯罪發生。\n\n綜合而言，死刑存廢爭議並未因釋憲而落幕。憲法法庭作成113年憲判字第8號判決後，議題仍未定論。多名被害人家屬批評憲法法庭忽視被害人權益；長年倡議廢除死刑的台灣廢除死刑推動聯盟也不滿判決。113年9月20日，人權公約施行監督聯盟政策中心主任黃嵩立在記者會上批評，大法官「自甘維護二流標準」、「了無新意」。\n\n究竟我國是否應廢除死刑，有待場上雙方辯士討論。", "competitionCode": "C2406"},
@@ -2764,8 +2762,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 16,
-      "competitionCode": "C2631",
-      "teamCount": 0
+      "competitionCode": "C2631"
     },
     "2025司改盃全國高中職辯論比賽": {
       "competitionCode": "C2501",

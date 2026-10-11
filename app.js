@@ -5,6 +5,7 @@ const store = createStore(publicData);
 let records = store.records;
 let honors = store.honors;
 let topics = store.topics;
+let allEvents = [];
 let events = [];
 
 const els = {
@@ -106,7 +107,7 @@ function matchScoreLabel(match) {
 
 const { renderEvent, renderUpcomingEvent, renderActivity } = window.DebateEventPages.createEventPages({
   els,
-  getEvents: () => events,
+  getEvents: () => allEvents,
   store,
   escapeHtml,
   formatDate,
@@ -159,7 +160,7 @@ const { renderEventOptions, renderEventFinder, renderOverview, renderOverviewSta
 
 const { renderSearch, getKnownPeople } = window.DebateSearchPages.createSearchPages({
   els,
-  getEvents: () => events,
+  getEvents: () => allEvents,
   getRecords: () => records,
   getHonors: () => honors,
   getTopics: () => topics,
@@ -198,7 +199,7 @@ const { renderHome, renderLeaderboards, toggleHonorRange, toggleMobileHonorFilte
 
 const { showView } = window.DebateRouter.createRouter({
   els,
-  getEvents: () => events,
+  getEvents: () => allEvents,
   getTopics: () => topics,
   getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS,
   getCalendarActivities: () => window.DEBATE_CALENDAR_ACTIVITIES || [],
@@ -387,8 +388,8 @@ function renderAll() {
   renderHome();
   renderEventOptions();
   renderOverview();
-  window.DebatePersonalRecords?.init({ events: events.map((event) => ({ name: event.name })) });
-  window.DebateTeamRecords?.init({ events: events.map((event) => ({ name: event.name })) });
+  window.DebatePersonalRecords?.init({ events: allEvents.map((event) => ({ name: event.name })) });
+  window.DebateTeamRecords?.init({ events: allEvents.map((event) => ({ name: event.name })) });
   setupReportLinks();
   const initialQuery = new URLSearchParams(location.search).get("q") || "";
   els.globalSearch.value = initialQuery;
@@ -399,6 +400,9 @@ function renderAll() {
   window.DebateHomeSnapshot?.save(publicData.generatedAt);
 }
 
-events = eventSummaries();
+({ allEvents, recordedEvents: events } = window.DebateEventClassification.splitEventCatalog(
+  eventSummaries(),
+  window.DEBATE_UPCOMING_EVENTS || [],
+));
 if (window.DebateHomeSnapshot?.restored) requestAnimationFrame(() => requestAnimationFrame(renderAll));
 else renderAll();

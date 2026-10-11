@@ -107,6 +107,20 @@ test("public data availability accepts a complete empty bundle and rejects missi
   assert.equal(malformedStore.topics.length, 0);
 });
 
+test("future events stay outside the recorded catalog even when roster data already exists", () => {
+  const classification = loadFactory("js/event-classification.js").DebateEventClassification;
+  const allEvents = [
+    { name: "已結束盃", rosters: [] },
+    { name: "未來盃", rosters: [{ team: "測試高中" }] },
+  ];
+  const result = classification.splitEventCatalog(allEvents, [
+    { name: "未來盃", startDate: "2026-10-24", endDate: "2026-10-25" },
+  ], "2026-10-12");
+
+  assert.deepEqual(result.allEvents.map((event) => event.name), ["已結束盃", "未來盃"]);
+  assert.deepEqual(result.recordedEvents.map((event) => event.name), ["已結束盃"]);
+});
+
 function eventPageDependencies() {
   return {
     els: { eventPageDetail: { innerHTML: "" }, eventDetail: { innerHTML: "" } },
@@ -188,7 +202,7 @@ test("event pages render upcoming details and recorded match results", () => {
   const target = dependencies.els.eventPageDetail;
 
   pages.renderUpcomingEvent({
-    name: "未來盃",
+    name: "測試盃",
     competitionCode: "C2602",
     startDate: "2026-02-01",
     endDate: "2026-02-02",
@@ -215,9 +229,11 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /Facebook 原始圖片/);
   assert.match(target.innerHTML, /公告來源/);
   assert.match(target.innerHTML, /報名表單/);
+  assert.match(target.innerHTML, /公告參賽名單/);
+  assert.match(target.innerHTML, /測試高中/);
   assert.match(target.innerHTML, /class="upcoming-event-status"/);
   assert.doesNotMatch(target.innerHTML, /class="search-empty">目前顯示賽事公告資訊/);
-  assert.match(target.innerHTML, /<h1>未來盃<\/h1>/);
+  assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
 
   pages.renderEvent("測試盃", target);
   assert.match(target.innerHTML, /測試高中/);
@@ -1003,6 +1019,8 @@ test("router closes overlays and updates route title and current navigation", ()
   const menuButtons = ["home", "overview", "search", "archive", "reports"].map(makeMenuButton);
   const schoolPageDetail = {};
   const activityRenders = [];
+  const eventRenders = [];
+  const upcomingRenders = [];
   const activity = { id: "activity-1", name: "CDPA 活動" };
   const context = {
     window,
@@ -1021,8 +1039,8 @@ test("router closes overlays and updates route title and current navigation", ()
       eventDetail: { innerHTML: "" }, eventPageDetail: {}, schoolPageDetail, playerPageDetail: {}, topicPageDetail: {},
       globalSearch: { focus() {} },
     },
-    getEvents: () => [{ name: "測試盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [], getCalendarActivities: () => [activity], getKnownPeople: () => ["林選手"],
-    store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent() {}, renderUpcomingEvent() {}, renderActivity: (item) => activityRenders.push(item), renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
+    getEvents: () => [{ name: "測試盃" }, { name: "未來盃" }], getTopics: () => [{ topicId: "topic-1", topic: "測試題目" }], getUpcomingEvents: () => [{ name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02" }], getCalendarActivities: () => [activity], getKnownPeople: () => ["林選手"],
+    store: { entityById: new Map([["s1", { name: "測試高中" }]]) }, legacyEntityIds: { "s-old": "s1" }, renderEvent: (name) => eventRenders.push(name), renderUpcomingEvent: (item) => upcomingRenders.push(item.name), renderActivity: (item) => activityRenders.push(item), renderEntityDetail: (entity) => entity.name, renderPlayerDetail() {}, renderTopic() {},
     closeTransientUI: () => { closeCount += 1; },
     onViewChange: (view) => viewChanges.push(view),
   });
@@ -1038,6 +1056,10 @@ test("router closes overlays and updates route title and current navigation", ()
   router.showView("event/測試盃");
   assert.equal(context.document.title, "測試盃｜公開辯論資訊網");
   assert.equal(navButtons.some((button) => button.attributes.has("aria-current")), false, "detail pages should not mark a different main page current");
+  assert.deepEqual(eventRenders, ["測試盃"]);
+
+  router.showView("event/未來盃");
+  assert.deepEqual(upcomingRenders, ["未來盃"], "a future event with preloaded roster data should still use the upcoming-event page");
 
   router.showView("activity/activity-1");
   assert.equal(context.location.hash, "#activity/activity-1");
