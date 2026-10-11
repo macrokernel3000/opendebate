@@ -17,7 +17,7 @@ window.DEBATE_UPCOMING_EVENTS = [
       "alt": "第二屆論衡盃循環圖，列出十六支隊伍、八個外圍牌組節點與中間晉級路徑",
       "width": 879,
       "height": 1280,
-      "note": "點選圖片可查看完整尺寸。圖中隊伍依循環圖原文顯示；正取公告與循環圖名單有一隊差異，待主辦方公告確認。"
+      "note": "點選圖片可查看完整尺寸。"
     },
     "sourceUrl": "https://drive.google.com/file/d/17ZW411Gzcqk1oD_irq4nrnTzpqKWfG20/view?usp=sharing",
     "links": [

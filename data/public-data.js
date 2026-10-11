@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-12T07:48:38",
+  "generatedAt": "2026-10-12T07:51:27",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -3158,7 +3158,7 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "桃園高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "陽交附中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "竹南高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
-      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "復旦高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "竹東高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報確認復旦高中棄賽，由竹東高中遞補；循環圖列名；2026-10-12 核對，原貼文網址未附"},
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "建功高中A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "建功高中B", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
       {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "新竹高商A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
