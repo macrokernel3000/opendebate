@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "1bb61934f3c69e133f800e9cb5a420043e0c33a1854f96b443cb0957aae708d4",
-  "generatedAt": "2026-10-11T23:43:16",
+  "datasetVersion": "c1163009b66d0dbf0dd896e0fda9bdea284ec5a6ebd41ab6f362a61df03127b7",
+  "generatedAt": "2026-10-12T02:00:47",
   "events": [
     {
       "id": "C1201",
@@ -662,6 +662,17 @@
       "recordCount": 52,
       "honorCount": 9,
       "teamCount": 41
+    },
+    {
+      "id": "C2631",
+      "name": "第二屆論衡盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "location": "國立新竹科學園區實驗高級中等學校",
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0
     }
   ],
   "matches": [

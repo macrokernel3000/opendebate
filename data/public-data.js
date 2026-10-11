@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-09T14:34:49",
+  "generatedAt": "2026-10-12T02:00:47",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -38,6 +38,7 @@ window.DEBATE_PUBLIC_DATA = {
     "public-data-第二十屆齊揚盃.csv",
     "public-data-第二屆夢箋盃.csv",
     "public-data-第二屆東岸盃全國高中職辯論比賽.csv",
+    "public-data-第二屆論衡盃全國高中職辯論比賽.csv",
     "public-data-第二屆青雲盃全國高中職辯論錦標賽.csv",
     "public-data-第二屆風雩盃全國高中職辯論錦標賽.csv",
     "public-data-第五屆輔仁盃全國高中職辯論比賽.csv",
@@ -253,7 +254,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s048", "type": "s", "name": "平鎮高中", "aliases": "市立平鎮高中"},
     {"code": "s049", "type": "s", "name": "康橋國際學校", "aliases": "嘿走去康橋|嘿跑去康橋|康橋國際學校(秀岡校區)"},
     {"code": "s050", "type": "s", "name": "延平中學", "aliases": "延平高中|臺北市私立延平高級中學|延平中學A|延平中學B|台北市私立延平高級中學|私立延平中學"},
-    {"code": "s052", "type": "s", "name": "建功高中", "aliases": "市立建功高中"},
+    {"code": "s052", "type": "s", "name": "建功高中", "aliases": "建功高中A|建功高中B|市立建功高中"},
     {"code": "s053", "type": "s", "name": "建台高中", "aliases": "建臺高中|私立建臺高中|私立建台高中"},
     {"code": "s054", "type": "s", "name": "建國中學", "aliases": "建中|市立建國中學"},
     {"code": "s055", "type": "s", "name": "彰化女中", "aliases": "國立彰化女中"},
@@ -277,8 +278,8 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s075", "type": "s", "name": "新北市立三民高級中學", "aliases": "新北三民|新北三民高中|新北市三民高中|新北市立三民高中"},
     {"code": "s076", "type": "s", "name": "新店高中", "aliases": "市立新店高中"},
     {"code": "s077", "type": "s", "name": "新竹女中", "aliases": "竹女|國立新竹女中"},
-    {"code": "s078", "type": "s", "name": "新竹高中", "aliases": "新竹高中（二）|新竹高中（一）|竹中|國立新竹高中"},
-    {"code": "s079", "type": "s", "name": "新竹高商", "aliases": "國立新竹高商"},
+    {"code": "s078", "type": "s", "name": "新竹高中", "aliases": "新竹高中A|新竹高中B|新竹高中（二）|新竹高中（一）|竹中|國立新竹高中"},
+    {"code": "s079", "type": "s", "name": "新竹高商", "aliases": "新竹高商A|新竹高商B|國立新竹高商"},
     {"code": "s080", "type": "s", "name": "明倫高中", "aliases": "明倫高中A|明倫高中B|市立明倫高中"},
     {"code": "s081", "type": "s", "name": "明道中學", "aliases": ""},
     {"code": "s082", "type": "s", "name": "普台中學", "aliases": "普台高中|普臺中學|普臺高中|私立普台高中|私立普臺高中"},
@@ -310,7 +311,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s110", "type": "s", "name": "竹商五專", "aliases": ""},
     {"code": "s111", "type": "s", "name": "竹崎高中", "aliases": "縣立竹崎高中"},
     {"code": "s112", "type": "s", "name": "竹東高中", "aliases": "國立竹東高中"},
-    {"code": "s113", "type": "s", "name": "竹科實中", "aliases": "竹科實中(二)"},
+    {"code": "s113", "type": "s", "name": "竹科實中", "aliases": "竹科實中A|竹科實中B|竹科實中(二)"},
     {"code": "s114", "type": "s", "name": "精誠中學", "aliases": "精誠高中|私立精誠高中"},
     {"code": "s116", "type": "s", "name": "羅東高中", "aliases": "國立羅東高中"},
     {"code": "s117", "type": "s", "name": "美和高中", "aliases": "私立美和高中"},
@@ -374,7 +375,8 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "s188", "type": "s", "name": "北市陽明", "aliases": "臺北市立陽明高級中學|臺北陽明高中|臺北市陽明高中|臺北市立陽明高中|陽明高中種子隊B|台北市立陽明高中|台北市立陽明高級中學|台北市陽明高中|台北陽明高中"},
     {"code": "s189", "type": "s", "name": "國立臺南高級工業職業學校", "aliases": "台南高工|臺南高工|國立台南高工|國立台南高級工業職業學校|國立臺南高工"},
     {"code": "s190", "type": "s", "name": "竹林高中", "aliases": ""},
-    {"code": "s191", "type": "s", "name": "苗栗高中", "aliases": ""}
+    {"code": "s191", "type": "s", "name": "苗栗高中", "aliases": ""},
+    {"code": "s192", "type": "s", "name": "竹南高中", "aliases": "國立竹南高級中學|國立竹南高中"}
   ],
   "records": [
     {"competitionName": "2025「青聲說」全國高中職辯論賽", "matchDate": "", "period": "", "venue": "", "teams": {"affirmative": "三民高中A", "negative": "華僑高中"}, "scores": {"affirmative": 1, "negative": 2}, "winner": "華僑高中", "note": "A", "players": {"affirmative": [], "negative": []}, "competitionCode": "C2511", "teamIds": {"affirmative": "s149", "negative": "s132"}, "id": "match-96f0858696cd"},
@@ -2353,6 +2355,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"competitionName": "第二十屆齊揚盃", "topic": "「我們終將成為自己討厭的人」是／不是一件壞事。", "topicId": "topic-f5c7f657035f", "explanation": "", "competitionCode": "C2513"},
     {"competitionName": "第二屆夢箋盃", "topic": "我國應施行無條件基本收入", "topicId": "topic-5853f54af8a1", "explanation": "", "competitionCode": "C2609"},
     {"competitionName": "第二屆東岸盃全國高中職辯論比賽", "topic": "原住民族觀光舞台化對於原住民族文化利大於弊／弊大於利", "topicId": "topic-b359ba1aba2e", "explanation": "", "competitionCode": "C2506"},
+    {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "topic": "我國普通刑法應廢除死刑", "topicId": "topic-02dee37274cf", "explanation": "", "competitionCode": "C2631"},
     {"competitionName": "第二屆青雲盃全國高中職辯論錦標賽", "topic": "富有／貧窮更容易暴露人性之惡", "topicId": "topic-3747457da2fb", "explanation": "", "competitionCode": "C2610"},
     {"competitionName": "第五屆輔仁盃全國高中職辯論比賽", "topic": "我國動產擔保制度應納入浮動擔保", "topicId": "topic-bdcc2ce3d025", "explanation": "", "competitionCode": "C2611"},
     {"competitionName": "第六屆台北市政願景盃辯論比賽", "topic": "我國普通刑法應廢除死刑", "topicId": "topic-02dee37274cf", "explanation": "關於死刑存廢的討論從未止息。近期，多名死刑犯共同聲請釋憲；憲法法庭歷經近五個月審理，作成113年憲判字第8號判決，認定死刑部分合憲。\n\n死刑是我國刑事政策的一環，一般認為具有社會隔離、維持社會秩序等作用；其所援引的理由包括威嚇與應報。國家利用人類求生畏死的心理，以明文規定對犯下特定重大犯罪者處以死刑，藉此嚇阻一般人犯罪，維持社會秩序。\n\n長久以來，死刑是否應廢除一直爭論不休。支持死刑的一方認為，極其惡劣、兇惡的犯罪不會絕跡，對罪責重大者判處死刑不可避免。立法委員吳宗憲曾表示，對被害人家屬而言，司法天秤完全傾向加害人，這對社會並不公平；廢死方想方設法讓死刑犯免於死刑，卻對被害人及其家屬的人權隻字未提。\n\n另一方面，廢死方認為，以英國、法國為例，兩國廢除死刑後，支持廢死的民意才超越支持死刑的民意。沒有死刑這項刑罰後，政府需要積極與社會對話，討論監獄改革、社會安全等議題，讓民眾理解死刑未必能帶來社會安全。因此，關鍵在於持續進行社會對話與人權教育。廢死方也認為，死刑不應只由多數民意決定，因為人權保障也關乎少數群體的權益，需要更深入思考。\n\n此外，死刑誤判一旦發生，便難以彌補，會嚴重侵害人權與司法正義。對於死刑是否具有威懾效果，有些研究認為死刑對預防重大犯罪具有一定威懾作用；另有研究指出，其威懾效果並不明顯，或未能有效降低重大犯罪率。廢死方也指出，死刑犯多為弱勢，凸顯社會不平等；唯有消弭不平等、促進社會正義，才能減少犯罪發生。\n\n綜合而言，死刑存廢爭議並未因釋憲而落幕。憲法法庭作成113年憲判字第8號判決後，議題仍未定論。多名被害人家屬批評憲法法庭忽視被害人權益；長年倡議廢除死刑的台灣廢除死刑推動聯盟也不滿判決。113年9月20日，人權公約施行監督聯盟政策中心主任黃嵩立在記者會上批評，大法官「自甘維護二流標準」、「了無新意」。\n\n究竟我國是否應廢除死刑，有待場上雙方辯士討論。", "competitionCode": "C2406"},
@@ -2751,6 +2754,19 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": null,
       "competitionCode": "C2622"
     },
+    "第二屆論衡盃全國高中職辯論比賽": {
+      "startDate": "2026-10-24",
+      "endDate": "2026-10-25",
+      "organizer": "竹科實中辯論研究社、建功高中思考言語社、新竹高商悅言社",
+      "executionUnit": "",
+      "location": "國立新竹科學園區實驗高級中等學校",
+      "note": "簡章標題為「2026論衡盃全國高中職辯論比賽（前竹苗區聯合新生盃）」。採新式奧瑞岡三三三制；正取16隊、備取5隊。正備取公告確認16支正取隊伍，備取隊伍不計入公開名單或參賽隊數。辯題投票由正取隊伍一隊一票，「我國普通刑法應廢除死刑」獲13票並成為正式辯題。簡章：https://drive.google.com/file/d/17ZW411Gzcqk1oD_irq4nrnTzpqKWfG20/view?usp=sharing；程序規則：https://drive.google.com/file/d/1s0pGijwfmKnJJeqsZyCUwbuwPc30Tnpq/view?usp=drivesdk",
+      "awardSelectionCriteria": "",
+      "ageRestriction": true,
+      "brochureTeamLimit": 16,
+      "competitionCode": "C2631",
+      "teamCount": 0
+    },
     "2025司改盃全國高中職辯論比賽": {
       "competitionCode": "C2501",
       "teamCount": 23,
@@ -3122,6 +3138,24 @@ window.DEBATE_PUBLIC_DATA = {
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "中山女高", "leaders": [], "players": ["李昕蓉", "李睿芯", "王依倫", "陳芊彤", "林宜萱", "鄭淑禎", "曾毓淳", "洪睿妤"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "復旦高中", "leaders": [], "players": ["鄭鈞銘", "邱秉澤", "鄞閩萱", "楊秉真", "陳家稚", "蔡佩岑", "洪可芸"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"},
       {"competitionName": "第十四屆風雩盃中學辯論錦標賽", "team": "竹科實中", "leaders": [], "players": ["林延芹", "許芷綦", "郭宜姍", "范恭哲", "林奕鋐"], "status": "公告名單", "sourceNote": "第十四屆風雩盃秩序冊（2025），第9頁「選手名單」；https://drive.google.com/file/d/1Z5uGVUdYpV3DJjmGfbkrSkZ69lO4_LMP/view"}
+    ],
+    "第二屆論衡盃全國高中職辯論比賽": [
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "南山高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "新竹女中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "康橋國際學校", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "平鎮高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "新竹高中A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "台中一中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "桃園高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "陽交附中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "竹南高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "復旦高中", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "建功高中A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "建功高中B", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "新竹高商A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "新竹高商B", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "竹科實中A", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"},
+      {"competitionName": "第二屆論衡盃全國高中職辯論比賽", "team": "竹科實中B", "leaders": [], "players": [], "status": "公告名單", "sourceNote": "經回報之〈第二屆論衡盃正備取名單〉公告文字；列為正取隊伍；2026-10-12 核對，原貼文網址未附"}
     ]
   },
   "competitionRegistry": [
@@ -3189,6 +3223,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "C1901", "name": "第八屆風雩盃全國高中職辯論錦標賽", "year": "2019", "status": "results-recorded"},
     {"code": "C2201", "name": "第十一屆風雩盃全國高中職辯論錦標賽", "year": "2022", "status": "results-recorded"},
     {"code": "C2301", "name": "第十二屆風雩盃全國高中職辯論錦標賽", "year": "2023", "status": "results-recorded"},
-    {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"}
+    {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"},
+    {"code": "C2631", "name": "第二屆論衡盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"}
   ]
 };

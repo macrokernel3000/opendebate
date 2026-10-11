@@ -1,6 +1,24 @@
 // Source traceability status is maintained in docs/近期賽事來源核對.md; source links are not displayed on the website.
 window.DEBATE_UPCOMING_EVENTS = [
   {
+    "id": "lunheng-2",
+    "name": "第二屆論衡盃全國高中職辯論比賽",
+    "startDate": "2026-10-24",
+    "endDate": "2026-10-25",
+    "location": "國立新竹科學園區實驗高級中等學校",
+    "topic": "我國普通刑法應廢除死刑",
+    "topicNote": "辯題由正取隊伍一隊一票選出，共獲 13 票。",
+    "organizer": "竹科實中辯論研究社、建功高中思考言語社、新竹高商悅言社",
+    "keyDates": [
+      { "label": "未參與大會代保者保險證明截止", "date": "2026-10-23", "time": "23:59" }
+    ],
+    "sourceUrl": "https://drive.google.com/file/d/17ZW411Gzcqk1oD_irq4nrnTzpqKWfG20/view?usp=sharing",
+    "links": [
+      { "label": "比賽程序規則", "url": "https://drive.google.com/file/d/1s0pGijwfmKnJJeqsZyCUwbuwPc30Tnpq/view?usp=drivesdk" }
+    ],
+    "competitionCode": "C2631"
+  },
+  {
     "id": "north-rookie-20",
     "name": "第二十屆北區聯合新生盃辯論比賽",
     "startDate": "2026-10-31",
