@@ -12,6 +12,13 @@ window.DEBATE_UPCOMING_EVENTS = [
     "keyDates": [
       { "label": "未參與大會代保者保險證明截止", "date": "2026-10-23", "time": "23:59" }
     ],
+    "scheduleImage": {
+      "src": "assets/events/lunheng-2-cycle.jpg",
+      "alt": "第二屆論衡盃循環圖，列出十六支隊伍、八個外圍牌組節點與中間晉級路徑",
+      "width": 879,
+      "height": 1280,
+      "note": "點選圖片可查看完整尺寸。圖中隊伍依循環圖原文顯示；正取公告與循環圖名單有一隊差異，待主辦方公告確認。"
+    },
     "sourceUrl": "https://drive.google.com/file/d/17ZW411Gzcqk1oD_irq4nrnTzpqKWfG20/view?usp=sharing",
     "links": [
       { "label": "比賽程序規則", "url": "https://drive.google.com/file/d/1s0pGijwfmKnJJeqsZyCUwbuwPc30Tnpq/view?usp=drivesdk" }
@@ -40,6 +47,7 @@ window.DEBATE_UPCOMING_EVENTS = [
       "alt": "第二十屆北區聯合新生盃辯論比賽循環圖，列出八個三隊循環與循環名稱",
       "width": 1321,
       "height": 747,
+      "note": "點選圖片可查看完整尺寸。賽程時間以本次領隊會議會後公告的更正內容為準。",
       "sourceUrl": "https://www.facebook.com/photo/?fbid=122120020149416393&set=a.122114843121416393"
     },
     "sourceUrl": "https://www.facebook.com/share/p/1CsNS2Ji8T/?mibextid=wwXIfr",

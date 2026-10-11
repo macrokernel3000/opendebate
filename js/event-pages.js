@@ -82,7 +82,7 @@
         <section class="upcoming-schedule-image">
           <h${sectionLevel}>賽程循環圖</h${sectionLevel}>
           <a href="${escapeHtml(scheduleImageSrc)}" target="_blank" rel="noopener noreferrer"><img src="${escapeHtml(scheduleImageSrc)}" alt="${escapeHtml(scheduleImage.alt || `${event.name}賽程圖`)}"${scheduleImage.width ? ` width="${escapeHtml(scheduleImage.width)}"` : ""}${scheduleImage.height ? ` height="${escapeHtml(scheduleImage.height)}"` : ""} loading="lazy"></a>
-          <p>點選圖片可查看完整尺寸。賽程時間以本次領隊會議會後公告的更正內容為準。</p>
+          <p>${escapeHtml(scheduleImage.note || "點選圖片可查看完整尺寸。")}</p>
           ${safeExternalLink(scheduleImage.sourceUrl, "Facebook 原始圖片")}
         </section>` : "";
       target.innerHTML = `

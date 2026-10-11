@@ -240,6 +240,7 @@ test("event pages render upcoming details and recorded match results", () => {
       alt: "測試賽程圖",
       width: 1200,
       height: 800,
+      note: "測試賽程提示。",
       sourceUrl: "https://example.com/source-image",
     },
     sourceUrl: "https://example.com/announcement",
@@ -253,6 +254,7 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /2026-01-20 18:00/);
   assert.match(target.innerHTML, /賽程循環圖/);
   assert.match(target.innerHTML, /assets\/events\/test-schedule.jpg/);
+  assert.match(target.innerHTML, /測試賽程提示。/);
   assert.match(target.innerHTML, /Facebook 原始圖片/);
   assert.match(target.innerHTML, /公告來源/);
   assert.match(target.innerHTML, /報名表單/);
