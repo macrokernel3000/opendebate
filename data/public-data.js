@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-12T07:36:37",
+  "generatedAt": "2026-10-12T07:43:15",
   "sources": [
     "public-data-2025「青聲說」全國高中職辯論賽.csv",
     "public-data-2025司改盃全國高中職辯論比賽.csv",
@@ -2764,6 +2764,18 @@ window.DEBATE_PUBLIC_DATA = {
       "brochureTeamLimit": 16,
       "competitionCode": "C2631"
     },
+    "2026 全國大專院校法律系辯論公開賽": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-06",
+      "organizer": "國立政治大學演說辯論社",
+      "executionUnit": "",
+      "location": "國立政治大學（臺北市文山區指南路二段64號）",
+      "note": "協辦單位：CDPA 中華辯論推廣協進會。參賽資格以大專院校在學學生及簡章所列法律系或法律課程資格為準。簡章規劃上限12隊，此為錄取名額上限，不代表實際參賽隊伍或已公布名單。辯題將於第一次領隊會議前公布。本站目前只收錄本賽事未來時程及公開公告，不收錄大專組賽果。正式簡章公告：https://www.facebook.com/permalink.php?story_fbid=pfbid02uKP1HuXbFEtzjcH82vai3GsUqVqeG6XUpwyoa3D62XuYYqTcafMZhvTWPFtgyXCjl&id=100071425020826；完整簡章：https://reurl.cc/OQL2Yv；報名表：https://forms.gle/kQFssCAfzp3569kr5",
+      "awardSelectionCriteria": "",
+      "ageRestriction": null,
+      "brochureTeamLimit": 12,
+      "competitionCode": "C2632"
+    },
     "2025司改盃全國高中職辯論比賽": {
       "competitionCode": "C2501",
       "teamCount": 23,
@@ -3221,6 +3233,7 @@ window.DEBATE_PUBLIC_DATA = {
     {"code": "C2201", "name": "第十一屆風雩盃全國高中職辯論錦標賽", "year": "2022", "status": "results-recorded"},
     {"code": "C2301", "name": "第十二屆風雩盃全國高中職辯論錦標賽", "year": "2023", "status": "results-recorded"},
     {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2631", "name": "第二屆論衡盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"}
+    {"code": "C2631", "name": "第二屆論衡盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
+    {"code": "C2632", "name": "2026 全國大專院校法律系辯論公開賽", "year": "2026", "status": "upcoming"}
   ]
 };

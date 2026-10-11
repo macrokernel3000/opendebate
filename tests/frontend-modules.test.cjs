@@ -232,6 +232,7 @@ test("event pages render upcoming details and recorded match results", () => {
     startDate: "2026-02-01",
     endDate: "2026-02-02",
     organizer: "主辦單位",
+    coOrganizer: "協辦單位",
     location: "比賽地點",
     keyDates: [{ label: "領隊會議", date: "2026-01-20", time: "18:00" }],
     scheduleImage: {
@@ -245,6 +246,7 @@ test("event pages render upcoming details and recorded match results", () => {
     links: [{ label: "報名表單", url: "https://example.com/form" }],
   }, target);
   assert.match(target.innerHTML, /主辦單位/);
+  assert.match(target.innerHTML, /協辦單位/);
   assert.match(target.innerHTML, /賽事代號 C2602/);
   assert.match(target.innerHTML, /比賽地點/);
   assert.match(target.innerHTML, /領隊會議/);
@@ -257,6 +259,7 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /公告參賽名單/);
   assert.match(target.innerHTML, /測試高中/);
   assert.match(target.innerHTML, /class="upcoming-event-status"/);
+  assert.match(target.innerHTML, /賽果與獎項待公開後收錄/);
   assert.doesNotMatch(target.innerHTML, /class="search-empty">目前顯示賽事公告資訊/);
   assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
 
@@ -279,6 +282,15 @@ test("event pages render upcoming details and recorded match results", () => {
   const inlineTarget = { innerHTML: "" };
   pages.renderEvent("測試盃", inlineTarget);
   assert.match(inlineTarget.innerHTML, /<h2>測試盃<\/h2>/);
+
+  pages.renderUpcomingEvent({
+    name: "大專測試盃",
+    startDate: "2026-12-05",
+    endDate: "2026-12-06",
+    statusNote: "本站目前僅收錄本賽事時程與公開公告，不收錄大專組賽果。",
+  }, target);
+  assert.match(target.innerHTML, /僅收錄本賽事時程與公開公告/);
+  assert.doesNotMatch(target.innerHTML, /賽果與獎項待公開後收錄/);
 });
 
 test("event summaries do not show unknown teams or matches as zero and avoid repeated single-day dates", () => {

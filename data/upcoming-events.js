@@ -84,6 +84,30 @@ window.DEBATE_UPCOMING_EVENTS = [
     "competitionCode": "C2623"
   },
   {
+    "id": "university-law-debate-open-2026",
+    "name": "2026 全國大專院校法律系辯論公開賽",
+    "startDate": "2026-12-05",
+    "endDate": "2026-12-06",
+    "location": "國立政治大學（臺北市文山區指南路二段64號）",
+    "topic": "將於第一次領隊會議前公布",
+    "organizer": "國立政治大學演說辯論社",
+    "coOrganizer": "CDPA 中華辯論推廣協進會",
+    "keyDates": [
+      { "label": "報名開始", "date": "2026-10-05", "time": "22:00", "note": "已結束；免費報名。" },
+      { "label": "報名截止", "date": "2026-10-11", "time": "23:59", "note": "已截止。" },
+      { "label": "正取及備取名單公告", "date": "2026-10-12" },
+      { "label": "正取隊伍匯款截止", "date": "2026-10-18", "time": "23:59", "note": "須依大會公告完成匯款確認。" },
+      { "label": "正式辯士名單更動截止", "date": "2026-11-20", "time": "23:59" }
+    ],
+    "sourceUrl": "https://www.facebook.com/permalink.php?story_fbid=pfbid02uKP1HuXbFEtzjcH82vai3GsUqVqeG6XUpwyoa3D62XuYYqTcafMZhvTWPFtgyXCjl&id=100071425020826",
+    "links": [
+      { "label": "完整簡章", "url": "https://reurl.cc/OQL2Yv" },
+      { "label": "報名表（已截止）", "url": "https://forms.gle/kQFssCAfzp3569kr5" }
+    ],
+    "statusNote": "本站目前僅收錄本賽事時程與公開公告，不收錄大專組賽果。",
+    "competitionCode": "C2632"
+  },
+  {
     "id": "phoenix-29",
     "name": "第二十九屆鳳凰盃全國高中職辯論比賽",
     "startDate": "2026-12-26",

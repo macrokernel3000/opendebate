@@ -64,7 +64,7 @@
       const rosterSection = renderRosterSection(storedEvent?.rosters || [], sectionLevel + 2);
       const dateLabel = formatEventDateRange(event.startDate, event.endDate);
       const metadata = [
-        event.organizer || event.executionUnit ? `<div class="event-meta-parties">${event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : ""}${event.executionUnit ? `<div><span>執行單位</span><strong>${escapeHtml(event.executionUnit)}</strong></div>` : ""}</div>` : "",
+        event.organizer || event.coOrganizer || event.executionUnit ? `<div class="event-meta-parties">${event.organizer ? `<div><span>主辦單位</span><strong>${escapeHtml(event.organizer)}</strong></div>` : ""}${event.coOrganizer ? `<div><span>協辦單位</span><strong>${escapeHtml(event.coOrganizer)}</strong></div>` : ""}${event.executionUnit ? `<div><span>執行單位</span><strong>${escapeHtml(event.executionUnit)}</strong></div>` : ""}</div>` : "",
         event.location ? `<div class="event-meta-place"><span>舉辦地點</span><strong>${escapeHtml(event.location)}</strong></div>` : "",
       ].filter(Boolean).join("");
       const keyDates = (event.keyDates || []).filter((item) => item && item.label && (item.date || item.note)).map((item) => `
@@ -97,7 +97,7 @@
         ${keyDates ? `<section class="upcoming-key-dates"><h${sectionLevel}>重要時程</h${sectionLevel}><ul>${keyDates}</ul></section>` : ""}
         ${scheduleImageSection}
         ${relatedLinks.length ? `<section class="event-topics upcoming-related-links"><h${sectionLevel}>公告與表單</h${sectionLevel}><p>${relatedLinks.join("　")}</p></section>` : ""}
-        <p class="upcoming-event-status">目前顯示賽事公告資訊；賽果與獎項待公開後收錄。</p>`;
+        <p class="upcoming-event-status">${escapeHtml(event.statusNote || "目前顯示賽事公告資訊；賽果與獎項待公開後收錄。")}</p>`;
     }
 
     function renderActivity(activity, target = els.eventPageDetail) {
