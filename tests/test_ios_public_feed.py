@@ -51,6 +51,24 @@ class IOSPublicFeedTests(unittest.TestCase):
             self.assertEqual(manifest["byteCount"], len(data))
             self.assertEqual(json.loads(data)["datasetVersion"], catalog["datasetVersion"])
 
+    def test_new_public_event_changes_version_and_enters_snapshot(self):
+        original = ios_public_feed.build_catalog(self.sample())
+        updated = self.sample()
+        updated["competitionRegistry"].append({
+            "code": "C2602", "name": "新增盃", "year": "2026", "status": "results-recorded"
+        })
+        updated["records"].append({
+            "id": "match-2", "competitionName": "新增盃", "matchDate": "2026-10-11",
+            "period": 1, "venue": 1,
+            "teams": {"affirmative": "丙校", "negative": "丁校"},
+            "scores": {"affirmative": 1, "negative": 2},
+        })
+        refreshed = ios_public_feed.build_catalog(updated)
+
+        self.assertNotEqual(original["datasetVersion"], refreshed["datasetVersion"])
+        self.assertIn("C2602", {event["id"] for event in refreshed["events"]})
+        self.assertIn("match-2", {match["id"] for match in refreshed["matches"]})
+
 
 if __name__ == "__main__":
     unittest.main()
