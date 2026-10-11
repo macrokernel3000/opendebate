@@ -63,7 +63,7 @@ jobs:
         id: changes
         run: |
           set -euo pipefail
-          git add -- data/public-data.js data/update-report.txt data/entity-registry.csv index.html calendar.ics sitemap.xml debate-records.html
+          git add -- data/public-data.js data/ios/v1/catalog.json data/ios/v1/manifest.json data/update-report.txt data/entity-registry.csv index.html calendar.ics sitemap.xml debate-records.html
           python tools/prepare_sheet_update.py \
             --base-ref origin/main \
             --before-report /tmp/update-report-before.txt \

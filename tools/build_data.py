@@ -14,6 +14,7 @@ import data_validation as data_validation_module
 import entity_registry as entity_registry_module
 import source_reader as source_reader_module
 import xlsx_reader as xlsx_reader_module
+import ios_public_feed as ios_public_feed_module
 
 SCHOOL_ENDINGS = entity_registry_module.SCHOOL_ENDINGS
 KNOWN_SCHOOL_SHORT_NAMES = entity_registry_module.KNOWN_SCHOOL_SHORT_NAMES
@@ -31,6 +32,7 @@ SEO_PAGE_PATH = ROOT / "debate-records.html"
 EVENT_ROSTERS_PATH = DATA_DIR / "event-rosters.csv"
 EVENT_ENTITY_ASSIGNMENTS_PATH = DATA_DIR / "event-entity-assignments.csv"
 COMPETITION_REGISTRY_PATH = DATA_DIR / "competition-registry.csv"
+IOS_FEED_DIR = DATA_DIR / "ios" / "v1"
 
 REQUIRED_COLUMNS = {
     "資料類型", "盃賽", "日期", "時段", "會場", "正方學校", "反方學校",
@@ -701,6 +703,7 @@ def build(check_only=False, fail_on_warnings=False):
         ],
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + format_public_json(payload) + ";\n", encoding="utf-8")
+    ios_public_feed_module.write_feed(payload, IOS_FEED_DIR)
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
     events = event_names(records, honors, topics)

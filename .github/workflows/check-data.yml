@@ -6,6 +6,7 @@ on:
     paths:
       - "data/public-data*.csv"
       - "data/public-data.js"
+      - "data/ios/v1/**"
       - "data/update-report.txt"
       - "data/entity-registry.csv"
       - "data/competition-registry.csv"
@@ -19,6 +20,7 @@ on:
       - "tools/check_generated.py"
       - "tools/data_validation.py"
       - "tools/entity_registry.py"
+      - "tools/ios_public_feed.py"
       - "tools/prepare_sheet_update.py"
       - "tools/source_reader.py"
       - "tools/xlsx_reader.py"
@@ -35,6 +37,7 @@ on:
     paths:
       - "data/public-data*.csv"
       - "data/public-data.js"
+      - "data/ios/v1/**"
       - "data/update-report.txt"
       - "data/entity-registry.csv"
       - "data/competition-registry.csv"
@@ -48,6 +51,7 @@ on:
       - "tools/check_generated.py"
       - "tools/data_validation.py"
       - "tools/entity_registry.py"
+      - "tools/ios_public_feed.py"
       - "tools/prepare_sheet_update.py"
       - "tools/source_reader.py"
       - "tools/xlsx_reader.py"

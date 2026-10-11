@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "catalogSchemaVersion": 1,
+  "datasetVersion": "1bb61934f3c69e133f800e9cb5a420043e0c33a1854f96b443cb0957aae708d4",
+  "generatedAt": "2026-10-11T23:43:16",
+  "catalogPath": "catalog.json",
+  "sha256": "ef396e5b053d6adca7009c39b92c89ff083828a8726813edb01eed08fbf8c5c5",
+  "byteCount": 463665,
+  "eventCount": 60,
+  "matchCount": 1427
+}

@@ -15,6 +15,15 @@ def generated_files(public_data=None, report="report", index="index", calendar="
         "data/public-data.js": "window.DEBATE_PUBLIC_DATA = " + json.dumps(
             public_data or {"records": [{"score": 1}], "generatedAt": "2026-10-05T10:00:00"}
         ) + ";\n",
+        "data/ios/v1/catalog.json": json.dumps({
+            "schemaVersion": 1, "datasetVersion": "abc", "generatedAt": "2026-10-05T10:00:00",
+            "events": [], "matches": [],
+        }),
+        "data/ios/v1/manifest.json": json.dumps({
+            "schemaVersion": 1, "catalogSchemaVersion": 1, "datasetVersion": "abc",
+            "generatedAt": "2026-10-05T10:00:00", "catalogPath": "catalog.json",
+            "sha256": "digest", "byteCount": 10, "eventCount": 0, "matchCount": 0,
+        }),
         "data/update-report.txt": report,
         "index.html": index,
         "calendar.ics": calendar,
