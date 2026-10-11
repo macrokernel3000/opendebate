@@ -157,6 +157,14 @@ test("mobile forms and common navigation controls keep 44px touch targets", () =
   assert.match(css, /\.record-chart-heading button\s*\{[^}]*width:\s*44px[^}]*height:\s*44px/);
 });
 
+test("mobile quick menu exposes the recorded-event version at its bottom", () => {
+  const app = fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8");
+  assert.match(html, /<small id="mobileMenuVersion" class="mobile-menu-version"[^>]*>v1\.—<\/small>/);
+  assert.match(app, /mobileMenuVersion\.textContent = `v1\.\$\{events\.length\}`/);
+  assert.match(app, /目前已收錄 \$\{events\.length\} 場賽事/);
+  assert.match(css, /\.mobile-menu-version\s*\{[^}]*border-top:[^}]*text-align:\s*right/);
+});
+
 test("standalone detail page controls keep 44px mobile touch targets", () => {
   const detailControls = css.match(/\.detail-page-shell \.event-back-button,[\s\S]{0,260}\.detail-page-shell summary \{[^}]*min-height:\s*44px/);
   const inlineDetailLinks = css.match(/\.detail-page-shell \.inline-entity-link,[\s\S]{0,220}\.detail-page-shell \.entity-event-link \{[^}]*min-width:\s*44px[^}]*min-height:\s*44px/);

@@ -22,6 +22,7 @@ const els = {
   mobileRecentEvents: document.querySelector("#mobileRecentEvents"),
   mobileEventCount: document.querySelector("#mobileEventCount"),
   mobileMatchCount: document.querySelector("#mobileMatchCount"),
+  mobileMenuVersion: document.querySelector("#mobileMenuVersion"),
   mobileUpcomingEvents: document.querySelector("#mobileUpcomingEvents"),
   schoolLeaderboard: document.querySelector("#schoolLeaderboard"),
   mobileHonorRanking: document.querySelector("#mobileHonorRanking"),
@@ -384,6 +385,10 @@ function renderAll() {
         <p>請確認 <code>data/public-data.js</code> 已上傳，並重新整理頁面。若剛更新 GitHub Pages，請稍候一分鐘後再試。</p>
       </section>`;
     return;
+  }
+  if (els.mobileMenuVersion) {
+    els.mobileMenuVersion.textContent = `v1.${events.length}`;
+    els.mobileMenuVersion.setAttribute("aria-label", `資料版本 v1.${events.length}，目前已收錄 ${events.length} 場賽事`);
   }
   renderHome();
   renderEventOptions();
