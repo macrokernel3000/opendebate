@@ -1,0 +1,41 @@
+name: iOS home preview validation
+on:
+  push:
+    branches:
+      - ios/home-feed-preview
+    paths:
+      - tools/ios_home_feed.py
+      - tests/test_ios_home_feed.py
+      - data/public-data.js
+      - data/upcoming-events.js
+      - data/calendar-activities.js
+      - .github/workflows/ios-home-preview.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-home:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate isolated homepage feed
+        run: python3 tools/ios_home_feed.py
+      - name: Test podium, ranking and public-data contracts
+        run: python3 -m unittest discover -s tests -p 'test_ios_home_feed.py' -v
+      - name: Verify emitted SHA-256 manifest
+        run: |
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          directory = Path("data/ios/home-preview")
+          content = (directory / "home.json").read_bytes()
+          manifest = json.loads((directory / "manifest.json").read_text())
+          assert len(content) == manifest["byteCount"]
+          assert hashlib.sha256(content).hexdigest() == manifest["sha256"]
+          homepage = json.loads(content)
+          assert homepage["schemaVersion"] == 1
+          assert len(homepage["recent"]) >= 4
+          assert homepage["leaderboard"]["recent"]["team"]
+          print("Homepage output and SHA-256 manifest verified")
+          PY
