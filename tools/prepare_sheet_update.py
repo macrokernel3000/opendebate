@@ -11,6 +11,7 @@ from pathlib import Path
 GENERATED_FILES = (
     "data/public-data.js",
     "data/ios/v1/catalog.json",
+    "data/ios/v1/home.json",
     "data/ios/v1/manifest.json",
     "data/update-report.txt",
     "data/entity-registry.csv",
@@ -37,6 +38,11 @@ def normalize_output(path, content):
         payload.pop("generatedAt", None)
         return json.dumps(payload, ensure_ascii=False, sort_keys=True)
 
+    if path == "data/ios/v1/home.json":
+        payload = json.loads(content)
+        payload.pop("generatedAt", None)
+        return json.dumps(payload, ensure_ascii=False, sort_keys=True)
+
     if path == "data/ios/v1/catalog.json":
         payload = json.loads(content)
         payload.pop("generatedAt", None)
@@ -47,6 +53,9 @@ def normalize_output(path, content):
         payload.pop("generatedAt", None)
         payload.pop("sha256", None)
         payload.pop("byteCount", None)
+        payload.pop("homeGeneratedAt", None)
+        payload.pop("homeSHA256", None)
+        payload.pop("homeByteCount", None)
         return json.dumps(payload, ensure_ascii=False, sort_keys=True)
 
     if path == "data/update-report.txt":
