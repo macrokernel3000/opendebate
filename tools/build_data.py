@@ -15,6 +15,7 @@ import entity_registry as entity_registry_module
 import source_reader as source_reader_module
 import xlsx_reader as xlsx_reader_module
 import ios_public_feed as ios_public_feed_module
+import ios_home_feed as ios_home_feed_module
 
 SCHOOL_ENDINGS = entity_registry_module.SCHOOL_ENDINGS
 KNOWN_SCHOOL_SHORT_NAMES = entity_registry_module.KNOWN_SCHOOL_SHORT_NAMES
@@ -703,7 +704,10 @@ def build(check_only=False, fail_on_warnings=False):
         ],
     }
     JS_PATH.write_text("window.DEBATE_PUBLIC_DATA = " + format_public_json(payload) + ";\n", encoding="utf-8")
-    ios_public_feed_module.write_feed(payload, IOS_FEED_DIR)
+    home_manifest = ios_home_feed_module.write_home(
+        payload, upcoming_events, calendar_feed_module.read_calendar_activities(data_dir=DATA_DIR), IOS_FEED_DIR
+    )
+    ios_public_feed_module.write_feed(payload, IOS_FEED_DIR, home_manifest=home_manifest)
     version = datetime.now().strftime("%Y%m%d%H%M%S")
     update_asset_versions(version)
     events = event_names(records, honors, topics)
