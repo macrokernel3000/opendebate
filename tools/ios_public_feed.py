@@ -21,6 +21,92 @@ def app_text(value):
     return re.sub(r"\s*；\s*；+", "；", text).strip(" ；;") or None
 
 
+def build_public_index(public_data):
+    entities = [{
+        "id": item["code"],
+        "type": item.get("type", ""),
+        "name": item.get("name", ""),
+        "aliases": [alias for alias in item.get("aliases", "").split("|") if alias],
+    } for item in public_data.get("entities", []) if item.get("code") and item.get("name")]
+    records = [{
+        "id": item["id"],
+        "competitionName": item["competitionName"],
+        "affirmativeEntityID": item.get("teamIds", {}).get("affirmative", ""),
+        "negativeEntityID": item.get("teamIds", {}).get("negative", ""),
+        "winner": item.get("winner", ""),
+    } for item in public_data.get("records", []) if item.get("id") and item.get("competitionName")]
+    honors = [{
+        "id": item["id"],
+        "competitionName": item["competitionName"],
+        "entityID": item.get("teamId", ""),
+    } for item in public_data.get("honors", []) if item.get("id") and item.get("competitionName")]
+    topics = [{
+        "id": item["topicId"],
+        "title": item["topic"],
+        "competitionName": item["competitionName"],
+        "explanation": app_text(item.get("explanation")) or "",
+    } for item in public_data.get("topics", []) if item.get("topicId") and item.get("topic")]
+
+    people = {}
+
+    def add_person(name, role, team="", competition="", honor_id=""):
+        name = str(name or "").strip()
+        if not name:
+            return
+        person = people.setdefault(name, {
+            "roles": set(), "teams": set(), "honorIDs": set(), "appearances": {}
+        })
+        if role:
+            person["roles"].add(role)
+        if team:
+            person["teams"].add(team)
+        if honor_id:
+            person["honorIDs"].add(honor_id)
+        if competition:
+            person["appearances"].setdefault((competition, team), set()).add(role)
+
+    for honor in public_data.get("honors", []):
+        if honor.get("honorType") == "player":
+            add_person(
+                honor.get("recipient"), "選手", honor.get("team", ""),
+                honor.get("competitionName", ""), honor.get("id", "")
+            )
+    for competition, entries in public_data.get("eventRosters", {}).items():
+        for roster in entries:
+            team = roster.get("team", "")
+            for name in roster.get("players", []):
+                add_person(name, "選手", team, competition)
+            for name in roster.get("leaders", []):
+                add_person(name, "領隊", team, competition)
+
+    person_rows = [{
+        "id": "person-" + hashlib.sha1(name.encode("utf-8")).hexdigest()[:12],
+        "name": name,
+        "roles": sorted(value["roles"]),
+        "teams": sorted(value["teams"]),
+        "honorIDs": sorted(value["honorIDs"]),
+        "appearances": [{
+            "competitionName": competition,
+            "team": team,
+            "roles": sorted(roles),
+        } for (competition, team), roles in sorted(value["appearances"].items())],
+    } for name, value in sorted(people.items())]
+
+    core = {
+        "entities": entities,
+        "records": records,
+        "honors": honors,
+        "topics": topics,
+        "people": person_rows,
+    }
+    return {
+        "schemaVersion": 1,
+        "generatedAt": public_data["generatedAt"],
+        "sourceSHA256": hashlib.sha256(canonical_bytes(core)).hexdigest(),
+        **core,
+    }
+
+
 def build_catalog(public_data):
     records = public_data.get("records", [])
     honors = public_data.get("honors", [])
@@ -132,8 +218,14 @@ def build_catalog(public_data):
     if missing_events:
         raise ValueError("iOS 場次找不到對應賽事：" + "、".join(missing_events))
 
-    content = {"events": events, "matches": matches}
-    dataset_version = hashlib.sha256(canonical_bytes(content)).hexdigest()
+    public_index = build_public_index(public_data)
+    content = {"events": events, "matches": matches, "publicIndex": public_index}
+    version_content = {
+        "events": events,
+        "matches": matches,
+        "publicIndex": {key: value for key, value in public_index.items() if key != "generatedAt"},
+    }
+    dataset_version = hashlib.sha256(canonical_bytes(version_content)).hexdigest()
     return {
         "schemaVersion": CATALOG_SCHEMA_VERSION,
         "datasetVersion": dataset_version,

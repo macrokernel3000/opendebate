@@ -215,7 +215,7 @@ def attach_entities(records, honors, lookup, stable_id):
             if code and code not in valid_codes:
                 raise SystemExit(f"{record['competitionName']}：隊伍「{name}」指定了不存在的學校代碼「{code}」")
             record["teamIds"][side] = code
-        record["id"] = stable_id("match", record)
+        record["id"] = record.pop("_explicitID", "") or stable_id("match", record)
         for side in ("affirmative", "negative"):
             for player in record["players"][side]:
                 attendance.append({
@@ -231,5 +231,5 @@ def attach_entities(records, honors, lookup, stable_id):
     for honor in honors:
         entity_name = honor["team"] if honor["honorType"] == "player" else honor["recipient"]
         honor["teamId"] = lookup.get(entity_name, "")
-        honor["id"] = stable_id("honor", honor)
+        honor["id"] = honor.pop("_explicitID", "") or stable_id("honor", honor)
     return attendance

@@ -33,10 +33,10 @@
 
 ## 3. 資料流
 
-主要人工編輯來源是 `data/public-data*.csv`、`data/entity-registry.csv` 與 `data/event-entity-assignments.csv`。正式慣例是一個賽事一個 CSV；舊 Excel 已移至 `data/backups`，只供復原。`event-entity-assignments.csv` 用於依「賽事名稱＋隊伍原名」指定固定學校代碼；它不會改寫公開隊伍原名，代碼需存在於學校名冊，並附判定依據。此指定同時套用於逐場戰績和隊伍名單，避免同一屆賽事的戰績與名單落到不同學校頁。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
+主要人工編輯來源是 `data/public-data-所有賽事.csv`、`data/entity-registry.csv` 與 `data/event-entity-assignments.csv`。歷史賽事使用單一 24 欄總表，避免同一資料在逐賽事檔與整合檔各自修改後產生衝突；最後兩欄「來源名稱、來源網址」保留逐列查核線索，不進入公開 payload。遷移前的逐賽事 CSV 保存在 `data/賽事分檔封存`，不參與建置。`event-entity-assignments.csv` 用於依「賽事名稱＋隊伍原名」指定固定學校代碼；它不會改寫公開隊伍原名，代碼需存在於學校名冊，並附判定依據。此指定同時套用於逐場戰績和隊伍名單，避免同一屆賽事的戰績與名單落到不同學校頁。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
 
-1. 掃描並合併所有 `public-data*.csv`。
-2. 對完全相同的資料去重，保留歷史來源。
+1. 只讀取 `data/public-data-所有賽事.csv`；除非測試或匯入流程明確設定 `PUBLIC_DATA_SOURCE`，不讀取其他 CSV／XLSX。
+2. 對總表內完全相同的資料去重。
 3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍、賽事 metadata、題解段數是否超過對應辯題數，以及榮譽所屬隊伍是否見於該賽事對戰或公布名單。名單與榮譽核對會比對名冊別名及「台／臺」字形，但不改公開名稱；榮譽若明列 A／B 隊，仍需對到同一隊別，不以同校另一隊替代。題解或榮譽不匹配只提示來源位置，不自行裁切或改寫。CSV／XLSX 來源檔讀取與表格列轉換集中在 `tools/source_reader.py`；資料一致性規則集中在 `tools/data_validation.py`；未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`；單位名冊的讀取、別名歸戶與穩定 ID 關聯集中在 `tools/entity_registry.py`；XLSX 工作表 XML 解析由 `tools/xlsx_reader.py` 共用於賽事匯入與舊版名冊讀取。`build_data.py` 保留相容入口。
 4. 同步單位名冊與別名。
 5. 產生網站唯一讀取的 `data/public-data.js`。
@@ -113,7 +113,7 @@
 ## 7. 安全修改規則
 
 1. 先讀現有資料與呈現方式，不要自行發明另一套欄位或覆蓋既有 CSV。
-2. 新增賽事應新增一個 `public-data-賽事名稱.csv`；更新工具採合併、去重，不應刪除歷史資料。
+2. 新增賽事應在 `data/public-data-所有賽事.csv` 增加資料列；不得把封存的逐賽事 CSV 移回建置來源或另建第二份正式來源。
 3. 單位名稱與別名應透過固定代碼歸戶，避免同校被拆成多筆排行。
 4. 更動載入順序、資料模型或手機版面後，必須在瀏覽器實測首頁、總覽四個分頁、搜尋、建檔與資料回報。
 5. 資料更新後至少檢查 `data/update-report.txt` 的賽事數、筆數與警告。

@@ -35,6 +35,10 @@ class IOSPublicFeedTests(unittest.TestCase):
                 "note": "測試備註", "awardSelectionCriteria": "測試標準", "ageRestriction": True,
             }},
             "competitionRegistry": [{"code": "C2601", "name": "測試盃", "year": "2026", "status": "results-recorded"}],
+            "entities": [
+                {"code": "s001", "type": "s", "name": "甲校", "aliases": "甲中|測試甲校"},
+                {"code": "s002", "type": "s", "name": "乙校", "aliases": ""},
+            ],
         }
 
     def test_builds_stable_full_snapshot(self):
@@ -51,6 +55,9 @@ class IOSPublicFeedTests(unittest.TestCase):
         self.assertEqual(first["events"][0]["honors"][0]["recipient"], "甲校")
         self.assertEqual(first["events"][0]["teams"], ["乙校", "甲校"])
         self.assertEqual(first["matches"][0]["period"], "2")
+        self.assertEqual(first["publicIndex"]["entities"][0]["aliases"], ["甲中", "測試甲校"])
+        self.assertEqual(first["publicIndex"]["records"][0]["affirmativeEntityID"], "")
+        self.assertRegex(first["publicIndex"]["sourceSHA256"], r"^[0-9a-f]{64}$")
 
     def test_omits_incomplete_topic_and_honor_rows(self):
         sample = self.sample()
@@ -65,6 +72,19 @@ class IOSPublicFeedTests(unittest.TestCase):
             ios_public_feed.app_text("資料來源（https://example.com/source）；其餘說明"),
             "資料來源；其餘說明",
         )
+
+    def test_public_index_includes_people_from_honors_and_rosters(self):
+        sample = self.sample()
+        sample["honors"][0].update({"honorType": "player", "recipient": "王小明", "team": "甲校"})
+        sample["eventRosters"] = {"測試盃": [{
+            "team": "甲校", "players": ["王小明", "李小華"], "leaders": ["陳老師"],
+        }]}
+        people = ios_public_feed.build_catalog(sample)["publicIndex"]["people"]
+        by_name = {person["name"]: person for person in people}
+        self.assertEqual(by_name["王小明"]["roles"], ["選手"])
+        self.assertEqual(by_name["王小明"]["honorIDs"], ["honor-1"])
+        self.assertEqual(by_name["王小明"]["appearances"][0]["competitionName"], "測試盃")
+        self.assertEqual(by_name["陳老師"]["roles"], ["領隊"])
 
     def test_rejects_event_without_public_code(self):
         sample = self.sample()

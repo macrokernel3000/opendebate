@@ -349,7 +349,7 @@ class BuildDataTests(unittest.TestCase):
     def test_csv_is_default_source(self):
         old = os.environ.pop("PUBLIC_DATA_SOURCE", None)
         try:
-            self.assertTrue(all(path.suffix.lower() == ".csv" for path in build_data.source_files()))
+            self.assertEqual(build_data.source_files(), [build_data.MASTER_DATA_PATH])
         finally:
             if old is not None:
                 os.environ["PUBLIC_DATA_SOURCE"] = old
