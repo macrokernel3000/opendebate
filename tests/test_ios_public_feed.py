@@ -19,10 +19,21 @@ class IOSPublicFeedTests(unittest.TestCase):
                 "teams": {"affirmative": "甲校", "negative": "乙校"},
                 "scores": {"affirmative": 2, "negative": 1},
             }],
-            "honors": [{"competitionName": "測試盃"}],
-            "topics": [],
+            "honors": [{
+                "id": "honor-1", "competitionName": "測試盃", "honorName": "冠軍",
+                "recipient": "甲校", "team": "", "honorType": "team", "matchDate": "2026-10-10",
+                "note": "公開成績",
+            }],
+            "topics": [{
+                "topicId": "topic-1", "competitionName": "測試盃",
+                "topic": "我國應採行測試制度", "explanation": "測試說明",
+            }],
             "eventRosters": {},
-            "eventMetadata": {"測試盃": {"competitionCode": "C2601", "location": "測試地點", "teamCount": 2}},
+            "eventMetadata": {"測試盃": {
+                "competitionCode": "C2601", "location": "測試地點", "teamCount": 2,
+                "organizer": "測試主辦", "executionUnit": "測試執行",
+                "note": "測試備註", "awardSelectionCriteria": "測試標準", "ageRestriction": True,
+            }},
             "competitionRegistry": [{"code": "C2601", "name": "測試盃", "year": "2026", "status": "results-recorded"}],
         }
 
@@ -35,7 +46,25 @@ class IOSPublicFeedTests(unittest.TestCase):
         self.assertEqual(first["datasetVersion"], second["datasetVersion"])
         self.assertEqual(first["events"][0]["id"], "C2601")
         self.assertEqual(first["events"][0]["recordCount"], 1)
+        self.assertEqual(first["events"][0]["organizer"], "測試主辦")
+        self.assertEqual(first["events"][0]["topics"][0]["title"], "我國應採行測試制度")
+        self.assertEqual(first["events"][0]["honors"][0]["recipient"], "甲校")
+        self.assertEqual(first["events"][0]["teams"], ["乙校", "甲校"])
         self.assertEqual(first["matches"][0]["period"], "2")
+
+    def test_omits_incomplete_topic_and_honor_rows(self):
+        sample = self.sample()
+        sample["topics"].append({"competitionName": "測試盃", "topic": ""})
+        sample["honors"].append({"competitionName": "測試盃", "honorName": "亞軍", "recipient": ""})
+        event = ios_public_feed.build_catalog(sample)["events"][0]
+        self.assertEqual(len(event["topics"]), 1)
+        self.assertEqual(len(event["honors"]), 1)
+
+    def test_app_text_removes_source_urls_without_erasing_context(self):
+        self.assertEqual(
+            ios_public_feed.app_text("資料來源（https://example.com/source）；其餘說明"),
+            "資料來源；其餘說明",
+        )
 
     def test_rejects_event_without_public_code(self):
         sample = self.sample()

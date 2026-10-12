@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "8a0b4aa315141870330e5c9d5b3e6715a13ed1cadd5c4a80c58591a4daa37013",
-  "generatedAt": "2026-10-12T04:29:59",
+  "datasetVersion": "7841d62989a447b557803254934a0613fed91c57035cdbcb39b9d6d1237139f5",
+  "generatedAt": "2026-10-12T13:09:04",
   "events": [
     {
       "id": "C1201",
@@ -12,7 +12,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-dfc280d25c0a",
+          "name": "冠軍",
+          "recipient": "北一女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-f55760ceb0c1",
+          "name": "亞軍",
+          "recipient": "羅東高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-744d0790647c",
+          "name": "季軍",
+          "recipient": "景美女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-bdbbde74ea62",
+          "name": "殿軍",
+          "recipient": "羅東高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-0fe471b6468a",
+          "name": "最佳辯士",
+          "recipient": "葉瑞綺",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-a7f2bb9bfa3e",
+          "name": "最佳辯士",
+          "recipient": "陳郁諠",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-be3540864e51",
+          "name": "最佳辯士",
+          "recipient": "王俊顏",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-98b82479bad3",
+          "name": "最佳辯士",
+          "recipient": "徐瑞芳",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1301",
@@ -23,7 +104,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-ef74fc6358e6",
+          "name": "冠軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-6f695cb744e7",
+          "name": "亞軍",
+          "recipient": "中崙高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-eefa85ba63f3",
+          "name": "季軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-2b08b1d6993b",
+          "name": "殿軍",
+          "recipient": "麗山高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-32916d2fc798",
+          "name": "最佳辯士",
+          "recipient": "林聖偉",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-705ee4344482",
+          "name": "最佳辯士",
+          "recipient": "高鉦詠",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-b50631eaa2ce",
+          "name": "最佳辯士",
+          "recipient": "胡省珮",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-104ff3d356a6",
+          "name": "最佳辯士",
+          "recipient": "董元琪",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1401",
@@ -34,7 +196,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-72a8d7647abc",
+          "name": "冠軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-bb3d1efd2921",
+          "name": "亞軍",
+          "recipient": "政大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-b40ca4b33b18",
+          "name": "季軍",
+          "recipient": "松山高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-86b075aaca20",
+          "name": "殿軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-a1924943131b",
+          "name": "最佳辯士",
+          "recipient": "林彥廷",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-dc479bca1adc",
+          "name": "最佳辯士",
+          "recipient": "黃耕鴻",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-b2b974e7875e",
+          "name": "最佳辯士",
+          "recipient": "史惟中",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-6424a578404f",
+          "name": "最佳辯士",
+          "recipient": "賴予亭",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1501",
@@ -45,7 +288,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-5e536b91eb9f",
+          "name": "冠軍",
+          "recipient": "臺中一中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-0e5b83f42d2a",
+          "name": "亞軍",
+          "recipient": "中山女高",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-91d758eb13eb",
+          "name": "季軍",
+          "recipient": "北一女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-19f809eca795",
+          "name": "殿軍",
+          "recipient": "松山高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-805065456318",
+          "name": "最佳辯士",
+          "recipient": "蔡壹安",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-a8393cf5392e",
+          "name": "最佳辯士",
+          "recipient": "陳建勳",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-83618ea27d79",
+          "name": "最佳辯士",
+          "recipient": "李元琦",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-5be8af0325ff",
+          "name": "最佳辯士",
+          "recipient": "顏千筑",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1601",
@@ -56,7 +380,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-cadf8d4ab43c",
+          "name": "冠軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-3e49f94ff57e",
+          "name": "亞軍",
+          "recipient": "麗山高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-942219104aca",
+          "name": "季軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-8a72d07747d6",
+          "name": "殿軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-ec89576a5942",
+          "name": "最佳辯士",
+          "recipient": "黃脩閔",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-ae9f5d4c7fc1",
+          "name": "最佳辯士",
+          "recipient": "秦偉翔",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-dbba44d03861",
+          "name": "最佳辯士",
+          "recipient": "黃家綸",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-934059c5ddf0",
+          "name": "最佳辯士",
+          "recipient": "湯于萱",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1701",
@@ -67,7 +472,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-fda660e25ccf",
+          "name": "冠軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-7bf8a77050bd",
+          "name": "亞軍",
+          "recipient": "臺中一中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-ff7d91f82884",
+          "name": "季軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-d999dda0249b",
+          "name": "殿軍",
+          "recipient": "北一女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-f1688669ed68",
+          "name": "最佳辯士",
+          "recipient": "黃脩閔",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-9d24a7ed934f",
+          "name": "最佳辯士",
+          "recipient": "鄭吉祥",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-24077cbedec0",
+          "name": "最佳辯士",
+          "recipient": "翁芊智",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-7ee44af6e437",
+          "name": "最佳辯士",
+          "recipient": "莊文琪",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1801",
@@ -78,7 +564,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-868f11e0927e",
+          "name": "冠軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-785b640cdfed",
+          "name": "亞軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-7ab83331e890",
+          "name": "季軍",
+          "recipient": "中山女高",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-f07af4d4e5c1",
+          "name": "殿軍",
+          "recipient": "羅東高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-4bfc0f52a37c",
+          "name": "最佳辯士",
+          "recipient": "林亮廷",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-521ee83d02f0",
+          "name": "最佳辯士",
+          "recipient": "張景翔",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-6196a78f9ee7",
+          "name": "最佳辯士",
+          "recipient": "周泰寧",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-34af46b5de1c",
+          "name": "最佳辯士",
+          "recipient": "鍾宜莊",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C1901",
@@ -89,7 +656,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-00941d1a3c77",
+          "name": "冠軍",
+          "recipient": "政大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-2847e311d05a",
+          "name": "亞軍",
+          "recipient": "苗栗高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-a02fcbba5fa3",
+          "name": "季軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-25df6343d698",
+          "name": "殿軍",
+          "recipient": "竹林高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-6ea059524db3",
+          "name": "最佳辯士",
+          "recipient": "彭嘉瑜",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-ad1716f158fa",
+          "name": "最佳辯士",
+          "recipient": "胡均霖",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-72ae3c519c91",
+          "name": "最佳辯士",
+          "recipient": "謝秉諭",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-311a5b3a78a3",
+          "name": "最佳辯士",
+          "recipient": "蘇言文",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2201",
@@ -100,7 +748,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-e1c8e3f1f492",
+          "name": "冠軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-952b6bf65216",
+          "name": "亞軍",
+          "recipient": "前鎮高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-eaff982c04eb",
+          "name": "季軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-a509b56f4c90",
+          "name": "殿軍",
+          "recipient": "臺南一中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-8ae1ec84b3de",
+          "name": "最佳辯士",
+          "recipient": "吳禹岑",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-43d41a7a3d03",
+          "name": "最佳辯士",
+          "recipient": "郭建廷",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-31cbd98d7def",
+          "name": "最佳辯士",
+          "recipient": "金哲安",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-a1cbacc5cd59",
+          "name": "最佳辯士",
+          "recipient": "林祐誠",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2301",
@@ -111,7 +840,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-214799e75736",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-b7c2eff8b7a5",
+          "name": "亞軍",
+          "recipient": "竹北高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-ff126c630c68",
+          "name": "季軍",
+          "recipient": "板橋高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-40542c6164e0",
+          "name": "殿軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-db5e584eb912",
+          "name": "最佳辯士",
+          "recipient": "呂芊穎",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-6ed11a1dd4fa",
+          "name": "最佳辯士",
+          "recipient": "董家勳",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-a0fe77b943d2",
+          "name": "最佳辯士",
+          "recipient": "范新玉",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-e11e1f6751b7",
+          "name": "最佳辯士",
+          "recipient": "葉冠廷",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2401",
@@ -122,7 +932,127 @@
       "location": null,
       "recordCount": 19,
       "honorCount": 10,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-a4ac5e270461",
+          "title": "發揚原住民文化重在傳承／創新",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-2eb69520e13e",
+          "name": "冠軍",
+          "recipient": "建竹實聯隊",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-d21f78f8784c",
+          "name": "亞軍",
+          "recipient": "政大附中",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-8f4c876785bd",
+          "name": "季軍",
+          "recipient": "萬芳華江家齊聯隊",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-0bce940a8be7",
+          "name": "季軍",
+          "recipient": "汪汪隊立大功",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-58d5059f9d34",
+          "name": "全程最佳辯士",
+          "recipient": "金哲安",
+          "team": "失手的辯士",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-b18f23c8a2d5",
+          "name": "縱谷之星",
+          "recipient": "周澤恩",
+          "team": "慈大附中",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-c6b208d7480d",
+          "name": "全程優秀辯士",
+          "recipient": "馬郁晴",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-f1bc98a439e7",
+          "name": "全程優秀辯士",
+          "recipient": "洪可芸",
+          "team": "汪汪隊立大功",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-403954d402f3",
+          "name": "全程優秀辯士",
+          "recipient": "林奕鋐",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        },
+        {
+          "id": "honor-b3fe382a650b",
+          "name": "全程優秀辯士",
+          "recipient": "蔡智鈞",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2024-05-20",
+          "note": null
+        }
+      ],
+      "teams": [
+        "南山高中",
+        "失手的辯士",
+        "宏道辯蓮",
+        "建竹實聯隊",
+        "慈大附中",
+        "慧燈高級監獄",
+        "拿盃幫社長在大安區租房子",
+        "政大附中",
+        "新店高中",
+        "汪汪隊立大功",
+        "百齡高中",
+        "萬芳華江家齊聯隊",
+        "道明中學",
+        "還是邢可柔你要收買我"
+      ]
     },
     {
       "id": "C2402",
@@ -133,7 +1063,107 @@
       "location": null,
       "recordCount": 15,
       "honorCount": 8,
-      "teamCount": 12
+      "teamCount": 12,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-17addfd0ffef",
+          "title": "幸福更歸屬於理性／感性",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-431dc4379079",
+          "name": "冠軍",
+          "recipient": "中山高中",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-3629c63af3a8",
+          "name": "亞軍",
+          "recipient": "中山女高",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-fb64e72f2a49",
+          "name": "季軍",
+          "recipient": "興國高中A",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-de3375eedf59",
+          "name": "殿軍",
+          "recipient": "興國高中B",
+          "team": null,
+          "type": "team",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-91ee3f9c8f3c",
+          "name": "全程最佳辯士",
+          "recipient": "林華慈",
+          "team": "中山高中",
+          "type": "player",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-b1be64bad929",
+          "name": "全程優秀辯士",
+          "recipient": "李馨",
+          "team": "中山女高",
+          "type": "player",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-2b03ff1fb276",
+          "name": "全程優秀辯士",
+          "recipient": "蔡佩璇",
+          "team": "興國高中A",
+          "type": "player",
+          "date": "2024-05-26",
+          "note": null
+        },
+        {
+          "id": "honor-ace052cdd17b",
+          "name": "全程優秀辯士",
+          "recipient": "翁征承",
+          "team": "興國高中B",
+          "type": "player",
+          "date": "2024-05-26",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中山女高",
+        "中山高中",
+        "前鎮高中",
+        "南科實中",
+        "嘉義高中",
+        "小港高中A",
+        "小港高中B",
+        "興國高中A",
+        "興國高中B",
+        "高市中正",
+        "高市中正A",
+        "高市中正B"
+      ]
     },
     {
       "id": "C2403",
@@ -144,7 +1174,130 @@
       "location": "輔仁大學",
       "recordCount": 50,
       "honorCount": 8,
-      "teamCount": 35
+      "teamCount": 35,
+      "organizer": "輔仁大學健言社",
+      "executionUnit": null,
+      "note": "簡章資格為全國高中職暨五專在學學生，滿額36隊；公告賽果可辨識35隊。初賽第三時段圖片僅列11場，未提供場次不補猜。初賽與複賽日期依階段順序及6/3官方賽程推定。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [
+        {
+          "id": "topic-2cc682be84d5",
+          "title": "我國以付費方式觀賞或取得性犯罪內容應入罪化",
+          "explanation": "題稱性犯罪內容包含《兒童及少年性剝削防制條例》、《性侵害犯罪防治法》、《刑法》第十六章妨礙性自主罪及第二十八章之一妨害性隱私及不實性影像罪所列不法行為；入罪化立場主刑至少訂定拘役以上。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-826cde7b66c1",
+          "name": "冠軍",
+          "recipient": "永平高中",
+          "team": "永平高中",
+          "type": "team",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-9fff8a6f6f36",
+          "name": "亞軍",
+          "recipient": "瑞祥高中",
+          "team": "瑞祥高中",
+          "type": "team",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-8db6ce387ad3",
+          "name": "季軍",
+          "recipient": "南山高中",
+          "team": "南山高中",
+          "type": "team",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-95a9d95258b0",
+          "name": "季軍",
+          "recipient": "內壢高中",
+          "team": "內壢高中",
+          "type": "team",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-e64fdbaceea9",
+          "name": "全程最佳辯士",
+          "recipient": "李昱賢",
+          "team": "瑞祥高中",
+          "type": "player",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-939d610fb3ff",
+          "name": "全程最佳辯士",
+          "recipient": "彭筱涵",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-134f038f63e6",
+          "name": "全程最佳辯士",
+          "recipient": "金承陽",
+          "team": "永平高中",
+          "type": "player",
+          "date": "2024-06-03",
+          "note": null
+        },
+        {
+          "id": "honor-2847db613357",
+          "name": "全程最佳辯士",
+          "recipient": "詹舒涵",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2024-06-03",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中大壢中",
+        "內壢高中",
+        "南山高中",
+        "壽山高中",
+        "嶺東高中",
+        "師大附中",
+        "復旦高中",
+        "成功高中",
+        "成淵高中",
+        "文華高中",
+        "斗六高中",
+        "新北三民",
+        "新竹高商",
+        "新興高中",
+        "明倫高中",
+        "景美女中",
+        "曙光女中",
+        "松山高中",
+        "板橋高中",
+        "永平高中",
+        "溪湖高中",
+        "瑞祥高中",
+        "立人高中",
+        "羅東高中",
+        "聖心女中",
+        "臺中一中",
+        "臺南一中",
+        "臺南護專",
+        "興大附中",
+        "薇閣高中",
+        "虎尾高中",
+        "金陵女中",
+        "錦和高中",
+        "馬公高中",
+        "高雄中學"
+      ]
     },
     {
       "id": "C2404",
@@ -155,7 +1308,273 @@
       "location": null,
       "recordCount": 21,
       "honorCount": 26,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "2024年8月17日至19日；8月17日各時段、8月18日八進四、8月19日四進二及冠亞決賽。冠亞決賽會場依專案慣例推定為1。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-5e6a96713bf0",
+          "title": "如果你有超能力，可以讓你愛的人也愛你，你要／不要使用",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-5a296f1c599c",
+          "name": "單場優秀辯士",
+          "recipient": "簡睿霆",
+          "team": null,
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "正方反方都不隊 vs 沒錢對不隊"
+        },
+        {
+          "id": "honor-5e3519a2df17",
+          "name": "單場優秀辯士",
+          "recipient": "洪暄茹",
+          "team": null,
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "謝謝學姐！！ vs 你剛剛攻擊了我的村莊"
+        },
+        {
+          "id": "honor-27b1d5ef9274",
+          "name": "單場優秀辯士",
+          "recipient": "劉仲恩",
+          "team": null,
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "破房的辯士 vs 彰化邊緣陣線聯盟"
+        },
+        {
+          "id": "honor-2d188da827c5",
+          "name": "單場優秀辯士",
+          "recipient": "林奕鋐",
+          "team": null,
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "7/14一領前皆可向大會申請更換 vs 建竹實聯隊"
+        },
+        {
+          "id": "honor-5ec545e00e99",
+          "name": "單場優秀辯士",
+          "recipient": "彭聖芯",
+          "team": null,
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "正方反方都不隊 vs 沒錢對不隊"
+        },
+        {
+          "id": "honor-e200fac7e88e",
+          "name": "單場優秀辯士",
+          "recipient": "李瀅熙",
+          "team": "謝謝學姐！！",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "你剛剛攻擊了我的村莊 vs 謝謝學姐！！；反方四辯"
+        },
+        {
+          "id": "honor-551df8375be4",
+          "name": "單場優秀辯士",
+          "recipient": "汪雅媛",
+          "team": "甜甜豬小隊",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "喜歡漂亮的凱怡學姐沒有不隊 vs 甜甜豬小隊；反方三辯"
+        },
+        {
+          "id": "honor-704393283c11",
+          "name": "單場優秀辯士",
+          "recipient": "詹舒涵",
+          "team": "我學長們喝醉了",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "我學長們喝醉了 vs 曌；正方二辯"
+        },
+        {
+          "id": "honor-20858e34797d",
+          "name": "單場優秀辯士",
+          "recipient": "黃有晟",
+          "team": "燈燈燈燈",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "燈燈燈燈 vs 霸道總裁小嬌7；正方二辯"
+        },
+        {
+          "id": "honor-501fc3e844e3",
+          "name": "單場優秀辯士",
+          "recipient": "石永晴",
+          "team": "破房的辯士",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "彰化邊緣陣線聯盟 vs 破房的辯士；反方三辯"
+        },
+        {
+          "id": "honor-987364cc6607",
+          "name": "單場優秀辯士",
+          "recipient": "劉恩聖",
+          "team": "7/14一領前皆可向大會申請更換",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "建竹實聯隊 vs 7/14一領前皆可向大會申請更換；反方二辯"
+        },
+        {
+          "id": "honor-b40e3413b5f9",
+          "name": "單場優秀辯士",
+          "recipient": "董安裕",
+          "team": "喜歡漂亮的凱怡學姐沒有不隊",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "甜甜豬小隊 vs 喜歡漂亮的凱怡學姐沒有不隊；反方四辯"
+        },
+        {
+          "id": "honor-0c4dc145c068",
+          "name": "單場優秀辯士",
+          "recipient": "彭筱涵",
+          "team": "我學長們喝醉了",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "曌 vs 我學長們喝醉了；反方四辯"
+        },
+        {
+          "id": "honor-1dc8da206f1a",
+          "name": "單場優秀辯士",
+          "recipient": "曾蜜莉",
+          "team": "燈燈燈燈",
+          "type": "player",
+          "date": "2024-08-17",
+          "note": "霸道總裁小嬌7 vs 燈燈燈燈；反方三辯"
+        },
+        {
+          "id": "honor-6875b2151bcf",
+          "name": "單場優秀辯士",
+          "recipient": "洪暄茹",
+          "team": "你剛剛攻擊了我的村莊",
+          "type": "player",
+          "date": "2024-08-18",
+          "note": "八進四：沒錢對不隊 vs 你剛剛攻擊了我的村莊；反方三辯"
+        },
+        {
+          "id": "honor-c7eddd53f0ae",
+          "name": "單場優秀辯士",
+          "recipient": "劉恩聖",
+          "team": "7/14一領前皆可向大會申請更換",
+          "type": "player",
+          "date": "2024-08-18",
+          "note": "八進四：彰化邊緣聯盟 vs 7/14一領前皆可向大會申請更換；反方二辯"
+        },
+        {
+          "id": "honor-9ffdb976346a",
+          "name": "單場優秀辯士",
+          "recipient": "周庭碩",
+          "team": "我國不應廢除單一性別學校",
+          "type": "player",
+          "date": "2024-08-18",
+          "note": "八進四：燈燈燈燈 vs 我國不應廢除單一性別學校；正方四辯"
+        },
+        {
+          "id": "honor-925f4a63e997",
+          "name": "單場優秀辯士",
+          "recipient": "董安裕",
+          "team": "喜歡漂亮的凱怡學姐沒有不隊",
+          "type": "player",
+          "date": "2024-08-18",
+          "note": "八進四：喜歡漂亮的凱怡學姐沒有不隊 vs 我學長們喝醉了；正方四辯"
+        },
+        {
+          "id": "honor-87f9280a719b",
+          "name": "單場優秀辯士",
+          "recipient": "劉恩聖",
+          "team": "7/14一領前皆可向大會申請更換",
+          "type": "player",
+          "date": "2024-08-19",
+          "note": "四進二：你剛剛攻擊了我的村莊 vs 7/14一領前皆可向大會申請更換；反方二辯"
+        },
+        {
+          "id": "honor-c8ad947fbfc9",
+          "name": "單場優秀辯士",
+          "recipient": "彭筱涵",
+          "team": "我學長們喝醉了",
+          "type": "player",
+          "date": "2024-08-19",
+          "note": "四進二：我國不應廢除單一性別學校 vs 我學長們喝醉了；反方四辯"
+        },
+        {
+          "id": "honor-fcd0214ea5c1",
+          "name": "單場最佳辯士",
+          "recipient": "彭筱涵",
+          "team": "我學長們喝醉了",
+          "type": "player",
+          "date": "2024-08-19",
+          "note": "冠亞決賽：7/14一領前皆可向大會申請更換 vs 我學長們喝醉了；反方四辯"
+        },
+        {
+          "id": "honor-66c89c4204b5",
+          "name": "冠軍",
+          "recipient": "我學長們喝醉了",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-19",
+          "note": null
+        },
+        {
+          "id": "honor-ce881c07a8b3",
+          "name": "亞軍",
+          "recipient": "7/14一領前皆可向大會申請更換",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-19",
+          "note": null
+        },
+        {
+          "id": "honor-4610050b351b",
+          "name": "季軍",
+          "recipient": "你剛剛攻擊了我的村莊",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-19",
+          "note": null
+        },
+        {
+          "id": "honor-7b5a8ef8b98a",
+          "name": "季軍",
+          "recipient": "我國不應廢除單一性別學校",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-19",
+          "note": null
+        },
+        {
+          "id": "honor-d444e6979bf0",
+          "name": "全程最佳辯士",
+          "recipient": "彭筱涵",
+          "team": "我學長們喝醉了",
+          "type": "player",
+          "date": "2024-08-19",
+          "note": null
+        }
+      ],
+      "teams": [
+        "7/14一領前皆可向大會申請更換",
+        "你剛剛攻擊了我的村莊",
+        "喜歡漂亮的凱怡學姐沒有不隊",
+        "建竹實聯隊",
+        "彰化邊緣聯盟",
+        "彰化邊緣陣線聯盟",
+        "我國不應廢除單一性別學校",
+        "我學長們喝醉了",
+        "曌",
+        "正方反方都不隊",
+        "沒錢對不隊",
+        "燈燈燈燈",
+        "甜甜豬小隊",
+        "破房的辯士",
+        "謝謝學姐！！",
+        "霸道總裁小嬌7"
+      ]
     },
     {
       "id": "C2405",
@@ -166,7 +1585,100 @@
       "location": null,
       "recordCount": 41,
       "honorCount": 5,
-      "teamCount": 38
+      "teamCount": 38,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-8ef3932e9fd0",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": "南山高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-3e116937591a",
+          "name": "亞軍",
+          "recipient": "興大附中",
+          "team": "興大附中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-abc62e4b13c2",
+          "name": "季軍",
+          "recipient": "復旦高中",
+          "team": "復旦高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-1434e3e63e94",
+          "name": "季軍",
+          "recipient": "中山高中",
+          "team": "中山高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-4f3fcf3f5340",
+          "name": "榮辱與共",
+          "recipient": "南山高中",
+          "team": "南山高中",
+          "type": "team",
+          "date": null,
+          "note": "特殊團體獎"
+        }
+      ],
+      "teams": [
+        "中山女中",
+        "中山女高",
+        "中山高中",
+        "中崙高中",
+        "南山高中",
+        "台南二中B",
+        "嘉義女中",
+        "嘉義高中",
+        "大灣高中",
+        "家齊高中",
+        "小港高中",
+        "屏東女中",
+        "嶺東中學",
+        "市立大同",
+        "師大附中",
+        "建國中學",
+        "彰化女中",
+        "復旦高中",
+        "忠明高中",
+        "成功高中",
+        "新化高中",
+        "松山高中",
+        "武陵高中",
+        "港明中學",
+        "瑞祥高中",
+        "臺南女中",
+        "臺南護專",
+        "興國高中",
+        "興大附中",
+        "虎尾高中",
+        "道明中學",
+        "高市三民A",
+        "高市三民B",
+        "高師附中",
+        "高雄中學",
+        "高雄女中",
+        "鳳山高中",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2406",
@@ -177,7 +1689,117 @@
       "location": "臺北市立成功高級中學",
       "recordCount": 15,
       "honorCount": 9,
-      "teamCount": 13
+      "teamCount": 13,
+      "organizer": "社團法人臺北市願景工作協會",
+      "executionUnit": null,
+      "note": "協辦單位：立法委員王鴻薇辦公室。賽制：奧瑞岡制三三三制。參賽資格：臺北市公私立高中職（含五專）在學學生；簡章規劃12校。逐場賽果與獎項來源：台北願景盃辯論賽官方Facebook公告；秩序冊：；願景盃循環圖確認百齡高中在左下循環持反方，冠亞賽上方成功高中A為正方、下方百齡高中為反方。決賽比分未公告。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [
+        {
+          "id": "topic-02dee37274cf",
+          "title": "我國普通刑法應廢除死刑",
+          "explanation": "關於死刑存廢的討論從未止息。近期，多名死刑犯共同聲請釋憲；憲法法庭歷經近五個月審理，作成113年憲判字第8號判決，認定死刑部分合憲。\n\n死刑是我國刑事政策的一環，一般認為具有社會隔離、維持社會秩序等作用；其所援引的理由包括威嚇與應報。國家利用人類求生畏死的心理，以明文規定對犯下特定重大犯罪者處以死刑，藉此嚇阻一般人犯罪，維持社會秩序。\n\n長久以來，死刑是否應廢除一直爭論不休。支持死刑的一方認為，極其惡劣、兇惡的犯罪不會絕跡，對罪責重大者判處死刑不可避免。立法委員吳宗憲曾表示，對被害人家屬而言，司法天秤完全傾向加害人，這對社會並不公平；廢死方想方設法讓死刑犯免於死刑，卻對被害人及其家屬的人權隻字未提。\n\n另一方面，廢死方認為，以英國、法國為例，兩國廢除死刑後，支持廢死的民意才超越支持死刑的民意。沒有死刑這項刑罰後，政府需要積極與社會對話，討論監獄改革、社會安全等議題，讓民眾理解死刑未必能帶來社會安全。因此，關鍵在於持續進行社會對話與人權教育。廢死方也認為，死刑不應只由多數民意決定，因為人權保障也關乎少數群體的權益，需要更深入思考。\n\n此外，死刑誤判一旦發生，便難以彌補，會嚴重侵害人權與司法正義。對於死刑是否具有威懾效果，有些研究認為死刑對預防重大犯罪具有一定威懾作用；另有研究指出，其威懾效果並不明顯，或未能有效降低重大犯罪率。廢死方也指出，死刑犯多為弱勢，凸顯社會不平等；唯有消弭不平等、促進社會正義，才能減少犯罪發生。\n\n綜合而言，死刑存廢爭議並未因釋憲而落幕。憲法法庭作成113年憲判字第8號判決後，議題仍未定論。多名被害人家屬批評憲法法庭忽視被害人權益；長年倡議廢除死刑的台灣廢除死刑推動聯盟也不滿判決。113年9月20日，人權公約施行監督聯盟政策中心主任黃嵩立在記者會上批評，大法官「自甘維護二流標準」、「了無新意」。\n\n究竟我國是否應廢除死刑，有待場上雙方辯士討論。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-55ef10220a6c",
+          "name": "冠軍",
+          "recipient": "成功高中A",
+          "team": null,
+          "type": "team",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-a6b1b0649668",
+          "name": "亞軍",
+          "recipient": "百齡高中",
+          "team": null,
+          "type": "team",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-26bd6a983034",
+          "name": "季軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-4b4010289d37",
+          "name": "季軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-76b8cb865fb2",
+          "name": "最佳辯士",
+          "recipient": "楊璽勳",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-63d2f782d9e6",
+          "name": "最佳辯士",
+          "recipient": "張陳樂",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-0c0ec699d358",
+          "name": "最佳辯士",
+          "recipient": "陳垣愷",
+          "team": "百齡高中",
+          "type": "player",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-bd5b43faf674",
+          "name": "最佳辯士",
+          "recipient": "曾沛庭",
+          "team": "師大附中",
+          "type": "player",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        },
+        {
+          "id": "honor-eb160b6ea393",
+          "name": "影片最佳人氣獎",
+          "recipient": "百齡高中",
+          "team": null,
+          "type": "team",
+          "date": "2024-12-15",
+          "note": "來源：台北願景盃辯論賽官方賽果公告。"
+        }
+      ],
+      "teams": [
+        "內湖高中",
+        "北商五專",
+        "和平高中",
+        "大直高中",
+        "師大附中",
+        "建國中學",
+        "成功高中",
+        "成功高中A",
+        "成功高中B",
+        "百齡高中",
+        "臺北市立中正高中",
+        "薇閣中學",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2407",
@@ -188,7 +1810,226 @@
       "location": null,
       "recordCount": 63,
       "honorCount": 17,
-      "teamCount": 45
+      "teamCount": 45,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-f6c4db38bd93",
+          "title": "我國高級中等學校體育競賽之選手參賽資格規範應廢除轉學、重考就讀時間限制",
+          "explanation": null
+        },
+        {
+          "id": "topic-d151ffc11f67",
+          "title": "邁爾斯-布里格斯性格分類法能不能讓我們更正確的認識自己",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-ca0be1e48681",
+          "name": "冠軍",
+          "recipient": "南山中學",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-20d15fb59d30",
+          "name": "亞軍",
+          "recipient": "薇閣中學",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-bc20ff7e7c15",
+          "name": "季軍",
+          "recipient": "竹科實中",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-cfaa0cc344cf",
+          "name": "季軍",
+          "recipient": "高雄中學",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-fc4eb6502aeb",
+          "name": "全程最佳辯士",
+          "recipient": "劉恩聖",
+          "team": "薇閣中學",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "高中組"
+        },
+        {
+          "id": "honor-b350e43b7d15",
+          "name": "全程優秀辯士",
+          "recipient": "詹舒涵",
+          "team": "南山中學",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "高中組"
+        },
+        {
+          "id": "honor-f6a4fa118b4f",
+          "name": "全程優秀辯士",
+          "recipient": "張睿恩",
+          "team": "高雄中學",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "高中組"
+        },
+        {
+          "id": "honor-4920f851a127",
+          "name": "全程優秀辯士",
+          "recipient": "任麒永",
+          "team": "麗山高中",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "高中組"
+        },
+        {
+          "id": "honor-35376fbd9aa7",
+          "name": "全程優秀辯士",
+          "recipient": "郭奕辰",
+          "team": "南山中學",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "高中組"
+        },
+        {
+          "id": "honor-1888672ad504",
+          "name": "國中組冠軍",
+          "recipient": "美國聯隊",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-506aa77f04ff",
+          "name": "國中組亞軍",
+          "recipient": "南山中學國中部",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-2b73881cb471",
+          "name": "國中組季軍",
+          "recipient": "西苑高中國中部",
+          "team": null,
+          "type": "team",
+          "date": "2024-08-01",
+          "note": null
+        },
+        {
+          "id": "honor-3964f3c28289",
+          "name": "國中組最佳辯士",
+          "recipient": "葉愷悌",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "國中組"
+        },
+        {
+          "id": "honor-c70858430637",
+          "name": "國中組優秀辯士",
+          "recipient": "宏穎",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "國中組"
+        },
+        {
+          "id": "honor-3d43e1ecaad7",
+          "name": "國中組優秀辯士",
+          "recipient": "陳詠翎",
+          "team": "南山中學國中部",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "國中組"
+        },
+        {
+          "id": "honor-625b939e71c5",
+          "name": "國中組優秀辯士",
+          "recipient": "楊千鋐",
+          "team": "南山中學國中部",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "國中組"
+        },
+        {
+          "id": "honor-5edca3a7f269",
+          "name": "國中組優秀辯士",
+          "recipient": "黃宇潼",
+          "team": "西苑高中國中部",
+          "type": "player",
+          "date": "2024-08-01",
+          "note": "國中組"
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中山女高",
+        "中崙高中",
+        "光正國中A",
+        "光正國中B",
+        "內湖高中",
+        "北一女中",
+        "南大附中",
+        "南山中學",
+        "南山中學國中部",
+        "和平高中",
+        "嘉義女中",
+        "大直高中",
+        "市立大同",
+        "市立東山",
+        "延平中學",
+        "彰化女中",
+        "彰化高中",
+        "復興實中",
+        "新竹高中",
+        "景興國中",
+        "松山高中",
+        "板橋高中",
+        "桃園陽明",
+        "檳城鍾靈獨立中學",
+        "武陵高中",
+        "永平高中",
+        "永春高中",
+        "海山高中",
+        "百齡高中",
+        "碧華國中A",
+        "碧華國中B",
+        "竹科實中",
+        "美國聯隊",
+        "興大附中",
+        "華江高中",
+        "薇閣中學",
+        "衛道中學",
+        "西苑高中國中部",
+        "高師附中",
+        "高雄中學",
+        "高雄女中",
+        "鳳山高中",
+        "鳳新高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2408",
@@ -199,7 +2040,88 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 8,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "歷屆團體獎與最佳辯士依第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」登錄；日期、主辦與地點未由該表列明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-584704b5a6cb",
+          "name": "冠軍",
+          "recipient": "新竹女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-dfde06dffbd5",
+          "name": "亞軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-d9225ccbdc19",
+          "name": "季軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-68409b9d7228",
+          "name": "殿軍",
+          "recipient": "臺中二中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）"
+        },
+        {
+          "id": "honor-c809155f6fcc",
+          "name": "最佳辯士",
+          "recipient": "范勻瑄",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-b1c4dc0e5bd3",
+          "name": "最佳辯士",
+          "recipient": "林毓宸",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-db7ab4113451",
+          "name": "最佳辯士",
+          "recipient": "陳咸鋐",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        },
+        {
+          "id": "honor-459a961c5942",
+          "name": "最佳辯士",
+          "recipient": "顏羽婕",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": "來源：第十四屆風雩盃秩序冊「歷屆賽事得獎紀錄」（第18–20頁）；秩序冊未列獲獎者所屬學校。"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2501",
@@ -210,7 +2132,91 @@
       "location": null,
       "recordCount": 30,
       "honorCount": 5,
-      "teamCount": 23
+      "teamCount": 23,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-720134cec25e",
+          "title": "網路實名制對臺灣社會利大於弊／網路實名制對臺灣社會弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-165613d87250",
+          "name": "冠軍",
+          "recipient": "臺南一中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-c6a6199b5987",
+          "name": "亞軍",
+          "recipient": "文華高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-89ca1d4461c6",
+          "name": "季軍",
+          "recipient": "虎尾高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-2636ec9b00f6",
+          "name": "季軍",
+          "recipient": "高雄女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-00a0faa0afde",
+          "name": "全程最佳辯士",
+          "recipient": "林品遠",
+          "team": "文華高中",
+          "type": "player",
+          "date": "2025-05-25",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中山女高",
+        "南大附中",
+        "員林高中",
+        "善化高中",
+        "嶺東中學",
+        "市立東山",
+        "建台高中",
+        "忠明高中",
+        "振聲高中",
+        "文華高中",
+        "明道中學",
+        "普台中學",
+        "立人高中",
+        "竹北高中",
+        "竹崎高中",
+        "精誠高中",
+        "臺中一中",
+        "臺中女中",
+        "臺南一中",
+        "虎尾高中",
+        "衛道中學",
+        "西松高中",
+        "高雄女中"
+      ]
     },
     {
       "id": "C2502",
@@ -221,7 +2227,98 @@
       "location": null,
       "recordCount": 16,
       "honorCount": 7,
-      "teamCount": 12
+      "teamCount": 12,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-6b22a2ac20d1",
+          "title": "我國成年人性別變更登記應採自我決定模式 (self-determination model)",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-62130470253a",
+          "name": "冠軍",
+          "recipient": "臺南一中",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-f4fe5228d4d8",
+          "name": "亞軍",
+          "recipient": "中和高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-56bf55d29d3a",
+          "name": "季軍",
+          "recipient": "永豐高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-a5cb37c0bafa",
+          "name": "全程最佳辯士",
+          "recipient": "李鎧麟",
+          "team": "中和高中",
+          "type": "player",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-6a214cc0f044",
+          "name": "全程最佳辯士",
+          "recipient": "方凱佾",
+          "team": "臺南一中",
+          "type": "player",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-673df5edad38",
+          "name": "全程最佳辯士",
+          "recipient": "陳佳皇",
+          "team": "臺南一中",
+          "type": "player",
+          "date": "2025-04-13",
+          "note": null
+        },
+        {
+          "id": "honor-8fc429681d9e",
+          "name": "全程最佳辯士",
+          "recipient": "孫興宸",
+          "team": "永豐高中",
+          "type": "player",
+          "date": "2025-04-13",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中壢高商",
+        "中大壢中",
+        "內壢高中",
+        "平鎮高中",
+        "成淵高中",
+        "明倫高中",
+        "永豐高中",
+        "立人高中",
+        "竹科實中",
+        "臺南一中",
+        "衛道中學"
+      ]
     },
     {
       "id": "C2503",
@@ -232,7 +2329,120 @@
       "location": null,
       "recordCount": 31,
       "honorCount": 8,
-      "teamCount": 25
+      "teamCount": 25,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-c16ee72ada0b",
+          "title": "我國電業應實施區域電價制",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-1187e147fc16",
+          "name": "冠軍",
+          "recipient": "竹科實中",
+          "team": null,
+          "type": "team",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-0506a1a7953b",
+          "name": "亞軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-a3476cd83efb",
+          "name": "季軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-24280231520a",
+          "name": "季軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-7e270b29f9e1",
+          "name": "全程最佳辯士",
+          "recipient": "李明祐",
+          "team": "竹科實中",
+          "type": "player",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-99a66f7fba66",
+          "name": "全程最佳辯士",
+          "recipient": "蕭甫叡",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-443ff9df9fc3",
+          "name": "全程最佳辯士",
+          "recipient": "蔡育瑞",
+          "team": "建國中學",
+          "type": "player",
+          "date": "2025-12-07",
+          "note": null
+        },
+        {
+          "id": "honor-8f203cae2955",
+          "name": "全程最佳辯士",
+          "recipient": "徐瑄毅",
+          "team": "師大附中",
+          "type": "player",
+          "date": "2025-12-07",
+          "note": null
+        }
+      ],
+      "teams": [
+        "北一女中",
+        "南山高中",
+        "和平高中",
+        "市立大同",
+        "師大附中",
+        "平鎮高中",
+        "建國中學",
+        "彰化高中",
+        "忠明高中",
+        "明道中學",
+        "曉明女中",
+        "東山高中",
+        "板橋高中",
+        "桃園高中",
+        "永豐高中A",
+        "永豐高中B",
+        "溪湖高中",
+        "立人高中",
+        "立人高中B",
+        "竹科實中",
+        "精誠中學",
+        "臺中二中",
+        "臺南護專",
+        "萬芳高中",
+        "衛道中學"
+      ]
     },
     {
       "id": "C2504",
@@ -243,7 +2453,182 @@
       "location": null,
       "recordCount": 115,
       "honorCount": 8,
-      "teamCount": 82
+      "teamCount": 82,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-13828f8aa4ff",
+          "title": "我國電子煙應合法化",
+          "explanation": null
+        },
+        {
+          "id": "topic-c67b0c561a90",
+          "title": "世界糧食計劃署的糧食援助對受捐助國利大於弊／世界糧食計劃署的糧食援助對受捐助國弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-2f4ebd9b30b1",
+          "name": "冠軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-87c8383576dd",
+          "name": "亞軍",
+          "recipient": "政大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-88d34e615e33",
+          "name": "季軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-f859a3ae7b2e",
+          "name": "殿軍",
+          "recipient": "成淵高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-336d7eb2cada",
+          "name": "全程最佳辯士",
+          "recipient": "蘇于皓",
+          "team": "政大附中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-346526406969",
+          "name": "全程最佳辯士",
+          "recipient": "張百黎",
+          "team": "成淵高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-ef708b4b75e3",
+          "name": "全程最佳辯士",
+          "recipient": "吳胤嘉",
+          "team": "成功高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-0ad767c8a35d",
+          "name": "全程最佳辯士",
+          "recipient": "楊璽勳",
+          "team": "成功高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中大壢中",
+        "中山女高",
+        "中山高中",
+        "中崙高中",
+        "光復高中",
+        "內壢高中",
+        "內湖高中",
+        "北一女中",
+        "北商五專",
+        "協同中學",
+        "南大附中",
+        "南山高中",
+        "南湖高中",
+        "南科實中",
+        "和平高中",
+        "員林高中",
+        "嘉義女中",
+        "大灣高中",
+        "大直高中",
+        "小港高中",
+        "屏東女中",
+        "嶺東高中",
+        "市立大同",
+        "市立東山",
+        "師大附中",
+        "平鎮高中",
+        "延平中學",
+        "建功高中",
+        "建國中學",
+        "彰化女中",
+        "復興高中",
+        "忠明高中",
+        "慧燈中學",
+        "成功高中",
+        "成淵高中",
+        "政大附中",
+        "文華高中",
+        "斗六高中",
+        "新化高中",
+        "新北三民",
+        "新店高中",
+        "新竹女中",
+        "新竹高中",
+        "新竹高商",
+        "明倫高中",
+        "明道中學",
+        "景美女中",
+        "曙光女中",
+        "松山高中",
+        "桃園高中",
+        "武陵高中",
+        "永平高中",
+        "永春高中",
+        "海山高中",
+        "港明高中",
+        "溪湖高中",
+        "百齡高中",
+        "立人高中",
+        "竹北高中",
+        "竹東高中",
+        "竹科實中",
+        "羅東高中",
+        "臺中二中",
+        "臺中女中",
+        "臺南二中",
+        "臺東高中",
+        "興國高中",
+        "華僑高中",
+        "華江高中",
+        "薇閣中學",
+        "虎尾高中",
+        "衛道中學",
+        "豐原高中",
+        "長榮中學",
+        "陽明高中",
+        "高市中正",
+        "高師附中",
+        "高雄中學",
+        "高雄女中",
+        "鳳新高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2505",
@@ -254,7 +2639,117 @@
       "location": null,
       "recordCount": 37,
       "honorCount": 8,
-      "teamCount": 22
+      "teamCount": 22,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-4f606a587e1c",
+          "title": "註定分開的愛情還要／不要開始",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-9a2dc82521ef",
+          "name": "冠軍",
+          "recipient": "請用安平熱到造個句子",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-cac76336a9c9",
+          "name": "亞軍",
+          "recipient": "無教練的小朋友",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-2c8e6ec062e4",
+          "name": "季軍",
+          "recipient": "分科不如分手",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-d26aad0f0d10",
+          "name": "季軍",
+          "recipient": "笑死",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-a4dd13d9b9b7",
+          "name": "申論王",
+          "recipient": "鄭又仁",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-e9a0cd34fbaf",
+          "name": "質詢王",
+          "recipient": "楊璽勳",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-7c7cab50000a",
+          "name": "答辯王",
+          "recipient": "盧柏翰",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-afdfde439195",
+          "name": "全程最佳辯士",
+          "recipient": "張百黎",
+          "team": null,
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "你怎麼知道你的腦存在",
+        "分科不如分手",
+        "南山高中",
+        "和平高中",
+        "學長我們明年見",
+        "對不起我們有漂亮學姊",
+        "我們的友情不需要辯革",
+        "我們還找不到隊友啦",
+        "教練是dinner",
+        "明倫高中",
+        "曉明女中",
+        "板橋高中",
+        "永平紫極演辯社",
+        "海底撈已經金海的會員",
+        "無教練的小朋友",
+        "球球不見了",
+        "笑死",
+        "胡教練的小朋友",
+        "被愛情辜負但我仍純愛",
+        "觸電的那種感覺",
+        "請用安平熱到造個句子",
+        "還沒想好耶"
+      ]
     },
     {
       "id": "C2506",
@@ -265,7 +2760,93 @@
       "location": null,
       "recordCount": 27,
       "honorCount": 6,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-b359ba1aba2e",
+          "title": "原住民族觀光舞台化對於原住民族文化利大於弊／弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-e2bf51c5ad0e",
+          "name": "冠軍",
+          "recipient": "我家的貓會後空翻",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-27",
+          "note": null
+        },
+        {
+          "id": "honor-7c384e2b2308",
+          "name": "亞軍",
+          "recipient": "松山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-27",
+          "note": null
+        },
+        {
+          "id": "honor-abcaf305ee18",
+          "name": "季軍",
+          "recipient": "建美鱷魚",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-27",
+          "note": null
+        },
+        {
+          "id": "honor-e5ef52077725",
+          "name": "季軍",
+          "recipient": "心碎小丑之海底撈銀海快金海的會員",
+          "team": null,
+          "type": "team",
+          "date": "2025-04-27",
+          "note": null
+        },
+        {
+          "id": "honor-f418f8cd06a0",
+          "name": "縱谷之星",
+          "recipient": "蔡定瑾",
+          "team": "慈濟附中",
+          "type": "player",
+          "date": "2025-04-27",
+          "note": null
+        },
+        {
+          "id": "honor-c7d04f78a000",
+          "name": "全程最佳辯士",
+          "recipient": "李祐慈",
+          "team": "我家的貓會後空翻",
+          "type": "player",
+          "date": "2025-04-27",
+          "note": null
+        }
+      ],
+      "teams": [
+        "不怕魔法",
+        "來裁",
+        "劍潭一中",
+        "咖波和他的子民們",
+        "建竹實聯隊",
+        "建美鱷魚",
+        "從缺",
+        "心碎小丑之海底撈銀海快金海的會員",
+        "慈濟附中",
+        "我家的貓會後空翻",
+        "我說的都對",
+        "松山高中",
+        "正道中學",
+        "海岸哲學家",
+        "這樣也能贏，隊",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2507",
@@ -276,7 +2857,100 @@
       "location": null,
       "recordCount": 47,
       "honorCount": 5,
-      "teamCount": 32
+      "teamCount": 32,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-02dee37274cf",
+          "title": "我國普通刑法應廢除死刑",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-bcb5d0c473dd",
+          "name": "冠軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-11-16",
+          "note": null
+        },
+        {
+          "id": "honor-d0313fbc2920",
+          "name": "亞軍",
+          "recipient": "大直高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-11-16",
+          "note": null
+        },
+        {
+          "id": "honor-5e00d644f8c7",
+          "name": "季軍",
+          "recipient": "明倫高中A",
+          "team": null,
+          "type": "team",
+          "date": "2025-11-16",
+          "note": null
+        },
+        {
+          "id": "honor-2b855a7a189f",
+          "name": "季軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-11-16",
+          "note": null
+        },
+        {
+          "id": "honor-aaa1dbec6b9a",
+          "name": "全程最佳辯士",
+          "recipient": "曾丞浩",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2025-11-16",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中大壢中",
+        "中崙高中",
+        "內壢高中",
+        "南湖高中",
+        "和平高中",
+        "大理高中",
+        "大直高中",
+        "市立復興",
+        "延平中學",
+        "復旦高中",
+        "成功高中",
+        "成淵高中",
+        "政大附中",
+        "新竹高中",
+        "明倫高中A",
+        "明倫高中B",
+        "景美女中",
+        "東山高中",
+        "板橋高中",
+        "桃園高中",
+        "武陵高中",
+        "永平高中",
+        "海山高中",
+        "百齡高中",
+        "羅東高中",
+        "華僑高中",
+        "薇閣中學",
+        "西松高中",
+        "陽交附中",
+        "麗山高中A",
+        "麗山高中B"
+      ]
     },
     {
       "id": "C2508",
@@ -287,7 +2961,101 @@
       "location": null,
       "recordCount": 56,
       "honorCount": 4,
-      "teamCount": 42
+      "teamCount": 42,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-493742ecfa64",
+          "title": "我國刑法222條之法律效果應增設化學去勢",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-f1f9f6d685d5",
+          "name": "冠軍",
+          "recipient": "屏東女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-08-24",
+          "note": null
+        },
+        {
+          "id": "honor-e8678c615705",
+          "name": "亞軍",
+          "recipient": "溪湖高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-08-24",
+          "note": null
+        },
+        {
+          "id": "honor-cb42f80c4f65",
+          "name": "季軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-08-24",
+          "note": null
+        },
+        {
+          "id": "honor-599c403521cb",
+          "name": "季軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": "2025-08-24",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中大壢中",
+        "中山女高",
+        "中山高中",
+        "前鎮高中",
+        "北一女中",
+        "南大附中",
+        "南山高中",
+        "嘉義女中",
+        "嘉義高中",
+        "嘉華中學",
+        "家齊高中",
+        "屏東女中",
+        "嶺東高中",
+        "市立大同",
+        "師大附中",
+        "延平中學",
+        "延平高中",
+        "建功高中",
+        "彰化女中",
+        "德光中學",
+        "成淵高中",
+        "政大附中",
+        "明道中學",
+        "曉明女中",
+        "港明高中",
+        "溪湖高中",
+        "瑞祥高中",
+        "竹科實中",
+        "臺南一中",
+        "臺南二中",
+        "臺南女中",
+        "興大附中",
+        "虎尾高中A",
+        "虎尾高中B",
+        "高市三民",
+        "高市中正",
+        "高師附中",
+        "高雄中學",
+        "高雄女中",
+        "鳳山高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2509",
@@ -298,7 +3066,109 @@
       "location": null,
       "recordCount": 20,
       "honorCount": 8,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-bbe8cb136201",
+          "title": "我國應設立投票權行使之前提性公民素養標準",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-9ef077f51142",
+          "name": "冠軍",
+          "recipient": "臺南一中",
+          "team": "臺南一中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-3aa7bd00e8b0",
+          "name": "亞軍",
+          "recipient": "中山女高",
+          "team": "中山女高",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-84876a6bbeb7",
+          "name": "季軍",
+          "recipient": "武陵高中",
+          "team": "武陵高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-6983836306e5",
+          "name": "殿軍",
+          "recipient": "馬公高中（一）",
+          "team": "馬公高中（一）",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-b2f557975c0b",
+          "name": "全程最佳辯士",
+          "recipient": "徐愷宏",
+          "team": "臺南一中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-1d4cd445c521",
+          "name": "全程最佳辯士",
+          "recipient": "陳品捷",
+          "team": "中山女高",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-4a027edb739f",
+          "name": "全程最佳辯士",
+          "recipient": "陳筳皓",
+          "team": "武陵高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-e75a85b5bea3",
+          "name": "全程最佳辯士",
+          "recipient": "林子芹",
+          "team": "馬公高中（一）",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "中山女高",
+        "員林高中",
+        "斗六高中",
+        "新竹高中（一）",
+        "新竹高中（二）",
+        "武陵高中",
+        "聖功女中",
+        "臺南一中",
+        "虎尾高中（一）",
+        "虎尾高中（三）",
+        "虎尾高中（二）",
+        "西松高中",
+        "馬公高中（一）",
+        "馬公高中（二）"
+      ]
     },
     {
       "id": "C2510",
@@ -309,7 +3179,117 @@
       "location": null,
       "recordCount": 29,
       "honorCount": 8,
-      "teamCount": 22
+      "teamCount": 22,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-4c10e45f1a68",
+          "title": "我國加價販售遊樂票券應合法化",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-6891a4b3041b",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-2f6d2d1f3be6",
+          "name": "亞軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-121719faa193",
+          "name": "季軍",
+          "recipient": "屏東女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-6f335be82474",
+          "name": "季軍",
+          "recipient": "臺中二中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-648329f7f806",
+          "name": "全程最佳辯士",
+          "recipient": "王文杉",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-6e46956bb7e1",
+          "name": "全程最佳辯士",
+          "recipient": "張宸紳",
+          "team": "延平中學",
+          "type": "player",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-feb4be9b33e5",
+          "name": "全程最佳辯士",
+          "recipient": "李祐慈",
+          "team": "屏東女中",
+          "type": "player",
+          "date": "2025-05-25",
+          "note": null
+        },
+        {
+          "id": "honor-f7a2bb99ac49",
+          "name": "全程最佳辯士",
+          "recipient": "陳愉絜",
+          "team": "臺中二中",
+          "type": "player",
+          "date": "2025-05-25",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中正高工",
+        "內壢高中",
+        "內湖高中",
+        "北一女中",
+        "南大附中",
+        "南山高中",
+        "和平高中",
+        "屏東女中",
+        "延平中學",
+        "復興高中",
+        "文華高中",
+        "曙光女中",
+        "東山高中",
+        "板橋高中",
+        "永平高中",
+        "永春高中",
+        "瑞祥高中",
+        "臺中二中",
+        "臺南一中",
+        "薇閣高中",
+        "馬公高中",
+        "高雄中學"
+      ]
     },
     {
       "id": "C2511",
@@ -320,7 +3300,100 @@
       "location": "高雄高商",
       "recordCount": 22,
       "honorCount": 6,
-      "teamCount": 23
+      "teamCount": 23,
+      "organizer": "高雄市政府青年局",
+      "executionUnit": null,
+      "note": "賽期與舉辦地點依高雄市政府青年局公告；逐場日期未載於賽果表。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-e781bb463dc6",
+          "title": "加強管制／自律教育更有利於解決青少年手機成癮問題",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-6c3c784307d4",
+          "name": "冠軍",
+          "recipient": "台南二中A",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "原表列「台南二中」；依準決賽晉級隊名對應台南二中A。"
+        },
+        {
+          "id": "honor-4a1f7872f4df",
+          "name": "亞軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-4365477e51da",
+          "name": "季軍",
+          "recipient": "高雄市立前鎮高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-1cbd36bab785",
+          "name": "季軍",
+          "recipient": "高雄市立瑞祥高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-90dfc60fb5db",
+          "name": "全程最佳辯士",
+          "recipient": "黃禹叡",
+          "team": "臺南二中A",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-949d48328bee",
+          "name": "全程最佳辯士",
+          "recipient": "王懷謙",
+          "team": "臺北市私立延平高級中學",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "三民高中A",
+        "三民高中B",
+        "中正預校",
+        "前鎮高中A",
+        "前鎮高中B",
+        "南湖高中",
+        "台南二中A",
+        "台南二中B",
+        "嘉義高中",
+        "小港高中",
+        "延平中學",
+        "成功高中",
+        "東港高中",
+        "楠梓高中",
+        "瑞祥高中",
+        "華僑高中",
+        "陸興中學",
+        "高市中正A",
+        "高市中正B",
+        "高師大附中",
+        "高雄高商A",
+        "高雄高商B",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2512",
@@ -331,7 +3404,128 @@
       "location": "臺北市私立延平高級中學",
       "recordCount": 28,
       "honorCount": 9,
-      "teamCount": 24
+      "teamCount": 24,
+      "organizer": "臺北市私立延平高級中學",
+      "executionUnit": null,
+      "note": "賽果公告可辨識24支隊伍（延平中學A、B分開計算）。賽期為2025-02-28至2025-03-01；公告明列28場比分（2/28三時段各8場、3/1第一時段4場）。3/1第二時段準決賽及第三時段冠亞賽只有賽程、未提供比分，不推測補登。藝術組由竹科實中、板橋高中、聖心女中同勝場、評分單及架構票後，再按個人排名總和決定板橋高中晉級。簡章規定參賽資格為高中職及五專一至三年級。辯題依簡章登錄。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [
+        {
+          "id": "topic-c67b0c561a90",
+          "title": "世界糧食計劃署的糧食援助對受捐助國利大於弊／世界糧食計劃署的糧食援助對受捐助國弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-ab6917ed4ae4",
+          "name": "冠軍",
+          "recipient": "市立大同",
+          "team": null,
+          "type": "team",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-93e69023bc0b",
+          "name": "亞軍",
+          "recipient": "曉明女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-c3989a0f07da",
+          "name": "季軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-23693fcc255e",
+          "name": "季軍",
+          "recipient": "永平高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-3f8e7d82c383",
+          "name": "全程最佳辯士",
+          "recipient": "蔡子竣",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-25cec8154dbe",
+          "name": "全程最佳辯士",
+          "recipient": "金承陽",
+          "team": "永平高中",
+          "type": "player",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-13783a38d350",
+          "name": "全程最佳辯士",
+          "recipient": "蔡茂揚",
+          "team": "市立大同",
+          "type": "player",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-d3fdec1dd02c",
+          "name": "全程最佳辯士",
+          "recipient": "王文杉",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2025-03-01",
+          "note": null
+        },
+        {
+          "id": "honor-a805b8cb4d5c",
+          "name": "同舟共濟獎",
+          "recipient": "臺中女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-03-01",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "內壢高中",
+        "北一女中",
+        "南山高中",
+        "南湖高中",
+        "和平高中",
+        "市立大同",
+        "延平中學A",
+        "延平中學B",
+        "建國中學",
+        "成淵高中",
+        "政大附中",
+        "曉明女中",
+        "板橋高中",
+        "桃園高中",
+        "武陵高中",
+        "永平高中",
+        "永豐高中",
+        "溪湖高中",
+        "竹科實中",
+        "聖心女中",
+        "臺中女中",
+        "興大附中",
+        "高師附中"
+      ]
     },
     {
       "id": "C2513",
@@ -342,7 +3536,119 @@
       "location": null,
       "recordCount": 30,
       "honorCount": 8,
-      "teamCount": 24
+      "teamCount": 24,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-f5c7f657035f",
+          "title": "「我們終將成為自己討厭的人」是／不是一件壞事。",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-5755c8526264",
+          "name": "冠軍",
+          "recipient": "高市三民",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-04",
+          "note": "冠軍公告用名：三民高中"
+        },
+        {
+          "id": "honor-7332b332439d",
+          "name": "亞軍",
+          "recipient": "高市中正",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-04",
+          "note": null
+        },
+        {
+          "id": "honor-39c69434cb35",
+          "name": "季軍",
+          "recipient": "景美女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-04",
+          "note": null
+        },
+        {
+          "id": "honor-3d82b275627e",
+          "name": "季軍",
+          "recipient": "文華高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-05-04",
+          "note": null
+        },
+        {
+          "id": "honor-daa7e4a139cd",
+          "name": "全程最佳辯士",
+          "recipient": "薛舒晴",
+          "team": "高市三民",
+          "type": "player",
+          "date": "2025-05-04",
+          "note": "公告用名：三民高中"
+        },
+        {
+          "id": "honor-ae5879cfe674",
+          "name": "全程最佳辯士",
+          "recipient": "洪士凱",
+          "team": "高市中正",
+          "type": "player",
+          "date": "2025-05-04",
+          "note": null
+        },
+        {
+          "id": "honor-19d771cc983e",
+          "name": "全程最佳辯士",
+          "recipient": "陳沅妤",
+          "team": "景美女中",
+          "type": "player",
+          "date": "2025-05-04",
+          "note": null
+        },
+        {
+          "id": "honor-6df9f8affd69",
+          "name": "全程最佳辯士",
+          "recipient": "林品遠",
+          "team": "文華高中",
+          "type": "player",
+          "date": "2025-05-04",
+          "note": null
+        }
+      ],
+      "teams": [
+        "光復高中",
+        "南大附中",
+        "南科實中",
+        "大灣高中",
+        "大理高中",
+        "家齊高中",
+        "小港高中",
+        "屏東女中",
+        "屏東高中",
+        "彰化女中",
+        "文華高中",
+        "新化高中",
+        "明道中學",
+        "景美女中",
+        "永仁高中",
+        "瑞祥高中",
+        "美和高中",
+        "聖功女中",
+        "臺南二中",
+        "興大附中",
+        "薇閣中學",
+        "高市三民",
+        "高市中正",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2514",
@@ -353,7 +3659,45 @@
       "location": null,
       "recordCount": 2,
       "honorCount": 2,
-      "teamCount": 4
+      "teamCount": 4,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "賽期為2025-08-08至2025-08-09；目前提供的兩場小宮燈十九賽果皆為第二天（2025-08-09），逐場時段未載明。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-2ef40ebc2bb2",
+          "title": "當代年輕人更應承擔責任／追求理想",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-c0659cebae32",
+          "name": "單場最佳辯士",
+          "recipient": "黃耕鴻",
+          "team": "延平中學",
+          "type": "player",
+          "date": "2025-08-09",
+          "note": "第二天（D2）；正方四辯；延平中學 vs 我打宮燈？真的假的？"
+        },
+        {
+          "id": "honor-4085629c064b",
+          "name": "單場最佳辯士",
+          "recipient": "劉冠廷",
+          "team": "小貓喵喵隊",
+          "type": "player",
+          "date": "2025-08-09",
+          "note": "第二天（D2）；反方四辯；輸了許詠雋買恐龍氣球給你 vs 小貓喵喵隊"
+        }
+      ],
+      "teams": [
+        "小貓喵喵隊",
+        "延平中學",
+        "我打宮燈？真的假的？",
+        "輸了許詠雋買恐龍氣球給你"
+      ]
     },
     {
       "id": "C2515",
@@ -364,7 +3708,118 @@
       "location": "國立政治大學",
       "recordCount": 29,
       "honorCount": 8,
-      "teamCount": 23
+      "teamCount": 23,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "依第二次領隊會議簡報所列大會保險活動處所補入場地；官方簡報地址為臺北市文山區指南路二段64號。秩序冊及簡報未確認主辦單位。另有秩序冊23隊名單、完整題解、29場比分與最終獎項；第三時段只有賽程，未提供比分。來源：",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-edd60c424a56",
+          "title": "學歷通膨現象是一件好事／壞事",
+          "explanation": "在知識經濟時代，高等教育的普及化已成為全球趨勢。隨著學士、碩博士入學率的持續攀升，學歷通膨現象日益明顯——曾經稀缺珍貴的大學學歷，如今已成為大多就業市場的基本門檻。這一現象引發了廣泛討論：學歷通膨究竟是社會進步的標誌，還是教育體系失衡的警訊？\n\n學歷通膨首先反映了教育機會的平等化和民主化。過去，高等教育主要是菁英階層的特權，而今天，來自不同社會背景的人都有機會踏入高等教育。這種變化打破了傳統的階級壁壘，提供了更多社會流動的可能。統計數據顯示，近幾十年來，全球範圍內的大學入學率顯著提高，第一代大學生比例不斷增加。這意味著更多原本可能被排除在高等教育之外的群體——低收入家庭子女、少數族群、農村地區學生——現在能夠通過教育改變自己的命運，有助於建立更加公平的社會結構。亦有認為，學歷通膨反映著社會整體的知識水準和素質的提升，高等教育不僅傳授專業知識，還培養批判性思維、溝通能力和終身學習的習慣。這些能力對於應對當今快速變化的世界至關重要。\n\n然而，學歷通膨也帶來了嚴重的教育資源浪費問題。當大學學歷成為就業的基本門檻時，許多人被迫投入更多時間和金錢獲取更高學歷，即使這些學歷對其實際工作能力的提升有限。這種「學歷競賽」不僅浪費了個人資源，也浪費了社會資源。從個人角度看，學生需要花費數年時間和大量金錢獲取學位，這些資源本可用於其他生產性活動或實際技能培訓。從社會角度看，政府和教育機構投入大量資金擴建大學和支持高等教育，但如果畢業生的知識和技能與就業市場需求不匹配，這些投資的回報率將大幅降低。此外，過度強調學歷的就業環境扭曲了教育的本質，不再是為了培養全面發展的人才和公民，而是淪為獲取就業「門票」的工具。這種功利主義的觀念長期來看可能削弱社會的創新活力和競爭力。\n\n究竟「學歷通膨是好事／壞事？」有待場上辯士為我們解答。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-a2041a359e7e",
+          "name": "冠軍",
+          "recipient": "高雄中學",
+          "team": "高雄中學",
+          "type": "team",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-4ea0f2c266c8",
+          "name": "亞軍",
+          "recipient": "臺中女中",
+          "team": "臺中女中",
+          "type": "team",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-8b3602899b8c",
+          "name": "季軍",
+          "recipient": "竹科實中",
+          "team": "竹科實中",
+          "type": "team",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-231b88968534",
+          "name": "殿軍",
+          "recipient": "延平中學",
+          "team": "延平中學",
+          "type": "team",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-6c64db8a59ba",
+          "name": "最佳辯士",
+          "recipient": "陳秉銨",
+          "team": "高雄中學",
+          "type": "player",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-55bad6b81019",
+          "name": "最佳辯士",
+          "recipient": "鄭宇庭",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-74995569e064",
+          "name": "最佳辯士",
+          "recipient": "林奕鋐",
+          "team": "竹科實中",
+          "type": "player",
+          "date": "2025-05-18",
+          "note": null
+        },
+        {
+          "id": "honor-6ec7600cda47",
+          "name": "最佳辯士",
+          "recipient": "蕭容琇",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2025-05-18",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中山女高",
+        "內湖高中",
+        "北一女中",
+        "師大附中",
+        "平鎮高中",
+        "延平中學",
+        "建國中學",
+        "復旦高中",
+        "成功高中",
+        "政大附中",
+        "斗六高中",
+        "明倫高中",
+        "明道高中",
+        "東山高中",
+        "松山高中",
+        "武陵高中",
+        "竹北高中",
+        "竹東高中",
+        "竹科實中",
+        "臺中女中",
+        "興國高中",
+        "高雄中學"
+      ]
     },
     {
       "id": "C2516",
@@ -375,7 +3830,140 @@
       "location": null,
       "recordCount": 41,
       "honorCount": 9,
-      "teamCount": 31
+      "teamCount": 31,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-1bcdfecf5119",
+          "title": "我國應廢除民法第1085條父母對子女懲戒權之規定",
+          "explanation": null
+        },
+        {
+          "id": "topic-cdbd872b9356",
+          "title": "在奮鬥路上遇到好對手／好夥伴更重要",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-eb6918204563",
+          "name": "冠軍",
+          "recipient": "高雄女中",
+          "team": null,
+          "type": "team",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-1b603de5274b",
+          "name": "亞軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-07c6c061797b",
+          "name": "季軍",
+          "recipient": "麗山高中",
+          "team": null,
+          "type": "team",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-23f4a7b52894",
+          "name": "季軍",
+          "recipient": "竹科實中",
+          "team": null,
+          "type": "team",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-c15c2709e699",
+          "name": "全程最佳辯士",
+          "recipient": "張曦之",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-b638910b63b6",
+          "name": "全程優秀辯士",
+          "recipient": "林品遠",
+          "team": "文華高中",
+          "type": "player",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-42a03bc408bf",
+          "name": "全程優秀辯士",
+          "recipient": "吳奕萱",
+          "team": "高雄女中",
+          "type": "player",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-cee8cbe79799",
+          "name": "全程優秀辯士",
+          "recipient": "林可倫",
+          "team": "竹科實中",
+          "type": "player",
+          "date": "2025-07-08",
+          "note": null
+        },
+        {
+          "id": "honor-aa478d191f16",
+          "name": "全程優秀辯士",
+          "recipient": "林彥駖",
+          "team": "高雄女中",
+          "type": "player",
+          "date": "2025-07-08",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中崙高中",
+        "內湖高中",
+        "北一女中",
+        "南山高中",
+        "南科實中",
+        "嘉義女中",
+        "大直高中",
+        "平鎮高中",
+        "建國中學",
+        "彰化女中",
+        "復旦高中",
+        "復興實中",
+        "慧燈中學",
+        "文華高中",
+        "新北三民",
+        "東山高中",
+        "板橋高中",
+        "桃園陽明",
+        "桃園高中",
+        "永豐高中",
+        "海山高中",
+        "港明高中",
+        "立人高中",
+        "竹科實中",
+        "聖功女中",
+        "臺中高工",
+        "長榮中學",
+        "高雄中學",
+        "高雄女中",
+        "鳳新高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2517",
@@ -386,7 +3974,34 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 2,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-8e11d1256eb4",
+          "name": "亞軍",
+          "recipient": "市立東山",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": "經回報（2026-10-09）"
+        },
+        {
+          "id": "honor-94cdae6f49b3",
+          "name": "全程最佳辯士",
+          "recipient": "詹易翔",
+          "team": "市立東山",
+          "type": "player",
+          "date": null,
+          "note": "經回報（2026-10-09）"
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2601",
@@ -397,7 +4012,87 @@
       "location": null,
       "recordCount": 13,
       "honorCount": 6,
-      "teamCount": 10
+      "teamCount": 10,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-ad486cac92f5",
+          "title": "路見不平，應拔刀相助／明哲保身",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-77896091bf93",
+          "name": "冠軍",
+          "recipient": "永平高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-19",
+          "note": null
+        },
+        {
+          "id": "honor-2439efaca094",
+          "name": "亞軍",
+          "recipient": "不知道要取什麼",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-19",
+          "note": null
+        },
+        {
+          "id": "honor-499cb2101b62",
+          "name": "季軍",
+          "recipient": "中和高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-19",
+          "note": null
+        },
+        {
+          "id": "honor-be1222a91d5e",
+          "name": "季軍",
+          "recipient": "打比賽嗎各位",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-19",
+          "note": null
+        },
+        {
+          "id": "honor-d254b2ce443f",
+          "name": "全程最佳辯士",
+          "recipient": "金承陽",
+          "team": "永平高中",
+          "type": "player",
+          "date": "2026-04-19",
+          "note": null
+        },
+        {
+          "id": "honor-ee45f5275273",
+          "name": "最佳服裝創意獎",
+          "recipient": "內湖高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-19",
+          "note": null
+        }
+      ],
+      "teams": [
+        "不知道要取什麼",
+        "中和高中",
+        "了不起的公關們",
+        "內湖高中",
+        "北陽軍閥",
+        "南湖高中",
+        "我這個最可愛的小寶貝",
+        "打比賽嗎各位",
+        "永平高中",
+        "絕世天才"
+      ]
     },
     {
       "id": "C2602",
@@ -408,7 +4103,92 @@
       "location": null,
       "recordCount": 26,
       "honorCount": 5,
-      "teamCount": 20
+      "teamCount": 20,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-3933d41c8fdc",
+          "title": "見過了霍格華茲的煙火要／不要坦然接受自己是個麻瓜",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-bf4f0a8d8154",
+          "name": "冠軍",
+          "recipient": "燒焦了",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-26",
+          "note": null
+        },
+        {
+          "id": "honor-7092eaa54ea8",
+          "name": "亞軍",
+          "recipient": "謝謝辯論讓我+365",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-26",
+          "note": null
+        },
+        {
+          "id": "honor-5617f25e4848",
+          "name": "季軍",
+          "recipient": "小丑們要特選和分科",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-26",
+          "note": null
+        },
+        {
+          "id": "honor-bde628cf6065",
+          "name": "季軍",
+          "recipient": "我們都喜歡女生",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-26",
+          "note": null
+        },
+        {
+          "id": "honor-19239df6f6d3",
+          "name": "全程最佳辯士",
+          "recipient": "高偉承",
+          "team": "謝謝辯論讓我+365",
+          "type": "player",
+          "date": "2026-04-26",
+          "note": null
+        }
+      ],
+      "teams": [
+        "上峰小汽車誰撞誰休克",
+        "上鋒小汽車撞誰誰休克",
+        "不知道",
+        "世界第一大美女何亮諼",
+        "人右吉吉愛烤雞",
+        "別被三清",
+        "南北中正一起串聯",
+        "南北中正一起串連",
+        "危雞百科",
+        "吳律寬",
+        "哲何新臺幣鱷十億沅",
+        "小丑們要特選和分科",
+        "小丑們要特選跟分科",
+        "小籠包",
+        "我們有笨蛋小狗",
+        "我們都喜歡女生",
+        "我要吃火雞",
+        "曉明女中",
+        "燒焦了",
+        "莉莉說的都對",
+        "莉莉說的都隊",
+        "謝謝辯論讓我+365",
+        "雞逼雞逼甲巴甲巴",
+        "霍金活祭皇家火雞"
+      ]
     },
     {
       "id": "C2603",
@@ -419,7 +4199,111 @@
       "location": null,
       "recordCount": 21,
       "honorCount": 8,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-2a17af3c3c7f",
+          "title": "我國應設立離婚冷靜期",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-54551a079111",
+          "name": "全程最佳辯士",
+          "recipient": "洪睿榮",
+          "team": "竹科實中(二)",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-b2284505e124",
+          "name": "全程最佳辯士",
+          "recipient": "林新秜",
+          "team": "北一女中",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-59646e5baf92",
+          "name": "全程最佳辯士",
+          "recipient": "陳語治",
+          "team": "板橋高中",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-b2cb9eb8bf32",
+          "name": "全程最佳辯士",
+          "recipient": "王嘉歆",
+          "team": "鳳新高中",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-eca6ed0b1d8f",
+          "name": "冠軍",
+          "recipient": "竹科實中(二)",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-5dded1d2b1d6",
+          "name": "亞軍",
+          "recipient": "北一女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-1df9b1d49673",
+          "name": "季軍",
+          "recipient": "鳳新高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-ce162de0c39f",
+          "name": "季軍",
+          "recipient": "板橋高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        }
+      ],
+      "teams": [
+        "北一女中",
+        "協同中學",
+        "嘉義高中",
+        "嘉華中學",
+        "嘉華中學(二)",
+        "康橋國際學校(秀岡校區)",
+        "建功高中",
+        "彰化高中",
+        "新竹高商",
+        "曙光女中",
+        "板橋高中",
+        "竹科實中(二)",
+        "衛道中學",
+        "馬公高中",
+        "馬公高中(二)",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2604",
@@ -430,7 +4314,109 @@
       "location": null,
       "recordCount": 19,
       "honorCount": 8,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-493742ecfa64",
+          "title": "我國刑法222條之法律效果應增設化學去勢",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-609d77dbcda1",
+          "name": "冠軍",
+          "recipient": "心悸大戰",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-a4215a68e964",
+          "name": "亞軍",
+          "recipient": "學測倒數259天",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-88b616955adf",
+          "name": "季軍",
+          "recipient": "楊子甯說你很難改變一個人所以只能改辯稿",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-b9838efb92d6",
+          "name": "季軍",
+          "recipient": "屏東女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-c24c860db472",
+          "name": "全程最佳辯士",
+          "recipient": "張育棋",
+          "team": "心悸大戰",
+          "type": "player",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-759bf92736d5",
+          "name": "全程最佳辯士",
+          "recipient": "薛舒晴",
+          "team": "學測倒數259天",
+          "type": "player",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-cbc8f8c4ae5a",
+          "name": "全程最佳辯士",
+          "recipient": "潘巧云",
+          "team": "屏東女中",
+          "type": "player",
+          "date": "2026-05-03",
+          "note": null
+        },
+        {
+          "id": "honor-e928e59f8490",
+          "name": "全程最佳辯士",
+          "recipient": "徐菱遙",
+          "team": "楊子甯說你很難改變一個人所以只能改辯稿",
+          "type": "player",
+          "date": "2026-05-03",
+          "note": null
+        }
+      ],
+      "teams": [
+        "了不起的公關們",
+        "你說的都隊",
+        "南北菜蟲一起串聯",
+        "吟遊辯士皮陀故事集",
+        "學分辯不見",
+        "學測倒數259天",
+        "尚未決定",
+        "屏東女中",
+        "心悸大戰",
+        "楊子甯說你很難改變一個人所以只能改辯稿",
+        "永遠懷念梁世宣",
+        "虎尾國小",
+        "長億高中A",
+        "長億高中B"
+      ]
     },
     {
       "id": "C2605",
@@ -441,7 +4427,78 @@
       "location": "臺北市立陽明高級中學（臺北市士林區中正路510號）",
       "recordCount": 12,
       "honorCount": 5,
-      "teamCount": 10
+      "teamCount": 10,
+      "organizer": "臺北市立陽明高級中學",
+      "executionUnit": null,
+      "note": "簡章賽名：陽明盃全國高中職辯論邀請賽。協辦：臺北市立南湖高級中學。賽制：新式奧瑞岡四四四制；初賽兩隊互咬、複賽淘汰。開放跨校組隊，每隊3至6人；參賽資格為112至115學年度入學之高中職及五專學生。辯題：我國應廢除重大暴力犯罪少年犯之前科塗銷制度。資料來源：陽明盃秩序冊",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-fb547f711dbd",
+          "title": "我國應廢除重大暴力犯罪少年犯之前科塗銷制度",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-e619e56f79f0",
+          "name": "冠軍",
+          "recipient": "銨芯爬陽明山",
+          "team": "銨芯爬陽明山",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-cb1462cce8fe",
+          "name": "亞軍",
+          "recipient": "陽明高中種子隊B",
+          "team": "陽明高中種子隊B",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-b5d66e8a5c17",
+          "name": "季軍",
+          "recipient": "明倫高中",
+          "team": "明倫高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-e7570dbcc14a",
+          "name": "季軍",
+          "recipient": "學分辯辯辯",
+          "team": "學分辯辯辯",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-98a8015c2664",
+          "name": "全程最佳辯士",
+          "recipient": "陳秉銨",
+          "team": "銨芯爬陽明山",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "交大附中",
+        "南湖高中",
+        "學分辯辯辯",
+        "對方辯友 這很南說",
+        "我也不知道",
+        "明倫高中",
+        "明輿陽輝",
+        "銨芯爬陽明山",
+        "陽明高中種子隊B"
+      ]
     },
     {
       "id": "C2606",
@@ -452,7 +4509,99 @@
       "location": null,
       "recordCount": 28,
       "honorCount": 6,
-      "teamCount": 22
+      "teamCount": 22,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-09681dbcd2fb",
+          "title": "原住民族升學優待制度對於原住民族文化利大於弊／弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-95bf8aa8eb03",
+          "name": "冠軍",
+          "recipient": "三塊厝高中吳律寬請飲料",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-12",
+          "note": null
+        },
+        {
+          "id": "honor-0a61a5d47f6b",
+          "name": "亞軍",
+          "recipient": "長春小熊幫",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-12",
+          "note": null
+        },
+        {
+          "id": "honor-1133050e2df5",
+          "name": "季軍",
+          "recipient": "貢丸騎士和水潤餅魔毯",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-12",
+          "note": null
+        },
+        {
+          "id": "honor-4c59d5d25280",
+          "name": "季軍",
+          "recipient": "了不起的公關們",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-12",
+          "note": null
+        },
+        {
+          "id": "honor-fddcf43fc08e",
+          "name": "縱谷之星",
+          "recipient": "賴宥辰",
+          "team": "明倫高中",
+          "type": "player",
+          "date": "2026-04-12",
+          "note": null
+        },
+        {
+          "id": "honor-a29b95926d7c",
+          "name": "全程最佳辯士",
+          "recipient": "陳秉銨",
+          "team": "三塊厝高中吳律寬請飲料",
+          "type": "player",
+          "date": "2026-04-12",
+          "note": null
+        }
+      ],
+      "teams": [
+        "0",
+        "一百齡五度的你",
+        "三塊厝高中吳律寬請飲料",
+        "了不起的公關們",
+        "北一女中",
+        "北部菜蟲一起串聯",
+        "哲何新臺幣鱷十億沅",
+        "啊隊名勒",
+        "學分辯不見",
+        "延平中學",
+        "我叫小駱 重生回了學測那一天",
+        "明倫高中",
+        "普羅多慧喵喵",
+        "沈葆楨",
+        "百齡果",
+        "神聖麻糬帝國",
+        "臺東高中",
+        "虎尾國小",
+        "貢丸騎士和水潤餅魔毯",
+        "超級辯辯辯",
+        "這次有填選手名單",
+        "長春小熊幫"
+      ]
     },
     {
       "id": "C2607",
@@ -463,7 +4612,119 @@
       "location": null,
       "recordCount": 31,
       "honorCount": 8,
-      "teamCount": 24
+      "teamCount": 24,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-e1bd6ffb8b6c",
+          "title": "憂鬱文學的興起對現代年輕族群是利大於弊／弊大於利",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-232a777803d3",
+          "name": "冠軍",
+          "recipient": "臺南一中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-c5c90967543b",
+          "name": "亞軍",
+          "recipient": "市立東山",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-c5c712447e3e",
+          "name": "季軍",
+          "recipient": "明道中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-786bca79d751",
+          "name": "季軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-e3f4c9876c8e",
+          "name": "全程最佳辯士",
+          "recipient": "林軒嘉",
+          "team": "明道中學",
+          "type": "player",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-255d0784493f",
+          "name": "全程最佳辯士",
+          "recipient": "陳筳皓",
+          "team": "武陵高中",
+          "type": "player",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-6e2ef94441bb",
+          "name": "全程最佳辯士",
+          "recipient": "蘇博原",
+          "team": "臺南一中",
+          "type": "player",
+          "date": "2026-03-15",
+          "note": null
+        },
+        {
+          "id": "honor-a55511121d97",
+          "name": "全程最佳辯士",
+          "recipient": "蔡秉譯",
+          "team": "市立東山",
+          "type": "player",
+          "date": "2026-03-15",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中信國際",
+        "中山女高",
+        "中山高中",
+        "內壢高中",
+        "北一女中",
+        "南湖高中",
+        "家齊高中",
+        "小港高中",
+        "市立東山",
+        "師大附中",
+        "平鎮高中",
+        "建國中學",
+        "成功高中",
+        "新竹高商",
+        "明道中學",
+        "曉明女中",
+        "東港高中",
+        "武陵高中",
+        "竹科實中",
+        "臺中一中",
+        "臺南一中",
+        "臺南二中",
+        "興大附中",
+        "西松高中"
+      ]
     },
     {
       "id": "C2608",
@@ -474,7 +4735,191 @@
       "location": null,
       "recordCount": 125,
       "honorCount": 8,
-      "teamCount": 91
+      "teamCount": 91,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-410b30648659",
+          "title": "我國應禁止舉辦賽鴿賽事",
+          "explanation": null
+        },
+        {
+          "id": "topic-ad93289bee66",
+          "title": "應支持以人工智慧實踐數位永生／不應支持以人工智慧實踐數位永生",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-1edb3f6f6613",
+          "name": "冠軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-e12196d0f1b3",
+          "name": "亞軍",
+          "recipient": "臺中女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-3ad0c188d0de",
+          "name": "季軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-8e68046c38c6",
+          "name": "殿軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-86d6eafbb734",
+          "name": "全程最佳辯士",
+          "recipient": "楊璽勳",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-1ba2491f3263",
+          "name": "全程最佳辯士",
+          "recipient": "張陳樂",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-e9180879805d",
+          "name": "全程最佳辯士",
+          "recipient": "鄭宇庭",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2026-01-30",
+          "note": null
+        },
+        {
+          "id": "honor-bf2b50eaae1d",
+          "name": "全程最佳辯士",
+          "recipient": "武煒皓",
+          "team": "建國中學",
+          "type": "player",
+          "date": "2026-01-30",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中信高中",
+        "中和高中",
+        "中大壢中",
+        "中山女高",
+        "中山高中",
+        "中崙高中",
+        "交大附中",
+        "內壢高中",
+        "內湖高中",
+        "前鎮高中",
+        "北一女中",
+        "北商五專",
+        "協同中學",
+        "南山高中",
+        "南湖高中",
+        "南科實中",
+        "和平高中",
+        "嘉科實中",
+        "嘉義女中",
+        "嘉華中學",
+        "大灣高中",
+        "大直高中",
+        "屏東女中",
+        "嶺東高中",
+        "市立大同",
+        "市立東山",
+        "平鎮高中",
+        "延平中學",
+        "建功高中",
+        "建國中學",
+        "彰化高中",
+        "復旦高中",
+        "德光高中",
+        "忠明高中",
+        "慧燈中學",
+        "成功高中",
+        "成淵高中",
+        "政大附中",
+        "文華高中",
+        "斗六高中",
+        "斗南高中",
+        "新店高中",
+        "新竹女中",
+        "新竹高中",
+        "新竹高商",
+        "明倫高中",
+        "明道中學",
+        "景美女中",
+        "曉明女中",
+        "曙光女中",
+        "曙光高中",
+        "松山高中",
+        "板橋高中",
+        "桃園陽明",
+        "桃園高中",
+        "武陵高中",
+        "永仁高中",
+        "永春高中",
+        "永豐高中",
+        "海山高中",
+        "港明高中",
+        "溪湖高中",
+        "瑞祥高中",
+        "百齡高中",
+        "立人高中",
+        "竹商五專",
+        "竹東高中",
+        "竹科實中",
+        "羅東高中",
+        "聖心女中",
+        "臺中一中",
+        "臺中二中",
+        "臺中女中",
+        "臺南一中",
+        "臺南二中",
+        "臺南女中",
+        "臺東高中",
+        "華僑高中",
+        "華江高中",
+        "薇閣中學",
+        "虎尾高中",
+        "衛道中學",
+        "西松高中",
+        "豐原高中",
+        "道明中學",
+        "高市中正",
+        "高師附中",
+        "高雄中學",
+        "高雄女中",
+        "鳳新高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2609",
@@ -485,7 +4930,97 @@
       "location": null,
       "recordCount": 14,
       "honorCount": 7,
-      "teamCount": 11
+      "teamCount": 11,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-5853f54af8a1",
+          "title": "我國應施行無條件基本收入",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-b9798effdea5",
+          "name": "冠軍",
+          "recipient": "永豐高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-ddafc7d19975",
+          "name": "亞軍",
+          "recipient": "明倫高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-298119cfeb5b",
+          "name": "季軍",
+          "recipient": "麗山高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-d3355b2a3a54",
+          "name": "全程最佳辯士",
+          "recipient": "楊婷萓",
+          "team": "麗山高中",
+          "type": "player",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-f78390badceb",
+          "name": "全程最佳辯士",
+          "recipient": "葉柏昇",
+          "team": "麗山高中",
+          "type": "player",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-26751258ce0c",
+          "name": "全程最佳辯士",
+          "recipient": "孫興宸",
+          "team": "永豐高中",
+          "type": "player",
+          "date": "2026-04-05",
+          "note": null
+        },
+        {
+          "id": "honor-95d4e7dc34d1",
+          "name": "全程最佳辯士",
+          "recipient": "駱建勳",
+          "team": "明倫高中",
+          "type": "player",
+          "date": "2026-04-05",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中大壢中",
+        "中山女高",
+        "內壢高中",
+        "壽山高中",
+        "平鎮高中",
+        "成淵高中",
+        "明倫高中",
+        "桃園高中",
+        "永豐高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2610",
@@ -496,7 +5031,109 @@
       "location": null,
       "recordCount": 17,
       "honorCount": 8,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-3747457da2fb",
+          "title": "富有／貧窮更容易暴露人性之惡",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-59adededc954",
+          "name": "全程最佳辯士",
+          "recipient": "陳羿廷",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-fbf4cd58316a",
+          "name": "全程最佳辯士",
+          "recipient": "薛舒晴",
+          "team": "學抒情文的拉完了",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-805b671a13d4",
+          "name": "全程最佳辯士",
+          "recipient": "陳孟劭",
+          "team": "學測再加365",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-c06c82e54c62",
+          "name": "全程最佳辯士",
+          "recipient": "施又睿",
+          "team": "鐘米糕小蛋糕我吃吃吃吃吃吃",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-06f6eb2878b9",
+          "name": "季軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-dde14aec4061",
+          "name": "季軍",
+          "recipient": "學抒情文的拉完了",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-b7183f60f0b5",
+          "name": "亞軍",
+          "recipient": "學測再加365",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": "最終"
+        },
+        {
+          "id": "honor-73e7d601f625",
+          "name": "冠軍",
+          "recipient": "鐘米糕小蛋糕我吃吃吃吃吃吃",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": "最終"
+        }
+      ],
+      "teams": [
+        "前鎮高中",
+        "和平高中",
+        "學抒情文的拉完了",
+        "學測再加365",
+        "家齊高中",
+        "屏東女中",
+        "忍辱附中",
+        "成功高中",
+        "景美女中",
+        "東港高中",
+        "百齡高中",
+        "立人高中",
+        "鐘米糕小蛋糕我吃吃吃吃吃吃",
+        "高市中正"
+      ]
     },
     {
       "id": "C2611",
@@ -507,7 +5144,109 @@
       "location": null,
       "recordCount": 19,
       "honorCount": 8,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-bdcc2ce3d025",
+          "title": "我國動產擔保制度應納入浮動擔保",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-497e370957c5",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-73a952368824",
+          "name": "亞軍",
+          "recipient": "建國中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-5b201a23f260",
+          "name": "季軍",
+          "recipient": "瑞祥高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-63c0f07c833f",
+          "name": "季軍",
+          "recipient": "馬公高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-660da0f8c3c6",
+          "name": "全程最佳辯士",
+          "recipient": "李欣芸",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-f4d4f2621387",
+          "name": "全程最佳辯士",
+          "recipient": "蔡子竣",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-1f7a453699c3",
+          "name": "全程最佳辯士",
+          "recipient": "賴研晰",
+          "team": "瑞祥高中",
+          "type": "player",
+          "date": "2026-05-17",
+          "note": null
+        },
+        {
+          "id": "honor-57b0b1ac87f0",
+          "name": "全程最佳辯士",
+          "recipient": "蔡育瑞",
+          "team": "建國中學",
+          "type": "player",
+          "date": "2026-05-17",
+          "note": null
+        }
+      ],
+      "teams": [
+        "內湖高中",
+        "南山高中",
+        "師大附中",
+        "延平高中",
+        "建國中學",
+        "復旦高中",
+        "景美女中",
+        "東山高中",
+        "板橋高中",
+        "永春高中",
+        "瑞祥高中",
+        "華江高中",
+        "馬公高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2612",
@@ -518,7 +5257,115 @@
       "location": null,
       "recordCount": 26,
       "honorCount": 8,
-      "teamCount": 20
+      "teamCount": 20,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-71b94564f96c",
+          "title": "當代耽美文化有利於／不利於消除男性中心主義",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-3b8949dd6a1a",
+          "name": "冠軍",
+          "recipient": "高雄中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-21781ce972cb",
+          "name": "亞軍",
+          "recipient": "中山女高",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-ad01cdf47ec6",
+          "name": "季軍",
+          "recipient": "明道中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-d2c617c6a96d",
+          "name": "殿軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-e6cd16098043",
+          "name": "全程最佳辯士",
+          "recipient": "陳秉銨",
+          "team": "高雄中學",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-9884fedbde34",
+          "name": "全程最佳辯士",
+          "recipient": "劉芷甯",
+          "team": "中山女高",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-146812fa5662",
+          "name": "全程最佳辯士",
+          "recipient": "陳彥碩",
+          "team": "明道中學",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        },
+        {
+          "id": "honor-2f952d7cdb6f",
+          "name": "全程最佳辯士",
+          "recipient": "陳羿廷",
+          "team": "成功高中",
+          "type": "player",
+          "date": "2026-05-24",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中山女高",
+        "交大附中",
+        "南山高中",
+        "嘉義女中",
+        "師大附中",
+        "平鎮高中",
+        "成功高中",
+        "成淵高中",
+        "文華高中",
+        "新竹女中",
+        "新竹高中",
+        "明道中學",
+        "松山高中",
+        "桃園高中",
+        "武陵高中",
+        "港明高中",
+        "竹東高中",
+        "臺中女中",
+        "臺南女中",
+        "高雄中學"
+      ]
     },
     {
       "id": "C2613",
@@ -529,7 +5376,114 @@
       "location": null,
       "recordCount": 25,
       "honorCount": 8,
-      "teamCount": 19
+      "teamCount": 19,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-3a54fef3dd98",
+          "title": "現代社會中，標籤化（如MBTI、世代標籤）的盛行更有助於／有礙於人與人的溝通",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-a75c48cbecd8",
+          "name": "冠軍",
+          "recipient": "薇閣中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-03e3825b8f40",
+          "name": "亞軍",
+          "recipient": "北一女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-7424e06f136a",
+          "name": "季軍",
+          "recipient": "高雄女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-05cd84aafb65",
+          "name": "殿軍",
+          "recipient": "高雄中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-99ec00f4359c",
+          "name": "全程最佳辯士",
+          "recipient": "陳柔羽",
+          "team": "薇閣中學",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-02a932f541ec",
+          "name": "全程最佳辯士",
+          "recipient": "蔡宜澄",
+          "team": "北一女中",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-6ae1f9ae474c",
+          "name": "全程最佳辯士",
+          "recipient": "吳綵婕",
+          "team": "高雄女中",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": null
+        },
+        {
+          "id": "honor-17c15d09095c",
+          "name": "全程最佳辯士",
+          "recipient": "林子右",
+          "team": "高雄中學",
+          "type": "player",
+          "date": "2026-05-31",
+          "note": null
+        }
+      ],
+      "teams": [
+        "三民高中",
+        "中崙高中",
+        "中崙高中2",
+        "北一女中",
+        "台南一中",
+        "台南二中",
+        "嘉科實中",
+        "嘉義女中",
+        "嘉義女中2",
+        "嘉義高中",
+        "大灣高中",
+        "德光中學",
+        "永仁高中",
+        "溪湖高中",
+        "美和高中",
+        "聖功女中",
+        "薇閣中學",
+        "高雄中學",
+        "高雄女中"
+      ]
     },
     {
       "id": "C2614",
@@ -540,7 +5494,453 @@
       "location": null,
       "recordCount": 22,
       "honorCount": 46,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-598e4999a28d",
+          "title": "面對死亡，我們更需要學會記得／放下",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-9afed2db16ff",
+          "name": "冠軍",
+          "recipient": "台美聯隊",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-afa962e8b90c",
+          "name": "亞軍",
+          "recipient": "內湖高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-4a902b42128d",
+          "name": "季軍",
+          "recipient": "我有點想哭",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-293e7d3105a7",
+          "name": "季軍",
+          "recipient": "小果仁辯論隊",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-9c678f9b99f7",
+          "name": "全程最佳辯士",
+          "recipient": "蔡惟昱",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-e7177ad719d2",
+          "name": "全程最佳辯士",
+          "recipient": "張有風",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-8734bdeb70ca",
+          "name": "全程最佳辯士",
+          "recipient": "林辰澔",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-ce6013b463e4",
+          "name": "全程最佳辯士",
+          "recipient": "郭芊慈",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-3d1189ab2747",
+          "name": "最佳申論辯士",
+          "recipient": "黃芢翔",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-29084083fb1b",
+          "name": "最佳申論辯士",
+          "recipient": "陳頤",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-f9015b4f28f9",
+          "name": "最佳申論辯士",
+          "recipient": "陳弘衍",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-44c1c2e6e466",
+          "name": "最佳質詢辯士",
+          "recipient": "陳昊廷",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-396adb1d927f",
+          "name": "最佳質詢辯士",
+          "recipient": "蘇雨霏",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-c6c241eeca87",
+          "name": "最佳質詢辯士",
+          "recipient": "鄭淳尹",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-078d8f4d8e9d",
+          "name": "最佳答辯辯士",
+          "recipient": "劉品妍",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-6bad009548db",
+          "name": "最佳答辯辯士",
+          "recipient": "吳芷妍",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-7773765bd708",
+          "name": "最佳答辯辯士",
+          "recipient": "蔡惟昕",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": null
+        },
+        {
+          "id": "honor-dd60727b7afb",
+          "name": "單場最佳辯士",
+          "recipient": "蘇雨霏",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第一時段：台美聯隊 vs 三校聯隊"
+        },
+        {
+          "id": "honor-f5853aec2d8d",
+          "name": "單場最佳辯士",
+          "recipient": "蔡惟昱",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第一時段：台美聯隊 vs 三校聯隊"
+        },
+        {
+          "id": "honor-91b421693e5e",
+          "name": "單場最佳辯士",
+          "recipient": "陳弘衍",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第一時段：內湖高中 vs 想念是會呼吸的痛"
+        },
+        {
+          "id": "honor-1ad16882f617",
+          "name": "單場最佳辯士",
+          "recipient": "鄒立安",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第一時段：美國聯隊 vs 暑假辯不見"
+        },
+        {
+          "id": "honor-52ef73be28af",
+          "name": "單場最佳辯士",
+          "recipient": "鄭詠云",
+          "team": "嘿跑去康橋",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第一時段：嘿跑去康橋 vs 鱁"
+        },
+        {
+          "id": "honor-73c854ed6a26",
+          "name": "單場最佳辯士",
+          "recipient": "郭芊慈",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：復興高中 vs 小果仁辯論隊"
+        },
+        {
+          "id": "honor-d6750bc96cc1",
+          "name": "單場最佳辯士",
+          "recipient": "林立承",
+          "team": "台灣國中小思辨聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：台灣國中小思辨聯隊 vs 不講吾德"
+        },
+        {
+          "id": "honor-c34b5dd39c81",
+          "name": "單場最佳辯士",
+          "recipient": "陳弘衍",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：想念是會呼吸的痛 vs 內湖高中"
+        },
+        {
+          "id": "honor-00b060cc8d54",
+          "name": "單場最佳辯士",
+          "recipient": "江沅其",
+          "team": "鱁",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：鱁 vs 嘿跑去康橋"
+        },
+        {
+          "id": "honor-0c9fcbd8f68f",
+          "name": "單場最佳辯士",
+          "recipient": "邵聖光",
+          "team": "北市大同",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：北市大同 vs 嘿走去康橋"
+        },
+        {
+          "id": "honor-8f7b80711d54",
+          "name": "單場最佳辯士",
+          "recipient": "葉亦呈",
+          "team": "嘿走去康橋",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：北市大同 vs 嘿走去康橋"
+        },
+        {
+          "id": "honor-b6e2c24cf877",
+          "name": "單場最佳辯士",
+          "recipient": "林辰澔",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：我有點想哭 vs 國際中文辯論課"
+        },
+        {
+          "id": "honor-bc99dcbb9960",
+          "name": "單場最佳辯士",
+          "recipient": "陳昊廷",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第二時段：我有點想哭 vs 國際中文辯論課"
+        },
+        {
+          "id": "honor-6316e6339fbf",
+          "name": "單場最佳辯士",
+          "recipient": "郭芊慈",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：復興高中 vs 小果仁辯論隊"
+        },
+        {
+          "id": "honor-2ed708120bd3",
+          "name": "單場最佳辯士",
+          "recipient": "邱語愛",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：暑假辯不見 vs 美國聯隊；比分未提供"
+        },
+        {
+          "id": "honor-068c6f5cdc17",
+          "name": "單場最佳辯士",
+          "recipient": "邵聖光",
+          "team": "北市大同",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：嘿走去康橋 vs 北市大同"
+        },
+        {
+          "id": "honor-6bd4302575b1",
+          "name": "單場最佳辯士",
+          "recipient": "陳昊廷",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：國際中文辯論課 vs 我有點想哭"
+        },
+        {
+          "id": "honor-48ac4405604a",
+          "name": "單場最佳辯士",
+          "recipient": "蔡惟昱",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：三校聯隊 vs 台美聯隊"
+        },
+        {
+          "id": "honor-68d2af0eeca9",
+          "name": "單場最佳辯士",
+          "recipient": "吳濬祐",
+          "team": "台灣國中小思辨聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊"
+        },
+        {
+          "id": "honor-e3dbf1766acf",
+          "name": "單場最佳辯士",
+          "recipient": "林立承",
+          "team": "台灣國中小思辨聯隊",
+          "type": "player",
+          "date": "2026-08-01",
+          "note": "第三時段：不講吾德 vs 台灣國中小思辨聯隊"
+        },
+        {
+          "id": "honor-d62328bac776",
+          "name": "單場最佳辯士",
+          "recipient": "郭芊慈",
+          "team": "小果仁辯論隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：小果仁辯論隊 vs 美國聯隊"
+        },
+        {
+          "id": "honor-6c4bf9661b85",
+          "name": "單場最佳辯士",
+          "recipient": "邱語愛",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：小果仁辯論隊 vs 美國聯隊"
+        },
+        {
+          "id": "honor-9ebcf93837e5",
+          "name": "單場最佳辯士",
+          "recipient": "鄒立安",
+          "team": "美國聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：小果仁辯論隊 vs 美國聯隊"
+        },
+        {
+          "id": "honor-2476503da4fd",
+          "name": "單場最佳辯士",
+          "recipient": "張有風",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：內湖高中 vs 嘿跑去康橋"
+        },
+        {
+          "id": "honor-672b9606df5d",
+          "name": "單場最佳辯士",
+          "recipient": "鄭詠云",
+          "team": "嘿跑去康橋",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：內湖高中 vs 嘿跑去康橋"
+        },
+        {
+          "id": "honor-d636cf1635d6",
+          "name": "單場最佳辯士",
+          "recipient": "蔡惟昱",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：台美聯隊 vs 台灣國中小思辨聯隊"
+        },
+        {
+          "id": "honor-b29a803911dd",
+          "name": "單場最佳辯士",
+          "recipient": "黃芢翔",
+          "team": "我有點想哭",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "八強：北市大同 vs 我有點想哭"
+        },
+        {
+          "id": "honor-2c56355fac2b",
+          "name": "單場最佳辯士",
+          "recipient": "張有風",
+          "team": "內湖高中",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "四強：小果仁辯論隊 vs 內湖高中"
+        },
+        {
+          "id": "honor-fc3df8c4f708",
+          "name": "單場最佳辯士",
+          "recipient": "蔡惟昱",
+          "team": "台美聯隊",
+          "type": "player",
+          "date": "2026-08-02",
+          "note": "四強：台美聯隊 vs 我有點想哭"
+        }
+      ],
+      "teams": [
+        "三校聯隊",
+        "不講吾德",
+        "內湖高中",
+        "北市大同",
+        "台灣國中小思辨聯隊",
+        "台美聯隊",
+        "嘿走去康橋",
+        "嘿跑去康橋",
+        "國際中文辯論課",
+        "小果仁辯論隊",
+        "復興高中",
+        "想念是會呼吸的痛",
+        "我有點想哭",
+        "暑假辯不見",
+        "美國聯隊",
+        "鱁"
+      ]
     },
     {
       "id": "C2615",
@@ -551,7 +5951,73 @@
       "location": null,
       "recordCount": 19,
       "honorCount": 4,
-      "teamCount": 14
+      "teamCount": 14,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-bb5c7ce7c048",
+          "title": "成為自己討厭的人，是／不是件壞事",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-90b11c086b1d",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-15",
+          "note": null
+        },
+        {
+          "id": "honor-8faec80ea7f5",
+          "name": "亞軍",
+          "recipient": "世宣67",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-15",
+          "note": null
+        },
+        {
+          "id": "honor-267676c84a62",
+          "name": "季軍",
+          "recipient": "成功高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-15",
+          "note": null
+        },
+        {
+          "id": "honor-d90bdddcb31c",
+          "name": "季軍",
+          "recipient": "我心目中的佳辯逢雨停",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-15",
+          "note": null
+        }
+      ],
+      "teams": [
+        "世宣67",
+        "了不起的公關們",
+        "南山高中",
+        "建竹實聯隊",
+        "成功高中",
+        "我心目中的佳辯逢雨停",
+        "明倫高中",
+        "梭哈要曙光不要輸光",
+        "永平推土機",
+        "百齡高中",
+        "竹子的英文",
+        "能不能和我留在台北",
+        "長春小熊幫",
+        "黃山過台灣"
+      ]
     },
     {
       "id": "C2616",
@@ -562,7 +6028,91 @@
       "location": null,
       "recordCount": 30,
       "honorCount": 5,
-      "teamCount": 23
+      "teamCount": 23,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "依主辦方公開活動資訊：初賽、複賽於 2026-08-22；四強賽、決賽於 2026-08-23。原始戰績日期依賽程階段校正。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-d65da8a2dd1d",
+          "title": "我國代理孕母應合法化",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-9247df257616",
+          "name": "冠軍",
+          "recipient": "南大附中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-23",
+          "note": null
+        },
+        {
+          "id": "honor-23b98b9866dc",
+          "name": "亞軍",
+          "recipient": "康橋國際學校",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-23",
+          "note": null
+        },
+        {
+          "id": "honor-4da02a7f3e70",
+          "name": "季軍",
+          "recipient": "彰化高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-23",
+          "note": null
+        },
+        {
+          "id": "honor-d09a8467036c",
+          "name": "季軍",
+          "recipient": "高雄女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-23",
+          "note": null
+        },
+        {
+          "id": "honor-d34d78b6aa0c",
+          "name": "全程最佳辯士",
+          "recipient": "高偉承",
+          "team": "南大附中",
+          "type": "player",
+          "date": "2026-08-22",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "南大附中",
+        "員林高中",
+        "大里高中",
+        "市立東山",
+        "康橋國際學校",
+        "弘文高中",
+        "彰化高中",
+        "忠明高中",
+        "惠文高中",
+        "文華高中",
+        "新民高中",
+        "明道中學",
+        "普台高中",
+        "曉明女中",
+        "永春高中",
+        "精誠中學",
+        "臺中一中",
+        "臺中二中",
+        "虎尾高中",
+        "西松高中",
+        "豐原高中",
+        "高雄女中"
+      ]
     },
     {
       "id": "C2618",
@@ -573,7 +6123,84 @@
       "location": "國立中山大學社會科學院",
       "recordCount": 24,
       "honorCount": 5,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "賽期：2026/9/11–9/13。小循環兩場互換持方，晉級後單場淘汰；逐場日期、時段及會場未載明。圖列16校，未確認是否有人棄賽；3：0不逕認為棄賽。甲組兩場勝場與票數相同，依圖列臺中二中晉級，未提供同分判定方式。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-bb88627d96b9",
+          "title": "我國政府是否應在國際運動會上正名",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-f8184e3b17ee",
+          "name": "冠軍",
+          "recipient": "臺南女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-8bae605ee933",
+          "name": "亞軍",
+          "recipient": "屏東女中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-11fb24af48c4",
+          "name": "季軍",
+          "recipient": "中信國際高中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-ab45b511176b",
+          "name": "殿軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-5837771196b6",
+          "name": "全程最佳辯士",
+          "recipient": "蘇歆蕾",
+          "team": "中信國際高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "中信國際高中",
+        "中山女中",
+        "前鎮高中",
+        "嘉義高中",
+        "屏東女中",
+        "師大附中",
+        "德光高中",
+        "文山高中",
+        "東山高中",
+        "臺中二中",
+        "臺南二中",
+        "臺南女中",
+        "華江高中",
+        "陽明交大附中",
+        "高市三民",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2619",
@@ -584,7 +6211,319 @@
       "location": "淡江大學",
       "recordCount": 23,
       "honorCount": 31,
-      "teamCount": 17
+      "teamCount": 17,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "晉級公告：D2-3 白烏鴉辯論隊晉級路克、世宣67晉級雷姆、成功口技社晉級席多、建竹實聯隊晉級傑拉斯；D2-2 白烏鴉辯論隊晉級彌海砂、世宣67晉級魅上照、宮燈最佳辯士晉級松田桃太、竹林七賢晉級南空直美；D2-1 成功口技社晉級夜神總一郎、建竹實聯隊晉級渡、最佳英鎊辯論隊晉級尼亞。閉幕式與最終獎項公告日期為2026-09-28。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [
+        {
+          "id": "topic-304a08ee0bb1",
+          "title": "如果你撿到一本死亡筆記本，你要使用它／銷毀它",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-88bd81a263fe",
+          "name": "單場最佳辯士",
+          "recipient": "高偉承",
+          "team": "白烏鴉辯論隊",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-1"
+        },
+        {
+          "id": "honor-b60a058e693f",
+          "name": "單場最佳辯士",
+          "recipient": "黃忻恩",
+          "team": "最佳英鎊辯論隊",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-1"
+        },
+        {
+          "id": "honor-f89896bfa5ed",
+          "name": "單場最佳辯士",
+          "recipient": "潘彥成",
+          "team": "成淵高中",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-1"
+        },
+        {
+          "id": "honor-201fcd9a56f9",
+          "name": "單場最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-1"
+        },
+        {
+          "id": "honor-d83618803667",
+          "name": "單場最佳辯士",
+          "recipient": "董科男",
+          "team": "誤入商噎帝國的長髮男",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-1"
+        },
+        {
+          "id": "honor-3656108501c3",
+          "name": "單場最佳辯士",
+          "recipient": "謝欣瑜",
+          "team": "南湖高中",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-2"
+        },
+        {
+          "id": "honor-6284bf135b41",
+          "name": "單場最佳辯士",
+          "recipient": "洪祺恩",
+          "team": "竹林七賢",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-2"
+        },
+        {
+          "id": "honor-2425be907fb4",
+          "name": "單場最佳辯士",
+          "recipient": "吳翰宇",
+          "team": "大家都不想講話",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-2"
+        },
+        {
+          "id": "honor-8ad240f5ac63",
+          "name": "單場最佳辯士",
+          "recipient": "陳廣賢",
+          "team": "澎湖一中",
+          "type": "player",
+          "date": "2026-09-25",
+          "note": "D1-2"
+        },
+        {
+          "id": "honor-cd2dd563cb66",
+          "name": "單場最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-1"
+        },
+        {
+          "id": "honor-1a5f985f7b1d",
+          "name": "單場最佳辯士",
+          "recipient": "吳易叡",
+          "team": "最佳英鎊辯論隊",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-1"
+        },
+        {
+          "id": "honor-1f1e7d052d8d",
+          "name": "單場最佳辯士",
+          "recipient": "高偉承",
+          "team": "白烏鴉辯論隊",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-1"
+        },
+        {
+          "id": "honor-f31765ded821",
+          "name": "單場最佳辯士",
+          "recipient": "陳羿廷",
+          "team": "成功口技社",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-1"
+        },
+        {
+          "id": "honor-c48ef8c14b0f",
+          "name": "單場最佳辯士",
+          "recipient": "于潤萱",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-2"
+        },
+        {
+          "id": "honor-7fc8d7a80478",
+          "name": "單場最佳辯士",
+          "recipient": "張承儀",
+          "team": "衛道中學辯論社",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-2"
+        },
+        {
+          "id": "honor-f0da631672a7",
+          "name": "單場最佳辯士",
+          "recipient": "孫興宸",
+          "team": "世宣67",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-2"
+        },
+        {
+          "id": "honor-1e3c5811ffb8",
+          "name": "單場最佳辯士",
+          "recipient": "林宥澄",
+          "team": "宮燈最佳辯士",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-2"
+        },
+        {
+          "id": "honor-0c080aa62d32",
+          "name": "單場最佳辯士",
+          "recipient": "林毓晴",
+          "team": "宮燈最佳辯士",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-2"
+        },
+        {
+          "id": "honor-c105943dea2e",
+          "name": "單場最佳辯士",
+          "recipient": "高偉承",
+          "team": "白烏鴉辯論隊",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-3"
+        },
+        {
+          "id": "honor-0615f38d2ae2",
+          "name": "單場最佳辯士",
+          "recipient": "孫興宸",
+          "team": "世宣67",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-3"
+        },
+        {
+          "id": "honor-30fa30887c38",
+          "name": "單場最佳辯士",
+          "recipient": "陳羿廷",
+          "team": "成功口技社",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-3"
+        },
+        {
+          "id": "honor-d1a261b9f294",
+          "name": "單場最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-26",
+          "note": "D2-3"
+        },
+        {
+          "id": "honor-1fa3da4dab70",
+          "name": "單場最佳辯士",
+          "recipient": "高偉承",
+          "team": "白烏鴉辯論隊",
+          "type": "player",
+          "date": "2026-09-27",
+          "note": "D3 複賽"
+        },
+        {
+          "id": "honor-88419a5db8ae",
+          "name": "單場最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-27",
+          "note": "D3 複賽"
+        },
+        {
+          "id": "honor-593fbc1b2008",
+          "name": "單場最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-27",
+          "note": "D3 決賽"
+        },
+        {
+          "id": "honor-8fe67fab97be",
+          "name": "冠軍",
+          "recipient": "建竹實聯隊",
+          "team": null,
+          "type": "team",
+          "date": "2026-09-27",
+          "note": null
+        },
+        {
+          "id": "honor-739e3a2938b0",
+          "name": "亞軍",
+          "recipient": "世宣67",
+          "team": null,
+          "type": "team",
+          "date": "2026-09-27",
+          "note": null
+        },
+        {
+          "id": "honor-108dde4af154",
+          "name": "季軍",
+          "recipient": "白烏鴉辯論隊",
+          "team": null,
+          "type": "team",
+          "date": "2026-09-27",
+          "note": null
+        },
+        {
+          "id": "honor-f723421f1d9e",
+          "name": "季軍",
+          "recipient": "成功口技社",
+          "team": null,
+          "type": "team",
+          "date": "2026-09-27",
+          "note": null
+        },
+        {
+          "id": "honor-0acbfbbfe378",
+          "name": "全程最佳辯士",
+          "recipient": "張育棋",
+          "team": "建竹實聯隊",
+          "type": "player",
+          "date": "2026-09-28",
+          "note": null
+        },
+        {
+          "id": "honor-ac1eff746c8e",
+          "name": "粉紅色的雪",
+          "recipient": "黃忻恩",
+          "team": "最佳英鎊辯論隊",
+          "type": "player",
+          "date": "2026-09-28",
+          "note": null
+        }
+      ],
+      "teams": [
+        "Harve",
+        "世宣67",
+        "南山高中",
+        "南湖高中",
+        "大家都不想講話",
+        "宮燈最佳辯士",
+        "建竹實聯隊",
+        "成功口技社",
+        "成淵高中",
+        "最佳英鎊辯論隊",
+        "殘陽是香香軟軟小蛋糕",
+        "澎湖一中",
+        "白烏鴉辯論隊",
+        "竹林七賢",
+        "衛道中學辯論社",
+        "誤入商噎帝國的長髮男",
+        "陽交附中"
+      ]
     },
     {
       "id": "C2620",
@@ -595,7 +6534,40 @@
       "location": null,
       "recordCount": 0,
       "honorCount": 0,
-      "teamCount": 24
+      "teamCount": 24,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": [
+        "三民高中",
+        "中信高中",
+        "前鎮高中",
+        "北商五專",
+        "台中二中",
+        "台南二中",
+        "台南女中",
+        "善化高中",
+        "大灣高中",
+        "市立大同",
+        "成功高中",
+        "政大附中",
+        "新竹高中A",
+        "新竹高中B",
+        "明倫高中",
+        "永豐高中",
+        "港明高中",
+        "瑞祥高中",
+        "竹東高中",
+        "精城高中",
+        "精誠中學A",
+        "陽交附中",
+        "高雄中學",
+        "鳳山高中"
+      ]
     },
     {
       "id": "C2625",
@@ -606,7 +6578,127 @@
       "location": "臺北市私立延平高級中學",
       "recordCount": 27,
       "honorCount": 9,
-      "teamCount": 23
+      "teamCount": 23,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "簡章載明參賽資格為全國高中職暨五專一至三年級學生，校為報名單位。依本次提供之賽果可辨識23支隊伍（含延平中學A、B兩隊分開計算），賽程賽果資料尚未完整。公告明列27場比分：3/7第一時段會場一未見比分，其餘三個時段與3/8第一時段八強賽已收錄；最終名次與榮譽依公告登錄，未提供八強晉級後的後續逐場比分不補猜。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-ad93289bee66",
+          "title": "應支持以人工智慧實踐數位永生／不應支持以人工智慧實踐數位永生",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-772de5de451c",
+          "name": "冠軍",
+          "recipient": "竹科實中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-66ef0d63f81e",
+          "name": "亞軍",
+          "recipient": "曉明女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-bc80d8ca66e4",
+          "name": "季軍",
+          "recipient": "臺中女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-ba306b0f5676",
+          "name": "季軍",
+          "recipient": "麗山高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-200fd364b5f4",
+          "name": "全程最佳辯士",
+          "recipient": "張育棋",
+          "team": "竹科實中",
+          "type": "player",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-f193d9cef273",
+          "name": "全程最佳辯士",
+          "recipient": "賴芯妍",
+          "team": "曉明女中",
+          "type": "player",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-8fd5fb295fe9",
+          "name": "全程最佳辯士",
+          "recipient": "張嘉晏",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-dc37c030e46f",
+          "name": "全程最佳辯士",
+          "recipient": "黃忻恩",
+          "team": "竹科實中",
+          "type": "player",
+          "date": "2026-03-08",
+          "note": null
+        },
+        {
+          "id": "honor-0dddcb6471db",
+          "name": "同舟共濟獎",
+          "recipient": "和平高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-03-08",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中大壢中",
+        "北市大同",
+        "和平高中",
+        "延平中學A",
+        "延平中學B",
+        "建國中學",
+        "復旦高中",
+        "成功高中",
+        "政大附中",
+        "文華高中",
+        "曉明女中",
+        "曙光女中",
+        "松山高中",
+        "永平高中",
+        "永豐高中",
+        "海山高中",
+        "百齡高中",
+        "竹北高中",
+        "竹科實中",
+        "聖心女中",
+        "臺中一中",
+        "臺中女中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2626",
@@ -617,7 +6709,148 @@
       "location": null,
       "recordCount": 45,
       "honorCount": 10,
-      "teamCount": 35
+      "teamCount": 35,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": "(1)星星評分方式:\n(一)每位裁判於每一場比賽中,共有六顆星星,應依自身判斷分配予該場六位辯士,並應將六顆星星全數分配完畢。\n(二)同一位辯士單場至多獲同一位裁判給予四顆星星。\n(三)每位裁判至多將星星分配予三位辯士。\n(四)辯士於單場比賽所獲之星星數,為該場所有裁判給予該辯士之星星總和。\n(五)每場比賽中,獲得星星總數最高之辯士,記為該場之「星星王」;如有複數辯士並列最高,均記為該場之「星星王」。\n(2)京日之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、以辯士獲得「星星王」之場次數遴選,場次數多者優先。\n三、如「星星王」場次數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,先比較表現最佳一場所獲之星星數,星星數較多者優先。\n(三)如表現最佳一場所獲星星數相同,則比較表現最佳兩場所獲星星數總和;仍相同者,依序增加比較場次,直至得以分出高下。\n(四)如前述星星數比較仍相同,則以勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。\n(3)明京之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、京日之星與明京之星不得重複獲獎;已獲得京日之星者,不再列入明京之星之遴選。\n三、以辯士於本屆賽事所獲「星星總數」遴選,星星總數較多者優先。\n四、如星星總數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,則以表現最好的三場所獲星星數總和較多者優先。\n(三)如表現最好的三場星星數總和相同,則比較第四場之星星數;仍相同者再比較第五場之星星數。\n(四)如五場(四場)之星星數比較後仍相同,則以五場(四場)比賽中之勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。",
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-c22c1806d4c7",
+          "title": "我國重大暴力犯罪判處十年以上有期徒刑者應得以禁止假釋",
+          "explanation": "近期有參賽學校反映，對本屆辯題「我國重大暴力犯罪判處十年以上有期徒刑者應得以禁止假釋」中，「禁止假釋」之文字意涵、其與我國現行假釋制度間的關係，以及「得以禁止假釋」所指涉之制度方式與涵蓋範圍有所疑義。為協助各隊辨析題意，大會提供以下資訊供參。 依現行《刑法》第77條及《監獄行刑法》第115條至第118條規定，假釋制度係先判斷受刑人是否符合刑期門檻等法定要件，再依犯行情節、在監行狀、犯罪紀錄、教化矯治處遇成效、更生計畫及其他相關事項進行個案審查，最終由法務部作成許可假釋或不予許可假釋之處分。 此外，《刑法》第77條第2項明定，於該項所列特定情形，前項關於有期徒刑假釋之規定「不適用之」；《監獄行刑法》第115條第2項則規定，依《刑法》第77條第2項第3款接受強制身心治療或輔導教育之受刑人，如顯有再犯之虞，「不得報請假釋」。前述文字分別涉及假釋規定適用及報請程序之排除。 因此，從法律規範及程序觀察，「尚未符合假釋要件」、「經個案審查不予許可假釋」，以及「法律禁止或排除假釋」，可能具有不同意義及法律效果。選手得參酌前述資訊，自行判斷我國現況是否符合命題所稱之「禁止假釋」。 另就「得以禁止假釋」之意義而言，「得以」於一般語義上可以表示「可以」或「能夠」；惟其置於本辯題中，仍須結合題目主詞、整體句意及制度所涵蓋之對象加以理解，尚難僅由「得以」二字直接確定正方應採取之制度形式。本說明不預先排除各隊就制度適用範圍、分類標準及是否採取個案裁量等事項，提出不同之題意解釋與制度設計；至其是否符合命題要求，仍應透過場上論證加以判斷。 惟本說明僅供選手辨析題意，不構成大會對題目定義或制度方案的強制限定。各隊仍得提出合理的題意解釋及制度設計，並透過場上論證、質詢及資料交鋒，由裁判綜合判斷。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-2b14939bebe6",
+          "name": "冠軍",
+          "recipient": "臺中女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-4e3c3315933e",
+          "name": "亞軍",
+          "recipient": "市立大同",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-d47b131ad268",
+          "name": "季軍",
+          "recipient": "臺南女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-a0ae266c0244",
+          "name": "季軍",
+          "recipient": "高雄中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-a5d7881bd49e",
+          "name": "京日之星",
+          "recipient": "陳品安",
+          "team": "市立大同",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-b7d6751e0f44",
+          "name": "京日之星",
+          "recipient": "洪子茵",
+          "team": "臺南女中",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-e0aa3ccc43a4",
+          "name": "京日之星",
+          "recipient": "黃珮萱",
+          "team": "嘉義女中",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-07c73115bf7b",
+          "name": "明京之星",
+          "recipient": "胡仲亨",
+          "team": "高雄中學",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-c9748d4bd975",
+          "name": "明京之星",
+          "recipient": "張嘉晏",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        },
+        {
+          "id": "honor-675160a178cc",
+          "name": "明京之星",
+          "recipient": "徐惟熙",
+          "team": "臺中女中",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": null
+        }
+      ],
+      "teams": [
+        "三民高中",
+        "中信高中",
+        "中大壢中",
+        "中山女高",
+        "前鎮高中",
+        "北一女中",
+        "協同中學",
+        "南山高中",
+        "和平高中",
+        "嘉義女中",
+        "嘉華中學",
+        "大灣高中",
+        "家齊高中",
+        "屏東女中",
+        "市立大同",
+        "市立復興",
+        "師大附中",
+        "建國中學",
+        "政大附中",
+        "新化高中",
+        "板橋高中",
+        "港明高中",
+        "臺中一中",
+        "臺中女中",
+        "臺南二中",
+        "臺南女中",
+        "興大附中",
+        "薇閣中學",
+        "虎尾高中",
+        "金門高中",
+        "長榮中學",
+        "高雄中學",
+        "高雄女中",
+        "鳳山高中",
+        "鳳新高中"
+      ]
     },
     {
       "id": "C2627",
@@ -628,7 +6861,83 @@
       "location": "國立臺北商業大學（北商）（經回報）",
       "recordCount": 14,
       "honorCount": 5,
-      "teamCount": 15
+      "teamCount": 15,
+      "organizer": "財團法人綠色和平基金會",
+      "executionUnit": "中華辯論推廣協進會",
+      "note": "簡章原載雙北地區之大專院校或其他合適地點，後續另行公布。賽制：新式奧瑞岡四四四制，反方先行結辯，全程單敗淘汰。參賽對象：全國高中職暨五專一至三年級在學學生。簡章載明隊數上限16隊（其中一般報名錄取15隊，另有場地方保障名額1隊），每校1隊、每隊至多6名選手；此為簡章名額，不代表實際參賽隊伍或已公布名單。團體獎：冠軍、亞軍、季軍2名；個人獎1名。比賽日期與辯題依主辦方《2026年氣候盃全國高中職辯論比賽簡章》。題解與簡章來源：",
+      "awardSelectionCriteria": "簡章僅載個人獎取一名，未載明評選標準；不自行補充。",
+      "ageRestriction": true,
+      "topics": [
+        {
+          "id": "topic-63916e7014ab",
+          "title": "我國應強制用電大戶設置一定裝置容量以上之再生能源自有發電設備",
+          "explanation": "辯題解釋資料指出，現行制度允許用電大戶以多種方式履行再生能源義務；本題聚焦是否應進一步要求其設置一定容量的再生能源自有發電設備，需衡量能源轉型與安全、產業成本及場地條件。詳細背景見主辦單位辯題解釋文件。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-d365f1c7cc7c",
+          "name": "冠軍",
+          "recipient": "武陵高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-10-04",
+          "note": "來源：經回報（2026-10-04 最終賽果公告）。"
+        },
+        {
+          "id": "honor-b6a058452ac5",
+          "name": "亞軍",
+          "recipient": "延平中學",
+          "team": null,
+          "type": "team",
+          "date": "2026-10-04",
+          "note": "來源：經回報（2026-10-04 最終賽果公告）。"
+        },
+        {
+          "id": "honor-948064508f89",
+          "name": "季軍",
+          "recipient": "臺中女中",
+          "team": null,
+          "type": "team",
+          "date": "2026-10-04",
+          "note": "來源：經回報（2026-10-04 最終賽果公告）。"
+        },
+        {
+          "id": "honor-f38bea205afc",
+          "name": "季軍",
+          "recipient": "華僑高中",
+          "team": null,
+          "type": "team",
+          "date": "2026-10-04",
+          "note": "來源：經回報（2026-10-04 最終賽果公告）。"
+        },
+        {
+          "id": "honor-ca167ec420f0",
+          "name": "最佳辯士",
+          "recipient": "葉智安",
+          "team": "武陵高中",
+          "type": "player",
+          "date": "2026-10-04",
+          "note": "來源：經回報（2026-10-04 最終賽果公告）。"
+        }
+      ],
+      "teams": [
+        "北商五專",
+        "南山高中",
+        "和平高中",
+        "大直高中",
+        "安樂高中",
+        "延平中學",
+        "復旦高中",
+        "明倫高中",
+        "武陵高中",
+        "永平高中",
+        "海山高中",
+        "臺中女中",
+        "臺東高中",
+        "華僑高中",
+        "陽明高中"
+      ]
     },
     {
       "id": "C2628",
@@ -639,7 +6948,63 @@
       "location": "元智大學",
       "recordCount": 11,
       "honorCount": 4,
-      "teamCount": 10
+      "teamCount": 10,
+      "organizer": "桃園市政府青年事務局",
+      "executionUnit": null,
+      "note": "來源：主辦方提供的簡章資料（日期、主辦單位及舉辦地點）；戰績、團體最終名次及最佳辯士來源：辯手回報。照片未提供各場會場。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-ae72d6178d9c",
+          "name": "冠軍",
+          "recipient": "這裡沒有桃園人也沒有研究生",
+          "team": "這裡沒有桃園人也沒有研究生",
+          "type": "team",
+          "date": "2026-08-30",
+          "note": "來源：辯手回報。"
+        },
+        {
+          "id": "honor-a0142d2b669c",
+          "name": "亞軍",
+          "recipient": "桃園高中二",
+          "team": "桃園高中二",
+          "type": "team",
+          "date": "2026-08-30",
+          "note": "來源：辯手回報。"
+        },
+        {
+          "id": "honor-3d83271d1f86",
+          "name": "季軍",
+          "recipient": "壽比南山",
+          "team": "壽比南山",
+          "type": "team",
+          "date": "2026-08-30",
+          "note": "來源：辯手回報。"
+        },
+        {
+          "id": "honor-4179ee6e84c2",
+          "name": "最佳辯士",
+          "recipient": "曹鈞智",
+          "team": "壽比南山",
+          "type": "player",
+          "date": "2026-08-30",
+          "note": "來源：辯手回報。"
+        }
+      ],
+      "teams": [
+        "中壢桃園一邊一國",
+        "內壢高中",
+        "壽比南山",
+        "天水圍的車與干",
+        "差點上台大還好忍到下台才大",
+        "復旦高中",
+        "桃園高中一",
+        "桃園高中二",
+        "菜菜撈撈",
+        "這裡沒有桃園人也沒有研究生"
+      ]
     },
     {
       "id": "C2629",
@@ -650,7 +7015,67 @@
       "location": "線上（Google Meet）",
       "recordCount": 0,
       "honorCount": 5,
-      "teamCount": 0
+      "teamCount": 0,
+      "organizer": "法可夢學院",
+      "executionUnit": null,
+      "note": "僅收錄高中組。高中組賽期為 2026-05-30；得獎名單公告列出冠軍第2隊、亞軍第5隊、季軍第1隊、最佳辯士獎及最佳論文獎。公告列示得獎隊伍成員姓名，但未提供逐場比分、完整參賽名單或學校名稱，故不推補。活動資料：；高中組直播公告：；得獎名單：",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-77b439e81e78",
+          "title": "為防止核武擴散，先制打擊潛在核武國家是合理的",
+          "explanation": "正方：先制打擊是防止核武擴散、維護全球安全的必要且正當手段。反方：先制打擊缺乏正當性，且將增加誤判與衝突風險，反而危害全球安全。"
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-be6c263b2520",
+          "name": "冠軍",
+          "recipient": "第2隊（法可夢高中組）",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-30",
+          "note": "來源：主辦方 2026/06/11 得獎名單公告；公告原稱「第2隊」。公告所列隊員：陳柏均、盧昶睿、張宸睿、陳弘衍、張亞晞。加上組別說明以免與其他賽事同號隊伍混淆。來源："
+        },
+        {
+          "id": "honor-d8486e6046c3",
+          "name": "亞軍",
+          "recipient": "第5隊（法可夢高中組）",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-30",
+          "note": "來源：主辦方 2026/06/11 得獎名單公告；公告原稱「第5隊」。公告所列隊員：蔡沛恩、王亮淇、方冠程、李泓毅。加上組別說明以免與其他賽事同號隊伍混淆。來源："
+        },
+        {
+          "id": "honor-893772dab602",
+          "name": "季軍",
+          "recipient": "第1隊（法可夢高中組）",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-30",
+          "note": "來源：主辦方 2026/06/11 得獎名單公告；公告原稱「第1隊」。公告所列隊員：羅世澄、陳妍靜、許雅淳、翁巧羽、謝昀軒。加上組別說明以免與其他賽事同號隊伍混淆。來源："
+        },
+        {
+          "id": "honor-f48794d18bc1",
+          "name": "最佳辯士獎",
+          "recipient": "陳弘衍",
+          "team": "第2隊（法可夢高中組）",
+          "type": "player",
+          "date": "2026-05-30",
+          "note": "來源：主辦方 2026/06/11 得獎名單公告；公告列為「第2隊 陳弘衍」。隊名附組別說明以免與其他賽事同號隊伍混淆。來源："
+        },
+        {
+          "id": "honor-b48650a7c4b2",
+          "name": "最佳論文獎",
+          "recipient": "第5隊（法可夢高中組）",
+          "team": null,
+          "type": "team",
+          "date": "2026-05-30",
+          "note": "來源：主辦方 2026/06/11 得獎名單公告；公告原稱「第5隊」。公告所列隊員：蔡沛恩、王亮淇、方冠程、李泓毅。論文檔案未另收錄。加上組別說明以免與其他賽事同號隊伍混淆。來源："
+        }
+      ],
+      "teams": []
     },
     {
       "id": "C2630",
@@ -661,7 +7086,150 @@
       "location": null,
       "recordCount": 52,
       "honorCount": 9,
-      "teamCount": 41
+      "teamCount": 41,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [
+        {
+          "id": "topic-fb547f711dbd",
+          "title": "我國應廢除重大暴力犯罪少年犯之前科塗銷制度",
+          "explanation": null
+        },
+        {
+          "id": "topic-3b9f1b89c36f",
+          "title": "蘭因絮果／菀菀類卿的愛情更可悲",
+          "explanation": null
+        }
+      ],
+      "honors": [
+        {
+          "id": "honor-7affbd15ddb7",
+          "name": "冠軍",
+          "recipient": "高雄中學",
+          "team": "高雄中學",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-9eb88a4991d9",
+          "name": "亞軍",
+          "recipient": "和平高中A",
+          "team": "和平高中A",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-077aa96d7114",
+          "name": "季軍",
+          "recipient": "永豐高中",
+          "team": "永豐高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-6cbfa829afec",
+          "name": "季軍",
+          "recipient": "永平高中",
+          "team": "永平高中",
+          "type": "team",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-70536c1618d2",
+          "name": "全程最佳辯士",
+          "recipient": "陳秉銨",
+          "team": "高雄中學",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-6b889e80b8bd",
+          "name": "全程優秀辯士",
+          "recipient": "孫興宸",
+          "team": "永豐高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-c1a8f04262ab",
+          "name": "全程優秀辯士",
+          "recipient": "金承陽",
+          "team": "永平高中",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-d64e9d3507e6",
+          "name": "全程優秀辯士",
+          "recipient": "何宇軒",
+          "team": "高雄中學",
+          "type": "player",
+          "date": null,
+          "note": null
+        },
+        {
+          "id": "honor-60f67c0742ca",
+          "name": "全程優秀辯士",
+          "recipient": "張育棋",
+          "team": "竹科實中",
+          "type": "player",
+          "date": null,
+          "note": null
+        }
+      ],
+      "teams": [
+        "中山女高",
+        "中崙高中A",
+        "中崙高中B",
+        "內壢高中",
+        "內湖高中",
+        "北一女中",
+        "北市大同",
+        "北市陽明",
+        "南山高中",
+        "南湖高中",
+        "和平高中",
+        "和平高中A",
+        "和平高中B",
+        "嘉義女中",
+        "大直高中",
+        "屏東女中",
+        "市立東山",
+        "復旦高中",
+        "慧燈中學",
+        "新竹高中",
+        "明倫高中",
+        "景美女中",
+        "板橋高中",
+        "桃園陽明",
+        "武陵高中",
+        "永平高中",
+        "永豐高中",
+        "海山高中A",
+        "海山高中B",
+        "竹科實中",
+        "精誠中學",
+        "臺中二中",
+        "臺南一中",
+        "華江高中",
+        "薇閣中學",
+        "豐原高中",
+        "馬公高中A",
+        "馬公高中B",
+        "高雄中學",
+        "鳳新高中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2631",
@@ -672,7 +7240,32 @@
       "location": "國立新竹科學園區實驗高級中等學校",
       "recordCount": 0,
       "honorCount": 0,
-      "teamCount": 16
+      "teamCount": 16,
+      "organizer": "竹科實中辯論研究社、建功高中思考言語社、新竹高商悅言社",
+      "executionUnit": null,
+      "note": "簡章標題為「2026論衡盃全國高中職辯論比賽（前竹苗區聯合新生盃）」。採新式奧瑞岡三三三制；正取16隊、備取5隊。正備取公告確認16支正取隊伍，備取隊伍不計入公開名單或參賽隊數。辯題投票由正取隊伍一隊一票，「我國普通刑法應廢除死刑」獲13票並成為正式辯題。簡章：；程序規則：",
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [],
+      "honors": [],
+      "teams": [
+        "南山高中",
+        "台中一中",
+        "平鎮高中",
+        "康橋國際學校",
+        "建功高中A",
+        "建功高中B",
+        "新竹女中",
+        "新竹高中A",
+        "新竹高商A",
+        "新竹高商B",
+        "桃園高中",
+        "竹南高中",
+        "竹東高中",
+        "竹科實中A",
+        "竹科實中B",
+        "陽交附中"
+      ]
     }
   ],
   "matches": [
