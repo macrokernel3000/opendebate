@@ -32,6 +32,17 @@ function Invoke-Builder([string[]]$arguments) {
 }
 
 try {
+    if ([string]::IsNullOrWhiteSpace($SourceFile)) {
+        Add-Type -AssemblyName System.Windows.Forms
+        $picker = New-Object System.Windows.Forms.OpenFileDialog
+        $picker.Title = '選擇已審核的 OpenDebate 賽事 CSV（取消則只重建現有資料）'
+        $picker.Filter = 'CSV files (*.csv)|*.csv'
+        $picker.CheckFileExists = $true
+        if ($picker.ShowDialog() -eq [System.Windows.Forms.DialogResult]::OK) {
+            $SourceFile = $picker.FileName
+        }
+        $picker.Dispose()
+    }
     if (-not [string]::IsNullOrWhiteSpace($SourceFile)) {
         $Source = (Resolve-Path -LiteralPath $SourceFile).Path
         if ([IO.Path]::GetExtension($Source).ToLowerInvariant() -ne '.csv') {
