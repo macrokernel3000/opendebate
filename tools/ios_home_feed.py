@@ -62,7 +62,7 @@ def build_home(data, upcoming, activities):
     honors = data.get("honors", [])
     entities = {e["code"]: e["name"] for e in data.get("entities", []) if e.get("type") == "s"}
     dates = latest_event_dates(data)
-    year_for = {name: date[:4] for name, date in dates.items() if re.match(r"^\d{4}", date)}
+    # Match the public website: leaderboard years come from recorded events,\n    # not future-only tournament metadata. An upcoming 2027 entry must not\n    # silently shift the "recent two years" award window.\n    historical_names = {row.get("competitionName") for collection in (records, honors, data.get("topics", []))\n                        for row in collection if row.get("competitionName")}\n    historical_names.update(data.get("eventRosters", {}).keys())\n    year_for = {name: dates[name][:4] for name in historical_names\n                if name in dates and re.match(r"^\d{4}", dates[name])}
     years = sorted(set(year_for.values()))
     recent_years = years[-2:]
     grouped = {}
