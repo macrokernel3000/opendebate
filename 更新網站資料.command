@@ -30,6 +30,19 @@ restore_inputs() {
     done
   fi
 }
+# Double-click opens a file picker. Drag-and-drop passes the CSV path directly.
+if [[ -z "$1" ]]; then
+  CHOSEN="$(/usr/bin/osascript \
+    -e 'try' \
+    -e 'set selectedCSV to choose file with prompt "選擇已審核的 OpenDebate 賽事 CSV（取消則只重建現有資料）"' \
+    -e 'return POSIX path of selectedCSV' \
+    -e 'on error' \
+    -e 'return ""' \
+    -e 'end try' 2>/dev/null)"
+  if [[ -n "$CHOSEN" ]]; then
+    set -- "$CHOSEN"
+  fi
+fi
 if [[ -n "$1" ]]; then
   SOURCE="$(cd "$(dirname "$1")" && pwd)/$(basename "$1")"
   case "$SOURCE" in
