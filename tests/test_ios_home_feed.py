@@ -53,6 +53,19 @@ class HomeFeedTests(unittest.TestCase):
         self.assertNotIn("p001", rows)
         self.assertEqual(result["leaderboard"]["recent"]["individual"][0]["fullBest"], 1)
 
+    def test_future_only_event_does_not_shift_recent_honor_years(self):
+        fixture = self.fixture()
+        fixture["competitionRegistry"].append({"code": "C2701", "name": "尚未舉辦"})
+        fixture["eventMetadata"]["尚未舉辦"] = {
+            "startDate": "2027-05-01", "endDate": "2027-05-02"
+        }
+        result = ios_home_feed.build_home(
+            fixture, [{"name": "尚未舉辦", "startDate": "2027-05-01"}], []
+        )
+        self.assertEqual(result["recentYears"], ["2025", "2026"])
+        self.assertNotIn("尚未舉辦", [event["name"] for event in result["recent"]])
+        self.assertTrue(any(event["name"] == "尚未舉辦" for event in result["upcoming"]))
+
     def test_upcoming_and_activities_are_separate(self):
         result = ios_home_feed.build_home(
             self.fixture(),
