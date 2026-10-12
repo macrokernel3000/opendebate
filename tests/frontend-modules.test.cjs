@@ -121,6 +121,23 @@ test("future events stay outside the recorded catalog even when roster data alre
   assert.deepEqual(result.recordedEvents.map((event) => event.name), ["已結束盃"]);
 });
 
+test("data version tracks recorded cups and retained schedule records without double counting archived cups", () => {
+  const window = loadFactory("js/event-classification.js");
+  const version = window.DebateEventClassification.dataVersion(
+    [{ name: "已收錄盃" }, { name: "剛轉歷史盃" }],
+    [
+      { id: "future-1", name: "未來盃" },
+      { id: "archived-1", name: "剛轉歷史盃" },
+    ],
+    [
+      { id: "activity-old", name: "已結束但保留的活動" },
+      { id: "activity-new", name: "未來活動" },
+    ],
+  );
+
+  assert.deepEqual({ ...version }, { label: "v1.2.3", recordedCount: 2, scheduleCount: 3 });
+});
+
 function eventPageDependencies() {
   return {
     els: { eventPageDetail: { innerHTML: "" }, eventDetail: { innerHTML: "" } },

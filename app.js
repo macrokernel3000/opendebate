@@ -387,8 +387,13 @@ function renderAll() {
     return;
   }
   if (els.mobileMenuVersion) {
-    els.mobileMenuVersion.textContent = `v1.${events.length}`;
-    els.mobileMenuVersion.setAttribute("aria-label", `資料版本 v1.${events.length}，目前已收錄 ${events.length} 場賽事`);
+    const version = window.DebateEventClassification.dataVersion(
+      events,
+      window.DEBATE_UPCOMING_EVENTS || [],
+      window.DEBATE_CALENDAR_ACTIVITIES || [],
+    );
+    els.mobileMenuVersion.textContent = version.label;
+    els.mobileMenuVersion.setAttribute("aria-label", `資料版本 ${version.label}，目前已收錄 ${version.recordedCount} 場賽事，另有 ${version.scheduleCount} 筆未來賽事或活動`);
   }
   renderHome();
   renderEventOptions();

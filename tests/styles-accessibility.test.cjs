@@ -159,9 +159,10 @@ test("mobile forms and common navigation controls keep 44px touch targets", () =
 
 test("mobile quick menu exposes the recorded-event version at its bottom", () => {
   const app = fs.readFileSync(path.join(__dirname, "..", "app.js"), "utf8");
-  assert.match(html, /<small id="mobileMenuVersion" class="mobile-menu-version"[^>]*>v1\.—<\/small>/);
-  assert.match(app, /mobileMenuVersion\.textContent = `v1\.\$\{events\.length\}`/);
-  assert.match(app, /目前已收錄 \$\{events\.length\} 場賽事/);
+  assert.match(html, /<small id="mobileMenuVersion" class="mobile-menu-version"[^>]*>v1\.—\.—<\/small>/);
+  assert.match(app, /DebateEventClassification\.dataVersion/);
+  assert.match(app, /mobileMenuVersion\.textContent = version\.label/);
+  assert.match(app, /目前已收錄 \$\{version\.recordedCount\} 場賽事，另有 \$\{version\.scheduleCount\} 筆未來賽事或活動/);
   assert.match(css, /\.mobile-menu-version\s*\{[^}]*border-top:[^}]*text-align:\s*right/);
 });
 
