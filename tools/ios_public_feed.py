@@ -102,7 +102,7 @@ def build_catalog(public_data):
     }
 
 
-def write_feed(public_data, output_dir):
+def write_feed(public_data, output_dir, home_manifest=None):
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=True)
     catalog = build_catalog(public_data)
@@ -118,6 +118,8 @@ def write_feed(public_data, output_dir):
         "eventCount": len(catalog["events"]),
         "matchCount": len(catalog["matches"]),
     }
+    if home_manifest:
+        manifest.update(home_manifest)
     (output_dir / "catalog.json").write_bytes(catalog_bytes)
     (output_dir / "manifest.json").write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
