@@ -18,9 +18,15 @@ RANKS = (("冠", r"(?:^|組)冠軍$"), ("亞", r"(?:^|組)亞軍$"),
 
 def read_js(path, prefix):
     text = path.read_text(encoding="utf-8").strip()
-    if not text.startswith(prefix):
+    index = text.find(prefix)
+    if index < 0:
         raise ValueError(f"Unexpected JS data prefix: {path}")
-    return json.loads(text[len(prefix):].rstrip(";\n "))
+    # The existing public files may start with source-provenance comments.
+    prelude = text[:index].strip()
+    if any(line.strip() and not line.strip().startswith("//") for line in prelude.splitlines()):
+        raise ValueError(f"Unexpected content before public data: {path}")
+    return json.loads(text[index + len(prefix):].rstrip(";\\n "))
+
 
 
 def medal(honor):
