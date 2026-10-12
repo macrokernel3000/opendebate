@@ -39,11 +39,11 @@ try {
         }
         $Name = [IO.Path]::GetFileName($Source)
         if ($Name.StartsWith('upcoming-data-')) {
-            Invoke-Builder @((Join-Path $Root 'tools\import_upcoming_csv.py'), $Source)
+            Invoke-Builder -arguments @((Join-Path $Root 'tools\import_upcoming_csv.py'), $Source)
             foreach ($file in @('upcoming-events.js','competition-registry.csv','event-metadata.csv')) {
                 Backup-Input (Join-Path $DataDir $file)
             }
-            Invoke-Builder @((Join-Path $Root 'tools\import_upcoming_csv.py'), $Source, '--apply')
+            Invoke-Builder -arguments @((Join-Path $Root 'tools\import_upcoming_csv.py'), $Source, '--apply')
         } else {
             if ($Name -eq 'entity-registry.csv') {
                 $Target = Join-Path $DataDir 'entity-registry.csv'
@@ -60,9 +60,9 @@ try {
     }
 
     Write-Host '正在檢查公開資料...'
-    Invoke-Builder @((Join-Path $Root 'tools\build_data.py'), '--check', '--fail-on-warnings')
+    Invoke-Builder -arguments @((Join-Path $Root 'tools\build_data.py'), '--check', '--fail-on-warnings')
     Write-Host '正在產生網站與 iOS 共用公開快照...'
-    Invoke-Builder @((Join-Path $Root 'tools\build_data.py'))
+    Invoke-Builder -arguments @((Join-Path $Root 'tools\build_data.py'))
     Write-Host '本機更新成功！尚未發布 GitHub；請先比對變更再 Commit / Push。'
     Start-Process (Join-Path $Root 'index.html')
 } catch {
