@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "8a0b4aa315141870330e5c9d5b3e6715a13ed1cadd5c4a80c58591a4daa37013",
-  "generatedAt": "2026-10-12T04:29:59",
+  "datasetVersion": "676d5046e748a11f859ee34b2285b2b2965e1630ad4745cab4f0b544da6d1053",
+  "generatedAt": "2026-10-13T17:32:49",
   "events": [
     {
       "id": "C1201",
@@ -200,6 +200,17 @@
       "recordCount": 0,
       "honorCount": 8,
       "teamCount": 0
+    },
+    {
+      "id": "C2409",
+      "name": "第一屆幽墨盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": null,
+      "endDate": null,
+      "location": null,
+      "recordCount": 17,
+      "honorCount": 8,
+      "teamCount": 17
     },
     {
       "id": "C2501",
@@ -2952,6 +2963,193 @@
       "date": "2025-04-13",
       "period": "3",
       "venue": "1"
+    },
+    {
+      "id": "match-c41900db19a5",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "南山高中",
+      "negative": "建國中學",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-1e01affb8e3a",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "南湖訊號一格",
+      "negative": "陳湘芸說得都隊",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-73198bae1f4f",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "我的學測幽默了",
+      "negative": "新竹女中",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": null,
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-86ed40d8e62d",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "麗山高中",
+      "negative": "中山女高",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-a3555d9c2874",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "南湖水樂園",
+      "negative": "嘉e火雞肉飯",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-2f915e8e8713",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "明倫高中",
+      "negative": "中和高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-f978939c0f8a",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "陳湘芸說得都隊",
+      "negative": "南湖訊號一格",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-1622e29456bc",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "中山高中",
+      "negative": "永平高中",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-e9c15043bfc7",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "中山女高",
+      "negative": "內湖高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-5f045bea8105",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "嘉e火雞肉飯",
+      "negative": "南湖水樂園",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-eb59bcb0eefe",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "政大附中",
+      "negative": "萬芳高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-63911bd02714",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "建國中學",
+      "negative": "南山高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-9fe4ca7a18fd",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "中和高中",
+      "negative": "明倫高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": null,
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-6d17dc19eb39",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "新竹女中",
+      "negative": "我的學測幽默了",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": null,
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-88d51db695f7",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "內湖高中",
+      "negative": "麗山高中",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": null,
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-616ad9f3bb92",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "永平高中",
+      "negative": "中山高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-743b1a7a2c9d",
+      "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
+      "affirmative": "萬芳高中",
+      "negative": "政大附中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": null,
+      "period": "3",
+      "venue": null
     },
     {
       "id": "match-3ce441efdbe2",

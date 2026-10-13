@@ -65,7 +65,7 @@
           <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
             ${compact ? `<span class="event-card-time"><i class="event-time-point" aria-hidden="true"></i><span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span></span>` : `<span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>`}
             <div class="event-card-body">
-              <h3>${escapeHtml(event.name)}</h3>
+              <h3>${escapeHtml(event.name)}${event.name.startsWith("第一屆幽墨盃") ? ' <span aria-hidden="true">🤡</span>' : ""}</h3>
               ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
             </div>
             ${renderEventPodium(event)}
