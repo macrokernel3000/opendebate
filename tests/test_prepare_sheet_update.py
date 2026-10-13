@@ -22,6 +22,7 @@ def generated_files(public_data=None, report="report", index="index", calendar="
         "data/ios/v1/catalog.json": json.dumps({
             "schemaVersion": 1, "datasetVersion": "abc", "generatedAt": "2026-10-05T10:00:00",
             "events": [], "matches": [],
+            "publicIndex": {"generatedAt": "2026-10-05T10:00:00", "people": []},
         }),
         "data/ios/v1/manifest.json": json.dumps({
             "schemaVersion": 1, "catalogSchemaVersion": 1, "datasetVersion": "abc",
@@ -50,6 +51,9 @@ class PrepareSheetUpdateTests(unittest.TestCase):
             calendar="BEGIN:VEVENT\r\nDTSTAMP:20261005T110000Z\r\nSUMMARY:test\r\nEND:VEVENT\r\n",
             sitemap="<lastmod>2026-10-05</lastmod>",
         )
+        after_catalog = json.loads(updated["data/ios/v1/catalog.json"])
+        after_catalog["publicIndex"]["generatedAt"] = "2026-10-05T11:00:00"
+        updated["data/ios/v1/catalog.json"] = json.dumps(after_catalog)
         self.assertFalse(has_meaningful_changes(baseline, updated))
 
     def test_detects_public_data_change_even_when_totals_match(self):

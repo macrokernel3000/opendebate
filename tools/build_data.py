@@ -21,6 +21,7 @@ SCHOOL_ENDINGS = entity_registry_module.SCHOOL_ENDINGS
 KNOWN_SCHOOL_SHORT_NAMES = entity_registry_module.KNOWN_SCHOOL_SHORT_NAMES
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+MASTER_DATA_PATH = DATA_DIR / "public-data-所有賽事.csv"
 JS_PATH = DATA_DIR / "public-data.js"
 REGISTRY_PATH = DATA_DIR / "entity-registry.csv"
 REGISTRY_XLSX_PATH = DATA_DIR / "entity-registry.xlsx"
@@ -231,6 +232,11 @@ def parse_rows(rows, source_name, default_competition=""):
                     "negative": split_players(row.get("反方登場選手")),
                 },
             }
+            explicit_id = clean(row.get("資料ID"))
+            if explicit_id:
+                if not re.fullmatch(r"match-[0-9a-f]{12}", explicit_id):
+                    raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列的資料ID格式無效：{explicit_id}。")
+                record["_explicitID"] = explicit_id
             group_name = clean(row.get("分組名稱"))
             inference_note = clean(row.get("推定依據"))
             if group_name:
@@ -259,6 +265,11 @@ def parse_rows(rows, source_name, default_competition=""):
                 "_source": source_name,
                 "_row": line_number,
             }
+            explicit_id = clean(row.get("資料ID"))
+            if explicit_id:
+                if not re.fullmatch(r"honor-[0-9a-f]{12}", explicit_id):
+                    raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列的資料ID格式無效：{explicit_id}。")
+                honor["_explicitID"] = explicit_id
             honor_level = clean(row.get("榮譽層級"))
             if honor_level:
                 honor["honorLevel"] = honor_level
@@ -293,13 +304,13 @@ def load_site_content():
 def load_competition_registry():
     with COMPETITION_REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
         reader = csv.DictReader(source)
-        required = {"code", "name", "year", "registrationSequence", "registeredAt", "registrationSource", "registrationBasis", "status"}
+        required = {"code", "name", "shortName", "year", "registrationSequence", "registeredAt", "registrationSource", "registrationBasis", "status"}
         if not reader.fieldnames or not required.issubset(reader.fieldnames):
             raise SystemExit(f"{COMPETITION_REGISTRY_PATH.name} 欄位不完整：需要 {', '.join(sorted(required))}")
         rows = list(reader)
     by_name, by_code = {}, {}
     for row in rows:
-        code, name, year = clean(row.get("code")), clean(row.get("name")), clean(row.get("year"))
+        code, name, short_name, year = clean(row.get("code")), clean(row.get("name")), clean(row.get("shortName")), clean(row.get("year"))
         if row.get("status") == "year-unverified":
             if not name or code or year or clean(row.get("registrationSequence")) or name in by_name:
                 raise SystemExit(f"年份待查賽事必須只填名稱與來源，不可先發代號：{row}")
@@ -307,6 +318,8 @@ def load_competition_registry():
             continue
         if not re.fullmatch(r"C\d{4}", code) or not re.fullmatch(r"20\d{2}", year) or not name:
             raise SystemExit(f"賽事代號名冊有無效列：{row}")
+        if not short_name.startswith(f"{year} ") or not short_name.removeprefix(f"{year} ").strip():
+            raise SystemExit(f"賽事簡稱必須是『年份＋半形空格＋簡稱』：{code} / {short_name or '（空白）'}")
         if code[1:3] != year[-2:]:
             raise SystemExit(f"賽事代號年份與欄位不符：{code} / {year} / {name}")
         if name in by_name or code in by_code:
@@ -354,6 +367,51 @@ def load_event_metadata():
                 item["brochureTeamLimit"] = team_limit
             metadata[competition] = item
         return metadata
+
+
+def known_event_date_bounds(records, honors):
+    """Return min/max full dates seen in public match and honor rows per event."""
+    dates_by_event = {}
+    for item in [*records, *honors]:
+        competition = clean(item.get("competitionName"))
+        match_date = clean(item.get("matchDate"))
+        if competition and re.fullmatch(r"\d{4}-\d{2}-\d{2}", match_date):
+            dates_by_event.setdefault(competition, []).append(match_date)
+    return {
+        competition: {"startDate": min(dates), "endDate": max(dates)}
+        for competition, dates in dates_by_event.items()
+    }
+
+
+def apply_event_date_fallback(event_metadata, known_date_bounds):
+    """Fill missing event dates from known rows without overwriting official metadata."""
+    for competition, bounds in known_date_bounds.items():
+        metadata = event_metadata.setdefault(competition, {})
+        derived_fields = []
+        for field in ("startDate", "endDate"):
+            if not clean(metadata.get(field)):
+                metadata[field] = bounds[field]
+                derived_fields.append(field)
+        if derived_fields:
+            metadata["derivedDateFields"] = derived_fields
+            metadata["dateBasisNote"] = "日期依已收錄戰績／榮譽整理"
+    return event_metadata
+
+
+def apply_upcoming_event_dates(event_metadata, upcoming_events):
+    """Use the public schedule for missing future-event catalog dates."""
+    for event in upcoming_events:
+        competition = clean(event.get("name"))
+        if not competition:
+            continue
+        metadata = event_metadata.setdefault(competition, {})
+        start = clean(event.get("startDate"))
+        end = clean(event.get("endDate")) or start
+        if not clean(metadata.get("startDate")) and start:
+            metadata["startDate"] = start
+        if not clean(metadata.get("endDate")) and end:
+            metadata["endDate"] = end
+    return event_metadata
 
 
 def load_event_rosters():
@@ -459,11 +517,10 @@ def source_files():
                 path = ROOT / path
             paths.append(path)
         return paths
-    csv_files = sorted(DATA_DIR.glob("public-data*.csv"), key=lambda path: path.name.lower())
-    # CSV is the canonical source. XLSX is intentionally opt-in through
-    # PUBLIC_DATA_SOURCE so an old workbook cannot silently override or
-    # duplicate the maintained CSV dataset.
-    return csv_files
+    # The consolidated CSV is the only maintained public result source.
+    # Archived per-event files are intentionally outside the default path so
+    # stale and corrected copies cannot both be loaded into the website.
+    return [MASTER_DATA_PATH] if MASTER_DATA_PATH.exists() else []
 
 
 def deduplicate(items):
@@ -496,6 +553,10 @@ def validate_honor_teams(records, honors, event_rosters, registry_entries):
 
 def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
     return data_validation_module.validate_event_metadata_dates(path, checked_date)
+
+
+def validate_event_metadata_coverage(event_metadata, known_date_bounds):
+    return data_validation_module.validate_event_metadata_coverage(event_metadata, known_date_bounds)
 
 
 def entity_base_name(name):
@@ -612,7 +673,7 @@ def build(check_only=False, fail_on_warnings=False):
     WARNINGS.clear()
     paths = source_files()
     if not paths:
-        raise SystemExit("找不到資料檔：請在 data 資料夾放入 public-data 開頭的 .xlsx 或 .csv")
+        raise SystemExit(f"找不到資料總表：{MASTER_DATA_PATH.relative_to(ROOT)}")
     records, honors, topics, sources = [], [], [], []
     for path in paths:
         loader = load_xlsx if path.suffix.lower() == ".xlsx" else load_csv
@@ -646,10 +707,14 @@ def build(check_only=False, fail_on_warnings=False):
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    known_date_bounds = known_event_date_bounds(records, honors)
+    validate_event_metadata_coverage(event_metadata, known_date_bounds)
+    apply_event_date_fallback(event_metadata, known_date_bounds)
+    upcoming_events = read_upcoming_events()
+    apply_upcoming_event_dates(event_metadata, upcoming_events)
     competition_registry = load_competition_registry()
     registry_names = set(competition_registry)
     all_names = set(event_names(records, honors, topics)) | set(event_metadata)
-    upcoming_events = read_upcoming_events()
     all_names.update(event.get("name", "") for event in upcoming_events if event.get("name"))
     missing_codes = sorted(all_names - registry_names)
     if missing_codes:
@@ -658,9 +723,12 @@ def build(check_only=False, fail_on_warnings=False):
         for item in collection:
             item["competitionCode"] = competition_registry[item["competitionName"]]["code"]
     for name in sorted(all_names, key=str.lower):
-        event_metadata.setdefault(name, {})["competitionCode"] = competition_registry[name]["code"]
+        metadata = event_metadata.setdefault(name, {})
+        metadata["competitionCode"] = competition_registry[name]["code"]
+        metadata["shortName"] = competition_registry[name]["shortName"]
     for event in upcoming_events:
         event["competitionCode"] = competition_registry[event["name"]]["code"]
+        event["shortName"] = competition_registry[event["name"]]["shortName"]
 
     if check_only:
         events = event_names(records, honors, topics)
@@ -699,7 +767,7 @@ def build(check_only=False, fail_on_warnings=False):
         "eventMetadata": event_metadata,
         "eventRosters": event_rosters,
         "competitionRegistry": [
-            {"code": row["code"], "name": row["name"], "year": row["year"], "status": row["status"]}
+            {"code": row["code"], "name": row["name"], "shortName": row["shortName"], "year": row["year"], "status": row["status"]}
             for row in competition_registry.values()
         ],
     }

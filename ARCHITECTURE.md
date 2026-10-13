@@ -33,16 +33,16 @@
 
 ## 3. 資料流
 
-主要人工編輯來源是 `data/public-data*.csv`、`data/entity-registry.csv` 與 `data/event-entity-assignments.csv`。正式慣例是一個賽事一個 CSV；舊 Excel 已移至 `data/backups`，只供復原。`event-entity-assignments.csv` 用於依「賽事名稱＋隊伍原名」指定固定學校代碼；它不會改寫公開隊伍原名，代碼需存在於學校名冊，並附判定依據。此指定同時套用於逐場戰績和隊伍名單，避免同一屆賽事的戰績與名單落到不同學校頁。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
+主要人工編輯來源是 `data/public-data-所有賽事.csv`、`data/entity-registry.csv` 與 `data/event-entity-assignments.csv`。歷史賽事使用單一 24 欄總表，避免同一資料在逐賽事檔與整合檔各自修改後產生衝突；最後兩欄「來源名稱、來源網址」保留逐列查核線索，不進入公開 payload。遷移前的逐賽事 CSV 保存在 `data/賽事分檔封存`，不參與建置。`event-entity-assignments.csv` 用於依「賽事名稱＋隊伍原名」指定固定學校代碼；它不會改寫公開隊伍原名，代碼需存在於學校名冊，並附判定依據。此指定同時套用於逐場戰績和隊伍名單，避免同一屆賽事的戰績與名單落到不同學校頁。執行 `更新網站資料.command` 後，`tools/build_data.py` 會：
 
-1. 掃描並合併所有 `public-data*.csv`。
-2. 對完全相同的資料去重，保留歷史來源。
-3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍、賽事 metadata、題解段數是否超過對應辯題數，以及榮譽所屬隊伍是否見於該賽事對戰或公布名單。名單與榮譽核對會比對名冊別名及「台／臺」字形，但不改公開名稱；榮譽若明列 A／B 隊，仍需對到同一隊別，不以同校另一隊替代。題解或榮譽不匹配只提示來源位置，不自行裁切或改寫。CSV／XLSX 來源檔讀取與表格列轉換集中在 `tools/source_reader.py`；資料一致性規則集中在 `tools/data_validation.py`；未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`；單位名冊的讀取、別名歸戶與穩定 ID 關聯集中在 `tools/entity_registry.py`；XLSX 工作表 XML 解析由 `tools/xlsx_reader.py` 共用於賽事匯入與舊版名冊讀取。`build_data.py` 保留相容入口。
+1. 只讀取 `data/public-data-所有賽事.csv`；除非測試或匯入流程明確設定 `PUBLIC_DATA_SOURCE`，不讀取其他 CSV／XLSX。
+2. 對總表內完全相同的資料去重。
+3. 更新前可用 `python tools/build_data.py --check --fail-on-warnings` 唯讀預檢來源；正式建置會檢查日期、數字、成對比分、勝方所屬隊伍、賽事 metadata、題解段數是否超過對應辯題數，以及榮譽所屬隊伍是否見於該賽事對戰或公布名單。賽事 metadata 明載的日期範圍必須涵蓋所有已收錄逐場／榮譽日期；缺少任一端時才以已收錄完整日期的最早／最晚日補入生成資料，不反寫來源 CSV。名單與榮譽核對會比對名冊別名及「台／臺」字形，但不改公開名稱；榮譽若明列 A／B 隊，仍需對到同一隊別，不以同校另一隊替代。題解或榮譽不匹配只提示來源位置，不自行裁切或改寫。CSV／XLSX 來源檔讀取與表格列轉換集中在 `tools/source_reader.py`；資料一致性規則集中在 `tools/data_validation.py`；未來賽事日期檢核與 `calendar.ics` 輸出集中在 `tools/calendar_feed.py`；單位名冊的讀取、別名歸戶與穩定 ID 關聯集中在 `tools/entity_registry.py`；XLSX 工作表 XML 解析由 `tools/xlsx_reader.py` 共用於賽事匯入與舊版名冊讀取。`build_data.py` 保留相容入口。
 4. 同步單位名冊與別名。
 5. 產生網站唯一讀取的 `data/public-data.js`。
 6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
 7. 更新 `index.html` 的資源版本，避免瀏覽器讀到舊快取。
-8. 由同一份已驗證 payload 產生 `data/ios/v1/catalog.json` 與 `manifest.json`。這是原生 App 的唯讀公開更新來源；manifest 保存內容版本、SHA-256、bytes 與筆數，App 驗證完整後才整包啟用。它不含會員帳號、私人紀錄或 Sites／D1 資料。
+8. 由同一份已驗證 payload 產生 `data/ios/v1/catalog.json` 與 `manifest.json`。catalog 包含已有戰績／榮譽／辯題／名單的賽事，也包含已登錄 metadata 的未來賽事，讓尚無賽果的公開排程仍有穩定代號與日期。這是原生 App 的唯讀公開更新來源；manifest 保存內容版本、SHA-256、bytes 與筆數，App 驗證完整後才整包啟用。它不含會員帳號、私人紀錄或 Sites／D1 資料。
 
 `.github/workflows/check-data.yml` 會在相關資料、程式或流程變更時先執行唯讀預檢，再於 CI 工作區重建網站產物，並比對已提交產物是否仍由 repo 內來源正確生成；比對會忽略建置時間、快取版本及行事曆時間戳。若有實質差異，檢查會指出檔名並要求一併提交更新後的生成檔。流程最後執行前端與 Python 單元測試。Google 試算表專用 PR 例外：生成資料來自即時下載的 XLSX，因此由試算表 workflow 自己完成 XLSX 預檢與重建，不能拿 repo 內 CSV 作錯誤的基準；該流程在生成變更後開啟待審查 PR。
 
@@ -53,12 +53,12 @@
 - `records`：逐場賽果、日期、賽事、正反方、比分、勝方、時段與會場；可選的 `groupName` 供循環／分組名稱顯示，`inferenceNote` 只保存推定依據、不直接顯示。
 - `honors`：團體或個人公開榮譽。`honorName` 保留主辦方原獎名；選填 `honorLevel` 保存跨賽事一致的獎級分類（例如全程最佳／全程優秀），供排行榜與榮譽統計使用，不得覆蓋原獎名。
 - `entities`：學校、特殊隊伍、大學的固定代碼、正式名稱與別名。
-- `competitionRegistry`：每屆賽事的固定 `CYYNN` 代號；原賽事名稱仍是顯示名稱與舊連結，代號不取代未來賽事的行事曆識別碼。來源名冊為 `data/competition-registry.csv`，新增後須同步記錄、榮譽、辯題及未來賽事。
+- `competitionRegistry`：每屆賽事的固定 `CYYNN` 代號與獨立 `shortName`。簡稱固定使用「年份＋半形空格＋核心簡稱」，供首頁及其他公開系統顯示；原賽事名稱仍是正式名稱與舊連結，簡稱與代號都不取代未來賽事的行事曆識別碼。來源名冊為 `data/competition-registry.csv`，新增後須同步記錄、榮譽、辯題及未來賽事。
 - `attendance`：選手登場紀錄，目前保留但尚未在前台呈現。
 - `topics`：辯題名稱、穩定辯題代碼、採用該題的賽事及該賽事自己的題解。相同文字的辯題共用一個獨立詳情頁，列出採用賽事；每個賽事的題解分開保存並在頁面分別呈現，不假設不同賽事的題解相同。
 - `generatedAt`：資料檔產生時間；首頁「上次修改」以此為唯一依據。
 - `siteContent`：舊版首頁介紹文案資料，目前仍由建置程式載入，但首頁已移除該介紹區，不會顯示。
-- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、執行單位、舉辦地點、備註、選填的開始日期／結束日期（YYYY-MM-DD）、年齡限制與選填的簡章滿額隊數；可選 `awardSelectionCriteria` 保存並於賽事頁折疊呈現大會獎項遴選辦法；`teamCount` 由該賽事戰績中實際出現的隊伍名稱去重計算，簡章滿額隊數不覆蓋或改寫實際收錄隊數，也不顯示在網頁。年齡限制未知時保留 `null`，不推定為否。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
+- `eventMetadata`：由 `data/event-metadata.csv` 產生，保存賽事的主辦單位、執行單位、舉辦地點、備註、選填的開始日期／結束日期（YYYY-MM-DD）、年齡限制與選填的簡章滿額隊數；可選 `awardSelectionCriteria` 保存並於賽事頁折疊呈現大會獎項遴選辦法；`teamCount` 由該賽事戰績中實際出現的隊伍名稱去重計算，簡章滿額隊數不覆蓋或改寫實際收錄隊數，也不顯示在網頁。年齡限制未知時保留 `null`，不推定為否。明載日期優先；缺少一端時，生成資料才以已收錄戰績／榮譽的最早或最晚完整日期補值，另附 `derivedDateFields` 與 `dateBasisNote` 供前台揭露依據。未來賽事若 metadata 日期留白，則以 `data/upcoming-events.js` 的公開排程補進生成資料與 iOS V1 catalog，不反寫來源 CSV，也不改變未來／歷史分類。整體賽期可用於排序、年份篩選與賽事頁，不能代填未確認的逐場日期。
 - `eventRosters`：由 `data/event-rosters.csv` 產生，保存主辦方公布的隊伍名單、領隊、選手、名單狀態與來源說明；如有賽事別名歸戶，另附 `teamId`。這是「公布名單」，不代表每位名單選手都實際上場，也不併入 `records[].players`、`attendance`、逐場出賽數或賽事實際隊數。若之後收到修正版名單，需保留版本與來源差異，不可直接當作已確認的出賽紀錄。
 
 公告隊伍名單與賽果隊伍比對時，先依 `entity-registry.csv` 的明確別名歸戶並正規化空白、全半形及「台／臺」字形，再比較各正式單位出現次數；同一學校 A／B 隊雖歸到同一學校，仍各計一次。公開榮譽的所屬隊伍另對照該賽事的參賽隊伍或公布名單；若獎項明列 A／B 隊別，需與同隊別相符。所有別名歸戶只用於一致性核對，不改寫名單、賽果原名或公開隊數。資料缺漏或校名變體可能是合法情況，因此以列號提醒人工核對，不自動更正。
@@ -83,7 +83,7 @@
 - 首頁手機版榮譽榜：團體獎依冠、亞、季、殿分項橫列顯示，個人獎顯示全程佳／優；未勾選的獎項類別不顯示，總數依目前開啟的篩選計算。
 - 首頁最底部提供「行事曆｜測試版」訂閱按鈕；`calendar.ics` 是可訂閱的近期賽事與一般活動來源，由資料更新工具合併 `data/upcoming-events.js` 和 `data/calendar-activities.js` 重建。一般活動會以「活動」卡出現在首頁未來項目並可開啟獨立詳情，但不進入總覽、盃賽統計或歷史戰績；多日活動仍只保留一張首頁入口，行事曆則依實際日期產生多筆事件。首頁未來項目以台北本機日期比較結束日：結束當天仍顯示，隔日起自動隱藏；多日活動優先使用 `endDate`，未提供時才使用 `days` 中最後一日，資料本身不刪除。
 - `data/event-metadata.csv`：賽事的可選基本資訊來源；賽事詳情將主辦單位與執行單位並列，舉辦地點以較次要層級顯示。年齡限制與簡章滿額隊數只保存於資料層，不在前台呈現。
-- `data/competition-registry.csv`：不可重排或重用的賽事代號來源。年度序號依本資料庫登錄次序，不按比賽日期排序；補登舊賽事也只能追加下一號。
+- `data/competition-registry.csv`：不可重排或重用的賽事代號及簡稱來源。每列 `shortName` 必須明填且以該列年份開頭；年度序號依本資料庫登錄次序，不按比賽日期排序；補登舊賽事也只能追加下一號。
 - 未來賽事簡章的來源紀錄放在 `docs/`，保留尚未公開或尚未確認的原始資訊；`data/upcoming-events.js` 僅提供首頁時間軸與未來賽事頁所選定的公開摘要。不要把簡章隊數上限當成參賽名單，也不要自行推定簡章未明列的題目。詳見 `docs/未來賽事簡章備存規範.md`。
 - `js/interactions.js`：導覽、按鈕、篩選與使用者操作；也統一設定建檔圖表在資料充足時才能放大的狀態與無障礙標籤。
 - `js/personal-records.js`：使用者個人成績、實際平均分數與 CSV 備份；雷達圖資料齊全、進步圖有至少兩場同項分數才可放大，放大時具對話框語意、Escape 關閉和 Tab 焦點限制；賽事建議可用方向鍵與 Enter 選取。圖表內才依各欄滿分換算比例。資料只存在該瀏覽器的 `localStorage`，不可當成公開資料或後台資料。
@@ -113,7 +113,7 @@
 ## 7. 安全修改規則
 
 1. 先讀現有資料與呈現方式，不要自行發明另一套欄位或覆蓋既有 CSV。
-2. 新增賽事應新增一個 `public-data-賽事名稱.csv`；更新工具採合併、去重，不應刪除歷史資料。
+2. 新增賽事應在 `data/public-data-所有賽事.csv` 增加資料列；不得把封存的逐賽事 CSV 移回建置來源或另建第二份正式來源。
 3. 單位名稱與別名應透過固定代碼歸戶，避免同校被拆成多筆排行。
 4. 更動載入順序、資料模型或手機版面後，必須在瀏覽器實測首頁、總覽四個分頁、搜尋、建檔與資料回報。
 5. 資料更新後至少檢查 `data/update-report.txt` 的賽事數、筆數與警告。

@@ -61,6 +61,7 @@
       const titleLevel = target === els.eventPageDetail ? 1 : 2;
       const sectionLevel = titleLevel + 1;
       const storedEvent = getEvents().find((item) => item.name === event.name);
+      const shortName = storedEvent?.metadata?.shortName || event.shortName || "";
       const rosterSection = renderRosterSection(storedEvent?.rosters || [], sectionLevel + 2);
       const dateLabel = formatEventDateRange(event.startDate, event.endDate);
       const metadata = [
@@ -88,7 +89,7 @@
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
-          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事公告"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${escapeHtml(dateLabel)}</p></div>
+          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事公告"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}>${shortName ? `<p class="event-short-name"><span>簡稱</span><strong>${escapeHtml(shortName)}</strong></p>` : ""}<p>${escapeHtml(dateLabel)}</p></div>
           <div class="event-summary-count"><span class="count-chip">即將舉行</span></div>
         </div>
         ${metadata ? `<div class="event-metadata">${metadata}</div>` : ""}
@@ -238,7 +239,7 @@
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
-          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事紀錄"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${escapeHtml(formatEventDateRange(event.metadata.startDate, event.metadata.endDate, event.dates))}</p></div>
+          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事紀錄"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}>${metadata.shortName ? `<p class="event-short-name"><span>簡稱</span><strong>${escapeHtml(metadata.shortName)}</strong></p>` : ""}<p>${escapeHtml(formatEventDateRange(event.metadata.startDate, event.metadata.endDate, event.dates))}</p>${event.metadata.dateBasisNote ? `<small class="event-date-basis">${escapeHtml(event.metadata.dateBasisNote)}</small>` : ""}</div>
           ${eventSummaryCounts ? `<div class="event-summary-count">${eventSummaryCounts}</div>` : ""}
         </div>
         ${topicSection}

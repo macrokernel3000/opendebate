@@ -18,22 +18,34 @@ class BuildDataTests(unittest.TestCase):
             path = Path(folder) / "competition-registry.csv"
             with patch.object(build_data, "COMPETITION_REGISTRY_PATH", path):
                 path.write_text(
-                    "code,name,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
-                    "C2601,測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
-                    "C2602,測試盃二,2026,2,2026-01-02,data2.csv,首次登錄,results-recorded\n"
-                    ",待核賽,,,,rosters.csv,年度未確認,year-unverified\n",
+                    "code,name,shortName,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
+                    "C2601,測試盃,2026 測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
+                    "C2602,測試盃二,2026 測試盃二,2026,2,2026-01-02,data2.csv,首次登錄,results-recorded\n"
+                    ",待核賽,,,,,rosters.csv,年度未確認,year-unverified\n",
                     encoding="utf-8",
                 )
                 loaded = build_data.load_competition_registry()
                 self.assertEqual(loaded["測試盃"]["code"], "C2601")
                 self.assertEqual(loaded["待核賽"]["status"], "year-unverified")
                 path.write_text(
-                    "code,name,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
-                    "C2601,測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
-                    "C2603,測試盃二,2026,3,2026-01-02,data2.csv,首次登錄,results-recorded\n",
+                    "code,name,shortName,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
+                    "C2601,測試盃,2026 測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n"
+                    "C2603,測試盃二,2026 測試盃二,2026,3,2026-01-02,data2.csv,首次登錄,results-recorded\n",
                     encoding="utf-8",
                 )
                 with self.assertRaisesRegex(SystemExit, "序號必須連續"):
+                    build_data.load_competition_registry()
+
+    def test_competition_registry_requires_year_prefixed_short_name(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "competition-registry.csv"
+            path.write_text(
+                "code,name,shortName,year,registrationSequence,registeredAt,registrationSource,registrationBasis,status\n"
+                "C2601,測試盃,測試盃,2026,1,2026-01-01,data.csv,首次登錄,results-recorded\n",
+                encoding="utf-8",
+            )
+            with patch.object(build_data, "COMPETITION_REGISTRY_PATH", path):
+                with self.assertRaisesRegex(SystemExit, "年份＋半形空格＋簡稱"):
                     build_data.load_competition_registry()
 
     def test_upcoming_event_script_gets_a_fresh_asset_version(self):
@@ -82,6 +94,77 @@ class BuildDataTests(unittest.TestCase):
                 current = build_data.load_event_metadata()["新盃賽"]
                 self.assertEqual(current["startDate"], "2026-09-11")
                 self.assertEqual(current["endDate"], "2026-09-14")
+
+    def test_event_date_fallback_uses_records_and_honors_without_overwriting_official_range(self):
+        records = [
+            {"competitionName": "缺日期盃", "matchDate": "2026-08-02"},
+            {"competitionName": "缺日期盃", "matchDate": "2026-08-03"},
+            {"competitionName": "官方較寬盃", "matchDate": "2026-09-12"},
+        ]
+        honors = [{"competitionName": "缺日期盃", "matchDate": "2026-08-01"}]
+        bounds = build_data.known_event_date_bounds(records, honors)
+        metadata = {
+            "缺日期盃": {},
+            "官方較寬盃": {"startDate": "2026-09-11", "endDate": "2026-09-13"},
+        }
+
+        build_data.validate_event_metadata_coverage(metadata, bounds)
+        build_data.apply_event_date_fallback(metadata, bounds)
+
+        self.assertEqual(metadata["缺日期盃"]["startDate"], "2026-08-01")
+        self.assertEqual(metadata["缺日期盃"]["endDate"], "2026-08-03")
+        self.assertEqual(metadata["缺日期盃"]["derivedDateFields"], ["startDate", "endDate"])
+        self.assertEqual(metadata["官方較寬盃"]["startDate"], "2026-09-11")
+        self.assertEqual(metadata["官方較寬盃"]["endDate"], "2026-09-13")
+        self.assertNotIn("dateBasisNote", metadata["官方較寬盃"])
+
+    def test_event_date_fallback_fills_only_missing_side(self):
+        metadata = {"測試盃": {"startDate": "2026-05-01", "endDate": ""}}
+        bounds = {"測試盃": {"startDate": "2026-05-02", "endDate": "2026-05-03"}}
+
+        build_data.validate_event_metadata_coverage(metadata, bounds)
+        build_data.apply_event_date_fallback(metadata, bounds)
+
+        self.assertEqual(metadata["測試盃"]["startDate"], "2026-05-01")
+        self.assertEqual(metadata["測試盃"]["endDate"], "2026-05-03")
+        self.assertEqual(metadata["測試盃"]["derivedDateFields"], ["endDate"])
+
+    def test_event_metadata_range_must_cover_known_dates(self):
+        bounds = {"測試盃": {"startDate": "2026-05-02", "endDate": "2026-05-03"}}
+        with self.assertRaisesRegex(SystemExit, "開始日期.*晚於已收錄"):
+            build_data.validate_event_metadata_coverage(
+                {"測試盃": {"startDate": "2026-05-03", "endDate": "2026-05-04"}},
+                bounds,
+            )
+        with self.assertRaisesRegex(SystemExit, "結束日期.*早於已收錄"):
+            build_data.validate_event_metadata_coverage(
+                {"測試盃": {"startDate": "2026-05-01", "endDate": "2026-05-02"}},
+                bounds,
+            )
+
+    def test_event_date_fallback_ignores_year_only_and_missing_dates(self):
+        bounds = build_data.known_event_date_bounds(
+            [{"competitionName": "測試盃", "matchDate": "2026"}],
+            [{"competitionName": "測試盃", "matchDate": ""}],
+        )
+        self.assertEqual(bounds, {})
+
+    def test_upcoming_schedule_fills_catalog_dates_without_overwriting_metadata(self):
+        metadata = {
+            "未來盃": {},
+            "官方較寬盃": {"startDate": "2026-12-04", "endDate": "2026-12-07"},
+        }
+        upcoming = [
+            {"name": "未來盃", "startDate": "2026-12-05", "endDate": "2026-12-06"},
+            {"name": "官方較寬盃", "startDate": "2026-12-05", "endDate": "2026-12-06"},
+        ]
+
+        build_data.apply_upcoming_event_dates(metadata, upcoming)
+
+        self.assertEqual(metadata["未來盃"]["startDate"], "2026-12-05")
+        self.assertEqual(metadata["未來盃"]["endDate"], "2026-12-06")
+        self.assertEqual(metadata["官方較寬盃"]["startDate"], "2026-12-04")
+        self.assertEqual(metadata["官方較寬盃"]["endDate"], "2026-12-07")
 
     def test_number_normalizes_numeric_values(self):
         self.assertEqual(build_data.number("12.0"), 12)
@@ -349,7 +432,7 @@ class BuildDataTests(unittest.TestCase):
     def test_csv_is_default_source(self):
         old = os.environ.pop("PUBLIC_DATA_SOURCE", None)
         try:
-            self.assertTrue(all(path.suffix.lower() == ".csv" for path in build_data.source_files()))
+            self.assertEqual(build_data.source_files(), [build_data.MASTER_DATA_PATH])
         finally:
             if old is not None:
                 os.environ["PUBLIC_DATA_SOURCE"] = old

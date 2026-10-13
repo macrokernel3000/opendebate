@@ -5,6 +5,7 @@ const test = require("node:test");
 
 const css = fs.readFileSync(path.join(__dirname, "..", "styles.css"), "utf8");
 const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
+const privacyHtml = fs.readFileSync(path.join(__dirname, "..", "privacy", "index.html"), "utf8");
 
 function token(name) {
   const match = css.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, "i"));
@@ -186,4 +187,9 @@ test("desktop and mobile home layouts each expose a primary heading", () => {
   assert.match(html, /<h1 id="mobileRecentTitle">/);
   assert.match(html, /<h1 id="timelineTitle">/);
   assert.match(css, /\.mobile-home-section\s+\.section-heading\s+h1[^}]*font-size:\s*18px/);
+});
+
+test("public footers do not advertise unfinished App support", () => {
+  assert.doesNotMatch(html, /<footer>[\s\S]*?App 支援[\s\S]*?<\/footer>/);
+  assert.doesNotMatch(privacyHtml, /<footer>[\s\S]*?App 支援[\s\S]*?<\/footer>/);
 });

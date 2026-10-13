@@ -23,11 +23,11 @@ if [[ -n "$1" ]]; then
     fi
     TARGET="$DIR/data/entity-registry.csv"
   else
-    [[ "$NAME" == public-data* ]] || NAME="public-data-${NAME}"
-    TARGET="$DIR/data/$NAME"
-    if [[ -e "$TARGET" ]]; then
-      TARGET="$DIR/data/${NAME:r}-$(date +%Y%m%d-%H%M%S).${NAME:e}"
-    fi
+    echo "賽事資料已整合成一份總表，不再直接拖入單一賽事檔。"
+    echo "請編輯 data/public-data-所有賽事.csv，再雙擊本更新程式。"
+    echo "按 Return 關閉。"
+    read
+    exit 1
   fi
   if ! cp "$1" "$TARGET"; then
     echo "無法複製資料檔。按 Return 關閉。"
@@ -38,6 +38,13 @@ if [[ -n "$1" ]]; then
 fi
 
 echo "正在檢查並更新公開網站資料..."
+if ! /usr/bin/python3 "$DIR/tools/build_data.py" --check --fail-on-warnings; then
+  echo ""
+  echo "預檢失敗，網站資料沒有被覆蓋。請依上方訊息修正總表。"
+  echo "按 Return 關閉。"
+  read
+  exit 1
+fi
 if ! /usr/bin/python3 "$DIR/tools/build_data.py"; then
   echo ""
   echo "更新失敗，原本的網站資料沒有被覆蓋。請依上方訊息修正資料檔。"

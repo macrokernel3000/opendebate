@@ -46,6 +46,11 @@ def normalize_output(path, content):
     if path == "data/ios/v1/catalog.json":
         payload = json.loads(content)
         payload.pop("generatedAt", None)
+        # The public search index is shipped atomically with the catalog and
+        # deliberately shares its build timestamp.  It must not make a
+        # timestamp-only rebuild look like a content change.
+        if isinstance(payload.get("publicIndex"), dict):
+            payload["publicIndex"].pop("generatedAt", None)
         return json.dumps(payload, ensure_ascii=False, sort_keys=True)
 
     if path == "data/ios/v1/manifest.json":

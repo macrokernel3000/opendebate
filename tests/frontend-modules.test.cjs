@@ -53,7 +53,7 @@ const events = [{
   dates: [record.matchDate],
   latestDate: record.matchDate,
   teamCount: 2,
-  metadata: { startDate: record.matchDate, endDate: record.matchDate },
+  metadata: { startDate: record.matchDate, endDate: record.matchDate, shortName: "2026 測試盃" },
 }];
 
 function loadFactory(filename, globalValues = {}) {
@@ -105,6 +105,19 @@ test("public data availability accepts a complete empty bundle and rejects missi
   assert.equal(malformedStore.records.length, 0);
   assert.equal(malformedStore.honors.length, 0);
   assert.equal(malformedStore.topics.length, 0);
+});
+
+test("explicit full-course honor level overrides an ambiguous original award label", () => {
+  const appSource = fs.readFileSync(path.join(root, "app.js"), "utf8");
+
+  assert.match(
+    appSource,
+    /function isSingleMatchBest\(honor\) \{\s*return !isFullCourseBest\(honor\)/,
+  );
+  assert.match(
+    appSource,
+    /function isSingleMatchExcellent\(honor\) \{\s*return !isFullCourseExcellent\(honor\)/,
+  );
 });
 
 test("future events stay outside the recorded catalog even when roster data already exists", () => {
@@ -281,6 +294,8 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /賽果與獎項待公開後收錄/);
   assert.doesNotMatch(target.innerHTML, /class="search-empty">目前顯示賽事公告資訊/);
   assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
+  assert.match(target.innerHTML, /class="event-short-name"/);
+  assert.match(target.innerHTML, /2026 測試盃/);
 
   pages.renderEvent("測試盃", target);
   assert.match(target.innerHTML, /測試高中/);
@@ -291,6 +306,7 @@ test("event pages render upcoming details and recorded match results", () => {
   assert.match(target.innerHTML, /比賽結果/);
   assert.match(target.innerHTML, /賽事代號 C2601/);
   assert.match(target.innerHTML, /<h1>測試盃<\/h1>/);
+  assert.match(target.innerHTML, /class="event-short-name"/);
   const tiedRecord = { ...record, scores: { affirmative: 1, negative: 1 }, winner: "正方勝" };
   const originalRecords = events[0].records;
   events[0] = { ...events[0], records: [tiedRecord] };
@@ -334,6 +350,25 @@ test("event summaries do not show unknown teams or matches as zero and avoid rep
   assert.doesNotMatch(target.innerHTML, /<span class="count-chip">0 場<\/span>/);
   assert.match(target.innerHTML, /<span class="count-chip">1 榮譽<\/span>/);
   assert.match(target.innerHTML, /尚無公開戰果/);
+});
+
+test("event summaries disclose when the event range comes from recorded rows", () => {
+  const event = {
+    ...events[0],
+    metadata: {
+      startDate: "2026-08-01",
+      endDate: "2026-08-02",
+      dateBasisNote: "日期依已收錄戰績／榮譽整理",
+    },
+  };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [event];
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderEvent(event.name, target);
+
+  assert.match(target.innerHTML, /class="event-date-basis">日期依已收錄戰績／榮譽整理<\/small>/);
 });
 
 test("event detail pages escape untrusted names, notes, topics, and roster text", () => {
@@ -728,7 +763,7 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
     mobileHonorTitle: node(),
   };
   const upcoming = [
-    { name: "未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" },
+    { name: "未來盃", shortName: "2099 未來盃", startDate: "2099-01-01", endDate: "2099-01-02", location: "測試會場" },
     { name: "已過期盃賽", startDate: "2000-11-01", endDate: "2000-11-02", location: "舊會場" },
   ];
   const activities = [
@@ -761,12 +796,14 @@ test("home pages render summaries, timeline and upcoming events, and keep leader
   pages.renderHome();
   assert.match(els.statsBand.innerHTML, /公開戰果.*1/);
   assert.equal(els.siteIntroductionTitle.textContent, "首頁測試標題");
-  assert.match(els.eventTimeline.innerHTML, /未來盃/);
-  assert.match(els.eventTimeline.innerHTML, /測試盃/);
+  assert.match(els.eventTimeline.innerHTML, /2099 未來盃/);
+  assert.match(els.eventTimeline.innerHTML, /2026 測試盃/);
+  assert.match(els.recentEvents.innerHTML, /2026 測試盃/);
   assert.match(els.recentEvents.innerHTML, /冠軍/);
   assert.match(els.recentEvents.innerHTML, /逐場賽果未收錄/);
   assert.doesNotMatch(els.recentEvents.innerHTML, /0 隊|0 場/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /測試會場/);
+  assert.match(els.mobileUpcomingEvents.innerHTML, /2099 未來盃/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /mobile-upcoming-card--activity/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /data-activity-id="activity-1"/);
   assert.match(els.mobileUpcomingEvents.innerHTML, /活動會場/);

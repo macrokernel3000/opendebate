@@ -19,11 +19,26 @@ class IOSPublicFeedTests(unittest.TestCase):
                 "teams": {"affirmative": "甲校", "negative": "乙校"},
                 "scores": {"affirmative": 2, "negative": 1},
             }],
-            "honors": [{"competitionName": "測試盃"}],
-            "topics": [],
+            "honors": [{
+                "id": "honor-1", "competitionName": "測試盃", "honorName": "冠軍",
+                "recipient": "甲校", "team": "", "honorType": "team", "matchDate": "2026-10-10",
+                "note": "公開成績",
+            }],
+            "topics": [{
+                "topicId": "topic-1", "competitionName": "測試盃",
+                "topic": "我國應採行測試制度", "explanation": "測試說明",
+            }],
             "eventRosters": {},
-            "eventMetadata": {"測試盃": {"competitionCode": "C2601", "location": "測試地點", "teamCount": 2}},
-            "competitionRegistry": [{"code": "C2601", "name": "測試盃", "year": "2026", "status": "results-recorded"}],
+            "eventMetadata": {"測試盃": {
+                "competitionCode": "C2601", "shortName": "2026 測試盃", "location": "測試地點", "teamCount": 2,
+                "organizer": "測試主辦", "executionUnit": "測試執行",
+                "note": "測試備註", "awardSelectionCriteria": "測試標準", "ageRestriction": True,
+            }},
+            "competitionRegistry": [{"code": "C2601", "name": "測試盃", "shortName": "2026 測試盃", "year": "2026", "status": "results-recorded"}],
+            "entities": [
+                {"code": "s001", "type": "s", "name": "甲校", "aliases": "甲中|測試甲校"},
+                {"code": "s002", "type": "s", "name": "乙校", "aliases": ""},
+            ],
         }
 
     def test_builds_stable_full_snapshot(self):
@@ -34,8 +49,62 @@ class IOSPublicFeedTests(unittest.TestCase):
 
         self.assertEqual(first["datasetVersion"], second["datasetVersion"])
         self.assertEqual(first["events"][0]["id"], "C2601")
+        self.assertEqual(first["events"][0]["shortName"], "2026 測試盃")
         self.assertEqual(first["events"][0]["recordCount"], 1)
+        self.assertEqual(first["events"][0]["organizer"], "測試主辦")
+        self.assertEqual(first["events"][0]["topics"][0]["title"], "我國應採行測試制度")
+        self.assertEqual(first["events"][0]["honors"][0]["recipient"], "甲校")
+        self.assertEqual(first["events"][0]["teams"], ["乙校", "甲校"])
         self.assertEqual(first["matches"][0]["period"], "2")
+        self.assertEqual(first["publicIndex"]["entities"][0]["aliases"], ["甲中", "測試甲校"])
+        self.assertEqual(first["publicIndex"]["records"][0]["affirmativeEntityID"], "")
+        self.assertRegex(first["publicIndex"]["sourceSHA256"], r"^[0-9a-f]{64}$")
+
+    def test_metadata_only_future_event_enters_catalog_with_schedule_dates(self):
+        sample = self.sample()
+        sample["eventMetadata"]["未來盃"] = {
+            "competitionCode": "C2602",
+            "startDate": "2026-12-05",
+            "endDate": "2026-12-06",
+        }
+        sample["competitionRegistry"].append({
+            "code": "C2602", "name": "未來盃", "shortName": "2026 未來盃", "year": "2026", "status": "upcoming",
+        })
+
+        catalog = ios_public_feed.build_catalog(sample)
+        future = next(event for event in catalog["events"] if event["name"] == "未來盃")
+
+        self.assertEqual(future["startDate"], "2026-12-05")
+        self.assertEqual(future["endDate"], "2026-12-06")
+        self.assertEqual(future["recordCount"], 0)
+        self.assertEqual(future["honorCount"], 0)
+
+    def test_omits_incomplete_topic_and_honor_rows(self):
+        sample = self.sample()
+        sample["topics"].append({"competitionName": "測試盃", "topic": ""})
+        sample["honors"].append({"competitionName": "測試盃", "honorName": "亞軍", "recipient": ""})
+        event = ios_public_feed.build_catalog(sample)["events"][0]
+        self.assertEqual(len(event["topics"]), 1)
+        self.assertEqual(len(event["honors"]), 1)
+
+    def test_app_text_removes_source_urls_without_erasing_context(self):
+        self.assertEqual(
+            ios_public_feed.app_text("資料來源（https://example.com/source）；其餘說明"),
+            "資料來源；其餘說明",
+        )
+
+    def test_public_index_includes_people_from_honors_and_rosters(self):
+        sample = self.sample()
+        sample["honors"][0].update({"honorType": "player", "recipient": "王小明", "team": "甲校"})
+        sample["eventRosters"] = {"測試盃": [{
+            "team": "甲校", "players": ["王小明", "李小華"], "leaders": ["陳老師"],
+        }]}
+        people = ios_public_feed.build_catalog(sample)["publicIndex"]["people"]
+        by_name = {person["name"]: person for person in people}
+        self.assertEqual(by_name["王小明"]["roles"], ["選手"])
+        self.assertEqual(by_name["王小明"]["honorIDs"], ["honor-1"])
+        self.assertEqual(by_name["王小明"]["appearances"][0]["competitionName"], "測試盃")
+        self.assertEqual(by_name["陳老師"]["roles"], ["領隊"])
 
     def test_rejects_event_without_public_code(self):
         sample = self.sample()
@@ -55,7 +124,7 @@ class IOSPublicFeedTests(unittest.TestCase):
         original = ios_public_feed.build_catalog(self.sample())
         updated = self.sample()
         updated["competitionRegistry"].append({
-            "code": "C2602", "name": "新增盃", "year": "2026", "status": "results-recorded"
+            "code": "C2602", "name": "新增盃", "shortName": "2026 新增盃", "year": "2026", "status": "results-recorded"
         })
         updated["records"].append({
             "id": "match-2", "competitionName": "新增盃", "matchDate": "2026-10-11",

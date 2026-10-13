@@ -56,6 +56,7 @@
       const events = getEvents();
       const records = getRecords();
       const renderCard = (event, compact = false) => {
+        const displayName = event.metadata?.shortName || event.name;
         const topicPreview = event.topics.slice(0, 2).map((item) => `<p class="event-card-topic"><span>辯題：</span>${escapeHtml(item.topic)}</p>`).join("");
         const resultCounts = event.records.length
           ? `<span>${event.teamCount} 隊</span><span>${event.records.length} 場</span>`
@@ -65,7 +66,7 @@
           <button class="event-card" type="button" data-event-name="${escapeHtml(event.name)}">
             ${compact ? `<span class="event-card-time"><i class="event-time-point" aria-hidden="true"></i><span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span></span>` : `<span class="event-date">${escapeHtml(formatDate(event.latestDate))}</span>`}
             <div class="event-card-body">
-              <h3>${escapeHtml(event.name)}${event.name.startsWith("第一屆幽墨盃") ? ' <span aria-hidden="true">🤡</span>' : ""}</h3>
+              <h3>${escapeHtml(displayName)}${event.name.startsWith("第一屆幽墨盃") ? ' <span aria-hidden="true">🤡</span>' : ""}</h3>
               ${topicPreview ? `<div class="event-card-topics">${topicPreview}</div>` : ""}
             </div>
             ${renderEventPodium(event)}
@@ -100,12 +101,14 @@
       };
       els.mobileUpcomingEvents.innerHTML = upcoming.map((event) => {
         const isActivity = event.itemType === "activity";
+        const storedEvent = isActivity ? null : getEvents().find((item) => item.name === event.name);
+        const displayName = isActivity ? event.name : (storedEvent?.metadata?.shortName || event.shortName || event.name);
         const timeLabel = isActivity && event.startTime ? ` ${event.startTime}${event.endTime ? `–${event.endTime}` : ""}` : "";
         return `
         <button type="button" class="mobile-upcoming-card${isActivity ? " mobile-upcoming-card--activity" : ""}" ${isActivity ? `data-activity-id="${escapeHtml(event.id)}" aria-label="開啟活動：${escapeHtml(event.name)}"` : `data-event-name="${escapeHtml(event.name)}" aria-label="開啟${escapeHtml(event.name)}賽事頁面"`}>
           ${isActivity ? '<span class="mobile-upcoming-kind">活動</span>' : ""}
           <span class="mobile-upcoming-date">${escapeHtml(dateLabel(event) + timeLabel)}</span>
-          <h3>${escapeHtml(event.name)}</h3>
+          <h3>${escapeHtml(displayName)}</h3>
           <span class="mobile-upcoming-location"><b>地點</b>${escapeHtml(event.location || "未提供")}</span>
         </button>`;
       }).join("");
@@ -147,20 +150,23 @@
         ...events.map((event) => ({ type: "recorded", event, sortDate: event.latestDate || "" })),
       ].sort((a, b) => b.sortDate.localeCompare(a.sortDate) || a.event.name.localeCompare(b.event.name, "zh-Hant"));
       els.eventTimeline.innerHTML = timelineItems.map(({ type, event }) => {
+        const displayName = type === "upcoming"
+          ? (events.find((item) => item.name === event.name)?.metadata?.shortName || event.shortName || event.name)
+          : (event.metadata?.shortName || event.name);
         if (type === "upcoming") {
           return `
             <button class="timeline-node timeline-upcoming-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="開啟賽事：${escapeHtml(event.name)}，${escapeHtml(dateRange(event))}，即將舉行">
               <span class="timeline-date">${escapeHtml(dateRange(event))}</span>
               <span class="timeline-dot" aria-hidden="true">✦</span>
               <span class="timeline-upcoming-label">即將舉行</span>
-              <span class="timeline-name">${escapeHtml(event.name)}</span>
+              <span class="timeline-name">${escapeHtml(displayName)}</span>
             </button>`;
         }
         return `
           <button class="timeline-node" type="button" data-event-name="${escapeHtml(event.name)}" aria-label="${escapeHtml(`${event.name}，${formatDate(event.latestDate)}，冠軍 ${eventChampion(event)}`)}">
             <span class="timeline-date">${escapeHtml(formatDate(event.latestDate))}</span>
             <span class="timeline-dot" aria-hidden="true"></span>
-            <span class="timeline-name">${escapeHtml(event.name)}</span>
+            <span class="timeline-name">${escapeHtml(displayName)}</span>
             <span class="timeline-tooltip" role="tooltip"><small>冠軍</small><strong>${escapeHtml(eventChampion(event))}</strong><em>點擊查看完整賽果</em></span>
           </button>`;
       }).join("");

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T17:32:49",
+  "generatedAt": "2026-10-13T17:37:46",
   "recentYears": [
     "2025",
     "2026"
@@ -9,6 +9,7 @@
     {
       "id": "C2627",
       "name": "2026年氣候盃全國高中職辯論比賽",
+      "shortName": "2026 氣候盃",
       "date": "2026-10-04",
       "recordCount": 14,
       "podium": [
@@ -37,6 +38,7 @@
     {
       "id": "C2619",
       "name": "第二十屆宮燈盃辯論公開賽青少年組",
+      "shortName": "2026 宮燈盃青少年組",
       "date": "2026-09-28",
       "recordCount": 23,
       "podium": [
@@ -65,6 +67,7 @@
     {
       "id": "C2618",
       "name": "2026西灣盃全國高中職辯論賽",
+      "shortName": "2026 西灣盃",
       "date": "2026-09-13",
       "recordCount": 24,
       "podium": [
@@ -93,6 +96,7 @@
     {
       "id": "C2628",
       "name": "2026桃園青年盃華語辯論賽（學青組）",
+      "shortName": "2026 桃青盃",
       "date": "2026-08-30",
       "recordCount": 11,
       "podium": [
@@ -116,6 +120,7 @@
     {
       "id": "C2626",
       "name": "第十七屆明京盃全國高中職辯論比賽",
+      "shortName": "2026 明京盃",
       "date": "2026-08-30",
       "recordCount": 45,
       "podium": [
@@ -144,6 +149,7 @@
     {
       "id": "C2616",
       "name": "2026司改盃全國高中職辯論比賽",
+      "shortName": "2026 司改盃",
       "date": "2026-08-23",
       "recordCount": 30,
       "podium": [
@@ -172,6 +178,7 @@
     {
       "id": "C2615",
       "name": "第二十一屆辯革盃全國高中辯論比賽",
+      "shortName": "2026 辯革盃",
       "date": "2026-08-15",
       "recordCount": 19,
       "podium": [
@@ -200,6 +207,7 @@
     {
       "id": "C2614",
       "name": "育南盃中文教育辯論賽",
+      "shortName": "2026 育南盃",
       "date": "2026-08-02",
       "recordCount": 22,
       "podium": [
@@ -231,6 +239,7 @@
       "id": "activity:cdpa-jiaofeng-2026-10-17",
       "eventId": null,
       "name": "交鋒：專業對話與公民思辨－政黨違憲解散議題",
+      "shortName": "交鋒：專業對話與公民思辨－政黨違憲解散議題",
       "startDate": "2026-10-17",
       "endDate": "2026-10-17",
       "location": "北科集思會議中心 3F 感恩廳",
@@ -245,6 +254,7 @@
       "id": "tournament:lunheng-2",
       "eventId": "C2631",
       "name": "第二屆論衡盃全國高中職辯論比賽",
+      "shortName": "2026 論衡盃",
       "startDate": "2026-10-24",
       "endDate": "2026-10-25",
       "location": "國立新竹科學園區實驗高級中等學校",
@@ -271,6 +281,7 @@
       "id": "activity:youth-critical-thinking-lecture-2026",
       "eventId": null,
       "name": "2026 全國青年思辨培育講堂",
+      "shortName": "2026 全國青年思辨培育講堂",
       "startDate": "2026-10-26",
       "endDate": "2026-12-19",
       "location": "國立臺北大學民生校區",
@@ -409,6 +420,7 @@
       "id": "tournament:north-rookie-20",
       "eventId": "C2622",
       "name": "第二十屆北區聯合新生盃辯論比賽",
+      "shortName": "2026 北區聯合新生盃",
       "startDate": "2026-10-31",
       "endDate": "2026-11-01",
       "location": "臺北市立景美女子高級中學",
@@ -493,6 +505,7 @@
       "id": "activity:gongdeng-solo-2026-11-01",
       "eventId": null,
       "name": "第二屆宮燈盃單挑賽（黑白辯士）",
+      "shortName": "第二屆宮燈盃單挑賽（黑白辯士）",
       "startDate": "2026-11-01",
       "endDate": "2026-11-01",
       "location": "犇亞商務暨會議中心",
@@ -504,6 +517,7 @@
       "id": "activity:gongdeng-solo-2026-11-07",
       "eventId": null,
       "name": "第二屆宮燈盃單挑賽（黑白辯士）",
+      "shortName": "第二屆宮燈盃單挑賽（黑白辯士）",
       "startDate": "2026-11-07",
       "endDate": "2026-11-07",
       "location": "犇亞商務暨會議中心",
@@ -515,6 +529,7 @@
       "id": "tournament:nuclear-referendum-2026",
       "eventId": "C2620",
       "name": "2026核能公投盃全國高中職辯論比賽",
+      "shortName": "2026 核能公投盃",
       "startDate": "2026-11-07",
       "endDate": "2026-11-08",
       "location": "國立成功大學",
@@ -526,6 +541,7 @@
       "id": "activity:gongdeng-solo-2026-11-08",
       "eventId": null,
       "name": "第二屆宮燈盃單挑賽（黑白辯士）",
+      "shortName": "第二屆宮燈盃單挑賽（黑白辯士）",
       "startDate": "2026-11-08",
       "endDate": "2026-11-08",
       "location": "臺灣當代文化實驗場（C-LAB）共享吧",
@@ -537,6 +553,7 @@
       "id": "tournament:ruide-18",
       "eventId": "C2624",
       "name": "第十八屆叡德盃全國高中職辯論比賽",
+      "shortName": "2026 叡德盃",
       "startDate": "2026-11-14",
       "endDate": "2026-11-15",
       "location": "臺中市私立明道中學",
@@ -549,6 +566,7 @@
       "id": "tournament:huisun-8",
       "eventId": "C2623",
       "name": "第八屆惠蓀盃全國高中職辯論比賽",
+      "shortName": "2026 惠蓀盃",
       "startDate": "2026-12-05",
       "endDate": "2026-12-06",
       "location": "國立中興大學 雲平樓",
@@ -560,6 +578,7 @@
       "id": "tournament:university-law-debate-open-2026",
       "eventId": "C2632",
       "name": "2026 全國大專院校法律系辯論公開賽",
+      "shortName": "2026 大法盃",
       "startDate": "2026-12-05",
       "endDate": "2026-12-06",
       "location": "國立政治大學（臺北市文山區指南路二段64號）",
@@ -612,6 +631,7 @@
       "id": "tournament:coconut-wind-13",
       "eventId": "C2617",
       "name": "第十三屆椰風盃全國高中職辯論比賽",
+      "shortName": "2026 椰風盃",
       "startDate": "2026-12-26",
       "endDate": "2026-12-27",
       "location": "國立臺南女子高級中學（臺南市中西區大埔街97號）",
@@ -622,6 +642,7 @@
       "id": "tournament:phoenix-29",
       "eventId": "C2621",
       "name": "第二十九屆鳳凰盃全國高中職辯論比賽",
+      "shortName": "2026 鳳凰盃",
       "startDate": "2026-12-26",
       "endDate": "2026-12-27",
       "location": "國立臺南第二高級中學仁愛樓",
@@ -3891,7 +3912,7 @@
               "eventName": "第十九屆宮燈盃辯論公開賽青少年組",
               "name": "單場最佳辯士",
               "recipient": "黃耕鴻",
-              "date": "2025-08-09"
+              "date": "2025-08-03"
             }
           ]
         },
@@ -4078,8 +4099,8 @@
         {
           "id": "s023",
           "name": "南山高中",
-          "count": 12,
-          "gold": 6,
+          "count": 13,
+          "gold": 7,
           "silver": 2,
           "bronze": 3,
           "white": 1,
@@ -4168,6 +4189,14 @@
               "date": "2024-06-03"
             },
             {
+              "id": "honor-9f86d67dee8c",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "冠軍",
+              "recipient": "南山高中",
+              "date": "2023-12-17"
+            },
+            {
               "id": "honor-9964ad713beb",
               "eventId": "C2409",
               "eventName": "第一屆幽墨盃全國高中職辯論比賽",
@@ -4181,6 +4210,100 @@
               "eventName": "第十二屆風雩盃全國高中職辯論錦標賽",
               "name": "冠軍",
               "recipient": "南山高中",
+              "date": ""
+            }
+          ]
+        },
+        {
+          "id": "s047",
+          "name": "師大附中",
+          "count": 10,
+          "gold": 0,
+          "silver": 3,
+          "bronze": 5,
+          "white": 2,
+          "fullBest": 0,
+          "fullExcellent": 0,
+          "other": 0,
+          "awards": [
+            {
+              "id": "honor-ab45b511176b",
+              "eventId": "C2618",
+              "eventName": "2026西灣盃全國高中職辯論賽",
+              "name": "殿軍",
+              "recipient": "師大附中",
+              "date": "2026-09-13"
+            },
+            {
+              "id": "honor-24280231520a",
+              "eventId": "C2503",
+              "eventName": "第七屆惠蓀盃全國高中職辯論比賽",
+              "name": "季軍",
+              "recipient": "師大附中",
+              "date": "2025-12-07"
+            },
+            {
+              "id": "honor-599c403521cb",
+              "eventId": "C2508",
+              "eventName": "第十六屆明京盃全國高中職辯論比賽",
+              "name": "季軍",
+              "recipient": "師大附中",
+              "date": "2025-08-24"
+            },
+            {
+              "id": "honor-26bd6a983034",
+              "eventId": "C2406",
+              "eventName": "第六屆台北市政願景盃辯論比賽",
+              "name": "季軍",
+              "recipient": "師大附中",
+              "date": "2024-12-15"
+            },
+            {
+              "id": "honor-124350644b01",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "亞軍",
+              "recipient": "師大附中",
+              "date": "2023-12-17"
+            },
+            {
+              "id": "honor-eefa85ba63f3",
+              "eventId": "C1301",
+              "eventName": "第二屆風雩盃全國高中職辯論錦標賽",
+              "name": "季軍",
+              "recipient": "師大附中",
+              "date": ""
+            },
+            {
+              "id": "honor-dfde06dffbd5",
+              "eventId": "C2408",
+              "eventName": "第十三屆風雩盃全國高中職辯論錦標賽",
+              "name": "亞軍",
+              "recipient": "師大附中",
+              "date": ""
+            },
+            {
+              "id": "honor-942219104aca",
+              "eventId": "C1601",
+              "eventName": "第五屆風雩盃全國高中職辯論錦標賽",
+              "name": "季軍",
+              "recipient": "師大附中",
+              "date": ""
+            },
+            {
+              "id": "honor-86b075aaca20",
+              "eventId": "C1401",
+              "eventName": "第三屆風雩盃全國高中職辯論錦標賽",
+              "name": "殿軍",
+              "recipient": "師大附中",
+              "date": ""
+            },
+            {
+              "id": "honor-785b640cdfed",
+              "eventId": "C1801",
+              "eventName": "第七屆風雩盃全國高中職辯論錦標賽",
+              "name": "亞軍",
+              "recipient": "師大附中",
               "date": ""
             }
           ]
@@ -4275,92 +4398,6 @@
               "eventName": "第三屆風雩盃全國高中職辯論錦標賽",
               "name": "冠軍",
               "recipient": "延平中學",
-              "date": ""
-            }
-          ]
-        },
-        {
-          "id": "s047",
-          "name": "師大附中",
-          "count": 9,
-          "gold": 0,
-          "silver": 2,
-          "bronze": 5,
-          "white": 2,
-          "fullBest": 0,
-          "fullExcellent": 0,
-          "other": 0,
-          "awards": [
-            {
-              "id": "honor-ab45b511176b",
-              "eventId": "C2618",
-              "eventName": "2026西灣盃全國高中職辯論賽",
-              "name": "殿軍",
-              "recipient": "師大附中",
-              "date": "2026-09-13"
-            },
-            {
-              "id": "honor-24280231520a",
-              "eventId": "C2503",
-              "eventName": "第七屆惠蓀盃全國高中職辯論比賽",
-              "name": "季軍",
-              "recipient": "師大附中",
-              "date": "2025-12-07"
-            },
-            {
-              "id": "honor-599c403521cb",
-              "eventId": "C2508",
-              "eventName": "第十六屆明京盃全國高中職辯論比賽",
-              "name": "季軍",
-              "recipient": "師大附中",
-              "date": "2025-08-24"
-            },
-            {
-              "id": "honor-26bd6a983034",
-              "eventId": "C2406",
-              "eventName": "第六屆台北市政願景盃辯論比賽",
-              "name": "季軍",
-              "recipient": "師大附中",
-              "date": "2024-12-15"
-            },
-            {
-              "id": "honor-eefa85ba63f3",
-              "eventId": "C1301",
-              "eventName": "第二屆風雩盃全國高中職辯論錦標賽",
-              "name": "季軍",
-              "recipient": "師大附中",
-              "date": ""
-            },
-            {
-              "id": "honor-dfde06dffbd5",
-              "eventId": "C2408",
-              "eventName": "第十三屆風雩盃全國高中職辯論錦標賽",
-              "name": "亞軍",
-              "recipient": "師大附中",
-              "date": ""
-            },
-            {
-              "id": "honor-942219104aca",
-              "eventId": "C1601",
-              "eventName": "第五屆風雩盃全國高中職辯論錦標賽",
-              "name": "季軍",
-              "recipient": "師大附中",
-              "date": ""
-            },
-            {
-              "id": "honor-86b075aaca20",
-              "eventId": "C1401",
-              "eventName": "第三屆風雩盃全國高中職辯論錦標賽",
-              "name": "殿軍",
-              "recipient": "師大附中",
-              "date": ""
-            },
-            {
-              "id": "honor-785b640cdfed",
-              "eventId": "C1801",
-              "eventName": "第七屆風雩盃全國高中職辯論錦標賽",
-              "name": "亞軍",
-              "recipient": "師大附中",
               "date": ""
             }
           ]
@@ -5246,6 +5283,44 @@
           ]
         },
         {
+          "id": "s044",
+          "name": "市立大同",
+          "count": 3,
+          "gold": 1,
+          "silver": 1,
+          "bronze": 1,
+          "white": 0,
+          "fullBest": 0,
+          "fullExcellent": 0,
+          "other": 0,
+          "awards": [
+            {
+              "id": "honor-4e3c3315933e",
+              "eventId": "C2626",
+              "eventName": "第十七屆明京盃全國高中職辯論比賽",
+              "name": "亞軍",
+              "recipient": "市立大同",
+              "date": "2026-08-30"
+            },
+            {
+              "id": "honor-ab6917ed4ae4",
+              "eventId": "C2512",
+              "eventName": "第二十二屆延平盃全國高中職辯論賽",
+              "name": "冠軍",
+              "recipient": "市立大同",
+              "date": "2025-03-01"
+            },
+            {
+              "id": "honor-b09b975be528",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "季軍",
+              "recipient": "市立大同高中",
+              "date": "2023-12-17"
+            }
+          ]
+        },
+        {
           "id": "s080",
           "name": "明倫高中",
           "count": 3,
@@ -5317,6 +5392,44 @@
               "eventName": "第四屆風雩盃全國高中職辯論錦標賽",
               "name": "殿軍",
               "recipient": "松山高中",
+              "date": ""
+            }
+          ]
+        },
+        {
+          "id": "s091",
+          "name": "板橋高中",
+          "count": 3,
+          "gold": 0,
+          "silver": 0,
+          "bronze": 3,
+          "white": 0,
+          "fullBest": 0,
+          "fullExcellent": 0,
+          "other": 0,
+          "awards": [
+            {
+              "id": "honor-ce162de0c39f",
+              "eventId": "C2603",
+              "eventName": "火雞肉飯盃全國高中職辯論比賽",
+              "name": "季軍",
+              "recipient": "板橋高中",
+              "date": "2026-05-24"
+            },
+            {
+              "id": "honor-97fa1ee648f4",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "季軍",
+              "recipient": "板橋高中",
+              "date": "2023-12-17"
+            },
+            {
+              "id": "honor-ff126c630c68",
+              "eventId": "C2301",
+              "eventName": "第十二屆風雩盃全國高中職辯論錦標賽",
+              "name": "季軍",
+              "recipient": "板橋高中",
               "date": ""
             }
           ]
@@ -5462,36 +5575,6 @@
               "name": "亞軍",
               "recipient": "前鎮高中",
               "date": ""
-            }
-          ]
-        },
-        {
-          "id": "s044",
-          "name": "市立大同",
-          "count": 2,
-          "gold": 1,
-          "silver": 1,
-          "bronze": 0,
-          "white": 0,
-          "fullBest": 0,
-          "fullExcellent": 0,
-          "other": 0,
-          "awards": [
-            {
-              "id": "honor-4e3c3315933e",
-              "eventId": "C2626",
-              "eventName": "第十七屆明京盃全國高中職辯論比賽",
-              "name": "亞軍",
-              "recipient": "市立大同",
-              "date": "2026-08-30"
-            },
-            {
-              "id": "honor-ab6917ed4ae4",
-              "eventId": "C2512",
-              "eventName": "第二十二屆延平盃全國高中職辯論賽",
-              "name": "冠軍",
-              "recipient": "市立大同",
-              "date": "2025-03-01"
             }
           ]
         },
@@ -5672,36 +5755,6 @@
               "name": "亞軍",
               "recipient": "曉明女中",
               "date": "2025-03-01"
-            }
-          ]
-        },
-        {
-          "id": "s091",
-          "name": "板橋高中",
-          "count": 2,
-          "gold": 0,
-          "silver": 0,
-          "bronze": 2,
-          "white": 0,
-          "fullBest": 0,
-          "fullExcellent": 0,
-          "other": 0,
-          "awards": [
-            {
-              "id": "honor-ce162de0c39f",
-              "eventId": "C2603",
-              "eventName": "火雞肉飯盃全國高中職辯論比賽",
-              "name": "季軍",
-              "recipient": "板橋高中",
-              "date": "2026-05-24"
-            },
-            {
-              "id": "honor-ff126c630c68",
-              "eventId": "C2301",
-              "eventName": "第十二屆風雩盃全國高中職辯論錦標賽",
-              "name": "季軍",
-              "recipient": "板橋高中",
-              "date": ""
             }
           ]
         },
@@ -8020,6 +8073,60 @@
           ]
         },
         {
+          "id": "s023",
+          "name": "南山高中",
+          "count": 5,
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0,
+          "white": 0,
+          "fullBest": 0,
+          "fullExcellent": 0,
+          "other": 5,
+          "awards": [
+            {
+              "id": "honor-c48ef8c14b0f",
+              "eventId": "C2619",
+              "eventName": "第二十屆宮燈盃辯論公開賽青少年組",
+              "name": "單場最佳辯士",
+              "recipient": "于潤萱",
+              "date": "2026-09-26"
+            },
+            {
+              "id": "honor-4f3fcf3f5340",
+              "eventId": "C2405",
+              "eventName": "第十五屆明京盃全國高中職辯論比賽",
+              "name": "榮辱與共",
+              "recipient": "南山高中",
+              "date": "2024-08-25"
+            },
+            {
+              "id": "honor-fa3ce41baad8",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "最佳辯士",
+              "recipient": "王文杉",
+              "date": "2023-12-17"
+            },
+            {
+              "id": "honor-8476e610b308",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "最佳辯士",
+              "recipient": "張曦之",
+              "date": "2023-12-17"
+            },
+            {
+              "id": "honor-bd280aa260a6",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "您辛苦了",
+              "recipient": "南山高中",
+              "date": ""
+            }
+          ]
+        },
+        {
           "id": "s122",
           "name": "臺中女中",
           "count": 5,
@@ -8074,54 +8181,16 @@
           ]
         },
         {
-          "id": "s023",
-          "name": "南山高中",
-          "count": 3,
-          "gold": 0,
-          "silver": 0,
-          "bronze": 0,
-          "white": 0,
-          "fullBest": 0,
-          "fullExcellent": 0,
-          "other": 3,
-          "awards": [
-            {
-              "id": "honor-c48ef8c14b0f",
-              "eventId": "C2619",
-              "eventName": "第二十屆宮燈盃辯論公開賽青少年組",
-              "name": "單場最佳辯士",
-              "recipient": "于潤萱",
-              "date": "2026-09-26"
-            },
-            {
-              "id": "honor-4f3fcf3f5340",
-              "eventId": "C2405",
-              "eventName": "第十五屆明京盃全國高中職辯論比賽",
-              "name": "榮辱與共",
-              "recipient": "南山高中",
-              "date": "2024-08-25"
-            },
-            {
-              "id": "honor-bd280aa260a6",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "您辛苦了",
-              "recipient": "南山高中",
-              "date": ""
-            }
-          ]
-        },
-        {
           "id": "s044",
           "name": "市立大同",
-          "count": 3,
+          "count": 4,
           "gold": 0,
           "silver": 0,
           "bronze": 0,
           "white": 0,
           "fullBest": 0,
           "fullExcellent": 0,
-          "other": 3,
+          "other": 4,
           "awards": [
             {
               "id": "honor-a5d7881bd49e",
@@ -8146,6 +8215,14 @@
               "name": "單場最佳辯士",
               "recipient": "邵聖光",
               "date": "2026-08-01"
+            },
+            {
+              "id": "honor-2547507651de",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "最佳辯士",
+              "recipient": "蔡喬羽",
+              "date": "2023-12-17"
             }
           ]
         },
@@ -8383,7 +8460,7 @@
               "eventName": "第十九屆宮燈盃辯論公開賽青少年組",
               "name": "單場最佳辯士",
               "recipient": "黃耕鴻",
-              "date": "2025-08-09"
+              "date": "2025-08-03"
             }
           ]
         },
@@ -8494,6 +8571,28 @@
               "name": "縱谷之星",
               "recipient": "賴宥辰",
               "date": "2026-04-12"
+            }
+          ]
+        },
+        {
+          "id": "s091",
+          "name": "板橋高中",
+          "count": 1,
+          "gold": 0,
+          "silver": 0,
+          "bronze": 0,
+          "white": 0,
+          "fullBest": 0,
+          "fullExcellent": 0,
+          "other": 1,
+          "awards": [
+            {
+              "id": "honor-d905e653c79f",
+              "eventId": "C2302",
+              "eventName": "第二屆鳶飛盃高中職辯論賽",
+              "name": "最佳辯士",
+              "recipient": "黃宜鈴",
+              "date": "2023-12-17"
             }
           ]
         },
