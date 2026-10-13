@@ -35,6 +35,9 @@
 - **晉級不列公開榮譽**：公開榮譽只登錄主辦方頒發或公告的獎項；晉級四強、八強或其他階段都屬賽程進度，不得建立「晉級」或「特殊晉級」榮譽。必要的循環比序／特殊判定依據可寫在相關戰績備註中，不計入榮譽。
 - **名次與個人辯士獎優先**：冠軍、亞軍、季軍（含並列）及殿軍依公告如實列出；辯士獎依公告人數判讀，整場賽事只有一至四位獲獎者時列「全程最佳辯士」，有逐場獲獎紀錄才列「單場最佳辯士」，並保留每位得獎者姓名與所屬隊伍。
 - **建置前最後複核**：確認沒有把一般晉級誤列獎項，沒有省略同名分組或特殊判定，簡章名額不會進入前台，推定欄位有來源依據；再重建公開資料並檢查差異。
+- **公開資料發布閘門不可省略**：任何電腦或 AI 修改來源 CSV、metadata、roster、名冊、建置器或公開頁後，必須依序執行：`python3 tools/build_data.py --check --fail-on-warnings`、`python3 tools/check_generated.py --base-ref HEAD`、`node --test tests/*.test.cjs`、`python3 -m unittest discover -s tests -v`。Windows PowerShell 可把 `python3` 改成 `python`；命令的順序與內容不變。`check_generated.py` 會先自行重建生成檔，不能用 `--skip-rebuild` 規避，也不能只看尚未重建前的舊產物是否與 HEAD 相同。
+- **生成檔不得手工合併**：跨電腦整合時先合併來源檔與建置程式，再於合併後的最終工作樹重新執行上述發布閘門；`data/public-data.js`、`data/ios/v1/*.json`、`index.html`、`calendar.ics` 等生成檔一律以最終來源重建，不可沿用其中一台電腦的舊生成結果或手動挑衝突。提交後須再跑一次 `python3 tools/check_generated.py --base-ref HEAD`，確認 HEAD 與重建結果一致才可推送。
+- **兩條 CI 都成功才算發布完成**：GitHub Pages 成功只表示檔案已部署，不代表資料一致。推送後必須等待同一 SHA 的 `Check public data` 與 `pages build and deployment` 都成功，再從公開網址讀回數量與關鍵資料。任一檢查失敗時只能說「頁面暫時可見、發布驗收未完成」，必須修復後重新發布，不得把紅色 CI 描述成可忽略的生成問題。
 - **未來賽事簡章先備存、再挑公開欄位**：簡章提供的賽事名稱、指導／主辦／執行單位、日期、地點、辯題、資格、隊數限制、賽制、報名、費用、獎勵及版本差異，先以來源紀錄留在 `docs/`，並在 `data/event-metadata.csv` 保存適用的基本欄位；不要因網站目前不呈現就丟棄資料。`data/upcoming-events.js` 只放首頁時間軸及未來賽事頁確實需要公開的摘要。逐字稿、聯絡方式等個人資料、尚未確認事項不自動公開；辯題引用另一賽事時，要保留引用關係，沒有題目原文不得猜填。簡章隊數只代表規劃上限，不建立參賽隊名或選手名單。
 - **未來賽事不得提早變成歷史賽事**：以台北時區當日與 `data/upcoming-events.js` 的結束日期判斷；尚未結束的賽事，即使已在 `data/event-metadata.csv` 保存基本資料，或在 `data/event-rosters.csv` 保存正取／公告名單，仍只能顯示為未來賽事，不得進入「已收錄賽事」計數、近期歷史卡片或歷史時間軸節點。前端分類須以日期與未來賽事清單為準，不能把「已有辯題、metadata 或 roster」當成已完賽證據。`competitionRegistry` 與 iOS catalog 可以先保留穩定代號及未來賽事基本資料；資料出現在這兩處不代表網站應把它顯示為歷史賽事。
 - **未來賽事日期同步到公開 catalog**：`data/upcoming-events.js` 已明載的開始／結束日期是該未來賽事的公開排程；若 `event-metadata.csv` 對應欄位留白，建置須把排程日期補進生成的 `eventMetadata` 與 iOS V1 catalog，但不反寫 metadata CSV、不改變未來／歷史分類。metadata 已明載的日期仍優先，不得被排程摘要縮窄。

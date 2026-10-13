@@ -173,6 +173,9 @@ class BuildDataTests(unittest.TestCase):
         self.assertEqual(build_data.number("NaN"), "")
         self.assertEqual(build_data.number("Infinity"), "")
 
+    def test_clean_normalizes_cross_platform_embedded_newlines(self):
+        self.assertEqual(build_data.clean("  第一行\r\n第二行\r第三行\n  "), "第一行\n第二行\n第三行")
+
     def test_checked_number_reports_source_location(self):
         with self.assertRaisesRegex(SystemExit, "來源.csv 第 4 列「正方比分」不是有效數字"):
             build_data.checked_number("三分", "來源.csv", 4, "正方比分")

@@ -97,10 +97,6 @@ jobs:
       - name: Run data build checks
         run: python tools/build_data.py --check --fail-on-warnings
 
-      - name: Rebuild generated website files
-        if: github.head_ref != 'automation/google-sheet-data-update'
-        run: python tools/build_data.py
-
       - name: Check committed generated files are current
         # Google Sheet PR outputs are built and validated from a downloaded XLSX
         # in update-data-from-google-sheet.yml, not from the CSVs in this repo.

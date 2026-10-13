@@ -77,7 +77,10 @@ def format_public_json(value, level=0):
 
 
 def clean(value):
-    return str(value or "").strip()
+    # CSV readers preserve embedded newlines differently when a source file was
+    # written on Windows.  Normalize field content before it reaches generated
+    # JSON so Windows, macOS, and Linux produce byte-equivalent public data.
+    return str(value or "").replace("\r\n", "\n").replace("\r", "\n").strip()
 
 
 def number(value):
