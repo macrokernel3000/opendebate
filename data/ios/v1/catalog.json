@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "f73511a7ba4f2b4829570c7cde7c555d8371ac569c0365b4f2cde6f575395c53",
-  "generatedAt": "2026-10-13T15:28:05",
+  "datasetVersion": "2b5abe88082b4836cd9bd236e064d2291f1146a120e7ee8a23bad9316c5da4cd",
+  "generatedAt": "2026-10-13T17:13:51",
   "events": [
     {
       "id": "C1201",
@@ -932,6 +932,124 @@
         }
       ],
       "teams": []
+    },
+    {
+      "id": "C2302",
+      "name": "第二屆鳶飛盃高中職辯論賽",
+      "shortName": "2023 鳶飛盃",
+      "aliases": [],
+      "startDate": "2023-12-16",
+      "endDate": "2023-12-17",
+      "location": null,
+      "recordCount": 28,
+      "honorCount": 8,
+      "teamCount": 24,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "目前依公開賽務公告收錄 2023-12-16 三個時段及 2023-12-17 第一時段共 28 場賽果、最終團體名次與最佳辯士。公告未提供主辦單位、比賽地點、辯題、四強賽及決賽逐場比分，相關欄位留白；不依最終名次反推未公布場次。",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [
+        {
+          "id": "honor-9f86d67dee8c",
+          "name": "冠軍",
+          "recipient": "南山高中",
+          "team": null,
+          "type": "team",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-124350644b01",
+          "name": "亞軍",
+          "recipient": "師大附中",
+          "team": null,
+          "type": "team",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-97fa1ee648f4",
+          "name": "季軍",
+          "recipient": "板橋高中",
+          "team": null,
+          "type": "team",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-b09b975be528",
+          "name": "季軍",
+          "recipient": "市立大同高中",
+          "team": null,
+          "type": "team",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-fa3ce41baad8",
+          "name": "最佳辯士",
+          "recipient": "王文杉",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-8476e610b308",
+          "name": "最佳辯士",
+          "recipient": "張曦之",
+          "team": "南山高中",
+          "type": "player",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-d905e653c79f",
+          "name": "最佳辯士",
+          "recipient": "黃宜鈴",
+          "team": "板橋高中",
+          "type": "player",
+          "date": "2023-12-17",
+          "note": null
+        },
+        {
+          "id": "honor-2547507651de",
+          "name": "最佳辯士",
+          "recipient": "蔡喬羽",
+          "team": "市立大同高中",
+          "type": "player",
+          "date": "2023-12-17",
+          "note": null
+        }
+      ],
+      "teams": [
+        "中和高中",
+        "中崙高中",
+        "南山高中",
+        "台中一中",
+        "台中二中",
+        "國立政大附中",
+        "市立大同高中",
+        "師大附中",
+        "延平中學",
+        "建功高中",
+        "建國中學",
+        "復旦高中",
+        "成功高中",
+        "成淵高中",
+        "新竹高中",
+        "景美女中",
+        "松山高中",
+        "板橋高中",
+        "武陵高中",
+        "百齡高中",
+        "興大附中",
+        "薇閣中學",
+        "高雄女中",
+        "麗山高中"
+      ]
     },
     {
       "id": "C2401",
@@ -23146,12 +23264,320 @@
       "date": "2026-05-31",
       "period": "3",
       "venue": "1"
+    },
+    {
+      "id": "match-5df97ec58530",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "建國中學",
+      "negative": "市立大同高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-9d91196ce65f",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "建功高中",
+      "negative": "成淵高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-753236748ea3",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "師大附中",
+      "negative": "國立政大附中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-971dc8356bbd",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "成功高中",
+      "negative": "中崙高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-44fd6f6866e4",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "台中二中",
+      "negative": "武陵高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-f174c5fbddb6",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "復旦高中",
+      "negative": "中和高中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-6feea93087a0",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "南山高中",
+      "negative": "百齡高中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-d2129acf40ba",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "松山高中",
+      "negative": "台中一中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-9c7715587727",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "麗山高中",
+      "negative": "建國中學",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-37cc76ef4084",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "成淵高中",
+      "negative": "薇閣中學",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-deb5dba7d615",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "國立政大附中",
+      "negative": "興大附中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-01e6a8b3f517",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "中崙高中",
+      "negative": "景美女中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-e7c54b09e1d7",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "武陵高中",
+      "negative": "新竹高中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-cd80c7db16cf",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "中和高中",
+      "negative": "板橋高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-8ddd53a2decf",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "百齡高中",
+      "negative": "高雄女中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-37ac69692f39",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "台中一中",
+      "negative": "延平中學",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": "2023-12-16",
+      "period": "2",
+      "venue": null
+    },
+    {
+      "id": "match-9220376c7945",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "市立大同高中",
+      "negative": "麗山高中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-156af6928917",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "薇閣中學",
+      "negative": "建功高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-6dd5d6d66c52",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "興大附中",
+      "negative": "師大附中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-1d9ac692e4bd",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "景美女中",
+      "negative": "成功高中",
+      "affirmativeScore": 1,
+      "negativeScore": 2,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-67a315274f71",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "新竹高中",
+      "negative": "台中二中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-4a899f442180",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "板橋高中",
+      "negative": "復旦高中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-b5466735e086",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "高雄女中",
+      "negative": "南山高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-3ca51e4213ca",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "延平中學",
+      "negative": "松山高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-16",
+      "period": "3",
+      "venue": null
+    },
+    {
+      "id": "match-e5dc4c2825bd",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "市立大同高中",
+      "negative": "成淵高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": "2023-12-17",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-b34a7658fff5",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "師大附中",
+      "negative": "成功高中",
+      "affirmativeScore": 2,
+      "negativeScore": 1,
+      "date": "2023-12-17",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-c499938c95b1",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "武陵高中",
+      "negative": "板橋高中",
+      "affirmativeScore": 0,
+      "negativeScore": 3,
+      "date": "2023-12-17",
+      "period": "1",
+      "venue": null
+    },
+    {
+      "id": "match-5e83fd805181",
+      "competitionName": "第二屆鳶飛盃高中職辯論賽",
+      "affirmative": "南山高中",
+      "negative": "台中一中",
+      "affirmativeScore": 3,
+      "negativeScore": 0,
+      "date": "2023-12-17",
+      "period": "1",
+      "venue": null
     }
   ],
   "publicIndex": {
     "schemaVersion": 1,
-    "generatedAt": "2026-10-13T15:28:05",
-    "sourceSHA256": "b4599657d37495761c740f46b91595c44ffafe8343cac266b5c6ac06738a106d",
+    "generatedAt": "2026-10-13T17:13:51",
+    "sourceSHA256": "0ff46e4878c8d341a96486b6ae14839e24c4a2a5e74a9ba0a85fb8fa8cbf4bc3",
     "entities": [
       {
         "id": "p001",
@@ -24355,7 +24781,8 @@
         "type": "s",
         "name": "市立大同",
         "aliases": [
-          "北市大同"
+          "北市大同",
+          "市立大同高中"
         ]
       },
       {
@@ -35477,6 +35904,202 @@
         "affirmativeEntityID": "s017",
         "negativeEntityID": "s135",
         "winner": "薇閣中學"
+      },
+      {
+        "id": "match-5df97ec58530",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s054",
+        "negativeEntityID": "s044",
+        "winner": "市立大同高中"
+      },
+      {
+        "id": "match-9d91196ce65f",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s052",
+        "negativeEntityID": "s068",
+        "winner": "成淵高中"
+      },
+      {
+        "id": "match-753236748ea3",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s047",
+        "negativeEntityID": "s070",
+        "winner": "師大附中"
+      },
+      {
+        "id": "match-971dc8356bbd",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s067",
+        "negativeEntityID": "s159",
+        "winner": "成功高中"
+      },
+      {
+        "id": "match-44fd6f6866e4",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s121",
+        "negativeEntityID": "s096",
+        "winner": "武陵高中"
+      },
+      {
+        "id": "match-f174c5fbddb6",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s057",
+        "negativeEntityID": "s003",
+        "winner": "復旦高中"
+      },
+      {
+        "id": "match-6feea93087a0",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s023",
+        "negativeEntityID": "s105",
+        "winner": "南山高中"
+      },
+      {
+        "id": "match-d2129acf40ba",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s090",
+        "negativeEntityID": "s120",
+        "winner": "台中一中"
+      },
+      {
+        "id": "match-9c7715587727",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s158",
+        "negativeEntityID": "s054",
+        "winner": "建國中學"
+      },
+      {
+        "id": "match-37cc76ef4084",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s068",
+        "negativeEntityID": "s135",
+        "winner": "成淵高中"
+      },
+      {
+        "id": "match-deb5dba7d615",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s070",
+        "negativeEntityID": "s131",
+        "winner": "興大附中"
+      },
+      {
+        "id": "match-01e6a8b3f517",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s159",
+        "negativeEntityID": "s083",
+        "winner": "景美女中"
+      },
+      {
+        "id": "match-e7c54b09e1d7",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s096",
+        "negativeEntityID": "s078",
+        "winner": "武陵高中"
+      },
+      {
+        "id": "match-cd80c7db16cf",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s003",
+        "negativeEntityID": "s091",
+        "winner": "板橋高中"
+      },
+      {
+        "id": "match-8ddd53a2decf",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s105",
+        "negativeEntityID": "s153",
+        "winner": "高雄女中"
+      },
+      {
+        "id": "match-37ac69692f39",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s120",
+        "negativeEntityID": "s050",
+        "winner": "台中一中"
+      },
+      {
+        "id": "match-9220376c7945",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s044",
+        "negativeEntityID": "s158",
+        "winner": "市立大同高中"
+      },
+      {
+        "id": "match-156af6928917",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s135",
+        "negativeEntityID": "s052",
+        "winner": "建功高中"
+      },
+      {
+        "id": "match-6dd5d6d66c52",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s131",
+        "negativeEntityID": "s047",
+        "winner": "師大附中"
+      },
+      {
+        "id": "match-1d9ac692e4bd",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s083",
+        "negativeEntityID": "s067",
+        "winner": "成功高中"
+      },
+      {
+        "id": "match-67a315274f71",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s078",
+        "negativeEntityID": "s121",
+        "winner": "台中二中"
+      },
+      {
+        "id": "match-4a899f442180",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s091",
+        "negativeEntityID": "s057",
+        "winner": "板橋高中"
+      },
+      {
+        "id": "match-b5466735e086",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s153",
+        "negativeEntityID": "s023",
+        "winner": "南山高中"
+      },
+      {
+        "id": "match-3ca51e4213ca",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s050",
+        "negativeEntityID": "s090",
+        "winner": "松山高中"
+      },
+      {
+        "id": "match-e5dc4c2825bd",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s044",
+        "negativeEntityID": "s068",
+        "winner": "市立大同高中"
+      },
+      {
+        "id": "match-b34a7658fff5",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s047",
+        "negativeEntityID": "s067",
+        "winner": "師大附中"
+      },
+      {
+        "id": "match-c499938c95b1",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s096",
+        "negativeEntityID": "s091",
+        "winner": "板橋高中"
+      },
+      {
+        "id": "match-5e83fd805181",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "affirmativeEntityID": "s023",
+        "negativeEntityID": "s120",
+        "winner": "南山高中"
       }
     ],
     "honors": [
@@ -38019,6 +38642,46 @@
         "id": "honor-17c15d09095c",
         "competitionName": "蒙泉盃全國高中職辯論比賽",
         "entityID": "s152"
+      },
+      {
+        "id": "honor-9f86d67dee8c",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s023"
+      },
+      {
+        "id": "honor-124350644b01",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s047"
+      },
+      {
+        "id": "honor-97fa1ee648f4",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s091"
+      },
+      {
+        "id": "honor-b09b975be528",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s044"
+      },
+      {
+        "id": "honor-fa3ce41baad8",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s023"
+      },
+      {
+        "id": "honor-8476e610b308",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s023"
+      },
+      {
+        "id": "honor-d905e653c79f",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s091"
+      },
+      {
+        "id": "honor-2547507651de",
+        "competitionName": "第二屆鳶飛盃高中職辯論賽",
+        "entityID": "s044"
       }
     ],
     "topics": [
@@ -41344,11 +42007,19 @@
           "南山高中"
         ],
         "honorIDs": [
+          "honor-8476e610b308",
           "honor-c15c2709e699"
         ],
         "appearances": [
           {
             "competitionName": "第三十六屆蘇州盃高中職辯論錦標賽",
+            "team": "南山高中",
+            "roles": [
+              "選手"
+            ]
+          },
+          {
+            "competitionName": "第二屆鳶飛盃高中職辯論賽",
             "team": "南山高中",
             "roles": [
               "選手"
@@ -47406,11 +48077,19 @@
         ],
         "honorIDs": [
           "honor-648329f7f806",
-          "honor-d3fdec1dd02c"
+          "honor-d3fdec1dd02c",
+          "honor-fa3ce41baad8"
         ],
         "appearances": [
           {
             "competitionName": "第二十二屆延平盃全國高中職辯論賽",
+            "team": "南山高中",
+            "roles": [
+              "選手"
+            ]
+          },
+          {
+            "competitionName": "第二屆鳶飛盃高中職辯論賽",
             "team": "南山高中",
             "roles": [
               "選手"
@@ -49305,6 +49984,28 @@
           {
             "competitionName": "育南盃中文教育辯論賽",
             "team": "鱁",
+            "roles": [
+              "選手"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "person-a287c401e407",
+        "name": "蔡喬羽",
+        "roles": [
+          "選手"
+        ],
+        "teams": [
+          "市立大同高中"
+        ],
+        "honorIDs": [
+          "honor-2547507651de"
+        ],
+        "appearances": [
+          {
+            "competitionName": "第二屆鳶飛盃高中職辯論賽",
+            "team": "市立大同高中",
             "roles": [
               "選手"
             ]
@@ -55220,6 +55921,28 @@
           {
             "competitionName": "第十七屆明京盃全國高中職辯論比賽",
             "team": "臺南二中",
+            "roles": [
+              "選手"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "person-21aeb7747778",
+        "name": "黃宜鈴",
+        "roles": [
+          "選手"
+        ],
+        "teams": [
+          "板橋高中"
+        ],
+        "honorIDs": [
+          "honor-d905e653c79f"
+        ],
+        "appearances": [
+          {
+            "competitionName": "第二屆鳶飛盃高中職辯論賽",
+            "team": "板橋高中",
             "roles": [
               "選手"
             ]

@@ -107,6 +107,19 @@ test("public data availability accepts a complete empty bundle and rejects missi
   assert.equal(malformedStore.topics.length, 0);
 });
 
+test("explicit full-course honor level overrides an ambiguous original award label", () => {
+  const appSource = fs.readFileSync(path.join(root, "app.js"), "utf8");
+
+  assert.match(
+    appSource,
+    /function isSingleMatchBest\(honor\) \{\s*return !isFullCourseBest\(honor\)/,
+  );
+  assert.match(
+    appSource,
+    /function isSingleMatchExcellent\(honor\) \{\s*return !isFullCourseExcellent\(honor\)/,
+  );
+});
+
 test("future events stay outside the recorded catalog even when roster data already exists", () => {
   const classification = loadFactory("js/event-classification.js").DebateEventClassification;
   const allEvents = [

@@ -239,7 +239,7 @@ function honorSubject(honor) {
 }
 
 function isSingleMatchBest(honor) {
-  return ["單場最佳辯士", "最佳辯士", "單場最佳"].includes(honor.honorName?.trim());
+  return !isFullCourseBest(honor) && ["單場最佳辯士", "最佳辯士", "單場最佳"].includes(honor.honorName?.trim());
 }
 
 function isFullCourseBest(honor) {
@@ -251,7 +251,7 @@ function isFullCourseExcellent(honor) {
 }
 
 function isSingleMatchExcellent(honor) {
-  return ["單場優秀辯士", "單場優秀"].includes(honor.honorName?.trim());
+  return !isFullCourseExcellent(honor) && ["單場優秀辯士", "單場優秀"].includes(honor.honorName?.trim());
 }
 
 function isSingleMatchHonor(honor) {
