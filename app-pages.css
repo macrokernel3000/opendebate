@@ -32,7 +32,7 @@ h1 { max-width: 720px; margin: 0; font-size: clamp(36px, 7vw, 58px); line-height
 .content-card p, .content-card li { color: #33423b; line-height: 1.75; }
 .content-card ul { padding-left: 22px; }
 .content-card li + li { margin-top: 7px; }
-.contact-button { min-height: 48px; display: inline-flex; align-items: center; margin-top: 8px; border-radius: 999px; padding: 0 20px; background: var(--green); color: white; font-weight: 900; text-decoration: none; }
+.contact-button { min-height: 48px; max-width: 100%; display: inline-flex; align-items: center; overflow-wrap: anywhere; margin-top: 8px; border-radius: 999px; padding: 10px 16px; background: var(--green); color: white; font-weight: 900; text-decoration: none; }
 .metadata { margin-top: 30px; color: var(--muted); font-size: 13px; }
 footer { border-top: 1px solid var(--line); padding: 26px 0; background: var(--ink); color: white; }
 .footer-inner { display: flex; justify-content: space-between; gap: 16px; }

@@ -6,6 +6,7 @@ const test = require("node:test");
 const css = fs.readFileSync(path.join(__dirname, "..", "styles.css"), "utf8");
 const html = fs.readFileSync(path.join(__dirname, "..", "index.html"), "utf8");
 const privacyHtml = fs.readFileSync(path.join(__dirname, "..", "privacy", "index.html"), "utf8");
+const supportHtml = fs.readFileSync(path.join(__dirname, "..", "support", "index.html"), "utf8");
 
 function token(name) {
   const match = css.match(new RegExp(`--${name}:\\s*(#[0-9a-f]{6})`, "i"));
@@ -192,4 +193,19 @@ test("desktop and mobile home layouts each expose a primary heading", () => {
 test("public footers do not advertise unfinished App support", () => {
   assert.doesNotMatch(html, /<footer>[\s\S]*?App 支援[\s\S]*?<\/footer>/);
   assert.doesNotMatch(privacyHtml, /<footer>[\s\S]*?App 支援[\s\S]*?<\/footer>/);
+});
+
+test("iOS App pages describe local tools and both calendar save paths", () => {
+  for (const page of [privacyHtml, supportHtml]) {
+    assert.match(page, /OpenDebate｜辯論平台/);
+    assert.match(page, /評分單/);
+    assert.match(page, /計時/);
+    assert.match(page, /單筆加入/);
+    assert.match(page, /多選加入/);
+    assert.match(page, /僅寫入行事曆權限/);
+    assert.match(page, /不會自動/);
+  }
+  assert.match(privacyHtml, /PDF 僅在使用者主動分享時/);
+  assert.match(privacyHtml, /不提供跳到外部網站或 Email App 的按鈕/);
+  assert.doesNotMatch(privacyHtml, /只有使用者主動點選公開網站或聯絡連結時/);
 });
