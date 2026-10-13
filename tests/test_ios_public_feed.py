@@ -30,11 +30,11 @@ class IOSPublicFeedTests(unittest.TestCase):
             }],
             "eventRosters": {},
             "eventMetadata": {"測試盃": {
-                "competitionCode": "C2601", "location": "測試地點", "teamCount": 2,
+                "competitionCode": "C2601", "shortName": "2026 測試盃", "location": "測試地點", "teamCount": 2,
                 "organizer": "測試主辦", "executionUnit": "測試執行",
                 "note": "測試備註", "awardSelectionCriteria": "測試標準", "ageRestriction": True,
             }},
-            "competitionRegistry": [{"code": "C2601", "name": "測試盃", "year": "2026", "status": "results-recorded"}],
+            "competitionRegistry": [{"code": "C2601", "name": "測試盃", "shortName": "2026 測試盃", "year": "2026", "status": "results-recorded"}],
             "entities": [
                 {"code": "s001", "type": "s", "name": "甲校", "aliases": "甲中|測試甲校"},
                 {"code": "s002", "type": "s", "name": "乙校", "aliases": ""},
@@ -49,6 +49,7 @@ class IOSPublicFeedTests(unittest.TestCase):
 
         self.assertEqual(first["datasetVersion"], second["datasetVersion"])
         self.assertEqual(first["events"][0]["id"], "C2601")
+        self.assertEqual(first["events"][0]["shortName"], "2026 測試盃")
         self.assertEqual(first["events"][0]["recordCount"], 1)
         self.assertEqual(first["events"][0]["organizer"], "測試主辦")
         self.assertEqual(first["events"][0]["topics"][0]["title"], "我國應採行測試制度")
@@ -67,7 +68,7 @@ class IOSPublicFeedTests(unittest.TestCase):
             "endDate": "2026-12-06",
         }
         sample["competitionRegistry"].append({
-            "code": "C2602", "name": "未來盃", "year": "2026", "status": "upcoming",
+            "code": "C2602", "name": "未來盃", "shortName": "2026 未來盃", "year": "2026", "status": "upcoming",
         })
 
         catalog = ios_public_feed.build_catalog(sample)
@@ -123,7 +124,7 @@ class IOSPublicFeedTests(unittest.TestCase):
         original = ios_public_feed.build_catalog(self.sample())
         updated = self.sample()
         updated["competitionRegistry"].append({
-            "code": "C2602", "name": "新增盃", "year": "2026", "status": "results-recorded"
+            "code": "C2602", "name": "新增盃", "shortName": "2026 新增盃", "year": "2026", "status": "results-recorded"
         })
         updated["records"].append({
             "id": "match-2", "competitionName": "新增盃", "matchDate": "2026-10-11",

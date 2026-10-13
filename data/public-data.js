@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-13T14:54:25",
+  "generatedAt": "2026-10-13T15:28:05",
   "sources": [
     "public-data-所有賽事.csv",
     "event-rosters.csv",
@@ -2328,6 +2328,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2605",
+      "shortName": "2026 陽明盃",
       "teamCount": 10
     },
     "2026西灣盃全國高中職辯論賽": {
@@ -2340,6 +2341,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2618",
+      "shortName": "2026 西灣盃",
       "teamCount": 16
     },
     "第二十屆宮燈盃辯論公開賽青少年組": {
@@ -2352,6 +2354,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": true,
       "competitionCode": "C2619",
+      "shortName": "2026 宮燈盃青少年組",
       "teamCount": 17
     },
     "2026司改盃全國高中職辯論比賽": {
@@ -2364,6 +2367,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2616",
+      "shortName": "2026 司改盃",
       "teamCount": 23
     },
     "第二十三屆延平盃全國高中職辯論賽": {
@@ -2377,6 +2381,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": null,
       "brochureTeamLimit": 24,
       "competitionCode": "C2625",
+      "shortName": "2026 延平盃",
       "teamCount": 23
     },
     "第二十二屆延平盃全國高中職辯論賽": {
@@ -2390,6 +2395,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 24,
       "competitionCode": "C2512",
+      "shortName": "2025 延平盃",
       "teamCount": 24
     },
     "第三屆輔仁盃全國高中職辯論比賽": {
@@ -2403,6 +2409,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 36,
       "competitionCode": "C2403",
+      "shortName": "2024 輔仁盃",
       "teamCount": 35
     },
     "第二十屆齊揚盃": {
@@ -2415,6 +2422,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2513",
+      "shortName": "2025 齊揚盃",
       "teamCount": 24
     },
     "第十九屆宮燈盃辯論公開賽青少年組": {
@@ -2427,6 +2435,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2514",
+      "shortName": "2025 宮燈盃青少年組",
       "teamCount": 4
     },
     "第十八屆宮燈盃辯論公開賽青少年組": {
@@ -2439,6 +2448,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2404",
+      "shortName": "2024 宮燈盃青少年組",
       "teamCount": 16
     },
     "第十七屆明京盃全國高中職辯論比賽": {
@@ -2451,6 +2461,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "(1)星星評分方式:\n(一)每位裁判於每一場比賽中,共有六顆星星,應依自身判斷分配予該場六位辯士,並應將六顆星星全數分配完畢。\n(二)同一位辯士單場至多獲同一位裁判給予四顆星星。\n(三)每位裁判至多將星星分配予三位辯士。\n(四)辯士於單場比賽所獲之星星數,為該場所有裁判給予該辯士之星星總和。\n(五)每場比賽中,獲得星星總數最高之辯士,記為該場之「星星王」;如有複數辯士並列最高,均記為該場之「星星王」。\n(2)京日之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、以辯士獲得「星星王」之場次數遴選,場次數多者優先。\n三、如「星星王」場次數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,先比較表現最佳一場所獲之星星數,星星數較多者優先。\n(三)如表現最佳一場所獲星星數相同,則比較表現最佳兩場所獲星星數總和;仍相同者,依序增加比較場次,直至得以分出高下。\n(四)如前述星星數比較仍相同,則以勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。\n(3)明京之星遴選標準:\n一、從本屆賽事所有參賽辯士中遴選三位,不限隊伍晉級成績,每隊亦不限一人。\n二、京日之星與明京之星不得重複獲獎;已獲得京日之星者,不再列入明京之星之遴選。\n三、以辯士於本屆賽事所獲「星星總數」遴選,星星總數較多者優先。\n四、如星星總數相同,依下列順序比序:\n(一)以總上場次數較少者優先。\n(二)如總上場次數相同,則以表現最好的三場所獲星星數總和較多者優先。\n(三)如表現最好的三場星星數總和相同,則比較第四場之星星數;仍相同者再比較第五場之星星數。\n(四)如五場(四場)之星星數比較後仍相同,則以五場(四場)比賽中之勝場數較多者優先。\n(五)如勝場數相同,則以所獲論點單總數較多者優先。\n(六)如以上比序用盡仍無法分出高下,大會將增額錄取。",
       "ageRestriction": null,
       "competitionCode": "C2626",
+      "shortName": "2026 明京盃",
       "teamCount": 35
     },
     "2025「青聲說」全國高中職辯論賽": {
@@ -2463,6 +2474,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2511",
+      "shortName": "2025 青聲說",
       "teamCount": 23
     },
     "2026年氣候盃全國高中職辯論比賽": {
@@ -2476,6 +2488,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 16,
       "competitionCode": "C2627",
+      "shortName": "2026 氣候盃",
       "teamCount": 15
     },
     "第十三屆椰風盃全國高中職辯論比賽": {
@@ -2488,7 +2501,8 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 24,
-      "competitionCode": "C2617"
+      "competitionCode": "C2617",
+      "shortName": "2026 椰風盃"
     },
     "第十四屆風雩盃中學辯論錦標賽": {
       "startDate": "2025-05-17",
@@ -2500,6 +2514,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2515",
+      "shortName": "2025 風雩盃",
       "teamCount": 23
     },
     "第十五屆明京盃全國高中職辯論比賽": {
@@ -2512,6 +2527,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2405",
+      "shortName": "2024 明京盃",
       "teamCount": 38
     },
     "2026桃園青年盃華語辯論賽（學青組）": {
@@ -2524,6 +2540,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2628",
+      "shortName": "2026 桃青盃",
       "teamCount": 10
     },
     "2026法可夢學院線上奧瑞岡式辯論賽（高中組）": {
@@ -2536,6 +2553,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2629",
+      "shortName": "2026 高中法可夢",
       "teamCount": 0
     },
     "第六屆台北市政願景盃辯論比賽": {
@@ -2549,6 +2567,7 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": true,
       "brochureTeamLimit": 12,
       "competitionCode": "C2406",
+      "shortName": "2024 願景盃",
       "teamCount": 13
     },
     "第一屆風雩盃全國高中職辯論錦標賽": {
@@ -2561,6 +2580,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1201",
+      "shortName": "2012 風雩盃",
       "teamCount": 0
     },
     "第二屆風雩盃全國高中職辯論錦標賽": {
@@ -2573,6 +2593,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1301",
+      "shortName": "2013 風雩盃",
       "teamCount": 0
     },
     "第三屆風雩盃全國高中職辯論錦標賽": {
@@ -2585,6 +2606,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1401",
+      "shortName": "2014 風雩盃",
       "teamCount": 0
     },
     "第四屆風雩盃全國高中職辯論錦標賽": {
@@ -2597,6 +2619,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1501",
+      "shortName": "2015 風雩盃",
       "teamCount": 0
     },
     "第五屆風雩盃全國高中職辯論錦標賽": {
@@ -2609,6 +2632,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1601",
+      "shortName": "2016 風雩盃",
       "teamCount": 0
     },
     "第六屆風雩盃全國高中職辯論錦標賽": {
@@ -2621,6 +2645,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1701",
+      "shortName": "2017 風雩盃",
       "teamCount": 0
     },
     "第七屆風雩盃全國高中職辯論錦標賽": {
@@ -2633,6 +2658,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1801",
+      "shortName": "2018 風雩盃",
       "teamCount": 0
     },
     "第八屆風雩盃全國高中職辯論錦標賽": {
@@ -2645,6 +2671,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C1901",
+      "shortName": "2019 風雩盃",
       "teamCount": 0
     },
     "第十一屆風雩盃全國高中職辯論錦標賽": {
@@ -2657,6 +2684,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2201",
+      "shortName": "2022 風雩盃",
       "teamCount": 0
     },
     "第十二屆風雩盃全國高中職辯論錦標賽": {
@@ -2669,6 +2697,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2301",
+      "shortName": "2023 風雩盃",
       "teamCount": 0
     },
     "第十三屆風雩盃全國高中職辯論錦標賽": {
@@ -2681,6 +2710,7 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "competitionCode": "C2408",
+      "shortName": "2024 風雩盃",
       "teamCount": 0
     },
     "第二十屆北區聯合新生盃辯論比賽": {
@@ -2692,7 +2722,8 @@ window.DEBATE_PUBLIC_DATA = {
       "note": "賽事官方 Facebook 參賽隊伍名單公告明載比賽地點為臺北市立景美女子高級中學。會後公告確認賽期與更新時段；第二時段由原 13:00–15:00 更正為 12:30–14:30。辯題與主辦單位尚無可追溯來源，故留白。來源：https://www.facebook.com/share/p/1CsNS2Ji8T/?mibextid=wwXIfr；場地來源：https://www.facebook.com/share/p/19Yxffdo7T/?mibextid=wwXIfr",
       "awardSelectionCriteria": "",
       "ageRestriction": null,
-      "competitionCode": "C2622"
+      "competitionCode": "C2622",
+      "shortName": "2026 北區聯合新生盃"
     },
     "第二屆論衡盃全國高中職辯論比賽": {
       "startDate": "2026-10-24",
@@ -2704,7 +2735,8 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": true,
       "brochureTeamLimit": 16,
-      "competitionCode": "C2631"
+      "competitionCode": "C2631",
+      "shortName": "2026 論衡盃"
     },
     "2026 全國大專院校法律系辯論公開賽": {
       "startDate": "2026-12-05",
@@ -2716,7 +2748,8 @@ window.DEBATE_PUBLIC_DATA = {
       "awardSelectionCriteria": "",
       "ageRestriction": null,
       "brochureTeamLimit": 12,
-      "competitionCode": "C2632"
+      "competitionCode": "C2632",
+      "shortName": "2026 大法盃"
     },
     "2025司改盃全國高中職辯論比賽": {
       "startDate": "2025-05-24",
@@ -2727,6 +2760,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2501",
+      "shortName": "2025 司改盃",
       "teamCount": 23,
       "ageRestriction": null
     },
@@ -2739,6 +2773,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2601",
+      "shortName": "2026 吊嘎盃",
       "teamCount": 10,
       "ageRestriction": null
     },
@@ -2751,6 +2786,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2602",
+      "shortName": "2026 火雞盃",
       "teamCount": 20,
       "ageRestriction": null
     },
@@ -2763,6 +2799,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2603",
+      "shortName": "2026 火雞肉飯盃",
       "teamCount": 16,
       "ageRestriction": null
     },
@@ -2775,6 +2812,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2502",
+      "shortName": "2025 夢箋盃",
       "teamCount": 12,
       "ageRestriction": null
     },
@@ -2787,6 +2825,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2604",
+      "shortName": "2026 明哲盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2799,6 +2838,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2401",
+      "shortName": "2024 東岸盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2811,6 +2851,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2402",
+      "shortName": "2024 青雲盃",
       "teamCount": 12,
       "ageRestriction": null
     },
@@ -2823,6 +2864,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2503",
+      "shortName": "2025 惠蓀盃",
       "teamCount": 25,
       "ageRestriction": null
     },
@@ -2835,6 +2877,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2630",
+      "shortName": "2026 蘇州盃",
       "teamCount": 41,
       "ageRestriction": null
     },
@@ -2847,6 +2890,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2407",
+      "shortName": "2024 蘇州盃",
       "teamCount": 45,
       "ageRestriction": null
     },
@@ -2859,6 +2903,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2516",
+      "shortName": "2025 蘇州盃",
       "teamCount": 31,
       "ageRestriction": null
     },
@@ -2871,6 +2916,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2606",
+      "shortName": "2026 東岸盃",
       "teamCount": 22,
       "ageRestriction": null
     },
@@ -2883,6 +2929,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2615",
+      "shortName": "2026 辯革盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2895,6 +2942,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2607",
+      "shortName": "2026 齊揚盃",
       "teamCount": 24,
       "ageRestriction": null
     },
@@ -2907,6 +2955,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2504",
+      "shortName": "2025 高中菁英盃",
       "teamCount": 82,
       "ageRestriction": null
     },
@@ -2919,6 +2968,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2608",
+      "shortName": "2026 高中菁英盃",
       "teamCount": 91,
       "ageRestriction": null
     },
@@ -2931,6 +2981,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2505",
+      "shortName": "2025 辯革盃",
       "teamCount": 22,
       "ageRestriction": null
     },
@@ -2943,6 +2994,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2609",
+      "shortName": "2026 夢箋盃",
       "teamCount": 11,
       "ageRestriction": null
     },
@@ -2955,6 +3007,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2506",
+      "shortName": "2025 東岸盃",
       "teamCount": 16,
       "ageRestriction": null
     },
@@ -2967,6 +3020,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2610",
+      "shortName": "2026 青雲盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2979,6 +3033,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2611",
+      "shortName": "2026 輔仁盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -2991,6 +3046,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2507",
+      "shortName": "2025 北區聯合新生盃",
       "teamCount": 32,
       "ageRestriction": null
     },
@@ -3003,6 +3059,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2612",
+      "shortName": "2026 風雩盃",
       "teamCount": 20,
       "ageRestriction": null
     },
@@ -3015,6 +3072,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2508",
+      "shortName": "2025 明京盃",
       "teamCount": 42,
       "ageRestriction": null
     },
@@ -3027,6 +3085,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2509",
+      "shortName": "2025 雲啟盃",
       "teamCount": 14,
       "ageRestriction": null
     },
@@ -3039,6 +3098,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2510",
+      "shortName": "2025 輔仁盃",
       "teamCount": 22,
       "ageRestriction": null
     },
@@ -3051,6 +3111,7 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2614",
+      "shortName": "2026 育南盃",
       "teamCount": 16,
       "ageRestriction": null
     },
@@ -3063,31 +3124,37 @@ window.DEBATE_PUBLIC_DATA = {
       ],
       "dateBasisNote": "日期依已收錄戰績／榮譽整理",
       "competitionCode": "C2613",
+      "shortName": "2026 蒙泉盃",
       "teamCount": 19,
       "ageRestriction": null
     },
     "2026核能公投盃全國高中職辯論比賽": {
       "startDate": "2026-11-07",
       "endDate": "2026-11-08",
-      "competitionCode": "C2620"
+      "competitionCode": "C2620",
+      "shortName": "2026 核能公投盃"
     },
     "第十八屆叡德盃全國高中職辯論比賽": {
       "startDate": "2026-11-14",
       "endDate": "2026-11-15",
-      "competitionCode": "C2624"
+      "competitionCode": "C2624",
+      "shortName": "2026 叡德盃"
     },
     "第八屆惠蓀盃全國高中職辯論比賽": {
       "startDate": "2026-12-05",
       "endDate": "2026-12-06",
-      "competitionCode": "C2623"
+      "competitionCode": "C2623",
+      "shortName": "2026 惠蓀盃"
     },
     "第二十九屆鳳凰盃全國高中職辯論比賽": {
       "startDate": "2026-12-26",
       "endDate": "2026-12-27",
-      "competitionCode": "C2621"
+      "competitionCode": "C2621",
+      "shortName": "2026 鳳凰盃"
     },
     "第二十八屆鳳凰盃全國高中職辯論比賽": {
       "competitionCode": "C2517",
+      "shortName": "2025 鳳凰盃",
       "teamCount": 0,
       "ageRestriction": null
     }
@@ -3321,72 +3388,72 @@ window.DEBATE_PUBLIC_DATA = {
     ]
   },
   "competitionRegistry": [
-    {"code": "C2401", "name": "第一屆東岸盃全國高中職辯論比賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2402", "name": "第一屆青雲盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2403", "name": "第三屆輔仁盃全國高中職辯論比賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2404", "name": "第十八屆宮燈盃辯論公開賽青少年組", "year": "2024", "status": "results-recorded"},
-    {"code": "C2405", "name": "第十五屆明京盃全國高中職辯論比賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2406", "name": "第六屆台北市政願景盃辯論比賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2407", "name": "第三十五屆蘇州盃高中職辯論錦標賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2501", "name": "2025司改盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2502", "name": "第一屆夢箋盃", "year": "2025", "status": "results-recorded"},
-    {"code": "C2503", "name": "第七屆惠蓀盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2504", "name": "第二十七屆高中菁英盃", "year": "2025", "status": "results-recorded"},
-    {"code": "C2505", "name": "第二十屆辯革盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2506", "name": "第二屆東岸盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2507", "name": "第十九屆北區聯合新生盃辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2508", "name": "第十六屆明京盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2509", "name": "第十屆雲啟盃辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2510", "name": "第四屆輔仁盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2511", "name": "2025「青聲說」全國高中職辯論賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2512", "name": "第二十二屆延平盃全國高中職辯論賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2513", "name": "第二十屆齊揚盃", "year": "2025", "status": "results-recorded"},
-    {"code": "C2514", "name": "第十九屆宮燈盃辯論公開賽青少年組", "year": "2025", "status": "results-recorded"},
-    {"code": "C2515", "name": "第十四屆風雩盃中學辯論錦標賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2516", "name": "第三十六屆蘇州盃高中職辯論錦標賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2517", "name": "第二十八屆鳳凰盃全國高中職辯論比賽", "year": "2025", "status": "results-recorded"},
-    {"code": "C2601", "name": "吊嘎盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2602", "name": "火雞盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2603", "name": "火雞肉飯盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2604", "name": "第一屆明哲盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2605", "name": "第一屆陽明盃全國辯論公開賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2606", "name": "第三屆東岸盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2607", "name": "第二十一屆齊揚盃", "year": "2026", "status": "results-recorded"},
-    {"code": "C2608", "name": "第二十八屆高中菁英盃", "year": "2026", "status": "results-recorded"},
-    {"code": "C2609", "name": "第二屆夢箋盃", "year": "2026", "status": "results-recorded"},
-    {"code": "C2610", "name": "第二屆青雲盃全國高中職辯論錦標賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2611", "name": "第五屆輔仁盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2612", "name": "第十五屆風雩盃中學辯論錦標賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2613", "name": "蒙泉盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2614", "name": "育南盃中文教育辯論賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2615", "name": "第二十一屆辯革盃全國高中辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2616", "name": "2026司改盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2617", "name": "第十三屆椰風盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2618", "name": "2026西灣盃全國高中職辯論賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2619", "name": "第二十屆宮燈盃辯論公開賽青少年組", "year": "2026", "status": "results-recorded"},
-    {"code": "C2620", "name": "2026核能公投盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2621", "name": "第二十九屆鳳凰盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2622", "name": "第二十屆北區聯合新生盃辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2623", "name": "第八屆惠蓀盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2624", "name": "第十八屆叡德盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2625", "name": "第二十三屆延平盃全國高中職辯論賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2626", "name": "第十七屆明京盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2627", "name": "2026年氣候盃全國高中職辯論比賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C2628", "name": "2026桃園青年盃華語辯論賽（學青組）", "year": "2026", "status": "results-recorded"},
-    {"code": "C2629", "name": "2026法可夢學院線上奧瑞岡式辯論賽（高中組）", "year": "2026", "status": "results-recorded"},
-    {"code": "C2630", "name": "第三十七屆蘇州盃高中職辯論錦標賽", "year": "2026", "status": "results-recorded"},
-    {"code": "C1201", "name": "第一屆風雩盃全國高中職辯論錦標賽", "year": "2012", "status": "results-recorded"},
-    {"code": "C1301", "name": "第二屆風雩盃全國高中職辯論錦標賽", "year": "2013", "status": "results-recorded"},
-    {"code": "C1401", "name": "第三屆風雩盃全國高中職辯論錦標賽", "year": "2014", "status": "results-recorded"},
-    {"code": "C1501", "name": "第四屆風雩盃全國高中職辯論錦標賽", "year": "2015", "status": "results-recorded"},
-    {"code": "C1601", "name": "第五屆風雩盃全國高中職辯論錦標賽", "year": "2016", "status": "results-recorded"},
-    {"code": "C1701", "name": "第六屆風雩盃全國高中職辯論錦標賽", "year": "2017", "status": "results-recorded"},
-    {"code": "C1801", "name": "第七屆風雩盃全國高中職辯論錦標賽", "year": "2018", "status": "results-recorded"},
-    {"code": "C1901", "name": "第八屆風雩盃全國高中職辯論錦標賽", "year": "2019", "status": "results-recorded"},
-    {"code": "C2201", "name": "第十一屆風雩盃全國高中職辯論錦標賽", "year": "2022", "status": "results-recorded"},
-    {"code": "C2301", "name": "第十二屆風雩盃全國高中職辯論錦標賽", "year": "2023", "status": "results-recorded"},
-    {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "year": "2024", "status": "results-recorded"},
-    {"code": "C2631", "name": "第二屆論衡盃全國高中職辯論比賽", "year": "2026", "status": "upcoming"},
-    {"code": "C2632", "name": "2026 全國大專院校法律系辯論公開賽", "year": "2026", "status": "upcoming"}
+    {"code": "C2401", "name": "第一屆東岸盃全國高中職辯論比賽", "shortName": "2024 東岸盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2402", "name": "第一屆青雲盃全國高中職辯論錦標賽", "shortName": "2024 青雲盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2403", "name": "第三屆輔仁盃全國高中職辯論比賽", "shortName": "2024 輔仁盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2404", "name": "第十八屆宮燈盃辯論公開賽青少年組", "shortName": "2024 宮燈盃青少年組", "year": "2024", "status": "results-recorded"},
+    {"code": "C2405", "name": "第十五屆明京盃全國高中職辯論比賽", "shortName": "2024 明京盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2406", "name": "第六屆台北市政願景盃辯論比賽", "shortName": "2024 願景盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2407", "name": "第三十五屆蘇州盃高中職辯論錦標賽", "shortName": "2024 蘇州盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2501", "name": "2025司改盃全國高中職辯論比賽", "shortName": "2025 司改盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2502", "name": "第一屆夢箋盃", "shortName": "2025 夢箋盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2503", "name": "第七屆惠蓀盃全國高中職辯論比賽", "shortName": "2025 惠蓀盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2504", "name": "第二十七屆高中菁英盃", "shortName": "2025 高中菁英盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2505", "name": "第二十屆辯革盃全國高中職辯論比賽", "shortName": "2025 辯革盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2506", "name": "第二屆東岸盃全國高中職辯論比賽", "shortName": "2025 東岸盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2507", "name": "第十九屆北區聯合新生盃辯論比賽", "shortName": "2025 北區聯合新生盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2508", "name": "第十六屆明京盃全國高中職辯論比賽", "shortName": "2025 明京盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2509", "name": "第十屆雲啟盃辯論比賽", "shortName": "2025 雲啟盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2510", "name": "第四屆輔仁盃全國高中職辯論比賽", "shortName": "2025 輔仁盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2511", "name": "2025「青聲說」全國高中職辯論賽", "shortName": "2025 青聲說", "year": "2025", "status": "results-recorded"},
+    {"code": "C2512", "name": "第二十二屆延平盃全國高中職辯論賽", "shortName": "2025 延平盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2513", "name": "第二十屆齊揚盃", "shortName": "2025 齊揚盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2514", "name": "第十九屆宮燈盃辯論公開賽青少年組", "shortName": "2025 宮燈盃青少年組", "year": "2025", "status": "results-recorded"},
+    {"code": "C2515", "name": "第十四屆風雩盃中學辯論錦標賽", "shortName": "2025 風雩盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2516", "name": "第三十六屆蘇州盃高中職辯論錦標賽", "shortName": "2025 蘇州盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2517", "name": "第二十八屆鳳凰盃全國高中職辯論比賽", "shortName": "2025 鳳凰盃", "year": "2025", "status": "results-recorded"},
+    {"code": "C2601", "name": "吊嘎盃全國高中職辯論比賽", "shortName": "2026 吊嘎盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2602", "name": "火雞盃全國高中職辯論比賽", "shortName": "2026 火雞盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2603", "name": "火雞肉飯盃全國高中職辯論比賽", "shortName": "2026 火雞肉飯盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2604", "name": "第一屆明哲盃全國高中職辯論比賽", "shortName": "2026 明哲盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2605", "name": "第一屆陽明盃全國辯論公開賽", "shortName": "2026 陽明盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2606", "name": "第三屆東岸盃全國高中職辯論比賽", "shortName": "2026 東岸盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2607", "name": "第二十一屆齊揚盃", "shortName": "2026 齊揚盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2608", "name": "第二十八屆高中菁英盃", "shortName": "2026 高中菁英盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2609", "name": "第二屆夢箋盃", "shortName": "2026 夢箋盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2610", "name": "第二屆青雲盃全國高中職辯論錦標賽", "shortName": "2026 青雲盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2611", "name": "第五屆輔仁盃全國高中職辯論比賽", "shortName": "2026 輔仁盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2612", "name": "第十五屆風雩盃中學辯論錦標賽", "shortName": "2026 風雩盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2613", "name": "蒙泉盃全國高中職辯論比賽", "shortName": "2026 蒙泉盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2614", "name": "育南盃中文教育辯論賽", "shortName": "2026 育南盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2615", "name": "第二十一屆辯革盃全國高中辯論比賽", "shortName": "2026 辯革盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2616", "name": "2026司改盃全國高中職辯論比賽", "shortName": "2026 司改盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2617", "name": "第十三屆椰風盃全國高中職辯論比賽", "shortName": "2026 椰風盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2618", "name": "2026西灣盃全國高中職辯論賽", "shortName": "2026 西灣盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2619", "name": "第二十屆宮燈盃辯論公開賽青少年組", "shortName": "2026 宮燈盃青少年組", "year": "2026", "status": "results-recorded"},
+    {"code": "C2620", "name": "2026核能公投盃全國高中職辯論比賽", "shortName": "2026 核能公投盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2621", "name": "第二十九屆鳳凰盃全國高中職辯論比賽", "shortName": "2026 鳳凰盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2622", "name": "第二十屆北區聯合新生盃辯論比賽", "shortName": "2026 北區聯合新生盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2623", "name": "第八屆惠蓀盃全國高中職辯論比賽", "shortName": "2026 惠蓀盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2624", "name": "第十八屆叡德盃全國高中職辯論比賽", "shortName": "2026 叡德盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2625", "name": "第二十三屆延平盃全國高中職辯論賽", "shortName": "2026 延平盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2626", "name": "第十七屆明京盃全國高中職辯論比賽", "shortName": "2026 明京盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2627", "name": "2026年氣候盃全國高中職辯論比賽", "shortName": "2026 氣候盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2628", "name": "2026桃園青年盃華語辯論賽（學青組）", "shortName": "2026 桃青盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C2629", "name": "2026法可夢學院線上奧瑞岡式辯論賽（高中組）", "shortName": "2026 高中法可夢", "year": "2026", "status": "results-recorded"},
+    {"code": "C2630", "name": "第三十七屆蘇州盃高中職辯論錦標賽", "shortName": "2026 蘇州盃", "year": "2026", "status": "results-recorded"},
+    {"code": "C1201", "name": "第一屆風雩盃全國高中職辯論錦標賽", "shortName": "2012 風雩盃", "year": "2012", "status": "results-recorded"},
+    {"code": "C1301", "name": "第二屆風雩盃全國高中職辯論錦標賽", "shortName": "2013 風雩盃", "year": "2013", "status": "results-recorded"},
+    {"code": "C1401", "name": "第三屆風雩盃全國高中職辯論錦標賽", "shortName": "2014 風雩盃", "year": "2014", "status": "results-recorded"},
+    {"code": "C1501", "name": "第四屆風雩盃全國高中職辯論錦標賽", "shortName": "2015 風雩盃", "year": "2015", "status": "results-recorded"},
+    {"code": "C1601", "name": "第五屆風雩盃全國高中職辯論錦標賽", "shortName": "2016 風雩盃", "year": "2016", "status": "results-recorded"},
+    {"code": "C1701", "name": "第六屆風雩盃全國高中職辯論錦標賽", "shortName": "2017 風雩盃", "year": "2017", "status": "results-recorded"},
+    {"code": "C1801", "name": "第七屆風雩盃全國高中職辯論錦標賽", "shortName": "2018 風雩盃", "year": "2018", "status": "results-recorded"},
+    {"code": "C1901", "name": "第八屆風雩盃全國高中職辯論錦標賽", "shortName": "2019 風雩盃", "year": "2019", "status": "results-recorded"},
+    {"code": "C2201", "name": "第十一屆風雩盃全國高中職辯論錦標賽", "shortName": "2022 風雩盃", "year": "2022", "status": "results-recorded"},
+    {"code": "C2301", "name": "第十二屆風雩盃全國高中職辯論錦標賽", "shortName": "2023 風雩盃", "year": "2023", "status": "results-recorded"},
+    {"code": "C2408", "name": "第十三屆風雩盃全國高中職辯論錦標賽", "shortName": "2024 風雩盃", "year": "2024", "status": "results-recorded"},
+    {"code": "C2631", "name": "第二屆論衡盃全國高中職辯論比賽", "shortName": "2026 論衡盃", "year": "2026", "status": "upcoming"},
+    {"code": "C2632", "name": "2026 全國大專院校法律系辯論公開賽", "shortName": "2026 大法盃", "year": "2026", "status": "upcoming"}
   ]
 };

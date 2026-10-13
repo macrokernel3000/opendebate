@@ -30,7 +30,7 @@ def honor_category(honor):
 
 
 def build_home(public_data, upcoming, activities):
-    registry = {entry["name"]: entry["code"] for entry in public_data["competitionRegistry"]}
+    registry = {entry["name"]: entry for entry in public_data["competitionRegistry"]}
     metadata = public_data.get("eventMetadata", {})
     records = public_data.get("records", [])
     honors = public_data.get("honors", [])
@@ -40,7 +40,7 @@ def build_home(public_data, upcoming, activities):
 
     results = []
     last_dates = {}
-    for name, code in registry.items():
+    for name, registration in registry.items():
         corresponding = [x for x in records if x.get("competitionName") == name]
         achievements = [x for x in honors if x.get("competitionName") == name]
         date_candidates = [metadata.get(name, {}).get("endDate") or ""] + [
@@ -56,7 +56,8 @@ def build_home(public_data, upcoming, activities):
             for x in achievements if (label := podium_rank(x.get("honorName")))
         ]
         results.append({
-            "id": code, "name": name, "date": latest,
+            "id": registration["code"], "name": name,
+            "shortName": registration.get("shortName") or name, "date": latest,
             "recordCount": len(corresponding), "podium": podium
         })
     results.sort(key=lambda x: (x["date"], x["id"]), reverse=True)
@@ -74,6 +75,7 @@ def build_home(public_data, upcoming, activities):
                 "id": f"{kind}:{item['id']}",
                 "eventId": (item.get("competitionCode") if kind == "tournament" else None),
                 "name": item["name"],
+                "shortName": item.get("shortName") or item["name"],
                 "startDate": start,
                 "endDate": end,
                 "location": item.get("location") or "",
@@ -114,7 +116,7 @@ def build_home(public_data, upcoming, activities):
             event_name = honor.get("competitionName") or ""
             row["count"] += 1
             row["awards"].append({
-                "id": honor["id"], "eventId": registry.get(event_name),
+                "id": honor["id"], "eventId": registry.get(event_name, {}).get("code"),
                 "eventName": event_name,
                 "name": honor.get("honorName") or "公開榮譽",
                 "recipient": honor.get("recipient") or honor.get("team") or "",

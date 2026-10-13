@@ -182,7 +182,10 @@ const { renderHome, renderLeaderboards, toggleHonorRange, toggleMobileHonorFilte
   getEvents: () => events,
   getRecords: () => records,
   getHonors: () => honors,
-  getUpcomingEvents: () => window.DEBATE_UPCOMING_EVENTS || [],
+  getUpcomingEvents: () => (window.DEBATE_UPCOMING_EVENTS || []).map((event) => ({
+    ...event,
+    shortName: publicData.eventMetadata?.[event.name]?.shortName || event.shortName || event.name,
+  })),
   getCalendarActivities: () => window.DEBATE_CALENDAR_ACTIVITIES || [],
   getSiteContent: () => publicData.siteContent || {},
   store,

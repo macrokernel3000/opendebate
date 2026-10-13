@@ -174,6 +174,7 @@ def build_catalog(public_data):
         events.append({
             "id": registry[name]["code"],
             "name": name,
+            "shortName": details.get("shortName") or registry[name].get("shortName") or name,
             "aliases": [],
             "startDate": details.get("startDate") or None,
             "endDate": details.get("endDate") or None,

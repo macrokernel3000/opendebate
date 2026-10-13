@@ -352,6 +352,9 @@ h1[tabindex="-1"]:focus, h2[tabindex="-1"]:focus { outline: 0; text-decoration: 
 .event-summary { display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: end; margin: 38px 0 22px; padding-bottom: 20px; border-bottom: 4px solid var(--ink); }
 .event-summary h1, .event-summary h2 { margin: 0; max-width: 780px; font-size: clamp(25px, 4vw, 38px); }
 .event-summary p { margin: 8px 0 0; color: var(--muted); }
+.event-summary .event-short-name { display: flex; width: fit-content; max-width: 100%; align-items: center; gap: 8px; margin-top: 12px; border: 1px solid #bfd9d5; border-radius: 10px; padding: 7px 10px; background: #eef7f4; color: var(--green-dark); }
+.event-short-name span { font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+.event-short-name strong { overflow-wrap: anywhere; font-size: 14px; }
 .event-summary-count { display: flex; gap: 8px; }
 .count-chip { padding: 8px 10px; background: var(--yellow); font-size: 12px; font-weight: 900; white-space: nowrap; }
 .event-metadata { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; margin: 14px 0 18px; border-left: 5px solid var(--yellow); padding: 12px 14px; background: var(--soft); color: var(--muted); font-size: 14px; line-height: 1.65; }

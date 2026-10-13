@@ -304,13 +304,13 @@ def load_site_content():
 def load_competition_registry():
     with COMPETITION_REGISTRY_PATH.open("r", encoding="utf-8-sig", newline="") as source:
         reader = csv.DictReader(source)
-        required = {"code", "name", "year", "registrationSequence", "registeredAt", "registrationSource", "registrationBasis", "status"}
+        required = {"code", "name", "shortName", "year", "registrationSequence", "registeredAt", "registrationSource", "registrationBasis", "status"}
         if not reader.fieldnames or not required.issubset(reader.fieldnames):
             raise SystemExit(f"{COMPETITION_REGISTRY_PATH.name} 欄位不完整：需要 {', '.join(sorted(required))}")
         rows = list(reader)
     by_name, by_code = {}, {}
     for row in rows:
-        code, name, year = clean(row.get("code")), clean(row.get("name")), clean(row.get("year"))
+        code, name, short_name, year = clean(row.get("code")), clean(row.get("name")), clean(row.get("shortName")), clean(row.get("year"))
         if row.get("status") == "year-unverified":
             if not name or code or year or clean(row.get("registrationSequence")) or name in by_name:
                 raise SystemExit(f"年份待查賽事必須只填名稱與來源，不可先發代號：{row}")
@@ -318,6 +318,8 @@ def load_competition_registry():
             continue
         if not re.fullmatch(r"C\d{4}", code) or not re.fullmatch(r"20\d{2}", year) or not name:
             raise SystemExit(f"賽事代號名冊有無效列：{row}")
+        if not short_name.startswith(f"{year} ") or not short_name.removeprefix(f"{year} ").strip():
+            raise SystemExit(f"賽事簡稱必須是『年份＋半形空格＋簡稱』：{code} / {short_name or '（空白）'}")
         if code[1:3] != year[-2:]:
             raise SystemExit(f"賽事代號年份與欄位不符：{code} / {year} / {name}")
         if name in by_name or code in by_code:
@@ -721,9 +723,12 @@ def build(check_only=False, fail_on_warnings=False):
         for item in collection:
             item["competitionCode"] = competition_registry[item["competitionName"]]["code"]
     for name in sorted(all_names, key=str.lower):
-        event_metadata.setdefault(name, {})["competitionCode"] = competition_registry[name]["code"]
+        metadata = event_metadata.setdefault(name, {})
+        metadata["competitionCode"] = competition_registry[name]["code"]
+        metadata["shortName"] = competition_registry[name]["shortName"]
     for event in upcoming_events:
         event["competitionCode"] = competition_registry[event["name"]]["code"]
+        event["shortName"] = competition_registry[event["name"]]["shortName"]
 
     if check_only:
         events = event_names(records, honors, topics)
@@ -762,7 +767,7 @@ def build(check_only=False, fail_on_warnings=False):
         "eventMetadata": event_metadata,
         "eventRosters": event_rosters,
         "competitionRegistry": [
-            {"code": row["code"], "name": row["name"], "year": row["year"], "status": row["status"]}
+            {"code": row["code"], "name": row["name"], "shortName": row["shortName"], "year": row["year"], "status": row["status"]}
             for row in competition_registry.values()
         ],
     }
