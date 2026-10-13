@@ -336,6 +336,25 @@ test("event summaries do not show unknown teams or matches as zero and avoid rep
   assert.match(target.innerHTML, /尚無公開戰果/);
 });
 
+test("event summaries disclose when the event range comes from recorded rows", () => {
+  const event = {
+    ...events[0],
+    metadata: {
+      startDate: "2026-08-01",
+      endDate: "2026-08-02",
+      dateBasisNote: "日期依已收錄戰績／榮譽整理",
+    },
+  };
+  const dependencies = eventPageDependencies();
+  dependencies.getEvents = () => [event];
+  const pages = loadEventPages().DebateEventPages.createEventPages(dependencies);
+  const target = dependencies.els.eventPageDetail;
+
+  pages.renderEvent(event.name, target);
+
+  assert.match(target.innerHTML, /class="event-date-basis">日期依已收錄戰績／榮譽整理<\/small>/);
+});
+
 test("event detail pages escape untrusted names, notes, topics, and roster text", () => {
   const payload = '\"><img src=x onerror=alert(1)>';
   const maliciousEvent = {

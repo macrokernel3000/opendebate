@@ -367,6 +367,35 @@ def load_event_metadata():
         return metadata
 
 
+def known_event_date_bounds(records, honors):
+    """Return min/max full dates seen in public match and honor rows per event."""
+    dates_by_event = {}
+    for item in [*records, *honors]:
+        competition = clean(item.get("competitionName"))
+        match_date = clean(item.get("matchDate"))
+        if competition and re.fullmatch(r"\d{4}-\d{2}-\d{2}", match_date):
+            dates_by_event.setdefault(competition, []).append(match_date)
+    return {
+        competition: {"startDate": min(dates), "endDate": max(dates)}
+        for competition, dates in dates_by_event.items()
+    }
+
+
+def apply_event_date_fallback(event_metadata, known_date_bounds):
+    """Fill missing event dates from known rows without overwriting official metadata."""
+    for competition, bounds in known_date_bounds.items():
+        metadata = event_metadata.setdefault(competition, {})
+        derived_fields = []
+        for field in ("startDate", "endDate"):
+            if not clean(metadata.get(field)):
+                metadata[field] = bounds[field]
+                derived_fields.append(field)
+        if derived_fields:
+            metadata["derivedDateFields"] = derived_fields
+            metadata["dateBasisNote"] = "日期依已收錄戰績／榮譽整理"
+    return event_metadata
+
+
 def load_event_rosters():
     """Load published team rosters separately from confirmed match appearances."""
     if not EVENT_ROSTERS_PATH.exists():
@@ -506,6 +535,10 @@ def validate_honor_teams(records, honors, event_rosters, registry_entries):
 
 def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
     return data_validation_module.validate_event_metadata_dates(path, checked_date)
+
+
+def validate_event_metadata_coverage(event_metadata, known_date_bounds):
+    return data_validation_module.validate_event_metadata_coverage(event_metadata, known_date_bounds)
 
 
 def entity_base_name(name):
@@ -656,6 +689,9 @@ def build(check_only=False, fail_on_warnings=False):
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    known_date_bounds = known_event_date_bounds(records, honors)
+    validate_event_metadata_coverage(event_metadata, known_date_bounds)
+    apply_event_date_fallback(event_metadata, known_date_bounds)
     competition_registry = load_competition_registry()
     registry_names = set(competition_registry)
     all_names = set(event_names(records, honors, topics)) | set(event_metadata)
