@@ -122,6 +122,7 @@ def build_catalog(public_data):
         if item.get("competitionName", "").strip()
     }
     names.update(name for name in rosters if name)
+    names.update(name for name in metadata if name)
 
     missing_codes = sorted(name for name in names if not registry.get(name, {}).get("code"))
     if missing_codes:

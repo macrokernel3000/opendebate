@@ -59,6 +59,25 @@ class IOSPublicFeedTests(unittest.TestCase):
         self.assertEqual(first["publicIndex"]["records"][0]["affirmativeEntityID"], "")
         self.assertRegex(first["publicIndex"]["sourceSHA256"], r"^[0-9a-f]{64}$")
 
+    def test_metadata_only_future_event_enters_catalog_with_schedule_dates(self):
+        sample = self.sample()
+        sample["eventMetadata"]["未來盃"] = {
+            "competitionCode": "C2602",
+            "startDate": "2026-12-05",
+            "endDate": "2026-12-06",
+        }
+        sample["competitionRegistry"].append({
+            "code": "C2602", "name": "未來盃", "year": "2026", "status": "upcoming",
+        })
+
+        catalog = ios_public_feed.build_catalog(sample)
+        future = next(event for event in catalog["events"] if event["name"] == "未來盃")
+
+        self.assertEqual(future["startDate"], "2026-12-05")
+        self.assertEqual(future["endDate"], "2026-12-06")
+        self.assertEqual(future["recordCount"], 0)
+        self.assertEqual(future["honorCount"], 0)
+
     def test_omits_incomplete_topic_and_honor_rows(self):
         sample = self.sample()
         sample["topics"].append({"competitionName": "測試盃", "topic": ""})

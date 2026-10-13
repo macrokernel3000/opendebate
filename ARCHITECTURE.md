@@ -42,7 +42,7 @@
 5. 產生網站唯一讀取的 `data/public-data.js`。
 6. 產生 `data/update-report.txt`，記錄時間、來源、賽事數量與警告。
 7. 更新 `index.html` 的資源版本，避免瀏覽器讀到舊快取。
-8. 由同一份已驗證 payload 產生 `data/ios/v1/catalog.json` 與 `manifest.json`。這是原生 App 的唯讀公開更新來源；manifest 保存內容版本、SHA-256、bytes 與筆數，App 驗證完整後才整包啟用。它不含會員帳號、私人紀錄或 Sites／D1 資料。
+8. 由同一份已驗證 payload 產生 `data/ios/v1/catalog.json` 與 `manifest.json`。catalog 包含已有戰績／榮譽／辯題／名單的賽事，也包含已登錄 metadata 的未來賽事，讓尚無賽果的公開排程仍有穩定代號與日期。這是原生 App 的唯讀公開更新來源；manifest 保存內容版本、SHA-256、bytes 與筆數，App 驗證完整後才整包啟用。它不含會員帳號、私人紀錄或 Sites／D1 資料。
 
 `.github/workflows/check-data.yml` 會在相關資料、程式或流程變更時先執行唯讀預檢，再於 CI 工作區重建網站產物，並比對已提交產物是否仍由 repo 內來源正確生成；比對會忽略建置時間、快取版本及行事曆時間戳。若有實質差異，檢查會指出檔名並要求一併提交更新後的生成檔。流程最後執行前端與 Python 單元測試。Google 試算表專用 PR 例外：生成資料來自即時下載的 XLSX，因此由試算表 workflow 自己完成 XLSX 預檢與重建，不能拿 repo 內 CSV 作錯誤的基準；該流程在生成變更後開啟待審查 PR。
 

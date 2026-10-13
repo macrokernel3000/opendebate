@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "cc3e63f1a5146bcda57c927b342f4779a96a3149c37adc8a319f393dd1eb04d7",
-  "generatedAt": "2026-10-13T14:52:09",
+  "datasetVersion": "6abd874a3dc763def8f179ddb7856aacb6e9067749bb3c324ac27e35121dae81",
+  "generatedAt": "2026-10-13T14:54:25",
   "events": [
     {
       "id": "C1201",
@@ -6115,6 +6115,25 @@
       ]
     },
     {
+      "id": "C2617",
+      "name": "第十三屆椰風盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-27",
+      "location": "國立臺南女子高級中學",
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": "臺南女中演說辯論社",
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": true,
+      "topics": [],
+      "honors": [],
+      "teams": []
+    },
+    {
       "id": "C2618",
       "name": "2026西灣盃全國高中職辯論賽",
       "aliases": [],
@@ -6568,6 +6587,82 @@
         "高雄中學",
         "鳳山高中"
       ]
+    },
+    {
+      "id": "C2621",
+      "name": "第二十九屆鳳凰盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-27",
+      "location": null,
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": []
+    },
+    {
+      "id": "C2622",
+      "name": "第二十屆北區聯合新生盃辯論比賽",
+      "aliases": [],
+      "startDate": "2026-10-31",
+      "endDate": "2026-11-01",
+      "location": "臺北市立景美女子高級中學",
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": "賽事官方 Facebook 參賽隊伍名單公告明載比賽地點為臺北市立景美女子高級中學。會後公告確認賽期與更新時段；第二時段由原 13:00–15:00 更正為 12:30–14:30。辯題與主辦單位尚無可追溯來源，故留白。來源：；場地來源：",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": []
+    },
+    {
+      "id": "C2623",
+      "name": "第八屆惠蓀盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-06",
+      "location": null,
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": []
+    },
+    {
+      "id": "C2624",
+      "name": "第十八屆叡德盃全國高中職辯論比賽",
+      "aliases": [],
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "location": null,
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": null,
+      "executionUnit": null,
+      "note": null,
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": []
     },
     {
       "id": "C2625",
@@ -7266,6 +7361,25 @@
         "竹科實中B",
         "陽交附中"
       ]
+    },
+    {
+      "id": "C2632",
+      "name": "2026 全國大專院校法律系辯論公開賽",
+      "aliases": [],
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-06",
+      "location": "國立政治大學（臺北市文山區指南路二段64號）",
+      "recordCount": 0,
+      "honorCount": 0,
+      "teamCount": 0,
+      "organizer": "國立政治大學演說辯論社",
+      "executionUnit": null,
+      "note": "協辦單位：CDPA 中華辯論推廣協進會。參賽資格以大專院校在學學生及簡章所列法律系或法律課程資格為準。簡章規劃上限12隊，此為錄取名額上限，不代表實際參賽隊伍或已公布名單。辯題將於第一次領隊會議前公布。本站目前只收錄本賽事未來時程及公開公告，不收錄大專組賽果。正式簡章公告：；完整簡章：；報名表：",
+      "awardSelectionCriteria": null,
+      "ageRestriction": null,
+      "topics": [],
+      "honors": [],
+      "teams": []
     }
   ],
   "matches": [
@@ -22969,7 +23083,7 @@
   ],
   "publicIndex": {
     "schemaVersion": 1,
-    "generatedAt": "2026-10-13T14:52:09",
+    "generatedAt": "2026-10-13T14:54:25",
     "sourceSHA256": "b4599657d37495761c740f46b91595c44ffafe8343cac266b5c6ac06738a106d",
     "entities": [
       {

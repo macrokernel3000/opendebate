@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-13T14:52:09",
+  "generatedAt": "2026-10-13T14:54:25",
   "sources": [
     "public-data-所有賽事.csv",
     "event-rosters.csv",
