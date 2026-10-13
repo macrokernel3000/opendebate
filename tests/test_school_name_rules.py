@@ -36,7 +36,7 @@ class SchoolNameRulesTest(unittest.TestCase):
         }
         expected_codes = {"s046", "s107"}
         seen = set()
-        for path in ROOT.glob("data/public-data*.csv"):
+        for path in [ROOT / "data/public-data-所有賽事.csv"]:
             for row in read_csv(path):
                 values = {row.get("正方學校", ""), row.get("反方學校", ""), row.get("所屬學校", ""), row.get("獲獎者", "")}
                 if "東山高中" not in values:

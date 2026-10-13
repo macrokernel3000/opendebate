@@ -223,6 +223,26 @@ def validate_event_metadata_dates(path, checked_date):
                 raise SystemExit(f"資料錯誤：{path.name} 第 {line_number} 列結束日期早於開始日期：{event_name}。")
 
 
+def validate_event_metadata_coverage(event_metadata, known_date_bounds):
+    """Reject explicit event ranges that exclude a known match or honor date."""
+    for event_name, bounds in known_date_bounds.items():
+        metadata = event_metadata.get(event_name, {})
+        start = clean(metadata.get("startDate"))
+        end = clean(metadata.get("endDate"))
+        earliest = bounds.get("startDate", "")
+        latest = bounds.get("endDate", "")
+        if len(start) == 10 and earliest and start > earliest:
+            raise SystemExit(
+                f"資料錯誤：event-metadata.csv 的「{event_name}」開始日期 {start} "
+                f"晚於已收錄場次／榮譽的最早日期 {earliest}。"
+            )
+        if len(end) == 10 and latest and end < latest:
+            raise SystemExit(
+                f"資料錯誤：event-metadata.csv 的「{event_name}」結束日期 {end} "
+                f"早於已收錄場次／榮譽的最晚日期 {latest}。"
+            )
+
+
 def validate_best_debater_categories(records, honors, warn):
     match_counts = {}
     for record in records:

@@ -238,7 +238,7 @@
       target.innerHTML = `
         <button class="event-back-button" type="button" data-detail-back>← 返回上一頁</button>
         <div class="event-summary">
-          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事紀錄"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${escapeHtml(formatEventDateRange(event.metadata.startDate, event.metadata.endDate, event.dates))}</p></div>
+          <div><p class="kicker">${event.competitionCode ? `賽事代號 ${escapeHtml(event.competitionCode)}` : "賽事紀錄"}</p><h${titleLevel}>${escapeHtml(event.name)}</h${titleLevel}><p>${escapeHtml(formatEventDateRange(event.metadata.startDate, event.metadata.endDate, event.dates))}</p>${event.metadata.dateBasisNote ? `<small class="event-date-basis">${escapeHtml(event.metadata.dateBasisNote)}</small>` : ""}</div>
           ${eventSummaryCounts ? `<div class="event-summary-count">${eventSummaryCounts}</div>` : ""}
         </div>
         ${topicSection}

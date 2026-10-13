@@ -21,6 +21,7 @@ SCHOOL_ENDINGS = entity_registry_module.SCHOOL_ENDINGS
 KNOWN_SCHOOL_SHORT_NAMES = entity_registry_module.KNOWN_SCHOOL_SHORT_NAMES
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / "data"
+MASTER_DATA_PATH = DATA_DIR / "public-data-所有賽事.csv"
 JS_PATH = DATA_DIR / "public-data.js"
 REGISTRY_PATH = DATA_DIR / "entity-registry.csv"
 REGISTRY_XLSX_PATH = DATA_DIR / "entity-registry.xlsx"
@@ -231,6 +232,11 @@ def parse_rows(rows, source_name, default_competition=""):
                     "negative": split_players(row.get("反方登場選手")),
                 },
             }
+            explicit_id = clean(row.get("資料ID"))
+            if explicit_id:
+                if not re.fullmatch(r"match-[0-9a-f]{12}", explicit_id):
+                    raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列的資料ID格式無效：{explicit_id}。")
+                record["_explicitID"] = explicit_id
             group_name = clean(row.get("分組名稱"))
             inference_note = clean(row.get("推定依據"))
             if group_name:
@@ -259,6 +265,11 @@ def parse_rows(rows, source_name, default_competition=""):
                 "_source": source_name,
                 "_row": line_number,
             }
+            explicit_id = clean(row.get("資料ID"))
+            if explicit_id:
+                if not re.fullmatch(r"honor-[0-9a-f]{12}", explicit_id):
+                    raise SystemExit(f"資料錯誤：{source_name} 第 {line_number} 列的資料ID格式無效：{explicit_id}。")
+                honor["_explicitID"] = explicit_id
             honor_level = clean(row.get("榮譽層級"))
             if honor_level:
                 honor["honorLevel"] = honor_level
@@ -354,6 +365,35 @@ def load_event_metadata():
                 item["brochureTeamLimit"] = team_limit
             metadata[competition] = item
         return metadata
+
+
+def known_event_date_bounds(records, honors):
+    """Return min/max full dates seen in public match and honor rows per event."""
+    dates_by_event = {}
+    for item in [*records, *honors]:
+        competition = clean(item.get("competitionName"))
+        match_date = clean(item.get("matchDate"))
+        if competition and re.fullmatch(r"\d{4}-\d{2}-\d{2}", match_date):
+            dates_by_event.setdefault(competition, []).append(match_date)
+    return {
+        competition: {"startDate": min(dates), "endDate": max(dates)}
+        for competition, dates in dates_by_event.items()
+    }
+
+
+def apply_event_date_fallback(event_metadata, known_date_bounds):
+    """Fill missing event dates from known rows without overwriting official metadata."""
+    for competition, bounds in known_date_bounds.items():
+        metadata = event_metadata.setdefault(competition, {})
+        derived_fields = []
+        for field in ("startDate", "endDate"):
+            if not clean(metadata.get(field)):
+                metadata[field] = bounds[field]
+                derived_fields.append(field)
+        if derived_fields:
+            metadata["derivedDateFields"] = derived_fields
+            metadata["dateBasisNote"] = "日期依已收錄戰績／榮譽整理"
+    return event_metadata
 
 
 def load_event_rosters():
@@ -459,11 +499,10 @@ def source_files():
                 path = ROOT / path
             paths.append(path)
         return paths
-    csv_files = sorted(DATA_DIR.glob("public-data*.csv"), key=lambda path: path.name.lower())
-    # CSV is the canonical source. XLSX is intentionally opt-in through
-    # PUBLIC_DATA_SOURCE so an old workbook cannot silently override or
-    # duplicate the maintained CSV dataset.
-    return csv_files
+    # The consolidated CSV is the only maintained public result source.
+    # Archived per-event files are intentionally outside the default path so
+    # stale and corrected copies cannot both be loaded into the website.
+    return [MASTER_DATA_PATH] if MASTER_DATA_PATH.exists() else []
 
 
 def deduplicate(items):
@@ -496,6 +535,10 @@ def validate_honor_teams(records, honors, event_rosters, registry_entries):
 
 def validate_event_metadata_dates(path=EVENT_METADATA_PATH):
     return data_validation_module.validate_event_metadata_dates(path, checked_date)
+
+
+def validate_event_metadata_coverage(event_metadata, known_date_bounds):
+    return data_validation_module.validate_event_metadata_coverage(event_metadata, known_date_bounds)
 
 
 def entity_base_name(name):
@@ -612,7 +655,7 @@ def build(check_only=False, fail_on_warnings=False):
     WARNINGS.clear()
     paths = source_files()
     if not paths:
-        raise SystemExit("找不到資料檔：請在 data 資料夾放入 public-data 開頭的 .xlsx 或 .csv")
+        raise SystemExit(f"找不到資料總表：{MASTER_DATA_PATH.relative_to(ROOT)}")
     records, honors, topics, sources = [], [], [], []
     for path in paths:
         loader = load_xlsx if path.suffix.lower() == ".xlsx" else load_csv
@@ -646,6 +689,9 @@ def build(check_only=False, fail_on_warnings=False):
     validate_best_debater_categories(records, honors)
     site_content = load_site_content()
     event_metadata = load_event_metadata()
+    known_date_bounds = known_event_date_bounds(records, honors)
+    validate_event_metadata_coverage(event_metadata, known_date_bounds)
+    apply_event_date_fallback(event_metadata, known_date_bounds)
     competition_registry = load_competition_registry()
     registry_names = set(competition_registry)
     all_names = set(event_names(records, honors, topics)) | set(event_metadata)
