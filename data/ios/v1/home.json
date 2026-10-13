@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-13T17:55:39",
+  "generatedAt": "2026-10-13T18:10:47",
   "recentYears": [
     "2025",
     "2026"
@@ -4165,6 +4165,14 @@
               "date": "2025-03-01"
             },
             {
+              "id": "honor-9964ad713beb",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "殿軍",
+              "recipient": "南山高中",
+              "date": "2024-11-10"
+            },
+            {
               "id": "honor-8ef3932e9fd0",
               "eventId": "C2405",
               "eventName": "第十五屆明京盃全國高中職辯論比賽",
@@ -4195,14 +4203,6 @@
               "name": "冠軍",
               "recipient": "南山高中",
               "date": "2023-12-17"
-            },
-            {
-              "id": "honor-9964ad713beb",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "殿軍",
-              "recipient": "南山高中",
-              "date": ""
             },
             {
               "id": "honor-214799e75736",
@@ -5240,7 +5240,7 @@
               "eventName": "第一屆幽墨盃全國高中職辯論比賽",
               "name": "季軍",
               "recipient": "中和高中",
-              "date": ""
+              "date": "2024-11-10"
             }
           ]
         },
@@ -5257,6 +5257,14 @@
           "other": 0,
           "awards": [
             {
+              "id": "honor-6dd39482d821",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "亞軍",
+              "recipient": "中山高中",
+              "date": "2024-11-10"
+            },
+            {
               "id": "honor-1434e3e63e94",
               "eventId": "C2405",
               "eventName": "第十五屆明京盃全國高中職辯論比賽",
@@ -5271,14 +5279,6 @@
               "name": "冠軍",
               "recipient": "中山高中",
               "date": "2024-05-26"
-            },
-            {
-              "id": "honor-6dd39482d821",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "亞軍",
-              "recipient": "中山高中",
-              "date": ""
             }
           ]
         },
@@ -5656,7 +5656,7 @@
               "eventName": "第一屆幽墨盃全國高中職辯論比賽",
               "name": "冠軍",
               "recipient": "新竹女中",
-              "date": ""
+              "date": "2024-11-10"
             },
             {
               "id": "honor-584704b5a6cb",
@@ -6611,6 +6611,14 @@
               "date": "2025-03-01"
             },
             {
+              "id": "honor-346917a1d4ab",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "全程最佳小丑",
+              "recipient": "劉哲安",
+              "date": "2024-11-10"
+            },
+            {
               "id": "honor-b350e43b7d15",
               "eventId": "C2407",
               "eventName": "第三十五屆蘇州盃高中職辯論錦標賽",
@@ -6649,14 +6657,6 @@
               "name": "全程優秀辯士",
               "recipient": "馬郁晴",
               "date": "2024-05-20"
-            },
-            {
-              "id": "honor-346917a1d4ab",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "全程最佳小丑",
-              "recipient": "劉哲安",
-              "date": ""
             }
           ]
         },
@@ -7179,20 +7179,20 @@
           "other": 0,
           "awards": [
             {
+              "id": "honor-3badcb85cf6c",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "全程最佳辯士",
+              "recipient": "林華慈",
+              "date": "2024-11-10"
+            },
+            {
               "id": "honor-91ee3f9c8f3c",
               "eventId": "C2402",
               "eventName": "第一屆青雲盃全國高中職辯論錦標賽",
               "name": "全程最佳辯士",
               "recipient": "林華慈",
               "date": "2024-05-26"
-            },
-            {
-              "id": "honor-3badcb85cf6c",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "全程最佳辯士",
-              "recipient": "林華慈",
-              "date": ""
             }
           ]
         },
@@ -8093,6 +8093,14 @@
               "date": "2026-09-26"
             },
             {
+              "id": "honor-bd280aa260a6",
+              "eventId": "C2409",
+              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
+              "name": "您辛苦了",
+              "recipient": "南山高中",
+              "date": "2024-11-10"
+            },
+            {
               "id": "honor-4f3fcf3f5340",
               "eventId": "C2405",
               "eventName": "第十五屆明京盃全國高中職辯論比賽",
@@ -8115,14 +8123,6 @@
               "name": "最佳辯士",
               "recipient": "張曦之",
               "date": "2023-12-17"
-            },
-            {
-              "id": "honor-bd280aa260a6",
-              "eventId": "C2409",
-              "eventName": "第一屆幽墨盃全國高中職辯論比賽",
-              "name": "您辛苦了",
-              "recipient": "南山高中",
-              "date": ""
             }
           ]
         },
@@ -8548,7 +8548,7 @@
               "eventName": "第一屆幽墨盃全國高中職辯論比賽",
               "name": "我們都很棒",
               "recipient": "新竹女中",
-              "date": ""
+              "date": "2024-11-10"
             }
           ]
         },

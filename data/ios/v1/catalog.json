@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "f1d4d3e743c80fb820f582d1c6c9cef80b8a4db815fef5305ccf30735539a8d7",
-  "generatedAt": "2026-10-13T17:55:39",
+  "datasetVersion": "a774e2a07c3a591dc9faf4c78c86b2fb0149b62dbace1dc915b365005510d11e",
+  "generatedAt": "2026-10-13T18:10:47",
   "events": [
     {
       "id": "C1201",
@@ -2264,18 +2264,24 @@
       "name": "第一屆幽墨盃全國高中職辯論比賽",
       "shortName": "2024 幽墨盃",
       "aliases": [],
-      "startDate": null,
-      "endDate": null,
-      "location": null,
+      "startDate": "2024-11-09",
+      "endDate": "2024-11-10",
+      "location": "東吳大學外雙溪校區",
       "recordCount": 17,
       "honorCount": 8,
       "teamCount": 17,
       "organizer": null,
-      "executionUnit": null,
-      "note": "來源：主辦方賽果與八強公告（2024-11-09）；最終賽果與獎項公告（2024-11-11）",
+      "executionUnit": "南山辯論隊",
+      "note": "秩序冊載明活動單位為南山辯論隊；贊助單位為民眾黨青年部、民進黨青年部、臺灣酒駕防制社會關懷協會。來源：秩序冊 ；主辦方賽果與八強公告（2024-11-09）；最終賽果與獎項公告（2024-11-11）",
       "awardSelectionCriteria": null,
       "ageRestriction": null,
-      "topics": [],
+      "topics": [
+        {
+          "id": "topic-deffa1d3d063",
+          "title": "面對現實中的不公，「用魔法打敗魔法」是／不是一種好的手段",
+          "explanation": null
+        }
+      ],
       "honors": [
         {
           "id": "honor-696d22cf9c56",
@@ -23691,9 +23697,9 @@
       "negative": "建國中學",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "1",
-      "venue": null
+      "venue": "1"
     },
     {
       "id": "match-1e01affb8e3a",
@@ -23702,9 +23708,9 @@
       "negative": "陳湘芸說得都隊",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "1",
-      "venue": null
+      "venue": "2"
     },
     {
       "id": "match-73198bae1f4f",
@@ -23713,9 +23719,9 @@
       "negative": "新竹女中",
       "affirmativeScore": 1,
       "negativeScore": 2,
-      "date": null,
+      "date": "2024-11-09",
       "period": "1",
-      "venue": null
+      "venue": "3"
     },
     {
       "id": "match-86ed40d8e62d",
@@ -23724,9 +23730,9 @@
       "negative": "中山女高",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "1",
-      "venue": null
+      "venue": "4"
     },
     {
       "id": "match-a3555d9c2874",
@@ -23735,9 +23741,9 @@
       "negative": "嘉e火雞肉飯",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "1",
-      "venue": null
+      "venue": "5"
     },
     {
       "id": "match-2f915e8e8713",
@@ -23746,9 +23752,9 @@
       "negative": "中和高中",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "1"
     },
     {
       "id": "match-f978939c0f8a",
@@ -23757,9 +23763,9 @@
       "negative": "南湖訊號一格",
       "affirmativeScore": 1,
       "negativeScore": 2,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "2"
     },
     {
       "id": "match-1622e29456bc",
@@ -23768,9 +23774,9 @@
       "negative": "永平高中",
       "affirmativeScore": 1,
       "negativeScore": 2,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "3"
     },
     {
       "id": "match-e9c15043bfc7",
@@ -23779,9 +23785,9 @@
       "negative": "內湖高中",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "4"
     },
     {
       "id": "match-5f045bea8105",
@@ -23790,9 +23796,9 @@
       "negative": "南湖水樂園",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "5"
     },
     {
       "id": "match-eb59bcb0eefe",
@@ -23801,9 +23807,9 @@
       "negative": "萬芳高中",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "2",
-      "venue": null
+      "venue": "6"
     },
     {
       "id": "match-63911bd02714",
@@ -23812,9 +23818,9 @@
       "negative": "南山高中",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "1"
     },
     {
       "id": "match-9fe4ca7a18fd",
@@ -23823,9 +23829,9 @@
       "negative": "明倫高中",
       "affirmativeScore": 2,
       "negativeScore": 1,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "2"
     },
     {
       "id": "match-6d17dc19eb39",
@@ -23834,9 +23840,9 @@
       "negative": "我的學測幽默了",
       "affirmativeScore": 1,
       "negativeScore": 2,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "3"
     },
     {
       "id": "match-88d51db695f7",
@@ -23845,9 +23851,9 @@
       "negative": "麗山高中",
       "affirmativeScore": 1,
       "negativeScore": 2,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "4"
     },
     {
       "id": "match-616ad9f3bb92",
@@ -23856,9 +23862,9 @@
       "negative": "中山高中",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "5"
     },
     {
       "id": "match-743b1a7a2c9d",
@@ -23867,15 +23873,15 @@
       "negative": "政大附中",
       "affirmativeScore": 0,
       "negativeScore": 3,
-      "date": null,
+      "date": "2024-11-09",
       "period": "3",
-      "venue": null
+      "venue": "6"
     }
   ],
   "publicIndex": {
     "schemaVersion": 1,
-    "generatedAt": "2026-10-13T17:55:39",
-    "sourceSHA256": "ac3ea2351671329094b59549f18c5c63baa38fa4ae0dc35cbfe9ee007fa6e4a0",
+    "generatedAt": "2026-10-13T18:10:47",
+    "sourceSHA256": "c2506b5feccc6cffbbfdd704ecdc49012e72745ee045b5ab4e2adbf708a7586d",
     "entities": [
       {
         "id": "p001",
@@ -39470,6 +39476,12 @@
         "id": "topic-3a54fef3dd98",
         "title": "現代社會中，標籤化（如MBTI、世代標籤）的盛行更有助於／有礙於人與人的溝通",
         "competitionName": "蒙泉盃全國高中職辯論比賽",
+        "explanation": ""
+      },
+      {
+        "id": "topic-deffa1d3d063",
+        "title": "面對現實中的不公，「用魔法打敗魔法」是／不是一種好的手段",
+        "competitionName": "第一屆幽墨盃全國高中職辯論比賽",
         "explanation": ""
       }
     ],
