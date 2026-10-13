@@ -396,6 +396,22 @@ def apply_event_date_fallback(event_metadata, known_date_bounds):
     return event_metadata
 
 
+def apply_upcoming_event_dates(event_metadata, upcoming_events):
+    """Use the public schedule for missing future-event catalog dates."""
+    for event in upcoming_events:
+        competition = clean(event.get("name"))
+        if not competition:
+            continue
+        metadata = event_metadata.setdefault(competition, {})
+        start = clean(event.get("startDate"))
+        end = clean(event.get("endDate")) or start
+        if not clean(metadata.get("startDate")) and start:
+            metadata["startDate"] = start
+        if not clean(metadata.get("endDate")) and end:
+            metadata["endDate"] = end
+    return event_metadata
+
+
 def load_event_rosters():
     """Load published team rosters separately from confirmed match appearances."""
     if not EVENT_ROSTERS_PATH.exists():
@@ -692,10 +708,11 @@ def build(check_only=False, fail_on_warnings=False):
     known_date_bounds = known_event_date_bounds(records, honors)
     validate_event_metadata_coverage(event_metadata, known_date_bounds)
     apply_event_date_fallback(event_metadata, known_date_bounds)
+    upcoming_events = read_upcoming_events()
+    apply_upcoming_event_dates(event_metadata, upcoming_events)
     competition_registry = load_competition_registry()
     registry_names = set(competition_registry)
     all_names = set(event_names(records, honors, topics)) | set(event_metadata)
-    upcoming_events = read_upcoming_events()
     all_names.update(event.get("name", "") for event in upcoming_events if event.get("name"))
     missing_codes = sorted(all_names - registry_names)
     if missing_codes:

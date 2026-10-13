@@ -1,6 +1,6 @@
 window.DEBATE_PUBLIC_DATA = {
   "schemaVersion": 5,
-  "generatedAt": "2026-10-13T14:46:34",
+  "generatedAt": "2026-10-13T14:52:09",
   "sources": [
     "public-data-所有賽事.csv",
     "event-rosters.csv",
@@ -3067,21 +3067,29 @@ window.DEBATE_PUBLIC_DATA = {
       "ageRestriction": null
     },
     "2026核能公投盃全國高中職辯論比賽": {
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-08",
       "competitionCode": "C2620"
     },
+    "第十八屆叡德盃全國高中職辯論比賽": {
+      "startDate": "2026-11-14",
+      "endDate": "2026-11-15",
+      "competitionCode": "C2624"
+    },
+    "第八屆惠蓀盃全國高中職辯論比賽": {
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-06",
+      "competitionCode": "C2623"
+    },
     "第二十九屆鳳凰盃全國高中職辯論比賽": {
+      "startDate": "2026-12-26",
+      "endDate": "2026-12-27",
       "competitionCode": "C2621"
     },
     "第二十八屆鳳凰盃全國高中職辯論比賽": {
       "competitionCode": "C2517",
       "teamCount": 0,
       "ageRestriction": null
-    },
-    "第八屆惠蓀盃全國高中職辯論比賽": {
-      "competitionCode": "C2623"
-    },
-    "第十八屆叡德盃全國高中職辯論比賽": {
-      "competitionCode": "C2624"
     }
   },
   "eventRosters": {

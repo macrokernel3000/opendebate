@@ -137,6 +137,23 @@ class BuildDataTests(unittest.TestCase):
         )
         self.assertEqual(bounds, {})
 
+    def test_upcoming_schedule_fills_catalog_dates_without_overwriting_metadata(self):
+        metadata = {
+            "未來盃": {},
+            "官方較寬盃": {"startDate": "2026-12-04", "endDate": "2026-12-07"},
+        }
+        upcoming = [
+            {"name": "未來盃", "startDate": "2026-12-05", "endDate": "2026-12-06"},
+            {"name": "官方較寬盃", "startDate": "2026-12-05", "endDate": "2026-12-06"},
+        ]
+
+        build_data.apply_upcoming_event_dates(metadata, upcoming)
+
+        self.assertEqual(metadata["未來盃"]["startDate"], "2026-12-05")
+        self.assertEqual(metadata["未來盃"]["endDate"], "2026-12-06")
+        self.assertEqual(metadata["官方較寬盃"]["startDate"], "2026-12-04")
+        self.assertEqual(metadata["官方較寬盃"]["endDate"], "2026-12-07")
+
     def test_number_normalizes_numeric_values(self):
         self.assertEqual(build_data.number("12.0"), 12)
         self.assertEqual(build_data.number("3.5"), 3.5)

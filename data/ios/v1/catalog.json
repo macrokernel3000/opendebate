@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "1d67df51cffcf4996453b87f74d6d3f98df5fe5ca8da9dd6d42f4377784ed40b",
-  "generatedAt": "2026-10-13T14:46:34",
+  "datasetVersion": "cc3e63f1a5146bcda57c927b342f4779a96a3149c37adc8a319f393dd1eb04d7",
+  "generatedAt": "2026-10-13T14:52:09",
   "events": [
     {
       "id": "C1201",
@@ -6529,8 +6529,8 @@
       "id": "C2620",
       "name": "2026核能公投盃全國高中職辯論比賽",
       "aliases": [],
-      "startDate": null,
-      "endDate": null,
+      "startDate": "2026-11-07",
+      "endDate": "2026-11-08",
       "location": null,
       "recordCount": 0,
       "honorCount": 0,
@@ -22969,7 +22969,7 @@
   ],
   "publicIndex": {
     "schemaVersion": 1,
-    "generatedAt": "2026-10-13T14:46:34",
+    "generatedAt": "2026-10-13T14:52:09",
     "sourceSHA256": "b4599657d37495761c740f46b91595c44ffafe8343cac266b5c6ac06738a106d",
     "entities": [
       {
