@@ -3,470 +3,96 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="公開辯論資訊網整理台灣高中辯論賽事、逐場辯論戰績、學校勝場與公開榮譽，提供依已收錄公開資料整理的辯論積分與排行榜查詢。" />
-  <meta name="keywords" content="辯論,辯論比賽,高中辯論,高中職辯論,辯論積分,辯論賽事,辯論戰績,辯題,台灣辯論" />
-  <meta name="author" content="公開辯論資訊網" />
-  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
-  <link rel="canonical" href="https://macrokernel3000.github.io/opendebate/" />
-  <link rel="sitemap" type="application/xml" href="https://macrokernel3000.github.io/opendebate/sitemap.xml" />
-  <link rel="alternate" type="text/plain" href="llms.txt" title="公開辯論資訊網 AI 閱讀說明" />
-  <meta property="og:locale" content="zh_TW" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="公開辯論資訊網" />
-  <meta property="og:title" content="公開辯論資訊網｜台灣高中辯論戰績資料庫" />
-  <meta property="og:description" content="查詢台灣高中職辯論比賽、逐場辯論戰績、學校勝場、辯論積分、公開榮譽與歷屆辯題。" />
-  <meta property="og:url" content="https://macrokernel3000.github.io/opendebate/" />
-  <meta property="og:image" content="https://macrokernel3000.github.io/opendebate/assets/debate-banner.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="icon" type="image/png" sizes="512x512" href="assets/site-logo-512.png" />
-  <title>公開辯論資訊網｜台灣高中辯論戰績資料庫</title>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "name": "公開辯論資訊網",
-        "alternateName": ["台灣辯論資料庫", "高中辯論資訊網", "辯論戰績資料庫", "辯論積分網"],
-        "url": "https://macrokernel3000.github.io/opendebate/",
-        "image": "https://macrokernel3000.github.io/opendebate/assets/site-logo-512.png",
-        "inLanguage": "zh-Hant-TW",
-        "description": "整理台灣高中辯論比賽、逐場辯論戰績、學校勝場、辯論積分、公開榮譽與辯題的公共資料庫。",
-        "potentialAction": {
-          "@type": "SearchAction",
-          "target": "https://macrokernel3000.github.io/opendebate/?q={search_term_string}",
-          "query-input": "required name=search_term_string"
-        }
-      },
-      {
-        "@type": "Dataset",
-        "name": "台灣高中辯論戰績與賽事資料",
-        "description": "依公開賽務資訊整理的台灣高中職辯論資料集，收錄歷屆賽事、逐場比分、正反方學校與隊伍、勝方、參賽場次、學校勝場、公開榮譽、選手及辯題，供查詢與研究參考。",
-        "url": "https://macrokernel3000.github.io/opendebate/",
-        "keywords": ["辯論", "辯論戰績", "辯論積分", "高中辯論", "辯論比賽", "辯題"],
-        "spatialCoverage": "Taiwan",
-        "inLanguage": "zh-Hant-TW",
-        "isAccessibleForFree": true,
-        "creator": {"@id": "https://macrokernel3000.github.io/opendebate/#organization"}
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://macrokernel3000.github.io/opendebate/#organization",
-        "name": "公開辯論資訊網",
-        "url": "https://macrokernel3000.github.io/opendebate/",
-        "logo": "https://macrokernel3000.github.io/opendebate/assets/site-logo-512.png"
-      }
-    ]
-  }
-  </script>
-  <link rel="stylesheet" href="styles.css?v=20261019160617" data-versioned-asset />
+  <meta name="robots" content="noindex, follow" />
+  <meta name="opendebate-site-state" content="v1-retired" />
+  <meta name="theme-color" content="#0f5d4a" />
+  <meta http-equiv="refresh" content="10; url=https://opendebate.kerneldebate.com/site/" />
+  <link rel="canonical" href="https://opendebate.kerneldebate.com/site/" />
+  <link rel="icon" href="assets/site-logo.svg" />
+  <title>公開辯論資訊網已移轉</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: ui-rounded, "SF Pro Rounded", "PingFang TC", "Noto Sans TC", sans-serif;
+      color: #113d32;
+      background: #f8f6ef;
+    }
+    * { box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background:
+        radial-gradient(circle at 14% 12%, rgba(255, 214, 74, .24), transparent 28rem),
+        radial-gradient(circle at 88% 88%, rgba(15, 93, 74, .16), transparent 30rem),
+        #f8f6ef;
+    }
+    main {
+      width: min(100%, 560px);
+      padding: clamp(28px, 7vw, 52px);
+      border: 1px solid rgba(15, 93, 74, .18);
+      border-radius: 28px;
+      background: rgba(255, 255, 255, .9);
+      box-shadow: 0 22px 70px rgba(17, 61, 50, .12);
+      text-align: center;
+    }
+    .logo {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: #8a6a18;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .18em;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 7vw, 42px);
+      line-height: 1.18;
+    }
+    p {
+      margin: 16px auto 24px;
+      color: #557068;
+      font-size: 17px;
+      line-height: 1.75;
+    }
+    a {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      padding: 0 28px;
+      border-radius: 999px;
+      color: #fff;
+      background: #0f7058;
+      font-size: 17px;
+      font-weight: 800;
+      text-decoration: none;
+      box-shadow: 0 6px 0 #0b4f40;
+    }
+    a:focus-visible { outline: 4px solid rgba(241, 196, 41, .65); outline-offset: 4px; }
+    small {
+      display: block;
+      margin-top: 24px;
+      color: #71827d;
+      line-height: 1.6;
+    }
+  </style>
+  <script src="js/v1-retirement-redirect.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#mainContent">跳到主要內容</a>
-  <header class="site-header">
-    <a id="homeBrand" class="brand" href="#home" aria-label="回到公開辯論資訊網首頁">
-      <span class="brand-mark" aria-hidden="true"><img src="assets/site-logo.svg" alt="" /></span>
-      <span>公開辯論資訊網</span>
-    </a>
-    <nav class="main-nav" aria-label="主要選單">
-      <button class="nav-button is-active" type="button" data-view="home"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m3 10 9-7 9 7M5.5 9v11h13V9M9 20v-6h6v6"/></svg><span>首頁</span></button>
-      <button class="nav-button" type="button" data-view="overview"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg><span>總覽</span></button>
-      <button class="nav-button" type="button" data-view="search"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg><span>搜尋</span></button>
-      <button class="nav-button" type="button" data-view="archive"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v4H4zM6 9v11h12V9M9 13h6M9 16h6"/></svg><span>建檔</span></button>
-      <button class="nav-button" type="button" data-view="reports"><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 18 6M8 6h10v10M5 5v14h14"/></svg><span>回報</span></button>
-    </nav>
-    <button id="mobileMenuToggle" class="mobile-menu-toggle" type="button" aria-label="開啟快捷選單" aria-expanded="false" aria-controls="mobileQuickMenu">
-      <span aria-hidden="true">☰</span>
-    </button>
-    <nav id="mobileQuickMenu" class="mobile-quick-menu" aria-label="快捷選單" hidden>
-      <button type="button" data-menu-view="home"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7M5.5 9v11h13V9M9 20v-6h6v6"/></svg></span>首頁</button>
-      <button type="button" data-menu-view="overview"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/></svg></span>比賽總覽</button>
-      <button type="button" data-menu-view="search"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></span>戰績搜尋</button>
-      <button type="button" data-menu-view="archive"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M4 5h16v4H4zM6 9v11h12V9M9 13h6M9 16h6"/></svg></span>辯論建檔</button>
-      <button type="button" data-menu-view="reports"><span aria-hidden="true"><svg class="nav-icon" viewBox="0 0 24 24"><path d="M7 17 18 6M8 6h10v10M5 5v14h14"/></svg></span>問題回報</button>
-      <small id="mobileMenuVersion" class="mobile-menu-version" aria-label="資料版本，載入後顯示已收錄賽事與行程數">v1.—.—</small>
-    </nav>
-  </header>
-
-  <aside id="siteUpdateNotice" class="site-update-notice" role="status" aria-live="polite" hidden>
-    <p>網站資料有新版本，重新載入即可查看最新內容。</p>
-    <button type="button" data-site-update-reload>重新載入</button>
-    <button type="button" class="site-update-dismiss" data-site-update-dismiss>稍後</button>
-  </aside>
-
-  <main id="mainContent" tabindex="-1">
-    <section id="homeView" class="view" data-view-panel="home">
-      <div class="mobile-home page-shell" aria-label="手機首頁快捷內容">
-        <section class="mobile-home-section mobile-home-results" aria-labelledby="mobileRecentTitle">
-          <div class="section-heading"><h1 id="mobileRecentTitle">已收錄 <span id="mobileEventCount">0</span> 場比賽與 <span id="mobileMatchCount">0</span> 場賽果</h1><span class="mobile-home-hint">左右滑動查看</span></div>
-          <div id="mobileRecentEvents" class="mobile-results-strip" aria-label="近期賽果，可左右滑動"></div>
-        </section>
-        <section class="mobile-home-search" aria-label="戰績搜尋入口">
-          <button type="button" data-go-search><span aria-hidden="true">⌕</span><span><strong>戰績搜尋</strong><small>選手・學校・隊伍・辯題</small></span><b aria-hidden="true">→</b></button>
-        </section>
-      </div>
-      <section class="timeline-band" aria-labelledby="timelineTitle">
-        <div class="page-shell">
-          <div class="section-heading">
-            <div><p class="kicker">賽事軌跡</p><h1 id="timelineTitle">近期盃賽時間軸</h1></div>
-            <p class="section-note">已收錄賽事可點選查看冠軍</p>
-          </div>
-          <div id="eventTimeline" class="event-timeline" aria-label="盃賽時間軸"></div>
-        </div>
-      </section>
-
-      <section class="stats-band" id="statsBand" aria-label="資料統計"></section>
-
-      <section class="page-shell collected-events" aria-labelledby="collectedEventsTitle">
-        <div class="section-heading">
-          <div><p class="kicker">資料庫</p><h2 id="collectedEventsTitle">已收錄賽事</h2></div>
-          <button class="text-link" type="button" data-go-events>進入賽事資料庫 →</button>
-        </div>
-        <div id="recentEvents" class="event-grid"></div>
-      </section>
-
-      <section class="page-shell upcoming-events-section" aria-labelledby="upcomingEventsTitle">
-        <div class="upcoming-section-heading">
-          <div class="section-heading"><div><p class="kicker">即將舉行</p><h2 id="upcomingEventsTitle">未來賽事與活動</h2></div></div>
-          <div class="calendar-link-section">
-            <a class="calendar-subscribe-button" data-calendar-subscribe href="webcal://macrokernel3000.github.io/opendebate/calendar.ics">行事曆｜測試版</a>
-            <p class="calendar-platform-note"><span>iOS：點擊即可訂閱</span><span>Android：依提示在 Google 日曆網頁版新增</span></p>
-          </div>
-        </div>
-        <div id="mobileUpcomingEvents" class="upcoming-events-grid" aria-label="未來賽事與活動"></div>
-      </section>
-
-      <section class="leaderboard-band" data-range="recent">
-        <div class="page-shell">
-          <h2 id="mobileHonorTitle" class="mobile-rankings-title">近年度榮譽榜</h2>
-          <div class="section-heading">
-            <div><p class="kicker">資料榜</p><h2>學校排行榜</h2></div>
-            <p class="section-note">依目前已收錄資料與積分歸戶統計</p>
-          </div>
-          <div class="leaderboard-controls"><span class="leaderboard-range-legend"><i aria-hidden="true"></i> 綠色：近兩個年度　<span aria-hidden="true">·</span>　金色：全部年度</span><button id="honorRangeToggle" class="honor-range-toggle" type="button" aria-pressed="false">目前：近年度　切換全年</button></div>
-          <article class="leaderboard-panel olympic-panel">
-            <h3><span id="honorLeaderboardTitle">近年度榮譽榜</span></h3>
-            <div class="mobile-olympic-filters" role="group" aria-label="榮譽類別篩選">
-              <button type="button" class="olympic-filter is-active" data-honor-filter="team" aria-pressed="true"><span class="trophy-medal gold">團</span>團體獎</button>
-              <button type="button" class="olympic-filter is-active" data-honor-filter="individual" aria-pressed="true"><span class="trophy-medal gold">個</span>個人獎</button>
-              <button type="button" class="olympic-filter" data-honor-filter="otherOnly" aria-pressed="false"><span class="trophy-medal white">獎</span>其他</button>
-            </div>
-            <div class="olympic-table-wrap" tabindex="0" aria-label="榮譽榜，可左右捲動">
-              <table class="olympic-table">
-                <thead>
-                  <tr class="olympic-group-head">
-                    <th scope="col" rowspan="2">排名</th><th scope="col" class="school-column" rowspan="2">學校</th>
-                    <th scope="colgroup" colspan="4">團體獎</th>
-                    <th scope="colgroup" colspan="1">個人獎</th>
-                    <th scope="col" rowspan="2"><button class="medal-sort" type="button" data-rank-sort="totalHonors" aria-label="賽事榮譽（不含其他）數排序，降冪">賽事榮譽（不含其他）</button></th>
-                    <th scope="col" rowspan="2"><button class="medal-sort" type="button" data-rank-sort="other" aria-label="其他榮譽數排序，降冪">其他</button></th>
-                  </tr>
-                  <tr class="olympic-detail-head">
-                    <th scope="col"><button class="medal-sort" type="button" data-rank-sort="gold" aria-label="冠軍數排序，降冪">冠</button></th>
-                    <th scope="col"><button class="medal-sort" type="button" data-rank-sort="silver" aria-label="亞軍數排序，降冪">亞</button></th>
-                    <th scope="col"><button class="medal-sort" type="button" data-rank-sort="bronze" aria-label="季軍數排序，降冪">季</button></th>
-                    <th scope="col"><button class="medal-sort" type="button" data-rank-sort="white" aria-label="殿軍數排序，降冪">殿</button></th>
-                    <th scope="col"><button class="medal-sort" type="button" data-rank-sort="fullCourse" aria-label="全程個人獎排序，降冪">全程</button></th>
-                  </tr>
-                </thead>
-                <tbody id="schoolLeaderboard"></tbody>
-              </table>
-            </div>
-            <ol id="mobileHonorRanking" class="mobile-honor-ranking" aria-label="榮譽排行榜"></ol>
-          </article>
-          <div class="leaderboard-scroll">
-            <article class="leaderboard-panel teal">
-              <h3><span aria-hidden="true">📋</span> <span id="gamesLeaderboardTitle">近年度參賽場次</span></h3>
-              <ol id="gamesLeaderboard" class="ranking-list"></ol>
-            </article>
-            <article class="leaderboard-panel coral">
-              <h3><span aria-hidden="true">⚔️</span> <span id="winsLeaderboardTitle">近年度總勝場</span></h3>
-              <ol id="winsLeaderboard" class="ranking-list"></ol>
-            </article>
-          </div>
-        </div>
-      </section>
-      <dialog id="androidCalendarHelp" class="calendar-help-dialog" aria-labelledby="androidCalendarHelpTitle">
-        <form method="dialog" class="calendar-help-card">
-          <h2 id="androidCalendarHelpTitle">Android 行事曆設定</h2>
-          <p>Google 日曆手機 App 不支援直接訂閱網址。要自動同步，請在電腦版 Google 日曆選「新增日曆」→「透過網址新增」，貼上這個網址，再用同一個帳戶同步手機。</p>
-          <label for="androidCalendarUrl">行事曆訂閱網址</label>
-          <input id="androidCalendarUrl" readonly value="https://macrokernel3000.github.io/opendebate/calendar.ics" />
-          <div class="calendar-help-actions">
-            <button type="button" id="copyAndroidCalendarUrl">複製網址</button>
-            <button type="submit" class="calendar-help-close">關閉</button>
-          </div>
-          <span id="calendarCopyStatus" class="calendar-copy-status" aria-live="polite"></span>
-        </form>
-      </dialog>
-    </section>
-
-    <section id="eventPageView" class="view is-hidden" data-view-panel="event-page">
-      <div class="page-shell detail-page-shell"><div id="eventPageDetail"></div></div>
-    </section>
-    <section id="schoolPageView" class="view is-hidden" data-view-panel="school-page">
-      <div class="page-shell detail-page-shell"><div id="schoolPageDetail"></div></div>
-    </section>
-    <section id="playerPageView" class="view is-hidden" data-view-panel="player-page">
-      <div class="page-shell detail-page-shell"><div id="playerPageDetail"></div></div>
-    </section>
-    <section id="topicPageView" class="view is-hidden" data-view-panel="topic-page">
-      <div class="page-shell detail-page-shell"><div id="topicPageDetail"></div></div>
-    </section>
-
-    <section id="overviewView" class="view is-hidden" data-view-panel="overview">
-      <div class="page-intro page-shell">
-        <p class="kicker">DEBATE OVERVIEW</p>
-        <h1>辯論總覽</h1>
-      </div>
-      <div class="page-shell overview-page">
-        <div class="overview-tabs" role="tablist" aria-label="總覽分類">
-          <button id="overviewEventsTab" class="overview-tab is-active" type="button" role="tab" aria-selected="true" aria-controls="overviewEventsPanel" data-overview-tab="events"><span class="overview-tab-label-long">已登錄賽事</span><span class="overview-tab-label-short">賽事</span><span class="overview-tab-count" id="overviewEventCount"></span></button>
-          <button id="overviewTeamsTab" class="overview-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewTeamsPanel" tabindex="-1" data-overview-tab="teams"><span class="overview-tab-label-long">隊伍資料庫</span><span class="overview-tab-label-short">隊伍</span><span class="overview-tab-count" id="overviewTeamCount"></span></button>
-          <button id="overviewTopicsTab" class="overview-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewTopicsPanel" tabindex="-1" data-overview-tab="topics"><span class="overview-tab-label-long">已收錄辯題</span><span class="overview-tab-label-short">辯題</span><span class="overview-tab-count" id="overviewTopicCount"></span></button>
-          <button id="overviewStatsTab" class="overview-tab overview-stats-tab" type="button" role="tab" aria-selected="false" aria-controls="overviewStatsPanel" tabindex="-1" data-overview-tab="stats"><span class="overview-tab-label-long">統計</span><span class="overview-tab-label-short">統計</span></button>
-        </div>
-        <section id="overviewEventsPanel" class="overview-panel" role="tabpanel" aria-labelledby="overviewEventsTab">
-          <div class="event-browser">
-            <section class="event-finder" aria-labelledby="eventFinderTitle">
-              <div class="event-finder-heading"><div><h2 id="eventFinderTitle">已登錄賽事</h2></div><span id="eventFinderMeta" aria-live="polite"></span></div>
-              <div class="event-filter-controls">
-                <label class="event-search-field"><span>名稱或辯題</span><input id="eventSearch" type="search" autocomplete="off" placeholder="例如：青雲盃、死刑、社群媒體" /></label>
-                <label class="event-year-field"><span>年份篩選</span><select id="eventYear"><option value="">全部年份</option></select></label>
-                <label class="event-sort-field"><span>排序依據</span><select id="eventSortBy"><option value="year">年份</option><option value="teams">隊伍數</option><option value="honors">榮譽數</option></select></label>
-                <label class="event-sort-field"><span>排序方向</span><select id="eventSortDirection"><option value="desc">降冪</option><option value="asc">升冪</option></select></label>
-              </div>
-              <div id="eventFinderResults" class="event-finder-results"></div>
-            </section>
-            <div id="eventDetail"></div>
-          </div>
-        </section>
-        <section id="overviewTeamsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTeamsTab">
-          <div class="overview-toolbar">
-            <div><h2>學校與隊伍</h2></div>
-            <div class="overview-team-controls">
-              <label class="overview-filter"><span>搜尋學校或隊伍</span><input id="overviewTeamFilter" type="search" autocomplete="off" placeholder="輸入名稱" /></label>
-              <label class="overview-filter overview-sort-filter"><span>排序依據</span><select id="overviewTeamSortBy"><option value="matches">參賽場數</option><option value="wins">勝場</option><option value="honors">榮譽數</option><option value="events">參賽賽事</option><option value="name">名稱</option></select></label>
-              <label class="overview-filter overview-sort-filter"><span>排序方向</span><select id="overviewTeamSortDirection"><option value="desc">由多到少</option><option value="asc">由少到多</option></select></label>
-            </div>
-          </div>
-          <p id="overviewTeamMeta" class="overview-meta" aria-live="polite"></p>
-          <div id="overviewTeamList" class="overview-entity-columns"></div>
-        </section>
-        <section id="overviewTopicsPanel" class="overview-panel is-hidden" role="tabpanel" aria-labelledby="overviewTopicsTab">
-          <div class="overview-toolbar">
-            <div><h2>辯題資料庫</h2></div>
-            <label class="overview-filter"><span>篩選辯題</span><input id="overviewTopicFilter" type="search" autocomplete="off" placeholder="輸入辯題或賽事關鍵字" /></label>
-          </div>
-          <p id="overviewTopicMeta" class="overview-meta" aria-live="polite"></p>
-          <div id="overviewTopicList" class="overview-topic-list"></div>
-        </section>
-        <section id="overviewStatsPanel" class="overview-panel overview-stats-panel is-hidden" role="tabpanel" aria-labelledby="overviewStatsTab">
-          <div class="overview-stats-frame">
-            <div class="overview-toolbar overview-stats-toolbar">
-              <div><h2>年度賽事趨勢</h2></div>
-              <div class="overview-stats-controls">
-                <label class="overview-filter"><span>趨勢線</span><select id="overviewStatsMetric"><option value="events">賽事數</option><option value="teams">參賽隊次</option></select></label>
-              </div>
-            </div>
-            <div id="overviewStatsYears" class="overview-stats-years" role="group" aria-label="選擇比較年份"></div>
-            <p id="overviewStatsMeta" class="overview-stats-meta" aria-live="polite"></p>
-            <div id="overviewStatsSummary" class="overview-stats-summary" aria-live="polite"></div>
-            <div id="overviewStatsChart" class="overview-stats-chart"></div>
-            <p class="overview-stats-note">賽事依開始月份歸類；參賽隊次依賽事中出現的隊伍原名去重，同校 A、B 隊分開計；不重複單位則按學校／隊伍資料庫歸戶後跨賽事去重。7、8 月以淡金色標示暑假。當年度尚未到的月份留白；已過但沒有賽事的月份顯示為 0。統計反映目前已收錄的公開資料。</p>
-          </div>
-        </section>
-      </div>
-    </section>
-
-    <section id="archiveView" class="view is-hidden" data-view-panel="archive">
-      <div class="page-intro page-shell archive-intro">
-        <p class="kicker">DEBATE RECORDS</p>
-        <h1>辯論成績建檔 <span aria-hidden="true">🗂️</span></h1>
-        <p>提供紀錄且能視覺化整理裁判單。本網站無後台，不會收錄您的成績。請自行下載 CSV 留存。</p>
-      </div>
-      <div class="page-shell archive-page">
-        <div class="archive-mode-picker" role="tablist" aria-label="選擇建檔方式">
-          <button id="personalArchiveMode" class="archive-mode-button is-active" type="button" role="tab" aria-selected="true" aria-controls="personalArchivePanel" data-archive-mode="personal"><span aria-hidden="true">👤</span><strong>選手建檔</strong><small>記錄個人的分數</small></button>
-          <button id="teamArchiveMode" class="archive-mode-button" type="button" role="tab" aria-selected="false" aria-controls="teamArchivePanel" tabindex="-1" data-archive-mode="team"><span aria-hidden="true">🏫</span><strong>隊伍建檔</strong><small>記錄整場比賽的三張裁判單</small></button>
-        </div>
-        <aside class="archive-warning" role="note" aria-label="測試階段提醒">
-          <span aria-hidden="true">⚠️</span>
-          <div><strong>建檔目前為測試階段，尚無後台或帳號同步功能。</strong><p>資料僅暫存在這台裝置的瀏覽器中；清除快取、網站資料或更換裝置後可能消失。請務必下載 CSV 備份。</p></div>
-        </aside>
-        <div id="personalArchivePanel" role="tabpanel" aria-labelledby="personalArchiveMode" class="archive-mode-panel"><div class="archive-layout">
-          <form id="personalRecordForm" class="record-form">
-            <div class="record-form-heading"><div><p class="kicker">NEW BALLOT</p><h2>登錄一張裁單</h2></div><span id="personalDraftStatus">第 1 張</span></div>
-            <p id="personalStorageError" class="record-message is-error is-hidden" role="alert"></p>
-            <div class="record-form-grid">
-              <label class="record-field record-field-wide record-competition-field"><span>盃賽（必填；輸入關鍵字可選平台已登錄賽事）</span><input id="personalCompetition" type="text" role="combobox" autocomplete="off" placeholder="例如：輸入「育南」" aria-controls="personalCompetitionSuggestions" aria-autocomplete="list" aria-expanded="false" required /><div id="personalCompetitionSuggestions" class="record-suggestions is-hidden" role="listbox" aria-label="已登錄賽事建議"></div></label>
-              <label class="record-field"><span>選手姓名（必填）</span><input id="personalName" type="text" autocomplete="name" placeholder="輸入選手姓名" required /></label>
-              <label class="record-field"><span>裁判姓名</span><input id="personalJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
-              <label class="record-field"><span>比賽日期</span><input id="personalMatchDate" type="date" /></label>
-              <label class="record-field"><span>此盃第幾場</span><input id="personalMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
-              <label class="record-field"><span>申論</span><span class="record-score-input"><input id="personalSpeech" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalSpeechMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="申論滿分" /></span></label>
-              <label class="record-field"><span>質詢</span><span class="record-score-input"><input id="personalQuestion" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalQuestionMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="質詢滿分" /></span></label>
-              <label class="record-field"><span>答辯</span><span class="record-score-input"><input id="personalDefense" type="number" inputmode="decimal" min="0" max="20" step="0.1" /><em>滿分</em><input id="personalDefenseMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="20" aria-label="答辯滿分" /></span></label>
-              <label class="record-field"><span>該場論點分</span><span class="record-score-input"><input id="personalArgument" type="number" inputmode="decimal" min="0" max="10" step="0.1" /><em>滿分</em><input id="personalArgumentMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="論點滿分" /></span></label>
-              <label class="record-field"><span>結辯</span><span class="record-score-input"><input id="personalClosing" type="number" inputmode="decimal" min="0" max="10" step="0.1" /><em>滿分</em><input id="personalClosingMax" type="number" inputmode="decimal" min="0.1" step="0.1" value="10" aria-label="結辯滿分" /></span></label>
-              <label class="record-field"><span>排名（選填，1 最高、6 最低）</span><input id="personalRank" type="number" inputmode="numeric" min="1" max="6" step="1" /></label>
-            </div>
-            <p id="personalRecordMessage" class="record-message" role="status" aria-live="polite"></p>
-            <div class="record-actions">
-              <button class="record-button record-button-secondary" type="button" id="personalNextMatch">下一張</button>
-              <button class="record-button record-button-secondary is-hidden" type="button" id="personalCancelEdit">取消修正</button>
-              <button class="record-button record-button-primary" type="submit" id="personalSubmitRecord">輸入完成</button>
-            </div>
-          </form>
-          <section class="record-summary" aria-labelledby="recordSummaryTitle">
-            <div class="record-summary-heading"><div><p class="kicker">MY RESULTS</p><h2 id="recordSummaryTitle">我的成績</h2></div><strong id="personalRecordCount">0 場</strong></div>
-            <div id="personalRecordStats" class="record-stats"></div>
-            <div class="record-visualizations">
-              <article class="record-chart"><div class="record-chart-heading"><div><h3 id="personalRadarChartTitle">能力雷達圖</h3><span>依各欄滿分換算</span></div><button type="button" data-expand-chart aria-label="放大能力雷達圖" title="放大圖表">⛶</button></div><div id="personalRadarChart"></div></article>
-              <article class="record-chart"><div class="record-chart-heading"><div><h3 id="personalProgressChartTitle">進步折線圖</h3><span>依比賽日期排序</span></div><button type="button" data-expand-chart aria-label="放大進步折線圖" title="放大圖表">⛶</button></div><div id="personalProgressChart"></div></article>
-            </div>
-            <div class="record-data-actions">
-              <button id="personalExportCsv" class="record-button record-button-primary" type="button">下載 CSV</button>
-              <label class="record-import">匯入電腦內的 CSV<input id="personalImportCsv" type="file" accept=".csv,text/csv" /></label>
-              <button id="personalDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button>
-            </div>
-            <div id="personalRecordList" class="personal-record-list"></div>
-          </section>
-        </div></div>
-        <div id="teamArchivePanel" role="tabpanel" aria-labelledby="teamArchiveMode" class="archive-mode-panel is-hidden">
-          <div class="archive-layout team-archive-layout">
-            <form id="teamRecordForm" class="record-form team-record-form">
-              <div class="record-form-heading"><div><p class="kicker">TEAM BALLOT</p><h2>登錄一張隊伍裁單</h2></div><span id="teamDraftStatus">第 1 張</span></div>
-              <p id="teamStorageError" class="record-message is-error is-hidden" role="alert"></p>
-              <div class="record-form-grid">
-                <label class="record-field record-field-wide"><span>盃賽（必填）</span><input id="teamCompetition" type="text" list="teamCompetitionList" autocomplete="off" placeholder="輸入盃賽名稱" required /><datalist id="teamCompetitionList"></datalist></label>
-                <label class="record-field"><span>隊伍名稱（必填）</span><input id="teamName" type="text" autocomplete="organization" placeholder="輸入自己的隊伍" required /></label>
-                <label class="record-field"><span>裁判姓名</span><input id="teamJudge" type="text" autocomplete="off" placeholder="可不填" /></label>
-                <label class="record-field"><span>比賽日期</span><input id="teamMatchDate" type="date" /></label>
-                <label class="record-field"><span>此盃第幾場</span><input id="teamMatchNumber" type="number" inputmode="numeric" min="1" step="1" placeholder="例如：1" /></label>
-                <label class="record-field record-field-wide"><span>我方持方</span><select id="teamSide"><option value="正">正方</option><option value="反">反方</option></select></label>
-              </div>
-              <section class="team-side-entry" aria-labelledby="affirmativeScoreTitle">
-                <h3 id="affirmativeScoreTitle">正方評分 <span id="affirmativeMySideBadge" class="team-side-badge">我方</span></h3>
-                <div class="team-score-table" aria-label="正方三位辯士評分">
-                  <div class="team-score-head"><span>出場序</span><span>申論<br><small>滿分 20</small></span><span>質詢<br><small>滿分 20</small></span><span>答辯<br><small>滿分 20</small></span></div>
-                  <div class="team-score-row"><strong>正一</strong><input id="teamAffP1Speech" type="number" min="0" step="0.1" aria-label="正一申論" /><input id="teamAffP1Question" type="number" min="0" step="0.1" aria-label="正一質詢" /><input id="teamAffP1Defense" type="number" min="0" step="0.1" aria-label="正一答辯" /></div>
-                  <div class="team-score-row"><strong>正二</strong><input id="teamAffP2Speech" type="number" min="0" step="0.1" aria-label="正二申論" /><input id="teamAffP2Question" type="number" min="0" step="0.1" aria-label="正二質詢" /><input id="teamAffP2Defense" type="number" min="0" step="0.1" aria-label="正二答辯" /></div>
-                  <div class="team-score-row"><strong>正三</strong><input id="teamAffP3Speech" type="number" min="0" step="0.1" aria-label="正三申論" /><input id="teamAffP3Question" type="number" min="0" step="0.1" aria-label="正三質詢" /><input id="teamAffP3Defense" type="number" min="0" step="0.1" aria-label="正三答辯" /></div>
-                </div>
-                <div class="team-side-extras"><label>架構／論點 <input id="teamAffArgument" type="number" min="0" step="0.1" /></label><label>結辯 <input id="teamAffClosing" type="number" min="0" step="0.1" /></label><strong id="teamAffTotal">總分 —</strong></div>
-              </section>
-              <section class="team-side-entry" aria-labelledby="negativeScoreTitle">
-                <h3 id="negativeScoreTitle">反方評分 <span id="negativeMySideBadge" class="team-side-badge is-hidden">我方</span></h3>
-                <div class="team-score-table" aria-label="反方三位辯士評分">
-                  <div class="team-score-head"><span>出場序</span><span>申論<br><small>滿分 20</small></span><span>質詢<br><small>滿分 20</small></span><span>答辯<br><small>滿分 20</small></span></div>
-                  <div class="team-score-row"><strong>反一</strong><input id="teamNegP1Speech" type="number" min="0" step="0.1" aria-label="反一申論" /><input id="teamNegP1Question" type="number" min="0" step="0.1" aria-label="反一質詢" /><input id="teamNegP1Defense" type="number" min="0" step="0.1" aria-label="反一答辯" /></div>
-                  <div class="team-score-row"><strong>反二</strong><input id="teamNegP2Speech" type="number" min="0" step="0.1" aria-label="反二申論" /><input id="teamNegP2Question" type="number" min="0" step="0.1" aria-label="反二質詢" /><input id="teamNegP2Defense" type="number" min="0" step="0.1" aria-label="反二答辯" /></div>
-                  <div class="team-score-row"><strong>反三</strong><input id="teamNegP3Speech" type="number" min="0" step="0.1" aria-label="反三申論" /><input id="teamNegP3Question" type="number" min="0" step="0.1" aria-label="反三質詢" /><input id="teamNegP3Defense" type="number" min="0" step="0.1" aria-label="反三答辯" /></div>
-                </div>
-                <div class="team-side-extras"><label>架構／論點 <input id="teamNegArgument" type="number" min="0" step="0.1" /></label><label>結辯 <input id="teamNegClosing" type="number" min="0" step="0.1" /></label><strong id="teamNegTotal">總分 —</strong></div>
-              </section>
-              <p id="teamRecordMessage" class="record-message" role="status" aria-live="polite"></p>
-              <div class="record-actions"><button class="record-button record-button-secondary" type="button" id="teamNextBallot">下一張</button><button class="record-button record-button-secondary is-hidden" type="button" id="teamCancelEdit">取消修正</button><button class="record-button record-button-primary" type="submit" id="teamSubmitRecord">輸入完成</button></div>
-            </form>
-            <section class="record-summary" aria-labelledby="teamSummaryTitle">
-              <div class="record-summary-heading"><div><p class="kicker">TEAM RESULTS</p><h2 id="teamSummaryTitle">隊伍比賽紀錄</h2></div><strong id="teamRecordCount">0 張</strong></div>
-              <div id="teamRecordStats" class="record-stats team-record-stats"></div>
-              <article class="record-chart team-radar-card"><div class="record-chart-heading"><div><h3 id="teamRadarChartTitle">隊伍平均雷達圖</h3><span>累積超過兩張裁單後，計算我方申論、質詢與答辯平均</span></div><button type="button" data-expand-chart aria-label="放大隊伍平均雷達圖" title="放大圖表">⛶</button></div><div id="teamRadarChart"></div></article>
-              <p class="team-record-explanation">每張裁單會依正反方已輸入的所有分數加總，自動算出該張勝負。同一盃賽、同一場次的裁單會放在一起；累積三張後，至少兩張可判定且勝票過半，才會判定整場勝負。平票或有效票不足時會保留未決狀態。</p>
-              <div class="record-data-actions"><button id="teamExportCsv" class="record-button record-button-primary" type="button">下載隊伍 CSV</button><label class="record-import">匯入隊伍 CSV<input id="teamImportCsv" type="file" accept=".csv,text/csv" /></label><button id="teamDeleteAll" class="record-button record-button-danger" type="button">全部刪除</button></div>
-              <div id="teamRecordList" class="personal-record-list"></div>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="searchView" class="view is-hidden" data-view-panel="search">
-      <div class="search-stage">
-        <div class="page-shell">
-          <p class="kicker">FIND A STORY</p>
-          <h1>搜尋學校、隊伍、人物或辯題 <span aria-hidden="true">🔎</span></h1>
-          <div class="search-box">
-            <span aria-hidden="true">⌕</span>
-            <input id="globalSearch" type="search" autocomplete="off" placeholder="搜尋學校、隊伍、人物或辯題" aria-label="搜尋學校、隊伍、人物或辯題" />
-            <button id="clearSearch" type="button" aria-label="清除搜尋">×</button>
-          </div>
-          <p id="searchMeta" class="search-meta" aria-live="polite"></p>
-        </div>
-      </div>
-      <div id="searchResults" class="page-shell search-results"></div>
-    </section>
-
-    <section id="reportsView" class="view is-hidden" data-view-panel="reports">
-      <div class="page-intro page-shell report-intro">
-        <p class="kicker">COMMUNITY REPORTS</p>
-        <h1>資料回報 <span aria-hidden="true">📝</span></h1>
-        <p>協助補齊公開賽果與選手登場紀錄。送出後會由管理者校對，再納入網站資料。</p>
-      </div>
-      <div class="page-shell report-page">
-        <article class="report-card report-form-card">
-          <div class="report-icons" aria-hidden="true"><span class="report-icon">⚔️</span><span class="report-icon">🎤</span><span class="report-icon">💬</span></div>
-          <p class="kicker">COMMUNITY REPORT</p>
-          <h2>公開資料回報</h2>
-          <p>同一份表單可回報缺漏或需要修正的賽事資料，送出時再選擇回報項目。</p>
-          <ul><li>賽事戰績與積分</li><li>選手上場紀錄</li><li>盃賽辯題與相關說明</li></ul>
-          <a id="reportFormLink" class="report-link" href="#" target="_blank" rel="noopener">開啟資料回報表單</a>
-        </article>
-        <aside class="report-note"><strong>為什麼使用 Google 表單？</strong><p>本站是靜態網站，Google 表單能處理手機填寫、附件上傳與回覆彙整，也不會把管理權限或個人資料放進網站程式。表單連結可隨時替換。</p></aside>
-        <article class="report-card report-ai-card" aria-labelledby="reportAiTitle">
-            <p class="kicker">AI ASSISTED REPORT</p>
-            <h2 id="reportAiTitle">協助整理賽果</h2>
-            <p>如可協助整理賽果，請先把比賽比分或公告貼給 AI，再複製下方指令一併傳給 AI。我們已提供整理用的關鍵字與欄位；完成後，請把整理結果回報給我們。</p>
-            <pre id="eventIntakePrompt">請根據我提供的賽事簡章、公告、比分或照片，整理一份繁體中文「賽事登錄資料」Markdown，交由網站管理者彙整。只整理與引用來源，不要自行發布或修改網站。
-
-請依序整理：
-一、賽事基本資料：正式賽名、年度、日期／時段、地點、主辦／指導／協辦／執行單位、賽事狀態。
-二、辯題與題解：正式題目、題目狀態、題解全文或連結，以及各自來源；不同賽事的題解分開。
-三、重要時程與簡章資訊：報名、第一次領隊會議、保險／保證金、選手名單期限、資格、隊數上限、賽制與獎項辦法。
-四、逐場賽程／比分表：日期、時段／階段、會場、分組、正方隊伍、反方隊伍、正方比分、反方比分、來源公布的勝方、備註、來源。
-五、榮譽：獎項原名、團體／個人／其他分類、名次／獎級、得獎者、所屬隊伍、來源。只列正式頒發或公告的獎項；晉級不算榮譽。
-六、選手名單（如有）：隊伍、選手、領隊、名單類型與來源；名單不等於實際上場紀錄。
-七、備註與其他內容：版本差異、更正、棄賽、裁決、晉級依據及待確認事項。
-八、來源清單：名稱、來源類型、網址／頁碼／日期及採用內容。
-
-請保留公告中的隊名、姓名、比分和原獎名；同校 A／B 或一／二隊在賽果中分開記錄。每項資料標示來源；來源明載與推論分開，推論附依據。未知或無法辨識的內容留白並列為待確認，不要猜測。日期使用 YYYY-MM-DD；沒有公開比分的場次只列賽程，不補猜結果。輸出可供主維護者核對的 Markdown 草稿，並標明尚待確認事項。</pre>
-            <button type="button" id="copyEventIntakePrompt" class="report-copy-button">複製整理指令</button>
-            <span id="reportPromptCopyStatus" class="report-copy-status" aria-live="polite"></span>
-        </article>
-        <div class="report-contact-row" aria-label="其他聯絡方式">
-          <p class="report-contact-card">Email：<a href="mailto:macrokernel3000@gmail.com">macrokernel3000@gmail.com</a></p>
-          <p class="report-contact-card">Threads：<a href="https://www.threads.com/@betterdebate" target="_blank" rel="noopener">@betterdebate｜更好辯辯更好</a></p>
-        </div>
-      </div>
-    </section>
+  <main>
+    <img class="logo" src="assets/site-logo.svg" alt="公開辯論資訊網" />
+    <p class="eyebrow">OPENDEBATE</p>
+    <h1>網站已移轉</h1>
+    <p>公開資料與會員功能已整合至新版網站，正在為你前往新站。</p>
+    <a data-v2-link href="https://opendebate.kerneldebate.com/site/">前往新版網站</a>
+    <small>舊版公開資料下載、隱私政策與支援頁暫時保留。</small>
   </main>
-
-  <footer>
-    <div class="page-shell"><strong>公開辯論資訊網</strong><span>資料來自公開賽務資訊，持續整理中。<a href="privacy/">隱私政策</a></span></div>
-  </footer>
-
-  <script src="js/home-snapshot.js?v=20261019160617" data-versioned-asset></script>
-  <script src="data/public-data.js?v=20261019160617" data-public-data-script></script>
-  <script src="data/upcoming-events.js?v=20261019160617" data-versioned-asset></script>
-  <script src="data/calendar-activities.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/site-config.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/core.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/event-classification.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/interactions.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/record-storage.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/record-csv.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/chart-data-table.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/personal-records.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/team-records.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/event-pages.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/entity-pages.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/overview-pages.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/home-pages.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/search-pages.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/router.js?v=20261019160617" data-versioned-asset></script>
-  <script src="app.js?v=20261019160617" data-versioned-asset></script>
-  <script src="js/site-update-check.js?v=20261019160617" data-versioned-asset></script>
 </body>
 </html>

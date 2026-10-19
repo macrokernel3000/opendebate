@@ -1,5 +1,7 @@
 # OpenDebate｜公開辯論網
 
+> **V1 已於 2026-10-19 轉為相容與轉址用途。** 新版網站與後續公開資料維護請使用 [opendebate.kerneldebate.com](https://opendebate.kerneldebate.com/site/)。本倉庫暫時保留舊 App 資料、行事曆、隱私政策與支援連結，請勿再從 Google Sheet 更新 V1 首頁資料。
+
 ### 尊重隱私，敬畏歷史。
 *Respect Privacy. Honor History.*
 
@@ -54,9 +56,9 @@ OpenDebate 是一項起源於臺灣的公共教育科技計畫，致力於保存
 
 後續 AI 或新維護者請先閱讀 [ARCHITECTURE.md](ARCHITECTURE.md)，了解載入順序、資料流、SEO 與安全修改規則。Codex 協作規則見 [AGENTS.md](AGENTS.md)。
 
-本倉庫為純公開查詢網站，可直接開啟 `index.html` 使用，不需要額外伺服器。會員與其他進階工具可能由獨立專案開發。
+本倉庫原為 V1 純公開查詢網站；目前 `index.html` 僅提供新版網站轉址。會員、新版公開資料與進階工具由 V2 獨立專案維護。
 
-### 資料與更新
+### 相容資料（唯讀保留）
 
 - `data/public-data-所有賽事.csv`：歷史賽事主要編輯來源。
 - `data/entity-registry.csv`：學校、隊伍代碼及別名。
@@ -65,16 +67,14 @@ OpenDebate 是一項起源於臺灣的公共教育科技計畫，致力於保存
 - `tools/build_data.py`：資料建置與驗證程式。
 - `templates/賽事登錄模板.md`：新賽事資料整理格式。
 
-新增資料時應保留來源，未知日期或比分請勿猜測。正式資料更新前先執行：
+下列指令只用於確認現有相容資料完整，不再代表 V1 可以新增正式資料：
 
 ```bash
 python -m unittest discover -s tests -v
 python tools/build_data.py --check --fail-on-warnings
 ```
 
-Windows 可使用 `更新網站資料.ps1`，macOS 可使用 `更新網站資料.command`。
-
-GitHub Actions 的 `Prepare Google Sheet data update` 可以從試算表準備資料更新並建立待審查 Pull Request，不會直接覆寫 `main`。請先檢查資料差異再合併。
+原 Google Sheet 更新流程已停用；GitHub Actions 只會提示改至 V2 `public-source/` 維護。
 
 網站可部署至 GitHub Pages 或其他靜態網站服務。更完整的資料格式與維護說明請參閱 [ARCHITECTURE.md](ARCHITECTURE.md) 及倉庫內文件。
 
