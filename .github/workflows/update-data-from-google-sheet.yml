@@ -1,106 +1,20 @@
-name: Prepare Google Sheet data update
+name: V1 data update retired
 
 on:
   workflow_dispatch:
 
 permissions:
-  contents: write
-  pull-requests: write
+  contents: read
 
 concurrency:
   group: google-sheet-data-update
   cancel-in-progress: false
 
 jobs:
-  update-data:
+  retired-notice:
     runs-on: ubuntu-24.04
-
     steps:
-      - name: Checkout main
-        # actions/checkout v7.0.1, pinned to its official tag commit.
-        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
-        with:
-          ref: main
-          fetch-depth: 0
-
-      - name: Set up Python
-        # actions/setup-python v7.0.0, pinned to its official tag commit.
-        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97
-        with:
-          python-version: "3.12"
-
-      - name: Save current report for comparison
-        run: cp data/update-report.txt /tmp/update-report-before.txt
-
-      - name: Download Google Sheet as Excel
-        env:
-          GOOGLE_SHEET_ID: 1_qO5YLLRlQt9R7NSA3MIqWsXDsp349B919D7WX_lj2w
+      - name: Explain the new source of truth
         run: |
-          set -euo pipefail
-          mkdir -p data
-          curl -L --fail \
-            "https://docs.google.com/spreadsheets/d/${GOOGLE_SHEET_ID}/export?format=xlsx" \
-            -o data/google-sheet-export.xlsx
-          python - <<'PY'
-          from pathlib import Path
-          path = Path("data/google-sheet-export.xlsx")
-          if path.stat().st_size < 10000 or path.read_bytes()[:4] != b"PK\x03\x04":
-              raise SystemExit("Google Sheet 匯出失敗：下載結果不是有效 Excel 檔。請確認試算表分享權限。")
-          print(f"已下載 Google Sheet：{path.stat().st_size:,} bytes")
-          PY
-
-      - name: Validate source data before building
-        env:
-          PUBLIC_DATA_SOURCE: data/google-sheet-export.xlsx
-        run: python tools/build_data.py --check --fail-on-warnings
-
-      - name: Build website data
-        env:
-          PUBLIC_DATA_SOURCE: data/google-sheet-export.xlsx
-        run: python tools/build_data.py
-
-      - name: Prepare review summary
-        id: changes
-        run: |
-          set -euo pipefail
-          git add -- data/public-data.js data/ios/v1/catalog.json data/ios/v1/manifest.json data/update-report.txt data/entity-registry.csv index.html calendar.ics sitemap.xml debate-records.html
-          python tools/prepare_sheet_update.py \
-            --base-ref origin/main \
-            --before-report /tmp/update-report-before.txt \
-            --summary-file "$RUNNER_TEMP/google-sheet-update-summary.md" \
-            --github-output "$GITHUB_OUTPUT" \
-            --step-summary "$GITHUB_STEP_SUMMARY"
-
-      - name: Create review branch
-        if: steps.changes.outputs.has_changes == 'true'
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git switch -c automation/google-sheet-data-update
-          git commit -m "Prepare public data update from Google Sheet"
-          git push --force origin automation/google-sheet-data-update
-
-      - name: Open or update pull request
-        if: steps.changes.outputs.has_changes == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
-          BODY_FILE: ${{ runner.temp }}/google-sheet-update-summary.md
-        run: |
-          set -euo pipefail
-          gh pr list --repo "$REPOSITORY" --head automation/google-sheet-data-update --json url --jq '.[0].url' > /tmp/pr-url.txt
-          pr_url="$(cat /tmp/pr-url.txt)"
-          if [ -n "$pr_url" ]; then
-            gh pr edit "$pr_url" \
-              --title "Review public data update from Google Sheet" \
-              --body-file "$BODY_FILE"
-            echo "已更新待審查的 PR：$pr_url" >> "$GITHUB_STEP_SUMMARY"
-          else
-            gh pr create \
-              --repo "$REPOSITORY" \
-              --base main \
-              --head automation/google-sheet-data-update \
-              --title "Review public data update from Google Sheet" \
-              --body-file "$BODY_FILE"
-          fi
+          echo "V1 公開站已停止接收資料更新。" | tee -a "$GITHUB_STEP_SUMMARY"
+          echo "請在 V2 public-source/ 維護公開資料；本 repository 只保留舊 App 相容檔案與轉址入口。" | tee -a "$GITHUB_STEP_SUMMARY"

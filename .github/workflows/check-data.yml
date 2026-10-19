@@ -91,17 +91,11 @@ jobs:
         with:
           node-version: "24"
 
-      - name: Run frontend module tests
-        run: node --test tests/*.test.cjs
+      - name: Check retired V1 entry and compatibility paths
+        run: node --test tests/v1-retirement-redirect.test.cjs
 
       - name: Run data build checks
         run: python tools/build_data.py --check --fail-on-warnings
-
-      - name: Check committed generated files are current
-        # Google Sheet PR outputs are built and validated from a downloaded XLSX
-        # in update-data-from-google-sheet.yml, not from the CSVs in this repo.
-        if: github.head_ref != 'automation/google-sheet-data-update'
-        run: python tools/check_generated.py --base-ref HEAD
 
       - name: Run builder unit tests
         run: python -m unittest discover -s tests -v
