@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "datasetVersion": "a774e2a07c3a591dc9faf4c78c86b2fb0149b62dbace1dc915b365005510d11e",
-  "generatedAt": "2026-10-13T18:10:47",
+  "datasetVersion": "414aa09e019256cf3a1bd08351855340997f894bf309583e95cc8ce9521b7948",
+  "generatedAt": "2026-10-19T16:06:17",
   "events": [
     {
       "id": "C1201",
@@ -23880,8 +23880,8 @@
   ],
   "publicIndex": {
     "schemaVersion": 1,
-    "generatedAt": "2026-10-13T18:10:47",
-    "sourceSHA256": "c2506b5feccc6cffbbfdd704ecdc49012e72745ee045b5ab4e2adbf708a7586d",
+    "generatedAt": "2026-10-19T16:06:17",
+    "sourceSHA256": "679be324ef7fe7c6635a782aebf3bfddb319ef085ed82f6e5c9046a7b9da01c9",
     "entities": [
       {
         "id": "p001",
@@ -24794,6 +24794,14 @@
         "type": "p",
         "name": "陳湘芸說得都隊",
         "aliases": []
+      },
+      {
+        "id": "p175",
+        "type": "p",
+        "name": "陽明高中種子隊B",
+        "aliases": [
+          "陽明高中種子隊b"
+        ]
       },
       {
         "id": "s002",
@@ -26208,7 +26216,6 @@
           "臺北陽明高中",
           "臺北市陽明高中",
           "臺北市立陽明高中",
-          "陽明高中種子隊B",
           "台北市立陽明高中",
           "台北市立陽明高級中學",
           "台北市陽明高中",
@@ -27997,7 +28004,7 @@
         "id": "match-283ac5b49e1d",
         "competitionName": "第一屆陽明盃全國辯論公開賽",
         "affirmativeEntityID": "p101",
-        "negativeEntityID": "s188",
+        "negativeEntityID": "p175",
         "winner": "陽明高中種子隊B"
       },
       {
@@ -28010,7 +28017,7 @@
       {
         "id": "match-077faf2b1b5e",
         "competitionName": "第一屆陽明盃全國辯論公開賽",
-        "affirmativeEntityID": "s188",
+        "affirmativeEntityID": "p175",
         "negativeEntityID": "p101",
         "winner": "陽明高中種子隊B"
       },
@@ -28038,7 +28045,7 @@
       {
         "id": "match-0ce035e69b24",
         "competitionName": "第一屆陽明盃全國辯論公開賽",
-        "affirmativeEntityID": "s188",
+        "affirmativeEntityID": "p175",
         "negativeEntityID": "p098",
         "winner": "陽明高中種子隊B"
       },
@@ -28046,7 +28053,7 @@
         "id": "match-6eaf8c06eb88",
         "competitionName": "第一屆陽明盃全國辯論公開賽",
         "affirmativeEntityID": "p102",
-        "negativeEntityID": "s188",
+        "negativeEntityID": "p175",
         "winner": "銨芯爬陽明山"
       },
       {
@@ -36959,7 +36966,7 @@
       {
         "id": "honor-cb1462cce8fe",
         "competitionName": "第一屆陽明盃全國辯論公開賽",
-        "entityID": "s188"
+        "entityID": "p175"
       },
       {
         "id": "honor-b5d66e8a5c17",
@@ -40041,10 +40048,18 @@
         "teams": [
           "世宣67",
           "和平高中",
-          "和平高中A"
+          "和平高中A",
+          "陽明高中種子隊B"
         ],
         "honorIDs": [],
         "appearances": [
+          {
+            "competitionName": "第一屆陽明盃全國辯論公開賽",
+            "team": "陽明高中種子隊B",
+            "roles": [
+              "選手"
+            ]
+          },
           {
             "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
             "team": "和平高中A",
@@ -41492,10 +41507,18 @@
         ],
         "teams": [
           "和平高中",
-          "和平高中B"
+          "和平高中B",
+          "陽明高中種子隊B"
         ],
         "honorIDs": [],
         "appearances": [
+          {
+            "competitionName": "第一屆陽明盃全國辯論公開賽",
+            "team": "陽明高中種子隊B",
+            "roles": [
+              "選手"
+            ]
+          },
           {
             "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
             "team": "和平高中B",
@@ -52621,10 +52644,18 @@
           "選手"
         ],
         "teams": [
-          "和平高中B"
+          "和平高中B",
+          "陽明高中種子隊B"
         ],
         "honorIDs": [],
         "appearances": [
+          {
+            "competitionName": "第一屆陽明盃全國辯論公開賽",
+            "team": "陽明高中種子隊B",
+            "roles": [
+              "選手"
+            ]
+          },
           {
             "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
             "team": "和平高中B",
@@ -52661,10 +52692,18 @@
           "選手"
         ],
         "teams": [
-          "和平高中A"
+          "和平高中A",
+          "陽明高中種子隊B"
         ],
         "honorIDs": [],
         "appearances": [
+          {
+            "competitionName": "第一屆陽明盃全國辯論公開賽",
+            "team": "陽明高中種子隊B",
+            "roles": [
+              "選手"
+            ]
+          },
           {
             "competitionName": "第三十七屆蘇州盃高中職辯論錦標賽",
             "team": "和平高中A",

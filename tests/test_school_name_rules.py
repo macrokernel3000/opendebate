@@ -54,6 +54,30 @@ class SchoolNameRulesTest(unittest.TestCase):
         self.assertIn("臺北市立陽明高級中學", self.entities["s188"]["aliases"].split("|"))
         self.assertNotEqual(self.entities["s092"]["name"], self.entities["s188"]["name"])
 
+    def test_yangming_seed_b_is_an_independent_team_with_reported_roster(self):
+        self.assertEqual(self.entities["p175"]["name"], "陽明高中種子隊B")
+        self.assertIn("陽明高中種子隊b", self.entities["p175"]["aliases"].split("|"))
+        for school_code in ("s092", "s188"):
+            school_names = {
+                self.entities[school_code]["name"],
+                *self.entities[school_code]["aliases"].split("|"),
+            }
+            self.assertNotIn("陽明高中種子隊B", school_names)
+            self.assertNotIn("陽明高中種子隊b", school_names)
+
+        rosters = [
+            row
+            for row in read_csv(ROOT / "data/event-rosters.csv")
+            if row["盃賽"] == "第一屆陽明盃全國辯論公開賽"
+            and row["隊伍"] == "陽明高中種子隊B"
+        ]
+        self.assertEqual(len(rosters), 1)
+        self.assertEqual(rosters[0]["名單狀態"], "經回報")
+        self.assertEqual(
+            rosters[0]["選手"].split("、"),
+            ["劉品劼", "趙梓盛", "喻璽萌", "趙子薰"],
+        )
+
     def test_legacy_school_routes_are_explicit(self):
         app_source = (ROOT / "app.js").read_text(encoding="utf-8")
         self.assertIn('s088: "s046"', app_source)
@@ -67,6 +91,18 @@ class SchoolNameRulesTest(unittest.TestCase):
         self.assertNotIn("s088", entities)
         self.assertEqual(entities["s092"]["name"], "桃市陽明")
         self.assertEqual(entities["s188"]["name"], "北市陽明")
+        self.assertEqual(entities["p175"]["name"], "陽明高中種子隊B")
+
+        yangming_records = [
+            record
+            for record in data["records"]
+            if record["competitionName"] == "第一屆陽明盃全國辯論公開賽"
+            and "陽明高中種子隊B" in record["teams"].values()
+        ]
+        self.assertTrue(yangming_records)
+        for record in yangming_records:
+            side = next(side for side, team in record["teams"].items() if team == "陽明高中種子隊B")
+            self.assertEqual(record["teamIds"][side], "p175")
 
 
 if __name__ == "__main__":
